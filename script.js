@@ -1,5 +1,5 @@
 (async function checkForUpdates() {
-    const currentVersion = "1.0.0";
+    const currentVersion = "1.0";
     const versionUrl = "https://raw.githubusercontent.com/ivysone/Will-you-be-my-Valentine-/main/version.json"; 
 
     try {
