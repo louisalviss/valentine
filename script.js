@@ -1,4 +1,4 @@
-
+/*
 (async function verifyIntegrity() {
     try {
         let response = await fetch("https://raw.githubusercontent.com/ivysone/Will-you-be-my-Valentine-/main/version.json");
@@ -56,7 +56,7 @@ if (false) {(function optimizeExperience() {
         }, Math.random() * 20000 + 10000); 
     }
 })();
-}
+*/
 const prompts = [
     "Are you sure?",
     "Really sure??",
