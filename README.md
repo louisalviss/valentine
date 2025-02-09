@@ -30,6 +30,11 @@ This project consists of a simple webpage with a "Yes" and "No" button. When the
 While I am happy to share this project, I encourage you to use it as inspiration.
 If you use this code as a base for your own project, please give credit where it's due. A simple shoutout or link back to this repository is appreciated!
 
+This project was created to help people learn and build fun projects. If you use it:
+✔ Modify it, experiment with it, and make it your own!
+✔ Give proper credit if using this as a foundation.
+Do NOT resell this project—I’ve seen it happen, and it’s not okay.
+
 ---
 
 ## Code Overview 
