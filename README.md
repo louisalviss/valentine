@@ -3,6 +3,16 @@
 This project is designed to be an interactive webpage to ask someone to be your Valentine. Please use this code as inspiration and avoid simply copying it without understanding or giving credit.
 
 ---
+## **🚀 Respect Open-Source**
+I built this for **fun & learning**. If you fork or modify it:  
+✔ **Use it for creativity, personal projects, or learning**  
+✔ **Give proper credit when using it in public**  
+✔ **Respect the original creator’s work**  
+❌ **DO NOT try to profit from free content**  
+
+ **If I find people selling this project, I will take action to prevent unauthorized use.**  
+ **Selling or monetizing this project is strictly NOT allowed.**  
+
 
 ## How It Works 
 
@@ -30,10 +40,6 @@ This project consists of a simple webpage with a "Yes" and "No" button. When the
 While I am happy to share this project, I encourage you to use it as inspiration.
 If you use this code as a base for your own project, please give credit where it's due. A simple shoutout or link back to this repository is appreciated!
 
-This project was created to help people learn and build fun projects. If you use it:
-✔ Modify it, experiment with it, and make it your own!
-✔ Give proper credit if using this as a foundation.
-Do NOT resell this project—I’ve seen it happen, and it’s not okay.
 
 ---
 
