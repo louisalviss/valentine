@@ -1,0 +1,54 @@
+name: Deploy Mira preview to Cloudflare
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "mira-ai-motion/index.html"
+      - ".github/workflows/cloudflare-temp.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to temporary Cloudflare account
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler@4.110.0 deploy mira-ai-motion --temporary 2>&1 | tee deploy.log
+
+          URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.(workers|pages)\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
+          if [ -z "$URL" ]; then
+            echo "Cloudflare URL was not found in Wrangler output."
+            cat deploy.log
+            exit 1
+          fi
+
+          printf '%s\n' "$URL" > mira-ai-motion/cloudflare-url.txt
+          printf 'CLOUDFLARE_URL=%s\n' "$URL" >> "$GITHUB_ENV"
+
+      - name: Save deployment URL
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mira-ai-motion/cloudflare-url.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Save Cloudflare preview URL"
+            git push
+          fi
+
+      - name: Add deployment link to summary
+        shell: bash
+        run: |
+          echo "## Cloudflare preview" >> "$GITHUB_STEP_SUMMARY"
+          echo "$CLOUDFLARE_URL" >> "$GITHUB_STEP_SUMMARY"
