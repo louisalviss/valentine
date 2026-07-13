@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          npx wrangler@4.110.0 deploy mira-ai-motion --temporary --name mira-ai-motion 2>&1 | tee deploy.log
+          npx wrangler@4.110.0 deploy mira-ai-motion --temporary --name mira-ai-motion --compatibility-date 2026-07-13 2>&1 | tee deploy.log
           CODE=${PIPESTATUS[0]}
           URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.(workers|pages)\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
 
