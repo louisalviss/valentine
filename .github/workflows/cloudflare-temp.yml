@@ -31,10 +31,15 @@ jobs:
           npx wrangler@4.110.0 deploy mira-ai-motion --temporary --name mira-ai-motion --compatibility-date 2026-07-13 2>&1 | tee deploy.log
           CODE=${PIPESTATUS[0]}
           URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.(workers|pages)\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
+          CLAIM=$(grep -Eo 'https://dash\.cloudflare\.com/claim-preview\?claimToken=[A-Za-z0-9_-]+' deploy.log | tail -n 1)
 
           if [ -n "$URL" ]; then
             {
               echo "Cloudflare preview: $URL"
+              if [ -n "$CLAIM" ]; then
+                echo
+                echo "Claim within 60 minutes: $CLAIM"
+              fi
             } > deploy-comment.md
           else
             {
