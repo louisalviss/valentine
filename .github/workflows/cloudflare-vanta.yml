@@ -1,0 +1,66 @@
+name: Deploy VANTA scroll landing page to Cloudflare
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "vanta-cloudflare/**"
+      - "vanta-cloudflare-trigger.txt"
+      - ".github/workflows/cloudflare-vanta.yml"
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Deploy temporary Cloudflare Worker
+        id: deploy
+        shell: bash
+        run: |
+          set +e
+          npx wrangler@4.110.0 deploy vanta-cloudflare \
+            --name vanta-scroll-motion \
+            --compatibility-date 2026-07-14 \
+            --temporary 2>&1 | tee deploy.log
+          CODE=${PIPESTATUS[0]}
+
+          URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.(workers|pages)\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
+          CLAIM=$(grep -Eo 'https://dash\.cloudflare\.com/claim-preview\?claimToken=[A-Za-z0-9_-]+' deploy.log | tail -n 1)
+
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "claim=$CLAIM" >> "$GITHUB_OUTPUT"
+          tail -n 80 deploy.log > deploy-tail.log
+          exit 0
+
+      - name: Comment result on pull request
+        uses: actions/github-script@v7
+        env:
+          DEPLOY_CODE: ${{ steps.deploy.outputs.code }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          CLAIM_URL: ${{ steps.deploy.outputs.claim }}
+        with:
+          script: |
+            const fs = require('fs');
+            let body;
+            if (process.env.DEPLOY_URL) {
+              body = `Cloudflare preview: ${process.env.DEPLOY_URL}`;
+              if (process.env.CLAIM_URL) body += `\n\nClaim within 60 minutes: ${process.env.CLAIM_URL}`;
+            } else {
+              const log = fs.readFileSync('deploy-tail.log','utf8');
+              body = `Cloudflare deployment failed (exit code ${process.env.DEPLOY_CODE}).\n\n\`\`\`text\n${log.slice(-6000)}\n\`\`\``;
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
