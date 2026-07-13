@@ -1,1 +1,1 @@
-Retry Mira AI motion preview deployment through Cloudflare temporary account.
+Retry named Mira AI motion deployment through Cloudflare temporary account.
