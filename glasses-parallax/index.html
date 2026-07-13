@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#08090d" />
+  <meta name="description" content="VANTA eyewear — a cinematic parallax product landing page." />
+  <title>VANTA — Eyewear in Motion</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08090d;
+      --panel: #10131a;
+      --text: #f6f7fb;
+      --muted: #8e95a5;
+      --line: rgba(255,255,255,.12);
+      --acid: #dfff62;
+      --cyan: #6be8ff;
+      --violet: #b697ff;
+      --pink: #ff7bb7;
+      --mx: 50%;
+      --my: 40%;
+      --scroll: 0;
+      --temple: 0;
+      --lens-hue: 0deg;
+      --frame-light: .85;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(46rem 46rem at var(--mx) var(--my), rgba(107,232,255,.10), transparent 65%),
+        radial-gradient(42rem 42rem at 15% 78%, rgba(182,151,255,.10), transparent 70%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      opacity: .045;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .shell { width: min(100% - 2rem, 1440px); margin-inline: auto; }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 80;
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: max(1rem, env(safe-area-inset-left));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: linear-gradient(to bottom, rgba(8,9,13,.86), rgba(8,9,13,.35), transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav__inner { width: min(100% - 2rem, 1440px); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: .65rem; font-weight: 900; letter-spacing: -.04em; }
+    .brand__mark { width: 23px; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(from 90deg, var(--acid), var(--cyan), var(--violet), var(--pink), var(--acid)); box-shadow: 0 0 30px rgba(107,232,255,.32); animation: spin 8s linear infinite; }
+    .nav__meta { color: #9098a8; font: 600 .72rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .nav__cta { padding: .8rem 1.05rem; border: 1px solid var(--line); border-radius: 999px; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; background: rgba(255,255,255,.04); transition: .25s ease; }
+    .nav__cta:hover { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.09); }
+
+    .scene {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      overflow: clip;
+      isolation: isolate;
+      padding: 110px 0 70px;
+    }
+
+    .scene::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    }
+
+    .scene::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 36%;
+      z-index: -2;
+      background: linear-gradient(to top, rgba(8,9,13,.98), transparent);
+      pointer-events: none;
+    }
+
+    .hero__layout, .split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 4rem; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: .65rem; font: 700 .66rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: #a6aebe; }
+    .kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 0 0 rgba(223,255,98,.5); animation: ping 1.8s ease-out infinite; }
+
+    h1, h2 { margin: 0; letter-spacing: -.07em; line-height: .88; }
+    h1 { margin-top: 1.1rem; font-size: clamp(4.1rem, 8.4vw, 9.5rem); max-width: 9ch; }
+    h1 span, h2 span { color: #5f6674; display: block; }
+    h2 { font-size: clamp(3.4rem, 7vw, 7.4rem); max-width: 10ch; }
+    .lead { margin: 1.4rem 0 0; max-width: 35rem; color: var(--muted); font-size: clamp(.95rem, 1.4vw, 1.12rem); line-height: 1.75; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; margin-top: 1.8rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 46px; padding: .85rem 1.15rem; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.04); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.32); }
+    .btn--primary { background: var(--acid); color: #10140a; border-color: transparent; }
+    .btn--primary:hover { background: #ecff9b; }
+
+    .scroll-cue { position: absolute; left: 50%; bottom: max(18px, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 12; display: flex; align-items: center; gap: .7rem; color: #7f8795; font: 600 .62rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .16em; }
+    .scroll-cue i { width: 34px; height: 1px; background: linear-gradient(90deg, transparent, var(--acid)); animation: cue 1.4s ease-in-out infinite; }
+
+    .ambient { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .45; pointer-events: none; }
+    .ambient--1 { width: 440px; height: 440px; right: -180px; top: 8%; background: radial-gradient(circle, rgba(107,232,255,.18), transparent 68%); }
+    .ambient--2 { width: 420px; height: 420px; left: -210px; bottom: -40px; background: radial-gradient(circle, rgba(182,151,255,.18), transparent 68%); }
+
+    .ghost-word { position: absolute; z-index: -1; font-size: min(22vw, 20rem); line-height: .8; font-weight: 950; letter-spacing: -.1em; color: rgba(255,255,255,.018); white-space: nowrap; transform: translate3d(calc(var(--parallax-x, 0) * 1px), calc(var(--parallax-y, 0) * 1px), 0); }
+    .ghost-word--r { right: -4vw; top: 18%; }
+    .ghost-word--l { left: -4vw; bottom: 7%; }
+
+    .flight-wrap {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 40;
+      width: min(64vw, 760px);
+      aspect-ratio: 1.8;
+      transform-style: preserve-3d;
+      pointer-events: none;
+      will-change: transform, filter, opacity;
+      filter: drop-shadow(0 45px 50px rgba(0,0,0,.42));
+    }
+
+    .glasses {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      transform-style: preserve-3d;
+    }
+
+    .glasses .frame { stroke: rgba(242,245,252,var(--frame-light)); stroke-width: 9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .glasses .bridge { stroke-width: 8; }
+    .glasses .lens {
+      fill: url(#lensGradient);
+      stroke: rgba(255,255,255,.54);
+      stroke-width: 2;
+      filter: hue-rotate(var(--lens-hue));
+    }
+    .glasses .shine { fill: url(#shineGradient); opacity: .75; mix-blend-mode: screen; }
+    .glasses .temple-left { transform: translateX(calc(var(--temple) * -64px)) rotate(calc(var(--temple) * -5deg)); transform-origin: 147px 126px; }
+    .glasses .temple-right { transform: translateX(calc(var(--temple) * 64px)) rotate(calc(var(--temple) * 5deg)); transform-origin: 713px 126px; }
+    .glasses .temple-left, .glasses .temple-right { transition: transform .08s linear; }
+
+    .trail { position: fixed; inset: 0; z-index: 18; pointer-events: none; overflow: hidden; }
+    .trail span { position: absolute; width: 18vw; height: 1px; background: linear-gradient(90deg, transparent, rgba(107,232,255,.35), transparent); opacity: .5; transform: rotate(var(--r)) translateX(var(--x)); animation: drift var(--d) linear infinite; }
+
+    .specs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .9rem; margin-top: 2rem; max-width: 720px; }
+    .spec { padding: 1rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.035); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .spec strong { display: block; font-size: 1.1rem; }
+    .spec span { display: block; margin-top: .3rem; color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; }
+
+    .feature-stack { display: grid; gap: .9rem; }
+    .feature-card { position: relative; min-height: 180px; padding: 1.25rem; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
+    .feature-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(22rem 12rem at var(--card-x,70%) var(--card-y,20%), rgba(107,232,255,.16), transparent 65%); opacity: .8; }
+    .feature-card > * { position: relative; z-index: 1; }
+    .feature-card small { color: #9aa2b2; text-transform: uppercase; letter-spacing: .12em; font-size: .63rem; }
+    .feature-card h3 { margin: .75rem 0 .5rem; font-size: clamp(1.35rem, 2.5vw, 2.2rem); letter-spacing: -.04em; }
+    .feature-card p { margin: 0; max-width: 34rem; color: var(--muted); line-height: 1.6; }
+
+    .color-band { position: absolute; inset: auto 0 0; height: 9px; background: linear-gradient(90deg, var(--acid), var(--cyan), var(--violet), var(--pink), var(--acid)); background-size: 220% 100%; animation: band 7s linear infinite; }
+
+    .finale { text-align: center; }
+    .finale h2 { max-width: 12ch; margin-inline: auto; }
+    .finale .lead { margin-inline: auto; }
+    .finale .actions { justify-content: center; }
+    .orbital { position: absolute; inset: 50% auto auto 50%; width: min(78vw, 920px); aspect-ratio: 1; transform: translate(-50%,-50%); border: 1px solid rgba(255,255,255,.08); border-radius: 50%; animation: spin 22s linear infinite; }
+    .orbital::before, .orbital::after { content: ""; position: absolute; border-radius: 50%; border: 1px dashed rgba(107,232,255,.12); }
+    .orbital::before { inset: 12%; animation: spin 16s linear infinite reverse; }
+    .orbital::after { inset: 27%; animation: spin 12s linear infinite; }
+
+    .reveal { opacity: 0; transform: translateY(42px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes ping { 70% { box-shadow: 0 0 0 11px rgba(223,255,98,0); } }
+    @keyframes cue { 50% { transform: translateX(14px); opacity: .4; } }
+    @keyframes drift { to { transform: rotate(var(--r)) translateX(calc(var(--x) + 120vw)); } }
+    @keyframes band { to { background-position: 220% 0; } }
+
+    @media (max-width: 960px) {
+      .hero__layout, .split { grid-template-columns: 1fr; gap: 2rem; }
+      .scene { min-height: 110svh; }
+      .hero__layout { align-content: start; }
+      .flight-wrap { width: min(88vw, 690px); }
+      .hero .lead { max-width: 30rem; }
+      .split > :first-child { max-width: 760px; }
+      .feature-stack { margin-top: 28vh; }
+    }
+
+    @media (max-width: 640px) {
+      .nav { height: 68px; }
+      .nav__meta { display: none; }
+      .nav__cta { padding: .72rem .9rem; font-size: .66rem; }
+      .scene { padding-top: 92px; min-height: 112svh; }
+      h1 { font-size: clamp(4.15rem, 20vw, 6.4rem); }
+      h2 { font-size: clamp(3.3rem, 17vw, 5.4rem); }
+      .flight-wrap { width: 105vw; }
+      .specs { grid-template-columns: 1fr 1fr; }
+      .spec:last-child { grid-column: 1 / -1; }
+      .feature-card { min-height: 165px; }
+      .trail span { width: 45vw; }
+      .ghost-word { font-size: 38vw; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { transition-duration: .2s; }
+      .brand__mark, .kicker::before, .color-band, .orbital, .orbital::before, .orbital::after { animation-duration: 20s; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top"><span class="brand__mark"></span>VANTA</a>
+      <div class="nav__meta">Eyewear in motion · 2026</div>
+      <a class="nav__cta" href="#shop">Shop the frame ↗</a>
+    </div>
+  </header>
+
+  <div class="trail" aria-hidden="true">
+    <span style="top:18%;left:-24%;--r:8deg;--x:-30vw;--d:13s"></span>
+    <span style="top:48%;left:-38%;--r:-5deg;--x:-24vw;--d:17s"></span>
+    <span style="top:75%;left:-44%;--r:12deg;--x:-32vw;--d:19s"></span>
+  </div>
+
+  <div class="flight-wrap" id="flight" aria-hidden="true">
+    <svg class="glasses" viewBox="0 0 860 480" role="img" aria-label="Vanta eyewear frame">
+      <defs>
+        <linearGradient id="lensGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7ef1ff" stop-opacity=".34" />
+          <stop offset=".45" stop-color="#a89cff" stop-opacity=".18" />
+          <stop offset="1" stop-color="#ff7bb7" stop-opacity=".26" />
+        </linearGradient>
+        <linearGradient id="shineGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="white" stop-opacity=".92" />
+          <stop offset=".22" stop-color="white" stop-opacity=".18" />
+          <stop offset=".6" stop-color="white" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <g class="temple-left"><path class="frame" d="M148 126 L53 98 Q25 91 20 116 Q20 139 53 145 L146 154" /></g>
+      <g class="temple-right"><path class="frame" d="M712 126 L807 98 Q835 91 840 116 Q840 139 807 145 L714 154" /></g>
+      <path class="lens" d="M120 145 Q137 112 187 107 L316 111 Q362 113 374 149 L346 269 Q336 311 286 323 L194 323 Q146 317 130 276 Q112 225 120 145Z" />
+      <path class="lens" d="M740 145 Q723 112 673 107 L544 111 Q498 113 486 149 L514 269 Q524 311 574 323 L666 323 Q714 317 730 276 Q748 225 740 145Z" />
+      <path class="frame" d="M120 145 Q137 112 187 107 L316 111 Q362 113 374 149 L346 269 Q336 311 286 323 L194 323 Q146 317 130 276 Q112 225 120 145Z" />
+      <path class="frame" d="M740 145 Q723 112 673 107 L544 111 Q498 113 486 149 L514 269 Q524 311 574 323 L666 323 Q714 317 730 276 Q748 225 740 145Z" />
+      <path class="frame bridge" d="M374 149 Q430 118 486 149" />
+      <path class="shine" d="M144 150 Q166 126 205 124 L273 126 Q236 146 205 190 Q176 230 153 272 Q132 214 144 150Z" />
+      <path class="shine" d="M716 150 Q694 126 655 124 L587 126 Q624 146 655 190 Q684 230 707 272 Q728 214 716 150Z" />
+    </svg>
+  </div>
+
+  <main>
+    <section class="scene hero" id="top" data-scene="0">
+      <div class="ambient ambient--1"></div>
+      <div class="ambient ambient--2"></div>
+      <div class="ghost-word ghost-word--r">VANTA</div>
+      <div class="shell hero__layout">
+        <div class="reveal">
+          <div class="kicker">Engineered for movement</div>
+          <h1>See less frame.<span>Feel more world.</span></h1>
+          <p class="lead">A featherweight acetate frame sculpted to disappear on your face — until the light hits it.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#shop">Explore VANTA One ↗</a>
+            <a class="btn" href="#materials">Watch it move</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><i></i>Swipe to launch</div>
+    </section>
+
+    <section class="scene" id="materials" data-scene="1">
+      <div class="ghost-word ghost-word--l">LIGHT</div>
+      <div class="shell split">
+        <div class="reveal">
+          <div class="kicker">Scene 01 · Weightless</div>
+          <h2>Made to float.<span>Built to stay.</span></h2>
+          <p class="lead">The frame flexes, the temples counterbalance, and pressure disappears. The result feels closer to air than eyewear.</p>
+          <div class="specs">
+            <div class="spec"><strong>18g</strong><span>Total weight</span></div>
+            <div class="spec"><strong>0.8mm</strong><span>Core titanium</span></div>
+            <div class="spec"><strong>24h</strong><span>Comfort tested</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="2">
+      <div class="ghost-word ghost-word--r">SHIFT</div>
+      <div class="shell split">
+        <div></div>
+        <div class="reveal">
+          <div class="kicker">Scene 02 · Adaptive optics</div>
+          <h2>Light changes.<span>Your view adapts.</span></h2>
+          <p class="lead">Photochromic lenses shift from crystal clear indoors to deep violet outdoors, with no visible delay.</p>
+          <div class="specs">
+            <div class="spec"><strong>UV400</strong><span>Full protection</span></div>
+            <div class="spec"><strong>2.4s</strong><span>Transition speed</span></div>
+            <div class="spec"><strong>98%</strong><span>Glare reduction</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="3">
+      <div class="ghost-word ghost-word--l">FORM</div>
+      <div class="shell split">
+        <div class="reveal">
+          <div class="kicker">Scene 03 · Precision</div>
+          <h2>One frame.<span>Three personalities.</span></h2>
+          <p class="lead">Minimal from the front. Architectural from the side. Reflective only when the city lights find it.</p>
+        </div>
+        <div class="feature-stack reveal">
+          <article class="feature-card">
+            <small>Profile A</small>
+            <h3>Ghost clear</h3>
+            <p>Transparent acetate with a cool inner titanium spine.</p>
+          </article>
+          <article class="feature-card">
+            <small>Profile B</small>
+            <h3>Midnight chrome</h3>
+            <p>Black mirror finish with violet edge reflections.</p>
+          </article>
+          <article class="feature-card">
+            <small>Profile C</small>
+            <h3>Acid smoke</h3>
+            <p>Smoked grey body, neon lens coating, no visible logos.</p>
+          </article>
+        </div>
+      </div>
+      <div class="color-band"></div>
+    </section>
+
+    <section class="scene finale" id="shop" data-scene="4">
+      <div class="orbital"></div>
+      <div class="shell reveal">
+        <div class="kicker">Limited launch edition</div>
+        <h2>The frame that moves<span>before you do.</span></h2>
+        <p class="lead">VANTA One ships in three finishes with prescription-ready lenses and a 30-day fit guarantee.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#top">Reserve yours ↗</a>
+          <a class="btn" href="#top">View all colors</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const flight = document.getElementById('flight');
+      const scenes = [...document.querySelectorAll('[data-scene]')];
+      const reveals = [...document.querySelectorAll('.reveal')];
+      const ghostWords = [...document.querySelectorAll('.ghost-word')];
+      let vh = window.innerHeight;
+      let vw = window.innerWidth;
+      let targetY = window.scrollY;
+      let currentY = targetY;
+      let raf = 0;
+      let pointerX = .5;
+      let pointerY = .42;
+
+      const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+      const lerp = (a, b, t) => a + (b - a) * t;
+      const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2;
+
+      function resize() {
+        vh = window.innerHeight;
+        vw = window.innerWidth;
+      }
+
+      function sceneProgress(index, y) {
+        const s = scenes[index];
+        const top = s.offsetTop;
+        const height = s.offsetHeight;
+        return clamp((y - top + vh * .5) / height, 0, 1);
+      }
+
+      function flightState(y) {
+        const total = document.documentElement.scrollHeight - vh;
+        const global = clamp(y / Math.max(total, 1), 0, 1);
+        root.style.setProperty('--scroll', global.toFixed(4));
+
+        const points = [
+          { x: 50, y: 54, s: 1.00, rx: -5,  ry: 8,   rz: -4, hue: 0,   temple: 0,   o: 1 },
+          { x: 72, y: 46, s: .72, rx: 12,  ry: -28, rz: 12, hue: 35,  temple: .18, o: 1 },
+          { x: 29, y: 58, s: .80, rx: -12, ry: 35,  rz: -16,hue: 120, temple: .42, o: 1 },
+          { x: 69, y: 43, s: .68, rx: 18,  ry: -42, rz: 18, hue: 230, temple: .75, o: 1 },
+          { x: 50, y: 52, s: .92, rx: -3,  ry: 4,   rz: 0,  hue: 300, temple: 0,   o: 1 }
+        ];
+
+        const spans = scenes.map((s, i) => ({ top: s.offsetTop, height: s.offsetHeight, i }));
+        let idx = spans.findIndex(s => y + vh * .52 < s.top + s.height);
+        if (idx < 0) idx = spans.length - 1;
+        const local = sceneProgress(idx, y);
+        const a = points[idx];
+        const b = points[Math.min(idx + 1, points.length - 1)];
+        const t = ease(local);
+
+        let x = lerp(a.x, b.x, t);
+        let py = lerp(a.y, b.y, t);
+        let s = lerp(a.s, b.s, t);
+        let rx = lerp(a.rx, b.rx, t);
+        let ry = lerp(a.ry, b.ry, t);
+        let rz = lerp(a.rz, b.rz, t);
+        const hue = lerp(a.hue, b.hue, t);
+        const temple = lerp(a.temple, b.temple, t);
+
+        const isTouch = matchMedia('(pointer:coarse)').matches || navigator.maxTouchPoints > 0;
+        if (!isTouch) {
+          ry += (pointerX - .5) * 12;
+          rx += (.5 - pointerY) * 9;
+        }
+
+        const bob = Math.sin(global * Math.PI * 8) * 7;
+        const sway = Math.cos(global * Math.PI * 6) * 5;
+        x += sway;
+        py += bob;
+
+        flight.style.transform = `translate3d(calc(${x}vw - 50%), calc(${py}vh - 50%), 0) scale(${s}) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg)`;
+        flight.style.opacity = global > .985 ? 0 : 1;
+        root.style.setProperty('--lens-hue', `${hue}deg`);
+        root.style.setProperty('--temple', temple.toFixed(3));
+        root.style.setProperty('--frame-light', (0.72 + Math.sin(global * 15) * .14).toFixed(2));
+
+        ghostWords.forEach((el, i) => {
+          const dir = i % 2 ? -1 : 1;
+          el.style.setProperty('--parallax-x', ((global * 120 - 30) * dir).toFixed(1));
+          el.style.setProperty('--parallax-y', ((global * 90 - 15) * -dir).toFixed(1));
+        });
+      }
+
+      function tick() {
+        currentY += (targetY - currentY) * .095;
+        flightState(currentY);
+        if (Math.abs(targetY - currentY) > .2) raf = requestAnimationFrame(tick);
+        else raf = 0;
+      }
+
+      addEventListener('scroll', () => {
+        targetY = window.scrollY;
+        if (!raf) raf = requestAnimationFrame(tick);
+      }, { passive: true });
+
+      addEventListener('resize', () => {
+        resize();
+        targetY = currentY = window.scrollY;
+        flightState(currentY);
+      }, { passive: true });
+
+      addEventListener('pointermove', e => {
+        pointerX = e.clientX / vw;
+        pointerY = e.clientY / vh;
+        root.style.setProperty('--mx', `${pointerX * 100}%`);
+        root.style.setProperty('--my', `${pointerY * 100}%`);
+        document.querySelectorAll('.feature-card').forEach(card => {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--card-x', `${((e.clientX - r.left) / r.width) * 100}%`);
+          card.style.setProperty('--card-y', `${((e.clientY - r.top) / r.height) * 100}%`);
+        });
+      }, { passive: true });
+
+      addEventListener('touchmove', e => {
+        const t = e.touches[0];
+        if (!t) return;
+        pointerX = t.clientX / vw;
+        pointerY = t.clientY / vh;
+        root.style.setProperty('--mx', `${pointerX * 100}%`);
+        root.style.setProperty('--my', `${pointerY * 100}%`);
+      }, { passive: true });
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: .22 });
+      reveals.forEach(el => io.observe(el));
+
+      resize();
+      flightState(window.scrollY);
+      requestAnimationFrame(() => reveals[0]?.classList.add('is-visible'));
+    })();
+  </script>
+</body>
+</html>
