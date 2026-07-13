@@ -1,1 +1,1 @@
-Retry named Mira AI motion deployment through Cloudflare temporary account.
+Retry Mira AI motion deployment with Cloudflare compatibility date.
