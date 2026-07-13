@@ -23,35 +23,39 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to temporary Cloudflare account
+        id: cloudflare
+        continue-on-error: true
         shell: bash
         run: |
-          set -euo pipefail
+          set +e
           npx wrangler@4.110.0 deploy mira-ai-motion --temporary 2>&1 | tee deploy.log
-
+          CODE=${PIPESTATUS[0]}
           URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.(workers|pages)\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
-          if [ -z "$URL" ]; then
-            echo "Cloudflare URL was not found in Wrangler output."
-            cat deploy.log
-            exit 1
+
+          if [ -n "$URL" ]; then
+            {
+              echo "Cloudflare preview: $URL"
+            } > deploy-comment.md
+          else
+            {
+              echo "Cloudflare deployment failed (exit code $CODE)."
+              echo
+              echo '```text'
+              tail -n 60 deploy.log
+              echo '```'
+            } > deploy-comment.md
           fi
 
-          printf 'CLOUDFLARE_URL=%s\n' "$URL" >> "$GITHUB_ENV"
-
-      - name: Comment deployment URL on pull request
+      - name: Comment result on pull request
+        if: always()
         uses: actions/github-script@v7
-        env:
-          CLOUDFLARE_URL: ${{ env.CLOUDFLARE_URL }}
         with:
           script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('deploy-comment.md', 'utf8');
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Cloudflare preview: ${process.env.CLOUDFLARE_URL}`
-            })
-
-      - name: Add deployment link to summary
-        shell: bash
-        run: |
-          echo "## Cloudflare preview" >> "$GITHUB_STEP_SUMMARY"
-          echo "$CLOUDFLARE_URL" >> "$GITHUB_STEP_SUMMARY"
+              body
+            });
