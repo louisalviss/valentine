@@ -1,16 +1,17 @@
 name: Deploy Mira preview to Cloudflare
 
 on:
-  push:
+  pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
     paths:
-      - "mira-ai-motion/index.html"
-      - "mira-ai-motion/deploy-trigger.txt"
-      - ".github/workflows/cloudflare-temp.yml"
+      - "mira-ai-motion/deploy-pr-trigger.txt"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   deploy:
@@ -34,19 +35,20 @@ jobs:
             exit 1
           fi
 
-          printf '%s\n' "$URL" > mira-ai-motion/cloudflare-url.txt
           printf 'CLOUDFLARE_URL=%s\n' "$URL" >> "$GITHUB_ENV"
 
-      - name: Save deployment URL
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add mira-ai-motion/cloudflare-url.txt
-          if ! git diff --cached --quiet; then
-            git commit -m "Save Cloudflare preview URL"
-            git push
-          fi
+      - name: Comment deployment URL on pull request
+        uses: actions/github-script@v7
+        env:
+          CLOUDFLARE_URL: ${{ env.CLOUDFLARE_URL }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Cloudflare preview: ${process.env.CLOUDFLARE_URL}`
+            })
 
       - name: Add deployment link to summary
         shell: bash
