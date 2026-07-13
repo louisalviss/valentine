@@ -1,365 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>VANTA — Scroll Motion Landing Page</title>
-  <meta name="description" content="VANTA eyewear landing page with cinematic scroll motion." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#04060b;
-      --panel:#070b14;
-      --line:rgba(255,255,255,.1);
-      --text:#f5f2eb;
-      --muted:rgba(245,242,235,.65);
-      --gold:#d0a15f;
-      --gold-2:#f3ca86;
-      --shadow:0 24px 80px rgba(0,0,0,.5);
-      --radius:28px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(circle at 50% 10%, #0f1930, #05070b 48%, #020305 100%);color:var(--text);font-family:Inter,system-ui,sans-serif;scroll-behavior:smooth;}
-    body{overflow-x:hidden}
-    a{text-decoration:none;color:inherit}
-    .noise,.vignette,.ambient{position:fixed;inset:0;pointer-events:none;z-index:0}
-    .noise{opacity:.05;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="1"/></svg>');mix-blend-mode:screen}
-    .vignette{background:radial-gradient(circle at center, transparent 36%, rgba(0,0,0,.3) 68%, rgba(0,0,0,.74) 100%)}
-    .ambient::before,.ambient::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.12}
-    .ambient::before{width:42vw;height:42vw;left:-10vw;top:8vh;background:#4b77ff}
-    .ambient::after{width:28vw;height:28vw;right:-8vw;top:42vh;background:#f7c06c}
-
-    .header{
-      position:fixed;top:0;left:0;right:0;z-index:50;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:18px 22px 18px 22px;
-      background:linear-gradient(to bottom, rgba(3,4,8,.68), rgba(3,4,8,.18), transparent);
-      backdrop-filter: blur(10px);
-    }
-    .brand{font-size:clamp(1.2rem,2vw,1.6rem);letter-spacing:.45em;text-transform:uppercase}
-    .nav{display:flex;gap:22px;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-    .nav a{transition:.25s}
-    .nav a:hover{color:#fff}
-    .cta{border:1px solid rgba(208,161,95,.5);padding:.8rem 1rem;border-radius:999px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.03)}
-    .menu{display:none}
-
-    .progress{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:14px;align-items:center}
-    .progress .line{width:1px;height:84px;background:linear-gradient(to bottom, transparent, rgba(255,255,255,.16), transparent)}
-    .dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:transparent;transition:.3s;box-shadow:0 0 0 0 rgba(243,202,134,0)}
-    .dot.active{background:var(--gold-2);border-color:var(--gold-2);box-shadow:0 0 18px 4px rgba(243,202,134,.35)}
-
-    main{position:relative;z-index:2}
-    .panel{
-      position:relative;min-height:100svh;height:100svh;overflow:hidden;
-      border-top:1px solid rgba(255,255,255,.08);
-      scroll-snap-align:start;
-    }
-    .panel:first-of-type{border-top:none}
-    .media{position:absolute;inset:-6%;will-change:transform}
-    .media img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;filter:saturate(1.06) contrast(1.06)}
-    .scrim{position:absolute;inset:0;background:
-      linear-gradient(90deg, rgba(2,4,8,.62) 0%, rgba(2,4,8,.18) 34%, rgba(2,4,8,.06) 64%, rgba(2,4,8,.52) 100%),
-      linear-gradient(180deg, rgba(2,4,8,.2) 0%, transparent 28%, transparent 68%, rgba(2,4,8,.46) 100%);
-    }
-    .gold-streak,.ring{position:absolute;pointer-events:none;opacity:.5;mix-blend-mode:screen}
-    .gold-streak{height:1px;background:linear-gradient(90deg, transparent, rgba(243,202,134,.95), transparent);filter:blur(.5px)}
-    .ring{border:1px solid rgba(243,202,134,.23);border-radius:50%;box-shadow:0 0 80px rgba(243,202,134,.06), inset 0 0 60px rgba(243,202,134,.02)}
-
-    .content{position:relative;z-index:3;display:flex;align-items:flex-end;height:100%;padding:96px 22px 26px 22px}
-    .card{
-      max-width:440px;padding:22px;border-radius:24px;
-      background:linear-gradient(180deg, rgba(8,13,24,.68), rgba(5,7,12,.42));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);backdrop-filter:blur(12px)
-    }
-    .eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-2);margin-bottom:8px}
-    h1,h2{font-family:'Cormorant Garamond', serif;line-height:.92;margin:0}
-    h1{font-size:clamp(3rem,8vw,6.6rem);font-weight:600;letter-spacing:-.04em}
-    h2{font-size:clamp(2.6rem,7vw,5rem);font-weight:600;letter-spacing:-.04em}
-    .gold{color:var(--gold-2)}
-    .copy{margin:12px 0 0;color:var(--muted);font-size:.98rem;line-height:1.65;max-width:34ch}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:.95rem 1.15rem;border-radius:999px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
-    .btn-primary{background:linear-gradient(180deg, rgba(243,202,134,.18), rgba(208,161,95,.11));border:1px solid rgba(243,202,134,.52)}
-    .btn-secondary{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff}
-    .small-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:rgba(255,255,255,.72);font-size:.78rem;text-transform:uppercase;letter-spacing:.16em}
-    .small-meta span{display:inline-flex;align-items:center;gap:8px}
-    .small-meta i{width:6px;height:6px;border-radius:50%;background:var(--gold-2);display:inline-block;box-shadow:0 0 10px rgba(243,202,134,.45)}
-
-    .floating-ui{position:absolute;inset:0;z-index:3;pointer-events:none}
-    .panel-no{position:absolute;left:22px;top:92px;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:rgba(255,255,255,.9)}
-    .vertical-label{position:absolute;left:20px;top:160px;transform:rotate(-90deg) translateX(-100%);transform-origin:left top;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.48)}
-    .scroll-hint{position:absolute;right:42px;bottom:26px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.42)}
-
-    .footer-strip{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:14px 22px;border-top:1px solid rgba(255,255,255,.08);display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(180deg, rgba(3,5,10,0), rgba(3,5,10,.65))}
-    .footer-strip .feature{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-
-    @media (max-width: 920px){
-      .nav{display:none}
-      .menu{display:block;color:#fff;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase}
-      .content{align-items:flex-end;padding:84px 16px 20px}
-      .card{max-width:min(100%, 420px);padding:18px 16px 18px}
-      .panel-no{left:16px;top:84px}
-      .vertical-label{display:none}
-      .scroll-hint{right:16px;font-size:.65rem;letter-spacing:.2em}
-      .progress{right:12px;gap:10px}
-      .progress .line{height:60px}
-      .footer-strip{padding:12px 16px;gap:10px}
-      .footer-strip .feature{font-size:.65rem}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#04060b">
+<title>VANTA — Vision in Motion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04060b;--ink:#f4f0e9;--muted:#9a9389;--gold:#e0b36d;--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}body{overflow-x:hidden}.scroll{height:600svh}.stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 68% 40%,#16223a 0,#080b12 35%,#030408 75%)}
+.stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 65% 50%,#000 0,transparent 72%)}
+.noise{position:absolute;inset:0;opacity:.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.halo{position:absolute;width:min(62vw,760px);aspect-ratio:1;border:1px solid rgba(224,179,109,.3);border-radius:50%;left:58%;top:48%;transform:translate(-50%,-50%);box-shadow:0 0 100px rgba(224,179,109,.08),inset 0 0 80px rgba(224,179,109,.04)}.halo:after,.halo:before{content:"";position:absolute;border-radius:50%;inset:10%;border:1px dashed rgba(224,179,109,.16)}.halo:after{inset:24%;border-style:solid}
+nav{position:absolute;z-index:20;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;padding:max(20px,env(safe-area-inset-top)) 24px 18px;background:linear-gradient(to bottom,rgba(3,4,7,.78),transparent)}.logo{letter-spacing:.42em;font-weight:600}.navlinks{display:flex;gap:24px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#c7c1b9}.navcta{padding:.75rem 1rem;border:1px solid var(--line);border-radius:999px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+.copy{position:absolute;z-index:15;left:clamp(20px,6vw,90px);top:50%;transform:translateY(-50%);width:min(38vw,520px)}.chapter{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}.copy h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(4rem,8vw,8rem);line-height:.82;letter-spacing:-.055em;margin:0;max-width:7ch}.copy h1 span{color:var(--gold)}.copy p{max-width:38ch;color:var(--muted);line-height:1.7;margin:18px 0}.button{display:inline-flex;padding:.9rem 1.2rem;border:1px solid rgba(224,179,109,.55);border-radius:999px;font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;background:rgba(224,179,109,.06)}
+.visual{position:absolute;z-index:8;left:54%;top:49%;width:min(76vw,1050px);height:min(78vh,760px);transform:translate(-50%,-50%);perspective:1600px;transform-style:preserve-3d}.scene-svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 50px 70px rgba(0,0,0,.55))}.face{transform-box:fill-box;transform-origin:center}.glasses{transform-box:fill-box;transform-origin:center;will-change:transform,opacity;filter:drop-shadow(0 28px 30px rgba(0,0,0,.55))}.lens{fill:url(#lens);stroke:#ddb26d;stroke-width:5}.frame{fill:none;stroke:#e1b978;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}.arm{fill:none;stroke:#16191f;stroke-width:18;stroke-linecap:round}.armGold{fill:none;stroke:#d5a45d;stroke-width:3}.skin{fill:url(#skin)}.shadow{fill:#050608;opacity:.72}.hair{fill:#08090c}.neck{fill:#15100e}.highlight{fill:none;stroke:rgba(255,255,255,.18);stroke-width:2}.orbit{fill:none;stroke:rgba(224,179,109,.28);stroke-width:1.2;stroke-dasharray:8 11}.spark{fill:#f2c77e;filter:drop-shadow(0 0 8px #f2c77e)}
+.progress{position:absolute;z-index:20;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}.progress i{width:8px;height:8px;border:1px solid rgba(255,255,255,.45);border-radius:50%;transition:.25s}.progress i.on{background:var(--gold);border-color:var(--gold);box-shadow:0 0 18px rgba(224,179,109,.6)}.scrollhint{position:absolute;z-index:20;right:18px;bottom:24px;writing-mode:vertical-rl;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:#888}.counter{position:absolute;z-index:20;left:24px;top:90px;font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:#d9b77f}.caption{position:absolute;z-index:15;right:clamp(28px,6vw,92px);bottom:40px;width:min(27vw,320px);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#a69f96;line-height:1.7;text-align:right}.caption b{color:var(--gold)}
+@media(max-width:850px){.navlinks{display:none}.navcta{display:none}.copy{top:auto;bottom:32px;left:16px;transform:none;width:calc(100% - 48px);padding:16px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:rgba(5,7,11,.62);backdrop-filter:blur(12px)}.copy h1{font-size:clamp(3.1rem,14vw,5.2rem);max-width:8ch}.copy p{font-size:.85rem;margin:10px 0 14px}.visual{left:52%;top:41%;width:125vw;height:58vh}.halo{left:54%;top:38%;width:95vw}.caption{display:none}.counter{top:76px;left:16px}.progress{right:10px}.scrollhint{display:none}}
+</style>
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="ambient"></div>
-  <div class="vignette"></div>
-
-  <header class="header">
-    <div class="brand">VANTA</div>
-    <nav class="nav">
-      <a href="#p1">Collection</a>
-      <a href="#p2">Technology</a>
-      <a href="#p3">Craft</a>
-      <a href="#p4">360 View</a>
-      <a href="#p5">Journal</a>
-    </nav>
-    <a class="cta" href="#p5">Shop the frame</a>
-    <div class="menu">Menu</div>
-  </header>
-
-  <div class="progress" aria-hidden="true">
-    <div class="dot active"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="line"></div>
-  </div>
-
-  <main>
-    <section class="panel" id="p1" data-index="0" data-motion="hero">
-      <div class="media"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-vanta-img="1" alt="VANTA hero eyewear" /></div>
-      <div class="scrim"></div>
-      <div class="gold-streak" style="left:-10%; top:34%; width:70%; transform:rotate(-18deg)"></div>
-      <div class="ring" style="width:44vw; height:44vw; right:-4vw; top:16vh"></div>
-      <div class="floating-ui">
-        <div class="panel-no">01</div>
-        <div class="vertical-label">The Vision</div>
-        <div class="scroll-hint">Scroll to discover</div>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="eyebrow">Hero / full screen</div>
-          <h1>See the <span class="gold">future.</span></h1>
-          <p class="copy">A cinematic opening shot. The frame sits on the face, oversized and dramatic. As the viewer scrolls, the whole composition starts to move like a premium campaign film.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#p2">Start the journey →</a>
-            <a class="btn btn-secondary" href="#p5">Explore collection</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" id="p2" data-index="1" data-motion="zoom">
-      <div class="media"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-vanta-img="2" alt="Zoom into glasses" /></div>
-      <div class="scrim"></div>
-      <div class="gold-streak" style="left:-6%; top:52%; width:68%; transform:rotate(2deg)"></div>
-      <div class="floating-ui">
-        <div class="panel-no">02</div>
-        <div class="vertical-label">Zoom in</div>
-        <div class="scroll-hint">Scroll to continue</div>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="eyebrow">Focus sequence</div>
-          <h2>Zoom <span class="gold">closer.</span></h2>
-          <p class="copy">The camera pushes in until the frame dominates the screen. Metallic edges, tinted lens and the temple logo become the hero details. Motion is tied to scroll, not autoplay.</p>
-          <div class="small-meta">
-            <span><i></i> optical depth</span>
-            <span><i></i> lens reflection</span>
-            <span><i></i> luxury finish</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" id="p3" data-index="2" data-motion="breakout">
-      <div class="media"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-vanta-img="3" alt="Glasses break away" /></div>
-      <div class="scrim"></div>
-      <div class="ring" style="width:52vw; height:52vw; left:24vw; top:22vh"></div>
-      <div class="gold-streak" style="left:-4%; top:72%; width:90%; transform:rotate(8deg)"></div>
-      <div class="floating-ui">
-        <div class="panel-no">03</div>
-        <div class="vertical-label">Break away</div>
-        <div class="scroll-hint">Scroll to rotate</div>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="eyebrow">Parallax breakout</div>
-          <h2>Only the <span class="gold">frame</span> remains.</h2>
-          <p class="copy">The glasses detach from the face and float into a deep space. Orbit lines, particles and background layers drift at different speeds to create a true parallax feel.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" id="p4" data-index="3" data-motion="spin">
-      <div class="media"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-vanta-img="4" alt="360 view of glasses" /></div>
-      <div class="scrim"></div>
-      <div class="ring" style="width:56vw; height:30vw; left:22vw; top:26vh"></div>
-      <div class="floating-ui">
-        <div class="panel-no">04</div>
-        <div class="vertical-label">360 rotation</div>
-        <div class="scroll-hint">Scroll to return</div>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="eyebrow">Rotation scene</div>
-          <h2>A full <span class="gold">360°</span> turn.</h2>
-          <p class="copy">This section behaves like a product showcase. The center visual rotates and drifts while ghosted positions hint at the full circular movement, all controlled by scroll.</p>
-          <div class="small-meta">
-            <span><i></i> hinge detail</span>
-            <span><i></i> side profile</span>
-            <span><i></i> front geometry</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" id="p5" data-index="4" data-motion="return">
-      <div class="media"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-vanta-img="5" alt="Return to face with glasses" /></div>
-      <div class="scrim"></div>
-      <div class="gold-streak" style="right:-10%; top:28%; width:72%; transform:rotate(-12deg)"></div>
-      <div class="ring" style="width:46vw; height:46vw; right:-8vw; bottom:-8vw"></div>
-      <div class="floating-ui">
-        <div class="panel-no">05</div>
-        <div class="vertical-label">Return</div>
-        <div class="scroll-hint">Final reveal</div>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="eyebrow">Closing frame</div>
-          <h2>Back to <span class="gold">vision.</span></h2>
-          <p class="copy">The motion resolves by returning the glasses to the face. It ends where it began, but now the frame has been fully explored. Stronger than a static product page.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#p1">Replay the motion →</a>
-            <a class="btn btn-secondary" href="#">Join the VANTA circle</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-strip">
-        <div class="feature">Handcrafted titanium</div>
-        <div class="feature">Japanese lenses</div>
-        <div class="feature">Limited production</div>
-        <div class="feature">Lifetime warranty</div>
-      </div>
-    </section>
-  </main>
-
-
-  <script src="assets/img1.js"></script>
-  <script src="assets/img2.js"></script>
-  <script src="assets/img3.js"></script>
-  <script src="assets/img4.js"></script>
-  <script src="assets/img5.js"></script>
-  <script>document.querySelectorAll('[data-vanta-img]').forEach(function(img){img.src=window['VANTA_IMG_'+img.dataset.vantaImg];});</script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    const sections = gsap.utils.toArray('.panel');
-    const dots = gsap.utils.toArray('.dot');
-
-    sections.forEach((section, index) => {
-      const img = section.querySelector('img');
-      const card = section.querySelector('.card');
-      const motion = section.dataset.motion;
-      const ring = section.querySelector('.ring');
-      const streaks = section.querySelectorAll('.gold-streak');
-
-      let from = {scale:1.12, yPercent:-4, xPercent:0, rotate:0};
-      let to = {scale:1.02, yPercent:4, xPercent:0, rotate:0, ease:'none'};
-
-      if (motion === 'zoom') {
-        from = {scale:1.28, xPercent:-3, yPercent:-1, rotate:0};
-        to = {scale:1.05, xPercent:4, yPercent:2, rotate:0, ease:'none'};
-      }
-      if (motion === 'breakout') {
-        from = {scale:.98, xPercent:-2, yPercent:6, rotate:-2};
-        to = {scale:1.1, xPercent:2, yPercent:-7, rotate:2, ease:'none'};
-      }
-      if (motion === 'spin') {
-        from = {scale:1.08, xPercent:0, yPercent:2, rotate:-4};
-        to = {scale:1.16, xPercent:1, yPercent:-3, rotate:4, ease:'none'};
-      }
-      if (motion === 'return') {
-        from = {scale:1.18, xPercent:3, yPercent:-2, rotate:0};
-        to = {scale:1.02, xPercent:-3, yPercent:3, rotate:0, ease:'none'};
-      }
-
-      gsap.fromTo(img, from, {
-        ...to,
-        scrollTrigger: {
-          trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true
-        }
-      });
-
-      gsap.fromTo(card, {autoAlpha:0, y:56}, {
-        autoAlpha:1, y:0, duration:1,
-        scrollTrigger:{ trigger: section, start:'top 70%', end:'top 45%', scrub:0.8 }
-      });
-
-      if (ring) {
-        gsap.fromTo(ring, {rotate:0, scale:.94, autoAlpha:.2}, {
-          rotate: motion === 'spin' ? 30 : -18,
-          scale: motion === 'zoom' ? 1.06 : 1.12,
-          autoAlpha:.62,
-          ease:'none',
-          scrollTrigger:{ trigger: section, start:'top bottom', end:'bottom top', scrub:true }
-        });
-      }
-
-      streaks.forEach((line, i) => {
-        gsap.fromTo(line, {xPercent: i % 2 ? -8 : 8, autoAlpha:.18}, {
-          xPercent: i % 2 ? 8 : -8,
-          autoAlpha:.64,
-          ease:'none',
-          scrollTrigger:{ trigger: section, start:'top bottom', end:'bottom top', scrub:true }
-        });
-      });
-
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top center',
-        end: 'bottom center',
-        onToggle: self => {
-          if (self.isActive) {
-            dots.forEach((d, i) => d.classList.toggle('active', i === index));
-          }
-        }
-      });
-    });
-
-    const media = gsap.utils.toArray('.media');
-    window.addEventListener('pointermove', (e) => {
-      if (window.innerWidth < 900) return;
-      const x = (e.clientX / window.innerWidth - .5) * 10;
-      const y = (e.clientY / window.innerHeight - .5) * 8;
-      media.forEach((m, i) => {
-        gsap.to(m, {
-          x: x * (i % 2 ? .55 : .35),
-          y: y * (i % 2 ? .45 : .25),
-          duration: 1.2,
-          overwrite: 'auto',
-          ease: 'power3.out'
-        });
-      });
-    }, {passive:true});
-  </script>
-</body>
-</html>
+<div class="scroll">
+<section class="stage">
+<div class="noise"></div><div class="halo"></div>
+<nav><div class="logo">VANTA</div><div class="navlinks"><span>Collection</span><span>Technology</span><span>Craft</span><span>Journal</span></div><div class="navcta">Explore frames</div></nav>
+<div class="counter" id="counter">01</div>
+<div class="copy" id="copy"><div class="chapter" id="chapter">The vision</div><h1 id="title">See the <span>future.</span></h1><p id="desc">A premium frame begins on the face. Scroll slowly to move closer, release the glasses, rotate them through 360°, then return them to vision.</p><a class="button" href="#">Explore VANTA →</a></div>
+<div class="visual">
+<svg class="scene-svg" viewBox="0 0 1000 720" aria-label="Animated VANTA glasses on a stylized face">
+<defs>
+<linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#2b1b16"/><stop offset=".42" stop-color="#9d684f"/><stop offset=".78" stop-color="#4c2e24"/><stop offset="1" stop-color="#160f0d"/></linearGradient>
+<linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141a24"/><stop offset=".45" stop-color="#020305"/><stop offset="1" stop-color="#273348"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#f1c67c" stop-opacity=".75"/><stop offset="1" stop-color="#f1c67c" stop-opacity="0"/></radialGradient>
+</defs>
+<g class="space">
+<ellipse class="orbit" cx="570" cy="350" rx="355" ry="245"/><ellipse class="orbit" cx="570" cy="350" rx="280" ry="185" transform="rotate(-19 570 350)"/><circle class="spark" cx="831" cy="196" r="4"/><circle class="spark" cx="737" cy="565" r="3"/><circle class="spark" cx="315" cy="144" r="3"/><circle cx="570" cy="350" r="210" fill="url(#glow)" opacity=".08"/>
+</g>
+<g class="face">
+<path class="hair" d="M450 88c110-67 276-43 335 63 44 79 18 160-24 205l-49-112-207-36-70 39-20-89z"/>
+<path class="skin" d="M495 109c69-38 182-21 237 34 53 54 61 140 38 222-17 61-60 132-118 180-41 34-99 45-151 14-40-24-66-66-80-111-14-46-35-81-15-121 17-33 50-39 48-79-2-51-16-106 41-139z"/>
+<path class="shadow" d="M661 137c87 44 122 142 86 255-22 68-67 137-129 170 92-131 76-266 43-425z"/>
+<path class="neck" d="M566 553c73 23 136-5 181-70l64 130H493z"/>
+<path class="highlight" d="M492 177c-30 71-19 142 11 186 17 25 12 48-20 57"/>
+<path class="highlight" d="M522 476c54 25 103 14 134-21"/>
+</g>
+<g class="glasses">
+<path class="arm" d="M345 255C282 220 239 218 190 235"/><path class="armGold" d="M345 255C282 220 239 218 190 235"/>
+<path class="arm" d="M692 254c82-39 155-41 218 4"/><path class="armGold" d="M692 254c82-39 155-41 218 4"/>
+<path class="lens" d="M344 236c-61-13-132-1-159 24-16 15-12 97 15 129 28 34 125 37 154-2 24-33 44-136-10-151z"/>
+<path class="lens" d="M522 235c58-16 139-6 170 20 20 17 14 105-14 137-29 34-129 35-159-4-26-35-47-138 3-153z"/>
+<path class="frame" d="M354 259c41-26 117-26 164 0"/><path class="frame" d="M346 238c-61-14-134-3-162 23-17 16-13 99 15 132 29 35 128 38 157-2 25-34 45-138-10-153z"/><path class="frame" d="M520 237c60-17 142-7 174 20 21 17 15 108-14 141-30 35-133 36-164-5-27-36-48-141 4-156z"/>
+<path class="frame" d="M177 261l-30 8M701 259l31-8"/><circle cx="430" cy="316" r="7" fill="#cda564"/><circle cx="443" cy="350" r="7" fill="#cda564"/>
+<path d="M347 268c-37 22-77 21-116 8" class="highlight"/><path d="M530 267c44-21 91-22 137-8" class="highlight"/>
+</g>
+</svg>
+</div>
+<div class="caption" id="caption"><b>Scroll-driven sequence</b><br>Face → zoom → release → 360° → return</div>
+<div class="progress" id="progress"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="scrollhint">Scroll to animate ↓</div>
+</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const face=document.querySelector('.face'), glasses=document.querySelector('.glasses'), space=document.querySelector('.space'), halo=document.querySelector('.halo');
+const title=document.getElementById('title'),chapter=document.getElementById('chapter'),desc=document.getElementById('desc'),counter=document.getElementById('counter'),dots=[...document.querySelectorAll('.progress i')];
+const chapters=[
+['01','The vision','See the <span>future.</span>','The frame begins on the face. Scroll to push the camera closer.'],
+['02','Zoom in','Closer to <span>precision.</span>','The lens, rim and temple fill the screen while the face becomes an environment.'],
+['03','Break away','Only the <span>frame.</span>','The glasses detach from the face and float into open space.'],
+['04','360° rotation','Every <span>angle.</span>','Scroll controls a complete product rotation with depth and parallax.'],
+['05','Return','Back to <span>vision.</span>','The glasses settle onto the face, completing the loop.']];
+let active=-1;function setChapter(i){if(i===active)return;active=i;counter.textContent=chapters[i][0];chapter.textContent=chapters[i][1];title.innerHTML=chapters[i][2];desc.textContent=chapters[i][3];dots.forEach((d,n)=>d.classList.toggle('on',n===i));gsap.fromTo([chapter,title,desc],{opacity:0,y:14},{opacity:1,y:0,duration:.45,stagger:.05,ease:'power2.out'});}
+const tl=gsap.timeline({scrollTrigger:{trigger:'.scroll',start:'top top',end:'bottom bottom',scrub:.45,onUpdate:self=>setChapter(Math.min(4,Math.floor(self.progress*5)))}});
+tl.set(face,{transformOrigin:'55% 45%'}).set(glasses,{transformOrigin:'50% 50%'});
+tl.to(face,{scale:1.42,x:-80,y:20,duration:1,ease:'none'},0)
+  .to(glasses,{scale:1.48,x:-22,y:8,duration:1,ease:'none'},0)
+  .to(halo,{scale:1.15,rotation:35,duration:1,ease:'none'},0)
+  .to(face,{opacity:0,scale:1.85,x:-190,duration:.75,ease:'none'},1)
+  .to(glasses,{scale:1.1,x:110,y:-10,rotationZ:-4,duration:.75,ease:'none'},1)
+  .to(space,{rotation:-18,scale:1.12,duration:.75,ease:'none'},1)
+  .to(glasses,{rotationY:360,rotationX:18,rotationZ:4,x:0,y:-15,scale:1.22,duration:1.5,ease:'none'},1.75)
+  .to(space,{rotation:30,scale:1.3,duration:1.5,ease:'none'},1.75)
+  .to(face,{opacity:1,scale:1,x:0,y:0,duration:1,ease:'none'},3.25)
+  .to(glasses,{rotationY:0,rotationX:0,rotationZ:0,x:0,y:0,scale:1,duration:1,ease:'none'},3.25)
+  .to(halo,{scale:1,rotation:0,duration:1,ease:'none'},3.25);
+setChapter(0);
+</script>
+</body></html>
