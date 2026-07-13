@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "mira-ai-motion/index.html"
+      - "mira-ai-motion/deploy-trigger.txt"
       - ".github/workflows/cloudflare-temp.yml"
   workflow_dispatch:
 
