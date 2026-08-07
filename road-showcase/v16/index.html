@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Nha Trang Road Book v16</title>
+<style>
+:root{
+  --bg:#07111f;
+  --paper:#f7f1e7;
+  --paper-2:#efe5d6;
+  --ink:#102033;
+  --muted:#5e6d7f;
+  --cyan:#69d7e7;
+  --sea:#74d6ee;
+  --sea-deep:#2da2ca;
+  --road:#35424f;
+  --lane:#f4f0d9;
+  --accent:#ee8d5b;
+  --brick:#b66745;
+  --forest:#6d8f69;
+  --forest-deep:#496951;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:radial-gradient(circle at 50% 12%,#102843 0,#07111f 54%);color:#edf3fa;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;overflow-x:hidden}
+body{min-height:100vh}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+.header,.route,.hud,.hero{position:fixed;z-index:3;pointer-events:none}
+.header{top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 14px) 20px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand strong{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#eef6ff}
+.brand span{font-size:11px;color:#9eb0c4;letter-spacing:.08em}
+.route{left:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
+.route .dot{width:9px;height:9px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);transition:.2s}
+.route .dot.active{background:#fff;border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.12)}
+.hud{right:20px;bottom:calc(env(safe-area-inset-bottom) + 18px);padding:14px 16px;border:1px solid rgba(255,255,255,.12);background:rgba(8,16,28,.52);backdrop-filter:blur(14px);border-radius:18px;min-width:190px;box-shadow:0 18px 60px rgba(0,0,0,.25)}
+.hud .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#9db0c4}
+.hud .v{margin-top:5px;font-size:24px;line-height:1;font-weight:700;letter-spacing:-.04em;color:#fff}
+.hud .s{margin-top:8px;font-size:12px;color:#c9d6e6;line-height:1.5}
+.hero{left:20px;bottom:calc(env(safe-area-inset-bottom) + 18px);max-width:min(42vw,440px)}
+.hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8fb4c8;margin-bottom:10px}
+.hero h1{margin:0;font-size:clamp(34px,4vw,56px);line-height:.9;letter-spacing:-.06em;color:#fff}
+.hero p{margin:14px 0 0;color:#bed0e1;font-size:14px;line-height:1.6;max-width:32ch}
+main{position:relative;z-index:1}
+.section{height:120vh}
+.footer-space{height:50vh}
+@media (max-width:820px){
+  .header{padding:calc(env(safe-area-inset-top) + 12px) 14px 0}
+  .route{left:auto;right:16px;top:82px;transform:none;flex-direction:row;gap:10px}
+  .hud{right:14px;left:14px;bottom:calc(env(safe-area-inset-bottom) + 12px);min-width:auto}
+  .hero{left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 112px);max-width:none}
+  .hero p{max-width:28ch}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div class="header">
+  <div class="brand"><strong>Nha Trang Road Book</strong><span>Premium low‑poly popup travel journey</span></div>
+</div>
+<div class="route" aria-hidden="true">
+  <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+</div>
+<div class="hud"><div class="k">Chapter</div><div class="v" id="chapterTitle">Trần Phú</div><div class="s" id="chapterSub">Coastal boulevard, sea on the right, Trầm Hương by Quảng trường 2/4.</div></div>
+<div class="hero">
+  <div class="eyebrow">Cinematic popup travel website</div>
+  <h1>Nha Trang,<br/>page by page.</h1>
+  <p>A stylized road trip across the city: Trần Phú → Trầm Hương → Hòn Chồng → Po Nagar → Xóm Bóng bridge → Long Sơn.</p>
+</div>
+<main>
+  <section class="section"></section>
+  <section class="section"></section>
+  <section class="section"></section>
+  <section class="section"></section>
+  <section class="section"></section>
+  <div class="footer-space"></div>
+</main>
+<script>
+(()=>{
+const canvas = document.getElementById('scene');
+const ctx = canvas.getContext('2d');
+const dots=[...document.querySelectorAll('.dot')];
+const chapterTitle=document.getElementById('chapterTitle');
+const chapterSub=document.getElementById('chapterSub');
+let W=0,H=0,DPR=Math.min(devicePixelRatio||1,2), smooth=0, last=0;
+const CHAPTERS=[
+  {name:'Trần Phú', sub:'Coastal boulevard, sea on the right, Trầm Hương by Quảng trường 2/4.'},
+  {name:'Hòn Chồng', sub:'Still by the sea on the right, with stacked coastal rocks and promenade.'},
+  {name:'Po Nagar', sub:'Turn left into the city. Streets on both sides, Po Nagar on the right.'},
+  {name:'Xóm Bóng Bridge', sub:'The road reaches sông Cái and crosses Cầu Xóm Bóng.'},
+  {name:'Long Sơn', sub:'Turn right through the city. Mountains ahead, White Buddha high on the right.'}
+];
+function resize(){W=innerWidth;H=innerHeight;canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);}resize();addEventListener('resize',resize);
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function lerp(a,b,t){return a+(b-a)*t;}
+function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;}
+function mixColor(a,b,t){const pa=parseColor(a), pb=parseColor(b); return `rgb(${Math.round(lerp(pa[0],pb[0],t))},${Math.round(lerp(pa[1],pb[1],t))},${Math.round(lerp(pa[2],pb[2],t))})`;}
+function parseColor(c){if(c[0]==='#'){return [parseInt(c.slice(1,3),16),parseInt(c.slice(3,5),16),parseInt(c.slice(5,7),16)]} let m=c.match(/\d+/g); return [m[0]|0,m[1]|0,m[2]|0];}
+function progress(){const total=Math.max(document.body.scrollHeight-innerHeight,1); const raw=scrollY/total; smooth=lerp(smooth,raw,0.06); last=raw; return smooth;}
+const P=[
+  [0.12,0.70],[0.25,0.64],[0.42,0.55],[0.58,0.47],[0.71,0.39],
+  [0.79,0.34],[0.85,0.30],
+  [0.76,0.44],[0.68,0.56],[0.62,0.63],
+  [0.67,0.56],[0.75,0.49],[0.83,0.45],
+  [0.76,0.58],[0.68,0.66],[0.60,0.72]
+];
+function pathPoint(t){const n=P.length-1; const s=clamp(t,0,.9999)*n; const i=Math.floor(s); const f=s-i; const a=P[Math.max(0,i-1)], b=P[i], c=P[Math.min(n,i+1)], d=P[Math.min(n,i+2)];
+ const f2=f*f,f3=f2*f; const x=.5*((2*b[0])+(-a[0]+c[0])*f+(2*a[0]-5*b[0]+4*c[0]-d[0])*f2+(-a[0]+3*b[0]-3*c[0]+d[0])*f3); const y=.5*((2*b[1])+(-a[1]+c[1])*f+(2*a[1]-5*b[1]+4*c[1]-d[1])*f2+(-a[1]+3*b[1]-3*c[1]+d[1])*f3); return [x*W,y*H]; }
+function drawBackground(){const g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#11345a'); g.addColorStop(.6,'#0c1f36'); g.addColorStop(1,'#08111d'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+ const glow=ctx.createRadialGradient(W*.7,H*.14,0,W*.7,H*.14,W*.42); glow.addColorStop(0,'rgba(126,204,255,.22)'); glow.addColorStop(1,'rgba(0,0,0,0)'); ctx.fillStyle=glow; ctx.fillRect(0,0,W,H);
+}
+function drawBook(){
+  const bw=Math.min(W*0.88,1080), bh=Math.min(H*0.68,620), bx=(W-bw)/2, by=H*0.17;
+  ctx.fillStyle='rgba(0,0,0,.22)'; roundRect(bx+10,by+20,bw,bh,28,true);
+  const shadow=ctx.createLinearGradient(bx,by,bx+bw,by); shadow.addColorStop(0,'rgba(0,0,0,.04)'); shadow.addColorStop(.5,'rgba(0,0,0,.12)'); shadow.addColorStop(1,'rgba(0,0,0,.04)');
+  ctx.fillStyle='#f7f1e7'; roundRect(bx,by,bw,bh,28,true);
+  ctx.fillStyle='#efe5d6'; roundRect(bx+bw*.495,by+10,bw*.01,bh-20,8,true);
+  ctx.strokeStyle='rgba(16,32,51,.08)'; ctx.lineWidth=1; roundRect(bx+12,by+12,bw-24,bh-24,22,false);
+  return {bx,by,bw,bh};
+}
+function roundRect(x,y,w,h,r,fill){ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); if(fill) ctx.fill(); else ctx.stroke();}
+function drawMapBase(book){const {bx,by,bw,bh}=book;
+  const seaG=ctx.createLinearGradient(bx+bw*.58,by,bx+bw,by+bh); seaG.addColorStop(0,'#95e6f6'); seaG.addColorStop(1,'#3aa8cb');
+  ctx.fillStyle=seaG;
+  drawPoly([[bx+bw*.64,by+bh*.1],[bx+bw*.98,by+bh*.12],[bx+bw*.98,by+bh*.9],[bx+bw*.76,by+bh*.78],[bx+bw*.73,by+bh*.62],[bx+bw*.90,by+bh*.32],[bx+bw*.84,by+bh*.18]], true);
+  drawPoly([[bx+bw*.72,by+bh*.46],[bx+bw*.98,by+bh*.42],[bx+bw*.98,by+bh*.77],[bx+bw*.80,by+bh*.78],[bx+bw*.76,by+bh*.65]], true);
+  ctx.fillStyle='#d6d7b6'; drawPoly([[bx+bw*.02,by+bh*.14],[bx+bw*.62,by+bh*.06],[bx+bw*.72,by+bh*.18],[bx+bw*.62,by+bh*.35],[bx+bw*.58,by+bh*.52],[bx+bw*.72,by+bh*.72],[bx+bw*.64,by+bh*.92],[bx+bw*.05,by+bh*.9]], true);
+  ctx.fillStyle='#b7c69f'; drawPoly([[bx+bw*.54,by+bh*.68],[bx+bw*.76,by+bh*.55],[bx+bw*.91,by+bh*.63],[bx+bw*.81,by+bh*.82],[bx+bw*.58,by+bh*.9]], true);
+  ctx.strokeStyle='rgba(16,32,51,.12)'; ctx.lineWidth=1;
+  for(let i=0;i<18;i++){
+    const x=bx+bw*(0.18+i*0.03); ctx.beginPath(); ctx.moveTo(x,by+bh*.18); ctx.lineTo(x,by+bh*.88); ctx.stroke();
+  }
+  for(let i=0;i<9;i++){
+    const y=by+bh*(0.2+i*0.075); ctx.beginPath(); ctx.moveTo(bx+bw*.16,y); ctx.lineTo(bx+bw*.82,y); ctx.stroke();
+  }
+}
+function drawPoly(points,fill){ctx.beginPath(); ctx.moveTo(points[0][0],points[0][1]); for(let i=1;i<points.length;i++) ctx.lineTo(points[i][0],points[i][1]); ctx.closePath(); if(fill) ctx.fill(); else ctx.stroke();}
+function bookToScreen(book,p){return [book.bx+p[0]*book.bw, book.by+p[1]*book.bh];}
+function roadPoints(book){return P.map(p=>bookToScreen(book,p));}
+function pathAtBook(book,t){const n=P.length-1; const s=clamp(t,0,.9999)*n; const i=Math.floor(s); const f=s-i; const a=P[Math.max(0,i-1)], b=P[i], c=P[Math.min(n,i+1)], d=P[Math.min(n,i+2)]; const f2=f*f,f3=f2*f; const x=.5*((2*b[0])+(-a[0]+c[0])*f+(2*a[0]-5*b[0]+4*c[0]-d[0])*f2+(-a[0]+3*b[0]-3*c[0]+d[0])*f3); const y=.5*((2*b[1])+(-a[1]+c[1])*f+(2*a[1]-5*b[1]+4*c[1]-d[1])*f2+(-a[1]+3*b[1]-3*c[1]+d[1])*f3); return [book.bx+x*book.bw, book.by+y*book.bh]; }
+function drawRoad(book){const pts=roadPoints(book);
+  ctx.lineCap='round'; ctx.lineJoin='round';
+  ctx.strokeStyle='#67727d'; ctx.lineWidth=Math.max(28, book.bw*0.028); ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke();
+  ctx.strokeStyle='#34424f'; ctx.lineWidth=Math.max(22, book.bw*0.022); ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke();
+  ctx.strokeStyle='#f4f0d9'; ctx.setLineDash([14,16]); ctx.lineWidth=2.5; ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke(); ctx.setLineDash([]);
+}
+function drawCityHints(book){
+  for(let i=0;i<6;i++) drawPalm(book.bx+book.bw*(0.52+i*0.06), book.by+book.bh*(0.62-i*0.02), book.bh*0.08);
+  for(let i=0;i<16;i++){
+    const x=book.bx+book.bw*(0.18+(i%8)*0.065), y=book.by+book.bh*(0.46+Math.floor(i/8)*0.22); drawBuilding(x,y,book.bw*0.035,book.bh*0.09, i%3===0?'#d9dbe0':'#f3eadf');
+  }
+}
+function drawBuilding(x,y,w,h,c){ctx.fillStyle='rgba(0,0,0,.08)'; drawPoly([[x+3,y+4],[x+w+3,y+4],[x+w+3,y-h+4],[x+3,y-h+4]], true); ctx.fillStyle=c; drawPoly([[x,y],[x+w,y],[x+w,y-h],[x,y-h]], true); ctx.fillStyle='rgba(16,32,51,.1)'; for(let i=1;i<3;i++){ctx.fillRect(x+w*.12,y-h*.2*i,w*.12,h*.08)} }
+function drawPalm(x,y,s){ctx.fillStyle='#85644b'; ctx.fillRect(x-s*.04,y-s*.44,s*.08,s*.44); ctx.strokeStyle='#5f8a62'; ctx.lineWidth=3; for(let i=-2;i<=2;i++){ctx.beginPath(); ctx.moveTo(x,y-s*.42); ctx.quadraticCurveTo(x+i*s*.28,y-s*.58,x+i*s*.45,y-s*.3); ctx.stroke();}}
+function popupAmount(centerT, globalT, width=0.09){const d=Math.abs(globalT-centerT); return clamp(1-d/width,0,1);}
+function drawPopupShadow(x,y,w,d,lift){ctx.fillStyle=`rgba(0,0,0,${0.08+lift*0.16})`; drawPoly([[x-w*0.48,y+2],[x+w*0.48,y+2],[x+w*0.56,y+d*.12],[x-w*0.56,y+d*.12]], true);}
+function drawPopupBase(x,y,w,d){ctx.fillStyle='#fff9ef'; drawPoly([[x-w*.5,y],[x+w*.5,y],[x+w*.62,y+d*.18],[x-w*.62,y+d*.18]], true); ctx.strokeStyle='rgba(16,32,51,.12)'; ctx.lineWidth=1; drawPoly([[x-w*.5,y],[x+w*.5,y],[x+w*.62,y+d*.18],[x-w*.62,y+d*.18]], false); ctx.strokeStyle='rgba(16,32,51,.16)'; ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x,y-d*.25); ctx.stroke(); }
+function drawTranHuong(book,t){const [x,y]=bookToScreen(book,[0.60,0.55]); const a=ease(popupAmount(0.18,t)); if(a<=0) return; const w=book.bw*.14,d=book.bh*.08,h=book.bh*.18*a; drawPopupShadow(x,y,w,d,a); drawPopupBase(x,y,w,d);
+  ctx.fillStyle='rgba(0,0,0,.06)'; drawPoly([[x-w*.48,y-h+6],[x+w*.12,y-h+6],[x+w*.18,y-h+d*.16+6],[x-w*.56,y-h+d*.16+6]], true);
+  ctx.fillStyle='#efe3d1'; drawPoly([[x-w*.48,y-h],[x+w*.12,y-h],[x+w*.18,y-h+d*.16],[x-w*.56,y-h+d*.16]], true);
+  const tx=x-w*.05, ty=y-h-d*.02; ctx.fillStyle='#63c7de'; drawPoly([[tx-8,ty],[tx+8,ty],[tx+8,ty-56*a],[tx-8,ty-56*a]], true);
+  ctx.fillStyle='#fff7f0'; for(let i=0;i<6;i++){const ang=(-Math.PI/2)+(i-2.5)*0.36; const px=tx+Math.cos(ang)*24*a, py=ty-44*a+Math.sin(ang)*20*a; drawPoly([[tx,ty-18*a],[px-8*a,py],[px,py-14*a],[px+8*a,py]], true);} 
+  ctx.fillStyle='#ffefd5'; drawPoly([[tx-22,ty],[tx+22,ty],[tx+26,ty+10],[tx-26,ty+10]], true);
+  for(let i=0;i<4;i++) drawPalm(x-w*.34+i*w*.14,y-h+d*.06-i*1,w*.18);
+}
+function drawHonChong(book,t){const [x,y]=bookToScreen(book,[0.82,0.33]); const a=ease(popupAmount(0.35,t)); if(a<=0) return; const w=book.bw*.16,d=book.bh*.09,h=book.bh*.16*a; drawPopupShadow(x,y,w,d,a); drawPopupBase(x,y,w,d);
+  const bx=x-w*.16, by=y-h; ctx.fillStyle='#dfbf93'; drawPoly([[bx-46,by],[bx+18,by],[bx+28,by+16],[bx-50,by+18]], true);
+  ctx.fillStyle='#b48d63'; drawPoly([[bx-10,by-56*a],[bx+28,by-18*a],[bx+4,by+8],[bx-28,by-18*a]], true);
+  ctx.fillStyle='#9e7c58'; drawPoly([[bx+20,by-82*a],[bx+56,by-42*a],[bx+34,by-8*a],[bx,by-40*a]], true);
+  ctx.fillStyle='#c8a076'; drawPoly([[bx-46,by-26*a],[bx-14,by-54*a],[bx+6,by-28*a],[bx-18,by-10*a]], true);
+  ctx.fillStyle='#7dddf2'; drawPoly([[x+w*.02,by+6],[x+w*.52,by+6],[x+w*.58,by+26],[x+w*.02,by+26]], true);
+  ctx.fillStyle='#eee1cf'; drawPoly([[x-w*.34,by+24],[x+w*.1,by+24],[x+w*.14,by+34],[x-w*.38,by+34]], true);
+}
+function drawPoNagar(book,t){const [x,y]=bookToScreen(book,[0.77,0.47]); const a=ease(popupAmount(0.56,t)); if(a<=0) return; const w=book.bw*.18,d=book.bh*.1,h=book.bh*.22*a; drawPopupShadow(x,y,w,d,a); drawPopupBase(x,y,w,d);
+  ctx.fillStyle='#b66745'; const baseY=y-h-d*.02;
+  drawChamTower(x-w*.18,baseY,30,94*a,1.0); drawChamTower(x+w*.02,baseY+8,24,74*a,0.92); drawChamTower(x+w*.22,baseY+12,20,62*a,0.88);
+  ctx.fillStyle='#90a36f'; drawPoly([[x-w*.48,baseY+20],[x+w*.36,baseY+20],[x+w*.44,baseY+36],[x-w*.56,baseY+36]], true);
+}
+function drawChamTower(x,y,w,h,alpha){ctx.fillStyle='#8f4f35'; drawPoly([[x-w*.48,y],[x+w*.48,y],[x+w*.56,y+12],[x-w*.56,y+12]], true); ctx.fillStyle='#b66745'; drawPoly([[x-w*.36,y],[x+w*.36,y],[x+w*.30,y-h*.78],[x-w*.30,y-h*.78]], true); ctx.fillStyle='#d17f58'; drawPoly([[x-w*.24,y-h*.78],[x+w*.24,y-h*.78],[x+w*.18,y-h],[x-w*.18,y-h]], true); ctx.fillStyle='#6e3d2a'; ctx.fillRect(x-w*.06,y-h*.34,w*.12,h*.34); ctx.fillStyle='#f0d3b5'; ctx.fillRect(x-w*.12,y-h*.52,w*.24,h*.06); }
+function drawBridge(book,t){const [x,y]=bookToScreen(book,[0.83,0.44]); const a=ease(popupAmount(0.71,t)); if(a<=0) return; const w=book.bw*.22,d=book.bh*.08,h=book.bh*.12*a; drawPopupShadow(x,y,w,d,a); drawPopupBase(x,y,w,d);
+  ctx.fillStyle='#85dff1'; drawPoly([[x-w*.46,y-h+4],[x+w*.46,y-h+4],[x+w*.56,y-h+d*.15+4],[x-w*.56,y-h+d*.15+4]], true);
+  ctx.fillStyle='#d6d6da'; drawPoly([[x-w*.42,y-h-12*a],[x+w*.42,y-h-24*a],[x+w*.52,y-h-8*a],[x-w*.32,y-h+2*a]], true);
+  ctx.fillStyle='#aeb4bf'; for(let i=0;i<7;i++){const px=x-w*.34+i*w*.11; drawPoly([[px,y-h-8*a],[px+4,y-h-30*a],[px+10,y-h-28*a],[px+6,y-h-6*a]], true);} 
+  ctx.fillStyle='#8b5b3d'; drawPoly([[x-w*.06,y-h+10],[x+w*.06,y-h+10],[x+w*.02,y-h+18],[x-w*.1,y-h+18]], true);
+}
+function drawLongSon(book,t){const [x,y]=bookToScreen(book,[0.72,0.66]); const a=ease(popupAmount(0.89,t)); if(a<=0) return; const w=book.bw*.2,d=book.bh*.1,h=book.bh*.24*a; drawPopupShadow(x,y,w,d,a); drawPopupBase(x,y,w,d);
+  const baseY=y-h+d*.02; ctx.fillStyle='#7e9270'; drawPoly([[x-w*.46,baseY+18],[x-w*.1,baseY-28*a],[x+w*.18,baseY+18]], true); ctx.fillStyle='#6d7f60'; drawPoly([[x-w*.08,baseY+18],[x+w*.3,baseY-46*a],[x+w*.54,baseY+18]], true);
+  const bx=x+w*.18, by=baseY-42*a; ctx.fillStyle='#fffdf8'; drawPoly([[bx-8,by],[bx+8,by],[bx+10,by+22],[bx-10,by+22]], true); ctx.beginPath(); ctx.arc(bx,by-10,8,0,Math.PI*2); ctx.fill(); ctx.fillStyle='#fff9ef'; drawPoly([[bx-18,by+22],[bx+18,by+22],[bx+22,by+28],[bx-22,by+28]], true);
+  ctx.strokeStyle='rgba(255,255,255,.55)'; ctx.lineWidth=1.5; ctx.beginPath(); ctx.arc(bx,by-10,16,0,Math.PI*2); ctx.stroke();
+  ctx.fillStyle='#e7d9c4'; drawPoly([[x-w*.34,baseY+18],[x-w*.06,baseY+18],[x-w*.02,baseY+28],[x-w*.38,baseY+28]], true);
+}
+function drawCar(book,t){const [x,y]=pathAtBook(book,t); const [x2,y2]=pathAtBook(book,Math.min(t+.01,.999)); const ang=Math.atan2(y2-y,x2-x);
+  ctx.save(); ctx.translate(x,y); ctx.rotate(ang); const scale=Math.min(book.bw/900,1.2);
+  ctx.fillStyle='rgba(0,0,0,.18)'; ctx.beginPath(); ctx.ellipse(0,14*scale,30*scale,10*scale,0,0,Math.PI*2); ctx.fill();
+  ctx.scale(scale,scale);
+  ctx.fillStyle='#f7f8fb'; drawPoly([[-38,8],[-18,-14],[14,-16],[42,-4],[34,10],[4,16],[-24,16]], true);
+  ctx.fillStyle='#f0b061'; drawPoly([[-14,-10],[8,-14],[24,-5],[8,-1],[-8,-2]], true);
+  ctx.fillStyle='#a1d7ef'; drawPoly([[-8,-8],[8,-12],[18,-4],[0,-3]], true);
+  ctx.fillStyle='#313946'; drawPoly([[-40,8],[-20,6],[-14,14],[-34,15]], true); drawPoly([[20,4],[44,0],[38,10],[12,12]], true);
+  ctx.fillStyle='#242b35'; ctx.beginPath(); ctx.ellipse(-22,13,8,8,0,0,Math.PI*2); ctx.fill(); ctx.beginPath(); ctx.ellipse(22,11,8,8,0,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#fef5e8'; ctx.fillRect(28,-2,10,3); ctx.fillStyle='#f7aca1'; ctx.fillRect(-37,8,7,3);
+  ctx.restore();
+}
+function render(){const p=progress(); const chapter=Math.min(CHAPTERS.length-1, Math.floor(p*CHAPTERS.length+0.0001)); dots.forEach((d,i)=>d.classList.toggle('active',i===chapter)); chapterTitle.textContent=CHAPTERS[chapter].name; chapterSub.textContent=CHAPTERS[chapter].sub;
+  drawBackground(); const book=drawBook(); drawMapBase(book); drawCityHints(book); drawRoad(book);
+  const routeT=clamp((p-0.02)/0.92,0,1); drawTranHuong(book,routeT); drawHonChong(book,routeT); drawPoNagar(book,routeT); drawBridge(book,routeT); drawLongSon(book,routeT); drawCar(book,routeT);
+  requestAnimationFrame(render);
+}
+render();
+})();
+</script>
+</body>
+</html>
