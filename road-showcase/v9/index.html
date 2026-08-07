@@ -1,156 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Road to Elsewhere v9</title>
-<style>
-:root{--bg:#05070b;--text:#eef3ff;--muted:#9aa6bb;--accent:#89f0ff}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
-body{overflow-x:hidden}
-canvas{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
-header,main,.hud,.rail,footer{position:relative;z-index:2}
-header{position:fixed;inset:0 0 auto;height:58px;display:flex;justify-content:space-between;align-items:center;padding:0 18px;background:linear-gradient(180deg,rgba(5,7,11,.72),transparent);font-size:12px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
-header b{color:#fff;font-size:15px;letter-spacing:-.02em;text-transform:none}
-main{width:100%}
-.section{height:150vh;position:relative}
-.sticky{position:sticky;top:0;height:100svh;display:flex;align-items:flex-start;justify-content:flex-start;padding:12vh 7vw 6vh}
-.copy{max-width:26rem;background:rgba(7,10,16,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px 20px}
-.hero .copy{background:transparent;border:0;padding:0;backdrop-filter:none;max-width:36rem}
-.kicker{margin:0 0 10px;color:var(--accent);font-size:11px;letter-spacing:.24em;text-transform:uppercase}.title{margin:0;font-size:clamp(32px,6vw,70px);line-height:.92;letter-spacing:-.06em}.desc{margin:14px 0 0;color:#d0d8e7;line-height:1.7;font-size:clamp(15px,1.5vw,18px)}
-.hud{position:fixed;right:16px;bottom:16px;padding:12px 14px;background:rgba(7,10,16,.42);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);border-radius:14px;min-width:160px;text-align:right}.hud .sm{font-size:10px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase}.hud .lg{font-size:26px;font-weight:700;letter-spacing:-.05em}
-.rail{position:fixed;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:3}.rail i{width:10px;height:10px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(8,10,14,.65)}.rail i.active{background:var(--accent);border-color:var(--accent);box-shadow:0 0 14px rgba(137,240,255,.45)}
-footer{padding:18px;display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.06);font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
-@media (max-width:760px){
-  header{height:52px;font-size:10px;padding:0 14px}.sticky{padding:11vh 16px 6vh}.title{font-size:clamp(30px,12vw,48px)}.desc{font-size:15px;line-height:1.6}.copy{max-width:calc(100vw - 34px)}
-  .hud{right:auto;left:14px;bottom:14px;text-align:left}.rail{left:auto;right:14px;top:66px;transform:none;flex-direction:row}
-}
-</style>
-</head>
-<body>
-<canvas id="c"></canvas>
-<header><b>Road to Elsewhere</b><span>low‑poly motion study / one journey five worlds</span></header>
-<div class="rail" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i><i></i></div>
-<div class="hud"><div class="sm" id="hudLabel">Ocean Causeway</div><div class="lg" id="hudStep">00</div><div class="sm" id="hudCam">Wide reveal camera</div></div>
-<main>
-  <section class="section hero" data-name="Ocean Causeway" data-cam="Wide reveal camera"><div class="sticky"><div class="copy"><p class="kicker">v9 / full low‑poly direction</p><h1 class="title">One road.<br>Five worlds.<br>One stylized ride.</h1><p class="desc">Everything shifts to a unified low‑poly language: car, road, landmarks, weather and light. The journey moves through ocean, forest, desert, city and summit — each with its own road design and camera rhythm.</p></div></div></section>
-  <section class="section" data-name="Mist Forest" data-cam="Chase camera"><div class="sticky"><div class="copy"><p class="kicker">01 / mist forest</p><h2 class="title">Dense pines.<br>Tight wet road.</h2><p class="desc">A narrow forest lane with close trees, fog layers and light shafts. The camera tucks in and feels faster.</p></div></div></section>
-  <section class="section" data-name="Desert Pass" data-cam="Side sweep camera"><div class="sticky"><div class="copy"><p class="kicker">02 / desert pass</p><h2 class="title">Open sweep.<br>Heat and distance.</h2><p class="desc">The road broadens into longer arcs with mesas, dunes, arches and dust. The camera glides wider and lower.</p></div></div></section>
-  <section class="section" data-name="Neon City" data-cam="Overhead expressway"><div class="sticky"><div class="copy"><p class="kicker">03 / neon city</p><h2 class="title">Reflective blacktop.<br>Vertical light.</h2><p class="desc">Multi-lane elevated roadway, towers, signs, rain and vivid neon. The camera lifts to reveal the urban system.</p></div></div></section>
-  <section class="section" data-name="Aurora Summit" data-cam="Cinematic finale"><div class="sticky"><div class="copy"><p class="kicker">04 / aurora summit</p><h2 class="title">Cliff road.<br>Crystal sky.</h2><p class="desc">A narrow alpine pass, snow, crystals and aurora. The last stretch opens into a final, quieter cinematic pullback.</p></div></div></section>
-</main>
-<footer><span>focus: low‑poly consistency / stronger camera choreography</span><span>self-contained local build</span></footer>
-<script>
-(() => {
-const canvas = document.getElementById('c');
-const ctx = canvas.getContext('2d');
-const rail = [...document.querySelectorAll('.rail i')];
-const sections = [...document.querySelectorAll('.section')];
-const hudLabel = document.getElementById('hudLabel');
-const hudStep = document.getElementById('hudStep');
-const hudCam = document.getElementById('hudCam');
-const DPR = Math.min(window.devicePixelRatio || 1, 2);
-let W=0,H=0,t=0,smoothedScroll=0,lastScroll=0,speed=0,carLaneOffset=0;
-function resize(){W=innerWidth;H=innerHeight;canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);}addEventListener('resize',resize);resize();
-const worlds=[
-  {name:'Ocean Causeway',cam:'Wide reveal camera', skyTop:'#6cb6ff', skyMid:'#b5eeff', skyBot:'#dff7ff', road:'#4b5665', shoulder:'#bfc7cf', lane:'#f8ffff', horizon:'#89d8ff', env:'#3aa7d6'},
-  {name:'Mist Forest',cam:'Chase camera', skyTop:'#5a798d', skyMid:'#859a9d', skyBot:'#c4d0c4', road:'#2f3337', shoulder:'#65706c', lane:'#ebf7f1', horizon:'#bed3c0', env:'#376148'},
-  {name:'Desert Pass',cam:'Side sweep camera', skyTop:'#ffa162', skyMid:'#ffc98f', skyBot:'#fbe0b9', road:'#5d5148', shoulder:'#876a58', lane:'#fff3cf', horizon:'#efb366', env:'#ca7941'},
-  {name:'Neon City',cam:'Overhead expressway', skyTop:'#1a1b37', skyMid:'#30204f', skyBot:'#120f22', road:'#11161d', shoulder:'#303844', lane:'#c8fdff', horizon:'#402966', env:'#5ef4ff'},
-  {name:'Aurora Summit',cam:'Cinematic finale', skyTop:'#08182d', skyMid:'#19395a', skyBot:'#0a1323', road:'#313844', shoulder:'#90a2b4', lane:'#eefbff', horizon:'#2cc9a2', env:'#a3e9ff'}
-];
-function clamp(v,min,max){return Math.max(min,Math.min(max,v));}
-function lerp(a,b,t){return a+(b-a)*t;}
-function ease(t){return t*t*(3-2*t);}
-function hexRgb(h){return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
-function mix(a,b,t){const A=hexRgb(a),B=hexRgb(b); return `rgb(${Math.round(lerp(A[0],B[0],t))},${Math.round(lerp(A[1],B[1],t))},${Math.round(lerp(A[2],B[2],t))})`;}
-function rgba(hex,a){const [r,g,b]=hexRgb(hex);return `rgba(${r},${g},${b},${a})`;}
-function worldAt(progress){const n=worlds.length;const scaled=progress*(n-1);const i=clamp(Math.floor(scaled),0,n-2);const local=scaled-i;return {i,local,a:worlds[i],b:worlds[i+1]};}
-function currentIndex(progress){return clamp(Math.round(progress*(worlds.length-1)),0,worlds.length-1);}
-function updateHud(progress){const idx=currentIndex(progress);rail.forEach((d,i)=>d.classList.toggle('active',i===idx));hudLabel.textContent=worlds[idx].name;hudStep.textContent=String(idx).padStart(2,'0');hudCam.textContent=worlds[idx].cam;}
-function sectionProgress(){const total=Math.max(document.body.scrollHeight-innerHeight,1);const raw=scrollY/total;smoothedScroll=lerp(smoothedScroll, raw, 0.05);speed=lerp(speed, Math.abs(raw-lastScroll)*170, 0.14);lastScroll=raw;return smoothedScroll;}
-function drawBackground(p){const {a,b,local}=worldAt(p);const top=mix(a.skyTop,b.skyTop,local), mid=mix(a.skyMid,b.skyMid,local), bot=mix(a.skyBot,b.skyBot,local);const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,top);g.addColorStop(.52,mid);g.addColorStop(1,bot);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);const sunX=W*(.72-.15*local), sunY=H*(.22+.02*Math.sin(t*0.00025)), rad=W*(.08+(currentIndex(p)===3?0.05:0));const rg=ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,rad*2.4);rg.addColorStop(0,'rgba(255,255,255,.24)');rg.addColorStop(.4,rgba(mix(a.horizon,b.horizon,local).match(/\d+/g).length?'#ffffff':'#ffffff',0));ctx.fillStyle=ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,rad*2.2);const rg2=ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,rad*2.2);rg2.addColorStop(0,'rgba(255,255,255,.24)');rg2.addColorStop(.35,rgba(mix(a.horizon,b.horizon,local),0));ctx.fillStyle=rg2;ctx.fillRect(0,0,W,H);
-}
-function rgbaFromString(rgb,a){const m=rgb.match(/\d+/g);return `rgba(${m[0]},${m[1]},${m[2]},${a})`;}
-function drawGradientSkyExtras(p){const idx=currentIndex(p);if(idx===0){for(let i=0;i<5;i++){drawBird(W*(.14+i*.16+Math.sin(t*.0002+i)*.02),H*(.18+i%2*.04),12+i*2,'rgba(255,255,255,.4)');}}
-if(idx===4){for(let i=0;i<4;i++){const x=W*(.1+i*.22);const y=H*(.15+.03*Math.sin(t*.00025+i));ctx.strokeStyle=`rgba(${100+i*25},${255-i*20},${220+i*5},.18)`;ctx.lineWidth=18;ctx.beginPath();ctx.moveTo(x,y);ctx.quadraticCurveTo(x+80,y-35,x+170,y+6);ctx.stroke();}}
-}
-function drawBird(x,y,s,c){ctx.strokeStyle=c;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-s,y);ctx.quadraticCurveTo(x,y-s*.55,x+s,y);ctx.moveTo(x+s*.95,y);ctx.quadraticCurveTo(x+s*1.9,y-s*.55,x+s*2.9,y);ctx.stroke();}
-function cameraProfile(p){const idx=currentIndex(p);const wob=Math.sin(t*0.0012)*2;switch(idx){case 0:return {horizon:.24,centerWobble:Math.sin(p*12)*W*.01,carY:H*.82,carScale:.96,mode:'wide'};case 1:return {horizon:.31,centerWobble:Math.sin(p*18)*W*.03,carY:H*.84,carScale:1.05,mode:'chase'};case 2:return {horizon:.29,centerWobble:Math.sin(p*15)*W*.06,carY:H*.83,carScale:.98,mode:'side'};case 3:return {horizon:.22,centerWobble:Math.sin(p*14)*W*.01,carY:H*.86,carScale:.88,mode:'overhead'};default:return {horizon:.27,centerWobble:Math.sin(p*10)*W*.02,carY:H*.80+wob,carScale:.92,mode:'cinematic'};}}
-function drawRoad(p){const idx=currentIndex(p), w=worlds[idx], cam=cameraProfile(p);const horizonY=H*cam.horizon, baseY=H*1.02;const center=W*.5+cam.centerWobble;const motion=(p*55)%1;let halfTop,halfBottom,roadColor=w.road,shoulder=w.shoulder,laneColor=w.lane,lanes=1,guard=false,wet=false;
- if(idx===0){halfTop=W*.05;halfBottom=W*.28;lanes=2;guard=true;}
- if(idx===1){halfTop=W*.03;halfBottom=W*.22;lanes=1;}
- if(idx===2){halfTop=W*.04;halfBottom=W*.26;lanes=1;}
- if(idx===3){halfTop=W*.07;halfBottom=W*.34;lanes=3;guard=true;wet=true;}
- if(idx===4){halfTop=W*.035;halfBottom=W*.2;lanes=1;guard=true;}
- if(idx===0){ctx.fillStyle='#4bc0e9';ctx.fillRect(0,horizonY,W,H-horizonY); drawOcean(center,horizonY,baseY,halfBottom);}
- if(idx===1){ctx.fillStyle='#6a7d67';ctx.fillRect(0,horizonY,W,H-horizonY); drawForestGround(center,horizonY,baseY,halfBottom);}
- if(idx===2){ctx.fillStyle='#d39a63';ctx.fillRect(0,horizonY,W,H-horizonY); drawDesertGround(center,horizonY,baseY,halfBottom);}
- if(idx===3){ctx.fillStyle='#0f1420';ctx.fillRect(0,horizonY,W,H-horizonY); drawCityGround(center,horizonY,baseY,halfBottom);}
- if(idx===4){ctx.fillStyle='#b3c2d1';ctx.fillRect(0,horizonY,W,H-horizonY); drawSummitGround(center,horizonY,baseY,halfBottom);}
- const roadGrad=ctx.createLinearGradient(0,horizonY,0,baseY); roadGrad.addColorStop(0,roadColor); roadGrad.addColorStop(1, idx===3?'#06090f':'#10151b');
- ctx.fillStyle=shoulder; ctx.beginPath(); ctx.moveTo(center-halfTop*1.15,horizonY); ctx.lineTo(center-halfBottom*1.12,baseY); ctx.lineTo(center+halfBottom*1.12,baseY); ctx.lineTo(center+halfTop*1.15,horizonY); ctx.closePath(); ctx.fill();
- ctx.fillStyle=roadGrad; ctx.beginPath(); ctx.moveTo(center-halfTop,horizonY); ctx.lineTo(center-halfBottom,baseY); ctx.lineTo(center+halfBottom,baseY); ctx.lineTo(center+halfTop,horizonY); ctx.closePath(); ctx.fill();
- for(let i=0;i<18;i++){
-   const z=(i+motion)/18; const depth=Math.pow(z,2.08); const y=horizonY+depth*(baseY-horizonY); const hw=lerp(halfTop,halfBottom,Math.pow(z,1.2)); const dashH=lerp(3,26,Math.pow(z,1.8));
-   if(lanes===1){ctx.fillStyle=laneColor; ctx.fillRect(center-2,y,4,dashH);} else if(lanes===2){ctx.fillStyle=laneColor; ctx.fillRect(center-hw*.33-2,y,4,dashH); ctx.fillRect(center+hw*.33-2,y,4,dashH);} else {ctx.fillStyle=laneColor; ctx.fillRect(center-hw*.45-2,y,4,dashH); ctx.fillRect(center-2,y,4,dashH); ctx.fillRect(center+hw*.45-2,y,4,dashH);}
- }
- ctx.strokeStyle='rgba(255,255,255,.18)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(center-halfTop,horizonY);ctx.lineTo(center-halfBottom,baseY);ctx.moveTo(center+halfTop,horizonY);ctx.lineTo(center+halfBottom,baseY);ctx.stroke();
- if(guard){for(let side of[-1,1]){for(let i=0;i<20;i++){const z=(i+motion)/20; const depth=Math.pow(z,1.65); const y=horizonY+depth*(baseY-horizonY); const x=center+side*lerp(halfTop*1.22,halfBottom*1.15,depth); ctx.strokeStyle='rgba(245,250,255,.23)'; ctx.lineWidth=1.4; ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+side*6,y+10); ctx.stroke();}}}
- if(wet){ctx.fillStyle='rgba(90,230,255,.06)'; ctx.fillRect(center-18,horizonY,36,baseY-horizonY)}
- return {center, horizonY, baseY, halfBottom, halfTop, carY:cam.carY, carScale:cam.carScale, mode:cam.mode};
-}
-function drawOcean(center,horizonY,baseY,roadWidth){
-  for(let i=0;i<6;i++){const z=i/6; const y=horizonY+Math.pow(z,.85)*(baseY-horizonY)*.45; const x1=center-roadWidth*1.9-z*150, x2=center+roadWidth*1.9+z*150; ctx.fillStyle='rgba(210,220,228,.35)'; ctx.beginPath(); ctx.moveTo(x1,y); ctx.lineTo(x1-22,y+90); ctx.lineTo(x1+8,y+90); ctx.closePath(); ctx.fill(); ctx.beginPath(); ctx.moveTo(x2,y); ctx.lineTo(x2-8,y+90); ctx.lineTo(x2+22,y+90); ctx.closePath(); ctx.fill();}
-  drawPoly([[W*.12,H*.39],[W*.18,H*.33],[W*.26,H*.39]],'#4b95a7'); drawPoly([[W*.82,H*.42],[W*.88,H*.35],[W*.96,H*.41]],'#4b95a7');
-  for(let i=0;i<18;i++){ctx.strokeStyle='rgba(255,255,255,.12)'; ctx.lineWidth=2; const y=H*.48+i*18; ctx.beginPath(); ctx.moveTo(0,y); for(let x=0;x<=W;x+=60) ctx.lineTo(x,y+Math.sin((x*.012)+(t*.001)+i)*3); ctx.stroke();}
-}
-function drawForestGround(center,horizonY){
-  for(let i=0;i<4;i++){ctx.fillStyle=`rgba(210,230,220,${0.06-i*.01})`; ctx.fillRect(0,horizonY+50+i*35,W,50)}
-  for(let side of[-1,1]) for(let i=0;i<17;i++){const z=i/17; const depth=Math.pow(z,1.5); const x=center+side*lerp(50,W*.47,depth)+(Math.sin(i*7.1)*15); const y=lerp(horizonY+10,H*.95,depth); const s=lerp(22,96,depth); drawTree(x,y,s);} 
-  for(let i=0;i<5;i++){const x=W*(.15+i*.16); const g=ctx.createLinearGradient(x,0,x,H); g.addColorStop(0,'rgba(255,255,255,0)'); g.addColorStop(.34,'rgba(255,248,220,.08)'); g.addColorStop(1,'rgba(255,255,255,0)'); ctx.fillStyle=g; ctx.beginPath(); ctx.moveTo(x-12,horizonY); ctx.lineTo(x+12,horizonY); ctx.lineTo(x+90,H); ctx.lineTo(x-90,H); ctx.closePath(); ctx.fill();}
-}
-function drawTree(x,y,s){ctx.fillStyle='#574637'; ctx.fillRect(x-s*.08,y-s*.38,s*.16,s*.38); drawPoly([[x,y-s],[x-s*.42,y-s*.28],[x+s*.42,y-s*.28]],'#274b34'); drawPoly([[x,y-s*.72],[x-s*.36,y-s*.06],[x+s*.36,y-s*.06]],'#356045'); drawPoly([[x,y-s*.48],[x-s*.33,y+s*.14],[x+s*.33,y+s*.14]],'#417554');}
-function drawDesertGround(center,horizonY){
-  for(let i=0;i<6;i++){const bx=W*(.08+i*.16); const by=H*(.44+.03*Math.sin(i)); drawPoly([[bx-60,by],[bx,by-80],[bx+70,by]], i%2?'#b96b3a':'#c57a46'); if(i%2===0) drawPoly([[bx+25,by],[bx+45,by-35],[bx+60,by]],'#9f5632');}
-  for(let i=0;i<9;i++){ctx.fillStyle='rgba(235,188,116,.45)'; ctx.beginPath(); ctx.ellipse(W*(i/8),H*.7+Math.sin(i)*10,140,40,0,0,Math.PI*2); ctx.fill();}
-  for(let i=0;i<8;i++){const x=W*(.1+i*.12); const y=H*.64+Math.sin(i)*12; drawCactus(x,y,24+i*3);} }
-function drawCactus(x,y,s){ctx.fillStyle='#52704b'; ctx.fillRect(x-s*.1,y-s*.7,s*.2,s*.7); ctx.fillRect(x-s*.35,y-s*.52,s*.12,s*.35); ctx.fillRect(x+s*.23,y-s*.46,s*.12,s*.3);}
-function drawCityGround(center,horizonY){
-  for(let i=0;i<22;i++){const x=W*(i/21); const bw=22+(i%5)*18; const bh=60+(i%7)*40; ctx.fillStyle=i%2?'#141b28':'#1d2433'; ctx.fillRect(x,horizonY+20-bh,bw,bh); ctx.fillStyle=i%3?'rgba(94,244,255,.45)':'rgba(255,84,200,.3)'; ctx.fillRect(x+bw*.2,horizonY+26-bh,3,bh-6);}
-  drawPoly([[W*.06,H*.52],[W*.17,H*.46],[W*.25,H*.52],[W*.17,H*.58]],'rgba(94,244,255,.18)'); drawPoly([[W*.78,H*.46],[W*.91,H*.42],[W*.98,H*.49],[W*.88,H*.56]],'rgba(255,84,200,.14)');
-  for(let i=0;i<180;i++){const x=(i*41)%W; const y=(i*29+t*.7)%H; ctx.strokeStyle='rgba(180,220,255,.10)'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x-5,y+14); ctx.stroke();}
-}
-function drawSummitGround(center,horizonY){
-  drawPoly([[0,H*.48],[W*.18,H*.22],[W*.35,H*.48]],'#4f6b85'); drawPoly([[W*.2,H*.48],[W*.46,H*.19],[W*.72,H*.48]],'#64829c'); drawPoly([[W*.58,H*.48],[W*.85,H*.18],[W,H*.48]],'#49637d');
-  drawPoly([[W*.14,H*.29],[W*.18,H*.22],[W*.22,H*.3]],'#e8f3fb'); drawPoly([[W*.41,H*.28],[W*.46,H*.19],[W*.51,H*.29]],'#edf7ff'); drawPoly([[W*.82,H*.27],[W*.85,H*.18],[W*.88,H*.28]],'#edf7ff');
-  for(let i=0;i<14;i++){const x=W*(.04+i*.07); const y=H*(.76+.03*Math.sin(i)); const s=12+(i%4)*7; drawPoly([[x,y-s],[x+s*.65,y],[x,y+s], [x-s*.65,y]], i%2?'rgba(160,245,255,.65)':'rgba(208,175,255,.5)');}
-  for(let i=0;i<120;i++){ctx.fillStyle='rgba(255,255,255,.22)'; ctx.fillRect((i*63+t*.05)%W,(i*27+t*.12)%H,2,2);}
-}
-function drawPoly(points,color){ctx.fillStyle=color; ctx.beginPath(); ctx.moveTo(points[0][0],points[0][1]); for(let i=1;i<points.length;i++) ctx.lineTo(points[i][0],points[i][1]); ctx.closePath(); ctx.fill();}
-function drawCar(road,p){const idx=currentIndex(p), mode=road.mode; const x=road.center + carLaneOffset; const y=road.carY; const s=road.carScale * (W<760?0.84:1);
-  const lean = mode==='side' ? Math.sin(t*.002)*.06 : mode==='overhead' ? 0 : Math.sin(t*.003)*.02;
-  ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.rotate(lean);
-  const sg=ctx.createRadialGradient(0,34,4,0,34,72); sg.addColorStop(0,'rgba(0,0,0,.62)'); sg.addColorStop(1,'rgba(0,0,0,0)'); ctx.fillStyle=sg; ctx.beginPath(); ctx.ellipse(0,34,72,22,0,0,Math.PI*2); ctx.fill();
-  const cg=ctx.createRadialGradient(0,22,2,0,22,82); cg.addColorStop(0, idx===3?'rgba(94,244,255,.28)':'rgba(255,255,255,.10)'); cg.addColorStop(1,'rgba(255,255,255,0)'); ctx.fillStyle=cg; ctx.beginPath(); ctx.ellipse(0,22,84,24,0,0,Math.PI*2); ctx.fill();
-  if(idx===0){ctx.strokeStyle='rgba(210,245,255,.20)'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(-34,18); ctx.lineTo(-46,55); ctx.moveTo(34,18); ctx.lineTo(46,55); ctx.stroke();}
-  if(idx===2){ctx.strokeStyle='rgba(240,210,140,.18)'; ctx.lineWidth=5; ctx.beginPath(); ctx.moveTo(-34,22); ctx.lineTo(-50,60); ctx.moveTo(34,22); ctx.lineTo(50,60); ctx.stroke();}
-  if(idx===3){ctx.strokeStyle='rgba(94,244,255,.14)'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(-36,20); ctx.lineTo(-48,66); ctx.moveTo(36,20); ctx.lineTo(48,66); ctx.stroke();}
-  const spin = t*0.02 + speed*1.3;
-  function wheel(wx,wy){ctx.save(); ctx.translate(wx,wy); ctx.fillStyle='#0a0d12'; ctx.beginPath(); ctx.ellipse(0,0,14,18,0,0,Math.PI*2); ctx.fill(); ctx.strokeStyle='rgba(160,240,255,.52)'; ctx.lineWidth=2.3; ctx.beginPath(); ctx.ellipse(0,0,12,16,0,0,Math.PI*2); ctx.stroke(); ctx.rotate(spin); ctx.strokeStyle='rgba(255,255,255,.35)'; ctx.lineWidth=1.2; ctx.beginPath(); ctx.moveTo(0,-9); ctx.lineTo(0,9); ctx.moveTo(-7,0); ctx.lineTo(7,0); ctx.stroke(); ctx.restore();}
-  wheel(-41,18); wheel(41,18);
-  drawPoly([[-64,12],[-44,-20],[-6,-34],[34,-24],[62,0],[50,20],[8,28],[-40,24]], '#ef4d47');
-  drawPoly([[-40,24],[8,28],[0,38],[-36,34]], '#8c1f1c');
-  drawPoly([[8,28],[50,20],[40,34],[0,38]], '#b2302d');
-  drawPoly([[-42,-16],[-8,-32],[24,-26],[42,-4],[16,0],[-20,-2]], '#ff8b84');
-  drawPoly([[-14,-22],[2,-30],[18,-25],[30,-8],[4,-8]], 'rgba(210,238,255,.90)');
-  drawPoly([[-22,-4],[5,-4],[18,0],[0,6],[-24,6]], '#202731');
-  ctx.fillStyle='rgba(255,255,255,.95)'; drawPoly([[-50,8],[-40,2],[-34,5],[-40,12]], '#f8ffff'); drawPoly([[54,6],[62,2],[62,8],[54,11]], '#ffd7d6');
-  ctx.strokeStyle='rgba(255,255,255,.36)'; ctx.lineWidth=1.4; ctx.beginPath(); ctx.moveTo(-30,-6); ctx.lineTo(14,-14); ctx.lineTo(30,-4); ctx.stroke();
-  ctx.restore();
-}
-function render(ts){t=ts;const p=sectionProgress();updateHud(p);ctx.clearRect(0,0,W,H);drawBackground(p);drawGradientSkyExtras(p);const road=drawRoad(p);carLaneOffset=lerp(carLaneOffset, currentIndex(p)===2 ? Math.sin(t*0.0012)*10 : currentIndex(p)===3 ? Math.sin(t*0.0018)*2 : 0, 0.08);drawCar(road,p);requestAnimationFrame(render);}requestAnimationFrame(render);
-})();
-</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Road to Elsewhere v9.1</title><style>
+*{box-sizing:border-box}html,body{margin:0;background:#07101a;color:#fff;font-family:Inter,system-ui,sans-serif}body{overflow-x:hidden}canvas{position:fixed;inset:0;width:100%;height:100%;display:block}header,.hud,.dots,main{position:relative;z-index:2}header{position:fixed;left:0;right:0;top:0;height:54px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b8c4d8;background:linear-gradient(#07101acc,transparent)}header b{font-size:14px;color:#fff;letter-spacing:-.01em;text-transform:none}.section{height:155vh}.sticky{position:sticky;top:0;height:100svh;padding:11vh 7vw;display:flex;align-items:flex-start}.copy{max-width:330px;padding:13px 15px;border-radius:14px;background:#07101a30;border:1px solid #ffffff14;backdrop-filter:blur(8px)}.copy h2,.copy h1{margin:4px 0 0;font-size:clamp(26px,4vw,48px);line-height:.96;letter-spacing:-.05em}.copy p{margin:9px 0 0;color:#d7deea;font-size:13px;line-height:1.55}.copy small{color:#8ff5ff;letter-spacing:.2em;text-transform:uppercase}.hero .copy{background:transparent;border:0;padding:0}.hud{position:fixed;right:14px;bottom:14px;padding:10px 12px;border-radius:13px;background:#07101a78;border:1px solid #ffffff12;backdrop-filter:blur(9px);text-align:right}.hud b{display:block;font-size:24px}.hud span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#b9c5d8}.dots{position:fixed;left:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}.dots i{width:8px;height:8px;border-radius:50%;background:#ffffff35}.dots i.on{background:#8ff5ff;box-shadow:0 0 12px #8ff5ff80}@media(max-width:760px){header span{display:none}.sticky{padding:10vh 14px}.copy{max-width:285px}.hud{left:14px;right:auto;text-align:left}.dots{left:auto;right:12px;top:68px;transform:none;flex-direction:row}}
+</style></head><body><canvas id="c"></canvas><header><b>Road to Elsewhere</b><span>v9.1 low-poly journey</span></header><div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="hud"><span id="name">Ocean Causeway</span><b id="num">00</b><span id="cam">wide reveal</span></div><main>
+<section class="section hero"><div class="sticky"><div class="copy"><small>Ocean Causeway</small><h1>Drive through worlds.</h1><p>One low-poly car. Five completely different environments. Scroll controls speed and progression.</p></div></div></section>
+<section class="section"><div class="sticky"><div class="copy"><small>Mist Forest</small><h2>Close trees. Wet road.</h2></div></div></section>
+<section class="section"><div class="sticky"><div class="copy"><small>Desert Pass</small><h2>Long curves. Heat. Dust.</h2></div></div></section>
+<section class="section"><div class="sticky"><div class="copy"><small>Neon City</small><h2>Rain. Flyovers. Light.</h2></div></div></section>
+<section class="section"><div class="sticky"><div class="copy"><small>Aurora Summit</small><h2>Snow. Cliff. Aurora.</h2></div></div></section></main>
+<script>(()=>{const c=document.getElementById('c'),g=c.getContext('2d'),dots=[...document.querySelectorAll('.dots i')],nameEl=document.getElementById('name'),numEl=document.getElementById('num'),camEl=document.getElementById('cam');let W=0,H=0,dpr=1,p=.001,raw=0,last=0,vel=0,T=0;const worlds=[
+{name:'Ocean Causeway',cam:'wide reveal',sky:['#4b9fe6','#bdeeff'],ground:'#43b9dd',road:'#404b59',edge:'#d7dde4',lane:'#f8ffff'},
+{name:'Mist Forest',cam:'low chase',sky:['#496778','#b9c9bd'],ground:'#486b52',road:'#292e31',edge:'#68766e',lane:'#f0f6ef'},
+{name:'Desert Pass',cam:'side sweep',sky:['#f28a4d','#ffd4a3'],ground:'#d49860',road:'#574b43',edge:'#8b705c',lane:'#fff0cc'},
+{name:'Neon City',cam:'high expressway',sky:['#13162f','#3b2450'],ground:'#0b101a',road:'#080c12',edge:'#374151',lane:'#caffff'},
+{name:'Aurora Summit',cam:'cinematic pullback',sky:['#071629','#234761'],ground:'#aebdca',road:'#303844',edge:'#93a6b7',lane:'#f1fbff'}];
+function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}addEventListener('resize',resize);resize();
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t;function idx(){return clamp(Math.round(p*4),0,4)}function poly(P,col){g.fillStyle=col;g.beginPath();g.moveTo(P[0][0],P[0][1]);for(let i=1;i<P.length;i++)g.lineTo(P[i][0],P[i][1]);g.closePath();g.fill()}
+function sky(w){const q=g.createLinearGradient(0,0,0,H);q.addColorStop(0,w.sky[0]);q.addColorStop(1,w.sky[1]);g.fillStyle=q;g.fillRect(0,0,W,H)}
+function ocean(h,cx,rb){g.fillStyle='#42b7da';g.fillRect(0,h,W,H-h);for(let y=h+18;y<H;y+=24){g.strokeStyle='#ffffff20';g.beginPath();for(let x=0;x<=W;x+=40){let yy=y+Math.sin(x*.02+T*.002+y*.02)*3;x?g.lineTo(x,yy):g.moveTo(x,yy)}g.stroke()}poly([[W*.05,h+80],[W*.14,h+15],[W*.24,h+80]],'#4c8b94');poly([[W*.8,h+95],[W*.9,h+30],[W,h+90]],'#4f8996');for(let i=0;i<7;i++){let z=i/7,y=h+z*(H-h)*.55;g.fillStyle='#d7e0e680';g.fillRect(cx-rb*1.5-z*170,y,8,80);g.fillRect(cx+rb*1.5+z*170,y,8,80)}}
+function tree(x,y,s){g.fillStyle='#4b3b31';g.fillRect(x-4,y-s*.35,8,s*.35);poly([[x,y-s],[x-s*.34,y-s*.28],[x+s*.34,y-s*.28]],'#244733');poly([[x,y-s*.72],[x-s*.31,y],[x+s*.31,y]],'#356249')}function forest(h,cx){g.fillStyle='#496d53';g.fillRect(0,h,W,H-h);for(let side of[-1,1])for(let i=0;i<18;i++){let z=i/18,dep=z*z,x=cx+side*lerp(60,W*.48,dep)+Math.sin(i*5)*14,y=lerp(h+20,H*.97,dep),s=lerp(26,110,dep);tree(x,y,s)}for(let i=0;i<4;i++){g.fillStyle=`rgba(230,240,235,${.08-i*.012})`;g.fillRect(0,h+50+i*48,W,45)}}
+function desert(h){g.fillStyle='#d89b61';g.fillRect(0,h,W,H-h);for(let i=0;i<7;i++){let x=W*(.04+i*.16),y=h+85+(i%2)*24;poly([[x-60,y],[x,y-95],[x+70,y]],i%2?'#b86637':'#c77843')}for(let i=0;i<8;i++){let x=W*(.08+i*.12),y=H*.7+(i%3)*9;g.fillStyle='#4f7049';g.fillRect(x-3,y-40,6,40);g.fillRect(x-12,y-28,9,5);g.fillRect(x+3,y-22,10,5)}}
+function city(h){g.fillStyle='#0a1019';g.fillRect(0,h,W,H-h);for(let i=0;i<24;i++){let x=i/23*W,bw=22+(i%4)*20,bh=70+(i%7)*35;g.fillStyle=i%2?'#111827':'#182235';g.fillRect(x,h+20-bh,bw,bh);g.fillStyle=i%3?'#5ef4ff80':'#ff58c880';g.fillRect(x+bw*.25,h+28-bh,3,bh-12)}for(let i=0;i<160;i++){let x=(i*43)%W,y=(i*31+T*.55)%H;g.strokeStyle='#b5dfff24';g.beginPath();g.moveTo(x,y);g.lineTo(x-4,y+13);g.stroke()}}
+function summit(h){g.fillStyle='#afbdca';g.fillRect(0,h,W,H-h);poly([[0,h+60],[W*.2,h-160],[W*.38,h+60]],'#52708c');poly([[W*.22,h+60],[W*.5,h-190],[W*.74,h+60]],'#6786a0');poly([[W*.62,h+60],[W*.86,h-170],[W,h+55]],'#4c6881');for(let i=0;i<5;i++){let x=W*(.06+i*.2);g.strokeStyle=`rgba(${80+i*18},255,210,.22)`;g.lineWidth=16;g.beginPath();g.moveTo(x,H*.15);g.quadraticCurveTo(x+80,H*.1,x+170,H*.18);g.stroke()}for(let i=0;i<80;i++){g.fillStyle='#ffffff45';g.fillRect((i*71+T*.03)%W,(i*37+T*.09)%H,2,2)}}
+function road(w,i){let mode=[.24,.31,.28,.21,.27][i],h=H*mode,b=H*1.03,cx=W*.5+Math.sin(p*10)*W*(i===2?.055:.018),top=W*[.055,.03,.042,.075,.034][i],bot=W*[.28,.22,.27,.35,.21][i];if(i===0)ocean(h,cx,bot);if(i===1)forest(h,cx);if(i===2)desert(h);if(i===3)city(h);if(i===4)summit(h);g.fillStyle=w.edge;poly([[cx-top*1.12,h],[cx-bot*1.1,b],[cx+bot*1.1,b],[cx+top*1.12,h]],w.edge);poly([[cx-top,h],[cx-bot,b],[cx+bot,b],[cx+top,h]],w.road);let lanes=[2,1,1,3,1][i],m=(p*75)%1;for(let n=0;n<20;n++){let z=(n+m)/20,d=z*z,y=h+d*(b-h),hw=lerp(top,bot,z),hh=lerp(3,28,d);g.fillStyle=w.lane;if(lanes===1)g.fillRect(cx-2,y,4,hh);else if(lanes===2){g.fillRect(cx-hw*.34-2,y,4,hh);g.fillRect(cx+hw*.34-2,y,4,hh)}else{g.fillRect(cx-hw*.46-2,y,4,hh);g.fillRect(cx-2,y,4,hh);g.fillRect(cx+hw*.46-2,y,4,hh)}}return{cx,h,b,bot,i}}
+function car(r){let y=H*[.81,.84,.83,.86,.8][r.i],s=(W<760?.78:1)*[.92,1.05,.98,.86,.9][r.i];g.save();g.translate(r.cx,y);g.scale(s,s);let shadow=g.createRadialGradient(0,28,3,0,28,68);shadow.addColorStop(0,'#0009');shadow.addColorStop(1,'#0000');g.fillStyle=shadow;g.beginPath();g.ellipse(0,28,68,20,0,0,Math.PI*2);g.fill();g.strokeStyle=r.i===3?'#5ef4ff55':'#ffffff28';g.lineWidth=3;g.beginPath();g.moveTo(-32,18);g.lineTo(-45,58);g.moveTo(32,18);g.lineTo(45,58);g.stroke();for(let x of[-40,40]){g.fillStyle='#090d12';g.beginPath();g.ellipse(x,18,13,18,0,0,Math.PI*2);g.fill();g.strokeStyle='#9df7ff88';g.stroke()}poly([[-62,14],[-46,-16],[-15,-32],[20,-29],[53,-9],[64,13],[34,29],[-29,30]],'#ed5048');poly([[-36,-13],[-8,-29],[18,-25],[35,-8],[8,-5],[-23,-3]],'#ff928b');poly([[-8,-22],[6,-28],[20,-23],[27,-10],[4,-10]],'#d8f3ff');poly([[-29,30],[34,29],[18,38],[-20,38]],'#8c201d');g.fillStyle='#f7ffff';g.fillRect(-52,7,12,4);g.fillStyle='#ffb5b5';g.fillRect(48,8,11,4);g.restore()}
+function frame(ts){T=ts;raw=scrollY/Math.max(document.body.scrollHeight-innerHeight,1);p=lerp(p,raw,.045);vel=lerp(vel,Math.abs(raw-last)*180,.12);last=raw;let i=idx(),w=worlds[i];dots.forEach((d,k)=>d.classList.toggle('on',k===i));nameEl.textContent=w.name;numEl.textContent=String(i).padStart(2,'0');camEl.textContent=w.cam;sky(w);let r=road(w,i);car(r);requestAnimationFrame(frame)}requestAnimationFrame(frame)})();</script></body></html>
