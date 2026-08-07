@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Nha Trang Road Journey v17</title>
+<style>
+  :root{
+    --bg:#071321;
+    --bg2:#0f2740;
+    --text:#edf5ff;
+    --muted:#9bb0c8;
+    --paper:#f7f2ea;
+    --paper2:#eee5d5;
+    --ink:#203246;
+    --sea1:#8be4f8;
+    --sea2:#3db1d5;
+    --sand:#e7d2b3;
+    --green:#719471;
+    --green2:#4f6f54;
+    --road:#3e4954;
+    --roadEdge:#77828a;
+    --lane:#faf0cf;
+    --brick:#b76847;
+    --accent:#f19b6a;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:radial-gradient(circle at 50% 0%, #173a5b 0%, var(--bg) 46%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow-x:hidden}
+  canvas{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+  .ui{position:fixed;inset:0;pointer-events:none;z-index:2}
+  .top{position:absolute;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top) + 18px) 22px 0;display:flex;justify-content:space-between;align-items:flex-start}
+  .brand{display:flex;flex-direction:column;gap:2px}
+  .brand strong{font-size:13px;letter-spacing:.22em;text-transform:uppercase}
+  .brand span{font-size:12px;color:var(--muted)}
+  .hero{position:absolute;left:22px;top:calc(env(safe-area-inset-top) + 82px);max-width:min(36vw,430px)}
+  .hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#a9bfd7;margin-bottom:10px}
+  .hero h1{font-size:clamp(34px,5vw,62px);line-height:.9;letter-spacing:-.06em;margin:0}
+  .hero p{font-size:14px;line-height:1.65;color:#bfd0e4;max-width:32ch;margin:14px 0 0}
+  .chapter{position:absolute;right:22px;bottom:calc(env(safe-area-inset-bottom) + 18px);padding:14px 16px;border:1px solid rgba(255,255,255,.11);background:rgba(9,20,34,.55);backdrop-filter:blur(16px);border-radius:18px;min-width:220px;box-shadow:0 14px 48px rgba(0,0,0,.28)}
+  .chapter .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .chapter .v{font-size:28px;font-weight:700;line-height:1;letter-spacing:-.05em;margin-top:6px}
+  .chapter .s{font-size:12px;line-height:1.5;color:#c9d7e7;margin-top:8px;max-width:28ch}
+  .route{position:absolute;left:22px;bottom:calc(env(safe-area-inset-bottom) + 18px);display:flex;gap:12px;align-items:center}
+  .route .line{width:140px;height:2px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden}
+  .route .fill{height:100%;width:0;background:linear-gradient(90deg,#fff,#a7d7ff)}
+  .route .dots{display:flex;gap:10px}
+  .route .dot{width:9px;height:9px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);transition:.2s}
+  .route .dot.active{background:#fff;border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.1)}
+  .hint{position:absolute;right:24px;top:calc(env(safe-area-inset-top) + 18px);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8ea6c0}
+  main{position:relative;z-index:1}
+  .step{height:120vh}
+  .tail{height:50vh}
+  @media (max-width: 900px){
+    .hero{top:auto;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 106px);max-width:none}
+    .hero p{max-width:27ch}
+    .chapter{left:14px;right:14px;min-width:auto;bottom:calc(env(safe-area-inset-bottom) + 12px)}
+    .route{left:14px;top:calc(env(safe-area-inset-top) + 60px);bottom:auto}
+    .route .line{width:92px}
+    .hint{display:none}
+    .top{padding:calc(env(safe-area-inset-top) + 14px) 14px 0}
+    .brand span{display:none}
+  }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="ui">
+  <div class="top">
+    <div class="brand"><strong>Nha Trang Road Journey</strong><span>Low‑poly popup diorama, cinematic road trip</span></div>
+    <div class="hint">Scroll to drive</div>
+  </div>
+  <div class="hero">
+    <div class="eyebrow">Concept reset v17</div>
+    <h1>Nha Trang,<br>seen from the road.</h1>
+    <p>Continuous road. Free‑running car. Popup landmarks that rise beside the route — Trần Phú, Trầm Hương, Hòn Chồng, Po Nagar, Xóm Bóng bridge and Long Sơn.</p>
+  </div>
+  <div class="route"><div class="line"><div class="fill" id="fill"></div></div><div class="dots" id="dots"></div></div>
+  <div class="chapter"><div class="k">Chapter</div><div class="v" id="title">Trần Phú</div><div class="s" id="sub">The coastal boulevard opens with the sea to the right and a promenade lined with palms.</div></div>
+</div>
+<main>
+  <section class="step"></section>
+  <section class="step"></section>
+  <section class="step"></section>
+  <section class="step"></section>
+  <section class="step"></section>
+  <div class="tail"></div>
+</main>
+<script>
+(()=>{
+  const canvas=document.getElementById('c');
+  const ctx=canvas.getContext('2d');
+  const fill=document.getElementById('fill');
+  const title=document.getElementById('title');
+  const sub=document.getElementById('sub');
+  const dotsWrap=document.getElementById('dots');
+  const CH=[
+    ['Trần Phú','The coastal boulevard opens with the sea to the right and a promenade lined with palms.'],
+    ['Hòn Chồng','The road still hugs the coast, with stacked rocks and open water on the right.'],
+    ['Po Nagar','The route turns left into the city. Streets flank the road, with Po Nagar on the right.'],
+    ['Xóm Bóng Bridge','The city opens to sông Cái as the road crosses the bridge and riverfront.'],
+    ['Long Sơn','A right turn through the city reveals hills ahead and the White Buddha high on the right.']
+  ];
+  CH.forEach(()=>{const d=document.createElement('div');d.className='dot';dotsWrap.appendChild(d)});
+  const dots=[...dotsWrap.children];
+  let W=0,H=0,DPR=Math.min(devicePixelRatio||1,2),smooth=0;
+  const route=[
+    [0.16,0.74],[0.30,0.67],[0.45,0.60],[0.58,0.52],[0.68,0.45],
+    [0.79,0.37],[0.87,0.33],
+    [0.79,0.42],[0.72,0.52],[0.66,0.61],
+    [0.73,0.56],[0.81,0.51],[0.88,0.47],
+    [0.81,0.59],[0.73,0.67],[0.64,0.75]
+  ];
+  function resize(){W=innerWidth;H=innerHeight;canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0)}
+  addEventListener('resize',resize); resize();
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  function scrollP(){const total=Math.max(document.body.scrollHeight-innerHeight,1);const raw=scrollY/total;smooth=lerp(smooth,raw,0.06);return smooth}
+  function mix(c1,c2,t){const a=hex(c1),b=hex(c2); return `rgb(${Math.round(lerp(a[0],b[0],t))},${Math.round(lerp(a[1],b[1],t))},${Math.round(lerp(a[2],b[2],t))})`;}
+  function hex(h){return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
+  function rgba(c,a){let m=c.match(/\d+/g); if(m) return `rgba(${m[0]},${m[1]},${m[2]},${a})`; let v=hex(c); return `rgba(${v[0]},${v[1]},${v[2]},${a})`;}
+  function rr(x,y,w,h,r,fill=true){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r); fill?ctx.fill():ctx.stroke()}
+  function poly(pts,fill=true){ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.closePath(); fill?ctx.fill():ctx.stroke()}
+  function bookRect(){const bw=Math.min(W*0.90,1120), bh=Math.min(H*0.70,660), bx=(W-bw)/2, by=H*0.18; return {bx,by,bw,bh};}
+  function bxy(b,p){return [b.bx+p[0]*b.bw,b.by+p[1]*b.bh]}
+  function catmull(points,t){const n=points.length-1; const s=clamp(t,0,.999999)*n; const i=Math.floor(s),f=s-i; const a=points[Math.max(0,i-1)],b=points[i],c=points[Math.min(n,i+1)],d=points[Math.min(n,i+2)]; const f2=f*f,f3=f2*f; const x=.5*((2*b[0])+(-a[0]+c[0])*f+(2*a[0]-5*b[0]+4*c[0]-d[0])*f2+(-a[0]+3*b[0]-3*c[0]+d[0])*f3); const y=.5*((2*b[1])+(-a[1]+c[1])*f+(2*a[1]-5*b[1]+4*c[1]-d[1])*f2+(-a[1]+3*b[1]-3*c[1]+d[1])*f3); return [x,y];}
+  function pathPoint(b,t){const p=catmull(route,t); return bxy(b,p)}
+  function chapterAt(t){if(t<.24)return 0;if(t<.44)return 1;if(t<.68)return 2;if(t<.84)return 3;return 4}
+  function popup(centerT,t,w=.10){return ease(clamp(1-Math.abs(t-centerT)/w,0,1))}
+
+  function drawBackground(t){const g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,mix('#183d60','#112640',t*.5)); g.addColorStop(1,'#071321'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    const glow=ctx.createRadialGradient(W*.72,H*.14,0,W*.72,H*.14,W*.36); glow.addColorStop(0,'rgba(167,216,255,.24)'); glow.addColorStop(1,'rgba(0,0,0,0)'); ctx.fillStyle=glow; ctx.fillRect(0,0,W,H);
+  }
+  function drawPlatform(b){
+    ctx.fillStyle='rgba(0,0,0,.24)'; rr(b.bx+12,b.by+18,b.bw,b.bh,28);
+    ctx.fillStyle='#f7f2ea'; rr(b.bx,b.by,b.bw,b.bh,28);
+    ctx.strokeStyle='rgba(16,32,51,.08)'; ctx.lineWidth=1; rr(b.bx+12,b.by+12,b.bw-24,b.bh-24,22,false);
+    ctx.fillStyle='#efe5d5'; rr(b.bx+b.bw*.495,b.by+8,b.bw*.01,b.bh-16,10);
+  }
+  function drawTerrain(b){
+    const sea=ctx.createLinearGradient(b.bx+b.bw*.6,b.by,b.bx+b.bw,b.by+b.bh); sea.addColorStop(0,'#9be8f8'); sea.addColorStop(1,'#35a8cd');
+    ctx.fillStyle=sea;
+    poly([[b.bx+b.bw*.60,b.by+b.bh*.10],[b.bx+b.bw*.99,b.by+b.bh*.10],[b.bx+b.bw*.99,b.by+b.bh*.44],[b.bx+b.bw*.90,b.by+b.bh*.30],[b.bx+b.bw*.78,b.by+b.bh*.33],[b.bx+b.bw*.72,b.by+b.bh*.46],[b.bx+b.bw*.81,b.by+b.bh*.62],[b.bx+b.bw*.99,b.by+b.bh*.59],[b.bx+b.bw*.99,b.by+b.bh*.84],[b.bx+b.bw*.77,b.by+b.bh*.79],[b.bx+b.bw*.69,b.by+b.bh*.63],[b.bx+b.bw*.73,b.by+b.bh*.48],[b.bx+b.bw*.64,b.by+b.bh*.26]],true);
+    ctx.fillStyle='#d8d8b8';
+    poly([[b.bx+b.bw*.04,b.by+b.bh*.12],[b.bx+b.bw*.58,b.by+b.bh*.08],[b.bx+b.bw*.64,b.by+b.bh*.16],[b.bx+b.bw*.62,b.by+b.bh*.30],[b.bx+b.bw*.55,b.by+b.bh*.48],[b.bx+b.bw*.60,b.by+b.bh*.65],[b.bx+b.bw*.70,b.by+b.bh*.82],[b.bx+b.bw*.62,b.by+b.bh*.92],[b.bx+b.bw*.05,b.by+b.bh*.88]],true);
+    ctx.fillStyle='#b8c79e';
+    poly([[b.bx+b.bw*.56,b.by+b.bh*.68],[b.bx+b.bw*.74,b.by+b.bh*.58],[b.bx+b.bw*.90,b.by+b.bh*.66],[b.bx+b.bw*.82,b.by+b.bh*.88],[b.bx+b.bw*.60,b.by+b.bh*.93]],true);
+    ctx.strokeStyle='rgba(32,50,70,.08)'; ctx.lineWidth=1;
+    for(let i=0;i<9;i++){let y=b.by+b.bh*(.22+i*.07); ctx.beginPath(); ctx.moveTo(b.bx+b.bw*.18,y); ctx.lineTo(b.bx+b.bw*.86,y); ctx.stroke();}
+    for(let i=0;i<15;i++){let x=b.bx+b.bw*(.18+i*.045); ctx.beginPath(); ctx.moveTo(x,b.by+b.bh*.18); ctx.lineTo(x,b.by+b.bh*.90); ctx.stroke();}
+  }
+  function drawRoad(b){
+    const pts=route.map(p=>bxy(b,p));
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.strokeStyle='#73818b'; ctx.lineWidth=Math.max(30,b.bw*.030); ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke();
+    ctx.strokeStyle='#394651'; ctx.lineWidth=Math.max(24,b.bw*.024); ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke();
+    ctx.strokeStyle='#faf0cf'; ctx.lineWidth=2.4; ctx.setLineDash([14,16]); ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.stroke(); ctx.setLineDash([]);
+  }
+  function palm(x,y,s){ctx.fillStyle='#8e6d4e'; ctx.fillRect(x-s*.04,y-s*.45,s*.08,s*.45); ctx.strokeStyle='#5a8261'; ctx.lineWidth=3; for(let i=-2;i<=2;i++){ctx.beginPath(); ctx.moveTo(x,y-s*.40); ctx.quadraticCurveTo(x+i*s*.26,y-s*.57,x+i*s*.45,y-s*.30); ctx.stroke();}}
+  function building(x,y,w,h,c){ctx.fillStyle='rgba(0,0,0,.08)'; poly([[x+3,y+4],[x+w+3,y+4],[x+w+3,y-h+4],[x+3,y-h+4]],true); ctx.fillStyle=c; poly([[x,y],[x+w,y],[x+w,y-h],[x,y-h]],true); ctx.fillStyle='rgba(32,50,70,.1)'; for(let r=0;r<3;r++) for(let c2=0;c2<2;c2++) ctx.fillRect(x+w*.15+c2*w*.28,y-h*.18-r*h*.21,w*.12,h*.08)}
+  function cityHints(b){
+    for(let i=0;i<7;i++) palm(b.bx+b.bw*(.50+i*.05), b.by+b.bh*(.62-i*.013), b.bh*.08);
+    for(let i=0;i<18;i++){const row=i<9?0:1; const col=i%9; building(b.bx+b.bw*(.17+col*.055), b.by+b.bh*(row?0.75:0.52), b.bw*.030, b.bh*.08, row? '#efe4d7':'#e7ebef');}
+  }
+  function popupBase(x,y,w,d,lift){ctx.fillStyle=rgba('#000000',.10+.08*lift); poly([[x-w*.48,y+3],[x+w*.48,y+3],[x+w*.56,y+d*.12],[x-w*.56,y+d*.12]],true); ctx.fillStyle='#fff9ef'; poly([[x-w*.5,y],[x+w*.5,y],[x+w*.62,y+d*.16],[x-w*.62,y+d*.16]],true); ctx.strokeStyle='rgba(32,50,70,.14)'; ctx.lineWidth=1; poly([[x-w*.5,y],[x+w*.5,y],[x+w*.62,y+d*.16],[x-w*.62,y+d*.16]],false); ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x,y-d*.25); ctx.stroke(); }
+  function drawTramHuong(b,t){const a=popup(.20,t,.10); if(!a) return; const [x,y]=bxy(b,[.60,.55]),w=b.bw*.15,d=b.bh*.08,h=b.bh*.20*a; popupBase(x,y,w,d,a); const base=y-h-d*.02; ctx.fillStyle='#efe3d1'; poly([[x-w*.44,base],[x+w*.16,base],[x+w*.22,base+14],[x-w*.52,base+14]],true); const tx=x-w*.02; ctx.fillStyle='#69d7e7'; poly([[tx-8,base+2],[tx+8,base+2],[tx+8,base-64*a],[tx-8,base-64*a]],true); ctx.fillStyle='#fff8f1'; for(let i=0;i<6;i++){const ang=-1.57+(i-2.5)*0.36; const px=tx+Math.cos(ang)*26*a, py=base-50*a+Math.sin(ang)*22*a; poly([[tx,base-18*a],[px-8*a,py],[px,py-14*a],[px+8*a,py]],true);} for(let i=0;i<4;i++) palm(x-w*.30+i*w*.14,base+10,w*.16)}
+  function drawHonChong(b,t){const a=popup(.36,t,.10); if(!a) return; const [x,y]=bxy(b,[.83,.33]),w=b.bw*.16,d=b.bh*.08,h=b.bh*.17*a; popupBase(x,y,w,d,a); const by=y-h; ctx.fillStyle='#d8b48a'; poly([[x-w*.34,by],[x-w*.04,by],[x+8,by+18],[x-w*.38,by+18]],true); ctx.fillStyle='#9f7c58'; poly([[x-w*.08,by-84*a],[x+34,by-46*a],[x+8,by-10*a],[x-22,by-44*a]],true); ctx.fillStyle='#bf9468'; poly([[x+20,by-118*a],[x+60,by-66*a],[x+36,by-18*a],[x+2,by-56*a]],true); ctx.fillStyle='#8fddef'; poly([[x+32,by+6],[x+w*.48,by+6],[x+w*.56,by+26],[x+28,by+26]],true); ctx.fillStyle='#eee1cf'; poly([[x-w*.38,by+22],[x+12,by+22],[x+16,by+34],[x-w*.42,by+34]],true)}
+  function chamTower(x,y,w,h){ctx.fillStyle='#93523a'; poly([[x-w*.5,y],[x+w*.5,y],[x+w*.58,y+12],[x-w*.58,y+12]],true); ctx.fillStyle='#b76847'; poly([[x-w*.36,y],[x+w*.36,y],[x+w*.30,y-h*.76],[x-w*.30,y-h*.76]],true); ctx.fillStyle='#d68a61'; poly([[x-w*.24,y-h*.76],[x+w*.24,y-h*.76],[x+w*.18,y-h],[x-w*.18,y-h]],true); ctx.fillStyle='#6d3e2a'; ctx.fillRect(x-w*.06,y-h*.34,w*.12,h*.34); ctx.fillStyle='#eacaa9'; ctx.fillRect(x-w*.12,y-h*.52,w*.24,h*.06)}
+  function drawPoNagar(b,t){const a=popup(.58,t,.11); if(!a) return; const [x,y]=bxy(b,[.77,.47]),w=b.bw*.18,d=b.bh*.10,h=b.bh*.23*a; popupBase(x,y,w,d,a); const base=y-h-d*.02; ctx.fillStyle='#8fa171'; poly([[x-w*.48,base+20],[x+w*.36,base+20],[x+w*.46,base+36],[x-w*.56,base+36]],true); chamTower(x-w*.18,base,30,94*a); chamTower(x+w*.02,base+10,24,76*a); chamTower(x+w*.20,base+14,20,62*a)}
+  function drawBridge(b,t){const a=popup(.74,t,.10); if(!a) return; const [x,y]=bxy(b,[.83,.45]),w=b.bw*.22,d=b.bh*.08,h=b.bh*.12*a; popupBase(x,y,w,d,a); const base=y-h; ctx.fillStyle='#85dff1'; poly([[x-w*.46,base+4],[x+w*.46,base+4],[x+w*.56,base+20],[x-w*.56,base+20]],true); ctx.fillStyle='#d6d8df'; poly([[x-w*.42,base-12*a],[x+w*.42,base-24*a],[x+w*.52,base-8*a],[x-w*.32,base+2*a]],true); ctx.fillStyle='#aeb5c1'; for(let i=0;i<7;i++){const px=x-w*.34+i*w*.11; poly([[px,base-8*a],[px+4,base-30*a],[px+10,base-28*a],[px+6,base-6*a]],true)} ctx.fillStyle='#8a5d41'; poly([[x-14,base+8],[x+14,base+8],[x+6,base+18],[x-20,base+18]],true)}
+  function drawLongSon(b,t){const a=popup(.90,t,.10); if(!a) return; const [x,y]=bxy(b,[.72,.66]),w=b.bw*.19,d=b.bh*.10,h=b.bh*.24*a; popupBase(x,y,w,d,a); const base=y-h; ctx.fillStyle='#7d9370'; poly([[x-w*.42,base+20],[x-w*.10,base-28*a],[x+w*.12,base+20]],true); ctx.fillStyle='#697f61'; poly([[x-w*.04,base+20],[x+w*.30,base-44*a],[x+w*.54,base+20]],true); const bx=x+w*.18, by=base-44*a; ctx.fillStyle='#fffdf8'; poly([[bx-9,by],[bx+9,by],[bx+10,by+24],[bx-10,by+24]],true); ctx.beginPath(); ctx.arc(bx,by-10,8,0,Math.PI*2); ctx.fill(); ctx.strokeStyle='rgba(255,255,255,.55)'; ctx.lineWidth=1.5; ctx.beginPath(); ctx.arc(bx,by-10,16,0,Math.PI*2); ctx.stroke(); ctx.fillStyle='#efe1cb'; poly([[x-w*.34,base+20],[x-w*.06,base+20],[x-w*.02,base+30],[x-w*.38,base+30]],true)}
+  function drawCar(b,t){const [x,y]=pathPoint(b,t); const [x2,y2]=pathPoint(b,Math.min(t+.01,.999)); const ang=Math.atan2(y2-y,x2-x); const scale=Math.min(b.bw/930,1.15); ctx.save(); ctx.translate(x,y); ctx.rotate(ang); ctx.fillStyle='rgba(0,0,0,.18)'; ctx.beginPath(); ctx.ellipse(0,15*scale,31*scale,10*scale,0,0,Math.PI*2); ctx.fill(); ctx.scale(scale,scale); ctx.fillStyle='#f8fafb'; poly([[-40,8],[-18,-14],[14,-16],[42,-4],[34,10],[4,16],[-26,16]],true); ctx.fillStyle='#f0a160'; poly([[-14,-10],[8,-14],[24,-5],[8,-1],[-8,-2]],true); ctx.fillStyle='#9fd5ef'; poly([[-8,-8],[8,-12],[18,-4],[0,-3]],true); ctx.fillStyle='#313946'; ctx.beginPath(); ctx.ellipse(-22,13,8,8,0,0,Math.PI*2); ctx.fill(); ctx.beginPath(); ctx.ellipse(22,11,8,8,0,0,Math.PI*2); ctx.fill(); ctx.fillStyle='#fff5de'; ctx.fillRect(28,-2,10,3); ctx.fillStyle='#f6a4a0'; ctx.fillRect(-37,8,7,3); ctx.restore(); }
+
+  function frame(){const p=scrollP(); const journey=clamp((p-.02)/.92,0,1); const chap=chapterAt(journey); title.textContent=CH[chap][0]; sub.textContent=CH[chap][1]; fill.style.width=`${journey*100}%`; dots.forEach((d,i)=>d.classList.toggle('active',i===chap));
+    drawBackground(journey); const b=bookRect(); drawPlatform(b); drawTerrain(b); cityHints(b); drawRoad(b); drawTramHuong(b,journey); drawHonChong(b,journey); drawPoNagar(b,journey); drawBridge(b,journey); drawLongSon(b,journey); drawCar(b,journey); requestAnimationFrame(frame)}
+  frame();
+})();
+</script>
+</body>
+</html>
