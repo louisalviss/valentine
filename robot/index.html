@@ -1,1 +1,241 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>Robot Hero — iOS Direct</title><style>*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{height:100%;margin:0;overflow:hidden}body{font-family:system-ui,-apple-system,sans-serif;background:radial-gradient(circle at 50% 18%,#fff,#eef2f5 45%,#d5dce3);touch-action:none}.scene{position:fixed;inset:0;display:grid;place-items:center;perspective:1000px}.scene:before,.scene:after{content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);border:1px solid #68758218;border-radius:50%;pointer-events:none}.scene:before{width:70vmin;height:70vmin}.scene:after{width:92vmin;height:92vmin}#hero{position:relative;width:min(88vw,500px);height:min(86vh,780px);display:grid;place-items:center;transform-style:preserve-3d;will-change:transform}img{display:block;max-width:100%;max-height:100%;object-fit:contain;transform:translateZ(28px);filter:drop-shadow(0 28px 26px #1d263022);user-select:none;-webkit-user-drag:none;pointer-events:none}.floor{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:min(55vw,420px);height:45px;border-radius:50%;background:radial-gradient(ellipse,#26313b30,transparent 70%);filter:blur(4px)}.top{position:fixed;left:14px;right:14px;top:max(12px,env(safe-area-inset-top));display:flex;justify-content:space-between;color:#6d7882;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}.pill{padding:8px 11px;border-radius:999px;background:#ffffffc9;border:1px solid #0000000b}.bottom{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:8px 12px;border-radius:999px;background:#ffffffc9;border:1px solid #0000000b;color:#697681;font-size:9px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;pointer-events:none}</style></head><body><div class="scene"><div class="floor"></div><div id="hero"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wgARCADwALQDASIAAhEBAxEB/8QAGgABAQADAQEAAAAAAAAAAAAAAQACAwQFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHNqyZJomYJgd2S81u1IGQYyUGRGMlFUZ01MxTE0U6TPLzu1csvK7zcMmMxiZBiZBjUZo0oxNE2Rj5zzrjhkD1ce89V4vQNZkJiZBiZBjUZoiiTRbtPKvJ26PWPI5vf4jzLPQd3qfO+qdIyGOQYmQYzUsxMlUWzXguPTp0jr6tpp5ufuDq18p1mOSEhiZYhVWSMKJIl43u86unq5S38eZ5vs+T7I+T6yBs1pCAIYzUowokiZ4aNyunb456ZsDRt8r1zZljoOrXRCICBUKIokicXTy716/C9zjOLbeieV7GjcYcPVynZkZICAIFQoiiSJyb9kuXL0cZh38nWmGzWq8PchIkIAgVCiKJIlUcmdyL6OQo8HbzLt26tpCJCAIFVLixk4opDUaOJ6l6ZEufo413buHuIpIgsUCqlGFEYRhOfblxr2OGaWvZguroxyChIQBxKKlGFEUhSMuTs4l6qkcWE2a1iEhAEoqicWsnFjJxRjavmdW3A2RI4uJx9vRzLkAiERBRVRRlENQ9HLLrw6FBqrPVR3aOPcrVZDAJFUf/EACcQAAICAgAFBAMBAQAAAAAAAAECAAMREgQQITBAEyIjQRQxMiBC/9oACAEBAAEFAu3jxlExgsPFNjKbCVVWJXw7H0UMTLj8bbVipiw8K19iOkw2c+6tsQHI74Eax2E1hzBAOlOfUI7/ANAliOHj1lJ05Ezhj8me/wAQ7KOFxvD1H4w1etk5dZRvjvfSoPVz0fiNYOJJIcNHpUytNPAFqkJ+riVFWPThfFiYMMe9QFOV7mMrqSVGFvHsoB0KnH2g1SMh9QLqncH6SsIZfnSl9Fe4MEUswB1milz3R+vuPauvoLj8dZW6VKtwczIh7trrr0jA6HAlT7pbZooG8rqCCOwVg4cdy9BEOUly62UMZYrNOGXNnJT6typr3X+S6rIWWqGFCnaVKFWPnV/hKtuvcuQmV51jnC8Nnkn65Mr22DoO/b/HDj2wf1B4ItBb6X+eVlurVtsvgPQkFmeZ/VdKuuoR/A3DTp63MHSsEP4L/HZSuFPPiJw593gPXtZAcjlYu6VJr4JlzYCjC8lg8LG13P8A68Knq3P7x4ByRg0Ss5/wxCj1LNgQR3ljgELgLzI25Y17mZmCxFO8vy0QFTmZmYpBaWdD3dQZqJiYmJiawArD6+fcRj/f/8QAFBEBAAAAAAAAAAAAAAAAAAAAcP/aAAgBAwEBPwE0/8QAFBEBAAAAAAAAAAAAAAAAAAAAcP/aAAgBAgEBPwE0/8QAJxAAAQIFAwUBAAMAAAAAAAAAAQARAhAhMUASIkEgMFFhcTJQgZH/2gAIAQEABj8C/gXXP+4waFwnhDlb6E4uscGqLKDyq3w2W03k9ynKcYPibT04VYviqP7Cq8z8wAByiD4kQmBqqz3YGoSpCT7TaCvS20KHzAoayaEVPKGmUWj8zLXQPdK0gICVCyO6QloQA47xPmVqL0VphdymhDoaryEXIwTDzZlcq5RBNimAOBpdUR03Qidz4Tp0XO5B/wBShTw90e0GkQiEAn8SqvQ7whNgmPBlXpi03UJhHCB7uqG63XkSjL5PxCE2AZxYemQmzYTihVRXz0ao7lbaA4NCi9eiptRQn3gxMF7PR6KbjBfjpZEm5wmHKAmR4w/mPGTd8XbdVqCjRuhytZ1aU4wK2TDoYyYd7cZABO74lQrdVFcLc3Y//8QAJhAAAgIBBAMAAgIDAAAAAAAAAREAITEQQVFhMEBxIIGRobHB0f/aAAgBAQABPyHxtwfWEmgEhduYFkeqKX3EKuhQNpgAH1L7JOIRA/8AulfkeIWyCyuJhdPTEQrAwt4zUoiDOAobjMTnsbqAERg+gwEnAlApioQFYn8hAHIkQEbzN18lAGQM/Iux5xULEEjeTsGJwnIhi0hDFQmZl4DV58IORhkEDw0HtAoUyex3hytcjEuBCE7wpRQ1z50MoGilxCAYXxNoGOEEwJ8MAdozxOMRhs0gz56OnhMn2BP+EIR5wAWgzrEbBhWgEPMw+QAET0E7sG/lJI5VTdcDtOvI5+IU6B6/uGiexwIfn9RYH3QNG5qB83EHRJPKHMUAyZMBaD0DeIaFFhLSIC0PjQmUcEKj5eWHQa0ORAIBvuADuYXEAEBI+TDMFTZ0FAJs+a9zYJ4gAfpCXFtg5wX0iUs4MYhnaCZyPsMGwjo8bLJXSjMeUAkKNm4InBQUBOFsiAkf2IwEly3Yv+9CUzsiZgHY6gHW58tX/wCyCSBMGhIl7EQU0kM6UAInOjxfCIJHQ9yhU/KWDk4lO/1p1BGO60OwOSIjg3l4GI4AAGB5hmOpZcUZ20FcRRhMBh8ejSX7c3vjHMSjC02lcf6YEpG/oqEJ2Ed5UwKMCgtKEcq4jxJHmK6A479FhAKzACxD2GpsKIwO7QQItEv49E2FfZcHkMy1oQEGX9heFGRCEV6F8O1iMAwLhqw3ZB7hqXohtfPRGDkrOrBqVchTKH0DiEQO1/ACx5EAuH0Ck41io/C0Uyhz5wJCMKcIZAjPUsQAOvwadAXAEHM0toFYD50H2GQUwsp6jjjgA2ItomwEcf5OOOPU3YQgnt9hsP1R4EWovMELi7MyOY4/EoocIP6gHgYnETUMGmh+xhIYhSoXGhfl/9oADAMBAAIAAwAAABCXkWN/69e1e392NcdNSousPP8ANLnjGcOGzzjPLPnOQ4Mwbfzxzz/6QMSGXj3NvLrEisqK/DLx/wD69toMHnl/z/8Aut4ALT5N/wD/AP46xgNxKl1+www61zCwolwwwTz7w0Iyhmz38c83y2A4mpwxzc855wv39j88c/fw7hg83gy9/V19wi+eyhWRw//EABQRAQAAAAAAAAAAAAAAAAAAAHD/2gAIAQMBAT8QNP/EABcRAQEBAQAAAAAAAAAAAAAAAAFQMED/2gAIAQIBAT8QpvA23Rlf/8QAJxABAAICAgEEAgIDAQAAAAAAAQARITEQQVEgYXGBkaGx8MHR8eH/2gAIAQEAAT8Q5CBKlSpUqVMN4vNSokqJEjEiR9AQIEqBKlSpUNQt6hJR2sT6HUqB15lSpUSJEiRI8VAlQJUCBK4qar5VZG8/Eorj2jOGNwsqJKiRIkSJE4qEqBAlQJXB49qg/wAxtdXoc6W10Q8FopZbdQvs2hbbFJ8RQEbKKs4SVEjGMYkIECECByoCuAg/C8+jvMIV1YVWbmArY3biXomduiGLLYAA9vxAgAsTlIkSJHghCEDnIIC2jLEOCtg73/qbCqujJ9eJdzdnZkhlEM4Wppl9AiPnUQ9XEHGLI4/rEIdfZ44YxIkSJAhCBDlBnguKztvesW3/ADL5VRwLdtOyOr7ZU/59xiU+rbjWhTybg16PZpg2Lff5IN33iVGMSJGMIQhzUOGiSv8AVx3JZE6vP99oVa1l2wHWhl9kBQfZY+RL1T03I2wuIcfOXY9RWGqc7B73wxiRicEIQ9GCAStJcTX+FaP1O8TAHbAZkTRhJunuXIT3n8Q2lI4Xz2J5jbQK0X7eIZQXuTpu8Sv3xEpqPDGMYQhDlQFdGWCimZGH8MVp+XmbiYW6OWpdaky3Zu41WiORmNZe6lzjhsVrRC5G1cNchBwD8yglaG9nhjGMYQhDnzHT5VNumhbXnPiMzsZh79vZ4dxilgABLN5ecTNTQGqvxCUCiYrQh2LJa95zKvEcljd7GDElKbb5YxjCEPQRY6bupjQ+vQ8TfWoyDda4HoSGFlyFyBzf0n4ijYpWHb+JcFYS/bz7QmwCm1kNxEyVZY/E/VcsY8EIckoNVFtt1HYyVVh54Lb0sGW8Y8yoBVlo26eu4m3ThVD5gqkh+NgJA0Jj44vCCIC5aLmIHl4YxjGEIehBcqUsXc39QwdKA30ajKwF17rNfcIQZ4WZPb5l9BOnyQq41r5M3nmg/r8w67oQcHtEpSJgRQO7Bg2wDSJSPxwxjHghD0Flvlgt6gUBQUdV1HEhxTfrYSKj06qFpi3xiOAYbfw/vtDOI+EMlTxAPezbR7vPUo5ouPY6IxjGPBCEOcyxU3pVywcAxs3LxHRkPkC4jJl6faZAI3TRb0ShXi15f9dfUGoxi7BhcGS4z/l87mcZGB4YxjwQhDljdBFn2SJ+cX2/iXPZgsSJjcnl/rwqnaV85x+kjlBlH3FI6KI2ex2wWaAA9uGMY8EIQ9GiOb4lieF4+YtUiaPd7/wcKytJ81T/ABxg53/D0MYx4IQh6LqO783RsX4mBRbevggBkKaArrg2IqnrtoPxGAG1Y/vt6GMY8EIekLa8wHxyw8qi5QNo2B3jzAANBRwxQQMDeMwimqyMXQSmBMN+nj0MYxlwhCHpqLaQDqVSXFuiqtxyBFpKhjxRL7vH6lGdfB6DGMeCEIelA4C5W7iGdZj26IK+WeDLUDdWE1Y1+v4hayheCvcufDhjGMYwhCHpICbK8teJc5LgJbDF+a4GkXqGEhc8IajOSs9AI8h2OGMYx4IMIQ9HZiYZtPHc89gPzyq7f4Gz9cO1eMcMYxjyQhCHJiv6L6dW5/16DAbK/r/sxJs/PDGMYxhCDwcmWVsJXbEkGwPGcegcFdtPsVCl+2YL5jGMWMeCDCDBgy4+wYLQh1RRJAeoRWIAHVY4vhUhJh86h8Jw0f8AiWN1WXFixYsWLwMGDBgwYMAWuXUueG/I+ZhoKs7Pv6BX60lkMChVVXt4jgVC0VrgxcuLFl8D0Fj3BRU8ligTFkV5wiiTurwVq5hCNU4IPsle7nnEEA2Znlm+SUFN0mepbxLZn0VKlSiU8Sngn71oPwfgh1iHilI37lvvEI3FUqlgQOAdH4lECeS7hThUeHj/2Q==" alt="white humanoid robot with red eyes"></div></div><div class="top"><span>Robot preview</span><span class="pill" id="status">drag / touch</span></div><div class="bottom">self-contained iOS-safe image</div><script>(()=>{const h=document.getElementById('hero'),s=document.getElementById('status');let drag=0,sx=0,sy=0,bx=0,by=0,tx=0,ty=0,x=0,y=0,moved=0,spin=0;function frame(t){x+=(tx-x)*.14;y+=(ty-y)*.14;spin*=.91;h.style.transform=`translateY(${Math.sin(t/1000)*2}px) rotateX(${x}deg) rotateY(${y+spin}deg)`;requestAnimationFrame(frame)}function down(a,b){drag=1;moved=0;sx=a;sy=b;by=ty;bx=tx;s.textContent='rotating'}function move(a,b){if(!drag)return;const dx=a-sx,dy=b-sy;if(Math.abs(dx)+Math.abs(dy)>5)moved=1;ty=Math.max(-28,Math.min(28,by+dx*.11));tx=Math.max(-10,Math.min(10,bx-dy*.07))}function up(){if(!drag)return;drag=0;s.textContent='drag / touch';if(!moved)spin=15}addEventListener('pointerdown',e=>down(e.clientX,e.clientY));addEventListener('pointermove',e=>move(e.clientX,e.clientY));addEventListener('pointerup',up);addEventListener('touchstart',e=>{const q=e.touches[0];if(q)down(q.clientX,q.clientY)},{passive:true});addEventListener('touchmove',e=>{const q=e.touches[0];if(q)move(q.clientX,q.clientY)},{passive:true});addEventListener('touchend',up);requestAnimationFrame(frame)})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Kaizen Robot Bust — 3D Prototype</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    overflow:hidden;
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:radial-gradient(circle at 50% 18%, #ffffff 0%, #f4f6f8 26%, #e4e9ee 64%, #d4dbe2 100%);
+    color:#11161b;
+  }
+  #app{position:fixed;inset:0}
+  canvas{display:block;width:100%;height:100%}
+  .overlay{position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.70),transparent 25%),linear-gradient(180deg,rgba(255,255,255,.18),transparent 20%)}
+  .rings span{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);border:1px solid rgba(96,108,120,.10);border-radius:50%}
+  .rings span:nth-child(1){width:min(60vmin,640px);height:min(60vmin,640px)}
+  .rings span:nth-child(2){width:min(78vmin,840px);height:min(78vmin,840px);opacity:.72}
+  .rings span:nth-child(3){width:min(96vmin,1040px);height:min(96vmin,1040px);opacity:.44}
+  .top{position:fixed;left:22px;right:22px;top:18px;display:flex;justify-content:space-between;align-items:center;z-index:10;color:#72808b;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+  .pill{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.74);border:1px solid rgba(0,0,0,.05);backdrop-filter:blur(10px)}
+  .hint{position:fixed;left:22px;bottom:18px;z-index:10;color:#7a8791;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}
+  .bottom{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:10;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.74);border:1px solid rgba(0,0,0,.05);backdrop-filter:blur(10px);color:#66737e;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="overlay rings"><span></span><span></span><span></span></div>
+<div class="top"><div>Kaizen Robot Bust</div><div class="pill" id="state">Drag / touch to rotate · tap to nod</div></div>
+<div class="hint">Prototype 3D bust based on your robot image</div>
+<div class="bottom">True 3D geometry · upper-body first</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script>
+(()=>{
+  const mount = document.getElementById('app');
+  const state = document.getElementById('state');
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.8));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  mount.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(31, window.innerWidth/window.innerHeight, 0.1, 100);
+  camera.position.set(0, 1.2, 8.4);
+
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xcad2da, 2.35));
+  const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(4,7,6); scene.add(key);
+  const fill = new THREE.PointLight(0xffffff, 9, 26); fill.position.set(-3.5,2.5,5.2); scene.add(fill);
+  const rim = new THREE.PointLight(0xc3ced9, 8, 26); rim.position.set(0,4,-5.4); scene.add(rim);
+
+  const mats = {
+    white: new THREE.MeshStandardMaterial({color:0xf4f6f7, roughness:0.34, metalness:0.28}),
+    dark:  new THREE.MeshStandardMaterial({color:0x191e24, roughness:0.56, metalness:0.18}),
+    gray:  new THREE.MeshStandardMaterial({color:0x565f68, roughness:0.34, metalness:0.44}),
+    red:   new THREE.MeshStandardMaterial({color:0xff5a50, emissive:0x8f140f, emissiveIntensity:2.4, roughness:0.12, metalness:0.08}),
+  };
+
+  const robot = new THREE.Group();
+  scene.add(robot);
+  robot.position.y = -1.55;
+
+  function sphere(r, m){ return new THREE.Mesh(new THREE.SphereGeometry(r, 30, 22), m); }
+  function box(w,h,d,m){ return new THREE.Mesh(new THREE.BoxGeometry(w,h,d), m); }
+  function cyl(r1,r2,h,m,s=28){ return new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,s), m); }
+  function torus(R,r,m,a=Math.PI*2){ return new THREE.Mesh(new THREE.TorusGeometry(R,r,18,42,a), m); }
+  function capsule(rad,len,m){
+    const g = new THREE.Group();
+    const c = cyl(rad, rad, len, m, 26);
+    const s1 = sphere(rad, m), s2 = sphere(rad, m);
+    s1.position.y = len/2; s2.position.y = -len/2;
+    g.add(c,s1,s2); return g;
+  }
+
+  const torso = new THREE.Group();
+  robot.add(torso);
+  torso.position.y = 0;
+
+  const chestMain = box(2.45, 1.75, 1.10, mats.white);
+  chestMain.position.set(0, 0.55, 0);
+  chestMain.scale.set(1,1,0.88);
+  torso.add(chestMain);
+
+  const lowerArc = cyl(0.98, 0.78, 0.52, mats.gray, 34);
+  lowerArc.rotation.z = Math.PI/2;
+  lowerArc.position.set(0, -0.15, 0.42);
+  lowerArc.scale.z = 0.48;
+  torso.add(lowerArc);
+
+  const waist = box(1.34, 0.56, 0.74, mats.gray);
+  waist.position.set(0, -0.35, 0.02);
+  torso.add(waist);
+
+  const pelvisLip = box(1.04,0.14,0.68,mats.dark);
+  pelvisLip.position.set(0,-0.62,0.06);
+  torso.add(pelvisLip);
+
+  const cowl = torus(1.22, 0.34, mats.dark, Math.PI*1.90);
+  cowl.rotation.x = Math.PI/2;
+  cowl.position.set(0, 1.54, 0.04);
+  torso.add(cowl);
+
+  const cowlDrop = cyl(1.00, 1.22, 0.84, mats.dark, 34);
+  cowlDrop.position.set(0, 1.08, 0.02);
+  torso.add(cowlDrop);
+
+  const drape = box(1.74, 0.78, 0.26, mats.dark);
+  drape.position.set(0.18, 0.94, 0.48);
+  drape.rotation.z = -0.28;
+  drape.rotation.y = -0.18;
+  torso.add(drape);
+
+  const shoulderL = new THREE.Group();
+  shoulderL.position.set(-1.42, 1.02, 0.02);
+  torso.add(shoulderL);
+  const shoulderR = shoulderL.clone(); shoulderR.position.x = 1.42; torso.add(shoulderR);
+
+  function buildShoulder(root, side){
+    const s = side;
+    const cap = sphere(0.48, mats.white);
+    cap.scale.set(1.14, 0.92, 1.08);
+    root.add(cap);
+    const armBase = capsule(0.34, 0.72, mats.white);
+    armBase.position.set(0.18*s, -0.68, 0.02);
+    armBase.rotation.z = 0.16*s;
+    root.add(armBase);
+    const under = box(0.34, 0.44, 0.32, mats.dark);
+    under.position.set(0.14*s,-0.54,-0.10);
+    root.add(under);
+  }
+  buildShoulder(shoulderL, -1);
+  buildShoulder(shoulderR, 1);
+
+  const neck = new THREE.Group();
+  neck.position.set(0, 2.12, 0);
+  torso.add(neck);
+  const neckCore = cyl(0.18, 0.21, 0.40, mats.gray, 24);
+  neck.add(neckCore);
+
+  const head = new THREE.Group();
+  head.position.y = 0.55;
+  neck.add(head);
+
+  const skull = sphere(0.54, mats.white);
+  skull.scale.set(0.82, 1.06, 0.88);
+  head.add(skull);
+
+  const helmetTop = box(0.76, 0.26, 0.76, mats.white);
+  helmetTop.position.set(0, 0.42, -0.02);
+  head.add(helmetTop);
+
+  const foreheadSlot = box(0.18, 0.06, 0.12, mats.dark);
+  foreheadSlot.position.set(0, 0.48, 0.40);
+  head.add(foreheadSlot);
+
+  const faceMask = box(0.64, 0.94, 0.18, mats.white);
+  faceMask.position.set(0, -0.02, 0.34);
+  head.add(faceMask);
+
+  const noseBridge = box(0.13, 0.38, 0.08, mats.dark);
+  noseBridge.position.set(0, -0.02, 0.45);
+  head.add(noseBridge);
+
+  const eyeSocketL = box(0.19, 0.14, 0.08, mats.dark);
+  eyeSocketL.position.set(-0.18, 0.10, 0.43);
+  eyeSocketL.rotation.z = -0.16;
+  head.add(eyeSocketL);
+  const eyeSocketR = eyeSocketL.clone(); eyeSocketR.position.x = 0.18; eyeSocketR.rotation.z = 0.16; head.add(eyeSocketR);
+
+  const eyeL = sphere(0.08, mats.red); eyeL.position.set(-0.18, 0.10, 0.48); eyeL.scale.z = 0.65; head.add(eyeL);
+  const eyeR = eyeL.clone(); eyeR.position.x = 0.18; head.add(eyeR);
+
+  const cheekL = box(0.16, 0.52, 0.24, mats.dark);
+  cheekL.position.set(-0.24,-0.05,0.22); cheekL.rotation.z = -0.16; head.add(cheekL);
+  const cheekR = cheekL.clone(); cheekR.position.x=0.24; cheekR.rotation.z = 0.16; head.add(cheekR);
+
+  const jawBar = box(0.44, 0.14, 0.10, mats.dark);
+  jawBar.position.set(0, -0.34, 0.46);
+  head.add(jawBar);
+
+  const chinFrame = box(0.20,0.18,0.08,mats.dark);
+  chinFrame.position.set(0,-0.22,0.44); head.add(chinFrame);
+
+  let targetY = 0, currentY = 0;
+  let targetX = 0, currentX = 0;
+  let dragging = false, startX = 0, startY = 0, baseY = 0, baseX = 0;
+  let nodUntil = 0;
+
+  function setState(t){ state.textContent = t; }
+  function onDown(x,y){ dragging = true; startX=x; startY=y; baseY=targetY; baseX=targetX; setState('Rotating'); }
+  function onMove(x,y){
+    if(dragging){
+      targetY = THREE.MathUtils.clamp(baseY + (x-startX)*0.008, -0.85, 0.85);
+      targetX = THREE.MathUtils.clamp(baseX + (y-startY)*0.004, -0.20, 0.24);
+    }
+  }
+  function onUp(){ dragging = false; setState('Drag / touch to rotate · tap to nod'); }
+  function nod(){ nodUntil = performance.now() + 1200; setState('Nod'); setTimeout(() => { if(!dragging) setState('Drag / touch to rotate · tap to nod'); }, 1250); }
+
+  renderer.domElement.addEventListener('pointerdown', e => onDown(e.clientX, e.clientY));
+  window.addEventListener('pointermove', e => onMove(e.clientX, e.clientY));
+  window.addEventListener('pointerup', onUp);
+  renderer.domElement.addEventListener('click', nod);
+  renderer.domElement.addEventListener('touchstart', e => { const t=e.touches[0]; if(!t) return; onDown(t.clientX,t.clientY); }, {passive:true});
+  renderer.domElement.addEventListener('touchmove', e => { const t=e.touches[0]; if(!t) return; onMove(t.clientX,t.clientY); }, {passive:true});
+  renderer.domElement.addEventListener('touchend', onUp);
+
+  const clock = new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+    const now = performance.now();
+    currentY += (targetY - currentY) * 0.08;
+    currentX += (targetX - currentX) * 0.08;
+    robot.rotation.y = currentY;
+    robot.rotation.x = currentX*0.35;
+    robot.position.y = -1.55 + Math.sin(t*1.4)*0.05;
+    head.rotation.y = Math.sin(t*0.5)*0.04;
+    head.rotation.z = Math.sin(t*0.6)*0.01;
+    if(now < nodUntil){
+      const p = 1 - ((nodUntil - now)/1200);
+      head.rotation.x = Math.sin(p*Math.PI)*0.22;
+    } else {
+      head.rotation.x = Math.sin(t*0.7)*0.018;
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+})();
+</script>
+</body>
+</html>
