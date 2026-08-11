@@ -1,29 +1,51 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Kaizen Robot — Reference Rebuild</title><style>*{box-sizing:border-box}html,body{height:100%;margin:0;overflow:hidden}body{background:radial-gradient(circle at 50% 18%,#fff 0,#f2f4f7 34%,#dce2e8 76%,#cfd6dd 100%);touch-action:none}#app{position:fixed;inset:0}canvas{display:block;width:100%;height:100%}.tip{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:9px 14px;border-radius:999px;background:#ffffffc9;border:1px solid #0000000b;color:#66717b;font:700 10px system-ui;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;pointer-events:none;backdrop-filter:blur(10px)}</style></head><body><div id="app"></div><div class="tip">Drag / touch to rotate · tap to look</div><script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script><script>(()=>{const R=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});R.setPixelRatio(Math.min(devicePixelRatio||1,1.7));R.setSize(innerWidth,innerHeight);R.outputEncoding=THREE.sRGBEncoding;document.getElementById('app').appendChild(R.domElement);const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(28,innerWidth/innerHeight,.1,100);C.position.set(0,1.0,8.7);S.add(new THREE.HemisphereLight(0xffffff,0xb8c1ca,2.6));let k=new THREE.DirectionalLight(0xffffff,2.5);k.position.set(4,7,6);S.add(k);let f=new THREE.PointLight(0xffffff,8,20);f.position.set(-3,2.5,5);S.add(f);let rim=new THREE.PointLight(0xdbe6f0,9,20);rim.position.set(0,3,-5);S.add(rim);const W=new THREE.MeshPhysicalMaterial({color:0xf5f6f7,metalness:.18,roughness:.27,clearcoat:.42,clearcoatRoughness:.3}),B=new THREE.MeshPhysicalMaterial({color:0x11151a,metalness:.16,roughness:.46,clearcoat:.18}),M=new THREE.MeshStandardMaterial({color:0x252b31,metalness:.58,roughness:.3}),E=new THREE.MeshStandardMaterial({color:0xff3a32,emissive:0xb20c08,emissiveIntensity:3.0,metalness:.08,roughness:.14});const g=new THREE.Group();S.add(g);g.position.y=-1.2;function sp(r,m,sc=[1,1,1]){let x=new THREE.Mesh(new THREE.SphereGeometry(r,32,24),m);x.scale.set(...sc);return x}function bx(a,b,c,m){return new THREE.Mesh(new THREE.BoxGeometry(a,b,c,4,4,4),m)}function cy(a,b,h,m){return new THREE.Mesh(new THREE.CylinderGeometry(a,b,h,28),m)}function to(Rr,r,m){return new THREE.Mesh(new THREE.TorusGeometry(Rr,r,18,48),m)}function cp(r,l,m){let q=new THREE.Group(),c=cy(r,r,l,m),a=sp(r,m),b=sp(r,m);a.position.y=l/2;b.position.y=-l/2;q.add(c,a,b);return q}
-// inner mechanical torso
-let inner=sp(1.12,B,[1.15,1.35,.60]);inner.position.y=.35;g.add(inner);
-// white chest shell: soft curved silhouette
-let chest=sp(1.22,W,[1.48,.78,.56]);chest.position.set(0,.48,.05);g.add(chest);let chestLower=sp(.88,W,[1.10,.58,.46]);chestLower.position.set(0,-.43,.08);g.add(chestLower);let stern=bx(.42,.80,.18,W);stern.position.set(0,-.30,.58);g.add(stern);let lowerGap=sp(.52,B,[1.12,.33,.25]);lowerGap.position.set(0,-.88,.37);g.add(lowerGap);
-// panel lip across chest
-let lip=to(.83,.045,M);lip.rotation.x=Math.PI/2;lip.scale.set(1.28,.62,1);lip.position.set(0,-.15,.63);g.add(lip);
-// shoulders and upper arm shells
-for(const s of[-1,1]){let mech=sp(.38,B,[.95,1.05,.92]);mech.position.set(1.56*s,.55,0);g.add(mech);let sh=sp(.56,W,[.82,1.06,.88]);sh.position.set(1.65*s,.72,.03);sh.rotation.z=-.18*s;g.add(sh);let seam=to(.34,.032,M);seam.rotation.y=Math.PI/2;seam.position.set(1.73*s,.72,.16);g.add(seam);let arm=cp(.30,.82,W);arm.position.set(1.63*s,-.16,.02);arm.rotation.z=.10*s;g.add(arm);let joint=sp(.21,B);joint.position.set(1.65*s,-.67,.02);g.add(joint)}
-// layered cowl: three asymmetrical soft rings
-let c1=to(1.30,.34,B);c1.rotation.x=Math.PI/2;c1.scale.set(1.05,.72,1);c1.position.set(0,1.49,.06);g.add(c1);let c2=to(1.16,.27,B);c2.rotation.x=Math.PI/2;c2.rotation.z=-.05;c2.scale.set(1.08,.70,1);c2.position.set(-.02,1.32,.16);g.add(c2);let c3=to(1.03,.20,B);c3.rotation.x=Math.PI/2;c3.rotation.z=.07;c3.scale.set(1.10,.68,1);c3.position.set(.03,1.18,.26);g.add(c3);
-// diagonal drape as curved ribbon built from strips
-const verts=[],inds=[],nx=11,ny=5;for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){let u=x/(nx-1),v=y/(ny-1),X=-1.48+u*2.96,Y=1.24-u*.78+(v-.5)*.56+Math.sin(u*Math.PI)*.10,Z=.50+Math.sin(u*Math.PI)*.22-(v-.5)*.08;verts.push(X,Y,Z)}for(let y=0;y<ny-1;y++)for(let x=0;x<nx-1;x++){let a=y*nx+x,b=a+1,c=a+nx,d=c+1;inds.push(a,c,b,b,c,d)}let geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));geo.setIndex(inds);geo.computeVertexNormals();let dr=new THREE.Mesh(geo,B);g.add(dr);
-// neck mechanics
-let neck=cy(.23,.27,.42,M);neck.position.y=2.02;g.add(neck);let ring=to(.30,.045,M);ring.rotation.x=Math.PI/2;ring.position.y=2.08;g.add(ring);
-// head group
-const H=new THREE.Group();H.position.set(0,2.52,.02);g.add(H);let skull=sp(.61,W,[.80,1.02,.84]);H.add(skull);let rear=sp(.53,W,[.86,.92,.88]);rear.position.z=-.18;H.add(rear);let top=bx(.62,.20,.58,W);top.position.set(0,.47,-.02);H.add(top);let slot=bx(.18,.055,.10,B);slot.position.set(0,.52,.42);H.add(slot);
-// black face substrate
-let faceBlack=sp(.49,B,[.78,.76,.55]);faceBlack.position.set(0,-.02,.28);H.add(faceBlack);
-// forehead / nose / muzzle white plates
-let forehead=bx(.48,.34,.12,W);forehead.position.set(0,.23,.50);H.add(forehead);let nose=bx(.30,.36,.13,W);nose.position.set(0,-.03,.54);H.add(nose);let muzzle=bx(.50,.24,.15,W);muzzle.position.set(0,-.29,.50);H.add(muzzle);let chin=bx(.34,.12,.14,B);chin.position.set(0,-.45,.42);H.add(chin);
-// cheek armor and recessed eye sockets
-for(const s of[-1,1]){let cheek=sp(.21,W,[.72,1.18,.45]);cheek.position.set(.34*s,-.09,.34);cheek.rotation.z=.28*s;H.add(cheek);let sock=sp(.18,B,[1.18,.74,.38]);sock.position.set(.21*s,.10,.50);H.add(sock);let eye=sp(.072,E,[1,.72,.48]);eye.position.set(.21*s,.10,.61);H.add(eye);let temple=sp(.20,W,[.42,1.05,.66]);temple.position.set(.45*s,.02,.10);H.add(temple);let ear=cy(.17,.17,.10,M);ear.rotation.z=Math.PI/2;ear.position.set(.52*s,.01,.02);H.add(ear)}
-// small helmet seams / details
-for(const s of[-1,1]){let brow=bx(.22,.045,.05,M);brow.position.set(.20*s,.22,.60);brow.rotation.z=.10*s;H.add(brow);let jaw=bx(.12,.30,.10,M);jaw.position.set(.26*s,-.27,.48);jaw.rotation.z=.18*s;H.add(jaw)}
-// floor shadow
-let shad=new THREE.Mesh(new THREE.CircleGeometry(2.15,48),new THREE.MeshBasicMaterial({color:0x1c252e,transparent:true,opacity:.10}));shad.rotation.x=-Math.PI/2;shad.position.y=-1.55;S.add(shad);
-// interaction
-let ty=0,tx=0,cyy=0,cxx=0,drag=0,sx=0,sy=0,by=0,bx0=0,moved=0,look=0;function down(x,y){drag=1;moved=0;sx=x;sy=y;by=ty;bx0=tx}function move(x,y){if(!drag)return;let dx=x-sx,dy=y-sy;if(Math.abs(dx)+Math.abs(dy)>6)moved=1;ty=THREE.MathUtils.clamp(by+dx*.008,-1.0,1.0);tx=THREE.MathUtils.clamp(bx0+dy*.0035,-.18,.20)}function up(){if(!drag)return;drag=0;if(!moved)look=performance.now()+1100}R.domElement.addEventListener('pointerdown',e=>down(e.clientX,e.clientY));window.addEventListener('pointermove',e=>move(e.clientX,e.clientY));window.addEventListener('pointerup',up);R.domElement.addEventListener('touchstart',e=>{let t=e.touches[0];if(t)down(t.clientX,t.clientY)},{passive:true});R.domElement.addEventListener('touchmove',e=>{let t=e.touches[0];if(t)move(t.clientX,t.clientY)},{passive:true});R.domElement.addEventListener('touchend',up);let clk=new THREE.Clock();function loop(){requestAnimationFrame(loop);let t=clk.getElapsedTime(),n=performance.now();cyy+=(ty-cyy)*.075;cxx+=(tx-cxx)*.075;g.rotation.y=cyy;g.rotation.x=cxx*.35;g.position.y=-1.2+Math.sin(t*1.2)*.025;H.rotation.y=Math.sin(t*.48)*.035;H.rotation.x=Math.sin(t*.62)*.012;if(n<look){let p=1-(look-n)/1100;H.rotation.y+=Math.sin(p*Math.PI)*.28;H.rotation.x+=Math.sin(p*Math.PI)*.08}R.render(S,C)}loop();addEventListener('resize',()=>{C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();R.setSize(innerWidth,innerHeight)})})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Kaizen Robot — Final 3D Web</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{height:100%;margin:0;overflow:hidden}body{background:radial-gradient(circle at 50% 18%,#fff 0,#f2f5f7 38%,#dde4ea 78%,#d0d8e0 100%);touch-action:none;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}#app{position:fixed;inset:0}canvas{display:block;width:100%;height:100%}.status{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:9px 13px;border:1px solid rgba(0,0,0,.05);border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);color:#687580;font-size:10px;font-weight:750;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;pointer-events:none;transition:opacity .35s}.status.hide{opacity:0}.error{color:#9b1d1d}.top{position:fixed;left:18px;right:18px;top:max(14px,env(safe-area-inset-top));display:flex;justify-content:space-between;align-items:center;pointer-events:none}.chip{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.68);border:1px solid rgba(0,0,0,.05);backdrop-filter:blur(10px);color:#73808b;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.rings span{position:fixed;left:50%;top:56%;transform:translate(-50%,-50%);border:1px solid rgba(96,108,120,.10);border-radius:50%;pointer-events:none}.rings span:nth-child(1){width:min(58vmin,620px);height:min(58vmin,620px)}.rings span:nth-child(2){width:min(76vmin,840px);height:min(76vmin,840px);opacity:.72}.rings span:nth-child(3){width:min(94vmin,1040px);height:min(94vmin,1040px);opacity:.44}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="rings"><span></span><span></span><span></span></div>
+<div class="top"><div class="chip">Kaizen Robot 3D</div><div class="chip">Drag · Pinch · Tap</div></div>
+<div class="status" id="status">Loading 3D model…</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+(()=>{
+const status=document.getElementById('status');
+if(!window.THREE||!THREE.GLTFLoader){status.textContent='3D engine load error';status.classList.add('error');return}
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.8)); renderer.setSize(innerWidth,innerHeight); renderer.outputEncoding=THREE.sRGBEncoding; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.16; document.getElementById('app').appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(30,innerWidth/innerHeight,.1,100); camera.position.set(0,.25,7.6);
+scene.add(new THREE.HemisphereLight(0xffffff,0xd5dce3,2.4));
+const key=new THREE.DirectionalLight(0xffffff,2.9); key.position.set(4,7,6); scene.add(key);
+const fill=new THREE.PointLight(0xffffff,5.8,20); fill.position.set(-3,2.8,5); scene.add(fill);
+const rim=new THREE.PointLight(0xd7e4ef,5.0,18); rim.position.set(1,3,-4); scene.add(rim);
+const pivot=new THREE.Group(); scene.add(pivot);
+let model=null,targetY=0,targetX=0,currentY=0,currentX=0,drag=false,sx=0,sy=0,by=0,bx=0,moved=false,nodUntil=0,cameraZ=7.6;
+const pointers=new Map(); let pinchDist=0,pinchZ=7.6;
+new THREE.GLTFLoader().load('robot.glb',g=>{
+  model=g.scene;
+  const box=new THREE.Box3().setFromObject(model), size=box.getSize(new THREE.Vector3()), center=box.getCenter(new THREE.Vector3());
+  model.position.sub(center);
+  const s=5.05/Math.max(size.y,1e-6); model.scale.setScalar(s);
+  model.traverse(o=>{ if(o.isMesh){ o.frustumCulled=false; if(o.material){ o.material.side=THREE.DoubleSide; if('roughness' in o.material) o.material.roughness=Math.max(.48,o.material.roughness||0); if('metalness' in o.material) o.material.metalness=Math.min(.14,o.material.metalness||0); } } });
+  pivot.add(model); status.textContent='Drag to rotate · pinch to zoom · tap to nod'; setTimeout(()=>status.classList.add('hide'),2400);
+},undefined,e=>{console.error(e);status.textContent='GLB load error';status.classList.add('error')});
+function pointDown(e){renderer.domElement.setPointerCapture?.(e.pointerId); pointers.set(e.pointerId,{x:e.clientX,y:e.clientY}); if(pointers.size===1){drag=true;moved=false;sx=e.clientX;sy=e.clientY;by=targetY;bx=targetX;} else if(pointers.size===2){const a=[...pointers.values()]; pinchDist=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y); pinchZ=cameraZ;}}
+function pointMove(e){ if(!pointers.has(e.pointerId)) return; pointers.set(e.pointerId,{x:e.clientX,y:e.clientY}); if(pointers.size===2){const a=[...pointers.values()],d=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y); if(pinchDist>5){cameraZ=THREE.MathUtils.clamp(pinchZ*pinchDist/d,5.8,9.6); moved=true;} return;} if(!drag) return; const dx=e.clientX-sx, dy=e.clientY-sy; if(Math.abs(dx)+Math.abs(dy)>5)moved=true; targetY=THREE.MathUtils.clamp(by+dx*.0062,-.55,.55); targetX=THREE.MathUtils.clamp(bx+dy*.0028,-.16,.18); }
+function pointUp(e){ pointers.delete(e.pointerId); if(pointers.size===0){ if(drag&&!moved) nodUntil=performance.now()+900; drag=false; } else if(pointers.size===1){ const a=[...pointers.values()][0]; sx=a.x; sy=a.y; by=targetY; bx=targetX; } }
+renderer.domElement.addEventListener('pointerdown',pointDown); renderer.domElement.addEventListener('pointermove',pointMove); renderer.domElement.addEventListener('pointerup',pointUp); renderer.domElement.addEventListener('pointercancel',pointUp);
+renderer.domElement.addEventListener('wheel',e=>{e.preventDefault(); cameraZ=THREE.MathUtils.clamp(cameraZ+e.deltaY*.004,5.8,9.6)},{passive:false});
+const clock=new THREE.Clock(); function loop(){requestAnimationFrame(loop); const t=clock.getElapsedTime(), now=performance.now(); currentY+=(targetY-currentY)*.09; currentX+=(targetX-currentX)*.09; pivot.rotation.y=currentY+(!drag?Math.sin(t*.45)*.010:0); pivot.rotation.x=currentX+(!drag?Math.sin(t*.62)*.004:0); pivot.position.y=Math.sin(t*1.1)*.02; if(now<nodUntil){const p=1-(nodUntil-now)/900; pivot.rotation.x+=Math.sin(p*Math.PI)*.08;} camera.position.z+=(cameraZ-camera.position.z)*.12; renderer.render(scene,camera);} loop();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight)});
+})();
+</script>
+</body>
+</html>
