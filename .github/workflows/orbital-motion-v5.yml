@@ -1,0 +1,82 @@
+name: Orbital Shrine Motion V5
+
+on:
+  push:
+    paths:
+      - '.github/workflows/orbital-motion-v5.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject motion system
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('orbital-shrine/index.html')
+          s = p.read_text()
+          if 'ORBITAL_MOTION_V5' in s:
+              raise SystemExit('already injected')
+          css = r'''
+          /* ORBITAL_MOTION_V5 */
+          body{min-height:520vh!important}
+          .art{transition:none!important;transform:translate3d(calc(var(--mx)*22px),calc(var(--my)*14px - var(--p)*42px),0) scale(calc(1.06 + var(--p)*.13))!important;filter:saturate(calc(.9 + var(--p)*.18)) contrast(1.06) brightness(calc(.91 + var(--p)*.05))!important}
+          .hero{will-change:transform,opacity,filter;transform:translate3d(calc(var(--mx)*-10px - var(--p)*75px),calc(var(--my)*-6px - var(--p)*54px),0) scale(calc(1 - var(--p)*.06));opacity:calc(1 - var(--p)*.78);filter:blur(calc(var(--p)*1.4px))}
+          .chapter{will-change:transform,opacity;transform:translate3d(calc(var(--mx)*-5px - var(--p)*55px),calc(var(--my)*-3px + var(--p)*24px),0);opacity:calc(1 - var(--p)*.42)}
+          .nav{transition:background .4s ease,backdrop-filter .4s ease;background:rgba(7,9,12,calc(var(--p)*.55));backdrop-filter:blur(calc(var(--p)*16px))}
+          .orbitMotion,.orbitMotion:before,.orbitMotion:after{position:absolute;border:1px solid rgba(213,174,105,.42);border-radius:50%;pointer-events:none;box-shadow:0 0 28px rgba(190,145,70,.08)}
+          .orbitMotion{z-index:6;left:67.5%;top:43%;width:min(48vw,720px);aspect-ratio:1;transform:translate(-50%,-50%) rotateX(73deg) rotateZ(calc(var(--p)*210deg));animation:orbV5a 20s linear infinite}
+          .orbitMotion:before{content:"";inset:13%;animation:orbV5b 13s linear infinite reverse}.orbitMotion:after{content:"";inset:29%;border-color:rgba(233,203,145,.28);animation:orbV5b 9s linear infinite}
+          @keyframes orbV5a{to{rotate:360deg}}@keyframes orbV5b{to{transform:rotate(360deg)}}
+          .beamMotion{position:absolute;z-index:6;left:67.3%;top:4%;width:2px;height:72%;pointer-events:none;background:linear-gradient(180deg,transparent 0%,rgba(255,236,195,.15) 8%,#f8e5bd 28%,#fff 49%,#c99a54 72%,transparent 100%);box-shadow:0 0 12px #fff,0 0 35px rgba(217,166,82,.7),0 0 80px rgba(190,139,58,.22);animation:beamV5 2.8s ease-in-out infinite}
+          @keyframes beamV5{0%,100%{opacity:.48;filter:brightness(.85)}50%{opacity:1;filter:brightness(1.55)}}
+          .haloMotion{position:absolute;z-index:5;left:67.3%;top:49%;width:110px;height:110px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,245,218,.35) 0,rgba(210,164,84,.18) 18%,transparent 63%);box-shadow:0 0 55px rgba(211,162,78,.22);animation:haloV5 3.4s ease-in-out infinite;pointer-events:none}@keyframes haloV5{50%{transform:translate(-50%,-50%) scale(1.22);opacity:.72}}
+          .skyMotion{position:absolute;z-index:4;inset:-20%;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(ellipse at 70% 25%,rgba(111,139,166,.11),transparent 32%),radial-gradient(ellipse at 60% 12%,rgba(195,153,87,.08),transparent 35%);transform:translate3d(calc(var(--mx)*-18px),calc(var(--my)*-11px - var(--p)*22px),0);animation:skyV5 9s ease-in-out infinite alternate}@keyframes skyV5{to{opacity:.55;filter:hue-rotate(8deg)}}
+          #motionFx{position:absolute;z-index:7;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen}
+          .motionLabel{position:absolute;z-index:19;right:7vw;top:13vh;font:700 8px/1.6 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:rgba(229,211,178,.42);text-align:right;pointer-events:none}.motionLabel b{display:block;color:#c99d5a;font-size:9px;margin-bottom:5px}
+          @media(max-width:900px){body{min-height:430vh!important}.art{transform:translate3d(calc(var(--mx)*8px),calc(var(--my)*6px - var(--p)*24px),0) scale(calc(1.1 + var(--p)*.08))!important}.hero{transform:translate3d(0,calc(var(--p)*-34px),0);opacity:calc(1 - var(--p)*.58)}.chapter{transform:translate3d(0,calc(var(--p)*12px),0);opacity:calc(1 - var(--p)*.25)}.orbitMotion{left:68%;top:40%;width:78vw}.beamMotion{left:68%;top:6%;height:65%}.haloMotion{left:68%;top:45%;width:80px;height:80px}.motionLabel{display:none}}
+          '''
+          html = r'''
+          <div class="skyMotion" aria-hidden="true"></div>
+          <div class="orbitMotion" aria-hidden="true"></div>
+          <div class="beamMotion" aria-hidden="true"></div>
+          <div class="haloMotion" aria-hidden="true"></div>
+          <canvas id="motionFx" aria-hidden="true"></canvas>
+          <div class="motionLabel"><b>LIVE ORBIT</b>SCROLL / POINTER REACTIVE</div>
+          '''
+          js = r'''
+          <script id="ORBITAL_MOTION_V5">
+          (()=>{
+            const root=document.documentElement, c=document.getElementById('motionFx'), ctx=c.getContext('2d');
+            let W=0,H=0,dpr=1,parts=[],rocks=[],sx=0,sy=0,tx=0,ty=0,sp=0,tp=0,lastChapter=-1;
+            const chapterData=[
+              ['CHAPTER I','The Ascent','The path begins. Ascend through forgotten architecture and align with the eternal axis.'],
+              ['CHAPTER II','The Keepers','Those who maintain the orbit listen for changes in the celestial field.'],
+              ['CHAPTER III','The Ritual','The rings converge. Energy becomes ceremony and the beacon opens to the stars.'],
+              ['CHAPTER IV','The Legacy','A monument designed to outlive its builders, waiting for the next intelligence to arrive.']
+            ];
+            function resize(){W=innerWidth;H=innerHeight;dpr=Math.min(devicePixelRatio||1,1.6);c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);parts=Array.from({length:W<800?80:180},()=>({x:Math.random()*W,y:Math.random()*H,z:.2+Math.random()*.8,r:.35+Math.random()*1.8,v:.08+Math.random()*.42,a:.12+Math.random()*.55}));rocks=Array.from({length:W<800?5:11},()=>({x:Math.random()*W,y:Math.random()*H*.78,z:.35+Math.random()*.65,r:1.2+Math.random()*3.8,v:.08+Math.random()*.22,a:.13+Math.random()*.22}))}
+            addEventListener('resize',resize);resize();
+            addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2},{passive:true});
+            function scroll(){const m=document.documentElement.scrollHeight-innerHeight;tp=m?scrollY/m:0}addEventListener('scroll',scroll,{passive:true});scroll();
+            function updateChapter(){const ci=Math.min(3,Math.floor(sp*4));if(ci===lastChapter)return;lastChapter=ci;document.querySelectorAll('.idx').forEach((x,i)=>x.classList.toggle('active',i===ci));const e=document.querySelector('.chapterEyebrow'),h=document.querySelector('.chapter h3'),p=document.querySelector('.chapter p');if(e)e.textContent=chapterData[ci][0];if(h)h.textContent=chapterData[ci][1];if(p)p.textContent=chapterData[ci][2];const card=document.querySelector('.chapter');if(card)card.animate([{opacity:.2,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)'})}
+            function draw(){sx+=(tx-sx)*.04;sy+=(ty-sy)*.04;sp+=(tp-sp)*.05;root.style.setProperty('--mx',sx.toFixed(3));root.style.setProperty('--my',sy.toFixed(3));root.style.setProperty('--p',sp.toFixed(4));updateChapter();ctx.clearRect(0,0,W,H);for(const p of parts){p.x-=p.v*(1+sp*4);p.y+=Math.sin((p.x+p.y)*.008)*.035;if(p.x<-8){p.x=W+8;p.y=Math.random()*H}ctx.beginPath();ctx.fillStyle=`rgba(237,214,171,${p.a})`;ctx.arc(p.x+sx*14*p.z,p.y+sy*9*p.z,p.r*p.z,0,Math.PI*2);ctx.fill()}for(const r of rocks){r.x-=r.v*(1+sp*5);r.y+=.025;if(r.x<-12){r.x=W+20;r.y=Math.random()*H*.75}ctx.beginPath();ctx.fillStyle=`rgba(178,156,124,${r.a})`;ctx.ellipse(r.x+sx*24*r.z,r.y+sy*16*r.z,r.r*r.z,r.r*.55*r.z,sp*3,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)}draw();
+            document.querySelector('.enter')?.addEventListener('click',()=>document.querySelector('.haloMotion')?.animate([{transform:'translate(-50%,-50%) scale(1)'},{transform:'translate(-50%,-50%) scale(2.2)',opacity:0}],{duration:900,easing:'ease-out'}));
+          })();
+          </script>
+          '''
+          s = s.replace('</style>', css + '\n</style>', 1)
+          s = s.replace('<div class="noise"></div>', '<div class="noise"></div>' + html, 1)
+          s = s.replace('</body>', js + '\n</body>', 1)
+          p.write_text(s)
+      - name: Commit upgraded motion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add orbital-shrine/index.html
+          git commit -m "Upgrade Orbital Shrine to reactive 2.5D motion" || exit 0
+          git push
