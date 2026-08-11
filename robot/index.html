@@ -3,110 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#d4d7dc">
-<title>KAIZEN — Interactive Study</title>
+<meta name="theme-color" content="#b6bac1">
+<title>KAIZEN — Frame Sequence</title>
 <style>
-:root{--bg:#d5d8dd;--ink:#0d1116;--mx:50%;--my:42%}
+:root{--ink:#101419;--bg:#b4b8c0}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{background:var(--bg)}
-body{margin:0;min-height:520vh;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;overflow-x:hidden;overscroll-behavior-y:none}
-.stage{position:fixed;inset:0;overflow:hidden;touch-action:pan-y;cursor:grab;background:radial-gradient(circle at var(--mx) var(--my),#d8dbe0 0,#b9bdc4 32%,#9ca1aa 72%,#858b95 125%)}
+body{margin:0;min-height:460vh;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;overflow-x:hidden;overscroll-behavior-y:none}
+.stage{position:fixed;inset:0;overflow:hidden;touch-action:pan-y;cursor:grab;background:radial-gradient(ellipse at 50% 43%,#d8dbe0 0%,#b9bdc4 40%,#969ba4 100%)}
 .stage.dragging{cursor:grabbing}
-.stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 48%,transparent 38%,rgba(20,25,31,.08) 76%,rgba(10,14,19,.18) 120%)}
-.floor{position:absolute;left:50%;bottom:2.5vh;width:min(76vw,740px);height:8vh;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(26,30,35,.27) 0%,rgba(26,30,35,.11) 45%,transparent 74%);filter:blur(14px);opacity:.72;will-change:transform,opacity}
-.scene{position:absolute;left:50%;top:50%;width:max(100vw,75vh);height:calc(max(100vw,75vh)*1.333333);transform:translate3d(-50%,-50%,0);perspective:850px;transform-style:preserve-3d;will-change:transform}
-.robot{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;transition:filter .18s linear}
-.robot img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;-webkit-user-drag:none;user-select:none;will-change:transform,filter}
-.base{filter:drop-shadow(0 28px 32px rgba(16,20,24,.20)) saturate(1.03) contrast(1.025)}
-.eyeGlow{position:absolute;z-index:4;left:50%;top:10.55%;width:7.4%;height:2.2%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,30,27,.92),rgba(255,25,22,.42) 34%,transparent 72%);filter:blur(6px);mix-blend-mode:screen;opacity:.34;pointer-events:none;transition:opacity .25s ease,filter .25s ease}
-.stage.greet .eyeGlow{animation:eyePulse .9s ease}
-.stage.greet .robot{animation:greet .9s cubic-bezier(.2,.7,.2,1)}
-@keyframes greet{0%{transform:rotateZ(0) translateY(0)}22%{transform:rotateZ(-2.4deg) translateY(-1.3%)}48%{transform:rotateZ(2deg) translateY(-.5%)}72%{transform:rotateZ(-1deg) translateY(-.8%)}100%{transform:rotateZ(0) translateY(0)}}
-@keyframes eyePulse{0%,100%{opacity:.34;filter:blur(6px)}35%{opacity:1;filter:blur(9px)}62%{opacity:.56;filter:blur(5px)}}
-.hud{position:fixed;z-index:20;left:max(18px,env(safe-area-inset-left));top:max(18px,env(safe-area-inset-top));font-size:10px;line-height:1;font-weight:780;letter-spacing:.18em;text-transform:uppercase;color:rgba(13,17,22,.78);pointer-events:none}
-.hud span{display:block;margin-top:7px;font-size:8px;font-weight:650;letter-spacing:.12em;color:rgba(13,17,22,.43)}
-.mode{position:fixed;z-index:20;right:max(15px,env(safe-area-inset-right));top:max(17px,env(safe-area-inset-top));padding:8px 10px;border:1px solid rgba(13,17,22,.14);border-radius:999px;background:rgba(235,237,240,.34);backdrop-filter:blur(9px);font-size:8px;font-weight:760;letter-spacing:.13em;text-transform:uppercase;color:rgba(13,17,22,.58);pointer-events:none}
-.progress{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right));top:50%;display:flex;flex-direction:column;gap:9px;transform:translateY(-50%);pointer-events:none}
-.dot{width:4px;height:4px;border-radius:50%;background:rgba(13,17,22,.23);transition:transform .25s ease,background .25s ease}.dot.on{background:rgba(13,17,22,.84);transform:scale(1.7)}
-.hint{position:fixed;z-index:20;left:50%;bottom:max(17px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(225,228,232,.28);backdrop-filter:blur(8px);font-size:8px;font-weight:760;letter-spacing:.13em;text-transform:uppercase;color:rgba(13,17,22,.55);white-space:nowrap;transition:opacity .35s ease;pointer-events:none}
-.hint b{font-weight:840;color:rgba(13,17,22,.72)}
+.stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 48%,transparent 45%,rgba(16,21,27,.09) 82%,rgba(8,12,17,.16) 125%)}
+.scene{position:absolute;left:50%;top:50%;width:min(74vw,620px);aspect-ratio:320/427;transform:translate3d(-50%,-50%,0);will-change:transform}
+.fallback,.frame{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fallback{object-fit:cover;opacity:1;transition:opacity .18s ease;filter:drop-shadow(0 24px 28px rgba(18,22,28,.16))}
+.frame{z-index:2;background-repeat:no-repeat;background-size:400% 200%;background-position:0 0;opacity:0;filter:drop-shadow(0 24px 28px rgba(18,22,28,.16));will-change:background-position,transform;transform-origin:50% 50%}
+.frame.ready{opacity:1}.frame.ready+.fallback{opacity:0}
+.floor{position:absolute;left:50%;bottom:3vh;width:min(50vw,540px);height:7vh;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(22,27,33,.18),rgba(22,27,33,.07) 48%,transparent 76%);filter:blur(14px);opacity:.58;will-change:transform,opacity}
+.hud{position:fixed;z-index:20;left:max(18px,env(safe-area-inset-left));top:max(18px,env(safe-area-inset-top));font-size:10px;font-weight:790;line-height:1;letter-spacing:.18em;text-transform:uppercase;color:rgba(12,16,21,.78);pointer-events:none}
+.hud span{display:block;margin-top:7px;font-size:8px;font-weight:650;letter-spacing:.12em;color:rgba(12,16,21,.43)}
+.mode{position:fixed;z-index:20;right:max(15px,env(safe-area-inset-right));top:max(17px,env(safe-area-inset-top));padding:8px 10px;border:1px solid rgba(13,17,22,.13);border-radius:999px;background:rgba(236,238,241,.32);backdrop-filter:blur(9px);font-size:8px;font-weight:760;letter-spacing:.12em;text-transform:uppercase;color:rgba(13,17,22,.58);pointer-events:none}
+.progress{position:fixed;z-index:20;right:max(14px,env(safe-area-inset-right));top:50%;display:flex;flex-direction:column;gap:8px;transform:translateY(-50%);pointer-events:none}
+.dot{width:4px;height:4px;border-radius:50%;background:rgba(13,17,22,.22);transition:transform .2s,background .2s}.dot.on{background:rgba(13,17,22,.82);transform:scale(1.65)}
+.hint{position:fixed;z-index:20;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:9px 12px;border-radius:999px;background:rgba(232,234,237,.30);backdrop-filter:blur(8px);font-size:8px;font-weight:730;letter-spacing:.12em;text-transform:uppercase;color:rgba(13,17,22,.55);white-space:nowrap;pointer-events:none;transition:opacity .3s}
+.hint b{font-weight:850;color:rgba(13,17,22,.75)}
 section{height:100vh;pointer-events:none}
-@media(max-width:820px){body{min-height:500vh}.scene{top:50%}.floor{bottom:5vh;width:80vw}.hud{font-size:9px}.hud span{font-size:7px}.progress{right:11px}.mode{font-size:7px;padding:7px 9px}.hint{font-size:7px;bottom:max(14px,env(safe-area-inset-bottom));gap:6px}}
-@media(min-aspect-ratio:1/1){.scene{width:81vh;height:108vh}.floor{width:min(46vw,620px);bottom:1.5vh}}
-@media(prefers-reduced-motion:reduce){.robot,.scene,.eyeGlow{animation:none!important;transition:none!important}}
+@media(max-width:820px){body{min-height:440vh}.scene{width:min(96vw,72vh)}.floor{bottom:5vh;width:78vw}.hud{font-size:9px}.hud span{font-size:7px}.mode{font-size:7px;padding:7px 9px}.hint{bottom:max(14px,env(safe-area-inset-bottom));font-size:7px}}
+@media(min-aspect-ratio:1/1){.scene{width:min(54vw,58vh)}.floor{bottom:2vh;width:min(40vw,520px)}}
+@media(prefers-reduced-motion:reduce){.scene,.hint{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="stage" id="stage">
   <div class="floor" id="floor"></div>
   <div class="scene" id="scene">
-    <div class="robot" id="robot">
-      <img class="base" id="base" src="assets/clean_hero.jpg" alt="White humanoid KAIZEN robot with black cowl and red eyes" decoding="sync" fetchpriority="high">
-      <div class="eyeGlow"></div>
-    </div>
+    <div class="frame" id="frame" aria-label="KAIZEN robot interactive frame sequence"></div>
+    <img class="fallback" id="fallback" src="assets/clean_hero.jpg" alt="KAIZEN white humanoid robot with black cowl and red eyes" fetchpriority="high">
   </div>
 </div>
-<div class="hud">KAIZEN<span>INTERACTION TEST · V9</span></div>
-<div class="mode" id="mode">drag robot</div>
+<div class="hud">KAIZEN<span>FRAME SEQUENCE · V10</span></div>
+<div class="mode" id="mode">loading sequence</div>
 <div class="progress" aria-hidden="true"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
-<div class="hint" id="hint"><b>drag</b> rotate · <b>tap</b> greet · <b>scroll</b> camera</div>
+<div class="hint" id="hint"><b>drag</b> orbit · <b>tap</b> wave · <b>scroll</b> camera</div>
 <main aria-hidden="true"><section></section><section></section><section></section><section></section><section></section></main>
 <script>
 (()=>{
- const stage=document.getElementById('stage'),scene=document.getElementById('scene'),robot=document.getElementById('robot'),base=document.getElementById('base'),floor=document.getElementById('floor'),hint=document.getElementById('hint'),mode=document.getElementById('mode'),dots=[...document.querySelectorAll('.dot')];
- let px=0,py=0,drag=0,dragTarget=0,startX=null,startY=null,moved=false,raf=0,greetTimer=0;
+ const stage=document.getElementById('stage'),scene=document.getElementById('scene'),frame=document.getElementById('frame'),floor=document.getElementById('floor'),mode=document.getElementById('mode'),hint=document.getElementById('hint'),dots=[...document.querySelectorAll('.dot')];
+ let ready=false,active=false,waving=false,startX=0,startY=0,moved=false,dragFrame=0,mirror=false,raf=0,returnTimer=0;
  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
- const smooth=t=>t*t*(3-2*t);
- const seg=(p,a,b)=>smooth(clamp((p-a)/(b-a),0,1));
+ const positions=[[0,0],[100/3,0],[200/3,0],[100,0],[0,100],[100/3,100],[200/3,100],[100,100]];
+ function setFrame(n,flip=false){
+   n=clamp(Math.round(n),0,7); const [x,y]=positions[n];
+   frame.style.backgroundPosition=`${x}% ${y}%`;
+   frame.style.transform=flip?'scaleX(-1)':'scaleX(1)';
+ }
+ function scrollFrame(p){
+   if(p<.42)return Math.round((p/.42)*5);
+   if(p<.72)return Math.round(5-((p-.42)/.30)*3);
+   return Math.round(2-((p-.72)/.28)*2);
+ }
  function draw(){
    raf=0;
    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight),p=clamp(scrollY/max,0,1);
-   const a=seg(p,0,.20),b=seg(p,.16,.41),c=seg(p,.37,.63),d=seg(p,.59,.83),e=seg(p,.79,1);
-   drag+=(dragTarget-drag)*.13;
-   const autoYaw=(-8*a+15*b-19*c+17*d-5*e);
-   const yaw=clamp(autoYaw+px*7+drag,-27,27);
-   const pitch=clamp((-2*a+3*b-2*c+2*d-1*e)-py*3.5,-8,8);
-   const zoom=1+.10*a+.17*b+.23*c+.13*d-.07*e;
-   const lift=1+2*a+5*b+8*c+4*d+1*e;
-   const lateral=(-3*a+7*b-10*c+8*d-2*e)+px*2.8;
-   scene.style.transform=`translate3d(calc(-50% + ${lateral}vw),calc(-50% + ${lift}vh),0) scale(${zoom})`;
-   robot.style.transform=`rotateX(${pitch}deg) rotateY(${yaw}deg)`;
-   base.style.transform=`translate3d(${px*4}px,${py*2}px,${Math.abs(yaw)*.12}px) scaleX(${1-Math.abs(yaw)*.0022})`;
-   robot.style.filter=`brightness(${1.015-yaw*.002}) contrast(1.01)`;
-   floor.style.transform=`translateX(calc(-50% + ${lateral*.22}vw)) scaleX(${1-Math.abs(yaw)*.008}) scaleY(${1-.20*c})`;
-   floor.style.opacity=.73-.25*c+.10*d;
-   stage.style.setProperty('--mx',`${50+px*13}%`);stage.style.setProperty('--my',`${40+py*8}%`);
-   hint.style.opacity=p>.075?.55:1;
-   const idx=Math.min(4,Math.floor(p*5));dots.forEach((n,i)=>n.classList.toggle('on',i===idx));
+   if(ready&&!active&&!waving)setFrame(scrollFrame(p),false);
+   const zoom=1+.12*Math.sin(Math.min(1,p)*Math.PI*.92)+.08*Math.max(0,1-Math.abs(p-.50)*3.2);
+   const y=2+5*Math.sin(p*Math.PI)-2.2*p;
+   const x=3.8*Math.sin(p*Math.PI*2.1);
+   scene.style.transform=`translate3d(calc(-50% + ${x}vw),calc(-50% + ${y}vh),0) scale(${zoom})`;
+   floor.style.transform=`translateX(calc(-50% + ${x*.18}vw)) scale(${1-.12*Math.sin(p*Math.PI)})`;
+   hint.style.opacity=p>.06?.52:1;
+   const idx=Math.min(4,Math.floor(p*5)); dots.forEach((d,i)=>d.classList.toggle('on',i===idx));
  }
  function tick(){if(!raf)raf=requestAnimationFrame(draw)}
- function greet(){
-   clearTimeout(greetTimer);stage.classList.remove('greet');void stage.offsetWidth;stage.classList.add('greet');mode.textContent='greeting';
-   greetTimer=setTimeout(()=>{stage.classList.remove('greet');mode.textContent='drag robot'},950);
+ function returnFront(){
+   clearInterval(returnTimer);
+   let n=dragFrame;
+   returnTimer=setInterval(()=>{n--;if(n<=0){clearInterval(returnTimer);active=false;mirror=false;setFrame(0,false);mode.textContent='drag orbit';tick()}else setFrame(n,mirror)},55);
  }
- addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick,{passive:true});
- stage.addEventListener('pointerdown',ev=>{startX=ev.clientX;startY=ev.clientY;moved=false;stage.classList.add('dragging');stage.setPointerCapture?.(ev.pointerId)},{passive:true});
- stage.addEventListener('pointermove',ev=>{
-   px=clamp(ev.clientX/innerWidth*2-1,-1,1);py=clamp(ev.clientY/innerHeight*2-1,-1,1);
-   if(startX!==null){const dx=ev.clientX-startX,dy=ev.clientY-startY;if(Math.abs(dx)>5||Math.abs(dy)>5)moved=true;dragTarget=clamp(dx*.12,-18,18);mode.textContent=Math.abs(dx)>7?'rotating':'drag robot'}
-   tick();
+ function wave(){
+   if(!ready||waving)return; waving=true;active=false;mirror=false;clearInterval(returnTimer);mode.textContent='waving';
+   const seq=[0,6,7,6,7,6,0];let i=0;
+   const timer=setInterval(()=>{setFrame(seq[i++],false);if(i>=seq.length){clearInterval(timer);waving=false;mode.textContent='drag orbit';tick()}},115);
+ }
+ stage.addEventListener('pointerdown',e=>{
+   if(!ready||waving)return;active=true;startX=e.clientX;startY=e.clientY;moved=false;dragFrame=0;mirror=false;stage.classList.add('dragging');stage.setPointerCapture?.(e.pointerId);mode.textContent='dragging';
  },{passive:true});
- function end(ev){
-   stage.classList.remove('dragging');
-   if(startX!==null&&!moved)greet();
-   startX=startY=null;dragTarget*=.32;setTimeout(()=>{if(!stage.classList.contains('greet'))mode.textContent='drag robot'},250);tick();
+ stage.addEventListener('pointermove',e=>{
+   if(!active||waving)return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)>5||Math.abs(dy)>5)moved=true;
+   dragFrame=clamp(Math.round(Math.abs(dx)/(Math.max(34,innerWidth*.065))),0,5);mirror=dx>0;setFrame(dragFrame,mirror);
+ },{passive:true});
+ function end(){
+   if(!active)return;stage.classList.remove('dragging');if(!moved){active=false;wave();return;}returnFront();
  }
  stage.addEventListener('pointerup',end,{passive:true});stage.addEventListener('pointercancel',end,{passive:true});
- async function loadCanonical(){
+ addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick,{passive:true});
+ async function loadSequence(){
    try{
-     const files=['kaizen_head_a.txt','kaizen_head_b.txt','kaizen_ref_1.txt','kaizen_ref_2.txt','kaizen_ref_3.txt','kaizen_ref_4.txt','kaizen_ref_5.txt','kaizen_ref_6.txt','kaizen_ref_7.txt','kaizen_ref_8.txt'];
-     const parts=await Promise.all(files.map(name=>fetch(`assets/${name}`,{cache:'force-cache'}).then(r=>{if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.text()})));
+     const names=Array.from({length:7},(_,i)=>`sequence/seq_${String(i).padStart(2,'0')}.txt?v=10`);
+     const parts=await Promise.all(names.map(name=>fetch(name,{cache:'force-cache'}).then(r=>{if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.text()})));
      const b64=parts.join('').replace(/\s+/g,''),raw=atob(b64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
-     const url=URL.createObjectURL(new Blob([bytes],{type:'image/webp'})),img=new Image();img.onload=()=>{base.src=url;base.dataset.canonical='1';tick()};img.src=url;
-   }catch(err){console.warn('KAIZEN canonical artwork fallback',err)}
+     const url=URL.createObjectURL(new Blob([bytes],{type:'image/webp'})),img=new Image();
+     img.onload=()=>{frame.style.backgroundImage=`url(${url})`;setFrame(0,false);frame.classList.add('ready');ready=true;mode.textContent='drag orbit';tick()};
+     img.onerror=()=>{mode.textContent='static fallback'};img.src=url;
+   }catch(err){console.warn('KAIZEN frame sequence fallback',err);mode.textContent='static fallback'}
  }
- base.addEventListener('error',()=>{if(base.dataset.canonical)base.src='assets/clean_hero.jpg'},{once:true});
- loadCanonical();setInterval(tick,80);tick();
+ loadSequence();tick();
 })();
 </script>
 </body>
