@@ -1,131 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#05070b" />
-<title>ORBITAL SHRINE — Procedural Three.js Study</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orbital Shrine — Art Upgrade</title>
 <style>
-  *{box-sizing:border-box}html{background:#05070b;color:#eef2f6;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0;min-height:560vh;background:#05070b;overflow-x:hidden}.webgl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}.veil{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 50% 42%,transparent 0 34%,rgba(2,4,8,.04) 54%,rgba(2,4,8,.58) 100%),linear-gradient(180deg,rgba(3,5,9,.04),rgba(3,5,9,.42))}.grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}.hud{position:fixed;inset:0;z-index:4;pointer-events:none}.brand{position:absolute;top:max(22px,env(safe-area-inset-top));left:max(22px,env(safe-area-inset-left));font-size:11px;letter-spacing:.25em;font-weight:700;color:rgba(239,245,255,.84)}.brand b{color:#fff}.meta{position:absolute;top:max(22px,env(safe-area-inset-top));right:max(22px,env(safe-area-inset-right));text-align:right;font:600 10px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:rgba(225,235,246,.46)}.sideLine{position:absolute;left:max(22px,env(safe-area-inset-left));top:50%;width:1px;height:90px;background:rgba(225,235,246,.16);transform:translateY(-50%);overflow:hidden}.sideLine i{display:block;width:100%;height:100%;background:#dbe8ff;transform-origin:top;transform:scaleY(0)}.percent{position:absolute;right:max(22px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));font:500 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.15em;color:rgba(225,235,246,.46)}.hint{position:absolute;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:14px;align-items:center;font:600 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em;text-transform:uppercase;color:rgba(230,238,248,.5);white-space:nowrap}.hint:before{content:"";width:28px;height:1px;background:rgba(230,238,248,.28)}.hint:after{content:"";width:28px;height:1px;background:rgba(230,238,248,.28)}.chapter{position:relative;z-index:3;height:100vh;height:100svh;display:flex;align-items:center;padding:clamp(28px,6vw,90px);pointer-events:none}.chapter .copy{width:min(560px,84vw);transform:translateY(22px);opacity:.2;transition:opacity .35s ease,transform .35s ease}.chapter.right{justify-content:flex-end;text-align:right}.chapter.right .copy{display:flex;flex-direction:column;align-items:flex-end}.eyebrow{font:700 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.3em;color:rgba(206,224,245,.6);margin-bottom:18px}.chapter h1,.chapter h2{margin:0;letter-spacing:-.055em;font-family:Georgia,"Times New Roman",serif;font-weight:400;text-wrap:balance}.chapter h1{font-size:clamp(56px,10vw,150px);line-height:.82}.chapter h2{font-size:clamp(48px,7vw,108px);line-height:.88}.chapter p{width:min(440px,80vw);margin:22px 0 0;font-size:clamp(13px,1.3vw,16px);line-height:1.65;color:rgba(222,230,240,.64)}.chapter.active .copy{opacity:1;transform:translateY(0)}.chapter.first{align-items:flex-end;padding-bottom:12vh}.chapter.first .copy{width:min(900px,88vw)}.chapter.first p{margin-left:5px}.kicker{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}.chip{padding:8px 10px;border:1px solid rgba(218,229,242,.18);border-radius:999px;font:600 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:rgba(225,235,246,.6);backdrop-filter:blur(12px);background:rgba(6,10,16,.16)}.controls{position:fixed;z-index:6;left:50%;top:max(18px,env(safe-area-inset-top));transform:translateX(-50%);display:flex;gap:6px;padding:5px;border-radius:999px;border:1px solid rgba(223,233,244,.13);background:rgba(5,8,13,.36);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}button{appearance:none;border:0;border-radius:999px;padding:8px 11px;background:transparent;color:rgba(233,240,248,.58);font:700 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;cursor:pointer}button:hover,button.on{color:#fff;background:rgba(255,255,255,.08)}.loading{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:#05070b;transition:opacity .8s ease,visibility .8s ease}.loading.hide{opacity:0;visibility:hidden}.loadingInner{text-align:center}.sigil{width:38px;height:38px;margin:0 auto 18px;border:1px solid rgba(228,237,248,.22);border-top-color:#dfeaff;border-radius:50%;animation:spin 1s linear infinite}.loading span{font:700 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;color:rgba(230,238,248,.55)}@keyframes spin{to{transform:rotate(360deg)}}
-  @media(max-width:720px){body{min-height:520vh}.meta,.sideLine{display:none}.brand{font-size:9px}.controls{top:auto;bottom:calc(max(20px,env(safe-area-inset-bottom)) + 38px)}.hint{display:none}.chapter{padding:24px}.chapter.first{padding-bottom:15vh}.chapter.right{justify-content:flex-start;text-align:left}.chapter.right .copy{align-items:flex-start}.chapter h1{font-size:clamp(58px,18vw,92px)}.chapter h2{font-size:clamp(48px,14vw,76px)}.chapter p{font-size:13px;line-height:1.55}.percent{bottom:max(20px,env(safe-area-inset-bottom))}}
-  @media(prefers-reduced-motion:reduce){.chapter .copy{transition:none}.sigil{animation:none}}
+:root{--bg:#050814;--ink:#eef1ff;--muted:#9aa6c3;--line:rgba(255,255,255,.12);--accent:#7de7ff;--accent2:#d7a3ff}
+*{box-sizing:border-box} html,body{margin:0;height:100%;background:radial-gradient(circle at 50% 20%,#101633 0,#070b18 45%,#04060d 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overscroll-behavior:none}
+body{min-height:440vh;overflow-x:hidden}
+canvas{position:fixed;inset:0;display:block}
+.overlay{position:fixed;inset:0;pointer-events:none;background:
+radial-gradient(circle at 50% 45%,transparent 38%,rgba(0,0,0,.14) 72%,rgba(0,0,0,.45) 100%),
+linear-gradient(to bottom,rgba(9,12,24,.28),rgba(9,12,24,0) 24%,rgba(9,12,24,0) 76%,rgba(9,12,24,.22));mix-blend:normal}
+.grid{position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(to right,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,.65),transparent 85%)}
+.topbar{position:fixed;left:0;right:0;top:0;z-index:10;display:flex;justify-content:space-between;align-items:flex-start;padding:24px 28px 0;pointer-events:none}
+.brand{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,242,255,.92);font-weight:700}.brand span{display:block;margin-top:8px;font-size:10px;letter-spacing:.12em;text-transform:none;color:var(--muted);font-weight:500;max-width:32ch;line-height:1.45}
+.pill{border:1px solid var(--line);background:rgba(255,255,255,.04);backdrop-filter:blur(12px);padding:10px 14px;border-radius:999px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,242,255,.72)}
+.hero{position:fixed;left:30px;bottom:28px;z-index:10;max-width:min(520px,calc(100vw - 60px));pointer-events:none}
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(125,231,255,.9);font-weight:700;margin-bottom:10px}
+.title{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(44px,7.7vw,108px);line-height:.92;letter-spacing:-.04em;margin:0;text-wrap:balance}
+.copy{margin-top:18px;color:rgba(230,236,255,.78);font-size:14px;line-height:1.6;max-width:38ch}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.tag{border:1px solid rgba(255,255,255,.12);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.03);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,236,255,.74)}
+.progress{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;gap:10px;pointer-events:none}.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.26);transition:all .25s}.dot.on{transform:scale(1.9);background:rgba(255,255,255,.92)}
+.caption{position:fixed;right:28px;bottom:28px;z-index:10;max-width:260px;text-align:right;pointer-events:none}.caption .n{font:700 11px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(215,163,255,.95)}.caption h2{font:400 clamp(20px,2.8vw,34px)/1.05 Georgia,serif;margin:10px 0 8px}.caption p{margin:0;color:rgba(226,231,251,.7);font-size:12px;line-height:1.55}
+.ctrls{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;z-index:10;display:flex;gap:10px;pointer-events:auto}.btn{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.06);backdrop-filter:blur(16px);color:#f1f4ff;padding:12px 15px;border-radius:999px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.btn:hover{background:rgba(255,255,255,.1)}
+@media (max-width:800px){.topbar{padding:18px 16px 0}.hero{left:16px;right:16px;bottom:84px;max-width:none}.copy{font-size:13px}.caption{left:16px;right:16px;bottom:164px;max-width:none;text-align:left}.progress{right:16px}.ctrls{bottom:18px;flex-wrap:wrap;width:calc(100vw - 32px);justify-content:center}.title{max-width:8.5ch}}
 </style>
 </head>
 <body>
-<canvas class="webgl" aria-label="Interactive procedural 3D orbital shrine"></canvas>
-<div class="veil"></div><div class="grain"></div>
-<div class="loading"><div class="loadingInner"><div class="sigil"></div><span>CALIBRATING ORBIT</span></div></div>
-<div class="hud"><div class="brand"><b>ORBITAL</b> / SHRINE</div><div class="meta">PROCEDURAL STUDY 001<br>THREE.JS · NO 3D ASSETS</div><div class="sideLine"><i></i></div><div class="percent">000%</div><div class="hint">drag orbit · scroll journey</div></div>
-<div class="controls"><button id="rebuild">REBUILD</button><button id="aurora" class="on">AURORA</button></div>
-<main>
-<section class="chapter first active" data-step="0"><div class="copy"><div class="eyebrow">A MACHINE FOR THE NIGHT</div><h1>ORBITAL<br>SHRINE</h1><p>An original procedural monument assembled from rings, prisms and light. No mesh files. No video. The geometry exists because the browser builds it.</p><div class="kicker"><span class="chip">PROCEDURAL GEOMETRY</span><span class="chip">SCROLL CAMERA</span><span class="chip">LIVE SHADERS</span></div></div></section>
-<section class="chapter right" data-step="1"><div class="copy"><div class="eyebrow">01 / FOUNDATION</div><h2>Built,<br>not loaded.</h2><p>The shrine grows from a vocabulary of cylinders, fins, rings and repeated structural bays. A moving clip plane reveals the construction as one continuous object.</p></div></section>
-<section class="chapter" data-step="2"><div class="copy"><div class="eyebrow">02 / ALIGNMENT</div><h2>Gravity<br>gives way.</h2><p>Three orbital bands detach from the structure and begin to precess around the core. Their motion is driven independently from the camera.</p></div></section>
-<section class="chapter right" data-step="3"><div class="copy"><div class="eyebrow">03 / SIGNAL</div><h2>The sky<br>answers.</h2><p>A procedural aurora wakes behind the monument while the central beacon phases from mineral white to ion blue.</p></div></section>
-<section class="chapter" data-step="4"><div class="copy"><div class="eyebrow">04 / ORBIT</div><h2>Move<br>through it.</h2><p>Scroll controls a cinematic camera path. Drag at any point to add your own orbit without breaking the authored composition.</p></div></section>
-</main>
+<canvas id="c"></canvas>
+<div class="overlay"></div><div class="grid"></div>
+<div class="topbar"><div class="brand">Orbital Shrine<span>A procedural sci‑fi monument raised from geometry, light and atmosphere. Scroll to move through the scene. Drag to orbit.</span></div><div class="pill" id="mode">Aurora online</div></div>
+<div class="hero"><div class="kicker">Procedural / Three.js / One file</div><h1 class="title">Art‑directed, scroll‑driven 3D.</h1><div class="copy">This upgraded study pushes mood first: a darker sky, layered atmosphere, refined typography, luminous rings and a more cinematic camera path around a synthetic shrine under orbital weather.</div><div class="meta"><div class="tag">No models</div><div class="tag">No video</div><div class="tag">Free hosting</div></div></div>
+<div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<div class="caption"><div class="n" id="stepN">Chapter I</div><h2 id="stepT">Arrival in the dark</h2><p id="stepP">The monument emerges from a cold valley as the rings catch a pale electric glow.</p></div>
+<div class="ctrls"><button class="btn" id="rebuild">Rebuild</button><button class="btn" id="aurora">Toggle Aurora</button><button class="btn" id="pulse">Pulse Beacon</button></div>
 <script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js';
-
-const canvas=document.querySelector('.webgl');
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
-renderer.setPixelRatio(Math.min(devicePixelRatio,1.65)); renderer.setSize(innerWidth,innerHeight); renderer.localClippingEnabled=true;
-renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.05;
-const scene=new THREE.Scene(); scene.background=new THREE.Color(0x05070b); scene.fog=new THREE.FogExp2(0x08101a,0.012);
-const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.1,500); camera.position.set(26,12,32);
-
-const hemi=new THREE.HemisphereLight(0x89a9d7,0x07080a,1.25); scene.add(hemi);
-const key=new THREE.DirectionalLight(0xdce9ff,5.2); key.position.set(-12,28,16); scene.add(key);
-const rim=new THREE.DirectionalLight(0x5e8dff,3.4); rim.position.set(18,12,-18); scene.add(rim);
-const low=new THREE.PointLight(0x5aa8ff,55,32,2); low.position.set(0,4,0); scene.add(low);
-
-const CLIP=new THREE.Plane(new THREE.Vector3(0,-1,0),0.01);
-const matStone=new THREE.MeshStandardMaterial({color:0x272c32,roughness:.78,metalness:.18,clippingPlanes:[CLIP],clipShadows:true});
-const matStone2=new THREE.MeshStandardMaterial({color:0x69717b,roughness:.52,metalness:.42,clippingPlanes:[CLIP],clipShadows:true});
-const matDark=new THREE.MeshStandardMaterial({color:0x0c1015,roughness:.3,metalness:.82,clippingPlanes:[CLIP],clipShadows:true});
-const matGlow=new THREE.MeshStandardMaterial({color:0x9ecaff,emissive:0x6aaeff,emissiveIntensity:4.2,roughness:.2,metalness:.25,clippingPlanes:[CLIP]});
-const matRing=new THREE.MeshStandardMaterial({color:0xb8c6d8,roughness:.26,metalness:.86,emissive:0x254a77,emissiveIntensity:.45});
-const shrine=new THREE.Group(); scene.add(shrine);
-function mesh(g,m,y=0){const o=new THREE.Mesh(g,m);o.position.y=y;shrine.add(o);return o}
-function cyl(r1,r2,h,y,seg=12,m=matStone){return mesh(new THREE.CylinderGeometry(r1,r2,h,seg,1,false),m,y)}
-function tor(r,t,y,m=matStone2){const o=mesh(new THREE.TorusGeometry(r,t,12,96),m,y);o.rotation.x=Math.PI/2;return o}
-function box(x,y,z,px,py,pz,ry=0,m=matStone){const o=mesh(new THREE.BoxGeometry(x,y,z),m);o.position.set(px,py,pz);o.rotation.y=ry;return o}
-
-// Foundation: stepped octagonal plinth
-cyl(8.7,9.6,.55,.25,12,matDark);cyl(7.9,8.7,.7,.82,12);cyl(7.1,7.7,.45,1.38,12,matStone2);cyl(6.3,6.8,.6,1.9,12);
-for(let i=0;i<12;i++){const a=i/12*Math.PI*2;const r=6.65;box(.42,1.7,.8,Math.cos(a)*r,2.75,Math.sin(a)*r,-a,matStone2)}
-tor(6.15,.18,2.3,matGlow);
-
-// Central body and ribs
-cyl(4.9,5.55,1.2,2.8,12,matStone);cyl(4.1,4.9,2.2,4.45,12,matDark);cyl(3.6,4.05,.45,5.78,12,matStone2);
-for(let i=0;i<8;i++){const a=i/8*Math.PI*2;const r=4.05;box(.5,5.8,.72,Math.cos(a)*r,7.7,Math.sin(a)*r,-a,matStone2)}
-for(let y=6.25;y<10.7;y+=1.1) tor(3.85,.11,y,matDark);
-cyl(3.15,3.5,5.4,8.45,12,matStone);cyl(2.65,3.05,.55,11.42,12,matStone2);
-
-// Cantilever fins
-for(let i=0;i<4;i++){
- const a=i*Math.PI/2+Math.PI/4;const g=new THREE.Group();g.rotation.y=-a; shrine.add(g);
- const fin=new THREE.Mesh(new THREE.BoxGeometry(.34,5.2,7.2),matStone2);fin.position.set(0,8.0,5.4);g.add(fin);
- const blade=new THREE.Mesh(new THREE.BoxGeometry(.16,3.6,8.5),matDark);blade.position.set(0,8.9,6.25);g.add(blade);
-}
-
-// Crown and beacon
-cyl(2.15,2.75,1.5,12.35,12,matDark);tor(2.58,.15,12.95,matGlow);cyl(1.45,2.05,2.1,14.15,10,matStone2);cyl(.58,1.2,3.0,16.55,10,matDark);cyl(.18,.34,3.8,19.75,8,matGlow);
-const beacon=new THREE.Mesh(new THREE.SphereGeometry(.48,18,18),matGlow);beacon.position.y=21.85;shrine.add(beacon);
-
-// Orbital bands
-const orbits=new THREE.Group();scene.add(orbits);
-const orbitData=[[7.7,.12,.5],[9.0,.1,-.62],[10.5,.085,1.08]];
-for(const [r,t,tilt] of orbitData){const o=new THREE.Mesh(new THREE.TorusGeometry(r,t,10,128),matRing);o.rotation.set(Math.PI/2+tilt,.1,tilt*.7);o.position.y=12.2;orbits.add(o)}
-for(let i=0;i<8;i++){const a=i/8*Math.PI*2;const s=new THREE.Mesh(new THREE.SphereGeometry(.09,8,8),matGlow);s.position.set(Math.cos(a)*9,12.2+Math.sin(a*2)*1.3,Math.sin(a)*9);orbits.add(s)}
-
-// Terrain
-const N=92,S=150;const geo=new THREE.PlaneGeometry(S,S,N,N);geo.rotateX(-Math.PI/2);const p=geo.attributes.position;
-for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),d=Math.hypot(x,z);let h=(Math.sin(x*.18)+Math.cos(z*.16)+Math.sin((x+z)*.08))*0.28;h+=Math.sin(d*.33)*.22;h-=Math.exp(-d*d/130)*1.5;p.setY(i,h-1.55)}geo.computeVertexNormals();
-const groundMat=new THREE.MeshStandardMaterial({color:0x11161c,roughness:.96,metalness:.02});const ground=new THREE.Mesh(geo,groundMat);scene.add(ground);
-const grid=new THREE.GridHelper(140,70,0x233343,0x131d27);grid.position.y=-1.25;grid.material.transparent=true;grid.material.opacity=.16;scene.add(grid);
-
-// Stars
-const starGeo=new THREE.BufferGeometry(),starCount=3000,starPos=new Float32Array(starCount*3);
-for(let i=0;i<starCount;i++){const r=70+Math.random()*160,a=Math.random()*Math.PI*2,y=8+Math.random()*100;starPos[i*3]=Math.cos(a)*r;starPos[i*3+1]=y;starPos[i*3+2]=Math.sin(a)*r}starGeo.setAttribute('position',new THREE.BufferAttribute(starPos,3));
-const stars=new THREE.Points(starGeo,new THREE.PointsMaterial({color:0xdbeaff,size:.18,transparent:true,opacity:.66,sizeAttenuation:true,depthWrite:false}));scene.add(stars);
-
-// Aurora dome shader
-const auroraUniforms={uTime:{value:0},uOpacity:{value:1}};
-const auroraMat=new THREE.ShaderMaterial({side:THREE.BackSide,transparent:true,depthWrite:false,uniforms:auroraUniforms,vertexShader:`varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,fragmentShader:`varying vec3 vP;uniform float uTime;uniform float uOpacity;float band(float x,float c,float w){return smoothstep(w,0.,abs(x-c));}void main(){vec3 n=normalize(vP);float h=n.y;float a=atan(n.z,n.x);float w1=.5+.16*sin(a*3.+uTime*.12)+.08*sin(a*9.-uTime*.2);float w2=.66+.11*sin(a*2.-uTime*.08);float g=band(h,w1,.17)*(.55+.45*sin(a*7.+uTime*.5));float b=band(h,w2,.12)*(.55+.45*sin(a*5.-uTime*.32));vec3 col=vec3(.08,.38,.48)*g+vec3(.12,.18,.62)*b;float fade=smoothstep(.08,.38,h)*(1.-smoothstep(.88,1.,h));gl_FragColor=vec4(col,(g+b)*.34*fade*uOpacity);}`});
-const aurora=new THREE.Mesh(new THREE.SphereGeometry(180,48,32),auroraMat);scene.add(aurora);
-
-// Floating dust
-const dustCount=900,dustGeo=new THREE.BufferGeometry(),dustPos=new Float32Array(dustCount*3);
-for(let i=0;i<dustCount;i++){const a=Math.random()*Math.PI*2,r=5+Math.random()*36;dustPos[i*3]=Math.cos(a)*r;dustPos[i*3+1]=Math.random()*24;dustPos[i*3+2]=Math.sin(a)*r}dustGeo.setAttribute('position',new THREE.BufferAttribute(dustPos,3));const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({color:0x9ec8ff,size:.06,transparent:true,opacity:.38,depthWrite:false}));scene.add(dust);
-
-// Camera path
-const camPts=[new THREE.Vector3(30,10,36),new THREE.Vector3(20,8,27),new THREE.Vector3(13,13,23),new THREE.Vector3(-20,15,20),new THREE.Vector3(-10,22,-22),new THREE.Vector3(20,17,-16)];
-const tarPts=[new THREE.Vector3(0,8,0),new THREE.Vector3(0,7,0),new THREE.Vector3(0,11,0),new THREE.Vector3(0,12,0),new THREE.Vector3(0,13,0),new THREE.Vector3(0,10,0)];
-let scrollP=0,targetScroll=0,dragX=0,dragY=0,targetDragX=0,targetDragY=0,down=false,lastX=0,lastY=0,buildStart=performance.now(),buildDuration=4400;
-const tmpCam=new THREE.Vector3(),tmpTar=new THREE.Vector3();
-function interp(points,t,out){const max=points.length-1,s=Math.min(max-1e-4,Math.max(0,t*max)),i=Math.floor(s),f=s-i;return out.lerpVectors(points[i],points[Math.min(i+1,max)],f)}
-function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;targetScroll=max?scrollY/max:0}
-addEventListener('scroll',updateScroll,{passive:true});updateScroll();
-addEventListener('pointerdown',e=>{down=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture?.(e.pointerId)});
-addEventListener('pointermove',e=>{if(down){targetDragX+=(e.clientX-lastX)*.0045;targetDragY+=(e.clientY-lastY)*.003;lastX=e.clientX;lastY=e.clientY}else{targetDragX=(e.clientX/innerWidth-.5)*.16;targetDragY=(e.clientY/innerHeight-.5)*.08}});
-addEventListener('pointerup',()=>down=false);addEventListener('pointercancel',()=>down=false);
-
-const chapters=[...document.querySelectorAll('.chapter')],line=document.querySelector('.sideLine i'),pct=document.querySelector('.percent');
-function updateChapter(){const idx=Math.min(chapters.length-1,Math.floor(scrollP*chapters.length+.12));chapters.forEach((x,i)=>x.classList.toggle('active',i===idx));line.style.transform=`scaleY(${scrollP})`;pct.textContent=String(Math.round(scrollP*100)).padStart(3,'0')+'%'}
-
-document.querySelector('#rebuild').onclick=()=>{buildStart=performance.now()};let auroraOn=true;document.querySelector('#aurora').onclick=e=>{auroraOn=!auroraOn;e.currentTarget.classList.toggle('on',auroraOn)};
-
-function resize(){camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<700?1.35:1.65))}addEventListener('resize',resize);
-
-const clock=new THREE.Clock();let first=true;
-function tick(now){requestAnimationFrame(tick);const dt=Math.min(.04,clock.getDelta()),t=clock.elapsedTime;scrollP+= (targetScroll-scrollP)*(1-Math.pow(.0008,dt));dragX+=(targetDragX-dragX)*(1-Math.pow(.001,dt));dragY+=(targetDragY-dragY)*(1-Math.pow(.001,dt));
- const bt=Math.min(1,Math.max(0,(now-buildStart)/buildDuration));const ease=1-Math.pow(1-bt,3);CLIP.constant=-.5+ease*23.3;
- interp(camPts,scrollP,tmpCam);interp(tarPts,scrollP,tmpTar);const r=Math.hypot(tmpCam.x,tmpCam.z),a=Math.atan2(tmpCam.z,tmpCam.x)+dragX;camera.position.set(Math.cos(a)*r,tmpCam.y+dragY*7,Math.sin(a)*r);camera.lookAt(tmpTar);
- orbits.rotation.y=t*.08+scrollP*1.6;orbits.children[0].rotation.z+=dt*.08;orbits.children[1].rotation.x+=dt*.055;orbits.children[2].rotation.y-=dt*.07;shrine.rotation.y=Math.sin(t*.13)*.025;
- stars.rotation.y=t*.003;dust.rotation.y=-t*.012;dust.position.y=Math.sin(t*.25)*.15;auroraUniforms.uTime.value=t;auroraUniforms.uOpacity.value+=( (auroraOn?1:0)-auroraUniforms.uOpacity.value)*.035;
- matGlow.emissiveIntensity=3.5+Math.sin(t*2.2)*.65+scrollP*1.6;low.intensity=44+Math.sin(t*1.6)*8+scrollP*18;renderer.toneMappingExposure=.92+scrollP*.25;
- updateChapter();renderer.render(scene,camera);if(first){first=false;setTimeout(()=>document.querySelector('.loading').classList.add('hide'),180)}}requestAnimationFrame(tick);
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+const canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.18;
+const scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x080a13,.038);
+const camera=new THREE.PerspectiveCamera(36,innerWidth/innerHeight,.1,200); camera.position.set(0,5.5,16);
+const root=new THREE.Group(); scene.add(root);
+const shrine=new THREE.Group(); root.add(shrine);
+const clipPlane=new THREE.Plane(new THREE.Vector3(0,-1,0),0); renderer.localClippingEnabled=true;
+const MAT={
+ stone:new THREE.MeshStandardMaterial({color:0x2f354b,roughness:.9,metalness:.08,clippingPlanes:[clipPlane],clipShadows:true}),
+ panel:new THREE.MeshStandardMaterial({color:0xdfe8ff,roughness:.28,metalness:.48,envMapIntensity:1.2,clippingPlanes:[clipPlane],clipShadows:true}),
+ dark:new THREE.MeshStandardMaterial({color:0x0d1222,roughness:.66,metalness:.2,clippingPlanes:[clipPlane],clipShadows:true}),
+ glow:new THREE.MeshStandardMaterial({color:0x76ddff,emissive:0x4fd6ff,emissiveIntensity:1.8,roughness:.2,metalness:.7,clippingPlanes:[clipPlane],clipShadows:true}),
+ gold:new THREE.MeshStandardMaterial({color:0xdac896,roughness:.34,metalness:.86,envMapIntensity:1.5,clippingPlanes:[clipPlane],clipShadows:true}),
+ cap:new THREE.MeshStandardMaterial({color:0xcad5f8,roughness:.28,metalness:.32,doubleSide:true}),
+ glass:new THREE.MeshPhysicalMaterial({color:0x7fdcff,transmission:.38,opacity:.8,transparent:true,roughness:.05,metalness:.12,ior:1.24,thickness:.25,clippingPlanes:[clipPlane],clipShadows:true})
+};
+function add(m){shrine.add(m);return m}
+function prism(w,d,h,y,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.y=y+h/2;return add(m)}
+function cylinder(r1,r2,h,y,mat,seg=8){const m=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,seg,1,false),mat);m.position.y=y+h/2;return add(m)}
+function ring(R,t,h,y,mat,seg=64){const g=new THREE.TorusGeometry(R,t,16,seg);const m=new THREE.Mesh(g,mat);m.rotation.x=Math.PI/2;m.position.y=y+h;return add(m)}
+prism(8,8,.6,0,MAT.stone); prism(6.4,6.4,.48,.62,MAT.dark); prism(5.1,5.1,.28,1.16,MAT.panel);
+for(let i=0;i<8;i++){const a=i/8*Math.PI*2; const p=prism(.42,1.3,4.8,1.45,MAT.panel); p.position.x=Math.cos(a)*2.1; p.position.z=Math.sin(a)*2.1; p.rotation.y=-a; }
+cylinder(2.05,2.35,5.6,1.56,MAT.dark,16); cylinder(1.42,1.68,4.7,2.25,MAT.panel,16); cylinder(.84,1.08,2.3,6.9,MAT.gold,12);
+for(let i=0;i<12;i++){const a=i/12*Math.PI*2; const p=prism(.3,1.1,1.8,7.2,MAT.gold); p.position.x=Math.cos(a)*1.75; p.position.z=Math.sin(a)*1.75; p.rotation.y=-a; }
+ring(2.9,.08,.1,5.4,MAT.glow,96); ring(4.5,.07,.1,8.3,MAT.gold,96); ring(6.2,.07,.1,11.4,MAT.glow,96);
+const beacon=new THREE.Mesh(new THREE.SphereGeometry(.33,24,24),MAT.glass); beacon.position.y=10.6; shrine.add(beacon);
+const cap=new THREE.Mesh(new THREE.CylinderGeometry(2.8,2.8,.05,12),MAT.cap); shrine.add(cap);
+const scaffold=new THREE.Group(); shrine.add(scaffold); const poleMat=new THREE.MeshStandardMaterial({color:0x564a3c,roughness:.92,metalness:.02});
+for(let j=0;j<4;j++){const y=1.1+j*2.1; [ [-3.2,-3.2],[3.2,-3.2],[3.2,3.2],[-3.2,3.2] ].forEach(([x,z])=>{const p=new THREE.Mesh(new THREE.BoxGeometry(.1,2,.1),poleMat);p.position.set(x,y,z);scaffold.add(p);});
+ [['x',0,-3.2],['x',0,3.2],['z',-3.2,0],['z',3.2,0]].forEach(([axis,a,b])=>{const g=axis==='x'?new THREE.BoxGeometry(6.6,.08,.08):new THREE.BoxGeometry(.08,.08,6.6); const m=new THREE.Mesh(g,poleMat); m.position.set(axis==='x'?0:a,y+.9,axis==='x'?b:0); scaffold.add(m);});}
+const terrain=new THREE.Mesh(new THREE.PlaneGeometry(80,80,130,130),new THREE.MeshStandardMaterial({vertexColors:true,roughness:.95,metalness:0})); terrain.rotation.x=-Math.PI/2; scene.add(terrain); const pos=terrain.geometry.attributes.position; const cols=[]; const c=new THREE.Color();
+for(let i=0;i<pos.count;i++){const x=pos.getX(i),z=pos.getZ(i); const r=Math.hypot(x,z); const h=Math.sin(x*.24)*.35+Math.sin(z*.17+1.3)*.35 + Math.sin((x+z)*.09)*1.4 - Math.max(0,6-r)*.5; pos.setY(i,h); c.set(r<8?0x1a2031:r<20?0x101728:0x0c111d).lerp(new THREE.Color(0x2a3242),Math.max(0,(h+1.5)/4)); cols.push(c.r,c.g,c.b)} terrain.geometry.setAttribute('color',new THREE.Float32BufferAttribute(cols,3)); terrain.geometry.computeVertexNormals();
+const stars=new THREE.BufferGeometry(); const starCount=5000; const sp=new Float32Array(starCount*3); for(let i=0;i<starCount;i++){const r=42+Math.random()*60, th=Math.random()*Math.PI*2, ph=Math.pow(Math.random(),.65)*Math.PI*.56+.05; sp[i*3]=Math.cos(th)*Math.sin(ph)*r; sp[i*3+1]=Math.cos(ph)*r+8; sp[i*3+2]=Math.sin(th)*Math.sin(ph)*r;} stars.setAttribute('position',new THREE.BufferAttribute(sp,3)); const starMat=new THREE.PointsMaterial({color:0xe4ecff,size:.12,sizeAttenuation:true,transparent:true,opacity:.82,depthWrite:false}); const starPts=new THREE.Points(stars,starMat); scene.add(starPts);
+const dustGeo=new THREE.BufferGeometry(); const dustCount=900; const dp=new Float32Array(dustCount*3); for(let i=0;i<dustCount;i++){dp[i*3]=(Math.random()-.5)*28; dp[i*3+1]=Math.random()*12+.5; dp[i*3+2]=(Math.random()-.5)*28;} dustGeo.setAttribute('position',new THREE.BufferAttribute(dp,3)); const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({color:0x7de7ff,size:.045,transparent:true,opacity:.26,depthWrite:false})); scene.add(dust);
+const auroraGeo=new THREE.PlaneGeometry(64,24,160,20); const auroraMat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,side:THREE.DoubleSide,uniforms:{uTime:{value:0},uOn:{value:1}},vertexShader:`varying vec2 vUv; uniform float uTime; void main(){vUv=uv; vec3 p=position; p.z += sin(uv.x*9. + uTime*.35)*.6 + sin(uv.x*17. - uTime*.28)*.25; p.y += sin(uv.x*7. + uTime*.18)*.45; gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,fragmentShader:`varying vec2 vUv; uniform float uTime; uniform float uOn; float n(float x){return .5+.5*sin(x);} void main(){float band=smoothstep(.08,.48,vUv.y)*(1.-smoothstep(.52,.95,vUv.y)); float w=n(vUv.x*14.+uTime*.42)*.5+n(vUv.x*23.-uTime*.28)*.5; vec3 c=mix(vec3(.10,.55,.95),vec3(.74,.35,.98),vUv.x+.18*sin(uTime*.12)); float a=band*(.32+.36*w)*uOn*(1.-abs(vUv.x-.5)*.8); gl_FragColor=vec4(c,a);}`}); const aurora=new THREE.Mesh(auroraGeo,auroraMat); aurora.position.set(0,17,-20); scene.add(aurora);
+const hemi=new THREE.HemisphereLight(0x9bb7ff,0x11131b,.7); scene.add(hemi); const key=new THREE.DirectionalLight(0x8bdcff,2.5); key.position.set(8,14,10); scene.add(key); const rim=new THREE.DirectionalLight(0xd49dff,1.3); rim.position.set(-14,6,-10); scene.add(rim); const groundGlow=new THREE.PointLight(0x56b9ff,2.2,28,2); groundGlow.position.set(0,4.5,0); scene.add(groundGlow);
+let targetOrbX=0,targetOrbY=0,orbX=0,orbY=0,drag=false,lastX=0,lastY=0,rebuildT=0,beaconPulse=0; const dots=[...document.querySelectorAll('.dot')];
+const steps=[['Chapter I','Arrival in the dark','The monument emerges from a cold valley as the rings catch a pale electric glow.'],['Chapter II','Axis and ascent','A fixed camera reveals the vertical logic of the shrine as the cap line rises.'],['Chapter III','Rings in motion','Orbiting halos and floating particles turn the object into a signal rather than a building.'],['Chapter IV','Weather of light','Aurora bands drift in layered depth while the beacon thickens with emissive bloom.'],['Chapter V','The completed monument','The structure settles into a final frame designed for silence, atmosphere and scale.']];
+function resize(){camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)} addEventListener('resize',resize);
+addEventListener('pointerdown',e=>{drag=true;lastX=e.clientX;lastY=e.clientY}); addEventListener('pointerup',()=>drag=false); addEventListener('pointerleave',()=>drag=false); addEventListener('pointermove',e=>{if(drag){targetOrbY += (e.clientX-lastX)*0.006; targetOrbX += (e.clientY-lastY)*0.004; targetOrbX=Math.max(-.6,Math.min(.35,targetOrbX)); lastX=e.clientX; lastY=e.clientY;}});
+document.getElementById('rebuild').onclick=()=>{rebuildT=0; scrollTo({top:0,behavior:'smooth'})}; document.getElementById('aurora').onclick=()=>{auroraMat.uniforms.uOn.value=auroraMat.uniforms.uOn.value?0:1; document.getElementById('mode').textContent=auroraMat.uniforms.uOn.value?'Aurora online':'Aurora offline';}; document.getElementById('pulse').onclick=()=>beaconPulse=1.2;
+const clock=new THREE.Clock();
+function anim(){requestAnimationFrame(anim); const t=clock.getElapsedTime(), dt=Math.min(.05,clock.getDelta()); const p=Math.min(1,scrollY/Math.max(1,document.body.scrollHeight-innerHeight)); const s=p*4; const idx=Math.min(4,Math.floor(s)); dots.forEach((d,i)=>d.classList.toggle('on',i===idx)); document.getElementById('stepN').textContent=steps[idx][0]; document.getElementById('stepT').textContent=steps[idx][1]; document.getElementById('stepP').textContent=steps[idx][2];
+ if(rebuildT<p) rebuildT=Math.min(p,rebuildT+dt*.22); else rebuildT=p; const build=THREE.MathUtils.smoothstep(rebuildT,0,.82); clipPlane.constant=11.2*build; cap.position.y=clipPlane.constant+.025; scaffold.position.y=Math.max(0,clipPlane.constant*0.09); scaffold.visible=clipPlane.constant<10.8;
+ orbX += (targetOrbX-orbX)*0.06; orbY += (targetOrbY-orbY)*0.06; root.rotation.y=orbY + Math.sin(t*.1)*.04; root.rotation.x=orbX;
+ const camR=15.6 - Math.sin(Math.min(1,p)*Math.PI)*2.6; const camY=5.4 + Math.sin(p*Math.PI)*1.8 + Math.max(0,p-.74)*1.1; const camX=Math.sin(p*Math.PI*1.4)*2.2; camera.position.set(camX,camY,camR); camera.lookAt(0,5.3+Math.sin(p*Math.PI)*1.1,0);
+ auroraMat.uniforms.uTime.value=t; starPts.rotation.y=t*.01; dust.rotation.y=-t*.018; dust.position.y=Math.sin(t*.3)*.15; dustGeo.attributes.position.needsUpdate=false;
+ shrine.children.forEach(obj=>{if(obj.geometry && obj.geometry.type==='TorusGeometry'){obj.rotation.z=t*.08 + obj.position.y*.03; obj.rotation.y=t*.15*(obj.position.y%2?1:-1);}});
+ beaconPulse=Math.max(0,beaconPulse-dt*.8); const pulse=1+Math.sin(t*3.2)*.18+beaconPulse; beacon.scale.setScalar(pulse); MAT.glow.emissiveIntensity=1.55 + Math.sin(t*2.6)*.15 + beaconPulse*.6; groundGlow.intensity=2 + Math.sin(t*1.7)*.25 + beaconPulse*.8;
+ renderer.render(scene,camera)} anim();
 </script>
 </body>
 </html>
