@@ -98,7 +98,7 @@ section{height:100vh;pointer-events:none}
  addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick,{passive:true});
  async function loadSequence(){
    try{
-     const names=Array.from({length:7},(_,i)=>`sequence/seq_${String(i).padStart(2,'0')}.txt?v=10`);
+     const names=['sequence/seq_00a.txt?v=10','sequence/seq_00b.txt?v=10',...Array.from({length:6},(_,i)=>`sequence/seq_${String(i+1).padStart(2,'0')}.txt?v=10`)];
      const parts=await Promise.all(names.map(name=>fetch(name,{cache:'force-cache'}).then(r=>{if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.text()})));
      const b64=parts.join('').replace(/\s+/g,''),raw=atob(b64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
      const url=URL.createObjectURL(new Blob([bytes],{type:'image/webp'})),img=new Image();
