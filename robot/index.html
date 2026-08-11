@@ -2,116 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>KAIZEN Hybrid v7</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#d4d7dc">
+<title>KAIZEN — Robot Study</title>
 <style>
+:root{--bg:#d5d8dd;--ink:#0d1116;--red:#e51f22}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;background:#090d12;color:#f5f7f9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;overscroll-behavior:none}
-body{min-height:420vh;overflow-x:hidden}
-.s{position:fixed;inset:0;overflow:hidden;background:radial-gradient(circle at 50% 20%,#ffffff27,transparent 32%),radial-gradient(circle at 50% 66%,#7890ad18,transparent 42%),linear-gradient(#171c23,#0d1218 55%,#080b10)}
-.s:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(transparent,#000 12%,#000 84%,transparent)}
-.halo{position:absolute;left:50%;top:48%;width:min(74vmin,820px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid #ffffff16;border-radius:50%;box-shadow:0 0 0 120px #ffffff05,0 0 0 240px #ffffff03}
-.r{position:absolute;left:50%;top:49%;width:min(80vw,620px);height:min(90vh,980px);transform:translate(-50%,-50%);transform-style:preserve-3d;will-change:transform;z-index:2}
-.sh{position:absolute;left:50%;bottom:1%;width:54%;height:6%;transform:translateX(-50%);background:radial-gradient(ellipse,#0008,#0003 52%,transparent 74%);filter:blur(20px)}
-.l{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;pointer-events:none;will-change:transform;transform-style:preserve-3d}
-.base{filter:drop-shadow(0 38px 66px #0007)}
-.lower{clip-path:inset(51% 0 0)}
-.torso{clip-path:inset(16% 0 37%)}
-.head{clip-path:inset(0 0 68%)}
-.eye{position:absolute;left:50%;top:14.4%;width:11%;height:3.8%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,#ff312ff2,#ff211f50 42%,transparent 72%);filter:blur(7px);mix-blend-mode:screen;opacity:.56}
-.vig{position:absolute;inset:0;background:radial-gradient(circle at 50% 47%,transparent 26%,#0002 64%,#0008);pointer-events:none}
-.brand,.hint{position:fixed;z-index:10;top:max(16px,env(safe-area-inset-top));font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-.brand{left:16px}.brand small{display:block;margin-top:6px;color:#8d99a5;font-size:8px;letter-spacing:.13em}
-.hint{right:16px;color:#a8b3be;border:1px solid #ffffff16;border-radius:999px;padding:9px 12px;background:#0c10166b;backdrop-filter:blur(10px)}
-.status{position:fixed;z-index:11;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:7px 10px;border-radius:999px;background:#0c1016cc;border:1px solid #ffffff16;color:#a8b3be;font-size:9px;letter-spacing:.12em;text-transform:uppercase;transition:opacity .3s}
-.status.ok{opacity:0;pointer-events:none}
-.status.err{color:#ff9e92}
-main{position:relative;z-index:5}
-section{height:100vh;display:flex;align-items:flex-end;padding:0 7vw 10vh}
-section:nth-child(even){justify-content:flex-end;text-align:right}
-.in{max-width:590px}.e{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#98a4b0;margin-bottom:14px}
-h1,h2{margin:0;line-height:.92;letter-spacing:-.045em}h1{font-size:clamp(52px,9vw,124px);max-width:7ch}h2{font-size:clamp(42px,7vw,90px);max-width:8ch}
-p{margin:18px 0 0;max-width:43ch;color:#c7d0d8;line-height:1.55;font-size:15px}section:nth-child(even) p{margin-left:auto}
-@media(max-width:800px){.r{width:min(96vw,560px);height:min(75vh,760px);top:43%}section{padding:13vh 18px 18vh;align-items:flex-start}section:nth-child(even){justify-content:flex-start;text-align:left}section:nth-child(even) p{margin-left:0}h1{font-size:clamp(44px,14vw,82px)}h2{font-size:clamp(36px,12vw,70px)}p{font-size:14px;max-width:34ch}.brand small{display:none}}
+html{background:var(--bg);scroll-behavior:auto}
+body{margin:0;min-height:520vh;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;overflow-x:hidden;overscroll-behavior-y:none}
+.stage{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#b8bbc2 0%,#aeb1b9 43%,#969aa3 100%)}
+.stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 48%,transparent 44%,rgba(20,25,31,.09) 82%,rgba(10,14,19,.17) 120%)}
+.floor{position:absolute;left:50%;bottom:2.5vh;width:min(76vw,740px);height:8vh;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(26,30,35,.23) 0%,rgba(26,30,35,.10) 45%,transparent 74%);filter:blur(14px);opacity:.7}
+.scene{position:absolute;left:50%;top:50%;width:max(100vw,75vh);height:calc(max(100vw,75vh)*1.333333);transform:translate3d(-50%,-50%,0);perspective:1200px;transform-style:preserve-3d;will-change:transform}
+.robot{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.robot img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;object-position:center center;pointer-events:none;-webkit-user-drag:none;user-select:none;will-change:transform,filter}
+.base{filter:drop-shadow(0 26px 27px rgba(16,20,24,.19)) saturate(1.02) contrast(1.025)}
+.hud{position:fixed;z-index:20;left:max(18px,env(safe-area-inset-left));top:max(18px,env(safe-area-inset-top));font-size:10px;line-height:1;font-weight:760;letter-spacing:.18em;text-transform:uppercase;color:rgba(13,17,22,.77)}
+.hud span{display:block;margin-top:7px;font-size:8px;font-weight:650;letter-spacing:.12em;color:rgba(13,17,22,.42)}
+.progress{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right));top:50%;display:flex;flex-direction:column;gap:9px;transform:translateY(-50%)}
+.dot{width:4px;height:4px;border-radius:50%;background:rgba(13,17,22,.24);transition:transform .25s ease,background .25s ease}.dot.on{background:rgba(13,17,22,.82);transform:scale(1.65)}
+.hint{position:fixed;z-index:20;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:9px;font-size:9px;font-weight:730;letter-spacing:.16em;text-transform:uppercase;color:rgba(13,17,22,.46);white-space:nowrap;transition:opacity .4s ease}
+.chev{width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+section{height:100vh;pointer-events:none}
+@media(max-width:820px){
+ body{min-height:500vh}.scene{top:50%}.floor{bottom:5vh;width:80vw}.hud{font-size:9px}.hud span{font-size:7px}.progress{right:12px}.hint{bottom:max(15px,env(safe-area-inset-bottom));font-size:8px}
+}
+@media(max-width:430px) and (max-height:760px){.scene{top:50%}}
+
+@media(min-aspect-ratio:1/1){
+ .scene{width:81vh;height:108vh}
+ .floor{width:min(46vw,620px);bottom:1.5vh}
+ .base{filter:drop-shadow(0 28px 34px rgba(16,20,24,.18)) saturate(1.02) contrast(1.025)}
+}
+@media(prefers-reduced-motion:reduce){.robot,.robot img,.scene{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="s">
-  <div class="halo"></div>
-  <div class="r" id="r">
-    <div class="sh"></div>
-    <img id="src" class="l base" src="./assets/hero-hybrid.webp?v=7" alt="KAIZEN robot">
-    <div class="eye" id="eye"></div>
+<div class="stage" id="stage">
+  <div class="floor" id="floor"></div>
+  <div class="scene" id="scene">
+    <div class="robot" id="robot">
+      <img class="base" id="base" src="assets/clean_hero.jpg" alt="White humanoid KAIZEN robot with black cowl and red eyes" decoding="sync" fetchpriority="high">
+    </div>
   </div>
-  <div class="vig"></div>
 </div>
-<div class="brand">KAIZEN UNIT<small>white armor · black cowl · red optics</small></div>
-<div class="hint">scroll · drag</div>
-<div class="status" id="status">loading robot</div>
-<main>
-<section><div class="in"><div class="e">01 / Arrival</div><h1>White armor. Red eyes.</h1><p>The robot artwork remains the hero. Depth and camera motion sit underneath it instead of replacing it with a crude mesh.</p></div></section>
-<section><div class="in"><div class="e">02 / Form</div><h2>Depth without losing the design.</h2><p>Head, torso and lower body separate into visual planes while preserving the original silhouette.</p></div></section>
-<section><div class="in"><div class="e">03 / Signal</div><h2>A restrained living machine.</h2><p>Small gaze changes and upper-body drift give presence without turning the robot into a spinning product widget.</p></div></section>
-<section><div class="in"><div class="e">04 / Protocol</div><h2>Scroll becomes the camera.</h2><p>Each chapter becomes a new composed shot through restrained yaw and layered parallax.</p></div></section>
-</main>
+<div class="hud">KAIZEN<span>UNIT 01</span></div>
+<div class="progress" aria-hidden="true"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<div class="hint" id="hint"><i class="chev"></i>scroll / swipe</div>
+<main aria-hidden="true"><section></section><section></section><section></section><section></section><section></section></main>
 <script>
 (()=>{
-  const R=document.getElementById('r');
-  const B=document.getElementById('src');
-  const E=document.getElementById('eye');
-  const status=document.getElementById('status');
-  let fallbackUsed=false;
-
-  B.addEventListener('load',()=>{
-    status.textContent=fallbackUsed?'robot loaded · jpg fallback':'robot loaded';
-    status.classList.add('ok');
-  });
-  B.addEventListener('error',()=>{
-    if(!fallbackUsed){
-      fallbackUsed=true;
-      status.textContent='webp failed · loading jpg';
-      B.src='./assets/clean_hero.jpg?v=7';
-    }else{
-      status.textContent='robot asset error';
-      status.classList.add('err');
-    }
-  });
-
-  function mk(c,id){
-    const n=B.cloneNode();
-    n.removeAttribute('id');
-    n.removeAttribute('alt');
-    n.className='l '+c;
-    n.id=id;
-    R.insertBefore(n,E);
-    return n;
-  }
-  const L=mk('lower','lo'),T=mk('torso','t'),H=mk('head','h');
-  const layers=[L,T,H];
-  B.addEventListener('load',()=>layers.forEach(n=>{n.src=B.src;}));
-
-  let x=0,y=0,d=0,q=0,z=0,f=0;
-  const C=(v,a,b)=>Math.max(a,Math.min(b,v));
-  const S=(p,a,b)=>C((p-a)/(b-a),0,1);
-  function u(){
-    f=0;
-    const m=Math.max(1,document.documentElement.scrollHeight-innerHeight),p=C(scrollY/m,0,1),a=S(p,0,.26),b=S(p,.24,.52),c=S(p,.5,.78),e=S(p,.76,1);
-    d+=(q-d)*.08;
-    const Y=a*4+b*8-c*6-e*4+x*4+d,X=-b*1.5+c*.9-e*.6-y*2.5,l=-a*8-b*14+c*18-e*7,s=1+b*.025+c*.075-e*.045;
-    R.style.transform=`translate3d(-50%,calc(-50% + ${l}px),0) rotateX(${X}deg) rotateY(${Y}deg) scale(${s})`;
-    B.style.transform=`translate3d(${x*2}px,${y*2}px,0)`;
-    L.style.transform=`translate3d(${x*3}px,${c*5-e*6+y*2}px,10px)`;
-    T.style.transform=`translate3d(${x*5}px,${-b*7+c*10-e*5+y*3}px,28px) rotateY(${Y*.13}deg)`;
-    H.style.transform=`translate3d(${x*8}px,${-b*11+c*15-e*8+y*4}px,52px) rotateY(${Y*.2}deg)`;
-    E.style.opacity=(.5+Math.sin(performance.now()*.0025)*.08+c*.18);
-  }
-  function k(){if(!f)f=requestAnimationFrame(u)}
-  addEventListener('scroll',k,{passive:true});
-  addEventListener('pointermove',e=>{x=C(e.clientX/innerWidth*2-1,-1,1);y=C(e.clientY/innerHeight*2-1,-1,1);if(z)q=C((e.clientX-z)*.06,-12,12);k()},{passive:true});
-  addEventListener('pointerdown',e=>z=e.clientX,{passive:true});
-  addEventListener('pointerup',()=>{z=0;q*=.3;k()},{passive:true});
-  addEventListener('resize',k,{passive:true});
-  setInterval(k,60);k();
+ const scene=document.getElementById('scene'),robot=document.getElementById('robot'),base=document.getElementById('base'),floor=document.getElementById('floor'),hint=document.getElementById('hint'),dots=[...document.querySelectorAll('.dot')];
+ let px=0,py=0,dragX=0,dragTarget=0,downX=null,raf=0;
+ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+ const smooth=(t)=>t*t*(3-2*t);
+ const seg=(p,a,b)=>smooth(clamp((p-a)/(b-a),0,1));
+ function draw(){
+   raf=0;
+   const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+   const p=clamp(scrollY/max,0,1);
+   const a=seg(p,0,.22),b=seg(p,.18,.45),c=seg(p,.42,.69),d=seg(p,.66,.87),e=seg(p,.84,1);
+   dragX+=(dragTarget-dragX)*.075;
+   const yaw=(-2.4*a+4.2*b-4.8*c+3.6*d-1.5*e)+(px*2.2)+dragX*.72;
+   const pitch=(-.7*a+1.0*b-.5*c+.8*d-.4*e)-(py*.85);
+   const zoom=1+.035*a+.055*b+.065*c+.035*d-.06*e;
+   const lift=.3+1*a+2.2*b+3.4*c+2.4*d+.8*e;
+   const lateral=(-1*a+4*b-5*c+4*d-1*e)+px*1.7;
+   scene.style.transform=`translate3d(calc(-50% + ${lateral}vw),calc(-50% + ${lift}vh),0) scale(${zoom})`;
+   robot.style.transform=`rotateX(${pitch}deg) rotateY(${yaw}deg)`;
+   base.style.transform=`translate3d(${px*1.6}px,${py*.9}px,0) scale(1.002)`;
+   floor.style.transform=`translateX(-50%) scale(${1-.12*c+.05*d})`;
+   floor.style.opacity=.70-.22*c+.10*d;
+   hint.style.opacity=p>.045?0:1;
+   const idx=Math.min(4,Math.floor(p*5));dots.forEach((n,i)=>n.classList.toggle('on',i===idx));
+ }
+ function tick(){if(!raf)raf=requestAnimationFrame(draw)}
+ addEventListener('scroll',tick,{passive:true});
+ addEventListener('resize',tick,{passive:true});
+ addEventListener('pointermove',ev=>{
+   px=clamp(ev.clientX/innerWidth*2-1,-1,1);py=clamp(ev.clientY/innerHeight*2-1,-1,1);
+   if(downX!==null)dragTarget=clamp((ev.clientX-downX)*.045,-8,8);
+   tick();
+ },{passive:true});
+ addEventListener('pointerdown',ev=>{downX=ev.clientX},{passive:true});
+ addEventListener('pointerup',()=>{downX=null;dragTarget*=.25;tick()},{passive:true});
+ addEventListener('pointercancel',()=>{downX=null;dragTarget=0;tick()},{passive:true});
+ async function loadCanonical(){
+   try{
+     const parts=await Promise.all(Array.from({length:9},(_,i)=>
+       fetch(`assets/kaizen_ref_${i}.txt`,{cache:'force-cache'}).then(r=>{
+         if(!r.ok) throw new Error(`asset ${i}: ${r.status}`);
+         return r.text();
+       })
+     ));
+     const b64=parts.join('').replace(/\s+/g,'');
+     const raw=atob(b64),bytes=new Uint8Array(raw.length);
+     for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
+     const url=URL.createObjectURL(new Blob([bytes],{type:'image/webp'}));
+     const img=new Image();
+     img.onload=()=>{base.src=url;base.dataset.canonical='1'};
+     img.src=url;
+   }catch(err){console.warn('KAIZEN canonical artwork fallback',err)}
+ }
+ base.addEventListener('error',()=>{if(base.dataset.canonical)base.src='assets/clean_hero.jpg'},{once:true});
+ loadCanonical();
+ setInterval(tick,80);
+ tick();
 })();
 </script>
 </body>
