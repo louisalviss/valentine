@@ -1,165 +1,291 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>img2threejs Better Trial ‚Äî Crown Chest</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Modular Fantasy Castle ‚Äî Three.js</title>
 <style>
-html,body{margin:0;height:100%;overflow:hidden;background:#0d1117;color:#eef2f7;font:14px system-ui,-apple-system,sans-serif}
-#ui{position:fixed;left:16px;top:16px;z-index:2;background:rgba(11,16,22,.82);backdrop-filter:blur(10px);padding:14px 14px 12px;border:1px solid rgba(255,255,255,.08);border-radius:14px;width:255px;box-shadow:0 10px 40px rgba(0,0,0,.28)}
-#ui b{display:block;font-size:15px;margin-bottom:4px}
-#ui .sub{font-size:12px;opacity:.7;line-height:1.45;margin-bottom:10px}
-label{display:block;font-size:12px;margin:10px 0 4px;opacity:.82}
-input{width:100%}
-#btns{display:flex;gap:8px;margin-top:12px}
-button{flex:1;padding:8px 10px;border:0;border-radius:10px;background:#1c2733;color:#eef2f7;font-weight:600}
-button:hover{background:#243342}
+*{box-sizing:border-box}html,body{margin:0;background:#070b13;color:#eef4ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}body{min-height:460vh;overscroll-behavior-y:none}.stage{position:sticky;top:0;height:100svh;overflow:hidden}.hud{position:absolute;z-index:5;left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right));top:max(14px,env(safe-area-inset-top));display:flex;justify-content:space-between;gap:12px;pointer-events:none}.card{pointer-events:auto;background:rgba(7,11,19,.68);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);border-radius:16px;padding:12px 14px;box-shadow:0 12px 36px rgba(0,0,0,.28)}.title{font-weight:800;font-size:14px;letter-spacing:.02em}.sub{font-size:11px;opacity:.68;margin-top:3px}.pill{font-size:11px;font-weight:700;padding:8px 10px;border-radius:999px;background:rgba(124,231,255,.12);border:1px solid rgba(124,231,255,.28);white-space:nowrap}.progress{position:absolute;left:18px;right:18px;bottom:max(16px,env(safe-area-inset-bottom));z-index:5;height:4px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#7ce7ff,#d7a74a);box-shadow:0 0 16px rgba(124,231,255,.6)}.hint{position:absolute;z-index:5;bottom:34px;left:50%;transform:translateX(-50%);font-size:11px;opacity:.62;pointer-events:none;white-space:nowrap}.sections{position:absolute;inset:0;pointer-events:none}.label{position:absolute;left:18px;bottom:78px;z-index:4;max-width:min(82vw,360px);transition:opacity .25s}.label h2{margin:0 0 6px;font-size:24px}.label p{margin:0;font-size:13px;line-height:1.45;opacity:.72}@media(max-width:600px){.label h2{font-size:21px}.card{padding:10px 12px}.pill{display:none}}
 </style>
 </head>
 <body>
-<div id="ui">
-  <b>img2threejs ‚Äî prettier pass</b>
-  <div class="sub">Object ƒë√£ ƒë·ªïi sang stylized crown chest v√¨ h·ª£p procedural 3D h∆°n drone. K√©o ƒë·ªÉ xoay, pinch ƒë·ªÉ zoom.</div>
-  <label>Lid open</label><input id="lid" type="range" min="0" max="1" step="0.01" value="0.18">
-  <label>Turntable</label><input id="turn" type="range" min="0" max="1.5" step="0.01" value="0.22">
-  <label>Glow</label><input id="glow" type="range" min="0.3" max="2.0" step="0.01" value="1">
-  <div id="btns">
-    <button id="openBtn">Open</button>
-    <button id="closeBtn">Close</button>
-  </div>
+<div class="stage">
+  <div class="hud"><div class="card"><div class="title">MODULAR FANTASY CASTLE</div><div class="sub">Scroll to assemble ‚Üí activate ‚Üí transform</div></div><div id="mode" class="pill">ASSEMBLE</div></div>
+  <div id="label" class="label"><h2>Pieces in the void</h2><p>Every tower, wall and magic module starts detached. Scroll to pull the fortress together.</p></div>
+  <div class="hint">Drag to orbit ¬∑ pinch to zoom ¬∑ scroll to transform</div>
+  <div class="progress"><div id="bar" class="bar"></div></div>
 </div>
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
-  }
-}
-</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"}}</script>
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { createCrownChestModel } from './createCrownChestModel.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+function createCastle(THREE, RoundedBoxGeometry) {
+  const root = new THREE.Group();
+  root.name = 'ModularFantasyCastle';
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-document.body.appendChild(renderer.domElement);
+  const mats = {
+    stone: new THREE.MeshPhysicalMaterial({ color: 0x6e7782, roughness: 0.78, metalness: 0.02, clearcoat: 0.05 }),
+    stoneDark: new THREE.MeshPhysicalMaterial({ color: 0x39414b, roughness: 0.88, metalness: 0.01 }),
+    roof: new THREE.MeshPhysicalMaterial({ color: 0x243c65, roughness: 0.42, metalness: 0.28, clearcoat: 0.45 }),
+    gold: new THREE.MeshPhysicalMaterial({ color: 0xd7a74a, roughness: 0.25, metalness: 0.92, clearcoat: 0.55 }),
+    wood: new THREE.MeshPhysicalMaterial({ color: 0x56351f, roughness: 0.8, metalness: 0.02 }),
+    magic: new THREE.MeshPhysicalMaterial({ color: 0x7ce7ff, emissive: 0x1b8cae, emissiveIntensity: 1.7, roughness: 0.1, metalness: 0.05, transmission: 0.18, thickness: 0.4, clearcoat: 1 }),
+    magic2: new THREE.MeshBasicMaterial({ color: 0xa3f0ff, transparent: true, opacity: 0.7 }),
+    banner: new THREE.MeshStandardMaterial({ color: 0x8f2f46, roughness: 0.62, metalness: 0.04, side: THREE.DoubleSide }),
+  };
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0f1520);
-scene.fog = new THREE.Fog(0x0f1520, 12, 22);
+  const parts = [];
+  const floaters = [];
+  const battlements = [];
 
-const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.set(6.5, 4.2, 7.4);
-
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.target.set(0, 0.65, 0);
-controls.minDistance = 4.2;
-controls.maxDistance = 12;
-controls.maxPolarAngle = Math.PI * 0.49;
-
-const hemi = new THREE.HemisphereLight(0xbfdcff, 0x1d1207, 1.7);
-scene.add(hemi);
-
-const key = new THREE.DirectionalLight(0xfff3d6, 2.8);
-key.position.set(6, 10, 6);
-key.castShadow = true;
-key.shadow.mapSize.set(2048, 2048);
-key.shadow.camera.near = 0.5;
-key.shadow.camera.far = 30;
-key.shadow.camera.left = -8;
-key.shadow.camera.right = 8;
-key.shadow.camera.top = 8;
-key.shadow.camera.bottom = -8;
-scene.add(key);
-
-const rim = new THREE.DirectionalLight(0x8cc2ff, 1.7);
-rim.position.set(-7, 4, -6);
-scene.add(rim);
-
-const warm = new THREE.PointLight(0xffc46a, 18, 14, 2);
-warm.position.set(0, 2.5, 4.3);
-scene.add(warm);
-
-const floor = new THREE.Mesh(
-  new THREE.CircleGeometry(7.5, 96),
-  new THREE.ShadowMaterial({ opacity: 0.28 })
-);
-floor.rotation.x = -Math.PI / 2;
-floor.position.y = -1.05;
-floor.receiveShadow = true;
-scene.add(floor);
-
-const stage = new THREE.Mesh(
-  new THREE.CylinderGeometry(3.8, 4.3, 0.5, 48),
-  new THREE.MeshStandardMaterial({ color: 0x18202b, roughness: 0.94, metalness: 0.08 })
-);
-stage.position.y = -1.28;
-stage.receiveShadow = true;
-stage.castShadow = true;
-scene.add(stage);
-
-const chest = createCrownChestModel(THREE, RoundedBoxGeometry, { lidOpen: 0.18 });
-chest.rotation.y = -0.55;
-scene.add(chest);
-
-const sparkles = [];
-const sparkleGeo = new THREE.OctahedronGeometry(0.035, 0);
-const sparkleMat = new THREE.MeshBasicMaterial({ color: 0xfff2b0 });
-for (let i = 0; i < 10; i++) {
-  const s = new THREE.Mesh(sparkleGeo, sparkleMat);
-  const angle = (i / 10) * Math.PI * 2;
-  s.userData = { angle, radius: 1.6 + Math.random() * 0.6, height: 1.1 + Math.random() * 0.9, speed: 0.6 + Math.random() * 0.9 };
-  scene.add(s);
-  sparkles.push(s);
-}
-
-const lidInput = document.getElementById('lid');
-const turnInput = document.getElementById('turn');
-const glowInput = document.getElementById('glow');
-document.getElementById('openBtn').onclick = () => { lidInput.value = '1'; };
-document.getElementById('closeBtn').onclick = () => { lidInput.value = '0'; };
-
-let last = performance.now();
-let elapsed = 0;
-
-function tick(now) {
-  const dt = Math.min((now - last) / 1000, 0.05);
-  last = now;
-  elapsed += dt;
-
-  chest.userData.setLidOpen(Number(lidInput.value));
-  chest.rotation.y += dt * Number(turnInput.value);
-  chest.userData.animate(dt, elapsed);
-
-  const glowScale = Number(glowInput.value);
-  warm.intensity = 18 * glowScale;
-
-  for (const s of sparkles) {
-    const a = s.userData.angle + elapsed * s.userData.speed;
-    s.position.set(Math.cos(a) * s.userData.radius, s.userData.height + Math.sin(a * 2.4) * 0.14, Math.sin(a) * s.userData.radius);
-    s.rotation.x += dt * 1.8;
-    s.rotation.y += dt * 2.7;
-    s.scale.setScalar(0.6 + 0.4 * (0.5 + Math.sin(elapsed * 5 + a) * 0.5));
+  function shadow(mesh) {
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    return mesh;
+  }
+  function addPart(obj, home, explode, delay = 0) {
+    obj.position.copy(home).add(explode);
+    root.add(obj);
+    parts.push({ obj, home: home.clone(), explode: explode.clone(), delay });
+    return obj;
   }
 
-  controls.update();
-  renderer.render(scene, camera);
-  requestAnimationFrame(tick);
-}
-requestAnimationFrame(tick);
+  const base = shadow(new THREE.Mesh(new THREE.CylinderGeometry(3.35, 3.8, 0.72, 8), mats.stoneDark));
+  addPart(base, new THREE.Vector3(0,-0.55,0), new THREE.Vector3(0,-2.8,0), 0);
 
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-</script>
-</body>
-</html>
+  const courtyard = shadow(new THREE.Mesh(new THREE.CylinderGeometry(2.8, 3.05, 0.42, 8), mats.stone));
+  addPart(courtyard, new THREE.Vector3(0,-0.12,0), new THREE.Vector3(0,-2.2,0), 0.03);
+
+  const keep = shadow(new THREE.Mesh(new RoundedBoxGeometry(2.1, 2.45, 1.8, 5, 0.11), mats.stone));
+  addPart(keep, new THREE.Vector3(0,1.18,0), new THREE.Vector3(0,5.6,-1.8), 0.12);
+
+  const keepRoof = shadow(new THREE.Mesh(new THREE.ConeGeometry(1.42,1.35,4), mats.roof));
+  keepRoof.rotation.y = Math.PI/4;
+  addPart(keepRoof, new THREE.Vector3(0,3.05,0), new THREE.Vector3(0,6.8,-2.5), 0.17);
+
+  const crystal = shadow(new THREE.Mesh(new THREE.OctahedronGeometry(0.44,1), mats.magic));
+  addPart(crystal, new THREE.Vector3(0,4.0,0), new THREE.Vector3(0,8.2,0), 0.27);
+
+  const ring1 = new THREE.Mesh(new THREE.TorusGeometry(0.78,0.028,8,64), mats.magic2);
+  ring1.rotation.x = Math.PI/2.4;
+  addPart(ring1, new THREE.Vector3(0,4.0,0), new THREE.Vector3(-5,7,0), 0.32);
+  const ring2 = new THREE.Mesh(new THREE.TorusGeometry(0.58,0.02,8,64), mats.magic2);
+  ring2.rotation.x = Math.PI/2;
+  ring2.rotation.z = Math.PI/4;
+  addPart(ring2, new THREE.Vector3(0,4.0,0), new THREE.Vector3(5,7,0), 0.34);
+
+  const towerHomes = [
+    [-2.25,0.75,-2.0], [2.25,0.75,-2.0], [-2.25,0.75,2.0], [2.25,0.75,2.0]
+  ];
+  const towerGroups = [];
+  towerHomes.forEach(([x,y,z], i) => {
+    const g = new THREE.Group();
+    const body = shadow(new THREE.Mesh(new THREE.CylinderGeometry(0.7,0.82,2.45,8), mats.stone));
+    body.position.y = 0;
+    g.add(body);
+    const collar = shadow(new THREE.Mesh(new THREE.CylinderGeometry(0.86,0.86,0.18,8), mats.gold));
+    collar.position.y = 1.02;
+    g.add(collar);
+    const roof = shadow(new THREE.Mesh(new THREE.ConeGeometry(0.98,1.35,8), mats.roof));
+    roof.position.y = 1.84;
+    g.add(roof);
+    const spire = shadow(new THREE.Mesh(new THREE.ConeGeometry(0.08,0.7,8), mats.gold));
+    spire.position.y = 2.75;
+    g.add(spire);
+
+    for (let b=0;b<8;b++) {
+      const merlon = shadow(new THREE.Mesh(new RoundedBoxGeometry(0.2,0.28,0.18,2,0.025), mats.stoneDark));
+      const a = b/8*Math.PI*2;
+      merlon.position.set(Math.cos(a)*0.69,1.24,Math.sin(a)*0.69);
+      merlon.rotation.y = -a;
+      g.add(merlon);
+      battlements.push(merlon);
+    }
+
+    const ex = new THREE.Vector3((i%2?1:-1)*5.8, 3.8 + i*0.6, (i<2?-1:1)*5.5);
+    addPart(g, new THREE.Vector3(x,y,z), ex, 0.08 + i*0.035);
+    towerGroups.push(g);
+  });
+
+  // perimeter walls
+  const wallSpecs = [
+    [0,0.47,-2.55,3.4,1.15,0.36,0],
+    [0,0.47, 2.55,3.4,1.15,0.36,0],
+    [-2.75,0.47,0,3.6,1.15,0.36,Math.PI/2],
+    [ 2.75,0.47,0,3.6,1.15,0.36,Math.PI/2],
+  ];
+  wallSpecs.forEach((s,i)=>{
+    const [x,y,zw,h,d,ry]=s;
+    const g=new THREE.Group();
+    const wall=shadow(new THREE.Mesh(new RoundedBoxGeometry(w,h,d,3,0.045),mats.stone));
+    g.add(wall);
+    for(let j=-2;j<=2;j++){
+      const merlon=shadow(new THREE.Mesh(new RoundedBoxGeometry(0.38,0.33,0.42,2,0.03),mats.stoneDark));
+      merlon.position.set((w/5)*l,0.7,0);
+      g.add(merlon);
+    }
+    g.rotation.y=ry;
+    const ex = new THREE.Vector3((i===2?-6:i===3?6:0), 2.7+i*0.3, (i===0?-6:i===1?6:0));
+    addPart(g,new THREE.Vector3(x,y,z),ex,0.04+i*0.025);
+  });
+
+  // front gate and drawbridge
+  const gateGroup = new THREE.Group();
+  const gateFrame = shadow(new THREE.Mesh(new RoundedBoxGeometry(1.25,1.45,0.5,4,0.06),mats.stoneDark));
+  gateGroup.add(gateFrame);
+  const gate = shadow(new THREE.Mesh(new RoundedBoxGeometry(0.78,1.1,0.14,3,0.025),mats.gold));
+  gate.position.z=0.30;
+  gateGroup.add(gate);
+  addPart(gateGroup,new THREE.Vector3(0,0.36,2.67),new THREE.Vector3(0,4.2,7),0.16);
+
+  const bridgePivot = new THREE.Group();
+  bridgePivot.position.set(0,-0.08,2.85);
+  const bridge = shadow(new THREE.Mesh(new RoundedBoxGeometry(1.4,0.16,2.0,3,0.05),mats.wood));
+  bridge.position.z=0.9;
+  bridgePivot.add(bridge);
+  root.add(bridgePivot);
+
+  // four floating rune stones around keep
+  for (let i=0;i<8;i++) {
+    const rock = shadow(new THREE.Mesh(new THREE.DodecahedronGeometry(0.18+0.06*(i%3),0), i%2?mats.stone:mats.stoneDark));
+    const a=i/8*Math.PI*2;
+    rock.position.set(Math.cos(a)*1.7,3.5+(i%3)*0.35,Math.sin(a)*1.7);
+    root.add(rock);
+    floaters.push({rock,a,r:1.7+(i%2)*0.25,h:rock.position.y,s:0.5+0.12*i});
+  }
+
+  // banners
+  [-0.72,0.72].forEach((x)=>{
+    const banner = new THREE.Mesh(new THREE.PlaneGeometry(0.34,0.9,1,4),mats.banner);
+    banner.position.set(x,1.7,0.93);
+    root.add(banner);
+  });
+
+  const state = { progress:0, elapsed:0, battle:0 };
+
+  function ease(t){ return t*t*(3-2*t); }
+  function clamp01(v){ return Math.max(0,Math.min(1,v)); }
+
+  function setProgress(p){
+    state.progress = clamp01(p);
+    parts.forEach(({obj,home,explode,delay})=>{
+      const local = ease(clamp01((state.progress-delay)/(0.44-delay)));
+      obj.position.lerpVectors(home.clone().add(explode),home,local);
+      obj.scale.setScalar(0.72+0.28*local);
+    });
+
+    const gatePhase = ease(clamp01((p-0.33)/0.18));
+    gate.position.y = gatePhase*0.78;
+    bridgePivot.rotation.x = -gatePhase*1.05;
+
+    const battle = ease(clamp01((p-0.72)/0.24));
+    state.battle = battle;
+    towerGroups.forEach((g,i)=>{
+      const sx = i%2?1:-1;
+      const sz = i<2?-1:1;
+      g.position.x += sx * battle * 0.75;
+      g.position.z += sz * battle * 0.55;
+      g.rotation.y = sx*sz*battle*0.28;
+    });
+    keep.scale.y = 1 + battle*0.22;
+    keepRoof.position.y = 3.05 + battle*0.55;
+    crystal.scale.setScalar(1 + battle*0.45);
+  }
+
+  function animate(dt,elapsed){
+    state.elapsed=elapsed;
+    crystal.rotation.y += dt*1.2;
+    crystal.rotation.x += dt*0.35;
+    ring1.rotation.z += dt*0.55;
+    ring2.rotation.y -= dt*0.8;
+    mats.magic.emissiveIntensity = 1.5 + Math.sin(elapsed*3.2)*0.45 + state.battle*0.7;
+    floaters.forEach((f,i)=>{
+      const a=f.a+elapsed*f.s*0.25;
+      f.rock.position.x=Math.cos(a)*f.r;
+      f.rock.position.z=Math.sin(a)*f.r;
+      f.rock.position.y=f.h+Math.sin(elapsed*f.s+i)*0.18;
+      f.rock.rotation.x+=dt*(0.4+i*0.03);
+      f.rock.rotation.y+=dt*(0.6+i*0.02);
+    });
+    root.position.y = Math.sin(elapsed*0.8)*0.025;
+  }
+
+  setProgress(0);
+  root.userData.setProgress=setProgress;
+  root.userData.animate=animate;
+  root.userData.materials=mats;
+  return root;
+}
+
+
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.08;
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+document.querySelector('.stage').prepend(renderer.domElement);
+renderer.domElement.style.position='absolute';renderer.domElement.style.inset='0';renderer.domElement.style.width='100%';renderer.domElement.style.height='100%';
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x070b13);
+scene.fog=new THREE.FogExp2(0x070b13,0.032);
+const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);
+camera.position.set(8.4,6.0,9.6);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.target.set(0,1.1,0);controls.minDistance=6;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.49;
+
+scene.add(new THREE.HemisphereLight(0xbcdcff,0x161006,1.8));
+const key=new THREE.DirectionalLight(0xffeed2,3.4);key.position.set(7,11,6);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-9;key.shadow.camera.right=9;key.shadow.camera.top=9;key.shadow.camera.bottom=-9;scene.add(key);
+const rim=new THREE.DirectionalLight(0x6aa8ff,2.0);rim.position.set(-8,5,-7);scene.add(rim);
+const magicLight=new THREE.PointLight(0x6adfff,26,18,2);magicLight.position.set(0,4,0);scene.add(magicLight);
+
+const platform=new THREE.Mesh(new THREE.CylinderGeometry(4.8,5.3,.55,64),new THREE.MeshStandardMaterial({color:0x111824,roughness:.94,metalness:.08}));platform.position.y=-1.22;platform.receiveShadow=true;platform.castShadow=true;scene.add(platform);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(14,96),new THREE.MeshStandardMaterial({color:0x070b13,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-1.52;floor.receiveShadow=true;scene.add(floor);
+
+// star particles
+const starGeo=new THREE.BufferGeometry();const count=500;const pos=new Float32Array(count*3);for(let i=0;i<count;i++){const r=8+Math.random()*18,a=Math.random()*Math.PI*2,h=-1+Math.random()*13;pos[i*3]=Math.cos(a)*r;pos[i*3+1]=h;pos[i*3+2]=Math.sin(a)*r}starGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));scene.add(new THREE.Points(starGeo,new THREE.PointsMaterial({color:0x8fb8ff,size:.035,transparent:true,opacity:.55})));
+
+const castle=createCastle(THREE,RoundedBoxGeometry);castle.rotation.y=-.35;scene.add(castle);
+
+const composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,camera));const bloom=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.52,.7,.72);composer.addPass(bloom);
+
+const bar=document.getElementById('bar'),mode=document.getElementById('mode'),label=document.getElementById('label');
+const copy=[
+  ['ASSEMBLE','Pieces in the void','Every tower, wall and magic module starts detached. Scroll to pull the fortress together.'],
+  ['FORTIFY','The fortress locks together','Walls align, towers rise and the drawbridge opens as the castle becomes usable.'],
+  ['AWAKEN','Arcane core online','The crown crystal ignites. Rune stones orbit the keep and the whole scene gains magical energy.'],
+  ['BATTLE MODE','Fortress transformation','Corner towers spread outward, the keep extends and the castle shifts into a more aggressive silhouette.']
+];
+let progress=0,target=0,last=performance.now(),elapsed=0;
+function scrollProgress(){const max=document.documentElement.scrollHeight-innerHeight;return max>0?scrollY/max:0}
+addEventListener('scroll',()=>{target=scrollProgress()},{passive:true});
+function updateCopy(p){const idx=Math.min(3,Math.floor(p*4));const c=copy[idx];mode.textContent=c[0]€Xô[ö[õô\íSXèâÿ÷ÃW_O⁄èèâÿ÷Ãó_O‹òÿò\ãú›[Kù⁄YX	 
+åL
+Kù—ö^Y
+J_IX€XY⁄X”Y⁄ö[ù[ú⁄]OLN
+‹
+ååÿõ€€Kú›ô[ô›KåÕJ‹
+ãç_Bôù[ò›[€àX⁄ õ› ^ÿ€€ú›SX]õZ[ä
+õ›À[\›
+KÃLåJN€\›[õ›ŒŸ[\ŸY
+œY‹õŸ‹ô\‹ œH
+\ôŸ]\õŸ‹ô\‹ JìX]õZ[äK
+çãçJNÿÿ\›Kù\Ÿ\ë]KúŸ]õŸ‹ô\‹ õŸ‹ô\‹ Nÿÿ\›Kù\Ÿ\ë]Kò[ö[X]J[\ŸY
+Nÿÿ\›Kúõ›][€ãûH
+œH
+äåçJÀåÕJúõŸ‹ô\‹ Nÿ€€ùõ€Àù\]J
+N›\]P€‹JõŸ‹ô\‹ Nÿ€€\‹Ÿ\ãúô[ô\ä
+N‹ô\]Y\›[ö[X][€ëúò[YJX⁄ _\ô\]Y\›[ö[X][€ëúò[YJX⁄ N¬òY]ô[ù\›[ô\ä	‹ô\⁄^ôIÀ
+
+OOûÿÿ[Y\òKò\‹X›Z[õô\ï⁄Y⁄[õô\íZY⁄ÿÿ[Y\òKù\]Tõ⁄ôX›[€ìX]ö^
+
+N‹ô[ô\ô\ãúŸ]⁄^ôJ[õô\ï⁄Y[õô\íZY⁄
+Nÿ€€\‹Ÿ\ãúŸ]⁄^ôJ[õô\ï⁄Y[õô\íZY⁄
+_JN¬è‹ÿ‹ö\ÇèÿõŸOÇè⁄[Ç
