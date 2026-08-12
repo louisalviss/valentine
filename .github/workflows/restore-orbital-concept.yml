@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths: ['.github/workflows/restore-orbital-concept.yml']
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
