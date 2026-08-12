@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assembly Castle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="topbar">
+    <div class="brand">VALENTINE / CASTLE</div>
+    <div class="meta">
+      <span>Exploded Scroll Demo</span>
+      <span class="divider"></span>
+      <span id="stageNow">01</span>
+    </div>
+  </header>
+
+  <div class="progress"><i></i></div>
+
+  <main class="story">
+    <section class="panel hero">
+      <div class="copy">
+        <p class="eyebrow">Procedural 3D scene</p>
+        <h1>Lâu đài tháo lắp</h1>
+        <p class="lede">Cuộn xuống để tách từng module: nền đảo, cổng thành, tường bao, tháp góc, lõi keep, mái, cầu và chi tiết trang trí. Không dùng video. Không dùng GLB.</p>
+        <div class="chips">
+          <span>Scroll-driven</span>
+          <span>Realtime lighting</span>
+          <span>Exploded view</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel"><div class="copy"><p class="eyebrow">Stage 01</p><h2>Silhouette</h2><p>Khối tổng thể hiện ra từ sương và ánh sáng, ưu tiên cảm giác điện ảnh trước khi tách cấu trúc.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Stage 02</p><h2>Walls & Gate</h2><p>Tường thành, cổng chính và cầu bắt đầu tách ra, để lộ cấu trúc phòng thủ bên trong.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Stage 03</p><h2>Towers</h2><p>Bốn tháp góc và các turret nhỏ bung ra khỏi trục trung tâm như mô hình trưng bày.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Stage 04</p><h2>Inner Keep</h2><p>Khối keep trung tâm nâng lên, tách từng tầng và mái nhọn để nhấn chiều sâu lắp ghép.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Stage 05</p><h2>Details</h2><p>Lan can crenellation, cờ, cửa sổ phát sáng, đá nền, hào nước và particle không khí tạo cảm giác hoàn thiện.</p></div></section>
+    <section class="panel outro"><div class="copy"><p class="eyebrow">Interactive</p><h2>Kéo để xoay</h2><p>Trên desktop và mobile, có thể kéo ngang để đổi góc nhìn trong khi scroll vẫn điều khiển trạng thái tháo lắp.</p></div></section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
