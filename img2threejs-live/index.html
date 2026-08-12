@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>img2threejs Better Trial — Crown Chest</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#0d1117;color:#eef2f7;font:14px system-ui,-apple-system,sans-serif}
+#ui{position:fixed;left:16px;top:16px;z-index:2;background:rgba(11,16,22,.82);backdrop-filter:blur(10px);padding:14px 14px 12px;border:1px solid rgba(255,255,255,.08);border-radius:14px;width:255px;box-shadow:0 10px 40px rgba(0,0,0,.28)}
+#ui b{display:block;font-size:15px;margin-bottom:4px}
+#ui .sub{font-size:12px;opacity:.7;line-height:1.45;margin-bottom:10px}
+label{display:block;font-size:12px;margin:10px 0 4px;opacity:.82}
+input{width:100%}
+#btns{display:flex;gap:8px;margin-top:12px}
+button{flex:1;padding:8px 10px;border:0;border-radius:10px;background:#1c2733;color:#eef2f7;font-weight:600}
+button:hover{background:#243342}
+</style>
+</head>
+<body>
+<div id="ui">
+  <b>img2threejs — prettier pass</b>
+  <div class="sub">Object đã đổi sang stylized crown chest vì hợp procedural 3D hơn drone. Kéo để xoay, pinch để zoom.</div>
+  <label>Lid open</label><input id="lid" type="range" min="0" max="1" step="0.01" value="0.18">
+  <label>Turntable</label><input id="turn" type="range" min="0" max="1.5" step="0.01" value="0.22">
+  <label>Glow</label><input id="glow" type="range" min="0.3" max="2.0" step="0.01" value="1">
+  <div id="btns">
+    <button id="openBtn">Open</button>
+    <button id="closeBtn">Close</button>
+  </div>
+</div>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { createCrownChestModel } from './createCrownChestModel.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0f1520);
+scene.fog = new THREE.Fog(0x0f1520, 12, 22);
+
+const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
+camera.position.set(6.5, 4.2, 7.4);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.target.set(0, 0.65, 0);
+controls.minDistance = 4.2;
+controls.maxDistance = 12;
+controls.maxPolarAngle = Math.PI * 0.49;
+
+const hemi = new THREE.HemisphereLight(0xbfdcff, 0x1d1207, 1.7);
+scene.add(hemi);
+
+const key = new THREE.DirectionalLight(0xfff3d6, 2.8);
+key.position.set(6, 10, 6);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.near = 0.5;
+key.shadow.camera.far = 30;
+key.shadow.camera.left = -8;
+key.shadow.camera.right = 8;
+key.shadow.camera.top = 8;
+key.shadow.camera.bottom = -8;
+scene.add(key);
+
+const rim = new THREE.DirectionalLight(0x8cc2ff, 1.7);
+rim.position.set(-7, 4, -6);
+scene.add(rim);
+
+const warm = new THREE.PointLight(0xffc46a, 18, 14, 2);
+warm.position.set(0, 2.5, 4.3);
+scene.add(warm);
+
+const floor = new THREE.Mesh(
+  new THREE.CircleGeometry(7.5, 96),
+  new THREE.ShadowMaterial({ opacity: 0.28 })
+);
+floor.rotation.x = -Math.PI / 2;
+floor.position.y = -1.05;
+floor.receiveShadow = true;
+scene.add(floor);
+
+const stage = new THREE.Mesh(
+  new THREE.CylinderGeometry(3.8, 4.3, 0.5, 48),
+  new THREE.MeshStandardMaterial({ color: 0x18202b, roughness: 0.94, metalness: 0.08 })
+);
+stage.position.y = -1.28;
+stage.receiveShadow = true;
+stage.castShadow = true;
+scene.add(stage);
+
+const chest = createCrownChestModel(THREE, RoundedBoxGeometry, { lidOpen: 0.18 });
+chest.rotation.y = -0.55;
+scene.add(chest);
+
+const sparkles = [];
+const sparkleGeo = new THREE.OctahedronGeometry(0.035, 0);
+const sparkleMat = new THREE.MeshBasicMaterial({ color: 0xfff2b0 });
+for (let i = 0; i < 10; i++) {
+  const s = new THREE.Mesh(sparkleGeo, sparkleMat);
+  const angle = (i / 10) * Math.PI * 2;
+  s.userData = { angle, radius: 1.6 + Math.random() * 0.6, height: 1.1 + Math.random() * 0.9, speed: 0.6 + Math.random() * 0.9 };
+  scene.add(s);
+  sparkles.push(s);
+}
+
+const lidInput = document.getElementById('lid');
+const turnInput = document.getElementById('turn');
+const glowInput = document.getElementById('glow');
+document.getElementById('openBtn').onclick = () => { lidInput.value = '1'; };
+document.getElementById('closeBtn').onclick = () => { lidInput.value = '0'; };
+
+let last = performance.now();
+let elapsed = 0;
+
+function tick(now) {
+  const dt = Math.min((now - last) / 1000, 0.05);
+  last = now;
+  elapsed += dt;
+
+  chest.userData.setLidOpen(Number(lidInput.value));
+  chest.rotation.y += dt * Number(turnInput.value);
+  chest.userData.animate(dt, elapsed);
+
+  const glowScale = Number(glowInput.value);
+  warm.intensity = 18 * glowScale;
+
+  for (const s of sparkles) {
+    const a = s.userData.angle + elapsed * s.userData.speed;
+    s.position.set(Math.cos(a) * s.userData.radius, s.userData.height + Math.sin(a * 2.4) * 0.14, Math.sin(a) * s.userData.radius);
+    s.rotation.x += dt * 1.8;
+    s.rotation.y += dt * 2.7;
+    s.scale.setScalar(0.6 + 0.4 * (0.5 + Math.sin(elapsed * 5 + a) * 0.5));
+  }
+
+  controls.update();
+  renderer.render(scene, camera);
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>
