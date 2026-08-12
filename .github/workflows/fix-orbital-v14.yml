@@ -1,0 +1,16 @@
+name: Fix Orbital V14
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-orbital-v14.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decompress V14 HTML
+        run: python -c "import pathlib,zlib; p=pathlib.Path('orbital-shrine/index.html'); p.write_bytes(zlib.decompress(p.read_bytes()))"
+      - name: Commit repaired V14
+        run: git config user.name 'github-actions[bot]' && git config user.email '41898282+github-actions[bot]@users.noreply.github.com' && git rm .github/workflows/fix-orbital-v14.yml && git add orbital-shrine/index.html && git commit -m 'Orbital Shrine V14 — temple ascension live' && git push
