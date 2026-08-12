@@ -1,291 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Modular Fantasy Castle ‚Äî Three.js</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Fantasy Castle ‚Äî Compatibility Live</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;background:#070b13;color:#eef4ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}body{min-height:460vh;overscroll-behavior-y:none}.stage{position:sticky;top:0;height:100svh;overflow:hidden}.hud{position:absolute;z-index:5;left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right));top:max(14px,env(safe-area-inset-top));display:flex;justify-content:space-between;gap:12px;pointer-events:none}.card{pointer-events:auto;background:rgba(7,11,19,.68);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);border-radius:16px;padding:12px 14px;box-shadow:0 12px 36px rgba(0,0,0,.28)}.title{font-weight:800;font-size:14px;letter-spacing:.02em}.sub{font-size:11px;opacity:.68;margin-top:3px}.pill{font-size:11px;font-weight:700;padding:8px 10px;border-radius:999px;background:rgba(124,231,255,.12);border:1px solid rgba(124,231,255,.28);white-space:nowrap}.progress{position:absolute;left:18px;right:18px;bottom:max(16px,env(safe-area-inset-bottom));z-index:5;height:4px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#7ce7ff,#d7a74a);box-shadow:0 0 16px rgba(124,231,255,.6)}.hint{position:absolute;z-index:5;bottom:34px;left:50%;transform:translateX(-50%);font-size:11px;opacity:.62;pointer-events:none;white-space:nowrap}.sections{position:absolute;inset:0;pointer-events:none}.label{position:absolute;left:18px;bottom:78px;z-index:4;max-width:min(82vw,360px);transition:opacity .25s}.label h2{margin:0 0 6px;font-size:24px}.label p{margin:0;font-size:13px;line-height:1.45;opacity:.72}@media(max-width:600px){.label h2{font-size:21px}.card{padding:10px 12px}.pill{display:none}}
+*{box-sizing:border-box}html,body{margin:0;background:#07101d;color:#eef6ff;font-family:system-ui,-apple-system,sans-serif}body{min-height:420vh}.stage{position:sticky;top:0;height:100svh;min-height:100vh;overflow:hidden;background:radial-gradient(circle at 50% 40%,#172640 0,#07101d 70%)}canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.hud{position:absolute;z-index:10;left:14px;right:14px;top:max(14px,env(safe-area-inset-top));display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}.card,.mode{background:rgba(5,10,20,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);border-radius:14px;padding:10px 12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}.title{font-weight:800;font-size:13px}.sub{font-size:11px;opacity:.68;margin-top:3px}.mode{font-size:11px;font-weight:800;color:#8eeaff}.label{position:absolute;z-index:10;left:16px;bottom:62px;max-width:min(82vw,380px);pointer-events:none}.label h2{margin:0 0 5px;font-size:22px}.label p{margin:0;font-size:12px;line-height:1.45;opacity:.72}.progress{position:absolute;z-index:10;left:16px;right:16px;bottom:max(18px,env(safe-area-inset-bottom));height:4px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#76e8ff,#f0c363)}.error{display:none;position:absolute;z-index:20;inset:20% 10%;padding:18px;border-radius:14px;background:#2a0d15;border:1px solid #ff7c9b;color:#ffe9ee;font-size:13px;line-height:1.5}.hint{position:absolute;z-index:10;right:16px;bottom:58px;font-size:10px;opacity:.5}@media(max-width:600px){.mode{display:none}.label h2{font-size:20px}.hint{display:none}}
 </style>
 </head>
 <body>
-<div class="stage">
-  <div class="hud"><div class="card"><div class="title">MODULAR FANTASY CASTLE</div><div class="sub">Scroll to assemble ‚Üí activate ‚Üí transform</div></div><div id="mode" class="pill">ASSEMBLE</div></div>
-  <div id="label" class="label"><h2>Pieces in the void</h2><p>Every tower, wall and magic module starts detached. Scroll to pull the fortress together.</p></div>
-  <div class="hint">Drag to orbit ¬∑ pinch to zoom ¬∑ scroll to transform</div>
-  <div class="progress"><div id="bar" class="bar"></div></div>
+<div class="stage" id="stage">
+  <div class="hud"><div class="card"><div class="title">MODULAR FANTASY CASTLE</div><div class="sub">Scroll to assemble ‚Üí awaken ‚Üí battle mode</div></div><div class="mode" id="mode">ASSEMBLE</div></div>
+  <div class="label" id="label"><h2>Pieces in the void</h2><p>Scroll down. Towers and walls fly together into a fortress.</p></div>
+  <div class="hint">Drag to orbit ¬∑ pinch to zoom</div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <div class="error" id="error"></div>
 </div>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"}}</script>
-<script type="module">
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-function createCastle(THREE, RoundedBoxGeometry) {
-  const root = new THREE.Group();
-  root.name = 'ModularFantasyCastle';
-
-  const mats = {
-    stone: new THREE.MeshPhysicalMaterial({ color: 0x6e7782, roughness: 0.78, metalness: 0.02, clearcoat: 0.05 }),
-    stoneDark: new THREE.MeshPhysicalMaterial({ color: 0x39414b, roughness: 0.88, metalness: 0.01 }),
-    roof: new THREE.MeshPhysicalMaterial({ color: 0x243c65, roughness: 0.42, metalness: 0.28, clearcoat: 0.45 }),
-    gold: new THREE.MeshPhysicalMaterial({ color: 0xd7a74a, roughness: 0.25, metalness: 0.92, clearcoat: 0.55 }),
-    wood: new THREE.MeshPhysicalMaterial({ color: 0x56351f, roughness: 0.8, metalness: 0.02 }),
-    magic: new THREE.MeshPhysicalMaterial({ color: 0x7ce7ff, emissive: 0x1b8cae, emissiveIntensity: 1.7, roughness: 0.1, metalness: 0.05, transmission: 0.18, thickness: 0.4, clearcoat: 1 }),
-    magic2: new THREE.MeshBasicMaterial({ color: 0xa3f0ff, transparent: true, opacity: 0.7 }),
-    banner: new THREE.MeshStandardMaterial({ color: 0x8f2f46, roughness: 0.62, metalness: 0.04, side: THREE.DoubleSide }),
-  };
-
-  const parts = [];
-  const floaters = [];
-  const battlements = [];
-
-  function shadow(mesh) {
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
-    return mesh;
-  }
-  function addPart(obj, home, explode, delay = 0) {
-    obj.position.copy(home).add(explode);
-    root.add(obj);
-    parts.push({ obj, home: home.clone(), explode: explode.clone(), delay });
-    return obj;
-  }
-
-  const base = shadow(new THREE.Mesh(new THREE.CylinderGeometry(3.35, 3.8, 0.72, 8), mats.stoneDark));
-  addPart(base, new THREE.Vector3(0,-0.55,0), new THREE.Vector3(0,-2.8,0), 0);
-
-  const courtyard = shadow(new THREE.Mesh(new THREE.CylinderGeometry(2.8, 3.05, 0.42, 8), mats.stone));
-  addPart(courtyard, new THREE.Vector3(0,-0.12,0), new THREE.Vector3(0,-2.2,0), 0.03);
-
-  const keep = shadow(new THREE.Mesh(new RoundedBoxGeometry(2.1, 2.45, 1.8, 5, 0.11), mats.stone));
-  addPart(keep, new THREE.Vector3(0,1.18,0), new THREE.Vector3(0,5.6,-1.8), 0.12);
-
-  const keepRoof = shadow(new THREE.Mesh(new THREE.ConeGeometry(1.42,1.35,4), mats.roof));
-  keepRoof.rotation.y = Math.PI/4;
-  addPart(keepRoof, new THREE.Vector3(0,3.05,0), new THREE.Vector3(0,6.8,-2.5), 0.17);
-
-  const crystal = shadow(new THREE.Mesh(new THREE.OctahedronGeometry(0.44,1), mats.magic));
-  addPart(crystal, new THREE.Vector3(0,4.0,0), new THREE.Vector3(0,8.2,0), 0.27);
-
-  const ring1 = new THREE.Mesh(new THREE.TorusGeometry(0.78,0.028,8,64), mats.magic2);
-  ring1.rotation.x = Math.PI/2.4;
-  addPart(ring1, new THREE.Vector3(0,4.0,0), new THREE.Vector3(-5,7,0), 0.32);
-  const ring2 = new THREE.Mesh(new THREE.TorusGeometry(0.58,0.02,8,64), mats.magic2);
-  ring2.rotation.x = Math.PI/2;
-  ring2.rotation.z = Math.PI/4;
-  addPart(ring2, new THREE.Vector3(0,4.0,0), new THREE.Vector3(5,7,0), 0.34);
-
-  const towerHomes = [
-    [-2.25,0.75,-2.0], [2.25,0.75,-2.0], [-2.25,0.75,2.0], [2.25,0.75,2.0]
-  ];
-  const towerGroups = [];
-  towerHomes.forEach(([x,y,z], i) => {
-    const g = new THREE.Group();
-    const body = shadow(new THREE.Mesh(new THREE.CylinderGeometry(0.7,0.82,2.45,8), mats.stone));
-    body.position.y = 0;
-    g.add(body);
-    const collar = shadow(new THREE.Mesh(new THREE.CylinderGeometry(0.86,0.86,0.18,8), mats.gold));
-    collar.position.y = 1.02;
-    g.add(collar);
-    const roof = shadow(new THREE.Mesh(new THREE.ConeGeometry(0.98,1.35,8), mats.roof));
-    roof.position.y = 1.84;
-    g.add(roof);
-    const spire = shadow(new THREE.Mesh(new THREE.ConeGeometry(0.08,0.7,8), mats.gold));
-    spire.position.y = 2.75;
-    g.add(spire);
-
-    for (let b=0;b<8;b++) {
-      const merlon = shadow(new THREE.Mesh(new RoundedBoxGeometry(0.2,0.28,0.18,2,0.025), mats.stoneDark));
-      const a = b/8*Math.PI*2;
-      merlon.position.set(Math.cos(a)*0.69,1.24,Math.sin(a)*0.69);
-      merlon.rotation.y = -a;
-      g.add(merlon);
-      battlements.push(merlon);
-    }
-
-    const ex = new THREE.Vector3((i%2?1:-1)*5.8, 3.8 + i*0.6, (i<2?-1:1)*5.5);
-    addPart(g, new THREE.Vector3(x,y,z), ex, 0.08 + i*0.035);
-    towerGroups.push(g);
-  });
-
-  // perimeter walls
-  const wallSpecs = [
-    [0,0.47,-2.55,3.4,1.15,0.36,0],
-    [0,0.47, 2.55,3.4,1.15,0.36,0],
-    [-2.75,0.47,0,3.6,1.15,0.36,Math.PI/2],
-    [ 2.75,0.47,0,3.6,1.15,0.36,Math.PI/2],
-  ];
-  wallSpecs.forEach((s,i)=>{
-    const [x,y,zw,h,d,ry]=s;
-    const g=new THREE.Group();
-    const wall=shadow(new THREE.Mesh(new RoundedBoxGeometry(w,h,d,3,0.045),mats.stone));
-    g.add(wall);
-    for(let j=-2;j<=2;j++){
-      const merlon=shadow(new THREE.Mesh(new RoundedBoxGeometry(0.38,0.33,0.42,2,0.03),mats.stoneDark));
-      merlon.position.set((w/5)*l,0.7,0);
-      g.add(merlon);
-    }
-    g.rotation.y=ry;
-    const ex = new THREE.Vector3((i===2?-6:i===3?6:0), 2.7+i*0.3, (i===0?-6:i===1?6:0));
-    addPart(g,new THREE.Vector3(x,y,z),ex,0.04+i*0.025);
-  });
-
-  // front gate and drawbridge
-  const gateGroup = new THREE.Group();
-  const gateFrame = shadow(new THREE.Mesh(new RoundedBoxGeometry(1.25,1.45,0.5,4,0.06),mats.stoneDark));
-  gateGroup.add(gateFrame);
-  const gate = shadow(new THREE.Mesh(new RoundedBoxGeometry(0.78,1.1,0.14,3,0.025),mats.gold));
-  gate.position.z=0.30;
-  gateGroup.add(gate);
-  addPart(gateGroup,new THREE.Vector3(0,0.36,2.67),new THREE.Vector3(0,4.2,7),0.16);
-
-  const bridgePivot = new THREE.Group();
-  bridgePivot.position.set(0,-0.08,2.85);
-  const bridge = shadow(new THREE.Mesh(new RoundedBoxGeometry(1.4,0.16,2.0,3,0.05),mats.wood));
-  bridge.position.z=0.9;
-  bridgePivot.add(bridge);
-  root.add(bridgePivot);
-
-  // four floating rune stones around keep
-  for (let i=0;i<8;i++) {
-    const rock = shadow(new THREE.Mesh(new THREE.DodecahedronGeometry(0.18+0.06*(i%3),0), i%2?mats.stone:mats.stoneDark));
-    const a=i/8*Math.PI*2;
-    rock.position.set(Math.cos(a)*1.7,3.5+(i%3)*0.35,Math.sin(a)*1.7);
-    root.add(rock);
-    floaters.push({rock,a,r:1.7+(i%2)*0.25,h:rock.position.y,s:0.5+0.12*i});
-  }
-
-  // banners
-  [-0.72,0.72].forEach((x)=>{
-    const banner = new THREE.Mesh(new THREE.PlaneGeometry(0.34,0.9,1,4),mats.banner);
-    banner.position.set(x,1.7,0.93);
-    root.add(banner);
-  });
-
-  const state = { progress:0, elapsed:0, battle:0 };
-
-  function ease(t){ return t*t*(3-2*t); }
-  function clamp01(v){ return Math.max(0,Math.min(1,v)); }
-
-  function setProgress(p){
-    state.progress = clamp01(p);
-    parts.forEach(({obj,home,explode,delay})=>{
-      const local = ease(clamp01((state.progress-delay)/(0.44-delay)));
-      obj.position.lerpVectors(home.clone().add(explode),home,local);
-      obj.scale.setScalar(0.72+0.28*local);
-    });
-
-    const gatePhase = ease(clamp01((p-0.33)/0.18));
-    gate.position.y = gatePhase*0.78;
-    bridgePivot.rotation.x = -gatePhase*1.05;
-
-    const battle = ease(clamp01((p-0.72)/0.24));
-    state.battle = battle;
-    towerGroups.forEach((g,i)=>{
-      const sx = i%2?1:-1;
-      const sz = i<2?-1:1;
-      g.position.x += sx * battle * 0.75;
-      g.position.z += sz * battle * 0.55;
-      g.rotation.y = sx*sz*battle*0.28;
-    });
-    keep.scale.y = 1 + battle*0.22;
-    keepRoof.position.y = 3.05 + battle*0.55;
-    crystal.scale.setScalar(1 + battle*0.45);
-  }
-
-  function animate(dt,elapsed){
-    state.elapsed=elapsed;
-    crystal.rotation.y += dt*1.2;
-    crystal.rotation.x += dt*0.35;
-    ring1.rotation.z += dt*0.55;
-    ring2.rotation.y -= dt*0.8;
-    mats.magic.emissiveIntensity = 1.5 + Math.sin(elapsed*3.2)*0.45 + state.battle*0.7;
-    floaters.forEach((f,i)=>{
-      const a=f.a+elapsed*f.s*0.25;
-      f.rock.position.x=Math.cos(a)*f.r;
-      f.rock.position.z=Math.sin(a)*f.r;
-      f.rock.position.y=f.h+Math.sin(elapsed*f.s+i)*0.18;
-      f.rock.rotation.x+=dt*(0.4+i*0.03);
-      f.rock.rotation.y+=dt*(0.6+i*0.02);
-    });
-    root.position.y = Math.sin(elapsed*0.8)*0.025;
-  }
-
-  setProgress(0);
-  root.userData.setProgress=setProgress;
-  root.userData.animate=animate;
-  root.userData.materials=mats;
-  return root;
-}
-
-
-const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
-renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
-renderer.setSize(innerWidth,innerHeight);
-renderer.outputColorSpace=THREE.SRGBColorSpace;
-renderer.toneMapping=THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure=1.08;
-renderer.shadowMap.enabled=true;
-renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-document.querySelector('.stage').prepend(renderer.domElement);
-renderer.domElement.style.position='absolute';renderer.domElement.style.inset='0';renderer.domElement.style.width='100%';renderer.domElement.style.height='100%';
-
-const scene=new THREE.Scene();
-scene.background=new THREE.Color(0x070b13);
-scene.fog=new THREE.FogExp2(0x070b13,0.032);
-const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);
-camera.position.set(8.4,6.0,9.6);
-const controls=new OrbitControls(camera,renderer.domElement);
-controls.enableDamping=true;controls.target.set(0,1.1,0);controls.minDistance=6;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.49;
-
-scene.add(new THREE.HemisphereLight(0xbcdcff,0x161006,1.8));
-const key=new THREE.DirectionalLight(0xffeed2,3.4);key.position.set(7,11,6);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-9;key.shadow.camera.right=9;key.shadow.camera.top=9;key.shadow.camera.bottom=-9;scene.add(key);
-const rim=new THREE.DirectionalLight(0x6aa8ff,2.0);rim.position.set(-8,5,-7);scene.add(rim);
-const magicLight=new THREE.PointLight(0x6adfff,26,18,2);magicLight.position.set(0,4,0);scene.add(magicLight);
-
-const platform=new THREE.Mesh(new THREE.CylinderGeometry(4.8,5.3,.55,64),new THREE.MeshStandardMaterial({color:0x111824,roughness:.94,metalness:.08}));platform.position.y=-1.22;platform.receiveShadow=true;platform.castShadow=true;scene.add(platform);
-const floor=new THREE.Mesh(new THREE.CircleGeometry(14,96),new THREE.MeshStandardMaterial({color:0x070b13,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-1.52;floor.receiveShadow=true;scene.add(floor);
-
-// star particles
-const starGeo=new THREE.BufferGeometry();const count=500;const pos=new Float32Array(count*3);for(let i=0;i<count;i++){const r=8+Math.random()*18,a=Math.random()*Math.PI*2,h=-1+Math.random()*13;pos[i*3]=Math.cos(a)*r;pos[i*3+1]=h;pos[i*3+2]=Math.sin(a)*r}starGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));scene.add(new THREE.Points(starGeo,new THREE.PointsMaterial({color:0x8fb8ff,size:.035,transparent:true,opacity:.55})));
-
-const castle=createCastle(THREE,RoundedBoxGeometry);castle.rotation.y=-.35;scene.add(castle);
-
-const composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,camera));const bloom=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.52,.7,.72);composer.addPass(bloom);
-
-const bar=document.getElementById('bar'),mode=document.getElementById('mode'),label=document.getElementById('label');
-const copy=[
-  ['ASSEMBLE','Pieces in the void','Every tower, wall and magic module starts detached. Scroll to pull the fortress together.'],
-  ['FORTIFY','The fortress locks together','Walls align, towers rise and the drawbridge opens as the castle becomes usable.'],
-  ['AWAKEN','Arcane core online','The crown crystal ignites. Rune stones orbit the keep and the whole scene gains magical energy.'],
-  ['BATTLE MODE','Fortress transformation','Corner towers spread outward, the keep extends and the castle shifts into a more aggressive silhouette.']
-];
-let progress=0,target=0,last=performance.now(),elapsed=0;
-function scrollProgress(){const max=document.documentElement.scrollHeight-innerHeight;return max>0?scrollY/max:0}
-addEventListener('scroll',()=>{target=scrollProgress()},{passive:true});
-function updateCopy(p){const idx=Math.min(3,Math.floor(p*4));const c=copy[idx];mode.textContent=c[0]€Xô[ö[õô\íSXèâÿ÷ÃW_O⁄èèâÿ÷Ãó_O‹òÿò\ãú›[Kù⁄YX	 
-åL
-Kù—ö^Y
-J_IX€XY⁄X”Y⁄ö[ù[ú⁄]OLN
-‹
-ååÿõ€€Kú›ô[ô›KåÕJ‹
-ãç_Bôù[ò›[€àX⁄ õ› ^ÿ€€ú›SX]õZ[ä
-õ›À[\›
-KÃLåJN€\›[õ›ŒŸ[\ŸY
-œY‹õŸ‹ô\‹ œH
-\ôŸ]\õŸ‹ô\‹ JìX]õZ[äK
-çãçJNÿÿ\›Kù\Ÿ\ë]KúŸ]õŸ‹ô\‹ õŸ‹ô\‹ Nÿÿ\›Kù\Ÿ\ë]Kò[ö[X]J[\ŸY
-Nÿÿ\›Kúõ›][€ãûH
-œH
-äåçJÀåÕJúõŸ‹ô\‹ Nÿ€€ùõ€Àù\]J
-N›\]P€‹JõŸ‹ô\‹ Nÿ€€\‹Ÿ\ãúô[ô\ä
-N‹ô\]Y\›[ö[X][€ëúò[YJX⁄ _\ô\]Y\›[ö[X][€ëúò[YJX⁄ N¬òY]ô[ù\›[ô\ä	‹ô\⁄^ôIÀ
-
-OOûÿÿ[Y\òKò\‹X›Z[õô\ï⁄Y⁄[õô\íZY⁄ÿÿ[Y\òKù\]Tõ⁄ôX›[€ìX]ö^
-
-N‹ô[ô\ô\ãúŸ]⁄^ôJ[õô\ï⁄Y[õô\íZY⁄
-Nÿ€€\‹Ÿ\ãúŸ]⁄^ôJ[õô\ï⁄Y[õô\íZY⁄
-_JN¬è‹ÿ‹ö\ÇèÿõŸOÇè⁄[Ç
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const err=document.getElementById('error');
+  function fail(msg){err.style.display='block';err.textContent='3D load error: '+msg;}
+  if(!window.THREE){fail('Three.js CDN did not load. Try opening in Safari.');return;}
+  try{
+    const T=THREE, stage=document.getElementById('stage');
+    const renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.outputEncoding=T.sRGBEncoding;stage.insertBefore(renderer.domElement,stage.firstChild);
+    const scene=new T.Scene();scene.background=new T.Color(0x07101d);scene.fog=new T.Fog(0x07101d,14,34);
+    const camera=new T.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);let yaw=.72,pitch=.45,dist=13;const target=new T.Vector3(0,1,0);
+    function cameraUpdate(){const cp=Math.cos(pitch);camera.position.set(target.x+dist*Math.sin(yaw)*cp,target.y+dist*Math.sin(pitch),target.z+dist*Math.cos(yaw)*cp);camera.lookAt(target)}cameraUpdate();
+    scene.add(new T.HemisphereLight(0xb8dcff,0x171009,1.7));const key=new T.DirectionalLight(0xffefd3,2.4);key.position.set(7,11,6);key.castShadow=true;key.shadow.mapSize.width=1024;key.shadow.mapSize.height=1024;scene.add(key);const rim=new T.DirectionalLight(0x6e9fff,1.2);rim.position.set(-7,5,-7);scene.add(rim);const glow=new T.PointLight(0x55dfff,2.0,18);glow.position.set(0,4,0);scene.add(glow);
+    const stone=new T.MeshStandardMaterial({color:0x707985,roughness:.82,metalness:.02}),dark=new T.MeshStandardMaterial({color:0x353d48,roughness:.92}),roof=new T.MeshStandardMaterial({color:0x263f69,roughness:.45,metalness:.25}),gold=new T.MeshStandardMaterial({color:0xd9aa4b,roughness:.3,metalness:.8}),wood=new T.MeshStandardMaterial({color:0x57351f,roughness:.8}),magic=new T.MeshStandardMaterial({color:0x70e8ff,emissive:0x198fac,emissiveIntensity:1.5,roughness:.18});
+    const root=new T.Group();root.rotation.y=-.35;scene.add(root);const parts=[];
+    function mesh(g,m){const x=new T.Mesh(g,m);x.castShadow=true;x.receiveShadow=true;return x}
+    function add(obj,home,off,delay){obj.position.copy(home).add(off);root.add(obj);parts.push({obj,home,off,delay:delay||0});return obj}
+    add(mesh(new T.CylinderGeometry(3.5,4,.75,8),dark),new T.Vector3(0,-.55,0),new T.Vector3(0,-3,0),0);
+    add(mesh(new T.CylinderGeometry(2.9,3.2,.42,8),stone),new T.Vector3(0,-.12,0),new T.Vector3(0,-2.4,0),.02);
+    const keep=add(mesh(new T.BoxGeometry(2.2,2.5,1.9),stone),new T.Vector3(0,1.2,0),new T.Vector3(0,6,-2),.14);
+    const keepRoof=mesh(new T.ConeGeometry(1.5,1.5,4),roof);keepRoof.rotation.y=Math.PI/4;add(keepRoof,new T.Vector3(0,3.2,0),new T.Vector3(0,7,-2.4),.18);
+    const crystal=add(mesh(new T.OctahedronGeometry(.48,1),magic),new T.Vector3(0,4.3,0),new T.Vector3(0,8,0),.28);
+    const towers=[];[[-2.3,.8,-2],[2.3,.8,-2],[-2.3,.8,2],[2.3,.8,2]].forEach((p,i)=>{const g=new T.Group();const body=mesh(new T.CylinderGeometry(.72,.84,2.5,8),stone);g.add(body);const collar=mesh(new T.CylinderGeometry(.9,.9,.18,8),gold);collar.position.y=1.02;g.add(collar);const r=mesh(new T.ConeGeometry(1,1.45,8),roof);r.position.y=1.9;g.add(r);const s=mesh(new T.ConeGeometry(.09,.75,8),gold);s.position.y=2.85;g.add(s);for(let k=0;k<8;k++){const b=mesh(new T.BoxGeometry(.2,.3,.2),dark),a=k/8*Math.PI*2;b.position.set(Math.cos(a)*.7,1.28,Math.sin(a)*.7);g.add(b)}const off=new T.Vector3((i%2?1:-1)*6,4+i*.5,(i<2?-1:1)*5.5);add(g,new T.Vector3(p[0],p[1],p[2]),off,.08+i*.035);towers.push(g)});
+    [[0,.5,-2.6,3.5,0],[0,.5,2.6,3.5,0],[-2.8,.5,0,3.8,Math.PI/2],[2.8,.5,0,3.8,Math.PI/2]].forEach((s,i)=>{const g=new T.Group(),w=mesh(new T.BoxGeometry(s[3],1.15,.38),stone);g.add(w);for(let j=-2;j<=2;j++){const b=mesh(new T.BoxGeometry(.4,.35,.45),dark);b.position.set(j*s[3]/5,.74,0);g.add(b)}g.rotation.y=s[4];let off=new T.Vector3(i===2?-6:i===3?6:0,3+i*.3,i===0?-6:i===1?6:0);add(g,new T.Vector3(s[0],s[1],s[2]),off,.04+i*.025)});
+    const gateG=new T.Group(),frame=mesh(new T.BoxGeometry(1.3,1.5,.5),dark),gate=mesh(new T.BoxGeometry(.8,1.12,.16),gold);gate.position.z=.31;gateG.add(frame,gate);add(gateG,new T.Vector3(0,.37,2.72),new T.Vector3(0,4,7),.17);
+    const bridgePivot=new T.Group();bridgePivot.position.set(0,-.08,2.85);const bridge=mesh(new T.BoxGeometry(1.45,.17,2),wood);bridge.position.z=.9;bridgePivot.add(bridge);root.add(bridgePivot);
+    const floaters=[];for(let i=0;i<8;i++){const r=mesh(new T.DodecahedronGeometry(.18+.04*(i%3),0),i%2?stone:dark),a=i/8*Math.PI*2;r.position.set(Math.cos(a)*1.8,3.4+(i%3)*.35,Math.sin(a)*1.8);root.add(r);floaters.push({r,a,h:r.position.y,rr:1.8+(i%2)*.22,s:.45+i*.07})}
+    const platform=mesh(new T.CylinderGeometry(4.8,5.4,.55,48),new T.MeshStandardMaterial({color:0x111927,roughness:.95,metalness:.05}));platform.position.y=-1.25;scene.add(platform);const floor=mesh(new T.CircleGeometry(14,64),new T.MeshStandardMaterial({color:0x07101d,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-1.53;scene.add(floor);
+    function clamp(v){return Math.max(0,Math.min(1,v))}function ease(t){return t*t*(3-2*t)}let battle=0;
+    function setProgress(p){parts.forEach(x=>{const l=ease(clamp((p-x.delay)/(Math.max(.46-x.delay,.05))));x.obj.position.copy(x.home).addScaledVector(x.off,1-l);x.obj.scale.setScalar(.74+.26*l)});const gp=ease(clamp((p-.34)/.18));gate.position.y=gp*.78;bridgePivot.rotation.x=-gp*1.05;battle=ease(clamp((p-.72)/.24));towers.forEach((g,i)=>{const sx=i%2?1:-1,sz=i<2?-1:1;const base=[[-2.3,.8,-2],[2.3,.8,-2],[-2.3,.8,2],[2.3,.8,2]][i];g.position.x=base[0]+sx*battle*.8;g.position.z=base[2]+sz*battle*.6;g.rotation.y=sx*sz*battle*.28});keep.scale.y=1+battle*.2;crystal.scale.setScalar(1+battle*.5)}
+    let targetP=0,p=.001,last=performance.now(),elapsed=0;const bar=document.getElementById('bar'),mode=document.getElementById('mode'),label=document.getElementById('label');const copy=[['ASSEMBLE','Pieces in the void','Scroll down. Towers and walls fly together into a fortress.'],['FORTIFY','Fortress locked','The walls align and the drawbridge opens.'],['AWAKEN','Arcane core online','The central crystal wakes and rune stones begin to orbit.'],['BATTLE MODE','Fortress transformation','Corner towers spread outward and the castle shifts into battle form.']];
+    function scrollP(){const m=document.documentElement.scrollHeight-innerHeight;return m>0?scrollY/m:0}addEventListener('scroll',()=>targetP=scrollP(),{passive:true});
+    function ui(v){const i=Math.min(3,Math.floor(v*4)),c=copy[i];mode.textContent=c[0];label.innerHTML='<h2>'+c[1]+'</h2><p>'+c[2]+'</p>';bar.style.width=(v*100).toFixed(1)+'%';glow.intensity=1.5+v*3}
+    function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;elapsed+=dt;p+=(targetP-p)*Math.min(1,dt*6);setProgress(p);crystal.rotation.y+=dt*1.2;crystal.rotation.x+=dt*.35;magic.emissiveIntensity=1.2+Math.sin(elapsed*3)*.45+battle*.8;floaters.forEach((f,i)=>{const a=f.a+elapsed*f.s*.25;f.r.position.set(Math.cos(a)*f.rr,f.h+Math.sin(elapsed*f.s+i)*.18,Math.sin(a)*f.rr);f.r.rotation.x+=dt*.5;f.r.rotation.y+=dt*.7});root.rotation.y+=dt*(.018+.025*p);ui(p);cameraUpdate();renderer.render(scene,camera);requestAnimationFrame(tick)}requestAnimationFrame(tick);
+    let drag=false,lx=0,ly=0,pinch=0;renderer.domElement.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;ly=e.clientY;renderer.domElement.setPointerCapture&&renderer.domElement.setPointerCapture(e.pointerId)});renderer.domElement.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;yaw-=dx*.006;pitch=clamp((pitch-dy*.004+.2)/1.4)*1.4-.2;cameraUpdate()});renderer.domElement.addEventListener('pointerup',()=>drag=false);renderer.domElement.addEventListener('wheel',e=>{dist=Math.max(6,Math.min(18,dist+e.deltaY*.01));cameraUpdate()},{passive:true});renderer.domElement.addEventListener('touchmove',e=>{if(e.touches.length===2){const a=e.touches[0],b=e.touches[1],d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);if(pinch)dist=Math.max(6,Math.min(18,dist+(pinch-d)*.015));pinch=d;cameraUpdate()}},{passive:true});renderer.domElement.addEventListener('touchend',()=>pinch=0,{passive:true});
+    addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+  }catch(e){fail(e&&e.message?e.message:String(e));}
+})();
+</script>
+</body></html>
