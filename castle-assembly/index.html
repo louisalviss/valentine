@@ -1,40 +1,53 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#05070c" />
-  <title>Nocturne Citadel — Exploded Castle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assembly Castle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body data-version="2">
+<body>
+  <div class="backdrop"></div>
   <canvas id="scene"></canvas>
-  <div class="grain"></div>
-  <div class="vignette"></div>
 
   <header class="topbar">
-    <div class="brand"><span>VALENTINE</span><b>NOCTURNE CITADEL</b></div>
-    <div class="stage"><span id="stageNow">01</span><i></i><span>06</span></div>
+    <div class="brand">VALENTINE / CASTLE</div>
+    <div class="meta">
+      <span>Exploded Architectural Cutaway</span>
+      <span class="divider"></span>
+      <span id="stageNow">01</span>
+    </div>
   </header>
 
-  <div class="rail"><i></i></div>
-  <div class="hint">SCROLL TO DISASSEMBLE</div>
+  <div class="progress"><i></i></div>
 
-  <main>
-    <section class="chapter hero">
+  <main class="story">
+    <section class="panel hero">
       <div class="copy">
-        <span class="kicker">A procedural Three.js study</span>
-        <h1>Nocturne<br>Citadel</h1>
-        <p>Một lâu đài fantasy dựng hoàn toàn bằng code. Cuộn để tháo từng lớp kiến trúc nhưng vẫn giữ bố cục như một mô hình trưng bày cao cấp.</p>
+        <p class="eyebrow">Procedural fantasy structure</p>
+        <h1>Lâu đài mở từng phòng</h1>
+        <p class="lede">Toàn cảnh nhỏ hơn để luôn thấy rõ silhouette. Cuộn xuống để rã từng lớp: đảo đá, tường thành, cầu, gatehouse, keep, từng tầng, từng wing, rồi mở từng phòng như mô hình cắt lớp.</p>
+        <div class="chips">
+          <span>Full overview</span>
+          <span>More steps</span>
+          <span>Room-by-room</span>
+        </div>
       </div>
     </section>
 
-    <section class="chapter"><div class="copy small"><span class="kicker">01 — Foundation</span><h2>Cliff & moat</h2><p>Khối đá nền, hào nước và cầu dẫn tạo trọng lượng cho toàn bộ silhouette.</p></div></section>
-    <section class="chapter right"><div class="copy small"><span class="kicker">02 — Defense</span><h2>Walls & gatehouse</h2><p>Tường thành, cổng Gothic và các tháp phòng thủ tách thành một vòng ngoài rõ cấu trúc.</p></div></section>
-    <section class="chapter"><div class="copy small"><span class="kicker">03 — Verticality</span><h2>Towers</h2><p>Các tháp cao thấp khác nhau nâng lên theo tầng, tạo cảm giác kiến trúc thật thay vì mô hình đồ chơi.</p></div></section>
-    <section class="chapter right"><div class="copy small"><span class="kicker">04 — Inner keep</span><h2>The heart</h2><p>Lõi trung tâm, mái slate và spire được tách dọc trục đứng như bản vẽ exploded view.</p></div></section>
-    <section class="chapter"><div class="copy small"><span class="kicker">05 — Ornament</span><h2>Light & detail</h2><p>Cửa sổ ấm, buttress, ban công, cờ và ánh trăng hoàn thiện cảm giác cinematic.</p></div></section>
-    <section class="chapter final"><div class="copy small"><span class="kicker">06 — Interactive</span><h2>Drag to orbit</h2><p>Kéo ngang để xoay. Cuộn ngược để lắp lại toàn bộ lâu đài.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 01</p><h2>Overview</h2><p>Giữ nguyên silhouette để thấy tổng thể toàn lâu đài.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 02</p><h2>Island</h2><p>Đảo đá và hào nước hạ thấp để lâu đài nổi bật hơn.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 03</p><h2>Outer Walls</h2><p>Tường ngoài và cầu chính tách ra khỏi lõi trung tâm.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 04</p><h2>Gatehouse</h2><p>Gatehouse tách thành base, upper chamber và mái.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 05</p><h2>Corner Towers</h2><p>Bốn tháp góc bung rộng ra để nhìn rõ không gian trong thành.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 06</p><h2>Keep Floors</h2><p>Khối keep tách thành plinth, lower hall, upper hall và mái.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 07</p><h2>Side Wings</h2><p>Bốn cánh phòng phụ kéo ra khỏi keep như mô hình lắp ghép.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 08</p><h2>Open Rooms</h2><p>Từng phòng nhỏ mở ra riêng: front hall, archive, chapel, armory, library, chamber.</p></div></section>
+    <section class="panel"><div class="copy"><p class="eyebrow">Step 09</p><h2>Roofs & Bridges</h2><p>Mái, spire và các cầu nối tách riêng để thấy khung cấu trúc.</p></div></section>
+    <section class="panel outro"><div class="copy"><p class="eyebrow">Interactive</p><h2>Xoay và soi</h2><p>Kéo để xoay. Scroll điều khiển toàn bộ chuỗi tháo lắp với nhiều nấc hơn và độ rã mạnh hơn.</p></div></section>
   </main>
 
   <script type="module" src="./app.js"></script>
