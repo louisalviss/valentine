@@ -1,0 +1,37 @@
+name: Restore Orbital Concept
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/restore-orbital-concept.yml']
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore exact concept artwork from V4 history
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess,re,base64
+          ref='0609bf77357cdfb9f1e5b752f45eeb4f2657b7de'
+          old=subprocess.check_output(['git','show',f'{ref}:orbital-shrine/index.html'],text=True)
+          m=re.search(r'data:image/webp;base64,([A-Za-z0-9+/=]+)',old)
+          if not m:
+              raise SystemExit('concept webp not found in V4')
+          data=base64.b64decode(m.group(1))
+          if len(data)<50000:
+              raise SystemExit(f'concept asset unexpectedly small: {len(data)} bytes')
+          Path('orbital-shrine/concept-3.webp').write_bytes(data)
+          print('restored concept bytes:',len(data))
+          PY
+          rm .github/workflows/restore-orbital-concept.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Restore exact Orbital Shrine concept artwork"
+          git push
