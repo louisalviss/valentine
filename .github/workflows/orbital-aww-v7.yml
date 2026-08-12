@@ -1,0 +1,90 @@
+name: Orbital Shrine Aww V7
+on:
+  push:
+    paths:
+      - '.github/workflows/orbital-aww-v7.yml'
+permissions:
+  contents: write
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject Awwwards motion while preserving concept art
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('orbital-shrine/index.html')
+          s=p.read_text()
+          marker='/* AWW_V7_MASTER */'
+          if marker not in s:
+              css=r'''
+/* AWW_V7_MASTER */
+:root{--awwP:0;--awwX:0;--awwY:0;--awwV:0}
+body{min-height:420vh!important;background:#07090c!important}
+/* Exact concept screenshot is the master design. Hide duplicate DOM reconstruction. */
+.nav,.hero,.sideText,.chapter,.index,.dock,.scrollHint,.frame,.motionLabel{display:none!important}
+.art{inset:-2.5%!important;background-size:cover!important;background-position:center center!important;transform:translate3d(calc(var(--awwX)*-7px),calc(var(--awwY)*-5px - var(--awwP)*22px),0) scale(calc(1.035 + var(--awwP)*.07))!important;filter:saturate(calc(.98 + var(--awwP)*.08)) contrast(1.025) brightness(calc(.98 + var(--awwP)*.025))!important;will-change:transform,filter}
+.art:before,.art:after{display:none!important}
+.depthTower,.depthSky{position:absolute!important;z-index:5!important;pointer-events:none!important;opacity:.92!important;filter:saturate(1.06) contrast(1.025)!important}
+.depthTower{clip-path:polygon(52% 8%,91% 8%,91% 86%,49% 86%);transform:translate3d(calc(var(--awwX)*13px),calc(var(--awwY)*8px - var(--awwP)*42px),36px) scale(calc(1.035 + var(--awwP)*.085))!important;mix-blend-mode:normal}
+.depthSky{clip-path:polygon(40% 0,100% 0,100% 38%,43% 49%);transform:translate3d(calc(var(--awwX)*-11px),calc(var(--awwY)*-7px + var(--awwP)*8px),-20px) scale(1.06)!important;opacity:.34!important;mix-blend-mode:screen!important}
+.skyMotion{z-index:6!important;opacity:.55!important;animation:awwSky 10s ease-in-out infinite alternate!important;mix-blend-mode:screen!important}
+@keyframes awwSky{0%{filter:hue-rotate(-4deg) brightness(.92);transform:translate3d(-1.5%,0,0)}100%{filter:hue-rotate(7deg) brightness(1.08);transform:translate3d(1.5%,-1%,0)}}
+.orbitMotion{z-index:8!important;left:67.2%!important;top:44%!important;width:min(44vw,690px)!important;opacity:.28!important;mix-blend-mode:screen!important;filter:drop-shadow(0 0 16px rgba(214,172,98,.23))!important;animation:awwOrbit 24s linear infinite!important}
+.orbitMotion:before{animation-duration:17s!important}.orbitMotion:after{animation-duration:11s!important}
+@keyframes awwOrbit{to{transform:translate(-50%,-50%) rotateX(73deg) rotateZ(360deg)}}
+.beamMotion{z-index:9!important;left:67.2%!important;top:7%!important;height:69%!important;width:1px!important;opacity:.56!important;animation:awwBeam 3.2s ease-in-out infinite!important}
+@keyframes awwBeam{0%,100%{opacity:.25;filter:blur(.2px) brightness(.9)}48%{opacity:.85;filter:blur(.2px) brightness(1.8)}52%{opacity:.62}58%{opacity:.92}66%{opacity:.42}}
+.haloMotion{z-index:8!important;left:67.2%!important;top:49%!important;width:150px!important;height:150px!important;opacity:.5!important;animation:awwHalo 4.8s cubic-bezier(.4,0,.2,1) infinite!important}
+@keyframes awwHalo{0%,100%{transform:translate(-50%,-50%) scale(.78);opacity:.2}50%{transform:translate(-50%,-50%) scale(1.18);opacity:.65}}
+#motionFx{z-index:12!important;opacity:.66!important}
+.awwSweep{position:absolute;z-index:10;inset:-25%;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(108deg,transparent 40%,rgba(255,221,158,0) 45%,rgba(255,224,164,.075) 49%,rgba(255,244,215,.16) 50%,rgba(255,224,164,.055) 51%,transparent 56%);transform:translate3d(calc(-46% + var(--awwP)*92%),0,0) rotate(-5deg);filter:blur(2px)}
+.awwVignette{position:absolute;z-index:13;inset:0;pointer-events:none;background:radial-gradient(ellipse at 66% 48%,transparent 24%,rgba(4,5,8,.04) 48%,rgba(3,4,7,.38) 100%),linear-gradient(180deg,rgba(4,5,8,.16),transparent 16%,transparent 82%,rgba(4,5,8,.28))}
+.awwScan{position:absolute;z-index:14;left:0;right:0;height:1px;top:calc(8% + var(--awwP)*84%);pointer-events:none;background:linear-gradient(90deg,transparent,rgba(222,190,130,.14) 25%,rgba(255,239,204,.28) 65%,transparent);box-shadow:0 0 18px rgba(205,166,100,.1);opacity:calc(.12 + var(--awwV)*.45)}
+.awwIntro{position:absolute;z-index:50;inset:0;pointer-events:none;background:#07090c;animation:awwIntro 1.8s cubic-bezier(.77,0,.18,1) .12s forwards;transform-origin:top}
+@keyframes awwIntro{0%{clip-path:inset(0 0 0 0)}55%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0)}}
+.awwIntro:after{content:'ORBITAL SHRINE';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:500 9px/1 ui-monospace,Menlo,monospace;letter-spacing:.42em;color:rgba(220,193,143,.64);animation:awwIntroText 1.25s ease forwards}@keyframes awwIntroText{0%{opacity:0;letter-spacing:.7em}35%{opacity:1}80%,100%{opacity:0;letter-spacing:.42em}}
+.awwCursor{position:fixed;z-index:80;width:28px;height:28px;border:1px solid rgba(220,190,132,.52);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:width .18s,height .18s,opacity .25s;mix-blend-mode:difference}.awwCursor:after{content:'';position:absolute;left:50%;top:50%;width:3px;height:3px;border-radius:50%;background:#e8d3aa;transform:translate(-50%,-50%)}
+.awwRipple{position:absolute;z-index:20;width:20px;height:20px;border:1px solid rgba(240,208,148,.6);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.2);animation:awwRipple .9s ease-out forwards;mix-blend-mode:screen}@keyframes awwRipple{to{transform:translate(-50%,-50%) scale(9);opacity:0}}
+.awwProgress{position:absolute;z-index:22;right:2.1vw;top:13%;height:74%;width:1px;background:rgba(205,175,118,.12);pointer-events:none}.awwProgress i{display:block;width:1px;height:calc(var(--awwP)*100%);background:linear-gradient(#b88e4f,#f0d29c);box-shadow:0 0 12px rgba(226,190,125,.32)}
+@media(max-width:900px){body{min-height:300vh!important}.art{inset:-1%!important;background-size:auto 100%!important;background-position:64% center!important;transform:translate3d(calc(var(--awwX)*-3px),calc(var(--awwY)*-2px - var(--awwP)*12px),0) scale(calc(1.055 + var(--awwP)*.045))!important}.depthTower{clip-path:polygon(45% 8%,100% 8%,100% 84%,42% 84%);transform:translate3d(calc(var(--awwX)*6px),calc(var(--awwY)*4px - var(--awwP)*20px),22px) scale(calc(1.055 + var(--awwP)*.055))!important}.depthSky{display:none!important}.orbitMotion{left:68%!important;top:42%!important;width:82vw!important;opacity:.18!important}.beamMotion{left:68%!important;top:8%!important;height:63%!important}.haloMotion{left:68%!important;top:46%!important;width:90px!important;height:90px!important}.awwCursor,.awwProgress{display:none!important}.awwSweep{opacity:.7}}
+@media(prefers-reduced-motion:reduce){.awwIntro{display:none}.orbitMotion,.beamMotion,.haloMotion,.skyMotion{animation:none!important}}
+'''
+              s=s.replace('</style>',css+'\n</style>',1)
+              html=r'''
+<div class="awwSweep" aria-hidden="true"></div><div class="awwVignette" aria-hidden="true"></div><div class="awwScan" aria-hidden="true"></div><div class="awwProgress" aria-hidden="true"><i></i></div><div class="awwIntro" aria-hidden="true"></div><div class="awwCursor" aria-hidden="true"></div>
+'''
+              s=s.replace('</div>\n<script>',html+'</div>\n<script>',1)
+              js=r'''
+<script>
+(()=>{
+ const root=document.documentElement,stage=document.querySelector('.stage'),art=document.querySelector('.art'),cursor=document.querySelector('.awwCursor');
+ if(art&&!document.querySelector('.depthTower')){const tower=art.cloneNode(false);tower.className='art depthTower';tower.setAttribute('aria-hidden','true');stage.insertBefore(tower,document.querySelector('.noise'));const sky=art.cloneNode(false);sky.className='art depthSky';sky.setAttribute('aria-hidden','true');stage.insertBefore(sky,tower)}
+ let tx=0,ty=0,x=0,y=0,tp=0,p=0,last=scrollY,vel=0,raf=0;
+ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+ function scroll(){const m=Math.max(1,document.documentElement.scrollHeight-innerHeight);tp=clamp(scrollY/m,0,1);vel=Math.min(1,Math.abs(scrollY-last)/90);last=scrollY;if(!raf)raf=requestAnimationFrame(draw)}
+ function pointer(e){tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2;if(cursor){cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'}if(!raf)raf=requestAnimationFrame(draw)}
+ function draw(){raf=0;x+=(tx-x)*.065;y+=(ty-y)*.065;p+=(tp-p)*.07;vel*=.9;root.style.setProperty('--awwX',x.toFixed(3));root.style.setProperty('--awwY',y.toFixed(3));root.style.setProperty('--awwP',p.toFixed(4));root.style.setProperty('--awwV',vel.toFixed(3));if(Math.abs(tx-x)>.002||Math.abs(ty-y)>.002||Math.abs(tp-p)>.0003||vel>.01)raf=requestAnimationFrame(draw)}
+ addEventListener('scroll',scroll,{passive:true});addEventListener('pointermove',pointer,{passive:true});
+ stage?.addEventListener('pointerdown',e=>{const r=document.createElement('i');r.className='awwRipple';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';stage.appendChild(r);setTimeout(()=>r.remove(),950)});
+ scroll();draw();
+})();
+</script>
+'''
+              s=s.replace('</body>',js+'\n</body>',1)
+              p.write_text(s)
+          # clean unused staging artifacts from earlier asset attempt
+          chunks=Path('orbital-shrine/.asset_chunks')
+          if chunks.exists():
+              import shutil; shutil.rmtree(chunks)
+          # self-delete workflow
+          Path('.github/workflows/orbital-aww-v7.yml').unlink()
+          PY
+      - name: Commit V7
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Upgrade Orbital Shrine to Awwwards-style V7"
+          git push
