@@ -2,41 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<title>Azure Void Sword — Reference Mesh</title>
+<title>Azure Void Sword — Thin Blade</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;touch-action:none;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 40%,#fff 0,#f0f4f7 54%,#dce3e8 100%);color:#18222c}canvas{display:block;width:100%;height:100%}.top{position:fixed;z-index:5;top:max(16px,env(safe-area-inset-top));left:16px;right:16px;display:flex;justify-content:space-between;pointer-events:none}.k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6c7781}.k b{display:block;margin-top:5px;font-size:15px;letter-spacing:.06em;color:#202a33}.k em{font-style:normal;color:#088ec4}.badge{font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;border:1px solid rgba(30,50,65,.12);border-radius:999px;background:rgba(255,255,255,.7);backdrop-filter:blur(12px);color:#697781}.ui{position:fixed;z-index:5;left:50%;bottom:max(15px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:7px;padding:7px;border:1px solid rgba(30,50,65,.12);border-radius:15px;background:rgba(255,255,255,.74);backdrop-filter:blur(16px);box-shadow:0 12px 32px rgba(36,51,62,.12)}button{border:0;border-radius:10px;padding:11px 13px;background:rgba(24,39,50,.055);color:#52606b;font-weight:650;font-size:10px;letter-spacing:.07em;text-transform:uppercase}button.on{background:rgba(15,158,211,.12);color:#08759e}.hint{position:fixed;right:16px;bottom:max(76px,calc(env(safe-area-inset-bottom) + 76px));font-size:10px;color:rgba(45,62,74,.48);pointer-events:none}@media(max-width:520px){.badge{display:none}.ui{width:calc(100% - 28px)}button{flex:1;padding:12px 6px}.hint{right:14px}}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;touch-action:none;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 40%,#fff 0,#f0f4f7 55%,#dce3e8 100%);color:#18222c}canvas{display:block;width:100%;height:100%}.top{position:fixed;z-index:5;top:max(16px,env(safe-area-inset-top));left:16px;right:16px;display:flex;justify-content:space-between;pointer-events:none}.k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6c7781}.k b{display:block;margin-top:5px;font-size:15px;letter-spacing:.06em;color:#202a33}.k em{font-style:normal;color:#088ec4}.badge{font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;border:1px solid rgba(30,50,65,.12);border-radius:999px;background:rgba(255,255,255,.7);backdrop-filter:blur(12px);color:#697781}.ui{position:fixed;z-index:5;left:50%;bottom:max(15px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:7px;padding:7px;border:1px solid rgba(30,50,65,.12);border-radius:15px;background:rgba(255,255,255,.74);backdrop-filter:blur(16px);box-shadow:0 12px 32px rgba(36,51,62,.12)}button{border:0;border-radius:10px;padding:11px 13px;background:rgba(24,39,50,.055);color:#52606b;font-weight:650;font-size:10px;letter-spacing:.07em;text-transform:uppercase}button.on{background:rgba(15,158,211,.12);color:#08759e}.hint{position:fixed;right:16px;bottom:max(76px,calc(env(safe-area-inset-bottom) + 76px));font-size:10px;color:rgba(45,62,74,.48);pointer-events:none}@media(max-width:520px){.badge{display:none}.ui{width:calc(100% - 28px)}button{flex:1;padding:12px 6px}.hint{right:14px}}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/"}}</script>
 </head><body>
-<div class="top"><div class="k">generated reference → solid extrusion<b>AZURE <em>VOID</em> SWORD</b></div><div class="badge">reference mesh · r184</div></div><div class="hint">drag to rotate · pinch / wheel to zoom</div><div class="ui"><button id="spin" class="on">Auto 360</button><button id="glow" class="on">Rune glow</button><button id="reset">Reset</button></div>
+<div class="top"><div class="k">reference reconstruction<b>AZURE <em>VOID</em> SWORD</b></div><div class="badge">thin blade · v4</div></div><div class="hint">drag to rotate · pinch / wheel to zoom</div><div class="ui"><button id="spin" class="on">Auto 360</button><button id="glow" class="on">Rune glow</button><button id="reset">Reset</button></div>
 <script type="module">
-import * as THREE from 'three';import{OrbitControls}from'three/addons/controls/OrbitControls.js';
-const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.1,50);camera.position.set(0,.25,14.7);
-const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;renderer.shadowMap.enabled=true;document.body.prepend(renderer.domElement);
-const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.055;controls.enablePan=false;controls.minDistance=9.5;controls.maxDistance=22;controls.target.set(0,.45,0);controls.autoRotate=true;controls.autoRotateSpeed=.72;
-scene.add(new THREE.HemisphereLight(0xffffff,0xcad4db,2.6));const key=new THREE.DirectionalLight(0xffffff,3.7);key.position.set(4.5,7,6);key.castShadow=true;scene.add(key);const rim=new THREE.DirectionalLight(0x7fdcff,2);rim.position.set(-5,2,-4);scene.add(rim);const blue=new THREE.PointLight(0x2fc8ff,7,12,2);blue.position.set(0,.7,3.5);scene.add(blue);
-const sword=new THREE.Group();sword.rotation.x=-.035;scene.add(sword);
-const dark=new THREE.MeshPhysicalMaterial({color:0x12181e,metalness:.96,roughness:.25,clearcoat:.25});const side=new THREE.MeshPhysicalMaterial({color:0x2d353d,metalness:.98,roughness:.19});const edge=new THREE.MeshPhysicalMaterial({color:0x7b858e,metalness:1,roughness:.17});const leather=new THREE.MeshStandardMaterial({color:0x0a0d11,roughness:.88,metalness:.05});const emissive=new THREE.MeshStandardMaterial({color:0x5fd7ff,emissive:0x18aee8,emissiveIntensity:4.2,metalness:.1,roughness:.3});const glowParts=[];
-function shp(points,depth,mat,bevel=.04){const s=new THREE.Shape();s.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)s.lineTo(points[i][0],points[i][1]);s.closePath();const g=new THREE.ExtrudeGeometry(s,{depth,bevelEnabled:true,bevelSize:bevel,bevelThickness:bevel,bevelSegments:3,curveSegments:2});g.translate(0,0,-depth/2);const m=new THREE.Mesh(g,mat);m.castShadow=true;m.receiveShadow=true;return m}function box(w,h,d,mat,x,y,z=0,rz=0){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d,2,2,2),mat);m.position.set(x,y,z);m.rotation.z=rz;m.castShadow=true;return m}
-// Main silhouette measured from the generated 2D reference: long straight blade, wing guard, narrow wrapped grip, pointed jeweled pommel.
-const silhouette=[[0,5.46],[.17,5.12],[.29,4.98],[.22,4.78],[.28,4.63],[.22,4.52],[.24,3.05],[.31,2.91],[.32,2.70],[.72,2.58],[1.13,2.55],[1.55,2.72],[1.35,2.43],[.82,2.29],[.59,2.18],[.47,1.99],[.43,-3.08],[.30,-3.72],[.14,-4.35],[0,-4.76],[-.14,-4.35],[-.30,-3.72],[-.43,-3.08],[-.47,1.99],[-.59,2.18],[-.82,2.29],[-1.35,2.43],[-1.55,2.72],[-1.13,2.55],[-.72,2.58],[-.32,2.70],[-.31,2.91],[-.24,3.05],[-.22,4.52],[-.28,4.63],[-.22,4.78],[-.29,4.98],[-.17,5.12]];
-const body=shp(silhouette,.34,dark,.035);sword.add(body);
-// Blade bevel plates replicate the bright steel shoulders visible in the reference.
-const bladeL=shp([[-.43,2.02],[-.28,1.96],[-.24,-3.05],[-.10,-3.72],[0,-4.58],[-.14,-4.35],[-.30,-3.72],[-.43,-3.08]],.355,edge,.012);bladeL.position.z=.002;sword.add(bladeL);const bladeR=bladeL.clone();bladeR.scale.x=-1;sword.add(bladeR);sword.add(box(.22,5.0,.37,side,0,-.48,.005));
-// Front ornamental guard — layered like the generated concept art.
-const g1=shp([[-1.55,2.72],[-1.12,2.54],[-.76,2.56],[-.52,2.35],[-.28,2.52],[0,2.69],[.28,2.52],[.52,2.35],[.76,2.56],[1.12,2.54],[1.55,2.72],[1.17,2.82],[.69,2.84],[.38,2.96],[0,2.84],[-.38,2.96],[-.69,2.84],[-1.17,2.82]],.43,side,.045);sword.add(g1);const g2=shp([[-.64,2.68],[-.34,2.96],[0,3.04],[.34,2.96],[.64,2.68],[.36,2.43],[0,2.57],[-.36,2.43]],.47,dark,.04);sword.add(g2);
-const gem=shp([[0,2.88],[.18,2.68],[0,2.45],[-.18,2.68]],.49,emissive,.018);sword.add(gem);glowParts.push(gem);
-// Blue spine and runes.
-const spine=box(.045,4.62,.382,emissive,0,-.46,.008);sword.add(spine);glowParts.push(spine);for(const y of[1.68,1.40,1.12]){const r=shp([[0,.12],[.11,0],[0,-.12],[-.11,0]],.39,emissive,.012);r.scale.set(.7,.7,.7);r.position.set(0,y,.01);sword.add(r);glowParts.push(r)}const tr=shp([[0,.20],[.13,0],[0,-.26],[-.13,0]],.39,emissive,.012);tr.position.set(0,-3.48,.01);sword.add(tr);glowParts.push(tr);
-// Hilt with real cylindrical depth and crossed leather wrapping.
-const grip=new THREE.Mesh(new THREE.CylinderGeometry(.235,.22,1.55,30),leather);grip.position.set(0,3.78,0);grip.castShadow=true;sword.add(grip);for(const y of[2.98,4.57]){const c=new THREE.Mesh(new THREE.CylinderGeometry(.285,.285,.12,30),edge);c.position.y=y;c.castShadow=true;sword.add(c)}for(let i=0;i<8;i++){sword.add(box(.53,.032,.09,side,0,3.13+i*.19,.214,.65));sword.add(box(.53,.032,.09,dark,0,3.22+i*.19,.218,-.65))}
-// Pointed pommel cap and cyan inset.
-const p=shp([[-.28,4.58],[-.20,4.80],[-.11,5.03],[0,5.46],[.11,5.03],[.20,4.80],[.28,4.58],[.13,4.55],[0,4.73],[-.13,4.55]],.39,side,.035);sword.add(p);const pg=shp([[0,5.13],[.11,4.92],[0,4.72],[-.11,4.92]],.41,emissive,.014);sword.add(pg);glowParts.push(pg);
-// Tassel is genuine tube geometry rather than a flat drawing.
-const cordCurve=new THREE.CatmullRomCurve3([new THREE.Vector3(-.20,5.04,.02),new THREE.Vector3(-.52,4.92,.02),new THREE.Vector3(-.58,4.53,.02),new THREE.Vector3(-.52,4.30,.02)]);sword.add(new THREE.Mesh(new THREE.TubeGeometry(cordCurve,28,.018,7,false),dark));const bead=new THREE.Mesh(new THREE.SphereGeometry(.09,18,12),emissive);bead.position.set(-.52,4.18,.02);sword.add(bead);glowParts.push(bead);for(let i=0;i<7;i++){const x=-.60+i*.026,c=new THREE.CatmullRomCurve3([new THREE.Vector3(-.52,4.08,.02),new THREE.Vector3(x,3.83,.02+(i%2)*.015),new THREE.Vector3(x-.02,3.56,.01)]);sword.add(new THREE.Mesh(new THREE.TubeGeometry(c,12,.012,5,false),leather))}
-// Subtle energy particles, restrained so the sword stays readable on light background.
-const pa=new Float32Array(70*3);for(let i=0;i<70;i++){const a=Math.random()*Math.PI*2,r=1.7+Math.random()*1.8;pa[i*3]=Math.cos(a)*r;pa[i*3+1]=-1+Math.random()*7.8;pa[i*3+2]=(Math.random()-.5)*2.2}const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pa,3));const particles=new THREE.Points(geo,new THREE.PointsMaterial({color:0x179fd3,size:.022,transparent:true,opacity:.25,depthWrite:false}));scene.add(particles);
-const shadow=new THREE.Mesh(new THREE.CircleGeometry(2.2,64),new THREE.MeshBasicMaterial({color:0x6a8290,transparent:true,opacity:.12,depthWrite:false}));shadow.rotation.x=-Math.PI/2;shadow.scale.y=.22;shadow.position.y=-4.98;scene.add(shadow);
-const spin=document.getElementById('spin'),glow=document.getElementById('glow');spin.onclick=()=>{controls.autoRotate=!controls.autoRotate;spin.classList.toggle('on',controls.autoRotate)};let glowOn=true;glow.onclick=()=>{glowOn=!glowOn;glow.classList.toggle('on',glowOn);emissive.emissiveIntensity=glowOn?4.2:.15;blue.intensity=glowOn?7:1;particles.visible=glowOn};document.getElementById('reset').onclick=()=>{camera.position.set(0,.25,14.7);controls.target.set(0,.45,0);sword.rotation.set(-.035,0,0);controls.update()};
-renderer.setAnimationLoop(t=>{t*=.001;controls.update();particles.rotation.y=t*.08;particles.position.y=Math.sin(t*.55)*.035;if(glowOn)emissive.emissiveIntensity=3.8+Math.sin(t*2.3)*.55;renderer.render(scene,camera)});addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,2))});
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.1,60);camera.position.set(0,.1,14.5);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;document.body.prepend(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.055;controls.enablePan=false;controls.minDistance=9.5;controls.maxDistance=23;controls.target.set(0,.15,0);controls.autoRotate=true;controls.autoRotateSpeed=.65;
+scene.add(new THREE.HemisphereLight(0xffffff,0xc6d0d7,2.6));const key=new THREE.DirectionalLight(0xffffff,4.2);key.position.set(4,7,6);scene.add(key);const rim=new THREE.DirectionalLight(0x73d9ff,2.1);rim.position.set(-4,2,-5);scene.add(rim);const blueLight=new THREE.PointLight(0x37c9ff,5,10,2);blueLight.position.set(0,.6,4);scene.add(blueLight);
+
+const sword=new THREE.Group();scene.add(sword);sword.rotation.x=-.02;
+const steel=new THREE.MeshPhysicalMaterial({color:0x151b22,metalness:.98,roughness:.22,clearcoat:.34,clearcoatRoughness:.16});
+const edge=new THREE.MeshPhysicalMaterial({color:0x7e8992,metalness:1,roughness:.17});
+const black=new THREE.MeshPhysicalMaterial({color:0x080b0f,metalness:.96,roughness:.31});
+const leather=new THREE.MeshStandardMaterial({color:0x090b0f,roughness:.91});
+const glow=new THREE.MeshStandardMaterial({color:0x4ed6ff,emissive:0x149fd7,emissiveIntensity:3.2,metalness:.25,roughness:.23});
+const core=new THREE.MeshBasicMaterial({color:0xb7efff,toneMapped:false,transparent:true,opacity:.96});
+
+function ext(points,depth,mat,bev=.015){const s=new THREE.Shape();s.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)s.lineTo(points[i][0],points[i][1]);s.closePath();const g=new THREE.ExtrudeGeometry(s,{depth,bevelEnabled:true,bevelThickness:bev,bevelSize:bev,bevelSegments:2});g.translate(0,0,-depth/2);const m=new THREE.Mesh(g,mat);return m}
+function box(w,h,d,mat,x=0,y=0,z=0,rz=0){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.rotation.z=rz;return m}
+
+// Blade: deliberately thin. Width ~0.75 world units, thickness only 0.085.
+const bladePts=[[-.39,1.92],[.39,1.92],[.34,-3.48],[.18,-4.12],[0,-4.58],[-.18,-4.12],[-.34,-3.48]];
+const blade=ext(bladePts,.085,steel,.012);sword.add(blade);
+// Slight raised spine/ridge, still thin overall.
+const ridge=box(.105,5.45,.105,black,0,-.76,0);sword.add(ridge);
+// Sharpened edge strips are thinner than the body, not chunky side walls.
+const leftEdge=ext([[-.39,1.92],[-.31,1.88],[-.27,-3.46],[-.10,-4.08],[0,-4.48],[-.18,-4.12],[-.34,-3.48]],.095,edge,.006);sword.add(leftEdge);const rightEdge=leftEdge.clone();rightEdge.scale.x=-1;sword.add(rightEdge);
+const rune=box(.024,4.75,.115,glow,0,-.38,.012);sword.add(rune);const runeCore=box(.008,4.55,.121,core,0,-.38,.014);sword.add(runeCore);
+
+// Guard/hilt remain thicker than blade, as they should.
+const guardPts=[[-1.20,2.18],[-.96,2.02],[-.61,2.07],[-.39,1.93],[-.19,2.17],[0,2.31],[.19,2.17],[.39,1.93],[.61,2.07],[.96,2.02],[1.20,2.18],[.88,2.31],[.51,2.37],[.25,2.45],[0,2.38],[-.25,2.45],[-.51,2.37],[-.88,2.31]];
+sword.add(ext(guardPts,.24,black,.025));
+sword.add(ext([[-.46,2.27],[-.23,2.48],[0,2.59],[.23,2.48],[.46,2.27],[.28,2.08],[0,2.17],[-.28,2.08]],.28,steel,.022));
+const centerGem=ext([[0,2.47],[.13,2.29],[0,2.10],[-.13,2.29]],.30,glow,.01);sword.add(centerGem);
+const gemCore=ext([[0,2.43],[.055,2.29],[0,2.16],[-.055,2.29]],.31,core,.005);sword.add(gemCore);
+
+const grip=new THREE.Mesh(new THREE.CylinderGeometry(.20,.19,1.70,28),leather);grip.position.y=3.38;sword.add(grip);
+for(const y of [2.52,4.24]){const cap=new THREE.Mesh(new THREE.CylinderGeometry(.25,.25,.12,30),edge);cap.position.y=y;sword.add(cap)}
+for(let i=0;i<8;i++){sword.add(box(.46,.026,.045,edge,0,2.69+i*.19,.19,(i%2?-.62:.62)))}
+const pommel=ext([[-.23,4.29],[-.16,4.52],[-.08,4.76],[0,5.00],[.08,4.76],[.16,4.52],[.23,4.29],[.11,4.27],[0,4.42],[-.11,4.27]],.21,black,.018);sword.add(pommel);
+const pgem=ext([[0,4.80],[.075,4.64],[0,4.49],[-.075,4.64]],.23,glow,.007);sword.add(pgem);
+
+const cord=new THREE.CatmullRomCurve3([new THREE.Vector3(-.18,4.78,.02),new THREE.Vector3(-.43,4.62,.03),new THREE.Vector3(-.49,4.12,.03),new THREE.Vector3(-.41,3.82,.03)]);sword.add(new THREE.Mesh(new THREE.TubeGeometry(cord,28,.015,7,false),black));
+const bead=new THREE.Mesh(new THREE.SphereGeometry(.075,18,12),glow);bead.position.set(-.41,3.70,.03);sword.add(bead);
+for(let i=0;i<7;i++){const x=-.48+i*.023;const c=new THREE.CatmullRomCurve3([new THREE.Vector3(-.41,3.62,.03),new THREE.Vector3(x,3.39,.04),new THREE.Vector3(x-.018,3.16,.03)]);sword.add(new THREE.Mesh(new THREE.TubeGeometry(c,12,.011,5,false),leather))}
+
+const shadow=new THREE.Mesh(new THREE.CircleGeometry(2.5,64),new THREE.MeshBasicMaterial({color:0x7b919f,transparent:true,opacity:.13,depthWrite:false}));shadow.rotation.x=-Math.PI/2;shadow.scale.y=.23;shadow.position.y=-4.85;scene.add(shadow);
+const particles=new THREE.Points(new THREE.BufferGeometry(),new THREE.PointsMaterial({color:0x53cbef,size:.025,transparent:true,opacity:.28,depthWrite:false}));const arr=new Float32Array(90*3);for(let i=0;i<90;i++){arr[i*3]=(Math.random()-.5)*3.2;arr[i*3+1]=(Math.random()-.5)*8.5;arr[i*3+2]=(Math.random()-.5)*2.2}particles.geometry.setAttribute('position',new THREE.BufferAttribute(arr,3));scene.add(particles);
+
+let glowOn=true;const spin=document.getElementById('spin'),gb=document.getElementById('glow');spin.onclick=()=>{controls.autoRotate=!controls.autoRotate;spin.classList.toggle('on',controls.autoRotate)};gb.onclick=()=>{glowOn=!glowOn;gb.classList.toggle('on',glowOn);glow.emissiveIntensity=glowOn?3.2:.15;core.opacity=glowOn?.96:.3;blueLight.intensity=glowOn?5:1;particles.visible=glowOn};document.getElementById('reset').onclick=()=>{camera.position.set(0,.1,14.5);controls.target.set(0,.15,0);sword.rotation.set(-.02,0,0);controls.update()};
+renderer.setAnimationLoop(t=>{controls.update();particles.rotation.y=t*.00004;shadow.material.opacity=.12+Math.sin(t*.0014)*.012;if(glowOn)glow.emissiveIntensity=2.9+Math.sin(t*.0022)*.4;renderer.render(scene,camera)});
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,2))});
 </script></body></html>
