@@ -8,6 +8,7 @@
   <title>SPECIMEN 07 — Nocturne</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./runtime.css" />
   <script type="importmap">
   {
     "imports": {
@@ -106,6 +107,7 @@
   </footer>
 
   <noscript><style>.boot{display:none}.fallback-branch{opacity:1}</style></noscript>
-  <script type="module" src="./main.js"></script>
+  <script>setTimeout(()=>{const b=document.querySelector('.boot');if(b&&!b.classList.contains('is-done'))b.classList.add('is-done')},6500)</script>
+  <script type="module" src="./runtime.js"></script>
 </body>
 </html>
