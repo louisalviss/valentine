@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./runtime.css" />
+  <link rel="stylesheet" href="./fx-r2.css?v=2" />
   <script type="importmap">
   {
     "imports": {
@@ -42,6 +43,8 @@
   <div class="noise" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
   <div class="scan" id="scan" aria-hidden="true"><span></span></div>
+  <div class="fx-layer" id="fxLayer" aria-hidden="true"></div>
+  <div class="touch-hint" id="touchHint" aria-hidden="true"><b>TAP / DRAG</b><span>disturb the field</span></div>
   <div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
 
   <header class="nav">
@@ -109,5 +112,6 @@
   <noscript><style>.boot{display:none}.fallback-branch{opacity:1}</style></noscript>
   <script>setTimeout(()=>{const b=document.querySelector('.boot');if(b&&!b.classList.contains('is-done'))b.classList.add('is-done')},6500)</script>
   <script type="module" src="./runtime.js"></script>
+  <script src="./fx-r2.js?v=2"></script>
 </body>
 </html>
