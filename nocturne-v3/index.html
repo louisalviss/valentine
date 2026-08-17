@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1" />
+<meta name="theme-color" content="#060907" />
+<title>NOCTURNE V3 — The Relic Awakens</title>
+<meta name="description" content="Nocturne V3 — an interactive biomechanical relic study." />
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="art-wrap" id="artWrap"><img class="art" alt="Biomechanical nocturnal relic" src="./art.webp"><div class="art-glow"></div></div>
+  <div class="scan-field" id="scan"></div>
+  <div class="ring"></div><div class="core"></div><div class="fg"></div><canvas id="dust"></canvas><div class="noise"></div><div class="flash"></div>
+  <nav class="nav"><a class="brand" href="#"><span class="brandmark"></span><span>NOCTURNE / V3</span></a><div class="navlinks"><button class="active">Overview</button><button>Relic</button><button>Field Notes</button><button id="sound">Sound: Off</button></div></nav>
+  <section class="copy" aria-live="polite"><div class="kicker"><i></i><span id="kicker">SYSTEM / DORMANT</span></div><h1 id="title"><span>THE RELIC</span><em>AWAKENS.</em></h1><p class="subtitle" id="subtitle">An adaptive biomechanical object suspended between artifact and organism. Scroll to approach. Hold the field to wake it.</p><div class="actions"><button class="cta" id="explore">Enter field →</button><button class="ghostbtn" id="pulse">Trigger pulse</button></div></section>
+  <button class="hold" id="hold"><strong>HOLD</strong> TO WAKE</button>
+  <div class="progress"><span id="phase">ARRIVAL / 01</span><div class="progressbar"><i></i></div><span id="pct">00%</span></div>
+  <div class="chapter" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="scrollhint"><i></i><span>Scroll to descend</span></div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
