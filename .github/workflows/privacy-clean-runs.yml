@@ -13,7 +13,7 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete runs exposing non-noreply commit email
+      - name: Delete only completed runs exposing non-noreply commit email
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -21,6 +21,7 @@ jobs:
           set -euo pipefail
           ids="$(gh api --paginate "repos/$GITHUB_REPOSITORY/actions/runs?per_page=100" \
             --jq '.workflow_runs[]
+              | select(.status == "completed")
               | select(.head_commit != null)
               | select(
                   (((.head_commit.author.email // "") != "") and (((.head_commit.author.email // "") | endswith("@users.noreply.github.com")) | not) and ((.head_commit.author.email // "") != "noreply@github.com"))
@@ -28,15 +29,6 @@ jobs:
                   (((.head_commit.committer.email // "") != "") and (((.head_commit.committer.email // "") | endswith("@users.noreply.github.com")) | not) and ((.head_commit.committer.email // "") != "noreply@github.com"))
                 )
               | .id')"
-          for id in $ids; do
-            [ -z "$id" ] && continue
-            [ "$id" = "$GITHUB_RUN_ID" ] && continue
-            status="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id" --jq '.status' 2>/dev/null || true)"
-            if [ -n "$status" ] && [ "$status" != "completed" ]; then
-              gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/cancel" >/dev/null 2>&1 || true
-            fi
-          done
-          sleep 2
           for id in $ids; do
             [ -z "$id" ] && continue
             [ "$id" = "$GITHUB_RUN_ID" ] && continue
