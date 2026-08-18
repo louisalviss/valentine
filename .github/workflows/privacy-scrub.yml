@@ -8,7 +8,7 @@ permissions:
 
 concurrency:
   group: privacy-scrub-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scrub:
@@ -18,7 +18,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - name: Rewrite exposed push identity to bot noreply
+
+      - name: Rewrite exposed push identity safely
         shell: bash
         env:
           TARGET_AUTHOR_EMAIL: ${{ github.event.head_commit.author.email }}
@@ -27,6 +28,15 @@ jobs:
           NEW_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
           set -euo pipefail
+
+          # Never let an old queued run overwrite a newer branch head.
+          git fetch origin "$GITHUB_REF_NAME"
+          REMOTE_HEAD="$(git rev-parse "origin/$GITHUB_REF_NAME")"
+          if [ "$REMOTE_HEAD" != "$GITHUB_SHA" ]; then
+            echo "Skip stale scrub: remote=$REMOTE_HEAD trigger=$GITHUB_SHA"
+            exit 0
+          fi
+
           export TARGET_AUTHOR_EMAIL TARGET_COMMITTER_EMAIL NEW_NAME NEW_EMAIL
           FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --env-filter '
             case "$TARGET_AUTHOR_EMAIL" in
@@ -48,4 +58,8 @@ jobs:
                 ;;
             esac
           ' HEAD
-          git push --force origin HEAD:${GITHUB_REF_NAME}
+
+          # Rewrite only if the remote still points at the triggering commit.
+          git push \
+            --force-with-lease="refs/heads/$GITHUB_REF_NAME:$GITHUB_SHA" \
+            origin "HEAD:$GITHUB_REF_NAME"
