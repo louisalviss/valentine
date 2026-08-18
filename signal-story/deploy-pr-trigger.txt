@@ -1,0 +1,2 @@
+Trigger temporary Cloudflare deployment for The Last Signal.
+2026-08-18
