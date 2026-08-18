@@ -1,3 +1,4 @@
 Force GitHub Pages redeploy after The Last Signal publish.
 Commit target: main root.
 2026-08-18
+retry-after-pages-workflow-and-race-fix
