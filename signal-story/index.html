@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071018">
+<title>The Last Signal</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#071018;color:#f4f7fa;font-family:-apple-system,BlinkMacSystemFont,Inter,sans-serif;overscroll-behavior-y:none}body{height:620vh;overflow-x:hidden}canvas{position:fixed;inset:0;width:100%;height:100%;touch-action:pan-y;background:#071018}.ui{position:fixed;inset:0;pointer-events:none;z-index:2}.top{position:absolute;left:14px;right:14px;top:max(14px,env(safe-area-inset-top));display:flex;justify-content:space-between;font:700 10px ui-monospace;letter-spacing:.14em}.muted{opacity:.55}.hero{position:absolute;left:14px;top:14vh;max-width:330px;transition:.25s}.hero.hide{opacity:0;transform:translateY(-8px)}.ey{font:700 8px ui-monospace;letter-spacing:.17em;opacity:.6}h1{font-size:clamp(46px,13vw,80px);line-height:.84;letter-spacing:-.075em;margin:8px 0 0}h1 i{display:block;color:#dcff90;font-family:Georgia,serif;font-weight:400}.hero p{font-size:12px;line-height:1.58;color:#dce5ebaa}.card{position:absolute;left:14px;right:14px;bottom:max(12px,env(safe-area-inset-bottom));padding:12px 13px;border:1px solid #ffffff22;border-radius:16px;background:#08131bcb;backdrop-filter:blur(14px)}.card .row{display:flex;justify-content:space-between;font:700 8px ui-monospace;letter-spacing:.15em;color:#dce5eb77}.card h2{margin:7px 0 0;font-size:24px;letter-spacing:-.04em}.card p{margin:7px 0 0;font-size:10px;line-height:1.48;color:#dce5ebaa}.task{position:absolute;left:50%;bottom:calc(max(12px,env(safe-area-inset-bottom)) + 106px);transform:translateX(-50%);padding:9px 11px;border:1px solid #ffffff22;border-radius:999px;background:#071018a8;font:700 8px ui-monospace;letter-spacing:.11em;white-space:nowrap}.progress{position:absolute;left:14px;right:14px;top:48px;height:2px;background:#ffffff18}.progress i{display:block;height:100%;width:0;background:#dcff90}.meter{position:absolute;left:14px;right:14px;bottom:calc(max(12px,env(safe-area-inset-bottom)) + 150px);padding:9px;border:1px solid #ffffff18;border-radius:12px;background:#07101888}.meter small{font:700 8px ui-monospace;letter-spacing:.13em;color:#dce5eb88}.meter .bar{height:4px;margin-top:7px;border-radius:4px;overflow:hidden;background:#ffffff14}.meter .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff9a7b,#dcff90)}@media(min-width:850px){.top,.progress{left:30px;right:30px}.hero{left:30px;top:18vh;max-width:460px}.card{left:auto;right:30px;width:360px;bottom:24px}.task{bottom:28px}.meter{left:auto;right:30px;top:70px;bottom:auto;width:160px}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="ui">
+  <div class="top"><b>THE LAST SIGNAL</b><span class="muted" id="clock">04:17</span></div>
+  <div class="progress"><i id="progress"></i></div>
+  <div class="hero" id="hero"><div class="ey">A ROAD THAT REMEMBERS WHAT YOU CHANGE</div><h1>Carry the last signal<i>before dawn.</i></h1><p>Restore four relays on the road to the mountain observatory. Every action changes the world behind you.</p></div>
+  <div class="meter"><small>TRANSMITTER CHARGE</small><div class="bar"><i id="charge"></i></div></div>
+  <div class="card"><div class="row"><span id="num">01 / 06</span><span id="tag">BLACKOUT</span></div><h2 id="title">The road wakes alone.</h2><p id="desc">Scroll into the blackout and find the first relay.</p></div>
+  <div class="task" id="task">SCROLL TO DRIVE</div>
+</div>
+<script src="app.js?v=1"></script>
+</body>
+</html>
