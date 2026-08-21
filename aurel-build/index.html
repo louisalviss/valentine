@@ -3,60 +3,133 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#f1eee7" />
-<title>AUREL — A home assembled by scroll</title>
-<style>
-:root{--ink:#171916;--paper:#f1eee7;--paper2:#e6e1d6;--accent:#d94f2b;--stone:#c9c0b1;--wood:#9a6846;--glass:#8fb6bc;--green:#66735e;--line:rgba(23,25,22,.17);--muted:rgba(23,25,22,.58)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
-nav{position:fixed;z-index:80;inset:0 0 auto;height:64px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;mix-blend-mode:multiply}.brand{font-size:11px;font-weight:800;letter-spacing:.26em}.meta{display:flex;align-items:center;gap:12px;font-size:9px;text-transform:uppercase;letter-spacing:.15em}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(217,79,43,.12)}
-.hero{min-height:100svh;position:relative;overflow:hidden;padding:92px 22px 26px;background:linear-gradient(180deg,#f6f4ef 0%,#e8e2d7 100%)}.grid{position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(23,25,22,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(23,25,22,.12) 1px,transparent 1px);background-size:8vw 8vw;mask-image:linear-gradient(#000 0%,transparent 72%)}.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-13%;height:38%;background:radial-gradient(ellipse at center,rgba(102,115,94,.28),transparent 66%)}
-.hero-copy{position:relative;z-index:4;max-width:1100px}.eyebrow{display:flex;gap:10px;align-items:center;font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}.eyebrow:before{content:"";width:34px;height:2px;background:var(--accent)}h1{margin:0;text-transform:uppercase;font-size:clamp(58px,10vw,154px);line-height:.79;letter-spacing:-.075em;max-width:1080px}.ghost{display:block;color:transparent;-webkit-text-stroke:1.35px var(--ink);margin-left:9vw}.hero-note{margin-top:26px;padding-top:15px;border-top:1px solid var(--line);max-width:690px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px}.hero-note p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.hero-note strong{color:var(--ink)}
-.hero-arch{position:absolute;z-index:3;right:-1vw;bottom:-1vh;width:min(760px,58vw);filter:drop-shadow(0 34px 30px rgba(23,25,22,.15))}.tag{position:absolute;z-index:7;border:1px solid rgba(23,25,22,.22);background:rgba(246,244,239,.78);backdrop-filter:blur(8px);padding:6px 8px;font-size:8px;letter-spacing:.15em;text-transform:uppercase}.t1{right:29vw;top:33vh}.t2{right:8vw;top:50vh}.t3{right:26vw;bottom:12vh}.scroll{position:absolute;z-index:8;left:22px;bottom:23px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;display:flex;gap:12px;align-items:center}.scroll:after{content:"";width:76px;height:1px;background:var(--ink)}
-.build{height:560vh;position:relative;background:#d9d4c8}.sticky{height:100svh;min-height:620px;position:sticky;top:0;overflow:hidden;background:linear-gradient(180deg,#dfe9e6 0%,#eee7da 58%,#c8c1b1 100%)}.sun{position:absolute;right:-8vw;top:-13vw;width:44vw;height:44vw;border-radius:50%;background:radial-gradient(circle at 38% 38%,#fffdf0 0%,#f7d6aa 38%,rgba(247,214,170,.15) 68%,transparent 72%)}.terrain{position:absolute;left:-8%;right:-8%;bottom:-7%;height:34%;background:linear-gradient(180deg,rgba(102,115,94,.04),#7e896f 90%);clip-path:polygon(0 54%,15% 40%,30% 52%,46% 34%,63% 52%,78% 39%,100% 51%,100% 100%,0 100%)}
-.copy{position:absolute;z-index:30;left:22px;top:90px;width:min(330px,31vw)}.phase{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}.num{font-size:9px;color:rgba(23,25,22,.52);letter-spacing:.14em;margin-top:7px}.copy h2{font-size:clamp(48px,6.3vw,94px);line-height:.83;letter-spacing:-.065em;text-transform:uppercase;margin:21px 0 13px}.copy p{margin:0;max-width:290px;font-size:12px;line-height:1.55;color:rgba(23,25,22,.64)}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.chip{font-size:7px;letter-spacing:.13em;text-transform:uppercase;border:1px solid rgba(23,25,22,.2);padding:6px 7px;background:rgba(246,244,239,.42)}
-.visual{position:absolute;z-index:15;left:22%;right:-2%;top:3%;bottom:7%;display:grid;place-items:center;perspective:1500px}.shell{width:min(1050px,95%);will-change:transform}.shell svg{display:block;width:100%;overflow:visible}.piece{transform-box:fill-box;transform-origin:center;will-change:transform,opacity}.guide{transition:opacity .2s}.glow{transition:opacity .2s}
-.rail{position:absolute;z-index:35;right:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px}.tick{height:1px;width:9px;background:rgba(23,25,22,.28);transition:.2s}.tick.on{width:27px;background:var(--accent)}.progress{position:absolute;z-index:40;left:22px;right:22px;bottom:21px;display:grid;grid-template-columns:72px 1fr 42px;gap:12px;align-items:center}.progress span{font-size:8px;letter-spacing:.14em;text-transform:uppercase}.track{height:2px;background:rgba(23,25,22,.18);position:relative}.bar{position:absolute;inset:0 auto 0 0;width:0;background:var(--accent)}.pct{text-align:right}
-.proof{padding:100px 22px 118px;background:#f7f4ee}.proofgrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:72px}.proofk{font-size:9px;letter-spacing:.18em;text-transform:uppercase}.proof h3{font-size:clamp(52px,8.1vw,122px);line-height:.82;letter-spacing:-.07em;text-transform:uppercase;margin:0}.proof h3 span{display:block;color:var(--accent)}.rows{margin-top:66px;border-top:1px solid var(--line)}.row{display:grid;grid-template-columns:1fr .9fr .7fr;gap:14px;border-bottom:1px solid var(--line);padding:19px 0;align-items:baseline}.row small{font-size:8px;text-transform:uppercase;letter-spacing:.13em}.row strong{font-size:28px;letter-spacing:-.04em}.row em{font-style:normal;font-size:10px;color:var(--muted)}
-.final{min-height:90svh;background:#d8cfbf;padding:72px 22px 24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.final:after{content:"";position:absolute;right:-18vw;top:-27vw;width:60vw;height:60vw;border-radius:50%;background:#efe2c8}.finaltop,.final h4,.finalbottom{position:relative;z-index:2}.finaltop{display:flex;justify-content:space-between;font-size:8px;text-transform:uppercase;letter-spacing:.15em}.final h4{font-size:clamp(70px,12vw,178px);line-height:.77;letter-spacing:-.076em;text-transform:uppercase;margin:0}.final h4 span{display:block;color:transparent;-webkit-text-stroke:1.4px var(--ink);margin-left:12vw}.finalbottom{border-top:1px solid rgba(23,25,22,.35);padding-top:15px;display:flex;justify-content:space-between;gap:20px;align-items:flex-end}.finalbottom p{max-width:500px;margin:0;font-size:11px;line-height:1.55}.replay{border:1px solid var(--ink);border-radius:999px;padding:12px 16px;font-size:8px;letter-spacing:.14em;text-transform:uppercase}
-@media(max-width:760px){nav{height:58px;padding:0 15px}.meta span:not(.dot){display:none}.hero{padding:80px 15px 20px}.grid{background-size:22vw 22vw}h1{font-size:16.2vw}.ghost{margin-left:2vw}.hero-note{grid-template-columns:1fr;max-width:78vw;margin-top:18px}.hero-note p:nth-child(2){display:none}.hero-arch{width:112vw;right:-31vw;bottom:4vh}.tag{font-size:6px;padding:4px 5px}.t1{right:4vw;top:45vh}.t2{right:3vw;top:58vh}.t3{right:46vw;bottom:12vh}.scroll{left:15px;bottom:17px}.copy{left:15px;top:72px;width:78vw}.copy h2{font-size:13vw;margin:12px 0 8px}.copy p{font-size:10.5px;max-width:68vw}.chips{display:none}.visual{left:-17%;right:-43%;top:22%;bottom:8%}.shell{width:124vw}.progress{left:15px;right:15px;bottom:17px;grid-template-columns:54px 1fr 34px}.progress span{font-size:6px}.rail{right:10px}.proof{padding:72px 15px 82px}.proofgrid{grid-template-columns:1fr;gap:30px}.proof h3{font-size:15vw}.rows{margin-top:36px}.row{grid-template-columns:1fr 1fr}.row em{grid-column:2}.row strong{font-size:23px}.final{padding:62px 15px 18px}.final h4{font-size:17vw}.final h4 span{margin-left:2vw}.finalbottom{flex-direction:column;align-items:flex-start}.sun{width:84vw;height:84vw;right:-28vw;top:-8vw}}
-</style>
+<meta name="theme-color" content="#f2eee7" />
+<title>AUREL — Render-first architectural storytelling</title>
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-<nav><div class="brand">AUREL / BUILD</div><div class="meta"><span>Architecture × Construction</span><i class="dot"></i></div></nav>
+<nav>
+  <div class="brand">AUREL / BUILD</div>
+  <div class="nav-meta"><span>Render-first architecture</span><i class="live-dot"></i></div>
+</nav>
 <section class="hero">
-<div class="grid"></div>
-<div class="hero-copy"><div class="eyebrow">Architecture first. Interface second.</div><h1>A Home With<span class="ghost">Real Gravity</span></h1><div class="hero-note"><p><strong>The previous object was too generic.</strong><br>This version starts with a low horizontal pavilion, a clear cantilever, warm timber soffits, a stone core and glass that actually feels light.</p><p>Concept Residence / V3<br>Cantilever + courtyard logic<br>Stone / oak / glass / water</p></div></div>
-<div class="hero-arch" aria-hidden="true"><svg viewBox="0 0 980 660" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="hglass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9eeee"/><stop offset="1" stop-color="#6e9da7"/></linearGradient><linearGradient id="hstone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ddd5c7"/><stop offset="1" stop-color="#a99c89"/></linearGradient><filter id="hs" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-opacity=".18"/></filter></defs>
-<ellipse cx="520" cy="588" rx="345" ry="43" fill="#718069" opacity=".28"/>
-<g filter="url(#hs)"><polygon points="150,492 495,323 852,486 500,665" fill="#b8ae9d"/><polygon points="193,477 496,328 806,470 498,627" fill="#e8dfd1"/>
-<polygon points="590,506 746,430 818,463 658,545" fill="#79b9c2"/><path d="M613 500l154-75M637 512l154-75" stroke="#e8ffff" stroke-width="2" opacity=".8"/>
-<g transform="translate(0,-42)"><path d="M329 454V338M465 387V270M611 408V293M723 463V349" stroke="#2b2f2b" stroke-width="10"/><polygon points="305,455 467,374 718,489 554,573" fill="url(#hglass)" opacity=".72"/><path d="M360 429V386M430 394V342M520 399V348M603 438V388M672 470V421" stroke="#2c3636" stroke-width="4" opacity=".7"/>
-<polygon points="410,365 485,328 485,202 410,239" fill="url(#hstone)"/><polygon points="485,328 548,357 548,231 485,202" fill="#baad99"/>
-<polygon points="247,295 482,177 815,329 574,451" fill="#c8c0b4"/><polygon points="247,295 574,451 574,512 247,356" fill="#b4aca0"/><polygon points="574,451 815,329 815,390 574,512" fill="#978e83"/><polygon points="282,305 483,205 693,301 488,405" fill="#9c6947"/><polygon points="693,301 780,341 575,444 488,405" fill="#2e3432" opacity=".88"/>
-<polygon points="230,270 486,142 834,301 573,433" fill="#4a4e48"/><polygon points="246,268 487,149 813,299 571,421" fill="#5b6158"/>
-</g>
-<g fill="#66745f"><circle cx="250" cy="534" r="31"/><circle cx="220" cy="548" r="24"/><circle cx="783" cy="418" r="32"/><circle cx="811" cy="433" r="24"/></g></g></svg></div>
-<div class="tag t1">floating concrete ribbon</div><div class="tag t2">glass pavilion + stone core</div><div class="tag t3">water + landscape datum</div><a class="scroll" href="#build">Scroll to assemble</a>
+  <div class="grid"></div>
+  <div class="hero-inner">
+    <div class="copy">
+      <div class="kicker">Architecture first. Motion second.</div>
+      <h1>A House Worth<span class="outline">Looking At</span></h1>
+      <div class="lead-grid">
+        <p><strong>This is the right direction.</strong><br>Instead of a code-demo house, the hero behaves like a polished architectural render. Scroll only reveals how the project is assembled: podium, glass living level, stone core, roof, water and landscape.</p>
+        <p>Concept Residence / 2026<br>Render board + exploded story<br>Scroll-driven presentation</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#story">View assembly ↓</a>
+        <a class="btn" href="#metrics">Why this works</a>
+      </div>
+    </div>
+    <div class="render-stage">
+      <div class="render-card">
+        <div class="stage-meta"><span>Aurel / Residence 03</span><span>South courtyard pavilion</span></div>
+        <div class="render-label label-1">Stone podium</div>
+        <div class="render-label label-2">Thin roof plane</div>
+        <div class="render-label label-3">Water court + landscape</div>
+        <div class="render-board">
+          <div class="render-shadow"></div>
+          <div class="house-scene">
+            <div class="scene">
+              <div class="part base" style="transform:translate3d(0,0,0)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part deck" style="transform:translate3d(0,0,18px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part pool" style="transform:translate3d(0,0,8px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part soffit" style="transform:translate3d(0,0,66px)"><div class="plane top"><div class="face"></div></div></div>
+              <div class="part living-glass" style="transform:translate3d(0,0,82px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part gallery" style="transform:translate3d(0,0,92px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part core" style="transform:translate3d(0,0,84px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part roof-main" style="transform:translate3d(0,0,142px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="part roof-wing" style="transform:translate3d(0,0,150px)">
+                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
+              </div>
+              <div class="land a"></div><div class="land b"></div><div class="land c"></div>
+              <div class="tree-wrap a"><div class="tree"></div><div class="trunk"></div></div>
+              <div class="tree-wrap b"><div class="tree"></div><div class="trunk"></div></div>
+            </div>
+            <div class="glow-band" id="heroGlow"></div>
+          </div>
+        </div>
+        <div class="callout-stack"><div class="callout">Render board hero</div><div class="callout">Exploded architecture story</div></div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="build" id="build"><div class="sticky"><div class="sun"></div><div class="terrain"></div>
-<div class="copy"><div class="phase" id="phase">Phase 01</div><div class="num" id="num">01 / 05</div><h2 id="title">Datum</h2><p id="desc">A long stone plinth and reflecting pool establish the horizontal line the entire house will follow.</p><div class="chips" id="chips"><span class="chip">Stone plinth</span><span class="chip">Water court</span></div></div>
-<div class="visual"><div class="shell" id="shell"><svg viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cantilevered modern house assembling as the page scrolls">
-<defs><linearGradient id="gsite" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b2aa97"/><stop offset="1" stop-color="#7e876f"/></linearGradient><linearGradient id="gstone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e3dccf"/><stop offset="1" stop-color="#aaa08f"/></linearGradient><linearGradient id="gglass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dff2f1" stop-opacity=".9"/><stop offset="1" stop-color="#62949e" stop-opacity=".86"/></linearGradient><linearGradient id="gwood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b37b54"/><stop offset="1" stop-color="#764a32"/></linearGradient><linearGradient id="gpool" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c4eceb"/><stop offset="1" stop-color="#63aab5"/></linearGradient><filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="20" stdDeviation="15" flood-opacity=".18"/></filter></defs>
-<g class="guide" id="guide" fill="none" stroke="#59665f" stroke-width="1.3" stroke-dasharray="7 9" opacity=".4"><polygon points="128,526 510,338 913,523 526,720"/><path d="M276 483V284M424 410V210M585 435V235M746 512V311M276 284L424 210L585 235L746 311"/><polygon points="202,302 500,153 855,315 550,470"/></g>
-<g id="ground" class="piece" filter="url(#shadow)"><polygon points="110,532 510,335 936,530 529,737" fill="url(#gsite)"/><polygon points="156,517 510,343 886,514 525,698" fill="#ddd5c6"/><polygon points="613,560 786,474 884,519 707,610" fill="url(#gpool)" stroke="#ecffff" stroke-width="3"/><path d="M639 553L810 469M666 565L837 481" stroke="#efffff" stroke-width="2" opacity=".75"/></g>
-<g id="structure" class="piece" fill="none" stroke="#2d312e" stroke-linecap="square"><path d="M302 486V350M449 414V278M610 439V303M755 508V372" stroke-width="11"/><path d="M302 350L449 278L610 303L755 372M302 419L449 347L610 372L755 441" stroke-width="8"/><polygon points="433,401 500,368 500,229 433,262" fill="url(#gstone)" stroke="none"/><polygon points="500,368 558,395 558,256 500,229" fill="#b5aa98" stroke="none"/></g>
-<g id="pavilion" class="piece" filter="url(#shadow)"><polygon points="282,487 449,405 718,528 548,615" fill="url(#gglass)" opacity=".76"/><polygon points="282,487 449,405 449,322 282,405" fill="#dcefee" opacity=".72"/><path d="M334 461V378M392 433V350M501 429V353M565 458V382M630 488V414M690 516V444" stroke="#324041" stroke-width="4" opacity=".75"/><polygon points="263,496 550,637 776,523 756,513 548,617 282,487" fill="#9e9180"/></g>
-<g id="ribbon" class="piece" filter="url(#shadow)"><polygon points="213,321 496,180 856,345 565,492" fill="#cdc5b9"/><polygon points="213,321 565,492 565,559 213,388" fill="#b6aea3"/><polygon points="565,492 856,345 856,410 565,559" fill="#918a82"/><polygon points="249,331 496,209 704,304 452,433" fill="url(#gwood)"/><polygon points="704,304 816,356 564,483 452,433" fill="#303533"/><path d="M267 339L472 438M290 327L496 426M313 316L519 415" stroke="#d8a57a" stroke-width="3" opacity=".55"/></g>
-<g id="roof" class="piece" filter="url(#shadow)"><polygon points="194,286 498,134 881,309 568,468" fill="#484d47"/><polygon points="211,284 499,142 858,307 567,455" fill="#5b6158"/><polygon points="466,145 845,318 826,333 447,159" fill="#d94f2b"/></g>
-<g id="life" class="piece"><g fill="#61705a"><ellipse cx="226" cy="567" rx="36" ry="19" transform="rotate(-18 226 567)"/><ellipse cx="272" cy="595" rx="44" ry="22" transform="rotate(-12 272 595)"/><ellipse cx="850" cy="452" rx="39" ry="18" transform="rotate(-22 850 452)"/></g><g stroke="#584637" stroke-width="5"><path d="M191 550v-86M875 443v-93"/></g><g fill="#6f8168"><circle cx="191" cy="445" r="34"/><circle cx="168" cy="464" r="26"/><circle cx="216" cy="466" r="29"/><circle cx="875" cy="330" r="37"/><circle cx="849" cy="353" r="29"/><circle cx="901" cy="355" r="28"/></g><g id="warm" class="glow" opacity="0"><polygon points="303,479 449,408 704,525 551,603" fill="#ffd69a" opacity=".38"/><polygon points="254,337 495,219 693,309 452,431" fill="#ffd69a" opacity=".24"/></g></g>
-</svg></div></div>
-<div class="rail"><i class="tick on"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i></div><div class="progress"><span>Assembly</span><div class="track"><div class="bar" id="bar"></div></div><span class="pct" id="pct">0%</span></div>
-</div></section>
-<section class="proof"><div class="proofgrid"><div class="proofk">What changed in V3</div><div><h3>Better architecture.<br><span>Same interaction.</span></h3><div class="rows"><div class="row"><small>01 / Massing</small><strong>Low + horizontal</strong><em>No stacked toy boxes</em></div><div class="row"><small>02 / Structure</small><strong>Clear cantilever</strong><em>One dominant gesture</em></div><div class="row"><small>03 / Materials</small><strong>Stone / oak / glass</strong><em>Warm, not generic</em></div><div class="row"><small>04 / Landscape</small><strong>Water court</strong><em>House sits in a place</em></div></div></div></div></section>
-<section class="final"><div class="finaltop"><span>AUREL / CONCEPT 003</span><span>Architecture-led interaction</span></div><h4>Less Object<span>More Place.</span></h4><div class="finalbottom"><p>The motion only works when the architecture is worth looking at. The visual object now carries the page instead of relying on effects to create interest.</p><a class="replay" href="#build">Replay assembly ↑</a></div></section>
-<script>
-(()=>{const wrap=document.getElementById('build'),bar=document.getElementById('bar'),pct=document.getElementById('pct'),shell=document.getElementById('shell'),phase=document.getElementById('phase'),num=document.getElementById('num'),title=document.getElementById('title'),desc=document.getElementById('desc'),chips=document.getElementById('chips'),guide=document.getElementById('guide'),warm=document.getElementById('warm'),ticks=[...document.querySelectorAll('.tick')];const P={ground:document.getElementById('ground'),structure:document.getElementById('structure'),pavilion:document.getElementById('pavilion'),ribbon:document.getElementById('ribbon'),roof:document.getElementById('roof'),life:document.getElementById('life')};const data=[['Phase 01','01 / 05','Datum','A long stone plinth and reflecting pool establish the horizontal line the entire house will follow.',['Stone plinth','Water court']],['Phase 02','02 / 05','Structure','Four dark columns and a compact stone core carry the house without turning the frame into visual clutter.',['Slim columns','Stone core']],['Phase 03','03 / 05','Pavilion','The transparent living floor slides into place, keeping the landscape visible through the house.',['Glass pavilion','Open plan']],['Phase 04','04 / 05','Cantilever','A long concrete ribbon arrives above the pavilion. Timber underneath warms the heavy structural gesture.',['Concrete ribbon','Oak soffit']],['Phase 05','05 / 05','Place','Roof, trees and warm light complete the project. The object finally reads as a home in a landscape.',['Thin roof','Landscape + light']]];const clamp=v=>Math.max(0,Math.min(1,v)),ease=t=>1-Math.pow(1-clamp(t),3),local=(p,i)=>ease(clamp((p-i*.2)/.2));let last=-1;function set(el,x,y,s,o){el.setAttribute('transform',`translate(${x} ${y}) scale(${s})`);el.style.opacity=o}function render(){const r=wrap.getBoundingClientRect(),max=wrap.offsetHeight-innerHeight,p=clamp(-r.top/max);bar.style.width=p*100+'%';pct.textContent=Math.round(p*100)+'%';const st=Math.min(4,Math.floor(p*5));if(st!==last){last=st;const d=data[st];phase.textContent=d[0];num.textContent=d[1];title.textContent=d[2];desc.textContent=d[3];chips.innerHTML=d[4].map(x=>`<span class="chip">${x}</span>`).join('');ticks.forEach((x,i)=>x.classList.toggle('on',i===st))}const a=local(p,0),b=local(p,1),c=local(p,2),d=local(p,3),e=local(p,4);set(P.ground,0,48*(1-a),.96+.04*a,.3+.7*a);set(P.structure,0,-150*(1-b),.98+.02*b,.03+.97*b);set(P.pavilion,140*(1-c),12*(1-c),.96+.04*c,.03+.97*c);set(P.ribbon,-120*(1-d),-170*(1-d),.96+.04*d,.03+.97*d);set(P.roof,0,-255*(1-e),.95+.05*e,.02+.98*e);set(P.life,-60*(1-e),80*(1-e),.94+.06*e,.02+.98*e);guide.style.opacity=.42*(1-p*.9);warm.style.opacity=clamp((p-.86)/.12);shell.style.transform=`rotateX(${2.6-p*1.2}deg) rotateY(${-8+p*11}deg) scale(${1.01+p*.035}) translateY(${Math.sin(p*Math.PI)*-6}px)`;requestAnimationFrame(render)}render()})();
-</script>
+<section class="story" id="story">
+  <div class="pin">
+    <div class="story-copy">
+      <div class="phase" id="phase">Phase 01</div>
+      <div class="num" id="num">01 / 05</div>
+      <h2 id="title">Podium</h2>
+      <p id="desc">The project starts as landscape and stone datum. The base is low, horizontal and calm, giving the whole house a cleaner proportion than the previous stacked-box version.</p>
+      <div class="chips" id="chips"><span class="chip">Low-slung massing</span><span class="chip">Stone datum</span></div>
+    </div>
+    <div class="model-zone">
+      <div class="model-wrap">
+        <div class="model-shell" id="modelShell">
+          <div class="scene" id="storyScene">
+            <div class="part base part-base"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part deck part-deck"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part pool part-pool"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part soffit part-soffit"><div class="plane top"><div class="face"></div></div></div>
+            <div class="part living-glass part-living"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part gallery part-gallery"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part core part-core"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part roof-main part-roof-main"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="part roof-wing part-roof-wing"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
+            <div class="land a part-land-a"></div><div class="land b part-land-b"></div><div class="land c part-land-c"></div>
+            <div class="tree-wrap a part-tree-a"><div class="tree"></div><div class="trunk"></div></div>
+            <div class="tree-wrap b part-tree-b"><div class="tree"></div><div class="trunk"></div></div>
+          </div>
+          <div class="glow-band" id="storyGlow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dots"><i class="tick on"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i></div>
+    <div class="axes"><span>Build</span><div class="track"><div class="bar" id="bar"></div></div><span class="pct" id="pct">0%</span></div>
+  </div>
+</section>
+<section class="metrics" id="metrics">
+  <div class="metrics-grid">
+    <div class="metrics-kicker">Why this is better</div>
+    <div>
+      <h3>Better house.<span>Better demo.</span></h3>
+      <div class="rows">
+        <div class="row"><small>01 / Visual object</small><strong>Render-first</strong><em>Looks like architecture, not UI art</em></div>
+        <div class="row"><small>02 / Massing</small><strong>Low pavilion</strong><em>Cleaner proportions, less generic</em></div>
+        <div class="row"><small>03 / Story</small><strong>Exploded layers</strong><em>Motion follows construction logic</em></div>
+        <div class="row"><small>04 / Mood</small><strong>Warm + premium</strong><em>Stone, glass, timber, water</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="final">
+  <div class="final-top"><span>AUREL / CONCEPT 004</span><span>Render-led live demo</span></div>
+  <h4>Start With A House<span>People Want.</span></h4>
+  <div class="final-bottom">
+    <p>The first problem was not animation. It was taste. This version fixes the object first, then lets motion support it.</p>
+    <a class="replay" href="#story">Replay assembly ↑</a>
+  </div>
+</section>
+<script src="script.js?v=4"></script>
 </body>
 </html>
