@@ -3,133 +3,189 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#f2eee7" />
-<title>AUREL — Render-first architectural storytelling</title>
-<link rel="stylesheet" href="style.css?v=4">
+<meta name="theme-color" content="#f1ede5" />
+<title>AUREL — Scroll Built Residence</title>
+<link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 <nav>
   <div class="brand">AUREL / BUILD</div>
-  <div class="nav-meta"><span>Render-first architecture</span><i class="live-dot"></i></div>
+  <div class="nav-meta"><span>Residence 05 / Courtyard Pavilion</span><i class="live-dot"></i></div>
 </nav>
+
 <section class="hero">
-  <div class="grid"></div>
-  <div class="hero-inner">
-    <div class="copy">
-      <div class="kicker">Architecture first. Motion second.</div>
-      <h1>A House Worth<span class="outline">Looking At</span></h1>
-      <div class="lead-grid">
-        <p><strong>This is the right direction.</strong><br>Instead of a code-demo house, the hero behaves like a polished architectural render. Scroll only reveals how the project is assembled: podium, glass living level, stone core, roof, water and landscape.</p>
-        <p>Concept Residence / 2026<br>Render board + exploded story<br>Scroll-driven presentation</p>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="#story">View assembly ↓</a>
-        <a class="btn" href="#metrics">Why this works</a>
-      </div>
+  <div class="hero-grid"></div>
+  <div class="hero-copy">
+    <div class="eyebrow">Scroll-driven architectural story</div>
+    <h1>BUILD THE<br><span>HOUSE.</span></h1>
+    <p class="hero-lead">One house. Five construction states. Every scroll step makes a visible architectural change.</p>
+    <a class="hero-cta" href="#build">Start building ↓</a>
+  </div>
+  <div class="hero-visual" aria-label="Completed modern courtyard villa">
+    <svg viewBox="0 0 1120 720" role="img" aria-label="Warm modern courtyard villa with stone core, glass pavilion, floating roof and pool">
+      <defs>
+        <linearGradient id="skyH" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f9f4e9"/><stop offset="1" stop-color="#e9dfcf"/></linearGradient>
+        <linearGradient id="stoneH" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9cdb8"/><stop offset="1" stop-color="#aa967a"/></linearGradient>
+        <linearGradient id="glassH" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8edef" stop-opacity=".92"/><stop offset="1" stop-color="#6f9ea5" stop-opacity=".94"/></linearGradient>
+        <linearGradient id="roofH" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3b403a"/><stop offset="1" stop-color="#20241f"/></linearGradient>
+        <linearGradient id="waterH" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c6eaed"/><stop offset="1" stop-color="#67aeb9"/></linearGradient>
+        <filter id="heroShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#2c2119" flood-opacity=".18"/></filter>
+        <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+      <rect width="1120" height="720" fill="url(#skyH)"/>
+      <circle cx="874" cy="125" r="142" fill="#fff4cf" opacity=".68"/>
+      <path d="M0 535C168 472 256 526 402 493C565 456 703 476 1120 405V720H0Z" fill="#7c896f" opacity=".78"/>
+      <path d="M0 576C166 530 308 584 492 539C694 490 843 531 1120 475V720H0Z" fill="#65745d" opacity=".86"/>
+      <ellipse cx="604" cy="602" rx="383" ry="54" fill="#2f271f" opacity=".13"/>
+      <g filter="url(#heroShadow)">
+        <polygon points="196,520 548,352 892,485 520,674" fill="#b7aa93"/>
+        <polygon points="232,505 548,356 852,472 516,642" fill="#e9dfcf"/>
+        <polygon points="590,507 807,404 913,446 695,557" fill="url(#waterH)" stroke="#e9ffff" stroke-width="4"/>
+        <path d="M616 500L833 398M642 512L858 410M668 525L884 423" stroke="#e8ffff" stroke-width="3" opacity=".62"/>
+        <g>
+          <polygon points="278,421 447,340 447,220 278,302" fill="url(#stoneH)"/>
+          <polygon points="447,340 490,348 490,228 447,220" fill="#927d64"/>
+          <path d="M294 314L426 250M294 345L426 281M294 376L426 312" stroke="#b9a68a" stroke-width="4" opacity=".55"/>
+        </g>
+        <g>
+          <polygon points="474,405 690,438 690,302 474,269" fill="url(#glassH)"/>
+          <polygon points="690,438 828,369 828,234 690,302" fill="#77a6ad" opacity=".9"/>
+          <polygon points="506,391 663,415 663,325 506,301" fill="#ffd89e" opacity=".78"/>
+          <path d="M531 301V402M586 309V410M641 317V418M713 291V426M763 266V401" stroke="#e8f4f5" stroke-width="3" opacity=".82"/>
+          <polygon points="510,387 612,402 612,365 510,350" fill="#735c48" opacity=".55"/>
+        </g>
+        <g>
+          <polygon points="236,284 462,172 858,326 625,446" fill="url(#roofH)"/>
+          <polygon points="258,280 463,180 830,323 621,430" fill="#4f564d"/>
+          <polygon points="248,285 626,434 626,454 248,305" fill="#8c684a"/>
+          <polygon points="625,434 858,326 858,346 625,454" fill="#755238"/>
+        </g>
+        <g>
+          <ellipse cx="242" cy="537" rx="54" ry="24" fill="#617357" transform="rotate(-16 242 537)"/>
+          <ellipse cx="328" cy="583" rx="69" ry="29" fill="#718466" transform="rotate(12 328 583)"/>
+          <ellipse cx="859" cy="369" rx="54" ry="23" fill="#627558" transform="rotate(-20 859 369)"/>
+          <rect x="185" y="398" width="8" height="116" rx="4" fill="#6b4a32"/>
+          <circle cx="189" cy="378" r="44" fill="#6b7d60"/><circle cx="158" cy="397" r="31" fill="#728668"/><circle cx="217" cy="399" r="34" fill="#65795b"/>
+          <rect x="930" y="262" width="8" height="105" rx="4" fill="#6b4a32"/>
+          <circle cx="934" cy="244" r="43" fill="#687b5e"/><circle cx="905" cy="262" r="30" fill="#748768"/><circle cx="962" cy="264" r="32" fill="#607254"/>
+        </g>
+      </g>
+      <ellipse cx="594" cy="376" rx="210" ry="84" fill="#ffd79a" opacity=".18" filter="url(#softGlow)"/>
+    </svg>
+  </div>
+  <div class="hero-badge badge-a">Stone core</div>
+  <div class="hero-badge badge-b">Floating roof</div>
+  <div class="hero-badge badge-c">Water court</div>
+</section>
+
+<section class="build" id="build">
+  <div class="build-pin">
+    <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+    <div class="build-copy" id="buildCopy">
+      <div class="phase-line"><span id="phase">01</span><i></i><b id="phaseName">SITE</b></div>
+      <h2 id="title">Set the ground.</h2>
+      <p id="desc">The villa starts as a low stone datum, water court and landscape. Nothing else is visible yet.</p>
+      <div class="chips" id="chips"><span>Stone datum</span><span>Pool court</span></div>
     </div>
-    <div class="render-stage">
-      <div class="render-card">
-        <div class="stage-meta"><span>Aurel / Residence 03</span><span>South courtyard pavilion</span></div>
-        <div class="render-label label-1">Stone podium</div>
-        <div class="render-label label-2">Thin roof plane</div>
-        <div class="render-label label-3">Water court + landscape</div>
-        <div class="render-board">
-          <div class="render-shadow"></div>
-          <div class="house-scene">
-            <div class="scene">
-              <div class="part base" style="transform:translate3d(0,0,0)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part deck" style="transform:translate3d(0,0,18px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part pool" style="transform:translate3d(0,0,8px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part soffit" style="transform:translate3d(0,0,66px)"><div class="plane top"><div class="face"></div></div></div>
-              <div class="part living-glass" style="transform:translate3d(0,0,82px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part gallery" style="transform:translate3d(0,0,92px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part core" style="transform:translate3d(0,0,84px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part roof-main" style="transform:translate3d(0,0,142px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="part roof-wing" style="transform:translate3d(0,0,150px)">
-                <div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div>
-              </div>
-              <div class="land a"></div><div class="land b"></div><div class="land c"></div>
-              <div class="tree-wrap a"><div class="tree"></div><div class="trunk"></div></div>
-              <div class="tree-wrap b"><div class="tree"></div><div class="trunk"></div></div>
-            </div>
-            <div class="glow-band" id="heroGlow"></div>
-          </div>
-        </div>
-        <div class="callout-stack"><div class="callout">Render board hero</div><div class="callout">Exploded architecture story</div></div>
-      </div>
+
+    <div class="build-visual">
+      <div class="scene-pulse" id="scenePulse"></div>
+      <svg id="houseScene" viewBox="0 0 1120 760" role="img" aria-label="House assembling through five scroll phases">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f4f0e8"/><stop offset="1" stop-color="#ddd1c1"/></linearGradient>
+          <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfd4c1"/><stop offset="1" stop-color="#a89276"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9eef0" stop-opacity=".96"/><stop offset="1" stop-color="#739fa7" stop-opacity=".96"/></linearGradient>
+          <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41463f"/><stop offset="1" stop-color="#1e221e"/></linearGradient>
+          <linearGradient id="pool" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cbecef"/><stop offset="1" stop-color="#5da9b5"/></linearGradient>
+          <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="26" stdDeviation="20" flood-color="#2c2119" flood-opacity=".18"/></filter>
+          <filter id="glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="20"/></filter>
+        </defs>
+
+        <rect width="1120" height="760" fill="url(#sky)"/>
+        <circle id="sun" cx="895" cy="125" r="145" fill="#fff4c8" opacity=".62"/>
+        <g id="hills" opacity=".72">
+          <path d="M0 533C154 468 270 530 414 489C566 445 704 481 1120 404V760H0Z" fill="#839078"/>
+          <path d="M0 586C161 527 325 596 518 540C722 480 883 543 1120 485V760H0Z" fill="#68765f"/>
+        </g>
+        <ellipse id="groundShadow" cx="600" cy="632" rx="390" ry="56" fill="#2c231d" opacity=".10"/>
+
+        <g id="site" class="layer" filter="url(#shadow)">
+          <polygon points="194,535 548,359 897,493 519,687" fill="#b6a890"/>
+          <polygon points="232,518 548,365 855,481 515,654" fill="#ede3d4"/>
+          <polygon points="591,520 808,415 916,458 696,570" fill="url(#pool)" stroke="#edffff" stroke-width="4"/>
+          <path id="ripples" d="M618 513L835 407M646 526L862 420M674 539L889 433" stroke="#e8ffff" stroke-width="3" opacity=".72"/>
+        </g>
+
+        <g id="frame" class="layer" fill="none" stroke="#30342f" stroke-linecap="square">
+          <path d="M286 427V284M447 348V207M687 441V298M827 372V230" stroke-width="12"/>
+          <path d="M286 284L447 207L687 298L827 230M286 354L447 276L687 368L827 300" stroke-width="10"/>
+          <path d="M447 207V348M687 298V441" stroke-width="7" opacity=".65"/>
+          <circle cx="286" cy="284" r="8" fill="#c7683f" stroke="none"/>
+          <circle cx="447" cy="207" r="8" fill="#c7683f" stroke="none"/>
+          <circle cx="687" cy="298" r="8" fill="#c7683f" stroke="none"/>
+          <circle cx="827" cy="230" r="8" fill="#c7683f" stroke="none"/>
+        </g>
+
+        <g id="core" class="layer" filter="url(#shadow)">
+          <polygon points="278,430 449,348 449,225 278,307" fill="url(#stone)"/>
+          <polygon points="449,348 494,356 494,233 449,225" fill="#958168"/>
+          <path d="M294 319L427 254M294 350L427 285M294 381L427 316" stroke="#b8a589" stroke-width="4" opacity=".55"/>
+        </g>
+
+        <g id="glassWing" class="layer" filter="url(#shadow)">
+          <polygon points="476,414 690,446 690,309 476,277" fill="url(#glass)"/>
+          <polygon points="690,446 828,377 828,240 690,309" fill="#76a4ac" opacity=".94"/>
+          <polygon id="warmInterior" points="507,398 664,422 664,330 507,306" fill="#ffd28f" opacity=".34"/>
+          <path d="M531 307V408M585 315V416M640 323V424M713 298V434M766 271V407" stroke="#edf8f8" stroke-width="3" opacity=".84"/>
+          <polygon points="508,394 612,410 612,371 508,356" fill="#725b47" opacity=".52"/>
+        </g>
+
+        <g id="roofLayer" class="layer" filter="url(#shadow)">
+          <polygon points="235,290 463,176 858,332 624,452" fill="url(#roof)"/>
+          <polygon points="258,286 464,185 831,329 621,436" fill="#50574e"/>
+          <polygon points="246,291 625,440 625,461 246,312" fill="#8f6c4c"/>
+          <polygon points="625,440 858,332 858,352 625,461" fill="#76543a"/>
+        </g>
+
+        <g id="life" class="layer">
+          <ellipse cx="241" cy="548" rx="55" ry="25" fill="#607257" transform="rotate(-16 241 548)"/>
+          <ellipse cx="328" cy="592" rx="70" ry="30" fill="#718466" transform="rotate(11 328 592)"/>
+          <ellipse cx="864" cy="378" rx="56" ry="24" fill="#63765a" transform="rotate(-21 864 378)"/>
+          <rect x="184" y="403" width="8" height="117" rx="4" fill="#694a32"/>
+          <circle cx="188" cy="383" r="45" fill="#6a7c60"/><circle cx="157" cy="402" r="31" fill="#748769"/><circle cx="216" cy="404" r="34" fill="#65795b"/>
+          <rect x="932" y="267" width="8" height="105" rx="4" fill="#694a32"/>
+          <circle cx="936" cy="249" r="44" fill="#687b5e"/><circle cx="906" cy="268" r="30" fill="#748868"/><circle cx="964" cy="269" r="32" fill="#607254"/>
+          <ellipse id="nightGlow" cx="594" cy="390" rx="224" ry="92" fill="#ffd28f" opacity="0" filter="url(#glow)"/>
+        </g>
+
+        <g id="stageCallout" opacity="0">
+          <path d="M856 290L988 224" stroke="#171714" stroke-width="2"/>
+          <circle cx="856" cy="290" r="6" fill="#c7683f"/>
+          <rect x="955" y="190" width="142" height="64" rx="12" fill="#f6f1e9" stroke="rgba(23,23,20,.18)"/>
+          <text x="974" y="216" font-size="12" font-family="Inter,Arial" letter-spacing="2">COMPLETE</text>
+          <text x="974" y="237" font-size="9" font-family="Inter,Arial" letter-spacing="1.2" opacity=".58">READY FOR LIFE</text>
+        </g>
+      </svg>
     </div>
+
+    <div class="stage-rail">
+      <button class="stage-step active" data-stage="0"><span>01</span><b>Site</b></button>
+      <button class="stage-step" data-stage="1"><span>02</span><b>Frame</b></button>
+      <button class="stage-step" data-stage="2"><span>03</span><b>Core + Glass</b></button>
+      <button class="stage-step" data-stage="3"><span>04</span><b>Roof</b></button>
+      <button class="stage-step" data-stage="4"><span>05</span><b>Finished</b></button>
+    </div>
+    <div class="progress"><span>SCROLL TO BUILD</span><div class="progress-track"><i id="bar"></i></div><b id="pct">0%</b></div>
   </div>
 </section>
-<section class="story" id="story">
-  <div class="pin">
-    <div class="story-copy">
-      <div class="phase" id="phase">Phase 01</div>
-      <div class="num" id="num">01 / 05</div>
-      <h2 id="title">Podium</h2>
-      <p id="desc">The project starts as landscape and stone datum. The base is low, horizontal and calm, giving the whole house a cleaner proportion than the previous stacked-box version.</p>
-      <div class="chips" id="chips"><span class="chip">Low-slung massing</span><span class="chip">Stone datum</span></div>
-    </div>
-    <div class="model-zone">
-      <div class="model-wrap">
-        <div class="model-shell" id="modelShell">
-          <div class="scene" id="storyScene">
-            <div class="part base part-base"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part deck part-deck"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part pool part-pool"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part soffit part-soffit"><div class="plane top"><div class="face"></div></div></div>
-            <div class="part living-glass part-living"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part gallery part-gallery"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part core part-core"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part roof-main part-roof-main"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="part roof-wing part-roof-wing"><div class="plane top"><div class="face"></div></div><div class="plane left"><div class="face"></div></div><div class="plane right"><div class="face"></div></div></div>
-            <div class="land a part-land-a"></div><div class="land b part-land-b"></div><div class="land c part-land-c"></div>
-            <div class="tree-wrap a part-tree-a"><div class="tree"></div><div class="trunk"></div></div>
-            <div class="tree-wrap b part-tree-b"><div class="tree"></div><div class="trunk"></div></div>
-          </div>
-          <div class="glow-band" id="storyGlow"></div>
-        </div>
-      </div>
-    </div>
-    <div class="dots"><i class="tick on"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i></div>
-    <div class="axes"><span>Build</span><div class="track"><div class="bar" id="bar"></div></div><span class="pct" id="pct">0%</span></div>
-  </div>
+
+<section class="after">
+  <div class="after-kicker">The interaction is now literal</div>
+  <h3>ONE SCROLL.<br><span>FIVE OBVIOUS CHANGES.</span></h3>
+  <p>Large travel distances, distinct construction states, visible stage labels, and a warm-light finished reveal make the build sequence readable even on a phone.</p>
+  <a href="#build" class="replay">Replay build ↑</a>
 </section>
-<section class="metrics" id="metrics">
-  <div class="metrics-grid">
-    <div class="metrics-kicker">Why this is better</div>
-    <div>
-      <h3>Better house.<span>Better demo.</span></h3>
-      <div class="rows">
-        <div class="row"><small>01 / Visual object</small><strong>Render-first</strong><em>Looks like architecture, not UI art</em></div>
-        <div class="row"><small>02 / Massing</small><strong>Low pavilion</strong><em>Cleaner proportions, less generic</em></div>
-        <div class="row"><small>03 / Story</small><strong>Exploded layers</strong><em>Motion follows construction logic</em></div>
-        <div class="row"><small>04 / Mood</small><strong>Warm + premium</strong><em>Stone, glass, timber, water</em></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="final">
-  <div class="final-top"><span>AUREL / CONCEPT 004</span><span>Render-led live demo</span></div>
-  <h4>Start With A House<span>People Want.</span></h4>
-  <div class="final-bottom">
-    <p>The first problem was not animation. It was taste. This version fixes the object first, then lets motion support it.</p>
-    <a class="replay" href="#story">Replay assembly ↑</a>
-  </div>
-</section>
-<script src="script.js?v=4"></script>
+
+<script src="script.js?v=5"></script>
 </body>
 </html>
