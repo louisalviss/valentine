@@ -1,0 +1,69 @@
+name: Deploy Visual System preview to Cloudflare
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+    paths:
+      - "visual-system-preview-trigger.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy temporary Workers static assets
+        id: cf
+        shell: bash
+        run: |
+          set +e
+          npx wrangler@4.110.0 deploy \
+            --assets . \
+            --name visual-system-demo \
+            --compatibility-date 2026-08-22 \
+            --temporary 2>&1 | tee deploy.log
+          STATUS=${PIPESTATUS[0]}
+          URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.workers\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
+          CLAIM=$(grep -Eo 'https://dash\.cloudflare\.com/claim-preview\?claimToken=[A-Za-z0-9_-]+' deploy.log | tail -n 1)
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "claim=$CLAIM" >> "$GITHUB_OUTPUT"
+          if [ "$STATUS" -ne 0 ] || [ -z "$URL" ]; then exit 1; fi
+
+      - name: Comment live URL
+        if: success()
+        uses: actions/github-script@v7
+        env:
+          LIVE_URL: ${{ steps.cf.outputs.url }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Visual System live preview: ${process.env.LIVE_URL}/visual-system-demo/`
+            });
+
+      - name: Comment deployment failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let log = fs.existsSync('deploy.log') ? fs.readFileSync('deploy.log','utf8') : 'No deploy log.';
+            if (log.length > 12000) log = log.slice(-12000);
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Visual System Cloudflare deployment failed.\n\n\`\`\`text\n${log}\n\`\`\``
+            });
