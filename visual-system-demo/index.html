@@ -1,79 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a09" />
-  <meta name="description" content="FORMA — a procedural architectural system shaped by scroll, light and material presets." />
-  <title>FORMA — Procedural Pavilion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090806">
+<title>FORMA — iOS Pavilion</title>
+<style>
+:root{--bg:#090806;--ink:#f3eee5;--muted:#a69c8e;--accent:#e35b34;--frame:#3b291d;--frame2:#76513a;--skin:#d7c7ab;--roof:#1f1a16;--core:#ffc87c;--p:0;--explode:0;--spin:-18deg;--lift:0px;--open:0deg;color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden}body{min-height:700vh}button{font:inherit;color:inherit}.noise{position:fixed;inset:0;pointer-events:none;z-index:8;opacity:.045;background-image:radial-gradient(circle at 20% 20%,#fff 0 1px,transparent 1px);background-size:5px 5px;mix-blend-mode:soft-light}.top{position:fixed;z-index:20;top:0;left:0;right:0;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(#090806e8,#09080688,transparent);backdrop-filter:blur(10px)}.brand{font:600 18px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:-.08em}.brand i{font-style:normal;color:var(--accent)}.chapterNo{font:10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);letter-spacing:.12em}.controls{position:fixed;z-index:20;top:78px;right:12px;display:flex;gap:6px}.controls button{border:1px solid rgba(255,255,255,.16);background:#0c0b09c9;padding:8px 9px;font:9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;border-radius:0}.controls button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}.sceneWrap{position:fixed;z-index:1;inset:0;display:grid;place-items:center;pointer-events:none;overflow:hidden;background:radial-gradient(circle at 62% 42%,rgba(188,111,53,.14),transparent 34%),linear-gradient(180deg,#0d0b08,#070706)}.scene{position:absolute;left:50%;top:48%;width:360px;height:360px;transform:translate(-48%,-48%);perspective:880px;perspective-origin:50% 42%}.world{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(61deg) rotateZ(var(--spin)) translateY(var(--lift));transition:filter .3s ease}.plinth{position:absolute;left:70px;top:68px;width:220px;height:220px;border-radius:50%;background:linear-gradient(145deg,#5e5143,#30271f);box-shadow:0 34px 70px #000a,inset 0 0 0 1px #ffffff20;transform:translateZ(calc(-10px - var(--explode)*90px))}.water{position:absolute;left:48px;top:46px;width:264px;height:264px;border:20px solid #111b1c;border-radius:50%;opacity:.82;transform:translateZ(calc(-18px - var(--explode)*130px));box-shadow:inset 0 0 0 1px #95e6ff18}.deck{position:absolute;left:96px;top:96px;width:168px;height:168px;background:#4c3a2a;box-shadow:inset 0 0 0 1px #ffffff19;transform:translateZ(calc(4px - var(--explode)*52px))}.frame{position:absolute;inset:0;transform-style:preserve-3d}.col,.beam,.fin,.roof,.core{position:absolute;transform-style:preserve-3d}.col{width:12px;height:12px;background:var(--frame2);box-shadow:0 0 0 1px #ffffff10,0 12px 18px #0008;transform:translateZ(calc(90px + var(--explode)*150px))}.col:after{content:"";position:absolute;left:0;top:0;width:12px;height:92px;transform-origin:top;transform:rotateX(-90deg);background:linear-gradient(var(--frame2),var(--frame));box-shadow:inset 0 0 0 1px #ffffff0d}.c1{left:104px;top:104px}.c2{right:104px;top:104px}.c3{left:104px;bottom:104px}.c4{right:104px;bottom:104px}.c5{left:174px;top:104px}.c6{left:174px;bottom:104px}.c7{left:104px;top:174px}.c8{right:104px;top:174px}.beam{height:9px;background:var(--frame);box-shadow:0 0 0 1px #ffffff12;transform:translateZ(calc(184px + var(--explode)*210px))}.bx{left:101px;width:158px}.b1{top:101px}.b2{bottom:101px}.by{top:101px;width:158px;transform-origin:left;transform:translateZ(calc(184px + var(--explode)*210px)) rotateZ(90deg)}.b3{left:105px}.b4{right:-53px}.skin{position:absolute;inset:0;transform-style:preserve-3d;transform:translateZ(calc(106px + var(--explode)*260px))}.fin{width:8px;height:75px;background:linear-gradient(90deg,var(--skin),#8e806d);opacity:.82;transform-origin:50% 100%;box-shadow:0 6px 16px #0007}.north{top:83px}.south{bottom:83px}.f1{left:111px;transform:rotateY(calc(var(--open)*1))}.f2{left:137px;transform:rotateY(calc(var(--open)*.7))}.f3{left:163px;transform:rotateY(calc(var(--open)*.35))}.f4{left:189px;transform:rotateY(calc(var(--open)*-.35))}.f5{left:215px;transform:rotateY(calc(var(--open)*-.7))}.f6{left:241px;transform:rotateY(calc(var(--open)*-1))}.roof{background:var(--roof);box-shadow:inset 0 0 0 1px #ffffff12,0 14px 28px #000a}.r1{left:83px;top:76px;width:194px;height:42px;transform:translateZ(calc(204px + var(--explode)*330px)) rotateZ(-3deg)}.r2{left:83px;bottom:76px;width:194px;height:42px;transform:translateZ(calc(214px + var(--explode)*385px)) rotateZ(3deg)}.core{left:142px;top:142px;width:76px;height:76px;background:radial-gradient(circle at 50% 45%,#fff8d0,var(--core) 38%,#b74322 74%);box-shadow:0 0 46px var(--core);transform:translateZ(calc(118px + var(--explode)*470px));animation:pulse 3s ease-in-out infinite alternate}@keyframes pulse{to{filter:brightness(1.25)}}.annotation{position:absolute;inset:0;transform-style:preserve-3d;opacity:var(--explode)}.axis{position:absolute;background:var(--accent);opacity:.66}.axis.x{left:30px;top:179px;width:300px;height:1px}.axis.y{left:179px;top:30px;width:1px;height:300px}.content{position:relative;z-index:10}.chapter{min-height:100vh;display:flex;align-items:flex-end;padding:0 18px 9vh;pointer-events:none}.hero{min-height:122vh;align-items:flex-start;padding-top:14vh}.copy{max-width:340px}.right{margin-left:auto;text-align:right}.eyebrow{display:block;margin-bottom:12px;color:var(--accent);font:9px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase}h1,h2,p{margin:0}h1,h2{font-weight:560;letter-spacing:-.07em}h1{font-size:clamp(58px,17vw,90px);line-height:.78;max-width:6.6ch}h1 em,h2 em{font-style:normal;color:var(--accent)}h2{font-size:clamp(42px,13vw,68px);line-height:.84}.copy p{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.62;max-width:31ch}.hero .copy p{color:#d1c7b8;max-width:32ch}.stamp{margin-top:22px;color:var(--muted);font:9px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.progress{position:fixed;z-index:20;right:6px;top:30%;width:1px;height:38%;background:#ffffff18}.progress i{display:block;width:1px;height:calc(var(--p)*100%);background:var(--accent);box-shadow:0 0 12px var(--accent)}.badge{position:fixed;z-index:20;left:14px;bottom:14px;padding:7px 9px;border:1px solid #ffffff16;background:#0b0907c9;color:var(--muted);font:8px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}body[data-mode=brut]{--bg:#0b0c0c;--accent:#ce5c35;--frame:#5f5c55;--frame2:#a5a096;--skin:#77736b;--roof:#262725;--core:#ff8247}body[data-mode=brut] .sceneWrap{background:radial-gradient(circle at 62% 42%,#67584b22,transparent 36%),linear-gradient(#121313,#070808)}body[data-mode=brut] .world{filter:saturate(.72) contrast(1.08)}body[data-mode=orbital]{--bg:#04080a;--accent:#79e9ff;--frame:#52666d;--frame2:#c1d0d2;--skin:#32505a;--roof:#0c1518;--core:#84efff}body[data-mode=orbital] .sceneWrap{background:radial-gradient(circle at 62% 42%,#2f8aa42b,transparent 36%),linear-gradient(#071013,#030607)}body[data-mode=orbital] .world{filter:saturate(1.12)}@media(min-width:760px){.scene{left:62%;width:520px;height:520px}.world{transform:rotateX(61deg) rotateZ(var(--spin)) scale(1.38) translateY(var(--lift))}.controls{right:28px}.chapter{padding-left:6vw;padding-right:6vw}.copy{max-width:460px}h1{font-size:112px}h2{font-size:78px}}@media(prefers-reduced-motion:reduce){.core{animation:none}}
+</style>
 </head>
-<body data-variant="shoji">
-  <canvas id="scene" aria-label="Interactive procedural pavilion"></canvas>
-  <div class="fallback" aria-hidden="true"><div class="fallback__mass"></div><div class="fallback__line"></div></div>
-  <div class="wash" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="FORMA home">FOR<span>MA</span></a>
-    <div class="topbar__meta"><span>PROCEDURAL ARCHITECTURE / 001</span><span id="chapterMeta">WHOLE / 01</span></div>
-    <button class="soundless" type="button" id="motionToggle" aria-pressed="false">PAUSE MOTION</button>
-  </header>
-
-  <aside class="variant-panel" aria-label="Material systems">
-    <span class="variant-panel__label">SYSTEM</span>
-    <div class="variant-list" role="group" aria-label="Pavilion variants">
-      <button type="button" data-variant="shoji" aria-pressed="true"><span>01</span><b>SHŌJI</b><small>charred timber / paper light</small></button>
-      <button type="button" data-variant="brut" aria-pressed="false"><span>02</span><b>BRUT</b><small>concrete / oxidized steel</small></button>
-      <button type="button" data-variant="orbital" aria-pressed="false"><span>03</span><b>ORBITAL</b><small>ceramic / suspended light</small></button>
-    </div>
-  </aside>
-
-  <div class="progress" aria-hidden="true"><i id="progressBar"></i><span id="progressIndex">01</span></div>
-  <div class="gesture">SCROLL TO DISSECT · DRAG TO ORBIT</div>
-
-  <main id="top">
-    <section class="chapter hero" data-chapter="WHOLE">
-      <div class="hero__copy">
-        <span class="eyebrow">A building is not an object.</span>
-        <h1>It is a<br><em>behavior.</em></h1>
-        <p>One procedural structure. Three material cultures. Scroll changes the building’s anatomy; the system changes its identity without losing the choreography.</p>
-      </div>
-      <div class="hero__stamp"><span>FORMA / 001</span><b>6.4 × 6.4 × 5.2M</b></div>
-    </section>
-
-    <section class="chapter" data-chapter="GROUND">
-      <div class="copy left"><span class="eyebrow">01 / Ground</span><h2>Weight begins<br>at the plane.</h2><p>The plinth and water plane separate first. Everything else remains suspended as a single mass.</p></div>
-    </section>
-
-    <section class="chapter" data-chapter="FRAME">
-      <div class="copy right"><span class="eyebrow">02 / Frame</span><h2>Structure<br>becomes rhythm.</h2><p>Eight columns step outward and the roof frame lifts. The silhouette is defined by spacing before ornament.</p></div>
-    </section>
-
-    <section class="chapter" data-chapter="SKIN">
-      <div class="copy left"><span class="eyebrow">03 / Skin</span><h2>Privacy is<br>a gradient.</h2><p>Fins rotate instead of simply appearing. Dense edges protect the core while the center stays visually porous.</p></div>
-    </section>
-
-    <section class="chapter" data-chapter="LIGHT">
-      <div class="copy right"><span class="eyebrow">04 / Light</span><h2>The room is<br>made of glow.</h2><p>A lantern core rises through the frame. Each preset interprets the same volume differently: paper, ember or cold plasma.</p></div>
-    </section>
-
-    <section class="chapter anatomy" data-chapter="ANATOMY">
-      <div class="copy left"><span class="eyebrow">05 / Anatomy</span><h2>Now break<br>the system open.</h2><p>Ground, frame, skin, roof and light separate into legible layers. The composition stays architectural instead of turning into particle noise.</p></div>
-    </section>
-
-    <section class="chapter final" data-chapter="SYSTEM">
-      <div class="final__copy">
-        <span class="eyebrow">06 / System</span>
-        <h2>Same grammar.<br><em>Different world.</em></h2>
-        <p>Switch SHŌJI, BRUT and ORBITAL here. Geometry, density, light, atmosphere and motion timing change as a coherent preset — not as a recolor.</p>
-      </div>
-    </section>
-  </main>
-
-  <script type="module" src="./scene.js"></script>
-</body>
-</html>
+<body data-mode="shoji">
+<div class="sceneWrap" aria-hidden="true"><div class="scene"><div class="world"><div class="water"></div><div class="plinth"></div><div class="deck"></div><div class="frame"><i class="col c1"></i><i class="col c2"></i><i class="col c3"></i><i class="col c4"></i><i class="col c5"></i><i class="col c6"></i><i class="col c7"></i><i class="col c8"></i><i class="beam bx b1"></i><i class="beam bx b2"></i><i class="beam by b3"></i><i class="beam by b4"></i></div><div class="skin"><i class="fin north f1"></i><i class="fin north f2"></i><i class="fin north f3"></i><i class="fin north f4"></i><i class="fin north f5"></i><i class="fin north f6"></i><i class="fin south f1"></i><i class="fin south f2"></i><i class="fin south f3"></i><i class="fin south f4"></i><i class="fin south f5"></i><i class="fin south f6"></i></div><div class="roof r1"></div><div class="roof r2"></div><div class="core"></div><div class="annotation"><i class="axis x"></i><i class="axis y"></i></div></div></div></div>
+<div class="noise"></div><header class="top"><div class="brand">FOR<i>MA</i></div><div class="chapterNo" id="chapterNo">WHOLE / 01</div></header><div class="controls"><button data-mode="shoji" aria-pressed="true">SHŌJI</button><button data-mode="brut" aria-pressed="false">BRUT</button><button data-mode="orbital" aria-pressed="false">ORBITAL</button></div><div class="progress"><i></i></div><div class="badge">iOS SAFE · NO WEBGL</div>
+<main class="content"><section class="chapter hero"><div class="copy"><span class="eyebrow">Procedural architecture / iOS build</span><h1>One grammar.<br><em>Three worlds.</em></h1><p>Scroll to pull the pavilion apart. Pure HTML/CSS: no WebGL, no CDN, no external font. The structure must be visible immediately on iPhone.</p><div class="stamp">SCROLL ↓ · SWITCH SYSTEM ↑</div></div></section><section class="chapter"><div class="copy"><span class="eyebrow">01 / Ground</span><h2>Weight leaves<br>the plane.</h2><p>The water, plinth and deck separate first.</p></div></section><section class="chapter"><div class="copy right"><span class="eyebrow">02 / Frame</span><h2>Structure<br>becomes rhythm.</h2><p>Columns and beams lift as one structural layer.</p></div></section><section class="chapter"><div class="copy"><span class="eyebrow">03 / Skin</span><h2>Privacy<br>opens.</h2><p>The facade fins rotate instead of fading away.</p></div></section><section class="chapter"><div class="copy right"><span class="eyebrow">04 / Light</span><h2>The room is<br>made of glow.</h2><p>The core rises above the frame and changes character with the system.</p></div></section><section class="chapter"><div class="copy"><span class="eyebrow">05 / Anatomy</span><h2>Break the<br>system open.</h2><p>Each architectural layer occupies its own depth.</p></div></section><section class="chapter"><div class="copy right"><span class="eyebrow">06 / System</span><h2>Same motion.<br><em>New identity.</em></h2><p>SHŌJI, BRUT and ORBITAL change the material language without changing the choreography.</p></div></section></main>
+<script>(function(){var r=document.documentElement,b=document.body,n=document.getElementById('chapterNo'),names=['WHOLE','GROUND','FRAME','SKIN','LIGHT','ANATOMY','SYSTEM'];function u(){var m=Math.max(1,document.documentElement.scrollHeight-innerHeight),p=Math.max(0,Math.min(1,scrollY/m)),a=Math.max(0,Math.min(1,(p-.20)/.62)),o=Math.max(0,Math.min(1,(p-.34)/.22));r.style.setProperty('--p',p.toFixed(4));r.style.setProperty('--explode',a.toFixed(4));r.style.setProperty('--open',(o*64).toFixed(1)+'deg');r.style.setProperty('--spin',(-18+p*28).toFixed(1)+'deg');r.style.setProperty('--lift',(p*18).toFixed(1)+'px');var i=Math.min(6,Math.floor(p*7));n.textContent=names[i]+' / '+String(i+1).padStart(2,'0')}document.querySelectorAll('[data-mode]').forEach(function(x){x.onclick=function(){b.setAttribute('data-mode',x.getAttribute('data-mode'));document.querySelectorAll('[data-mode]').forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')})}});addEventListener('scroll',u,{passive:true});addEventListener('resize',u,{passive:true});u()})();</script>
+</body></html>
