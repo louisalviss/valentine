@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Wildcare — Pixel Locked Demo</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#000;overflow:hidden}body{display:grid;place-items:center}.canvas{position:relative;aspect-ratio:16/9;width:min(100vw,calc(100svh * 16 / 9));max-width:100vw;max-height:100svh;overflow:hidden;background:#061107}.layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.still{z-index:3;background:#061107}.video{z-index:2;opacity:0;background:#061107}.fallback{z-index:1}.canvas.run .still{opacity:0}.canvas.run .video{opacity:1}.still,.video{transition:opacity .10s linear}.hit{position:absolute;z-index:6;inset:0;border:0;background:transparent;padding:0;cursor:pointer}.explore{position:absolute;z-index:7;left:5.3%;top:47.6%;width:16%;height:7.2%;border:0;background:transparent;padding:0;cursor:pointer}@media(prefers-reduced-motion:reduce){.video{display:none}}
+</style>
+</head>
+<body>
+<main class="canvas" id="canvas">
+  <img class="layer fallback" alt="" src="https://pbs.twimg.com/amplify_video_thumb/2090685286162501632/img/TncRk7yS5sGZMgdJ.jpg">
+  <video class="layer video" id="video" muted playsinline preload="auto" poster="https://pbs.twimg.com/amplify_video_thumb/2090685286162501632/img/TncRk7yS5sGZMgdJ.jpg" src="https://video.twimg.com/amplify_video/2090685286162501632/vid/avc1/1920x1080/rzvA3-jWeYTTi1JP.mp4?tag=29"></video>
+  <img class="layer still" id="still" alt="Wildcare dashboard" src="https://pbs.twimg.com/amplify_video_thumb/2090685286162501632/img/TncRk7yS5sGZMgdJ.jpg">
+  <button class="hit" id="hit" aria-label="Replay motion"></button>
+  <button class="explore" id="explore" aria-label="Explore Insights"></button>
+</main>
+<script>
+(()=>{const c=document.getElementById('canvas'),v=document.getElementById('video'),hit=document.getElementById('hit'),explore=document.getElementById('explore');const START=2.18,END=9.08;let armed=false,timer;function showStill(){armed=false;c.classList.remove('run');try{v.pause();v.currentTime=START}catch(e){}clearTimeout(timer);timer=setTimeout(play,1500)}function play(e){if(e)e.stopPropagation();clearTimeout(timer);armed=true;try{v.currentTime=START}catch(e){}c.classList.add('run');const p=v.play();if(p&&p.catch)p.catch(()=>{c.classList.remove('run')})}v.addEventListener('timeupdate',()=>{if(armed&&v.currentTime>=END)showStill()});v.addEventListener('ended',showStill);v.addEventListener('error',()=>c.classList.remove('run'));hit.addEventListener('click',play);explore.addEventListener('click',play);addEventListener('pageshow',()=>{try{v.currentTime=START}catch(e){}timer=setTimeout(play,1200)});})();
+</script>
+</body>
+</html>
