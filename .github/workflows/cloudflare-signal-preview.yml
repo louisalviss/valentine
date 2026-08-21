@@ -1,17 +1,16 @@
 name: Deploy The Last Signal preview to Cloudflare
 
 on:
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - agent/the-last-signal-cloudflare
     paths:
       - "signal-story/deploy-pr-trigger.txt"
+      - ".github/workflows/cloudflare-signal-preview.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  issues: write
-  pull-requests: write
+  contents: write
 
 jobs:
   deploy:
@@ -22,7 +21,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy temporary Workers static assets
-        id: cf
         shell: bash
         run: |
           set +e
@@ -36,41 +34,20 @@ jobs:
           URL=$(grep -Eo 'https://[A-Za-z0-9.-]+\.workers\.dev[^[:space:]]*' deploy.log | tail -n 1 | sed -E 's/[),]+$//')
           CLAIM=$(grep -Eo 'https://dash\.cloudflare\.com/claim-preview\?claimToken=[A-Za-z0-9_-]+' deploy.log | tail -n 1)
 
-          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-          echo "claim=$CLAIM" >> "$GITHUB_OUTPUT"
+          {
+            echo "status=$STATUS"
+            echo "url=$URL"
+            echo "claim=$CLAIM"
+            echo
+            echo "--- deploy log ---"
+            tail -n 120 deploy.log
+          } > signal-story/cloudflare-preview-result.txt
 
-          if [ "$STATUS" -ne 0 ] || [ -z "$URL" ]; then
-            exit 1
-          fi
-
-      - name: Comment live URL
-        if: success()
-        uses: actions/github-script@v7
-        env:
-          LIVE_URL: ${{ steps.cf.outputs.url }}
-          CLAIM_URL: ${{ steps.cf.outputs.claim }}
-        with:
-          script: |
-            const extra = process.env.CLAIM_URL ? `\n\nClaim temporary account: ${process.env.CLAIM_URL}` : '';
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: `The Last Signal live preview: ${process.env.LIVE_URL}${extra}`
-            });
-
-      - name: Comment deployment failure
-        if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            let log = fs.existsSync('deploy.log') ? fs.readFileSync('deploy.log','utf8') : 'No deploy log.';
-            if (log.length > 12000) log = log.slice(-12000);
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: `Cloudflare deployment failed.\n\n\`\`\`text\n${log}\n\`\`\``
-            });
+      - name: Commit deployment result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add signal-story/cloudflare-preview-result.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: record Cloudflare preview result [skip ci]"
+          git push
