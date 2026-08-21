@@ -1,4 +1,4 @@
-Force GitHub Pages redeploy after The Last Signal publish.
+Force GitHub Pages redeploy after Visual Primitive Demo publish.
 Commit target: main root.
-2026-08-18
-retry-after-pages-workflow-and-race-fix
+2026-08-22
+retry-after-visual-system-demo-merge
