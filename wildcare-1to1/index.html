@@ -20,5 +20,6 @@
 <script>
 (()=>{const c=document.getElementById('canvas'),v=document.getElementById('video'),hit=document.getElementById('hit'),explore=document.getElementById('explore');const START=2.18,END=9.08;let armed=false,timer;function showStill(){armed=false;c.classList.remove('run');try{v.pause();v.currentTime=START}catch(e){}clearTimeout(timer);timer=setTimeout(play,1500)}function play(e){if(e)e.stopPropagation();clearTimeout(timer);armed=true;try{v.currentTime=START}catch(e){}c.classList.add('run');const p=v.play();if(p&&p.catch)p.catch(()=>{c.classList.remove('run')})}v.addEventListener('timeupdate',()=>{if(armed&&v.currentTime>=END)showStill()});v.addEventListener('ended',showStill);v.addEventListener('error',()=>c.classList.remove('run'));hit.addEventListener('click',play);explore.addEventListener('click',play);addEventListener('pageshow',()=>{try{v.currentTime=START}catch(e){}timer=setTimeout(play,1200)});})();
 </script>
+<!-- deploy-bump: 2026-08-22 -->
 </body>
 </html>
