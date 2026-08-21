@@ -21,6 +21,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Bundle bird media locally
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p motion-morph/assets
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://video.twimg.com/amplify_video/2090685286162501632/vid/avc1/1920x1080/rzvA3-jWeYTTi1JP.mp4?tag=29' \
+            -o motion-morph/assets/bird.mp4
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://pbs.twimg.com/amplify_video_thumb/2090685286162501632/img/TncRk7yS5sGZMgdJ.jpg' \
+            -o motion-morph/assets/bird.jpg
+          test -s motion-morph/assets/bird.mp4
+          test -s motion-morph/assets/bird.jpg
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('motion-morph/index.html')
+          s = p.read_text()
+          s = s.replace('https://video.twimg.com/amplify_video/2090685286162501632/vid/avc1/1920x1080/rzvA3-jWeYTTi1JP.mp4?tag=29', 'assets/bird.mp4')
+          s = s.replace('https://pbs.twimg.com/amplify_video_thumb/2090685286162501632/img/TncRk7yS5sGZMgdJ.jpg', 'assets/bird.jpg')
+          p.write_text(s)
+          PY
+          ls -lh motion-morph/assets/bird.mp4 motion-morph/assets/bird.jpg
+
       - name: Deploy temporary Workers static assets
         id: cf
         shell: bash
