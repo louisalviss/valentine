@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#f4f1e8" />
+<title>Vokie — Content, in motion</title>
+<style>
+:root{
+  --paper:#f4f1e8;
+  --ink:#11120f;
+  --muted:#65665f;
+  --line:#c9c7bc;
+  --acid:#c9ff38;
+  --blue:#315cff;
+  --orange:#ff6b35;
+  --white:#fffdf7;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:var(--acid);color:var(--ink)}
+.shell{width:min(1240px,calc(100% - 40px));margin:auto}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:21px}
+.brand-mark{width:22px;height:22px;border:2px solid var(--ink);border-radius:50% 50% 44% 56%;position:relative;transform:rotate(-11deg)}
+.brand-mark:after{content:"";position:absolute;width:6px;height:6px;background:var(--acid);border:2px solid var(--ink);border-radius:50%;right:-5px;top:-4px}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:700}
+.nav-links a{opacity:.68}.nav-links a:hover{opacity:1}
+.nav-cta{background:var(--ink);color:var(--white);padding:12px 17px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
+.hero{min-height:720px;padding:54px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:28px}
+.eyebrow:before{content:"";width:42px;height:2px;background:var(--ink)}
+h1{font-size:clamp(60px,7vw,112px);line-height:.88;letter-spacing:-.075em;margin:0;max-width:780px;font-weight:900}
+h1 em{font-style:normal;display:inline-block;background:var(--acid);padding:.03em .09em .1em;transform:rotate(-1.5deg);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.hero-copy>p{font-size:20px;line-height:1.5;max-width:610px;color:#3f403b;margin:36px 0 30px}
+.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.primary{border:2px solid var(--ink);background:var(--ink);color:var(--white);padding:16px 22px;border-radius:999px;font-weight:850;display:inline-flex;align-items:center;gap:10px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.primary:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--blue)}
+.secondary{font-weight:850;border-bottom:2px solid var(--ink);padding:5px 0}
+.microproof{margin-top:38px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:13px;font-weight:700}
+.avatars{display:flex}.avatar{width:31px;height:31px;border:2px solid var(--paper);border-radius:50%;margin-left:-8px;background:var(--ink);display:grid;place-items:center;color:var(--white);font-size:10px}.avatar:first-child{margin-left:0}.avatar:nth-child(2){background:var(--blue)}.avatar:nth-child(3){background:var(--orange)}
+.product-wrap{position:relative;min-height:530px;display:grid;place-items:center}
+.product-wrap:before{content:"";position:absolute;inset:7% 1% 2% 12%;background:var(--acid);border:2px solid var(--ink);border-radius:44% 56% 38% 62% / 51% 36% 64% 49%;transform:rotate(3deg)}
+.product{width:min(100%,520px);background:var(--white);border:2px solid var(--ink);border-radius:24px;box-shadow:11px 12px 0 var(--ink);position:relative;overflow:hidden;transform:rotate(-1deg)}
+.product-top{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.dots{display:flex;gap:6px}.dots i{width:8px;height:8px;background:var(--ink);border-radius:50%;opacity:.25}.product-title{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.stage-tabs{display:grid;grid-template-columns:repeat(3,1fr);padding:10px;gap:8px;border-bottom:1px solid var(--line)}
+.stage-tab{border:0;background:transparent;padding:10px;border-radius:10px;font-weight:850;font-size:12px;cursor:pointer;color:var(--muted)}
+.stage-tab.active{background:var(--ink);color:var(--white)}
+.product-body{padding:18px}
+.idea{border:1px solid var(--line);border-radius:16px;padding:15px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.idea-icon{width:38px;height:38px;background:var(--blue);color:white;border-radius:12px;display:grid;place-items:center;font-weight:900}.idea strong{display:block;font-size:14px}.idea small{color:var(--muted)}
+.flowline{height:54px;position:relative}.flowline:before{content:"";position:absolute;left:19px;top:0;bottom:0;width:1px;background:var(--line)}.flowline:after{content:"";position:absolute;left:15px;bottom:9px;border:4px solid var(--ink);width:7px;height:7px;border-left:0;border-top:0;transform:rotate(45deg)}
+.output-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:10px}
+.output-card{border:1px solid var(--ink);border-radius:16px;padding:15px;min-height:140px;position:relative;overflow:hidden;background:#fff}.output-card.blue{background:var(--blue);color:#fff}.output-card.acid{background:var(--acid)}
+.label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.65}.output-card h3{font-size:19px;line-height:1.05;margin:12px 0 18px;letter-spacing:-.035em}.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{border:1px solid currentColor;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:800;opacity:.82}
+.metric{position:absolute;right:12px;bottom:10px;font-size:31px;font-weight:950;letter-spacing:-.06em}.metric small{font-size:10px;letter-spacing:0;display:block;text-align:right;font-weight:800}
+.floating-note{position:absolute;right:-30px;top:44px;background:var(--orange);border:2px solid var(--ink);padding:10px 12px;border-radius:10px;font-size:11px;font-weight:900;transform:rotate(7deg);box-shadow:4px 4px 0 var(--ink)}
+.ticker{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;background:var(--ink);color:var(--white)}
+.ticker-track{display:flex;width:max-content;animation:marquee 25s linear infinite;padding:14px 0;font-size:13px;text-transform:uppercase;letter-spacing:.11em;font-weight:900}.ticker-track span{padding:0 25px}.ticker-track b{color:var(--acid)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:110px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.55fr 1.45fr;gap:50px;margin-bottom:62px}.kicker{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.11em}.section h2{font-size:clamp(42px,5vw,78px);line-height:.96;letter-spacing:-.06em;margin:0;max-width:850px}.section h2 .underline{background:linear-gradient(transparent 74%,var(--acid) 0)}
+.workflow{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.step{padding:28px 26px 32px;min-height:310px;border-right:1px solid var(--ink);position:relative}.step:last-child{border-right:0}.step-num{font-size:12px;font-weight:950;margin-bottom:65px;display:flex;align-items:center;justify-content:space-between}.step-num span{width:9px;height:9px;background:var(--ink);border-radius:50%}.step h3{font-size:30px;letter-spacing:-.045em;margin:0 0 12px}.step p{color:var(--muted);line-height:1.55;margin:0;max-width:300px}.step:nth-child(2){background:#dedfff}.step:nth-child(3){background:var(--acid)}.step:nth-child(3) p{color:#313228}
+.canvas-demo{margin-top:58px;display:grid;grid-template-columns:300px 1fr;border:2px solid var(--ink);min-height:540px;background:var(--white);box-shadow:9px 9px 0 var(--ink)}
+.side{border-right:1px solid var(--ink);padding:18px}.side-top{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;padding:6px 2px 20px}.side-item{padding:14px 10px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:800;cursor:pointer;margin-bottom:4px}.side-item.active{background:var(--ink);color:white}.badge{font-size:10px;padding:4px 6px;border:1px solid currentColor;border-radius:999px;opacity:.6}
+.canvas{padding:34px;display:grid;grid-template-rows:auto 1fr;gap:25px}.canvas-head{display:flex;justify-content:space-between;gap:20px;align-items:end}.canvas-head h3{font-size:34px;letter-spacing:-.05em;margin:0}.canvas-head p{font-size:13px;color:var(--muted);margin:0;max-width:340px}.calendar{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;align-content:start}.day{border:1px solid var(--line);border-radius:14px;padding:12px;min-height:220px;background:#f8f6ee}.day-name{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:13px}.post{background:var(--white);border:1px solid var(--ink);border-radius:10px;padding:10px;margin-bottom:9px;box-shadow:2px 2px 0 #c9c7bc}.post b{font-size:11px;display:block;margin-bottom:7px}.post p{font-size:10px;line-height:1.35;color:var(--muted);margin:0}.post.blue{background:#dde4ff}.post.acid{background:#ecffb5}.post.orange{background:#ffe1d6}
+.bento{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:260px 260px;gap:14px}.tile{border:2px solid var(--ink);border-radius:18px;padding:24px;position:relative;overflow:hidden;background:var(--white)}.tile:nth-child(1){grid-row:1/3;background:var(--ink);color:white}.tile:nth-child(4){grid-column:2/4;background:var(--acid)}.tile h3{font-size:28px;letter-spacing:-.045em;margin:0 0 12px}.tile p{font-size:14px;line-height:1.5;opacity:.67;max-width:320px}.orbit{position:absolute;width:230px;height:230px;border:1px solid #ffffff55;border-radius:50%;bottom:-50px;right:-30px}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #ffffff55;border-radius:50%}.orbit:before{inset:30px}.orbit:after{inset:65px}.orbit-dot{width:22px;height:22px;background:var(--acid);border-radius:50%;position:absolute;left:32px;top:43px;box-shadow:0 0 0 8px #c9ff3830}.signal{height:105px;margin-top:18px;display:flex;align-items:end;gap:4px}.signal i{display:block;flex:1;background:var(--blue);border-radius:3px 3px 0 0;min-height:10px}.tile:nth-child(3) .signal i{background:var(--orange)}
+.quote{padding:118px 0}.quote blockquote{font-size:clamp(42px,6vw,86px);line-height:1.03;letter-spacing:-.06em;margin:0;max-width:1100px}.quote blockquote span{color:var(--blue)}.quote-foot{display:flex;justify-content:space-between;align-items:center;margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;font-weight:800}.ref-flow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.ref-flow i{width:20px;height:1px;background:var(--ink)}
+.footer{background:var(--ink);color:var(--white);padding:70px 0 40px}.footer-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:50px}.footer h2{font-size:clamp(52px,7vw,100px);line-height:.9;letter-spacing:-.07em;margin:0 0 35px}.footer h2 span{color:var(--acid)}.footer .primary{background:var(--acid);color:var(--ink)}.footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.footer-links h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#9a9b94;margin:0 0 15px}.footer-links a{display:block;margin:10px 0;font-size:14px;font-weight:700;color:#e4e3dd}.credits{border-top:1px solid #ffffff2d;margin-top:65px;padding-top:20px;display:flex;justify-content:space-between;color:#8b8d86;font-size:11px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:30px;padding-top:40px}.product-wrap{min-height:500px}.product{width:min(96%,560px)}.floating-note{right:2px}.section-head{grid-template-columns:1fr;gap:16px}.workflow{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--ink);min-height:auto}.step:last-child{border-bottom:0}.step-num{margin-bottom:34px}.canvas-demo{grid-template-columns:1fr}.side{border-right:0;border-bottom:1px solid var(--ink);display:flex;overflow:auto;gap:8px}.side-top{display:none}.side-item{min-width:max-content}.calendar{grid-template-columns:repeat(2,1fr)}.bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}.tile:nth-child(1){grid-row:auto;grid-column:1/3;min-height:360px}.tile:nth-child(4){grid-column:1/3}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .shell{width:min(100% - 24px,1240px)}.nav{height:68px}.nav-cta{padding:10px 13px}.hero{min-height:auto;padding:48px 0 62px}h1{font-size:58px}.hero-copy>p{font-size:17px;margin-top:28px}.product-wrap{min-height:450px}.product-wrap:before{inset:4% 0 3% 5%}.product{box-shadow:7px 7px 0 var(--ink)}.output-grid{grid-template-columns:1fr 1fr}.section{padding:78px 0}.section h2{font-size:46px}.canvas-demo{margin-top:40px}.canvas{padding:18px}.canvas-head{display:block}.canvas-head p{margin-top:8px}.calendar{display:flex;overflow-x:auto;padding-bottom:8px}.day{min-width:215px}.bento{grid-template-columns:1fr}.tile,.tile:nth-child(1),.tile:nth-child(4){grid-column:auto;min-height:250px}.quote{padding:84px 0}.quote-foot{align-items:flex-start;gap:18px;flex-direction:column}.footer{padding-top:60px}.footer-grid{gap:55px}.credits{gap:20px;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.reveal{opacity:1;transform:none;transition:none}.primary{transition:none}}
+</style>
+</head>
+<body>
+<header class="shell nav">
+  <a class="brand" href="#"><span class="brand-mark"></span>VOKIE</a>
+  <nav class="nav-links">
+    <a href="#workflow">Workflow</a><a href="#product">Product</a><a href="#why">Why Vokie</a>
+    <a class="nav-cta" href="#start">Try the demo <span>↗</span></a>
+  </nav>
+</header>
+
+<main>
+<section class="shell hero">
+  <div class="hero-copy reveal">
+    <div class="eyebrow">Content operations for small teams</div>
+    <h1>Turn one idea into a <em>week</em> of content.</h1>
+    <p>Vokie turns rough notes into a structured publishing plan, drafts each format in your voice, then keeps the whole week moving without another spreadsheet.</p>
+    <div class="hero-actions"><a class="primary" href="#product">Build my week <span>→</span></a><a class="secondary" href="#workflow">See how it works</a></div>
+    <div class="microproof"><div class="avatars"><span class="avatar">AN</span><span class="avatar">ML</span><span class="avatar">KT</span></div><span>Used by makers who would rather ship than manage a content calendar.</span></div>
+  </div>
+  <div class="product-wrap reveal" id="product">
+    <div class="product">
+      <div class="product-top"><div class="dots"><i></i><i></i><i></i></div><div class="product-title">This week · 7 outputs</div><span style="font-weight:900">⌁</span></div>
+      <div class="stage-tabs"><button class="stage-tab active" data-stage="plan">01 Plan</button><button class="stage-tab" data-stage="write">02 Write</button><button class="stage-tab" data-stage="publish">03 Publish</button></div>
+      <div class="product-body">
+        <div class="idea"><div class="idea-icon">✦</div><div><strong id="ideaTitle">AI agents need better memory</strong><small id="ideaMeta">Source · voice memo · 2m 14s</small></div><span>•••</span></div>
+        <div class="flowline"></div>
+        <div class="output-grid">
+          <div class="output-card blue"><span class="label" id="cardLabel">LinkedIn post</span><h3 id="cardTitle">Why “more context” is not the same as memory.</h3><div class="chips"><span class="chip">Hook A</span><span class="chip">Founder voice</span></div></div>
+          <div class="output-card acid"><span class="label">Queue</span><h3 id="queueTitle">7 pieces ready</h3><div class="metric" id="metricValue">82<small>quality score</small></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="floating-note">No prompt gymnastics ✎</div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span><b>✦</b> One source → many formats</span><span><b>✦</b> Voice stays consistent</span><span><b>✦</b> Calendar stays visible</span><span><b>✦</b> Publish without chaos</span><span><b>✦</b> One source → many formats</span><span><b>✦</b> Voice stays consistent</span><span><b>✦</b> Calendar stays visible</span><span><b>✦</b> Publish without chaos</span></div></div>
+
+<section class="section" id="workflow">
+  <div class="shell">
+    <div class="section-head reveal"><div class="kicker">The workflow</div><h2>Less “make content.” More <span class="underline">move the idea forward.</span></h2></div>
+    <div class="workflow reveal">
+      <article class="step"><div class="step-num">01 · CAPTURE <span></span></div><h3>Drop the messy source.</h3><p>Voice memo, meeting notes, link, half-written thought. Start where the idea actually exists.</p></article>
+      <article class="step"><div class="step-num">02 · SHAPE <span></span></div><h3>Pick the angle, not the prompt.</h3><p>Vokie proposes narratives and formats; you choose what sounds worth publishing.</p></article>
+      <article class="step"><div class="step-num">03 · SHIP <span></span></div><h3>See the whole week.</h3><p>Drafts, cadence and channels live in one queue so the work moves as a system.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="shell">
+    <div class="section-head reveal"><div class="kicker">Product structure</div><h2>A publishing view that answers the only useful question: <span class="underline">what ships next?</span></h2></div>
+    <div class="canvas-demo reveal">
+      <aside class="side"><div class="side-top">Workspace</div><div class="side-item active">This week <span class="badge">7</span></div><div class="side-item">Ideas <span class="badge">24</span></div><div class="side-item">Drafts <span class="badge">5</span></div><div class="side-item">Voice <span class="badge">v3</span></div></aside>
+      <div class="canvas"><div class="canvas-head"><div><div class="kicker">August · Week 4</div><h3>Publishing queue</h3></div><p>Every card carries its source, angle, channel and status. No invisible work hiding in chat history.</p></div>
+        <div class="calendar">
+          <div class="day"><div class="day-name">Mon · 24</div><div class="post blue"><b>LinkedIn</b><p>The memory problem nobody fixes with a bigger context window.</p></div><div class="post"><b>Newsletter</b><p>Draft intro + outline</p></div></div>
+          <div class="day"><div class="day-name">Tue · 25</div><div class="post acid"><b>X thread</b><p>5 observations from building stateful agents.</p></div></div>
+          <div class="day"><div class="day-name">Wed · 26</div><div class="post orange"><b>Carousel</b><p>Context ≠ memory: a visual breakdown.</p></div><div class="post"><b>Reply bank</b><p>3 founder responses</p></div></div>
+          <div class="day"><div class="day-name">Thu · 27</div><div class="post blue"><b>Short post</b><p>The one sentence version.</p></div><div class="post acid"><b>Friday seed</b><p>Queued from audience replies.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head reveal"><div class="kicker">Details, on purpose</div><h2>Polish the moments users actually <span class="underline">touch.</span></h2></div>
+    <div class="bento reveal">
+      <article class="tile"><div class="kicker" style="color:var(--acid)">Voice memory</div><h3>It learns the edit, not just the input.</h3><p>Accept, rewrite, shorten, reject. The useful signal is how you change the draft.</p><div class="orbit"><span class="orbit-dot"></span></div></article>
+      <article class="tile"><div class="kicker">Angle score</div><h3>Know where the energy is.</h3><p>Compare hooks before you spend time polishing.</p><div class="signal"><i style="height:28%"></i><i style="height:44%"></i><i style="height:36%"></i><i style="height:68%"></i><i style="height:92%"></i><i style="height:58%"></i><i style="height:76%"></i></div></article>
+      <article class="tile"><div class="kicker">Re-purpose</div><h3>Format is a decision.</h3><p>Same idea, different job. Not copy-paste with line breaks.</p><div class="signal"><i style="height:72%"></i><i style="height:38%"></i><i style="height:84%"></i><i style="height:54%"></i><i style="height:66%"></i></div></article>
+      <article class="tile"><div class="kicker">The system</div><h3>Source → angle → format → queue → feedback.</h3><p>One visible loop. Fewer tools pretending to be a workflow.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="shell quote reveal">
+  <blockquote>“We stopped asking AI to <span>write posts</span> and started using it to run the path from idea to publish.”</blockquote>
+  <div class="quote-foot"><span>Demo concept · Vokie AI</span><div class="ref-flow"><b>Direction</b><i></i><b>Product flow</b><i></i><b>Detail polish</b></div></div>
+</section>
+</main>
+
+<footer class="footer" id="start"><div class="shell"><div class="footer-grid"><div><h2>Make the week <span>move.</span></h2><a class="primary" href="#product">Open product demo →</a></div><div class="footer-links"><div><h4>Product</h4><a href="#workflow">Workflow</a><a href="#product">Planner</a><a href="#why">Voice memory</a></div><div><h4>Reference flow</h4><a href="#">Direction</a><a href="#">Structure</a><a href="#">Details</a></div></div></div><div class="credits"><span>VOKIE · CONCEPT LANDING PAGE</span><span>Built as a reference-driven design demo, not a copied template.</span></div></div></footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.stage-tab')];
+const stageData={
+  plan:{ideaTitle:'AI agents need better memory',ideaMeta:'Source · voice memo · 2m 14s',cardLabel:'LinkedIn post',cardTitle:'Why “more context” is not the same as memory.',queueTitle:'7 pieces ready',metric:'82'},
+  write:{ideaTitle:'Angle selected: context ≠ memory',ideaMeta:'Voice · founder / direct / technical',cardLabel:'Draft in progress',cardTitle:'A context window remembers text. A useful agent remembers decisions.',queueTitle:'Voice aligned',metric:'94'},
+  publish:{ideaTitle:'Week 4 is ready to ship',ideaMeta:'4 channels · 7 outputs · 1 source',cardLabel:'Next up · Monday 09:10',cardTitle:'The memory problem nobody fixes with a bigger context window.',queueTitle:'Schedule healthy',metric:'7/7'}
+};
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+  tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');
+  const d=stageData[tab.dataset.stage];
+  document.querySelector('#ideaTitle').textContent=d.ideaTitle;
+  document.querySelector('#ideaMeta').textContent=d.ideaMeta;
+  document.querySelector('#cardLabel').textContent=d.cardLabel;
+  document.querySelector('#cardTitle').textContent=d.cardTitle;
+  document.querySelector('#queueTitle').textContent=d.queueTitle;
+  document.querySelector('#metricValue').firstChild.nodeValue=d.metric;
+}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+</script>
+</body>
+</html>
