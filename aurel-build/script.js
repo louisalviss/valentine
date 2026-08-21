@@ -1,94 +1,59 @@
 (()=>{
   const wrap=document.getElementById('build');
-  const phase=document.getElementById('phase');
+  const phaseNo=document.getElementById('phaseNo');
   const phaseName=document.getElementById('phaseName');
-  const title=document.getElementById('title');
-  const desc=document.getElementById('desc');
+  const phaseTitle=document.getElementById('phaseTitle');
+  const phaseDesc=document.getElementById('phaseDesc');
   const chips=document.getElementById('chips');
   const copy=document.getElementById('buildCopy');
   const bar=document.getElementById('bar');
   const pct=document.getElementById('pct');
-  const pulse=document.getElementById('scenePulse');
+  const visualNo=document.getElementById('visualNo');
+  const visualName=document.getElementById('visualName');
+  const frames=[...document.querySelectorAll('.stage-image')];
   const steps=[...document.querySelectorAll('.stage-step')];
-  const site=document.getElementById('site');
-  const frame=document.getElementById('frame');
-  const core=document.getElementById('core');
-  const glass=document.getElementById('glassWing');
-  const roof=document.getElementById('roofLayer');
-  const life=document.getElementById('life');
-  const warm=document.getElementById('warmInterior');
-  const glow=document.getElementById('nightGlow');
-  const callout=document.getElementById('stageCallout');
-  const sun=document.getElementById('sun');
-  const hills=document.getElementById('hills');
-  const shadow=document.getElementById('groundShadow');
-  const ripples=document.getElementById('ripples');
 
   const data=[
-    ['01','SITE','Set the ground.','The villa starts as a low stone datum, water court and landscape. Nothing else is visible yet.',['Stone datum','Pool court']],
-    ['02','FRAME','Raise the skeleton.','A dark structural frame rises hard from the site. The construction logic becomes unmistakable.',['Steel grid','Structural rhythm']],
-    ['03','CORE + GLASS','Make it inhabitable.','The limestone core arrives from the left while the glass pavilion slides in from the right.',['Limestone core','Glass pavilion']],
-    ['04','ROOF','Drop the roof.','A single thin roof plane falls into place with a long cantilever and warm timber soffit.',['Floating roof','Deep cantilever']],
-    ['05','FINISHED','Turn it into a place.','Trees, water shimmer and warm interior light complete the house. This is the final reveal.',['Landscape','Warm light']]
+    ['01','SITE','Begin with the ground.','A calm datum establishes the footprint before structure appears.',['Datum','Foundation']],
+    ['02','STRUCTURE','Give it a frame.','The structural rhythm rises and makes the future volume immediately legible.',['Steel frame','Structural grid']],
+    ['03','CORE + ENCLOSURE','Define the heart.','Solid core walls and enclosure create the first inhabitable rooms around the courtyard.',['Stone core','Enclosure']],
+    ['04','ROOF + FINISHES','Shape the silhouette.','The dark floating roof and material palette turn the framework into architecture.',['Floating roof','Warm finishes']],
+    ['05','LIFE','Make it a place.','Water, planting, furniture and warm light complete the same house shown in the hero.',['Landscape','Water + light']]
   ];
 
   const clamp=v=>Math.max(0,Math.min(1,v));
-  const ease=t=>{t=clamp(t);return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
-  const seg=(p,start,end)=>ease((p-start)/(end-start));
-  function set(el,x,y,s,o){el.style.transform=`translate(${x}px,${y}px) scale(${s})`;el.style.opacity=o}
-
-  let lastStage=-1;
-  function updateStage(stage){
-    if(stage===lastStage)return;
-    lastStage=stage;
+  let last=-1;
+  function setStage(stage){
+    if(stage===last)return;
+    last=stage;
     copy.classList.add('change');
     setTimeout(()=>{
       const d=data[stage];
-      phase.textContent=d[0];phaseName.textContent=d[1];title.textContent=d[2];desc.textContent=d[3];
+      phaseNo.textContent=d[0];phaseName.textContent=d[1];phaseTitle.textContent=d[2];phaseDesc.textContent=d[3];
       chips.innerHTML=d[4].map(v=>`<span>${v}</span>`).join('');
+      visualNo.textContent=`${d[0]} / 05`;visualName.textContent=d[1];
       copy.classList.remove('change');
-    },110);
-    steps.forEach((el,i)=>{el.classList.toggle('active',i===stage);el.classList.toggle('done',i<stage)});
-    pulse.classList.remove('fire');void pulse.offsetWidth;pulse.classList.add('fire');
+    },90);
+    frames.forEach((f,i)=>f.classList.toggle('active',i===stage));
+    steps.forEach((s,i)=>{s.classList.toggle('active',i===stage);s.classList.toggle('done',i<stage)});
   }
 
   function render(){
     const r=wrap.getBoundingClientRect();
-    const max=wrap.offsetHeight-innerHeight;
+    const max=Math.max(1,wrap.offsetHeight-innerHeight);
     const p=clamp(-r.top/max);
     const stage=Math.min(4,Math.floor(p*5));
-    updateStage(stage);
-    bar.style.width=`${p*100}%`;pct.textContent=`${Math.round(p*100)}%`;
-
-    const a=seg(p,0,.16);
-    const b=seg(p,.18,.36);
-    const c=seg(p,.38,.56);
-    const d=seg(p,.58,.76);
-    const e=seg(p,.78,.98);
-
-    set(site,0,85*(1-a),.93+.07*a,.18+.82*a);
-    set(frame,0,-320*(1-b),.95+.05*b,.02+.98*b);
-    set(core,-310*(1-c),-16*(1-c),.94+.06*c,.02+.98*c);
-    set(glass,360*(1-c),28*(1-c),.94+.06*c,.02+.98*c);
-    set(roof,0,-390*(1-d),.92+.08*d,.02+.98*d);
-    set(life,-70*(1-e),120*(1-e),.92+.08*e,.02+.98*e);
-
-    warm.setAttribute('opacity',(0.2+.68*e).toFixed(2));
-    glow.setAttribute('opacity',(0.5*e).toFixed(2));
-    callout.setAttribute('opacity',clamp((p-.92)/.06).toFixed(2));
-    ripples.style.opacity=(.35+.65*Math.abs(Math.sin(performance.now()/520))*e).toFixed(2);
-    sun.setAttribute('opacity',(0.62-.20*e).toFixed(2));
-    hills.setAttribute('opacity',(0.72+.12*e).toFixed(2));
-    shadow.setAttribute('opacity',(0.08+.08*p).toFixed(2));
-
-    const svg=document.getElementById('houseScene');
-    svg.style.transform=`scale(${1+p*.035}) translateY(${Math.sin(p*Math.PI)*-5}px)`;
+    setStage(stage);
+    bar.style.width=`${p*100}%`;
+    pct.textContent=`${Math.round(p*100)}%`;
     requestAnimationFrame(render);
   }
 
-  steps.forEach((button,i)=>button.addEventListener('click',()=>{
+  steps.forEach((btn,i)=>btn.addEventListener('click',()=>{
     const target=wrap.offsetTop+(wrap.offsetHeight-innerHeight)*(i/5+.02);
     window.scrollTo({top:target,behavior:'smooth'});
   }));
+
+  setStage(0);
   render();
 })();
