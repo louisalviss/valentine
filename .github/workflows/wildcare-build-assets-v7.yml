@@ -1,0 +1,41 @@
+name: Build Wildcare seamless assets v7
+
+on:
+  push:
+    branches:
+      - wildcare-live-seamless-v7
+    paths:
+      - '.github/workflows/wildcare-build-assets-v7.yml'
+      - 'wildcare-live/asset-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: wildcare-live-seamless-v7
+          fetch-depth: 0
+      - name: Download source footage
+        run: |
+          mkdir -p wildcare-live/assets /tmp/wildcare
+          curl -L --fail --retry 3 -o /tmp/wildcare/source.mp4 'https://video.twimg.com/amplify_video/2090685286162501632/vid/avc1/1280x720/I0ngPItHJW4Dscih.mp4?tag=29'
+      - name: Build pose-matched poster and ping-pong loop
+        run: |
+          ffmpeg -loglevel error -y -ss 4.2 -i /tmp/wildcare/source.mp4 -frames:v 1 -vf 'scale=960:-2:flags=lanczos' -q:v 3 wildcare-live/assets/bird-poster.jpg
+          ffmpeg -loglevel error -y -ss 4.2 -to 8.0 -i /tmp/wildcare/source.mp4 \
+            -filter_complex '[0:v]scale=960:-2:flags=lanczos,split[v1][v2];[v2]reverse[r];[v1][r]concat=n=2:v=1:a=0,format=yuv420p[v]' \
+            -map '[v]' -an -c:v libx264 -preset medium -crf 26 -movflags +faststart wildcare-live/assets/bird-pingpong.mp4
+      - name: Commit generated assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add wildcare-live/assets/bird-poster.jpg wildcare-live/assets/bird-pingpong.mp4
+          git diff --cached --quiet && exit 0
+          git commit -m 'Build Wildcare seamless media assets [skip ci]'
+          git push origin HEAD:wildcare-live-seamless-v7
