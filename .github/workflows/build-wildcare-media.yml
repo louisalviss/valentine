@@ -1,0 +1,39 @@
+name: Build Wildcare Media
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-wildcare-media.yml'
+      - 'wildcare-media.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build local bird clip
+        shell: bash
+        run: |
+          set -euxo pipefail
+          SRC='https://video.twimg.com/amplify_video/2090685286162501632/vid/avc1/1280x720/I0ngPItHJW4Dscih.mp4?tag=29'
+          curl -L --fail --retry 3 "$SRC" -o /tmp/source.mp4
+          mkdir -p motion-morph/assets
+          ffmpeg -y -ss 4.2 -to 8.0 -i /tmp/source.mp4 -an \
+            -filter_complex "[0:v]scale=640:-2,split[f][r];[r]reverse[rr];[f][rr]concat=n=2:v=1:a=0,fps=24,format=yuv420p[v]" \
+            -map '[v]' -c:v libx264 -preset medium -crf 29 -movflags +faststart \
+            motion-morph/assets/bird-pingpong.mp4
+          ffmpeg -y -i motion-morph/assets/bird-pingpong.mp4 -frames:v 1 -q:v 3 motion-morph/assets/bird-poster.jpg
+      - name: Commit media
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add motion-morph/assets/bird-pingpong.mp4 motion-morph/assets/bird-poster.jpg
+          git diff --cached --quiet && exit 0
+          git commit -m 'Build Wildcare local bird media'
+          git push
