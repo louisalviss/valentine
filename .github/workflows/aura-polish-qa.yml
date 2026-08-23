@@ -1,0 +1,92 @@
+name: AURA polish live QA
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: aura-polish-live-qa
+  cancel-in-progress: true
+
+jobs:
+  deploy-and-qa:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Verify published build
+        run: |
+          set -euo pipefail
+          BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
+          ok=0
+          for i in $(seq 1 36); do
+            code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
+            if [ "$code" = '200' ] \
+              && grep -q 'data-build="aura-polish-v3"' /tmp/aura.html \
+              && grep -q 'headphones-gpt.webp' /tmp/aura.html \
+              && grep -q './styles.css' /tmp/aura.html \
+              && grep -q './script.js' /tmp/aura.html \
+              && ! grep -qi '<video' /tmp/aura.html; then
+              ok=1; echo "published_ok attempt=$i http=$code"; break
+            fi
+            echo "waiting attempt=$i http=$code"; sleep 5
+          done
+          test "$ok" = '1'
+          curl -fL -sS "$BASE/styles.css?v=$GITHUB_RUN_ID" -o /tmp/styles.css
+          curl -fL -sS "$BASE/script.js?v=$GITHUB_RUN_ID" -o /tmp/script.js
+          curl -fL -sS "$BASE/headphones-gpt.webp?v=$GITHUB_RUN_ID" -o /tmp/h.webp
+          test "$(wc -c < /tmp/styles.css)" -gt 8000
+          test "$(wc -c < /tmp/script.js)" -gt 3500
+          test "$(wc -c < /tmp/h.webp)" -gt 10000
+          file /tmp/h.webp | grep -qi 'Web/P image\|WebP'
+
+      - name: Capture desktop and mobile frames
+        run: |
+          set -euo pipefail
+          CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          mkdir -p qa
+          BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
+          for f in 0 .28 .43 .62 .78 1; do
+            name=$(echo "$f" | tr -d '.')
+            "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot="qa/desktop-${name}.png" "$BASE?frame=$f&v=$GITHUB_RUN_ID"
+          done
+          for f in 0 .43 .78 1; do
+            name=$(echo "$f" | tr -d '.')
+            "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=390,844 --screenshot="qa/mobile-${name}.png" "$BASE?frame=$f&v=$GITHUB_RUN_ID"
+          done
+          ls -lh qa
+
+      - name: Upload QA screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: aura-polish-qa-${{ github.run_id }}
+          path: qa/
+          retention-days: 2
+
+      - name: PASS
+        run: echo 'AURA_POLISH_LIVE_QA_OK'
