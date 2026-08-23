@@ -1,0 +1,44 @@
+name: Verify AURA GitHub Pages live
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Wait for AURA page to be published
+        run: |
+          set -euo pipefail
+          PAGE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
+          ok=0
+          for i in $(seq 1 36); do
+            code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$PAGE" || true)
+            if [ "$code" = '200' ] && grep -q 'AURA — Scroll Experience' /tmp/aura.html && grep -q './source.mp4' /tmp/aura.html && ! grep -q 'video.twimg.com' /tmp/aura.html; then
+              echo "page_ok attempt=$i http=$code"
+              ok=1
+              break
+            fi
+            echo "page_not_ready attempt=$i http=$code"
+            sleep 5
+          done
+          test "$ok" = '1'
+
+      - name: Verify self-hosted MP4
+        run: |
+          set -euo pipefail
+          VIDEO='https://louisalviss.github.io/valentine/aura-eclipse-scroll/source.mp4'
+          curl -fL -sS -D /tmp/video.headers -r 0-4095 "$VIDEO" -o /tmp/video.chunk
+          cat /tmp/video.headers
+          test -s /tmp/video.chunk
+          grep -qi 'content-type: video/mp4' /tmp/video.headers
+          echo "video_chunk_bytes=$(wc -c < /tmp/video.chunk)"
+
+      - name: PASS
+        run: echo 'AURA_GITHUB_PAGES_LIVE_OK'
