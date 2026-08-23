@@ -1,2 +1,3 @@
 Trigger AURA verified GPT WebP repair and production QA.
 Retry after all verified chunks were uploaded and r03 corrected.
+Force event after strict QA workflow update.
