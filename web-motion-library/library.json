@@ -1,0 +1,51 @@
+{
+  "version": "0.1",
+  "updated_at": "2026-08-24",
+  "patterns": [
+    {
+      "id": "aura-scroll-product-story",
+      "index": "001",
+      "title": "Scroll Product Story",
+      "family": ["product", "scroll", "typography", "interaction"],
+      "status": "production",
+      "live": "../aura-eclipse-scroll/",
+      "preview": "../aura-eclipse-scroll/?frame=.55&library=1",
+      "source": "https://github.com/louisalviss/valentine/tree/main/aura-eclipse-scroll",
+      "description": "A pinned product narrative with one continuous hero object, scene wipe, editorial type layering and interactive feature hotspots.",
+      "bestFor": ["Premium hardware", "Fashion accessories", "Automotive detail", "High-end DTC"],
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "tags": ["Pinned scroll", "Layered type", "Feature hotspots", "Scene wipe"],
+      "palette": ["#741a39", "#f7f5f1", "#101010"],
+      "primitives": [
+        {
+          "name": "ScrollProduct",
+          "description": "Moves one focal product through several narrative compositions while preserving object continuity."
+        },
+        {
+          "name": "SceneWipe",
+          "description": "Transitions between dark hero and light editorial surface using one scroll-scrubbed sheet."
+        },
+        {
+          "name": "ProductMaskText",
+          "description": "Splits typography into foreground/background layers so the product can pass through type intentionally."
+        },
+        {
+          "name": "FeatureHotspot",
+          "description": "Turns floating feature pills into compact detail disclosures without replacing the composition."
+        }
+      ],
+      "responsive": {
+        "desktop": "Wide editorial composition with product traveling through type layers.",
+        "tablet": "Reduced scale and tighter motion envelope while preserving scene sequence.",
+        "mobile": "Simplified vertical composition; product remains dominant and feature disclosure stays tap-safe."
+      },
+      "acceptance": [
+        "No horizontal overflow at 390x844, 768x1024 and 1440x900.",
+        "Product remains one continuous object across scenes.",
+        "Typography/product overlap must look intentional rather than accidental.",
+        "Feature hotspots are optional to core comprehension and work with touch.",
+        "Reduced-motion mode remains usable."
+      ]
+    }
+  ]
+}
