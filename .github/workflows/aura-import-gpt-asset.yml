@@ -1,0 +1,42 @@
+name: AURA import GPT asset
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  import-asset:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch GPT Image asset
+        run: |
+          set -euo pipefail
+          URL='https://aura-gpt-asset-stage-qx55lg1yd-gpt-4db7.vercel.app/headphones-gpt.webp'
+          mkdir -p aura-eclipse-scroll
+          curl -fL --retry 4 --retry-delay 2 "$URL" -o aura-eclipse-scroll/headphones-gpt.webp
+          test "$(wc -c < aura-eclipse-scroll/headphones-gpt.webp)" -gt 10000
+          file aura-eclipse-scroll/headphones-gpt.webp | grep -qi 'Web/P image\|WebP'
+          echo "asset_bytes=$(wc -c < aura-eclipse-scroll/headphones-gpt.webp)"
+
+      - name: Commit asset to main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add aura-eclipse-scroll/headphones-gpt.webp
+          if git diff --cached --quiet; then
+            echo 'asset already current'
+            exit 0
+          fi
+          git commit -m 'assets: add GPT Image AURA headphone render [skip ci]'
+          git push origin HEAD:main
