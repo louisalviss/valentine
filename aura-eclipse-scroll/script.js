@@ -27,9 +27,6 @@
   function productState(p){
     const mobile=innerWidth<=760;
     let x,y,w,rot,scale;
-
-    // Restore the graceful cross-canvas path: the product is allowed to pass
-    // through typography; the typography changes layer/color where it intersects.
     if(p<.39){
       const t=seg(p,.18,.39);
       x=mix(mobile?55:66,mobile?70:72,t);
@@ -44,15 +41,15 @@
       w=mix(mobile?94:44,mobile?72:35,t);
       rot=mix(2,-3,t);
       scale=mix(1.06,.98,t);
-    }else if(p<.82){
-      const t=seg(p,.70,.82);
-      x=mix(mobile?50:43,mobile?32:31,t);
-      y=mix(mobile?73:58,mobile?70:59,t);
-      w=mix(mobile?72:35,mobile?62:30,t);
-      rot=mix(-3,-7,t);
-      scale=mix(.98,.93,t);
+    }else if(p<.84){
+      const t=seg(p,.70,.84);
+      x=mix(mobile?50:43,mobile?50:50,t);
+      y=mix(mobile?73:58,mobile?67:60,t);
+      w=mix(mobile?72:35,mobile?62:31,t);
+      rot=mix(-3,-5,t);
+      scale=mix(.98,.94,t);
     }else{
-      x=mobile?32:31;y=mobile?70:59;w=mobile?62:30;rot=-7;scale=.93;
+      x=50;y=mobile?67:60;w=mobile?62:31;rot=-5;scale=.94;
     }
 
     product.style.left=x+'%';
@@ -66,7 +63,6 @@
     halo.style.width=(w*1.05)+'vw';
     halo.style.opacity=String(1-seg(p,.24,.39));
 
-    // Dynamic editorial mask: text becomes light only over the dark product.
     maskTextWithProduct(detailTitle,detailTitleFront,1.05);
     maskTextWithProduct(acousticTitleBase,acousticTitleFront,1.05);
   }
