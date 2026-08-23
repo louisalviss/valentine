@@ -4,116 +4,57 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#171713" />
-  <title>SiteOps AI — A–H Comparison Wall</title>
-  <meta name="description" content="Live side-by-side full-page comparison of SiteOps AI design variants A through H." />
+  <title>SiteOps AI — Pairwise Design Comparator</title>
+  <meta name="description" content="Pairwise live comparator for SiteOps AI variants A through H." />
   <style>
-    :root{--bar:62px;--gap:10px;--bg:#d8d8d2;--ink:#171713;--muted:#6f706a;--paper:#f6f5ef;--line:#b7b8b1;--accent:#d9ff56;--lane:390px}
-    *{box-sizing:border-box}
-    html{background:var(--bg);scroll-behavior:smooth}
-    body{margin:0;min-width:100vw;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overscroll-behavior-x:none}
-    button,a{font:inherit}
-    .toolbar{position:sticky;top:0;left:0;width:100vw;height:var(--bar);z-index:1000;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:8px max(12px,env(safe-area-inset-left));background:rgba(23,23,19,.96);color:#f5f5ef;border-bottom:1px solid #34342f;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-    .title{display:flex;align-items:center;gap:10px;min-width:0}.title b{font-size:13px;letter-spacing:-.02em}.title span{font-size:10px;color:#92938c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .modes{display:flex;gap:3px;padding:3px;border:1px solid #45463f;border-radius:10px;background:#0f100d}.modes button{appearance:none;border:0;background:transparent;color:#9b9c94;padding:8px 11px;border-radius:7px;font-size:11px;font-weight:800;cursor:pointer}.modes button[aria-pressed="true"]{background:var(--accent);color:#111}
-    .hint{justify-self:end;color:#9a9b94;font-size:10px;text-align:right}.hint strong{color:#fff;font-weight:700}
-    .wall{display:flex;align-items:flex-start;gap:var(--gap);width:max-content;padding:10px 10px 60px}
-    .lane{width:var(--lane);flex:none;scroll-snap-align:start;background:#c7c7c1;border:1px solid #aaaBa4;box-shadow:0 8px 28px rgba(0,0,0,.08)}
-    .lane-head{position:sticky;top:var(--bar);z-index:50;height:52px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:0 12px;background:rgba(246,245,239,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-    .letter{width:28px;height:28px;display:grid;place-items:center;background:var(--ink);color:#fff;border-radius:7px;font-size:12px;font-weight:900}.lane[data-full="true"] .letter{background:#164ee8}.lane[data-letter="H"] .letter{background:#a96c2e}
-    .meta{min-width:0}.meta b{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta span{display:block;margin-top:2px;color:var(--muted);font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .open{color:var(--ink);text-decoration:none;font-size:10px;font-weight:900;border-bottom:1px solid;padding-bottom:2px;white-space:nowrap}
-    .frame-shell{position:relative;width:100%;overflow:hidden;background:#fff;min-height:400px}.frame-shell:before{content:'loading';position:absolute;left:50%;top:48px;transform:translateX(-50%);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#777;z-index:0}
-    iframe{position:relative;z-index:1;display:block;border:0;background:#fff;transform-origin:0 0;pointer-events:none}
-    body.interactive iframe{pointer-events:auto}
-    .interact{appearance:none;border:1px solid #45463f;background:transparent;color:#a1a299;border-radius:8px;padding:7px 9px;font-size:10px;font-weight:800;cursor:pointer;margin-left:4px}.interact[aria-pressed="true"]{border-color:#fff;color:#fff}
-    @media(max-width:760px){:root{--bar:58px}.toolbar{grid-template-columns:1fr auto;height:var(--bar);padding:7px 10px}.title span,.hint{display:none}.modes button{padding:7px 9px}.interact{display:none}.lane-head{height:48px}.wall{padding:8px 8px 48px;gap:8px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    :root{--bg:#d9d9d3;--ink:#171713;--paper:#f5f4ee;--line:#b8b9b1;--muted:#707169;--acid:#d9ff56;--top:58px;--head:84px;color-scheme:light}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink)}button,a{font:inherit}.toolbar{height:var(--top);display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;padding:7px 12px;background:#171713;color:#f5f4ee;border-bottom:1px solid #34342f}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand b{font-size:13px}.brand span{font-size:10px;color:#96978f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.controls{display:flex;align-items:center;gap:5px}.group{display:flex;gap:3px;padding:3px;border:1px solid #464740;border-radius:9px;background:#0f100d}.group button,.control{appearance:none;border:0;background:transparent;color:#a2a39b;border-radius:6px;padding:7px 9px;font-size:10px;font-weight:850;cursor:pointer}.group button[aria-pressed="true"],.control[aria-pressed="true"]{background:var(--acid);color:#111}.control{border:1px solid #464740}.control:hover{color:#fff}.mobile-side{display:none}.hint{justify-self:end;font-size:10px;color:#96978f;text-align:right}.hint strong{color:#fff}.stage{height:calc(100dvh - var(--top));display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#a9aaa3}.pane{min-width:0;height:100%;display:flex;flex-direction:column;background:#cfcfc9}.pane-head{height:var(--head);flex:none;background:rgba(245,244,238,.98);border-bottom:1px solid var(--line);padding:8px 10px;display:grid;grid-template-rows:28px 32px;gap:6px}.pane-title{display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center}.side-tag{font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}.current{min-width:0;font-size:11px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.open{font-size:9px;font-weight:900;color:var(--ink);text-decoration:none;border-bottom:1px solid;white-space:nowrap}.variants{display:flex;gap:4px;overflow:auto;scrollbar-width:none}.variants::-webkit-scrollbar{display:none}.variant{flex:0 0 30px;height:30px;display:grid;place-items:center;border:1px solid #c4c5bd;background:#ecebe5;border-radius:7px;font-size:10px;font-weight:900;cursor:pointer;color:#62635d}.variant:hover,.variant:focus-visible{outline:none;border-color:#77786f;color:#111}.variant[aria-pressed="true"]{background:#171713;color:white;border-color:#171713}.pane[data-full="true"] .variant[aria-pressed="true"]{background:#164ee8;border-color:#164ee8}.pane[data-letter="H"] .variant[aria-pressed="true"]{background:#9a642f;border-color:#9a642f}.preview-area{flex:1;min-height:0;display:grid;place-items:center;overflow:hidden;background:repeating-conic-gradient(#d3d3cd 0 25%,#cbcbc5 0 50%) 50%/18px 18px;padding:10px}.viewport{position:relative;flex:none;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.14);overflow:hidden}.viewport:before{content:'loading';position:absolute;left:50%;top:18px;transform:translateX(-50%);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:#777;z-index:0}iframe{position:relative;z-index:1;border:0;display:block;background:white;transform-origin:0 0}.size-badge{position:absolute;right:7px;bottom:7px;z-index:4;background:rgba(17,17,15,.82);color:#dddcd6;padding:5px 6px;border-radius:5px;font-size:8px;letter-spacing:.08em;pointer-events:none}.mobile-switch{display:none}.swipe-note{display:none}
+    @media(max-width:800px){:root{--top:54px;--head:82px}.toolbar{grid-template-columns:1fr auto;padding:6px 8px}.brand span,.hint{display:none}.controls .sync-label,.controls #swap{display:none}.mobile-side{display:flex}.stage{display:block;position:relative}.pane{display:none;height:100%}.pane.mobile-active{display:flex}.pane-head{padding-left:8px;padding-right:8px}.preview-area{padding:6px}.swipe-note{display:block;position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:20;background:rgba(23,23,19,.86);color:#d8d8d1;padding:5px 8px;border-radius:99px;font-size:8px;letter-spacing:.08em;pointer-events:none;white-space:nowrap}.mobile-switch button{min-width:34px}.group button,.control{padding:6px 8px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
   <header class="toolbar">
-    <div class="title"><b>A–H comparison wall</b><span>live full-page layouts</span></div>
-    <div class="modes" role="group" aria-label="Preview viewport">
-      <button type="button" data-mode="mobile" aria-pressed="true">Mobile 390</button>
-      <button type="button" data-mode="desktop" aria-pressed="false">Desktop 1280</button>
-      <button class="interact" type="button" id="interact" aria-pressed="false" title="Enable interaction inside previews">Interact</button>
+    <div class="brand"><b>SiteOps Compare</b><span>pairwise live QA</span></div>
+    <div class="controls">
+      <div class="group" aria-label="Viewport preset"><button data-mode="mobile" aria-pressed="true">390</button><button data-mode="desktop" aria-pressed="false">1280</button></div>
+      <button class="control sync-label" id="sync" aria-pressed="true">Sync scroll</button>
+      <button class="control" id="swap">Swap</button>
+      <div class="group mobile-side" aria-label="Visible pane"><button data-side="left" aria-pressed="true">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     </div>
-    <div class="hint"><strong>↔</strong> swipe variants &nbsp; <strong>↕</strong> scroll full pages</div>
+    <div class="hint"><strong>↕</strong> scroll inside previews · <strong>A–H</strong> switch instantly</div>
   </header>
-
-  <main class="wall" id="wall" aria-label="Live design comparisons"></main>
-
+  <main class="stage" id="stage">
+    <section class="pane mobile-active" id="leftPane" data-side="left"></section>
+    <section class="pane" id="rightPane" data-side="right"></section>
+    <div class="swipe-note">SWIPE ← → LEFT / RIGHT</div>
+  </main>
   <script>
-    const variants=[
-      {letter:'A',slug:'no-flow',name:'Baseline AI SaaS',type:'baseline'},
-      {letter:'B',slug:'with-flow',name:'Editorial Dossier',type:'guided'},
-      {letter:'C',slug:'flow-c',name:'Interactive Terminal App',type:'guided'},
-      {letter:'D',slug:'flow-d',name:'Quiet Minimal Gallery',type:'guided'},
-      {letter:'E',slug:'flow-e',name:'Interactive Spatial Topology',type:'guided'},
-      {letter:'F',slug:'flow-f',name:'Horizontal Brutalist Poster',type:'guided'},
-      {letter:'G',slug:'full-flow-g',name:'Operating Manual',type:'full flow'},
-      {letter:'H',slug:'full-flow-h',name:'Spatial Control Surface',type:'full flow'}
-    ];
-    const wall=document.getElementById('wall');
-    const modeButtons=[...document.querySelectorAll('[data-mode]')];
-    const interact=document.getElementById('interact');
-    let mode=matchMedia('(max-width:700px)').matches?'mobile':'desktop';
-
-    function spec(){
-      const maxLane=Math.max(300,Math.min(mode==='mobile'?390:520,innerWidth-28));
-      return mode==='mobile'
-        ? {viewportW:390,viewportH:844,laneW:maxLane,scale:maxLane/390}
-        : {viewportW:1280,viewportH:900,laneW:maxLane,scale:maxLane/1280};
-    }
-
-    function injectCompareCSS(frame){
-      try{
-        const doc=frame.contentDocument;
-        if(!doc||doc.querySelector('style[data-compare-wall]'))return;
-        const style=doc.createElement('style');
-        style.dataset.compareWall='true';
-        style.textContent='.experiment{display:none!important}html{scrollbar-width:none!important}body::-webkit-scrollbar{display:none!important}';
-        doc.head.appendChild(style);
-      }catch(e){}
-    }
-
-    function fit(frame,shell,s){
-      try{
-        injectCompareCSS(frame);
-        const doc=frame.contentDocument;
-        if(!doc)return;
-        frame.style.width=s.viewportW+'px';
-        frame.style.height=s.viewportH+'px';
-        frame.style.transform=`scale(${s.scale})`;
-        frame.contentWindow.dispatchEvent(new Event('resize'));
-        requestAnimationFrame(()=>{
-          const h=Math.max(s.viewportH,doc.documentElement.scrollHeight,doc.body?.scrollHeight||0);
-          frame.style.height=h+'px';
-          shell.style.height=Math.ceil(h*s.scale)+'px';
-        });
-      }catch(e){shell.style.height=Math.ceil(s.viewportH*s.scale)+'px'}
-    }
-
-    function render(){
-      const s=spec();
-      document.documentElement.style.setProperty('--lane',s.laneW+'px');
-      wall.innerHTML='';
-      for(const v of variants){
-        const lane=document.createElement('section');
-        lane.className='lane';lane.dataset.letter=v.letter;lane.dataset.full=String(v.type==='full flow');
-        lane.innerHTML=`<header class="lane-head"><div class="letter">${v.letter}</div><div class="meta"><b>${v.name}</b><span>${v.type}</span></div><a class="open" href="./${v.slug}/" target="_blank" rel="noopener">OPEN ↗</a></header><div class="frame-shell"><iframe title="${v.letter} · ${v.name}" loading="eager" src="./${v.slug}/?compare=1&v=9"></iframe></div>`;
-        wall.appendChild(lane);
-        const frame=lane.querySelector('iframe');const shell=lane.querySelector('.frame-shell');
-        frame.style.width=s.viewportW+'px';frame.style.height=s.viewportH+'px';frame.style.transform=`scale(${s.scale})`;shell.style.height=Math.ceil(s.viewportH*s.scale)+'px';
-        frame.addEventListener('load',()=>{fit(frame,shell,s);setTimeout(()=>fit(frame,shell,s),250);setTimeout(()=>fit(frame,shell,s),900)});
-      }
-      modeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
-    }
-
-    modeButtons.forEach(button=>button.addEventListener('click',()=>{if(button.dataset.mode===mode)return;mode=button.dataset.mode;scrollTo({top:0,left:0});render()}));
-    interact.addEventListener('click',()=>{const on=!document.body.classList.contains('interactive');document.body.classList.toggle('interactive',on);interact.setAttribute('aria-pressed',String(on));interact.textContent=on?'Preview':'Interact'});
-    addEventListener('resize',()=>{clearTimeout(window.__compareResize);window.__compareResize=setTimeout(render,180)},{passive:true});
-    render();
+    const variants={
+      A:{slug:'no-flow',name:'Baseline AI SaaS',type:'baseline'},
+      B:{slug:'with-flow',name:'Editorial Dossier',type:'guided'},
+      C:{slug:'flow-c',name:'Interactive Terminal App',type:'guided'},
+      D:{slug:'flow-d',name:'Quiet Minimal Gallery',type:'guided'},
+      E:{slug:'flow-e',name:'Interactive Spatial Topology',type:'guided'},
+      F:{slug:'flow-f',name:'Horizontal Brutalist Poster',type:'guided'},
+      G:{slug:'full-flow-g',name:'Operating Manual',type:'full flow'},
+      H:{slug:'full-flow-h',name:'Spatial Control Surface',type:'full flow'}
+    };
+    const qs=new URLSearchParams(location.search);let mode=qs.get('view')==='desktop'?'desktop':'mobile';let selected={left:(qs.get('left')||'G').toUpperCase(),right:(qs.get('right')||'H').toUpperCase()};if(!variants[selected.left])selected.left='G';if(!variants[selected.right])selected.right='H';let syncOn=true,syncing=false,mobileSide='left';const panes={left:document.getElementById('leftPane'),right:document.getElementById('rightPane')};
+    function spec(){return mode==='mobile'?{w:390,h:844}:{w:1280,h:900}}
+    function saveURL(){const p=new URLSearchParams();p.set('left',selected.left);p.set('right',selected.right);p.set('view',mode);history.replaceState(null,'','?'+p.toString())}
+    function hideInnerDock(frame){try{const d=frame.contentDocument;if(!d||d.querySelector('[data-compare-pair]'))return;const s=d.createElement('style');s.dataset.comparePair='1';s.textContent='.experiment{display:none!important}';d.head.appendChild(s)}catch(e){}}
+    function scrollRatio(frame){try{const w=frame.contentWindow,d=frame.contentDocument.documentElement,max=Math.max(0,d.scrollHeight-w.innerHeight);return max?Math.max(0,Math.min(1,w.scrollY/max)):0}catch(e){return 0}}
+    function applyRatio(frame,r){try{const w=frame.contentWindow,d=frame.contentDocument.documentElement,max=Math.max(0,d.scrollHeight-w.innerHeight);w.scrollTo(0,max*r)}catch(e){}}
+    function bindSync(side,frame){try{frame.contentWindow.addEventListener('scroll',()=>{if(!syncOn||syncing)return;const other=panes[side==='left'?'right':'left'].querySelector('iframe');if(!other)return;syncing=true;applyRatio(other,scrollRatio(frame));requestAnimationFrame(()=>syncing=false)},{passive:true})}catch(e){}}
+    function fitPane(side){const pane=panes[side],area=pane.querySelector('.preview-area'),vp=pane.querySelector('.viewport'),frame=pane.querySelector('iframe');if(!area||!vp||!frame)return;const s=spec();const aw=Math.max(200,area.clientWidth-8),ah=Math.max(260,area.clientHeight-8);const scale=Math.min(1,aw/s.w,ah/s.h);frame.style.width=s.w+'px';frame.style.height=s.h+'px';frame.style.transform=`scale(${scale})`;vp.style.width=Math.round(s.w*scale)+'px';vp.style.height=Math.round(s.h*scale)+'px';pane.querySelector('.size-badge').textContent=`${s.w} × ${s.h} · ${Math.round(scale*100)}%`;try{frame.contentWindow.dispatchEvent(new Event('resize'))}catch(e){}}
+    function variantButtons(side){return Object.keys(variants).map(k=>`<button class="variant" data-pick="${k}" aria-label="${k} · ${variants[k].name}" aria-pressed="${selected[side]===k}">${k}</button>`).join('')}
+    function renderPane(side,preserveRatio=0){const pane=panes[side],key=selected[side],v=variants[key];pane.dataset.letter=key;pane.dataset.full=String(v.type==='full flow');pane.innerHTML=`<header class="pane-head"><div class="pane-title"><span class="side-tag">${side}</span><div class="current">${key} · ${v.name}</div><a class="open" href="./${v.slug}/" target="_blank" rel="noopener">OPEN ↗</a></div><div class="variants">${variantButtons(side)}</div></header><div class="preview-area"><div class="viewport"><iframe title="${key} · ${v.name}" src="./${v.slug}/?compare=pair&v=10"></iframe><span class="size-badge"></span></div></div>`;pane.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{if(b.dataset.pick===selected[side])return;const old=pane.querySelector('iframe'),r=old?scrollRatio(old):0;selected[side]=b.dataset.pick;saveURL();renderPane(side,r)});const frame=pane.querySelector('iframe');frame.addEventListener('load',()=>{hideInnerDock(frame);fitPane(side);applyRatio(frame,preserveRatio);bindSync(side,frame);setTimeout(()=>{hideInnerDock(frame);fitPane(side);applyRatio(frame,preserveRatio)},300)});requestAnimationFrame(()=>fitPane(side))}
+    function setMode(next){const ratios={left:scrollRatio(panes.left.querySelector('iframe')),right:scrollRatio(panes.right.querySelector('iframe'))};mode=next;document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));saveURL();renderPane('left',ratios.left);renderPane('right',ratios.right)}
+    function setMobileSide(side){mobileSide=side;panes.left.classList.toggle('mobile-active',side==='left');panes.right.classList.toggle('mobile-active',side==='right');document.querySelectorAll('[data-side]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===side)));requestAnimationFrame(()=>fitPane(side))}
+    document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));document.querySelectorAll('[data-side]').forEach(b=>b.onclick=()=>setMobileSide(b.dataset.side));document.getElementById('sync').onclick=e=>{syncOn=!syncOn;e.currentTarget.setAttribute('aria-pressed',String(syncOn));e.currentTarget.textContent=syncOn?'Sync scroll':'Free scroll'};document.getElementById('swap').onclick=()=>{const lr=scrollRatio(panes.left.querySelector('iframe')),rr=scrollRatio(panes.right.querySelector('iframe')),t=selected.left;selected.left=selected.right;selected.right=t;saveURL();renderPane('left',rr);renderPane('right',lr)};
+    let sx=0,sy=0;const stage=document.getElementById('stage');stage.addEventListener('touchstart',e=>{const t=e.touches[0];sx=t.clientX;sy=t.clientY},{passive:true});stage.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(innerWidth<=800&&Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.3)setMobileSide(dx<0?'right':'left')},{passive:true});
+    addEventListener('resize',()=>{clearTimeout(window.__fit);window.__fit=setTimeout(()=>{fitPane('left');fitPane('right')},100)},{passive:true});document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderPane('left');renderPane('right');setMobileSide('left');saveURL();
   </script>
 </body>
 </html>
