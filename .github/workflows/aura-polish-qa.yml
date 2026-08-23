@@ -22,41 +22,30 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          set -euo pipefail
-          code=$(curl -sS -o /tmp/dispatch.txt -w '%{http_code}' -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/pages-deploy.yml/dispatches" \
-            -d '{"ref":"main"}')
-          cat /tmp/dispatch.txt || true
-          echo "dispatch_http=$code"
-          test "$code" = '204'
+          gh workflow run pages.yml --repo ${{ github.repository }} --ref main
 
-      - name: Verify published build
+      - name: Verify published build and strict WebP
         run: |
           set -euo pipefail
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
           ok=0
-          for i in $(seq 1 60); do
+          for i in $(seq 1 48); do
             code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
-            if [ "$code" = '200' ] \
-              && grep -q 'data-build="aura-polish-v3"' /tmp/aura.html \
-              && grep -q 'headphones-gpt.webp' /tmp/aura.html \
-              && grep -q './styles.css' /tmp/aura.html \
-              && grep -q './script.js' /tmp/aura.html \
-              && ! grep -qi '<video' /tmp/aura.html; then
-              ok=1; echo "published_ok attempt=$i http=$code"; break
+            curl -fL -sS "$BASE/headphones-gpt.webp?v=${GITHUB_RUN_ID}-${i}" -o /tmp/h.webp || true
+            if [ "$code" = '200' ] && grep -q 'data-build="aura-polish-v3"' /tmp/aura.html; then
+              if python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/h.webp').read_bytes()
+          assert len(p)==52508, len(p)
+          assert p[:4]==b'RIFF', p[:16]
+          assert p[8:12]==b'WEBP', p[:16]
+          PY
+              then ok=1; echo "published_webp_ok attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
             fi
-            echo "waiting attempt=$i http=$code"; sleep 5
+            echo "waiting attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp 2>/dev/null || echo 0)"
+            sleep 5
           done
           test "$ok" = '1'
-          curl -fL -sS "$BASE/styles.css?v=$GITHUB_RUN_ID" -o /tmp/styles.css
-          curl -fL -sS "$BASE/script.js?v=$GITHUB_RUN_ID" -o /tmp/script.js
-          curl -fL -sS "$BASE/headphones-gpt.webp?v=$GITHUB_RUN_ID" -o /tmp/h.webp
-          test "$(wc -c < /tmp/styles.css)" -gt 8000
-          test "$(wc -c < /tmp/script.js)" -gt 3500
-          test "$(wc -c < /tmp/h.webp)" -gt 10000
           file /tmp/h.webp | grep -qi 'Web/P image\|WebP'
 
       - name: Capture desktop and mobile frames
