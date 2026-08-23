@@ -1,16 +1,21 @@
 <!doctype html>
-<html lang="en" data-build="aura-polish-v3-fix2">
+<html lang="en" data-build="aura-editorial-v4">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#6f1736" />
 <title>AURA Eclipse 01 Pro</title>
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./styles.css?v=editorial-v4">
 </head>
 <body>
 <main class="story" id="story">
   <section class="stage" id="stage" aria-label="AURA Eclipse product story">
     <div class="scene wine"></div><div class="grain"></div><div class="scene paper" id="paper"></div>
+
+    <div class="ghost-type hero-ghost" id="heroGhost" aria-hidden="true">SILENCE</div>
+    <div class="ghost-type detail-ghost" id="detailGhost" aria-hidden="true">ECLIPSE</div>
+    <div class="ghost-type acoustic-ghost" id="acousticGhost" aria-hidden="true">ACOUSTICS</div>
+
     <header class="topbar">
       <div class="brand">AURA</div>
       <nav class="nav" aria-label="Product sections">
@@ -30,7 +35,10 @@
     <div class="detail">
       <div class="detail-copy" id="detailCopy">
         <div class="eyebrow">BOULT / 01</div>
-        <h2 class="detail-title">Aura Eclipse<br>01 Pro</h2>
+        <div class="title-stack detail-title-stack">
+          <h2 class="detail-title title-base" id="detailTitle">Aura Eclipse<br>01 Pro</h2>
+          <h2 class="detail-title title-front" id="detailTitleFront" aria-hidden="true">Aura Eclipse<br>01 Pro</h2>
+        </div>
         <div class="detail-kicker">Sleek. Sculpted. Silent.</div>
         <p>Experience immersive audio through a tuned acoustic cavity, high-flux driver architecture and adaptive noise control — shaped into a single uninterrupted form.</p>
         <div class="spec-row"><span>40 mm<br>driver</span><span>42 hr<br>battery</span><span>−45 dB<br>ANC</span></div>
@@ -41,7 +49,10 @@
     </div>
 
     <div class="acoustic">
-      <h2 class="acoustic-title" id="acousticTitle"><small>03 / Acoustic system</small>Precision tuned<br>acoustics.</h2>
+      <div class="title-stack acoustic-title-stack" id="acousticTitle">
+        <h2 class="acoustic-title title-base" id="acousticTitleBase"><small>03 / Acoustic system</small>Precision tuned<br>acoustics.</h2>
+        <h2 class="acoustic-title title-front" id="acousticTitleFront" aria-hidden="true"><small>03 / Acoustic system</small>Precision tuned<br>acoustics.</h2>
+      </div>
       <div class="tag t1">Titanium coated driver</div><div class="tag t2">Reinforced cavity body</div><div class="tag t3">High-flux neodymium</div><div class="tag t4">Kinetic spatial sound stage</div><div class="tag t5">Active noise cancellation</div>
     </div>
 
@@ -51,6 +62,6 @@
     <div class="scroll-hint" id="scrollHint"><span>Scroll to explore</span><i></i></div>
   </section>
 </main>
-<script src="./script.js?v=avoid-copy-v1"></script>
+<script src="./script.js?v=editorial-v4"></script>
 </body>
 </html>
