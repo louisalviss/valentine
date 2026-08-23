@@ -4,3 +4,4 @@ Force event after strict QA workflow update.
 Final QA after valid 52,508-byte WebP commit landed on main.
 Retry canonical pages-deploy.yml.
 Final direct live QA for build aura-polish-v3-fix2.
+Verify text-avoidance motion lanes and collision fallback.
