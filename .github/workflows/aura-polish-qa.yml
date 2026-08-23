@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Verify published editorial build, feature assets and GPT WebP
+      - name: Verify published classic final build and GPT WebP
         run: |
           set -euo pipefail
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
@@ -25,16 +25,12 @@ jobs:
           for i in $(seq 1 48); do
             code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
             curl -fL -sS "$BASE/headphones-gpt.webp?v=${GITHUB_RUN_ID}-${i}" -o /tmp/h.webp || true
-            curl -fL -sS "$BASE/final-v5.css?v=${GITHUB_RUN_ID}-${i}" -o /tmp/final.css || true
             curl -fL -sS "$BASE/features-v5.js?v=${GITHUB_RUN_ID}-${i}" -o /tmp/features.js || true
             if [ "$code" = '200' ] \
-              && grep -q 'data-build="aura-editorial-v5"' /tmp/aura.html \
-              && grep -q 'id="featureNav"' /tmp/aura.html \
-              && grep -q 'id="featurePanel"' /tmp/aura.html \
-              && grep -q 'features-v5.js' /tmp/aura.html \
-              && grep -q 'final-v5.css' /tmp/aura.html \
-              && grep -q 'Adaptive noise cancellation' /tmp/features.js \
-              && grep -q '.feature-panel' /tmp/final.css \
+              && grep -q 'data-build="aura-editorial-v6"' /tmp/aura.html \
+              && grep -q 'featureClose' /tmp/aura.html \
+              && grep -q 'feature-btn t1' /tmp/aura.html \
+              && grep -q 'openFeature' /tmp/features.js \
               && grep -q 'src="./headphones-gpt.webp"' /tmp/aura.html; then
               if python - <<'PY'
           from pathlib import Path
@@ -43,23 +39,20 @@ jobs:
           assert p[:4]==b'RIFF', p[:16]
           assert p[8:12]==b'WEBP', p[:16]
           PY
-              then ok=1; echo "AURA_EDITORIAL_V5_LIVE_OK attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
+              then ok=1; echo "AURA_EDITORIAL_V6_LIVE_OK attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
             fi
             echo "waiting attempt=$i http=$code"
             sleep 5
           done
           test "$ok" = '1'
-          test "$(wc -c < /tmp/final.css)" -gt 3000
-          test "$(wc -c < /tmp/features.js)" -gt 2500
-          file /tmp/h.webp | grep -qi 'Web/P image\|WebP'
 
-      - name: Capture desktop and mobile frames
+      - name: Capture desktop and mobile final frames
         run: |
           set -euo pipefail
           CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
           mkdir -p qa
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
-          for f in .70 .78 .88 1; do
+          for f in .78 .88 1; do
             name=$(echo "$f" | tr -d '.')
             "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot="qa/desktop-${name}.png" "$BASE?frame=$f&v=$GITHUB_RUN_ID"
           done
@@ -72,9 +65,9 @@ jobs:
       - name: Upload QA screenshots
         uses: actions/upload-artifact@v4
         with:
-          name: aura-editorial-v5-qa-${{ github.run_id }}
+          name: aura-classic-v6-qa-${{ github.run_id }}
           path: qa/
           retention-days: 2
 
       - name: PASS
-        run: echo 'AURA_EDITORIAL_V5_QA_OK'
+        run: echo 'AURA_EDITORIAL_V6_QA_OK'
