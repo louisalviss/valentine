@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#000000" />
+<title>AURA — Scroll Experience</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif}body{overscroll-behavior-y:none}.story{height:520vh;position:relative}.stage{position:sticky;top:0;height:100svh;width:100%;display:grid;place-items:center;overflow:hidden;background:#000}.frame{position:relative;width:min(100vw,177.7778svh);height:min(100svh,56.25vw);max-width:1280px;max-height:720px;background:#111;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.04)}video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;pointer-events:none}.veil{position:absolute;inset:0;display:grid;place-items:center;background:#000;z-index:4;transition:opacity .35s ease;pointer-events:none}.veil.ready{opacity:0}.loader{display:grid;gap:12px;text-align:center;font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.68)}.line{width:140px;height:1px;background:rgba(255,255,255,.18);overflow:hidden}.line i{display:block;width:45%;height:100%;background:#fff;animation:load 1s ease-in-out infinite alternate}@keyframes load{from{transform:translateX(-100%)}to{transform:translateX(220%)}}.hud{position:absolute;inset:0;z-index:3;pointer-events:none;mix-blend-mode:difference}.scroll{position:absolute;left:22px;bottom:22px;display:flex;align-items:center;gap:11px;font-size:9px;letter-spacing:.2em;color:rgba(255,255,255,.72)}.scroll b{display:block;width:42px;height:1px;background:currentColor;overflow:hidden;position:relative}.scroll b:after{content:"";position:absolute;inset:0;background:#fff;transform:translateX(-100%);animation:sweep 1.8s ease-in-out infinite}@keyframes sweep{50%,100%{transform:translateX(100%)}}.counter{position:absolute;right:22px;bottom:22px;font:700 11px/1 Arial,sans-serif;letter-spacing:.1em;color:rgba(255,255,255,.72)}.progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,.10)}.progress i{display:block;width:0;height:100%;background:#fff;will-change:width}.tap{position:fixed;z-index:9;right:14px;top:14px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(0,0,0,.26);backdrop-filter:blur(10px);color:rgba(255,255,255,.86);font-size:10px;padding:8px 11px;letter-spacing:.06em;opacity:0;pointer-events:none;transition:opacity .2s}.tap.show{opacity:1}.error{position:absolute;inset:0;z-index:7;display:none;place-items:center;text-align:center;padding:30px;background:linear-gradient(135deg,#651633,#9c3158 52%,#76203f);font-size:14px;line-height:1.5}.error.show{display:grid}@media(max-width:700px){.story{height:440vh}.frame{width:100vw;height:56.25vw;max-height:none}.stage{place-items:center}.scroll{left:14px;bottom:14px}.counter{right:14px;bottom:14px}}@media(prefers-reduced-motion:reduce){.scroll b:after,.line i{animation:none}}
+</style>
+</head>
+<body>
+<div class="tap" id="tap">Scroll to scrub the film</div>
+<main class="story" id="story">
+  <section class="stage">
+    <div class="frame" id="frame">
+      <video id="film" muted playsinline webkit-playsinline preload="auto" aria-label="AURA headphone scroll animation">
+        <source src="./source.mp4" type="video/mp4" />
+      </video>
+      <div class="veil" id="veil"><div class="loader"><span>LOADING AURA</span><div class="line"><i></i></div></div></div>
+      <div class="hud" aria-hidden="true"><div class="scroll"><span>SCROLL</span><b></b></div><div class="counter"><span id="count">01</span> / 03</div><div class="progress"><i id="bar"></i></div></div>
+      <div class="error" id="error">The product film could not be loaded.<br>Reload once to retry.</div>
+    </div>
+  </section>
+</main>
+<script>
+(()=>{
+ const story=document.getElementById('story'), film=document.getElementById('film'), veil=document.getElementById('veil'), bar=document.getElementById('bar'), count=document.getElementById('count'), tap=document.getElementById('tap'), error=document.getElementById('error');
+ const clipDuration=6.144; let duration=clipDuration, target=0, shown=0, ready=false, lastSet=-1, raf=0, failed=false;
+ const clamp=v=>Math.min(1,Math.max(0,v));
+ const progress=()=>{const r=story.getBoundingClientRect(), d=story.offsetHeight-innerHeight;return d>0?clamp(-r.top/d):0};
+ function fail(){if(ready||failed)return;failed=true;veil.classList.add('ready');error.classList.add('show')}
+ function setFrame(p){
+   target=p; shown+=(target-shown)*.24; if(Math.abs(target-shown)<.0002)shown=target;
+   const t=Math.min(duration-.025,Math.max(.001,shown*duration));
+   if(ready&&Math.abs(t-lastSet)>.010){try{film.currentTime=t;lastSet=t}catch(e){}}
+   bar.style.width=(shown*100).toFixed(2)+'%';
+   count.textContent=shown<.34?'01':shown<.72?'02':'03';
+ }
+ function tick(){setFrame(progress());raf=requestAnimationFrame(tick)}
+ function prime(){
+   if(ready)return;
+   duration=Number.isFinite(film.duration)&&film.duration>0?film.duration:clipDuration;
+   ready=true; failed=false; error.classList.remove('show'); veil.classList.add('ready'); film.pause();
+   try{film.currentTime=Math.max(.001,progress()*duration)}catch(e){}
+   setTimeout(()=>tap.classList.add('show'),350);setTimeout(()=>tap.classList.remove('show'),2800);
+ }
+ film.addEventListener('loadedmetadata',prime,{once:true});
+ film.addEventListener('canplay',prime,{once:true});
+ film.addEventListener('error',fail,{once:true});
+ const unlock=()=>{if(!ready&&film.readyState>=1)prime();try{const p=film.play();if(p&&p.then)p.then(()=>film.pause()).catch(()=>{})}catch(e){}};
+ addEventListener('touchstart',unlock,{passive:true,once:true});addEventListener('wheel',unlock,{passive:true,once:true});
+ addEventListener('keydown',e=>{if(['ArrowDown','ArrowRight','PageDown'].includes(e.key)){e.preventDefault();scrollBy({top:innerHeight*.8,behavior:'smooth'})}if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();scrollBy({top:-innerHeight*.8,behavior:'smooth'})}});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)film.pause()});
+ setTimeout(()=>{if(!ready)fail()},7000);
+ raf=requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
