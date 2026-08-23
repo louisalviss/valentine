@@ -14,6 +14,18 @@ Current reusable primitive:
 Reference implementation:
 - `visual-system-demo/index.html`
 
+## Web Motion Library
+
+Canonical reusable pattern index:
+- live gallery: `web-motion-library/`
+- data: `web-motion-library/library.json`
+- workflow/docs: `web-motion-library/README.md`
+
+When an approved visual build produces a reusable interaction pattern, evaluate it for the library.
+Promote it only after responsive QA and only when the interaction grammar can survive another page/client context.
+Store the live demo + named primitives + responsive behavior + acceptance checks in `library.json`.
+Do not turn the library into a template dump; preserve interaction systems, not copied brand surfaces.
+
 ## Live site hosting
 
 - Default home for user-requested live/demo sites: this `louisalviss/valentine` GitHub repository.
