@@ -1,0 +1,1 @@
+Trigger repaired AURA live QA after restoring the known-good product asset.
