@@ -1,1 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SiteOps AI — Design Flow A–H</title><style>*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#efeee8;color:#151513}.wrap{width:min(1100px,calc(100% - 32px));margin:64px auto 90px}h1{font-size:clamp(44px,7vw,80px);line-height:.94;letter-spacing:-.06em;margin:0 0 20px}p{color:#66645c;max-width:850px;font-size:17px;line-height:1.6}.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;font-size:12px}.legend span{border:1px solid #cbc8bd;padding:7px 9px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:42px}.card{border:1px solid #cbc8bd;padding:26px;min-height:300px;display:flex;flex-direction:column;background:#f5f3ec}.card b{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.card h2{font-size:31px;letter-spacing:-.04em;margin:42px 0 10px}.card p{font-size:14px;margin:0}.card .axis{margin-top:16px;font-size:11px;color:#777269}.card a{margin-top:auto;background:#151513;color:white;padding:12px 15px;text-decoration:none;font-weight:800;display:inline-block;align-self:flex-start}.b{background:#f3efe5}.c{background:#020403;color:#d8e3dc;border-color:#163021}.c p,.c .axis{color:#718078}.c a{background:#82ff63;color:#061008}.d{background:#f4f2ec;color:#1b211d;border-color:#d8d5ce}.d p,.d .axis{color:#7c827d}.d a{background:#1b211d}.e{background:#080518;color:#efeaff;border-color:#2b2253}.e p,.e .axis{color:#958db3}.e a{background:#62e9e1;color:#081018}.f{background:#f6f0e4;color:#080808;border:3px solid #080808}.f p,.f .axis{color:#625d52}.f a{background:#ff3b1f}.g{background:#f2efe6;color:#151714;border-color:#151714}.g p,.g .axis{color:#6d7169}.g a{background:#164ee8}.h{background:#0b0b0a;color:#f0ebe2;border-color:#584b3e}.h p,.h .axis{color:#9a9287}.h a{background:#f1b980;color:#111}.full{position:relative}.full:after{content:'FULL FLOW';position:absolute;right:18px;top:18px;font-size:9px;letter-spacing:.12em;border:1px solid currentColor;padding:5px 6px}@media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{margin-top:38px}}</style></head><body><main class="wrap"><h1>Same product.<br>Eight design outcomes.</h1><p>A–F are the earlier exploration. G and H are the stricter test: both were rebuilt from scratch after re-reading the canonical Web & Landing Page Design Flow, the repository procedural visual skill, and Leonxlnx taste-skill before coding. They keep the same product truth but now use materially different information architectures.</p><div class="legend"><span>A = baseline</span><span>B–F = guided experiments</span><span>G/H = full canonical flow + taste-skill</span><span>G = document/manual</span><span>H = one-screen spatial control surface</span></div><div class="grid"><article class="card"><b>A · no flow</b><h2>Baseline AI SaaS</h2><p>Centered hero, gradient, pill, equal cards and normal landing-page rhythm.</p><div class="axis">Conventional marketing page</div><a href="./no-flow/">Open A</a></article><article class="card b"><b>B · guided</b><h2>Editorial dossier</h2><p>Publication-style exploration from the earlier round.</p><div class="axis">Publication / dossier</div><a href="./with-flow/">Open B</a></article><article class="card c"><b>C · guided</b><h2>Interactive terminal app</h2><p>Command-driven interpretation from the earlier round.</p><div class="axis">Software application / CLI</div><a href="./flow-c/">Open C</a></article><article class="card d"><b>D · guided</b><h2>Quiet minimal gallery</h2><p>Whitespace-heavy gallery interpretation from the earlier round.</p><div class="axis">Gallery / exhibition</div><a href="./flow-d/">Open D</a></article><article class="card e"><b>E · guided</b><h2>Interactive spatial topology</h2><p>System-map interpretation from the earlier round.</p><div class="axis">Interactive diagram / spatial UI</div><a href="./flow-e/">Open E</a></article><article class="card f"><b>F · guided</b><h2>Horizontal brutalist poster</h2><p>Poster-story interpretation from the earlier round.</p><div class="axis">Poster campaign / horizontal narrative</div><a href="./flow-f/">Open F</a></article><article class="card g full"><b>G · full flow</b><h2>Operating manual</h2><p>Trust-first technical buyer direction. No visual effect: manual index, operating record, scope, procedure and explicit production-write gate.</p><div class="axis">Document architecture · information hierarchy carries the design</div><a href="./full-flow-g/">Open G</a></article><article class="card h full"><b>H · full flow</b><h2>Spatial control surface</h2><p>A single-screen operating surface: four clickable drift nodes orbit the SiteOps core, while one live detail pane changes state. No marketing section stack.</p><div class="axis">Application-like spatial architecture · curated reactive-field background</div><a href="./full-flow-h/">Open H</a></article></div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#171713" />
+  <title>SiteOps AI — A–H Comparison Wall</title>
+  <meta name="description" content="Live side-by-side full-page comparison of SiteOps AI design variants A through H." />
+  <style>
+    :root{--bar:62px;--gap:10px;--bg:#d8d8d2;--ink:#171713;--muted:#6f706a;--paper:#f6f5ef;--line:#b7b8b1;--accent:#d9ff56;--lane:390px}
+    *{box-sizing:border-box}
+    html{background:var(--bg);scroll-behavior:smooth}
+    body{margin:0;min-width:100vw;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overscroll-behavior-x:none}
+    button,a{font:inherit}
+    .toolbar{position:sticky;top:0;left:0;width:100vw;height:var(--bar);z-index:1000;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:8px max(12px,env(safe-area-inset-left));background:rgba(23,23,19,.96);color:#f5f5ef;border-bottom:1px solid #34342f;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .title{display:flex;align-items:center;gap:10px;min-width:0}.title b{font-size:13px;letter-spacing:-.02em}.title span{font-size:10px;color:#92938c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .modes{display:flex;gap:3px;padding:3px;border:1px solid #45463f;border-radius:10px;background:#0f100d}.modes button{appearance:none;border:0;background:transparent;color:#9b9c94;padding:8px 11px;border-radius:7px;font-size:11px;font-weight:800;cursor:pointer}.modes button[aria-pressed="true"]{background:var(--accent);color:#111}
+    .hint{justify-self:end;color:#9a9b94;font-size:10px;text-align:right}.hint strong{color:#fff;font-weight:700}
+    .wall{display:flex;align-items:flex-start;gap:var(--gap);width:max-content;padding:10px 10px 60px}
+    .lane{width:var(--lane);flex:none;scroll-snap-align:start;background:#c7c7c1;border:1px solid #aaaBa4;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+    .lane-head{position:sticky;top:var(--bar);z-index:50;height:52px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:0 12px;background:rgba(246,245,239,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+    .letter{width:28px;height:28px;display:grid;place-items:center;background:var(--ink);color:#fff;border-radius:7px;font-size:12px;font-weight:900}.lane[data-full="true"] .letter{background:#164ee8}.lane[data-letter="H"] .letter{background:#a96c2e}
+    .meta{min-width:0}.meta b{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta span{display:block;margin-top:2px;color:var(--muted);font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .open{color:var(--ink);text-decoration:none;font-size:10px;font-weight:900;border-bottom:1px solid;padding-bottom:2px;white-space:nowrap}
+    .frame-shell{position:relative;width:100%;overflow:hidden;background:#fff;min-height:400px}.frame-shell:before{content:'loading';position:absolute;left:50%;top:48px;transform:translateX(-50%);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#777;z-index:0}
+    iframe{position:relative;z-index:1;display:block;border:0;background:#fff;transform-origin:0 0;pointer-events:none}
+    body.interactive iframe{pointer-events:auto}
+    .interact{appearance:none;border:1px solid #45463f;background:transparent;color:#a1a299;border-radius:8px;padding:7px 9px;font-size:10px;font-weight:800;cursor:pointer;margin-left:4px}.interact[aria-pressed="true"]{border-color:#fff;color:#fff}
+    @media(max-width:760px){:root{--bar:58px}.toolbar{grid-template-columns:1fr auto;height:var(--bar);padding:7px 10px}.title span,.hint{display:none}.modes button{padding:7px 9px}.interact{display:none}.lane-head{height:48px}.wall{padding:8px 8px 48px;gap:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="title"><b>A–H comparison wall</b><span>live full-page layouts</span></div>
+    <div class="modes" role="group" aria-label="Preview viewport">
+      <button type="button" data-mode="mobile" aria-pressed="true">Mobile 390</button>
+      <button type="button" data-mode="desktop" aria-pressed="false">Desktop 1280</button>
+      <button class="interact" type="button" id="interact" aria-pressed="false" title="Enable interaction inside previews">Interact</button>
+    </div>
+    <div class="hint"><strong>↔</strong> swipe variants &nbsp; <strong>↕</strong> scroll full pages</div>
+  </header>
+
+  <main class="wall" id="wall" aria-label="Live design comparisons"></main>
+
+  <script>
+    const variants=[
+      {letter:'A',slug:'no-flow',name:'Baseline AI SaaS',type:'baseline'},
+      {letter:'B',slug:'with-flow',name:'Editorial Dossier',type:'guided'},
+      {letter:'C',slug:'flow-c',name:'Interactive Terminal App',type:'guided'},
+      {letter:'D',slug:'flow-d',name:'Quiet Minimal Gallery',type:'guided'},
+      {letter:'E',slug:'flow-e',name:'Interactive Spatial Topology',type:'guided'},
+      {letter:'F',slug:'flow-f',name:'Horizontal Brutalist Poster',type:'guided'},
+      {letter:'G',slug:'full-flow-g',name:'Operating Manual',type:'full flow'},
+      {letter:'H',slug:'full-flow-h',name:'Spatial Control Surface',type:'full flow'}
+    ];
+    const wall=document.getElementById('wall');
+    const modeButtons=[...document.querySelectorAll('[data-mode]')];
+    const interact=document.getElementById('interact');
+    let mode=matchMedia('(max-width:700px)').matches?'mobile':'desktop';
+
+    function spec(){
+      const maxLane=Math.max(300,Math.min(mode==='mobile'?390:520,innerWidth-28));
+      return mode==='mobile'
+        ? {viewportW:390,viewportH:844,laneW:maxLane,scale:maxLane/390}
+        : {viewportW:1280,viewportH:900,laneW:maxLane,scale:maxLane/1280};
+    }
+
+    function injectCompareCSS(frame){
+      try{
+        const doc=frame.contentDocument;
+        if(!doc||doc.querySelector('style[data-compare-wall]'))return;
+        const style=doc.createElement('style');
+        style.dataset.compareWall='true';
+        style.textContent='.experiment{display:none!important}html{scrollbar-width:none!important}body::-webkit-scrollbar{display:none!important}';
+        doc.head.appendChild(style);
+      }catch(e){}
+    }
+
+    function fit(frame,shell,s){
+      try{
+        injectCompareCSS(frame);
+        const doc=frame.contentDocument;
+        if(!doc)return;
+        frame.style.width=s.viewportW+'px';
+        frame.style.height=s.viewportH+'px';
+        frame.style.transform=`scale(${s.scale})`;
+        frame.contentWindow.dispatchEvent(new Event('resize'));
+        requestAnimationFrame(()=>{
+          const h=Math.max(s.viewportH,doc.documentElement.scrollHeight,doc.body?.scrollHeight||0);
+          frame.style.height=h+'px';
+          shell.style.height=Math.ceil(h*s.scale)+'px';
+        });
+      }catch(e){shell.style.height=Math.ceil(s.viewportH*s.scale)+'px'}
+    }
+
+    function render(){
+      const s=spec();
+      document.documentElement.style.setProperty('--lane',s.laneW+'px');
+      wall.innerHTML='';
+      for(const v of variants){
+        const lane=document.createElement('section');
+        lane.className='lane';lane.dataset.letter=v.letter;lane.dataset.full=String(v.type==='full flow');
+        lane.innerHTML=`<header class="lane-head"><div class="letter">${v.letter}</div><div class="meta"><b>${v.name}</b><span>${v.type}</span></div><a class="open" href="./${v.slug}/" target="_blank" rel="noopener">OPEN ↗</a></header><div class="frame-shell"><iframe title="${v.letter} · ${v.name}" loading="eager" src="./${v.slug}/?compare=1&v=9"></iframe></div>`;
+        wall.appendChild(lane);
+        const frame=lane.querySelector('iframe');const shell=lane.querySelector('.frame-shell');
+        frame.style.width=s.viewportW+'px';frame.style.height=s.viewportH+'px';frame.style.transform=`scale(${s.scale})`;shell.style.height=Math.ceil(s.viewportH*s.scale)+'px';
+        frame.addEventListener('load',()=>{fit(frame,shell,s);setTimeout(()=>fit(frame,shell,s),250);setTimeout(()=>fit(frame,shell,s),900)});
+      }
+      modeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
+    }
+
+    modeButtons.forEach(button=>button.addEventListener('click',()=>{if(button.dataset.mode===mode)return;mode=button.dataset.mode;scrollTo({top:0,left:0});render()}));
+    interact.addEventListener('click',()=>{const on=!document.body.classList.contains('interactive');document.body.classList.toggle('interactive',on);interact.setAttribute('aria-pressed',String(on));interact.textContent=on?'Preview':'Interact'});
+    addEventListener('resize',()=>{clearTimeout(window.__compareResize);window.__compareResize=setTimeout(render,180)},{passive:true});
+    render();
+  </script>
+</body>
+</html>
