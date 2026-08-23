@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" data-build="aura-editorial-v5">
+<html lang="en" data-build="aura-editorial-v6">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#6f1736" />
 <title>AURA Eclipse 01 Pro</title>
-<link rel="stylesheet" href="./styles.css?v=editorial-v5">
-<link rel="stylesheet" href="./final-v5.css?v=editorial-v5">
+<link rel="stylesheet" href="./styles.css?v=editorial-v6">
+<link rel="stylesheet" href="./final-v5.css?v=editorial-v6">
 </head>
 <body>
 <main class="story" id="story">
@@ -56,15 +56,16 @@
       </div>
 
       <div class="feature-nav" id="featureNav" aria-label="Acoustic features">
-        <button class="tag feature-btn active" data-feature="driver"><span>01</span>Titanium driver</button>
-        <button class="tag feature-btn" data-feature="cavity"><span>02</span>Reinforced cavity</button>
-        <button class="tag feature-btn" data-feature="magnet"><span>03</span>High-flux magnet</button>
-        <button class="tag feature-btn" data-feature="spatial"><span>04</span>Spatial stage</button>
-        <button class="tag feature-btn" data-feature="anc"><span>05</span>Adaptive ANC</button>
+        <button class="tag feature-btn t1" data-feature="driver"><span>01</span>Titanium coated driver</button>
+        <button class="tag feature-btn t2" data-feature="cavity"><span>02</span>Reinforced cavity body</button>
+        <button class="tag feature-btn t3" data-feature="magnet"><span>03</span>High-flux neodymium</button>
+        <button class="tag feature-btn t4" data-feature="spatial"><span>04</span>Kinetic spatial stage</button>
+        <button class="tag feature-btn t5" data-feature="anc"><span>05</span>Adaptive ANC</button>
       </div>
 
-      <aside class="feature-panel" id="featurePanel" aria-live="polite">
-        <div class="feature-panel-top"><span id="featureIndex">01 / 05</span><span>Selected system</span></div>
+      <aside class="feature-panel" id="featurePanel" aria-live="polite" aria-hidden="true">
+        <button class="feature-close" id="featureClose" aria-label="Close feature information">×</button>
+        <div class="feature-panel-top"><span id="featureIndex">01 / 05</span><span>Acoustic detail</span></div>
         <div class="feature-stat" id="featureStat">40 MM</div>
         <h3 id="featureTitle">Titanium-coated driver</h3>
         <p id="featureBody">A rigid low-mass diaphragm delivers faster transient response, cleaner detail and lower distortion across the audible range.</p>
@@ -78,7 +79,7 @@
     <div class="scroll-hint" id="scrollHint"><span>Scroll to explore</span><i></i></div>
   </section>
 </main>
-<script src="./script.js?v=editorial-v5"></script>
-<script src="./features-v5.js?v=editorial-v5"></script>
+<script src="./script.js?v=editorial-v6"></script>
+<script src="./features-v5.js?v=editorial-v6"></script>
 </body>
 </html>
