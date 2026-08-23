@@ -6,3 +6,4 @@ Retry canonical pages-deploy.yml.
 Final direct live QA for build aura-polish-v3-fix2.
 Verify text-avoidance motion lanes and collision fallback.
 Run editorial-v4 layered typography and product-mask QA.
+Run editorial-v5 interactive acoustics control-deck QA.
