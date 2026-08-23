@@ -14,6 +14,13 @@ Current reusable primitive:
 Reference implementation:
 - `visual-system-demo/index.html`
 
+## Live site hosting
+
+- Default home for user-requested live/demo sites: this `louisalviss/valentine` GitHub repository.
+- Publish each live site in its own clearly named subfolder so GitHub Pages can serve it directly.
+- Prefer self-hosted/static assets in this repository over hotlinking third-party media that can expire, block CORS/range requests, or cause loading hangs.
+- Do not use Vercel for these live/demo sites unless the user explicitly asks for Vercel.
+
 ## Default workflow
 
 1. Inspect the strongest relevant existing page/reference.
