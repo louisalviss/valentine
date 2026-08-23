@@ -6,8 +6,7 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  actions: write
 
 concurrency:
   group: aura-polish-live-qa
@@ -18,33 +17,28 @@ jobs:
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: '.'
-
-      - name: Deploy Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Dispatch canonical Pages deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o /tmp/dispatch.txt -w '%{http_code}' -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/pages-deploy.yml/dispatches" \
+            -d '{"ref":"main"}')
+          cat /tmp/dispatch.txt || true
+          echo "dispatch_http=$code"
+          test "$code" = '204'
 
       - name: Verify published build
         run: |
           set -euo pipefail
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
           ok=0
-          for i in $(seq 1 36); do
+          for i in $(seq 1 60); do
             code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
             if [ "$code" = '200' ] \
               && grep -q 'data-build="aura-polish-v3"' /tmp/aura.html \
