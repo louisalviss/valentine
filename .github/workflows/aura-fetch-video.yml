@@ -1,0 +1,41 @@
+name: AURA fetch local video asset
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-video:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download AURA source video
+        run: |
+          mkdir -p aura-eclipse-scroll
+          curl -L --fail --retry 3 --retry-delay 2 \
+            'https://video.twimg.com/amplify_video/2088913945902075904/vid/avc1/1280x720/HqsM-7lohCT0vzRB.mp4?tag=14' \
+            -o aura-eclipse-scroll/source.mp4
+          test "$(wc -c < aura-eclipse-scroll/source.mp4)" -gt 100000
+          file aura-eclipse-scroll/source.mp4
+
+      - name: Commit asset to main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add aura-eclipse-scroll/source.mp4
+          if git diff --cached --quiet; then
+            echo 'asset already present'
+            exit 0
+          fi
+          git commit -m 'assets: self-host AURA source video [skip ci]'
+          git push origin HEAD:main
