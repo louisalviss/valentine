@@ -27,27 +27,30 @@ jobs:
           from pathlib import Path
           data=json.loads(Path('web-motion-library/library.json').read_text())
           assert data['version']
-          assert data['patterns']
-          ids=set()
+          assert len(data['patterns']) >= 10
+          ids=set(); indexes=set()
           for p in data['patterns']:
-              for key in ['id','index','title','family','live','description','primitives']:
+              for key in ['id','index','title','family','live','description','primitives','status']:
                   assert p.get(key), (p.get('id'), key)
               assert p['id'] not in ids, p['id']
-              ids.add(p['id'])
+              assert p['index'] not in indexes, p['index']
+              ids.add(p['id']); indexes.add(p['index'])
               assert len(p['primitives']) >= 1
+              assert p.get('assetPolicy')
+              assert isinstance(p.get('clientReady'), bool)
           print('LIBRARY_SCHEMA_OK', len(data['patterns']))
           PY
 
       - name: Start static server
         run: |
           python3 -m http.server 4173 --directory . >/tmp/wml-server.log 2>&1 &
-          echo $! > /tmp/wml-server.pid
           for i in $(seq 1 20); do
             curl -fsS http://127.0.0.1:4173/web-motion-library/ >/tmp/wml.html && break
             sleep 1
           done
-          grep -q 'data-build="motion-library-v0-1"' /tmp/wml.html
+          grep -q 'data-build="motion-library-v1"' /tmp/wml.html
           curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'aura-scroll-product-story'
+          curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'living-atlas-explorer'
           echo 'LIBRARY_ROUTE_OK'
 
       - name: Capture responsive QA
@@ -61,7 +64,6 @@ jobs:
           test -s qa/mobile-390x844.png
           test -s qa/tablet-768x1024.png
           test -s qa/desktop-1440x900.png
-          ls -lh qa
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v4

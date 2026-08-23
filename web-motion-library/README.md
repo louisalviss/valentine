@@ -1,56 +1,46 @@
 # Web Motion Library
 
-Canonical live index for reusable motion / interaction patterns in this repository.
+Canonical catalog for reusable motion and interaction patterns in this repository.
 
-Live route:
+Live:
 `/web-motion-library/`
 
-Canonical data:
+Data:
 `web-motion-library/library.json`
 
-## What belongs here
+## Curation
+
+The active catalog is intentionally selective. Git history is the archive.
 
 Promote a pattern only when:
-- it already exists in a working page or approved reference rebuild;
-- the interaction can be named and explained as a small reusable primitive;
-- mobile / tablet / desktop behavior is known;
-- core content remains understandable without the interaction;
-- unstable third-party media is not required at runtime.
+- it has a strong working demo;
+- the interaction grammar is distinct and nameable;
+- it can plausibly survive another product/client context;
+- mobile/tablet/desktop behavior is understood;
+- asset and dependency provenance is known enough to decide whether it is client-ready.
 
-Do not treat this as a generic template dump. A full page can contain several reusable primitives; only promote the interaction grammar that can survive another client context.
+Remove from the active working tree when:
+- it is a duplicate;
+- a clearly stronger version supersedes it;
+- it exists only for temporary repair/QA;
+- the demo is mostly a video/image playback rather than reusable web interaction;
+- the visual quality is below the current bar.
 
-## Entry schema
+## Status
 
-Each `library.json` pattern should include:
-- `id`, `index`, `title`;
-- `family` and `tags` for filtering;
-- `live` and `source`;
-- one-sentence `description`;
-- `bestFor`, `stack`;
-- named `primitives` with one clear purpose each;
-- responsive notes;
-- acceptance checks.
+`production`: strong current demo and interaction grammar.
 
-## Workflow
+`candidate`: strong enough to keep in the catalog, but needs asset/dependency review or another QA pass before client reuse.
 
-`reference -> rebuild -> QA -> extract primitives -> approve -> add to library.json -> reuse`
+`clientReady: true`: safe starting point for client work after normal brand/content adaptation.
 
-When reusing a pattern for client work:
-1. Preserve the interaction grammar, not the original brand surface.
-2. Replace copy, product media, palette and supporting content.
-3. Re-compose for the client's product rather than merely recoloring the demo.
-4. Re-run responsive QA.
-5. If a new primitive survives at least two page contexts, promote it into the reusable primitive layer.
+## Related surfaces
 
-## Seed pattern
+- `/flow-ab/` — design-direction lab. Choose the medium before choosing motion.
+- `/visual-primitives/` — extracted code primitives.
+- `/motion-skill-lab/` — choreography experiments.
+- `/wow-engine-lab/` — larger motion-engine experiments.
 
-`001 / Scroll Product Story`
+## Reuse rule
 
-Production implementation:
-`../aura-eclipse-scroll/`
-
-Current reusable concepts:
-- `ScrollProduct`
-- `SceneWipe`
-- `ProductMaskText`
-- `FeatureHotspot`
+Preserve the interaction grammar, not the original brand surface. Change typography, palette, product media, content hierarchy, copy and responsive composition for the client. Do not turn the catalog into a collection of recolored templates.

@@ -1,22 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-build="valentine-hub-v1">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11110f">
+<title>Valentine — Web Experience Lab</title>
+<meta name="description" content="Curated web motion, interaction and design-direction systems for personal and client builds.">
+<style>
+:root{--paper:#f3efe7;--ink:#11110f;--muted:#6c685f;--line:#d8d0c3;--acid:#c9ff48;--dark:#161613;--pad:clamp(18px,4vw,56px)}
+*{box-sizing:border-box}html{background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.shell{width:min(1440px,calc(100% - 2*var(--pad)));margin:auto}
+.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.brand{font-weight:900;letter-spacing:-.04em;font-size:18px;text-transform:none}.top span{color:var(--muted)}
+.hero{padding:clamp(70px,10vw,150px) 0 88px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:end;border-bottom:1px solid var(--line)}
+.kicker{font:700 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(66px,10.5vw,168px);line-height:.78;letter-spacing:-.085em;margin:22px 0 0;max-width:8ch}h1 em{font-family:Georgia,serif;font-weight:400;color:#665f54}
+.hero p{max-width:520px;font-size:clamp(17px,1.6vw,23px);line-height:1.45;margin:0}.hero p b{background:var(--acid);padding:0 .18em}
+.primary{display:inline-flex;margin-top:25px;background:var(--ink);color:#fff;padding:14px 17px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.section{padding:74px 0 92px;border-bottom:1px solid var(--line)}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.head h2{margin:7px 0 0;font-size:clamp(36px,5vw,72px);letter-spacing:-.06em}.head p{color:var(--muted);max-width:460px;line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}.card{grid-column:span 4;min-height:260px;border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#faf7f0;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#aaa293}.card.wide{grid-column:span 6}.card.dark{background:var(--dark);color:#f5f2ea;border-color:var(--dark)}.card.acid{background:var(--acid);border-color:#9dbd3c}.n{font:700 9px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}.dark .n{color:#9b9b91}.card h3{font-size:clamp(28px,3vw,48px);letter-spacing:-.055em;line-height:.95;margin:0 0 12px}.card p{margin:0;color:var(--muted);line-height:1.5;font-size:13px}.dark p{color:#a7a79e}.card .go{margin-top:20px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.list{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.row{display:flex;justify-content:space-between;gap:18px;padding:17px 0;border-bottom:1px solid var(--line)}.row:nth-child(odd){padding-right:28px}.row:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}.row b{font-size:14px}.row span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+footer{padding:30px 0 55px;display:flex;justify-content:space-between;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card,.card.wide{grid-column:auto}.list{grid-template-columns:1fr}.row:nth-child(n){padding-left:0;padding-right:0;border-left:0}.head{display:block}.head p{margin-top:15px}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Will you be my Valentine?</h1>
-        <div class="buttons">
-            <button class="yes-button" onclick="handleYesClick()">Yes</button>
-            <button class="no-button" onclick="handleNoClick()">No</button>
-        </div>
-        <div class="gif_container">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+<header class="shell top"><a class="brand" href="./">VALENTINE / LAB</a><span>Curated web experience systems</span></header>
+<main>
+<section class="shell hero">
+<div><div class="kicker">PERSONAL + CLIENT WORK / CURATED</div><h1>Web ideas worth <em>reusing.</em></h1></div>
+<div><p>This repository is now a curated lab for motion, interaction and design systems. <b>Weak, duplicate and temporary builds are not part of the active surface.</b></p><a class="primary" href="./web-motion-library/">Open Motion Library →</a></div>
+</section>
+<section class="shell section">
+<div class="head"><div><div class="kicker">CORE SYSTEMS</div><h2>Start here.</h2></div><p>Patterns answer “how should it move?”. Directions answer “what medium should this client become?”. Labs are where new reusable primitives are tested.</p></div>
+<div class="grid">
+<a class="card wide dark" href="./web-motion-library/"><div class="n">01 / CANONICAL LIBRARY</div><div><h3>Web Motion Library</h3><p>14 curated interaction patterns with live demos, primitives and reuse briefs.</p><div class="go">Browse patterns ↗</div></div></a>
+<a class="card wide acid" href="./flow-ab/"><div class="n">02 / DESIGN DIRECTION</div><div><h3>A–H Direction Lab</h3><p>Eight genuinely different media: SaaS, brutalist journal, 3D archive, notebook, desktop OS, sticker lab, Swiss spec and spatial canvas.</p><div class="go">Compare directions ↗</div></div></a>
+<a class="card" href="./motion-skill-lab/"><div class="n">03 / MOTION LAB</div><div><h3>Motion Skill Lab</h3><p>Trajectory, formation, momentum, settle and touch physics.</p><div class="go">Open lab ↗</div></div></a>
+<a class="card" href="./visual-system-demo/"><div class="n">04 / PRIMITIVES</div><div><h3>Visual System Demo</h3><p>Reference implementation for the reusable procedural visual layer.</p><div class="go">Inspect system ↗</div></div></a>
+<a class="card" href="./wow-engine-lab/"><div class="n">05 / ENGINE LAB</div><div><h3>WOW Engine</h3><p>Long-form motion experiments used to decide what deserves extraction.</p><div class="go">Open engine ↗</div></div></a>
+</div>
+</section>
+<section class="shell section">
+<div class="head"><div><div class="kicker">FEATURED / CLIENT-USEFUL</div><h2>Strong current builds.</h2></div><p>These are not “templates”. Each demonstrates a reusable visual or interaction grammar that can be re-composed for another brand.</p></div>
+<div class="grid">
+<a class="card" href="./aura-eclipse-scroll/"><div class="n">PRODUCT / SCROLL</div><div><h3>AURA</h3><p>Continuous product object, editorial text layering and feature hotspots.</p></div></a>
+<a class="card" href="./mechanical-iris/"><div class="n">SCROLL / CONTROL</div><div><h3>IRIS</h3><p>Scroll acts like a physical input, then hands off to touch inertia.</p></div></a>
+<a class="card" href="./castle-assembly/"><div class="n">3D / ANATOMY</div><div><h3>Castle Anatomy</h3><p>Functional exploded-view storytelling around one persistent object.</p></div></a>
+<a class="card" href="./aurel-build/"><div class="n">SVG / BUILD</div><div><h3>AUREL</h3><p>Architecture assembles layer by layer in a pinned SVG narrative.</p></div></a>
+<a class="card" href="./mira-ai-motion/"><div class="n">AI / SAAS</div><div><h3>Mira</h3><p>Visible input → processing core → structured output motion.</p></div></a>
+<a class="card" href="./living-atlas-v3/"><div class="n">EXPLORER / CANVAS</div><div><h3>Living Atlas</h3><p>Hotspots, tool rail, collection browser and contextual inspector.</p></div></a>
+</div>
+</section>
+<section class="shell section">
+<div class="head"><div><div class="kicker">CURATION POLICY</div><h2>Less, but better.</h2></div><p>Git history is the archive. The working tree should contain current winners, reusable labs and the infrastructure needed to publish them.</p></div>
+<div class="list">
+<div class="row"><b>Keep</b><span>Distinct grammar + usable demo</span></div>
+<div class="row"><b>Promote</b><span>Works across another client context</span></div>
+<div class="row"><b>Candidate</b><span>Strong idea, needs asset/dependency review</span></div>
+<div class="row"><b>Delete</b><span>Duplicate / superseded / temporary / weak</span></div>
+</div>
+</section>
+</main>
+<footer class="shell"><span>VALENTINE / WEB EXPERIENCE LAB</span><a href="https://github.com/louisalviss/valentine">Source ↗</a></footer>
+</body></html>

@@ -1,3 +1,0 @@
-Force clean GitHub Pages redeploy for inspiration-flow-demo after concurrency fix.
-Target: main root static site.
-2026-08-22

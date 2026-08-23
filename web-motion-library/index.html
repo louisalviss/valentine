@@ -1,132 +1,55 @@
 <!doctype html>
-<html lang="en" data-build="motion-library-v0-1">
+<html lang="en" data-build="motion-library-v1">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#f1eee7" />
   <title>Web Motion Library</title>
-  <meta name="description" content="A private-ready library of reusable motion and interaction patterns for premium web builds." />
-  <link rel="stylesheet" href="./styles.css?v=0.1" />
+  <meta name="description" content="Curated reusable motion and interaction systems for personal and client web builds." />
+  <link rel="stylesheet" href="./styles.css?v=1.0" />
 </head>
 <body>
   <header class="topbar">
     <a class="wordmark" href="./" aria-label="Web Motion Library home">WML</a>
-    <div class="topbar-meta">Reusable web interaction systems</div>
+    <div class="topbar-meta">Curated interaction systems / client-ready patterns</div>
     <button class="text-button" id="openAbout" type="button">How it works</button>
   </header>
-
   <main>
     <section class="hero" aria-labelledby="pageTitle">
-      <div class="hero-index">LIBRARY / 001</div>
+      <div class="hero-index">LIBRARY / 014</div>
       <h1 id="pageTitle">Web Motion<br><em>Library.</em></h1>
       <div class="hero-side">
-        <p>Approved interaction patterns, live demos and implementation notes — designed to be reused across personal projects and client builds.</p>
+        <p>Strong working demos only. Duplicate, superseded and temporary builds stay in git history instead of polluting the active catalog.</p>
         <div class="stats" aria-label="Library statistics">
-          <div><strong id="patternCount">01</strong><span>patterns</span></div>
-          <div><strong>01</strong><span>live builds</span></div>
-          <div><strong id="primitiveCount">04</strong><span>primitives</span></div>
+          <div><strong id="patternCount">14</strong><span>patterns</span></div>
+          <div><strong>12</strong><span>production</span></div>
+          <div><strong id="primitiveCount">30</strong><span>primitives</span></div>
         </div>
       </div>
     </section>
-
     <section class="toolbar" aria-label="Pattern filters">
       <div class="filters" id="filters">
         <button class="filter active" type="button" data-filter="all">All</button>
         <button class="filter" type="button" data-filter="product">Product</button>
         <button class="filter" type="button" data-filter="scroll">Scroll</button>
-        <button class="filter" type="button" data-filter="typography">Typography</button>
         <button class="filter" type="button" data-filter="interaction">Interaction</button>
+        <button class="filter" type="button" data-filter="3d">3D</button>
+        <button class="filter" type="button" data-filter="saas">SaaS</button>
+        <button class="filter" type="button" data-filter="editorial">Editorial</button>
       </div>
-      <label class="search">
-        <span>Search</span>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="pattern, primitive, use case…" />
-      </label>
+      <label class="search"><span>Search</span><input id="searchInput" type="search" autocomplete="off" placeholder="pattern, primitive, use case…" /></label>
     </section>
-
-    <section class="catalog" aria-labelledby="catalogTitle">
-      <div class="section-heading">
-        <h2 id="catalogTitle">Production patterns</h2>
-        <span id="resultCount">01 result</span>
-      </div>
-      <div class="grid" id="patternGrid"></div>
-    </section>
-
+    <section class="catalog" aria-labelledby="catalogTitle"><div class="section-heading"><h2 id="catalogTitle">Curated patterns</h2><span id="resultCount">14 results</span></div><div class="grid" id="patternGrid"></div></section>
     <section class="intake" aria-labelledby="intakeTitle">
-      <div>
-        <span class="micro">LIBRARY LOOP</span>
-        <h2 id="intakeTitle">See something good.<br>Turn it into a reusable system.</h2>
-      </div>
-      <div class="intake-flow" aria-label="Library workflow">
-        <span>Reference</span><i>→</i><span>Rebuild</span><i>→</i><span>QA</span><i>→</i><span>Primitive</span><i>→</i><span>Client build</span>
-      </div>
-      <p>New entries are promoted only after the visual survives responsive QA and the interaction can be described as a small reusable primitive.</p>
+      <div><span class="micro">CURATION LOOP</span><h2 id="intakeTitle">Reference → rebuild → prove → reuse.</h2></div>
+      <div class="intake-flow" aria-label="Library workflow"><span>Reference</span><i>→</i><span>Rebuild</span><i>→</i><span>Responsive QA</span><i>→</i><span>Primitive</span><i>→</i><span>Client build</span></div>
+      <p>A pattern is promoted only when its interaction grammar is distinct, the demo is strong, and the idea can survive a different brand or product context.</p>
     </section>
   </main>
-
-  <dialog class="pattern-dialog" id="patternDialog">
-    <button class="dialog-close" type="button" data-close-dialog aria-label="Close pattern">×</button>
-    <div class="dialog-layout">
-      <div class="dialog-preview">
-        <div class="preview-bar"><span id="detailIndex">001</span><span>LIVE / INTERACTIVE</span></div>
-        <iframe id="detailFrame" title="Interactive pattern preview" loading="lazy"></iframe>
-      </div>
-      <aside class="dialog-info">
-        <div class="micro" id="detailFamily">PRODUCT / SCROLL</div>
-        <h2 id="detailTitle">Scroll Product Story</h2>
-        <p class="detail-description" id="detailDescription"></p>
-        <div class="detail-block">
-          <h3>Primitives</h3>
-          <div class="primitive-list" id="primitiveList"></div>
-        </div>
-        <div class="detail-block split-block">
-          <div><h3>Best for</h3><p id="bestFor"></p></div>
-          <div><h3>Stack</h3><p id="stack"></p></div>
-        </div>
-        <div class="dialog-actions">
-          <button class="primary-action" id="usePattern" type="button">Use pattern</button>
-          <a class="secondary-action" id="openLive" target="_blank" rel="noopener">Open live ↗</a>
-          <a class="secondary-action" id="openSource" target="_blank" rel="noopener">Source ↗</a>
-        </div>
-      </aside>
-    </div>
-  </dialog>
-
-  <dialog class="use-dialog" id="useDialog">
-    <button class="dialog-close" type="button" data-close-use aria-label="Close builder">×</button>
-    <div class="use-head">
-      <span class="micro">BUILD FROM PATTERN</span>
-      <h2>Turn the pattern into a client brief.</h2>
-      <p>This v0 creates a structured build brief. The next layer can use the same object to generate a new site automatically.</p>
-    </div>
-    <form id="useForm" class="use-form">
-      <label><span>Brand</span><input name="brand" required placeholder="e.g. Aster" /></label>
-      <label><span>Product / offer</span><input name="product" required placeholder="e.g. premium travel speaker" /></label>
-      <label><span>Industry</span><input name="industry" placeholder="hardware, fashion, SaaS…" /></label>
-      <label><span>Direction</span><select name="direction"><option>Editorial / restrained</option><option>Technical / high-contrast</option><option>Organic / tactile</option></select></label>
-      <label class="wide"><span>What should change?</span><textarea name="changes" rows="4" placeholder="Brand palette, copy, product asset, features, CTA…"></textarea></label>
-      <button class="primary-action wide" type="submit">Generate build brief</button>
-    </form>
-    <div class="brief-output" id="briefOutput" hidden>
-      <div class="brief-head"><span>READY TO REUSE</span><button type="button" id="copyBrief">Copy brief</button></div>
-      <pre id="briefText"></pre>
-    </div>
-  </dialog>
-
-  <dialog class="about-dialog" id="aboutDialog">
-    <button class="dialog-close" type="button" data-close-about aria-label="Close information">×</button>
-    <span class="micro">SYSTEM / V0</span>
-    <h2>Not a template folder.</h2>
-    <p>The library stores reusable interaction grammar: motion logic, composition, responsive behavior and production demos. A complete site can contain several primitives; only the reusable parts are promoted.</p>
-    <ol>
-      <li><b>Collect</b> a strong reference or approved build.</li>
-      <li><b>Extract</b> the interaction into named primitives.</li>
-      <li><b>QA</b> mobile, tablet and desktop.</li>
-      <li><b>Promote</b> the pattern into <code>library.json</code>.</li>
-      <li><b>Reuse</b> it as a starting system for client work.</li>
-    </ol>
-  </dialog>
-
-  <footer><span>WEB MOTION LIBRARY / V0.1</span><span>Built from approved production work.</span></footer>
-  <script src="./app.js?v=0.1"></script>
+  <dialog class="pattern-dialog" id="patternDialog"><button class="dialog-close" type="button" data-close-dialog aria-label="Close pattern">×</button><div class="dialog-layout"><div class="dialog-preview"><div class="preview-bar"><span id="detailIndex">001</span><span>LIVE / INTERACTIVE</span></div><iframe id="detailFrame" title="Interactive pattern preview" loading="lazy"></iframe></div><aside class="dialog-info"><div class="micro" id="detailFamily">PRODUCT / SCROLL</div><h2 id="detailTitle">Scroll Product Story</h2><p class="detail-description" id="detailDescription"></p><div class="detail-block"><h3>Primitives</h3><div class="primitive-list" id="primitiveList"></div></div><div class="detail-block split-block"><div><h3>Best for</h3><p id="bestFor"></p></div><div><h3>Stack</h3><p id="stack"></p></div></div><div class="dialog-actions"><button class="primary-action" id="usePattern" type="button">Use pattern</button><a class="secondary-action" id="openLive" target="_blank" rel="noopener">Open live ↗</a><a class="secondary-action" id="openSource" target="_blank" rel="noopener">Source ↗</a></div></aside></div></dialog>
+  <dialog class="use-dialog" id="useDialog"><button class="dialog-close" type="button" data-close-use aria-label="Close builder">×</button><div class="use-head"><span class="micro">BUILD FROM PATTERN</span><h2>Turn the pattern into a client brief.</h2><p>Preserve the interaction grammar. Replace the brand surface, assets, hierarchy and content for the actual client.</p></div><form id="useForm" class="use-form"><label><span>Brand</span><input name="brand" required placeholder="e.g. Aster" /></label><label><span>Product / offer</span><input name="product" required placeholder="e.g. premium travel speaker" /></label><label><span>Industry</span><input name="industry" placeholder="hardware, fashion, SaaS…" /></label><label><span>Direction</span><select name="direction"><option>Editorial / restrained</option><option>Technical / high-contrast</option><option>Organic / tactile</option></select></label><label class="wide"><span>What should change?</span><textarea name="changes" rows="4" placeholder="Brand palette, copy, product asset, features, CTA…"></textarea></label><button class="primary-action wide" type="submit">Generate build brief</button></form><div class="brief-output" id="briefOutput" hidden><div class="brief-head"><span>READY TO REUSE</span><button type="button" id="copyBrief">Copy brief</button></div><pre id="briefText"></pre></div></dialog>
+  <dialog class="about-dialog" id="aboutDialog"><button class="dialog-close" type="button" data-close-about aria-label="Close information">×</button><span class="micro">SYSTEM / V1</span><h2>Git history is the archive.</h2><p>The active library is intentionally smaller than the repository. It stores only reusable interaction grammar with a strong current implementation.</p><ol><li><b>Collect</b> a strong reference or approved build.</li><li><b>Extract</b> the interaction into named primitives.</li><li><b>QA</b> mobile, tablet and desktop.</li><li><b>Review assets/dependencies</b> before marking client-ready.</li><li><b>Delete or supersede</b> duplicate and weak implementations.</li></ol></dialog>
+  <footer><span>WEB MOTION LIBRARY / V1.0</span><a href="../">Valentine Lab ↗</a></footer>
+  <script src="./app.js?v=1.0"></script>
 </body>
 </html>

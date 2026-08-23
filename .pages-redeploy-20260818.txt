@@ -1,4 +1,0 @@
-Force GitHub Pages redeploy after Visual Primitive Demo publish.
-Commit target: main root.
-2026-08-22
-retry-after-inspiration-flow-demo-404
