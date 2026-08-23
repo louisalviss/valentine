@@ -1,0 +1,74 @@
+name: Web Motion Library QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web-motion-library/**'
+      - '.github/workflows/web-motion-library-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate library data
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('web-motion-library/library.json').read_text())
+          assert data['version']
+          assert data['patterns']
+          ids=set()
+          for p in data['patterns']:
+              for key in ['id','index','title','family','live','description','primitives']:
+                  assert p.get(key), (p.get('id'), key)
+              assert p['id'] not in ids, p['id']
+              ids.add(p['id'])
+              assert len(p['primitives']) >= 1
+          print('LIBRARY_SCHEMA_OK', len(data['patterns']))
+          PY
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 4173 --directory . >/tmp/wml-server.log 2>&1 &
+          echo $! > /tmp/wml-server.pid
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:4173/web-motion-library/ >/tmp/wml.html && break
+            sleep 1
+          done
+          grep -q 'data-build="motion-library-v0-1"' /tmp/wml.html
+          curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'aura-scroll-product-story'
+          echo 'LIBRARY_ROUTE_OK'
+
+      - name: Capture responsive QA
+        run: |
+          set -euo pipefail
+          CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          mkdir -p qa
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=390,844 --screenshot=qa/mobile-390x844.png http://127.0.0.1:4173/web-motion-library/
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=768,1024 --screenshot=qa/tablet-768x1024.png http://127.0.0.1:4173/web-motion-library/
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot=qa/desktop-1440x900.png http://127.0.0.1:4173/web-motion-library/
+          test -s qa/mobile-390x844.png
+          test -s qa/tablet-768x1024.png
+          test -s qa/desktop-1440x900.png
+          ls -lh qa
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-motion-library-qa-${{ github.run_id }}
+          path: qa/
+          retention-days: 2
+
+      - name: PASS
+        run: echo 'WEB_MOTION_LIBRARY_QA_OK'
