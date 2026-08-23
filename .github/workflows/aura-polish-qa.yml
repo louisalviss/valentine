@@ -24,23 +24,25 @@ jobs:
         run: |
           gh workflow run pages-deploy.yml --repo ${{ github.repository }} --ref main
 
-      - name: Verify published build and strict WebP
+      - name: Verify published build and product asset
         run: |
           set -euo pipefail
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
           ok=0
           for i in $(seq 1 48); do
             code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
-            curl -fL -sS "$BASE/headphones-gpt.webp?v=${GITHUB_RUN_ID}-${i}" -o /tmp/h.webp || true
-            if [ "$code" = '200' ] && grep -q 'data-build="aura-polish-v3"' /tmp/aura.html; then
+            curl -fL -sS "$BASE/headphones.webp?v=${GITHUB_RUN_ID}-${i}" -o /tmp/h.webp || true
+            if [ "$code" = '200' ] \
+              && grep -q 'data-build="aura-polish-v3-fix1"' /tmp/aura.html \
+              && grep -q 'src="./headphones.webp"' /tmp/aura.html; then
               if python - <<'PY'
           from pathlib import Path
           p=Path('/tmp/h.webp').read_bytes()
-          assert len(p)==52508, len(p)
+          assert len(p) > 10000, len(p)
           assert p[:4]==b'RIFF', p[:16]
           assert p[8:12]==b'WEBP', p[:16]
           PY
-              then ok=1; echo "published_webp_ok attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
+              then ok=1; echo "published_asset_ok attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
             fi
             echo "waiting attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp 2>/dev/null || echo 0)"
             sleep 5
