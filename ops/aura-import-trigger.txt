@@ -1,0 +1,1 @@
+trigger AURA GPT asset import
