@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Verify published build and strict GPT WebP
+      - name: Verify published editorial build and GPT WebP
         run: |
           set -euo pipefail
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
@@ -26,7 +26,9 @@ jobs:
             code=$(curl -L -sS -o /tmp/aura.html -w '%{http_code}' "$BASE?v=${GITHUB_RUN_ID}-${i}" || true)
             curl -fL -sS "$BASE/headphones-gpt.webp?v=${GITHUB_RUN_ID}-${i}" -o /tmp/h.webp || true
             if [ "$code" = '200' ] \
-              && grep -q 'data-build="aura-polish-v3-fix2"' /tmp/aura.html \
+              && grep -q 'data-build="aura-editorial-v4"' /tmp/aura.html \
+              && grep -q 'editorial-v4' /tmp/aura.html \
+              && grep -q 'detailTitleFront' /tmp/aura.html \
               && grep -q 'src="./headphones-gpt.webp"' /tmp/aura.html; then
               if python - <<'PY'
           from pathlib import Path
@@ -35,7 +37,7 @@ jobs:
           assert p[:4]==b'RIFF', p[:16]
           assert p[8:12]==b'WEBP', p[:16]
           PY
-              then ok=1; echo "LIVE_GPT_WEBP_OK attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
+              then ok=1; echo "AURA_EDITORIAL_V4_LIVE_OK attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp)"; break; fi
             fi
             echo "waiting attempt=$i http=$code bytes=$(wc -c < /tmp/h.webp 2>/dev/null || echo 0)"
             sleep 5
@@ -49,11 +51,11 @@ jobs:
           CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
           mkdir -p qa
           BASE='https://louisalviss.github.io/valentine/aura-eclipse-scroll/'
-          for f in 0 .28 .43 .62 .78 1; do
+          for f in 0 .28 .43 .55 .62 .70 .78 1; do
             name=$(echo "$f" | tr -d '.')
             "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot="qa/desktop-${name}.png" "$BASE?frame=$f&v=$GITHUB_RUN_ID"
           done
-          for f in 0 .43 .78 1; do
+          for f in 0 .43 .55 .62 .78 1; do
             name=$(echo "$f" | tr -d '.')
             "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=390,844 --screenshot="qa/mobile-${name}.png" "$BASE?frame=$f&v=$GITHUB_RUN_ID"
           done
@@ -62,9 +64,9 @@ jobs:
       - name: Upload QA screenshots
         uses: actions/upload-artifact@v4
         with:
-          name: aura-polish-qa-${{ github.run_id }}
+          name: aura-editorial-qa-${{ github.run_id }}
           path: qa/
           retention-days: 2
 
       - name: PASS
-        run: echo 'AURA_POLISH_LIVE_QA_OK'
+        run: echo 'AURA_EDITORIAL_V4_QA_OK'
