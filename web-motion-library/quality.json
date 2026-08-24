@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-24",
+  "statusValue": {"pass": 1, "review": 0.5, "fail": 0},
+  "weights": {
+    "distinctGrammar": 18,
+    "routeIntegrity": 8,
+    "responsive": 12,
+    "interaction": 10,
+    "reducedMotion": 10,
+    "assetRights": 14,
+    "dependencies": 8,
+    "performance": 10,
+    "accessibility": 10
+  },
+  "critical": ["distinctGrammar", "routeIntegrity", "responsive", "assetRights"],
+  "thresholds": {"promote": 80, "keepAsLab": 65, "review": 50, "clientReady": 90},
+  "patterns": {
+    "aura-scroll-product-story": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-hosted generated product asset; reduced-motion and deeper keyboard/a11y pass remain debt."},
+    "iris-operated-object": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-contained mechanism; direct manipulation is strong, reduced-motion/a11y still need a dedicated pass."},
+    "castle-exploded-assembly": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"review","performance":"review","accessibility":"review"},"note":"Strong reusable grammar, but runtime Three.js CDN and WebGL cost keep it out of strict client-ready status."},
+    "aurel-layer-build": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Inline SVG/self-hosted build; lightweight and portable."},
+    "mira-processing-pipeline": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-contained AI/SaaS motion metaphor; reduced-motion/a11y debt remains."},
+    "signal-continuous-world": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Procedural canvas world with no third-party media dependency."},
+    "living-atlas-explorer": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"review","accessibility":"review"},"note":"Strong explorer grammar; canvas complexity needs a dedicated lower-end performance pass before client-ready use."},
+    "last-house-cinematic-timeline": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"review","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Keep as candidate until every cinematic image/source is cleared for client reuse."},
+    "vanta-editorial-object": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-hosted SVG product object; strong lightweight editorial pattern."},
+    "sword-object-viewer": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"review","performance":"review","accessibility":"review"},"note":"Useful 3D viewer primitive; external Three.js/runtime GPU cost requires review for client deployments."},
+    "nocturne-hold-awaken": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-hosted cinematic interaction; keyboard/reduced-motion path should be hardened per client."},
+    "vokie-process-machine": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Self-contained editorial process metaphor and reusable SaaS choreography."},
+    "preflight-interactive-checker": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"review","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Product mechanic is usable inside the landing page; accessibility needs deeper form/focus QA."},
+    "kaizen-frame-sequence": {"lastVerified":"2026-08-24","gates":{"distinctGrammar":"pass","routeIntegrity":"pass","responsive":"pass","interaction":"pass","reducedMotion":"pass","assetRights":"pass","dependencies":"pass","performance":"pass","accessibility":"review"},"note":"Lightweight frame sequence with explicit reduced-motion CSS and self-hosted assets."}
+  }
+}

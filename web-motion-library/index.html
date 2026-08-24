@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-build="motion-library-v1">
+<html lang="en" data-build="motion-library-v2">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
@@ -7,49 +7,24 @@
   <title>Web Motion Library</title>
   <meta name="description" content="Curated reusable motion and interaction systems for personal and client web builds." />
   <link rel="stylesheet" href="./styles.css?v=1.0" />
+  <style>
+    .quality-badge{display:inline-flex;align-items:center;gap:3px}.quality-badge b{font-size:10px;color:var(--ink)}.quality-badge.ready{color:#285b32!important}.quality-badge.review{color:#8a5a16!important}.quality-badge.lab{color:var(--muted)!important}
+    .quality-summary{display:grid;grid-template-columns:92px 1fr;gap:10px;margin:22px 0 8px}.quality-summary>div{border-top:1px solid var(--ink);padding-top:9px}.quality-summary strong{display:block;font-size:28px;letter-spacing:-.05em}.quality-summary span{display:block;margin-top:4px;font:800 7px/1 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}#detailDecision[data-state="ready"]{color:#285b32}#detailDecision[data-state="review"]{color:#8a5a16}
+    .quality-gates{display:flex;flex-wrap:wrap;gap:6px}.gate{display:grid;gap:4px;min-width:105px;padding:8px 9px;border:1px solid var(--line);font:800 7px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.07em}.gate b{font-size:7px;color:var(--muted);font-weight:700}.gate.pass{background:#e5eee4}.gate.review{background:#f3ead5}.gate.fail{background:#f3dada}.quality-note{margin:11px 0 0;color:var(--muted);font-size:11px;line-height:1.5}
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="wordmark" href="./" aria-label="Web Motion Library home">WML</a>
-    <div class="topbar-meta">Curated interaction systems / client-ready patterns</div>
-    <button class="text-button" id="openAbout" type="button">How it works</button>
-  </header>
+  <header class="topbar"><a class="wordmark" href="./" aria-label="Web Motion Library home">WML</a><div class="topbar-meta">Curated interaction systems / quality-gated patterns</div><button class="text-button" id="openAbout" type="button">How it works</button></header>
   <main>
-    <section class="hero" aria-labelledby="pageTitle">
-      <div class="hero-index">LIBRARY / 014</div>
-      <h1 id="pageTitle">Web Motion<br><em>Library.</em></h1>
-      <div class="hero-side">
-        <p>Strong working demos only. Duplicate, superseded and temporary builds stay in git history instead of polluting the active catalog.</p>
-        <div class="stats" aria-label="Library statistics">
-          <div><strong id="patternCount">14</strong><span>patterns</span></div>
-          <div><strong>13</strong><span>production</span></div>
-          <div><strong id="primitiveCount">30</strong><span>primitives</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="toolbar" aria-label="Pattern filters">
-      <div class="filters" id="filters">
-        <button class="filter active" type="button" data-filter="all">All</button>
-        <button class="filter" type="button" data-filter="product">Product</button>
-        <button class="filter" type="button" data-filter="scroll">Scroll</button>
-        <button class="filter" type="button" data-filter="interaction">Interaction</button>
-        <button class="filter" type="button" data-filter="3d">3D</button>
-        <button class="filter" type="button" data-filter="saas">SaaS</button>
-        <button class="filter" type="button" data-filter="editorial">Editorial</button>
-      </div>
-      <label class="search"><span>Search</span><input id="searchInput" type="search" autocomplete="off" placeholder="pattern, primitive, use case…" /></label>
-    </section>
-    <section class="catalog" aria-labelledby="catalogTitle"><div class="section-heading"><h2 id="catalogTitle">Curated patterns</h2><span id="resultCount">14 results</span></div><div class="grid" id="patternGrid"></div></section>
-    <section class="intake" aria-labelledby="intakeTitle">
-      <div><span class="micro">CURATION LOOP</span><h2 id="intakeTitle">Reference → rebuild → prove → reuse.</h2></div>
-      <div class="intake-flow" aria-label="Library workflow"><span>Reference</span><i>→</i><span>Rebuild</span><i>→</i><span>Responsive QA</span><i>→</i><span>Primitive</span><i>→</i><span>Client build</span></div>
-      <p>A pattern is promoted only when its interaction grammar is distinct, the demo is strong, and the idea can survive a different brand or product context.</p>
-    </section>
+    <section class="hero" aria-labelledby="pageTitle"><div class="hero-index">LIBRARY / QUALITY GATE V1</div><h1 id="pageTitle">Web Motion<br><em>Library.</em></h1><div class="hero-side"><p>Every active pattern now carries an explicit quality score, reuse decision and client-readiness state. Git history remains the archive.</p><div class="stats" aria-label="Library statistics"><div><strong id="patternCount">14</strong><span>patterns</span></div><div><strong id="readyCount">—</strong><span>client-ready</span></div><div><strong id="primitiveCount">30</strong><span>primitives</span></div></div></div></section>
+    <section class="toolbar" aria-label="Pattern filters"><div class="filters" id="filters"><button class="filter active" type="button" data-filter="all">All</button><button class="filter" type="button" data-filter="ready">Client Ready</button><button class="filter" type="button" data-filter="product">Product</button><button class="filter" type="button" data-filter="scroll">Scroll</button><button class="filter" type="button" data-filter="interaction">Interaction</button><button class="filter" type="button" data-filter="3d">3D</button><button class="filter" type="button" data-filter="saas">SaaS</button><button class="filter" type="button" data-filter="editorial">Editorial</button></div><label class="search"><span>Search</span><input id="searchInput" type="search" autocomplete="off" placeholder="pattern, primitive, use case…" /></label></section>
+    <section class="catalog" aria-labelledby="catalogTitle"><div class="section-heading"><h2 id="catalogTitle">Quality-gated patterns</h2><span id="resultCount">14 results</span></div><div class="grid" id="patternGrid"></div></section>
+    <section class="intake" aria-labelledby="intakeTitle"><div><span class="micro">CURATION LOOP</span><h2 id="intakeTitle">Reference → rebuild → prove → reuse.</h2></div><div class="intake-flow" aria-label="Library workflow"><span>Reference</span><i>→</i><span>Rebuild</span><i>→</i><span>Quality Gate</span><i>→</i><span>Primitive</span><i>→</i><span>Client build</span></div><p>PROMOTE requires distinct grammar and a strong score. CLIENT READY is stricter: route, responsive behavior, asset rights, dependencies and performance must all pass.</p></section>
   </main>
-  <dialog class="pattern-dialog" id="patternDialog"><button class="dialog-close" type="button" data-close-dialog aria-label="Close pattern">×</button><div class="dialog-layout"><div class="dialog-preview"><div class="preview-bar"><span id="detailIndex">001</span><span>LIVE / INTERACTIVE</span></div><iframe id="detailFrame" title="Interactive pattern preview" loading="lazy"></iframe></div><aside class="dialog-info"><div class="micro" id="detailFamily">PRODUCT / SCROLL</div><h2 id="detailTitle">Scroll Product Story</h2><p class="detail-description" id="detailDescription"></p><div class="detail-block"><h3>Primitives</h3><div class="primitive-list" id="primitiveList"></div></div><div class="detail-block split-block"><div><h3>Best for</h3><p id="bestFor"></p></div><div><h3>Stack</h3><p id="stack"></p></div></div><div class="dialog-actions"><button class="primary-action" id="usePattern" type="button">Use pattern</button><a class="secondary-action" id="openLive" target="_blank" rel="noopener">Open live ↗</a><a class="secondary-action" id="openSource" target="_blank" rel="noopener">Source ↗</a></div></aside></div></dialog>
-  <dialog class="use-dialog" id="useDialog"><button class="dialog-close" type="button" data-close-use aria-label="Close builder">×</button><div class="use-head"><span class="micro">BUILD FROM PATTERN</span><h2>Turn the pattern into a client brief.</h2><p>Preserve the interaction grammar. Replace the brand surface, assets, hierarchy and content for the actual client.</p></div><form id="useForm" class="use-form"><label><span>Brand</span><input name="brand" required placeholder="e.g. Aster" /></label><label><span>Product / offer</span><input name="product" required placeholder="e.g. premium travel speaker" /></label><label><span>Industry</span><input name="industry" placeholder="hardware, fashion, SaaS…" /></label><label><span>Direction</span><select name="direction"><option>Editorial / restrained</option><option>Technical / high-contrast</option><option>Organic / tactile</option></select></label><label class="wide"><span>What should change?</span><textarea name="changes" rows="4" placeholder="Brand palette, copy, product asset, features, CTA…"></textarea></label><button class="primary-action wide" type="submit">Generate build brief</button></form><div class="brief-output" id="briefOutput" hidden><div class="brief-head"><span>READY TO REUSE</span><button type="button" id="copyBrief">Copy brief</button></div><pre id="briefText"></pre></div></dialog>
-  <dialog class="about-dialog" id="aboutDialog"><button class="dialog-close" type="button" data-close-about aria-label="Close information">×</button><span class="micro">SYSTEM / V1</span><h2>Git history is the archive.</h2><p>The active library is intentionally smaller than the repository. It stores only reusable interaction grammar with a strong current implementation.</p><ol><li><b>Collect</b> a strong reference or approved build.</li><li><b>Extract</b> the interaction into named primitives.</li><li><b>QA</b> mobile, tablet and desktop.</li><li><b>Review assets/dependencies</b> before marking client-ready.</li><li><b>Delete or supersede</b> duplicate and weak implementations.</li></ol></dialog>
-  <footer><span>WEB MOTION LIBRARY / V1.1</span><a href="../">Valentine Lab ↗</a></footer>
-  <script src="./app.js?v=1.0"></script>
+  <dialog class="pattern-dialog" id="patternDialog"><button class="dialog-close" type="button" data-close-dialog aria-label="Close pattern">×</button><div class="dialog-layout"><div class="dialog-preview"><div class="preview-bar"><span id="detailIndex">001</span><span>LIVE / INTERACTIVE</span></div><iframe id="detailFrame" title="Interactive pattern preview" loading="lazy"></iframe></div><aside class="dialog-info"><div class="micro" id="detailFamily">PRODUCT / SCROLL</div><h2 id="detailTitle">Scroll Product Story</h2><p class="detail-description" id="detailDescription"></p><div class="quality-summary"><div><strong id="detailScore">—</strong><span>quality / 100</span></div><div><strong id="detailDecision">—</strong><span>reuse decision</span></div></div><div class="detail-block"><h3>Quality gate</h3><div class="quality-gates" id="qualityGates"></div><p class="quality-note" id="qualityNote"></p></div><div class="detail-block"><h3>Primitives</h3><div class="primitive-list" id="primitiveList"></div></div><div class="detail-block split-block"><div><h3>Best for</h3><p id="bestFor"></p></div><div><h3>Stack</h3><p id="stack"></p></div></div><div class="dialog-actions"><button class="primary-action" id="usePattern" type="button">Use pattern</button><a class="secondary-action" id="openLive" target="_blank" rel="noopener">Open live ↗</a><a class="secondary-action" id="openSource" target="_blank" rel="noopener">Source ↗</a></div></aside></div></dialog>
+  <dialog class="use-dialog" id="useDialog"><button class="dialog-close" type="button" data-close-use aria-label="Close builder">×</button><div class="use-head"><span class="micro">BUILD FROM PATTERN</span><h2>Turn the pattern into a client brief.</h2><p>The brief now carries quality debt forward, so a client build cannot silently inherit unresolved asset, performance or accessibility issues.</p></div><form id="useForm" class="use-form"><label><span>Brand</span><input name="brand" required placeholder="e.g. Aster" /></label><label><span>Product / offer</span><input name="product" required placeholder="e.g. premium travel speaker" /></label><label><span>Industry</span><input name="industry" placeholder="hardware, fashion, SaaS…" /></label><label><span>Direction</span><select name="direction"><option>Editorial / restrained</option><option>Technical / high-contrast</option><option>Organic / tactile</option></select></label><label class="wide"><span>What should change?</span><textarea name="changes" rows="4" placeholder="Brand palette, copy, product asset, features, CTA…"></textarea></label><button class="primary-action wide" type="submit">Generate build brief</button></form><div class="brief-output" id="briefOutput" hidden><div class="brief-head"><span>READY TO REUSE</span><button type="button" id="copyBrief">Copy brief</button></div><pre id="briefText"></pre></div></dialog>
+  <dialog class="about-dialog" id="aboutDialog"><button class="dialog-close" type="button" data-close-about aria-label="Close information">×</button><span class="micro">SYSTEM / V2</span><h2>Quality is evidence, not a vibe.</h2><p>The score is a weighted summary of nine gates. CI checks source-verifiable claims and blocks overclaims such as “reduced motion: pass” without an explicit reduced-motion path or “dependencies: pass” while runtime JavaScript is loaded from an external CDN.</p><ol><li><b>PROMOTE</b> score ≥80 and every critical gate passes.</li><li><b>CLIENT READY</b> score ≥90 plus route, responsive, asset rights, dependencies and performance all pass.</li><li><b>KEEP AS LAB</b> score 65–79 with useful grammar but unresolved debt.</li><li><b>REVIEW</b> critical evidence is uncertain or score 50–64.</li><li><b>DELETE / SUPERSEDE</b> weak grammar, low score, duplicate or replaced implementation.</li></ol></dialog>
+  <footer><span>WEB MOTION LIBRARY / V2.0</span><a href="../">Valentine Lab ↗</a></footer>
+  <script src="./app.js?v=2.0"></script>
 </body>
 </html>

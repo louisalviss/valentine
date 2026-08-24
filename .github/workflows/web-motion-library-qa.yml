@@ -5,6 +5,20 @@ on:
     branches: [main]
     paths:
       - 'web-motion-library/**'
+      - 'aura-eclipse-scroll/**'
+      - 'mechanical-iris/**'
+      - 'castle-assembly/**'
+      - 'aurel-build/**'
+      - 'mira-ai-motion/**'
+      - 'signal-story/**'
+      - 'living-atlas-v3/**'
+      - 'the-last-house-cinematic-v3/**'
+      - 'vanta-editorial/**'
+      - 'sword-3d/**'
+      - 'nocturne-v3/**'
+      - 'inspiration-flow-demo/**'
+      - 'preflight/**'
+      - 'robot/**'
       - '.github/workflows/web-motion-library-qa.yml'
   workflow_dispatch:
 
@@ -19,27 +33,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Validate library data
+      - name: Validate library schema
         run: |
           set -euo pipefail
           python3 - <<'PY'
           import json
           from pathlib import Path
-          data=json.loads(Path('web-motion-library/library.json').read_text())
-          assert data['version']
-          assert len(data['patterns']) >= 10
+          lib=json.loads(Path('web-motion-library/library.json').read_text())
+          quality=json.loads(Path('web-motion-library/quality.json').read_text())
+          assert len(lib['patterns']) >= 10
+          assert set(p['id'] for p in lib['patterns']) == set(quality['patterns'])
+          assert sum(quality['weights'].values()) == 100
           ids=set(); indexes=set()
-          for p in data['patterns']:
+          for p in lib['patterns']:
               for key in ['id','index','title','family','live','description','primitives','status']:
                   assert p.get(key), (p.get('id'), key)
-              assert p['id'] not in ids, p['id']
-              assert p['index'] not in indexes, p['index']
+              assert p['id'] not in ids and p['index'] not in indexes
               ids.add(p['id']); indexes.add(p['index'])
               assert len(p['primitives']) >= 1
-              assert p.get('assetPolicy')
-              assert isinstance(p.get('clientReady'), bool)
-          print('LIBRARY_SCHEMA_OK', len(data['patterns']))
+          print('LIBRARY_SCHEMA_OK', len(lib['patterns']))
           PY
+
+      - name: Run quality gate
+        run: node web-motion-library/quality-gate.mjs
 
       - name: Start static server
         run: |
@@ -48,9 +64,9 @@ jobs:
             curl -fsS http://127.0.0.1:4173/web-motion-library/ >/tmp/wml.html && break
             sleep 1
           done
-          grep -q 'data-build="motion-library-v1"' /tmp/wml.html
-          curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'aura-scroll-product-story'
-          curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'living-atlas-explorer'
+          grep -q 'data-build="motion-library-v2"' /tmp/wml.html
+          curl -fsS http://127.0.0.1:4173/web-motion-library/quality.json | grep -q 'distinctGrammar'
+          curl -fsS http://127.0.0.1:4173/web-motion-library/library.json | grep -q 'kaizen-frame-sequence'
           echo 'LIBRARY_ROUTE_OK'
 
       - name: Capture responsive QA
