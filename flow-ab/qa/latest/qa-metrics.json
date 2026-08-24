@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T00:22:00.147Z",
+  "generated_at": "2026-08-24T00:23:54.707Z",
   "base": "http://127.0.0.1:4173/flow-ab",
   "variants": {
     "A-mobile": {
@@ -46,9 +46,9 @@
       "pageErrors": [],
       "metrics": {
         "title": "SiteOps AI — B / Brutalist Architecture Journal",
-        "scrollWidth": 408,
+        "scrollWidth": 390,
         "clientWidth": 390,
-        "horizontalOverflow": true,
+        "horizontalOverflow": false,
         "h1": {
           "left": 9,
           "right": 351,
