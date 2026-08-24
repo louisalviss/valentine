@@ -1,11 +1,4 @@
-started_at=2026-08-24T00:16:11Z
-source_sha=291df6c40218b8833dc4f80bc76f4bb7a9f750b9
+started_at=2026-08-24T00:21:04Z
+source_sha=fbc5dc4c92aba77c72fcab82ccfa14e72dad7ed2
 actor=louisalviss
-event=push
-finished_at=2026-08-24T00:17:15Z
-node=success
-playwright=success
-server=success
-runtime=failure
-pillow=success
-silhouette=success
+event=pull_request
