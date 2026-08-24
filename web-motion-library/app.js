@@ -1,6 +1,6 @@
 (()=>{
   const FALLBACK_LIBRARY=[{
-    id:'aura-scroll-product-story',index:'001',title:'Scroll Product Story',family:['product','scroll','typography','interaction'],status:'production',live:'../aura-eclipse-scroll/',preview:'../aura-eclipse-scroll/?frame=.55&library=1',source:'https://github.com/louisalviss/valentine/tree/main/aura-eclipse-scroll',description:'A pinned product narrative with one continuous hero object, scene wipe, editorial type layering and interactive feature hotspots.',bestFor:['Premium hardware','Fashion accessories','Automotive detail','High-end DTC'],stack:['HTML','CSS','JavaScript'],tags:['Pinned scroll','Layered type','Feature hotspots'],primitives:[{name:'ScrollProduct',description:'Moves one focal product through several narrative compositions while preserving object continuity.'},{name:'SceneWipe',description:'Transitions between dark hero and light editorial surface using one scroll-scrubbed sheet.'},{name:'ProductMaskText',description:'Splits typography into foreground/background layers so the product can pass through type intentionally.'},{name:'FeatureHotspot',description:'Turns floating feature pills into compact detail disclosures without replacing the composition.'}]
+    id:'aura-scroll-product-story',index:'001',title:'Scroll Product Story',family:['product','scroll','typography','interaction'],status:'production',clientReady:true,live:'../aura-eclipse-scroll/',preview:'../aura-eclipse-scroll/?frame=.55&library=1',source:'https://github.com/louisalviss/valentine/tree/main/aura-eclipse-scroll',description:'A pinned product narrative with one continuous hero object, scene wipe, editorial type layering and interactive feature hotspots.',bestFor:['Premium hardware','Fashion accessories','Automotive detail','High-end DTC'],stack:['HTML','CSS','JavaScript'],tags:['Pinned scroll','Layered type','Feature hotspots'],primitives:[{name:'ScrollProduct',description:'Moves one focal product through several narrative compositions while preserving object continuity.'},{name:'SceneWipe',description:'Transitions between dark hero and light editorial surface using one scroll-scrubbed sheet.'},{name:'ProductMaskText',description:'Splits typography into foreground/background layers so the product can pass through type intentionally.'},{name:'FeatureHotspot',description:'Turns floating feature pills into compact detail disclosures without replacing the composition.'}]
   }];
 
   const grid=document.getElementById('patternGrid');
@@ -30,6 +30,7 @@
   let library=FALLBACK_LIBRARY;
   let activeFilter='all';
   let activePattern=library[0];
+  let previewObserver=null;
 
   function esc(value){return String(value??'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));}
   function normalize(value){return String(value||'').toLowerCase().trim();}
@@ -54,10 +55,12 @@
 
   function card(pattern){
     const tags=(pattern.tags||[]).slice(0,4).map(tag=>`<span>${esc(tag)}</span>`).join('');
+    const readiness=pattern.clientReady?'client ready':'review';
+    const preview=pattern.preview||pattern.live;
     return `<article class="pattern-card" tabindex="0" role="button" aria-label="Open ${esc(pattern.title)}" data-pattern="${esc(pattern.id)}">
-      <div class="card-meta"><span>${esc(pattern.index)} / ${esc((pattern.family||[])[0]||'pattern')}</span><span>${esc(pattern.status||'production')}</span></div>
+      <div class="card-meta"><span>${esc(pattern.index)} / ${esc((pattern.family||[])[0]||'pattern')}</span><span>${esc(pattern.status||'production')} · ${readiness}</span></div>
       <div class="preview-shell">
-        <iframe src="${esc(pattern.preview||pattern.live)}" title="${esc(pattern.title)} preview" loading="lazy" tabindex="-1"></iframe>
+        <iframe src="about:blank" data-src="${esc(preview)}" title="${esc(pattern.title)} preview" loading="lazy" tabindex="-1"></iframe>
         <div class="preview-shade"></div><div class="preview-badge">Open pattern ↗</div>
       </div>
       <div class="card-body">
@@ -67,10 +70,32 @@
     </article>`;
   }
 
+  function armPreviews(){
+    if(previewObserver){previewObserver.disconnect();previewObserver=null;}
+    const frames=[...grid.querySelectorAll('iframe[data-src]')];
+    if(!frames.length)return;
+    const loadFrame=frame=>{
+      const src=frame.dataset.src;
+      if(!src)return;
+      frame.src=src;
+      frame.removeAttribute('data-src');
+    };
+    if(!('IntersectionObserver' in window)){frames.forEach(loadFrame);return;}
+    previewObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        loadFrame(entry.target);
+        previewObserver.unobserve(entry.target);
+      });
+    },{rootMargin:'320px 0px'});
+    frames.forEach(frame=>previewObserver.observe(frame));
+  }
+
   function render(){
     const items=filtered();
     resultCount.textContent=`${String(items.length).padStart(2,'0')} ${items.length===1?'result':'results'}`;
-    grid.innerHTML=items.length?items.map(card).join(''):`<div class="empty">No matching production pattern yet.</div>`;
+    grid.innerHTML=items.length?items.map(card).join(''):`<div class="empty">No matching curated pattern yet.</div>`;
+    armPreviews();
   }
 
   function showPattern(pattern){
@@ -132,7 +157,7 @@
     event.preventDefault();
     const data=Object.fromEntries(new FormData(useForm).entries());
     const p=activePattern;
-    const brief=`BUILD FROM WEB MOTION LIBRARY\n\nPattern: ${p.title} [${p.index}]\nLive reference: ${new URL(p.live,location.href).href}\n\nClient / brand: ${data.brand}\nProduct / offer: ${data.product}\nIndustry: ${data.industry||'Not specified'}\nArt direction: ${data.direction}\n\nPreserve these interaction primitives:\n${(p.primitives||[]).map(x=>`- ${x.name}: ${x.description}`).join('\n')}\n\nChange for this build:\n${data.changes||'- Replace brand, copy, product asset, palette and feature content while preserving the interaction grammar.'}\n\nAcceptance:\n- Keep one dominant focal idea per viewport.\n- Preserve readable hierarchy at 390x844, 768x1024 and 1440x900.\n- Recreate assets rather than hotlinking unstable third-party media.\n- Reduced motion must remain usable.\n- Publish the demo in its own subfolder in louisalviss/valentine.\n- Do not copy the reference surface literally when a better brand-specific composition is possible.`;
+    const brief=`BUILD FROM WEB MOTION LIBRARY\n\nPattern: ${p.title} [${p.index}]\nLive reference: ${new URL(p.live,location.href).href}\nClient readiness: ${p.clientReady?'READY':'REVIEW REQUIRED'}\nAsset policy: ${p.assetPolicy||'unspecified'}\n\nClient / brand: ${data.brand}\nProduct / offer: ${data.product}\nIndustry: ${data.industry||'Not specified'}\nArt direction: ${data.direction}\n\nPreserve these interaction primitives:\n${(p.primitives||[]).map(x=>`- ${x.name}: ${x.description}`).join('\n')}\n\nChange for this build:\n${data.changes||'- Replace brand, copy, product asset, palette and feature content while preserving the interaction grammar.'}\n\nAcceptance:\n- Keep one dominant focal idea per viewport.\n- Preserve readable hierarchy at 390x844, 768x1024 and 1440x900.\n- Recreate assets rather than hotlinking unstable third-party media.\n- Reduced motion must remain usable.\n- Publish the demo in its own subfolder in louisalviss/valentine.\n- Do not copy the reference surface literally when a better brand-specific composition is possible.`;
     briefText.textContent=brief;
     briefOutput.hidden=false;
     briefOutput.scrollIntoView({behavior:'smooth',block:'nearest'});
