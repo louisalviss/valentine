@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T00:12:00.483Z",
+  "generated_at": "2026-08-24T00:15:03.418Z",
   "base": "http://127.0.0.1:4173/flow-ab",
   "variants": {
     "A-mobile": {
@@ -52,8 +52,8 @@
         "h1": {
           "left": 9,
           "right": 351,
-          "top": 147,
-          "bottom": 300.140625,
+          "top": 163,
+          "bottom": 316.140625,
           "width": 342,
           "height": 153.140625
         },

@@ -14,7 +14,7 @@ This score is only a review trigger. Human judgment remains authoritative.
 | E-H | 16.65 |
 | D-G | 18.07 |
 | D-H | 20.14 |
-| B-F | 21.51 |
+| B-F | 21.79 |
 | A-G | 21.85 |
 | A-E | 22.08 |
 | A-H | 24.68 |
