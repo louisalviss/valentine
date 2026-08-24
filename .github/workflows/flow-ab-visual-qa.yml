@@ -8,7 +8,7 @@ on:
       - 'visual-primitives/**'
       - '.github/workflows/flow-ab-visual-qa.yml'
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
   workflow_dispatch:
 
 permissions:
