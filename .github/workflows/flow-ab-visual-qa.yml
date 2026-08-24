@@ -10,15 +10,18 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   visual-qa:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -74,8 +77,23 @@ jobs:
             flow-ab/qa/output/runtime-failures.txt
             flow-ab/qa/output/silhouette-report.json
             flow-ab/qa/output/silhouette-report.md
+            flow-ab/qa/latest/contact-mobile.jpg
+            flow-ab/qa/latest/contact-desktop.jpg
           if-no-files-found: warn
           retention-days: 14
+
+      - name: Commit durable QA receipt
+        if: always()
+        run: |
+          if [ -d flow-ab/qa/latest ] && [ -n "$(find flow-ab/qa/latest -type f -maxdepth 1 -print -quit 2>/dev/null)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add flow-ab/qa/latest/
+            if ! git diff --cached --quiet; then
+              git commit -m 'chore: update flow AB visual QA receipt [skip ci]'
+              git push origin HEAD:main
+            fi
+          fi
 
       - name: Fail on runtime regressions
         if: steps.runtime.outcome == 'failure'
