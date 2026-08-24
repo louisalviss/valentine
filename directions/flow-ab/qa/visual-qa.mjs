@@ -1,7 +1,8 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 
-const base = process.env.QA_BASE || 'http://127.0.0.1:4173/flow-ab';
+const ROOT='directions/flow-ab/qa';
+const base = process.env.QA_BASE || 'http://127.0.0.1:4173/directions/flow-ab';
 const variants = {
   A: 'no-flow/',
   B: 'with-flow/',
@@ -17,7 +18,7 @@ const viewports = {
   desktop: { width: 1440, height: 900 }
 };
 
-fs.mkdirSync('flow-ab/qa/output/screens', { recursive: true });
+fs.mkdirSync(`${ROOT}/output/screens`, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const results = { generated_at: new Date().toISOString(), base, variants: {}, interaction_checks: {} };
 
@@ -61,7 +62,7 @@ for (const [viewName, viewport] of Object.entries(viewports)) {
       };
     });
 
-    const screenshot = `flow-ab/qa/output/screens/${key}-${viewName}.png`;
+    const screenshot = `${ROOT}/output/screens/${key}-${viewName}.png`;
     if (!navigationError) await page.screenshot({ path: screenshot, fullPage: false });
     results.variants[`${key}-${viewName}`] = {
       key, view: viewName, viewport, url, screenshot,
@@ -71,7 +72,6 @@ for (const [viewName, viewport] of Object.entries(viewports)) {
   }
 }
 
-// Interaction checks on desktop. These are functional smoke tests, not design scoring.
 {
   const context = await browser.newContext({ viewport: viewports.desktop, reducedMotion: 'reduce' });
   const page = await context.newPage();
@@ -98,7 +98,7 @@ for (const [viewName, viewport] of Object.entries(viewports)) {
 }
 
 await browser.close();
-fs.writeFileSync('flow-ab/qa/output/qa-metrics.json', JSON.stringify(results, null, 2));
+fs.writeFileSync(`${ROOT}/output/qa-metrics.json`, JSON.stringify(results, null, 2));
 
 const failures = [];
 for (const [id, row] of Object.entries(results.variants)) {
@@ -111,6 +111,6 @@ for (const [name, check] of Object.entries(results.interaction_checks)) {
   if (!check.pass) failures.push(`${name}: interaction smoke failed`);
 }
 
-fs.writeFileSync('flow-ab/qa/output/runtime-failures.txt', failures.join('\n') + (failures.length ? '\n' : 'PASS\n'));
+fs.writeFileSync(`${ROOT}/output/runtime-failures.txt`, failures.join('\n') + (failures.length ? '\n' : 'PASS\n'));
 console.log(JSON.stringify({ failures, interaction_checks: results.interaction_checks }, null, 2));
 if (failures.length) process.exitCode = 2;

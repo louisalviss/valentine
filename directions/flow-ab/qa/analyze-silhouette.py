@@ -4,15 +4,13 @@ from PIL import Image, ImageOps, ImageDraw
 import json
 import shutil
 
-ROOT = Path('flow-ab/qa/output')
+ROOT = Path('directions/flow-ab/qa/output')
 SCREENS = ROOT / 'screens'
-LATEST = Path('flow-ab/qa/latest')
+LATEST = Path('directions/flow-ab/qa/latest')
 variants = list('ABCDEFGH')
 views = ['mobile', 'desktop']
 LATEST.mkdir(parents=True, exist_ok=True)
 
-# Mean absolute grayscale difference after aggressive thumbnail reduction.
-# Higher = more visually different. This is a flagging heuristic only.
 def vector(path):
     im = Image.open(path).convert('L')
     im = ImageOps.autocontrast(im)
@@ -27,7 +25,6 @@ def mad(a, b):
     return sum(abs(x-y) for x,y in zip(a,b)) / len(a)
 
 def make_contact(view):
-    # 4x2 contact sheet, intentionally small enough to inspect quickly and keep in git.
     tile_w, tile_h = (220, 476) if view == 'mobile' else (320, 200)
     label_h = 26
     sheet = Image.new('RGB', (tile_w * 4, (tile_h + label_h) * 2), 'white')
@@ -58,10 +55,7 @@ for view in views:
         if d < report['flag_threshold']:
             flags.append({'view': view, 'pair': f'{a}-{b}', 'difference': d})
     pairs.sort(key=lambda x: x['difference'])
-    report['views'][view] = {
-        'closest_pairs': pairs[:10],
-        'all_pairs': pairs
-    }
+    report['views'][view] = {'closest_pairs': pairs[:10], 'all_pairs': pairs}
     make_contact(view)
 report['flags'] = flags
 (ROOT / 'silhouette-report.json').write_text(json.dumps(report, indent=2))

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="A lightweight scroll-driven Three.js product experience." />
+  <title>AURA — Scroll in 3D</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Aura home">
+      <span class="brand-mark"></span>
+      <span>AURA</span>
+    </a>
+    <div class="nav-meta">
+      <span>OBJECT / 001</span>
+      <a href="#final">DISCOVER</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="panel hero" data-stage="0">
+      <div class="eyebrow reveal">REAL-TIME PRODUCT / WEBGL</div>
+      <div class="hero-copy">
+        <h1 class="reveal">FORM<br><em>FOLLOWS</em><br>FEELING.</h1>
+        <p class="reveal">A cinematic product story rendered live in your browser. No video timeline. Scroll is the timeline.</p>
+      </div>
+      <div class="scroll-cue reveal"><span></span>SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="panel split" data-stage="1">
+      <div class="index">01</div>
+      <div class="copy left">
+        <span class="kicker">PRECISION SURFACE</span>
+        <h2>Light becomes<br>the material.</h2>
+        <p>Layered clearcoat, soft reflections and controlled contrast create depth without a single baked video frame.</p>
+      </div>
+      <div class="metric right">
+        <strong>∞</strong>
+        <span>VIEWING ANGLES</span>
+      </div>
+    </section>
+
+    <section class="panel split dark" data-stage="2">
+      <div class="index">02</div>
+      <div class="metric left low">
+        <strong>1</strong>
+        <span>SCROLL SIGNAL</span>
+      </div>
+      <div class="copy right wide">
+        <span class="kicker">SCRUBBED MOTION</span>
+        <h2>Every frame<br>belongs to you.</h2>
+        <p>The entire scene is deterministic. Camera, lighting, assembly and typography respond to the same normalized scroll position.</p>
+      </div>
+    </section>
+
+    <section class="panel center" data-stage="3">
+      <div class="index">03</div>
+      <div class="center-copy">
+        <span class="kicker">EXPLODED / REBUILT</span>
+        <h2>Complexity,<br><em>made weightless.</em></h2>
+        <p>Procedural parts separate in space, reveal their construction, then lock back into a single object.</p>
+      </div>
+      <div class="tech-strip">
+        <span>THREE.JS</span><span>PROCEDURAL MESH</span><span>SCROLL SYNC</span><span>ZERO VIDEO</span>
+      </div>
+    </section>
+
+    <section class="panel final" id="final" data-stage="4">
+      <div class="index">04</div>
+      <div class="final-copy">
+        <span class="kicker">AURA / OBJECT 001</span>
+        <h2>Build less.<br>Move more.</h2>
+        <p>A lightweight 3D landing page designed as an interactive object, not a stack of sections.</p>
+        <a class="cta" href="#top">REPLAY EXPERIENCE <span>↗</span></a>
+      </div>
+      <div class="footer-line">
+        <span>REAL-TIME 3D / 2026</span>
+        <span>DRAG TO ORBIT • SCROLL TO SCRUB</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="stage-counter" aria-hidden="true"><span id="stageNow">01</span><b>/</b><span>05</span></div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

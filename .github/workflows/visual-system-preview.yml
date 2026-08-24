@@ -5,7 +5,8 @@ on:
     branches: [main]
     types: [opened, synchronize, reopened]
     paths:
-      - "visual-system-preview-trigger.txt"
+      - "labs/visual-system/**"
+      - "primitives/visual/**"
   workflow_dispatch:
 
 permissions:
@@ -50,7 +51,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Visual System live preview: ${process.env.LIVE_URL}/visual-system-demo/`
+              body: `Visual System live preview: ${process.env.LIVE_URL}/labs/visual-system/`
             });
 
       - name: Comment deployment failure

@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'flow-ab/**'
-      - 'visual-primitives/**'
+      - 'directions/flow-ab/**'
+      - 'primitives/visual/**'
       - '.github/workflows/flow-ab-visual-qa.yml'
   pull_request:
     types: [opened, synchronize]
@@ -31,14 +31,14 @@ jobs:
 
       - name: Initialize durable status
         run: |
-          mkdir -p flow-ab/qa/latest
-          printf 'started_at=%s\nsource_sha=%s\nactor=%s\nevent=%s\n' "$(date -u +%FT%TZ)" "$(git rev-parse HEAD)" "$GITHUB_ACTOR" "$GITHUB_EVENT_NAME" > flow-ab/qa/latest/workflow-status.txt
+          mkdir -p directions/flow-ab/qa/latest
+          printf 'started_at=%s\nsource_sha=%s\nactor=%s\nevent=%s\n' "$(date -u +%FT%TZ)" "$(git rev-parse HEAD)" "$GITHUB_ACTOR" "$GITHUB_EVENT_NAME" > directions/flow-ab/qa/latest/workflow-status.txt
 
       - name: Commit start receipt
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add flow-ab/qa/latest/workflow-status.txt
+          git add directions/flow-ab/qa/latest/workflow-status.txt
           git commit -m 'chore: mark flow AB visual QA started [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
@@ -62,12 +62,12 @@ jobs:
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/flow-ab-http.log 2>&1 &
           echo $! >/tmp/flow-ab-http.pid
           sleep 2
-          curl --fail http://127.0.0.1:4173/flow-ab/ >/dev/null
+          curl --fail http://127.0.0.1:4173/directions/flow-ab/ >/dev/null
 
       - name: Capture and runtime QA
         id: runtime
         continue-on-error: true
-        run: node flow-ab/qa/visual-qa.mjs
+        run: node directions/flow-ab/qa/visual-qa.mjs
 
       - name: Install Pillow
         id: pillow
@@ -75,7 +75,7 @@ jobs:
 
       - name: Analyze silhouette divergence
         id: silhouette
-        run: python3 flow-ab/qa/analyze-silhouette.py
+        run: python3 directions/flow-ab/qa/analyze-silhouette.py
 
       - name: Build QA summary
         if: always()
@@ -85,10 +85,10 @@ jobs:
             echo
             echo '### Runtime checks'
             echo '```'
-            cat flow-ab/qa/output/runtime-failures.txt 2>/dev/null || true
+            cat directions/flow-ab/qa/output/runtime-failures.txt 2>/dev/null || true
             echo '```'
             echo
-            cat flow-ab/qa/output/silhouette-report.md 2>/dev/null || true
+            cat directions/flow-ab/qa/output/silhouette-report.md 2>/dev/null || true
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload QA artifacts
@@ -97,20 +97,20 @@ jobs:
         with:
           name: flow-ab-visual-qa
           path: |
-            flow-ab/qa/output/screens/*.png
-            flow-ab/qa/output/qa-metrics.json
-            flow-ab/qa/output/runtime-failures.txt
-            flow-ab/qa/output/silhouette-report.json
-            flow-ab/qa/output/silhouette-report.md
-            flow-ab/qa/latest/contact-mobile.jpg
-            flow-ab/qa/latest/contact-desktop.jpg
+            directions/flow-ab/qa/output/screens/*.png
+            directions/flow-ab/qa/output/qa-metrics.json
+            directions/flow-ab/qa/output/runtime-failures.txt
+            directions/flow-ab/qa/output/silhouette-report.json
+            directions/flow-ab/qa/output/silhouette-report.md
+            directions/flow-ab/qa/latest/contact-mobile.jpg
+            directions/flow-ab/qa/latest/contact-desktop.jpg
           if-no-files-found: warn
           retention-days: 14
 
       - name: Commit durable QA receipt
         if: always()
         run: |
-          mkdir -p flow-ab/qa/latest
+          mkdir -p directions/flow-ab/qa/latest
           {
             echo "finished_at=$(date -u +%FT%TZ)"
             echo "node=${{ steps.node.outcome }}"
@@ -119,10 +119,10 @@ jobs:
             echo "runtime=${{ steps.runtime.outcome }}"
             echo "pillow=${{ steps.pillow.outcome }}"
             echo "silhouette=${{ steps.silhouette.outcome }}"
-          } >> flow-ab/qa/latest/workflow-status.txt
+          } >> directions/flow-ab/qa/latest/workflow-status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add flow-ab/qa/latest/
+          git add directions/flow-ab/qa/latest/
           if ! git diff --cached --quiet; then
             git commit -m 'chore: update flow AB visual QA receipt [skip ci]'
             git pull --rebase origin main
@@ -133,5 +133,5 @@ jobs:
         if: steps.runtime.outcome == 'failure'
         run: |
           echo 'Runtime QA reported failures.'
-          cat flow-ab/qa/output/runtime-failures.txt || true
+          cat directions/flow-ab/qa/output/runtime-failures.txt || true
           exit 1
