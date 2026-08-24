@@ -90,6 +90,8 @@ function checkPattern(pattern){
   if(entry.gates.accessibility==='pass'&&(!lang||missingAlt)) errors.push(`${pattern.id}: accessibility overclaimed; missing lang or image alt`);
 
   const score=scoreOf(entry),decision=decisionOf(pattern,entry,score),ready=readyOf(entry,score,decision);
+  if(decision==='DELETE'||decision==='SUPERSEDE') errors.push(`${pattern.id}: active catalog cannot contain decision ${decision}; remove or replace the entry`);
+  if(decision==='REVIEW'&&pattern.status==='production') warnings.push(`${pattern.id}: production status conflicts with REVIEW decision; consider candidate/lab status`);
   if(pattern.clientReady!==ready) warnings.push(`${pattern.id}: legacy clientReady=${pattern.clientReady} differs from derived=${ready}`);
   return {id:pattern.id,score,decision,ready,debt:Object.entries(entry.gates).filter(([,v])=>v!=='pass').map(([k,v])=>`${k}:${v}`)};
 }
