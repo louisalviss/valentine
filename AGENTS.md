@@ -1,65 +1,70 @@
 # Repository Agent Instructions
 
+## Canonical namespaces
+
+New work must live under exactly one role-based namespace:
+
+- `patterns/<slug>/` — approved reusable motion/interaction demos.
+- `directions/<slug>/` — art-direction or medium-selection systems.
+- `labs/<slug>/` — experiments, candidates and engine studies.
+- `primitives/<family>/` — reusable implementation modules.
+- `archive/<slug>/` — historical material intentionally outside the active surface.
+
+Do not create new project folders at repository root. Root-level legacy demo folders are compatibility redirects only and must not receive feature work.
+
+Do not create `v2`, `v3`, `final`, `final-final` folders. Git history is version control. Promote one canonical implementation and use redirects when a public route moves.
+
 ## Visual work
 
-Before creating or materially redesigning a web page in this repository, read:
+Before creating or materially redesigning a web page, read:
 
 `agent-skills/web-design/procedural-visual-system/SKILL.md`
 
-Use the visual primitive library before inventing a new effect.
+Use existing primitives before inventing a new effect.
 
-Current reusable primitive:
-- `visual-primitives/reactive-field.js`
+Current canonical visual primitive:
+- `primitives/visual/reactive-field.js`
 
 Reference implementation:
-- `visual-system-demo/index.html`
+- `labs/visual-system/`
 
 ## Web Motion Library
 
-Canonical reusable pattern system:
+Canonical reusable pattern index:
 - live gallery: `web-motion-library/`
-- pattern catalog: `web-motion-library/library.json`
-- quality evidence/policy: `web-motion-library/quality.json`
-- executable gate: `web-motion-library/quality-gate.mjs`
-- workflow/docs: `web-motion-library/README.md`
+- catalog: `web-motion-library/library.json`
+- quality evidence: `web-motion-library/quality.json`
+- gate: `web-motion-library/quality-gate.mjs`
 
-Before calling any pattern client-ready, run:
+`quality.json` is authoritative for score/readiness. Do not manually call a pattern client-ready because an old boolean says so.
 
-`node web-motion-library/quality-gate.mjs`
+When an approved build produces reusable interaction grammar:
+1. place the canonical build under `patterns/`;
+2. add/update its entry in `library.json`;
+3. add evidence to `quality.json`;
+4. run the quality gate and responsive QA;
+5. only then call it client-ready.
 
-Treat the derived Quality Gate result as canonical. Do not trust or manually promote a legacy `clientReady` boolean in `library.json` when it conflicts with `quality.json`.
-
-Decision policy:
-- PROMOTE: score >= 80 and critical gates pass.
-- CLIENT READY: score >= 90 plus route, responsive, asset rights, dependencies and performance all pass.
-- KEEP AS LAB: useful grammar but score 65–79.
-- REVIEW: critical evidence uncertain or score 50–64.
-- DELETE: weak grammar / score < 50.
-- SUPERSEDE: explicitly replaced by a stronger canonical implementation.
-
-When an approved visual build produces a reusable interaction pattern, evaluate it for the library. Add matching entries to both `library.json` and `quality.json`; the ID sets must remain identical. Never mark source-verifiable gates `pass` without evidence. `distinctGrammar` and `assetRights` require explicit curated judgment.
-
-Do not turn the library into a template dump; preserve interaction systems, not copied brand surfaces. Git history is the archive, so weak, duplicate and superseded working-tree versions should be removed after a canonical winner is proven.
+If the gate derives `DELETE` or `SUPERSEDE`, remove it from the active catalog. If a public URL already exists, leave only a compatibility redirect at the old route.
 
 ## Live site hosting
 
-- Default home for user-requested live/demo sites: this `louisalviss/valentine` GitHub repository.
-- Publish each live site in its own clearly named subfolder so GitHub Pages can serve it directly.
-- Prefer self-hosted/static assets in this repository over hotlinking third-party media that can expire, block CORS/range requests, or cause loading hangs.
-- Do not use Vercel for these live/demo sites unless the user explicitly asks for Vercel.
+- Default host: this `louisalviss/valentine` GitHub Pages repository.
+- New approved demos go under `patterns/<slug>/`; exploratory work goes under `labs/<slug>/`.
+- Prefer self-hosted/static assets over unstable hotlinks.
+- Do not use Vercel unless explicitly requested.
 
 ## Default workflow
 
-1. Inspect the strongest relevant existing page/reference and the Motion Library before building from zero.
-2. Extract layout, hierarchy, typography, palette, motion and interaction grammar.
+1. Inspect the strongest relevant existing pattern/direction.
+2. Extract layout, hierarchy, typography, motion and interaction grammar.
 3. Reuse or extend the narrowest primitive.
-4. Produce 2-3 coherent variants rather than random rerolls when exploration is needed.
+4. Produce coherent variants only when they test meaningfully different directions.
 5. Keep one dominant visual idea per viewport.
 6. Test mobile, tablet and desktop.
-7. Check reduced motion, resize, visibility pause and WebGL/static fallback where applicable.
-8. Run the Web Motion Quality Gate for any library candidate or edited library source.
-9. Promote a new primitive only after it works in at least two page contexts.
-10. Carry unresolved quality debt into the client build brief and resolve it before launch.
+7. Check reduced motion, resize, visibility pause and WebGL fallback where relevant.
+8. Promote to `patterns/` only after Quality Gate evidence supports it.
+9. Promote code to `primitives/` only after it is reusable beyond one page context.
 
 ## Avoid
 

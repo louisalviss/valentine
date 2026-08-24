@@ -1,329 +1,95 @@
 {
-  "version": "1.1",
-  "updated_at": "2026-08-24",
+  "version": "2.0",
+  "updated_at": "2026-08-25",
   "curation": {
-    "rule": "Keep only reusable interaction grammar with a strong working demo. Historical and duplicate builds stay in git history, not the active catalog.",
+    "rule": "Canonical source lives under patterns/. Legacy root routes are compatibility redirects only.",
     "production": 13,
     "candidate": 1
   },
   "patterns": [
     {
-      "id": "aura-scroll-product-story",
-      "index": "001",
-      "title": "Scroll Product Story",
-      "kind": "pattern",
-      "family": ["product", "scroll", "typography", "interaction"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../aura-eclipse-scroll/",
-      "preview": "../aura-eclipse-scroll/?frame=.55&library=1",
-      "source": "https://github.com/louisalviss/valentine/tree/main/aura-eclipse-scroll",
-      "description": "One continuous product travels through pinned editorial scenes, layered typography and tap-to-reveal feature hotspots.",
-      "bestFor": ["Premium hardware", "Fashion accessories", "Automotive detail", "High-end DTC"],
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "tags": ["Pinned scroll", "Layered type", "Feature hotspots", "Scene wipe"],
-      "assetPolicy": "self-hosted",
-      "rendering": "DOM + CSS transform",
-      "primitives": [
-        {"name": "ScrollProduct", "description": "Moves one focal product through multiple narrative compositions without breaking object continuity."},
-        {"name": "SceneWipe", "description": "Scrubs a full-surface visual transition between narrative states."},
-        {"name": "ProductMaskText", "description": "Splits typography into foreground and background layers around a moving object."},
-        {"name": "FeatureHotspot", "description": "Reveals compact product detail without replacing the composition."}
-      ]
+      "id":"aura-scroll-product-story","index":"001","title":"Scroll Product Story","kind":"pattern","family":["product","scroll","typography","interaction"],"status":"production","clientReady":true,
+      "live":"../patterns/aura-eclipse/","preview":"../patterns/aura-eclipse/?frame=.55&library=1","source":"https://github.com/louisalviss/valentine/tree/main/patterns/aura-eclipse",
+      "description":"One continuous product travels through pinned editorial scenes, layered typography and tap-to-reveal feature hotspots.","bestFor":["Premium hardware","Fashion accessories","Automotive detail","High-end DTC"],"stack":["HTML","CSS","JavaScript"],"tags":["Pinned scroll","Layered type","Feature hotspots","Scene wipe"],"assetPolicy":"self-hosted","rendering":"DOM + CSS transform",
+      "primitives":[{"name":"ScrollProduct","description":"Moves one focal product through multiple narrative compositions without breaking object continuity."},{"name":"SceneWipe","description":"Scrubs a full-surface visual transition between narrative states."},{"name":"ProductMaskText","description":"Splits typography into foreground and background layers around a moving object."},{"name":"FeatureHotspot","description":"Reveals compact product detail without replacing the composition."}]
     },
     {
-      "id": "iris-operated-object",
-      "index": "002",
-      "title": "Operated Object",
-      "kind": "pattern",
-      "family": ["scroll", "interaction", "product", "mechanism"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../mechanical-iris/",
-      "preview": "../mechanical-iris/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/mechanical-iris",
-      "description": "Scroll behaves like a physical control: one mechanism opens, accelerates and changes state, then hands off to direct touch manipulation.",
-      "bestFor": ["Industrial products", "Luxury objects", "Launch experiences", "Technical storytelling"],
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "tags": ["Scroll as input", "Touch inertia", "Single mechanism", "State choreography"],
-      "assetPolicy": "self-contained",
-      "rendering": "DOM geometry",
-      "primitives": [
-        {"name": "ScrollAsControl", "description": "Maps scroll progress to the operating state of one physical-looking mechanism."},
-        {"name": "TouchInertia", "description": "Continues direct manipulation after release and eases it back to rest."},
-        {"name": "StateReadout", "description": "Synchronizes motion state with compact live labels and progress."}
-      ]
+      "id":"iris-operated-object","index":"002","title":"Operated Object","kind":"pattern","family":["scroll","interaction","product","mechanism"],"status":"production","clientReady":true,
+      "live":"../patterns/mechanical-iris/","preview":"../patterns/mechanical-iris/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/mechanical-iris",
+      "description":"Scroll behaves like a physical control: one mechanism opens, accelerates and changes state, then hands off to direct touch manipulation.","bestFor":["Industrial products","Luxury objects","Launch experiences","Technical storytelling"],"stack":["HTML","CSS","JavaScript"],"tags":["Scroll as input","Touch inertia","Single mechanism","State choreography"],"assetPolicy":"self-contained","rendering":"DOM geometry",
+      "primitives":[{"name":"ScrollAsControl","description":"Maps scroll progress to the operating state of one physical-looking mechanism."},{"name":"TouchInertia","description":"Continues direct manipulation after release and eases it back to rest."},{"name":"StateReadout","description":"Synchronizes motion state with compact live labels and progress."}]
     },
     {
-      "id": "castle-exploded-assembly",
-      "index": "003",
-      "title": "Exploded Assembly Story",
-      "kind": "pattern",
-      "family": ["3d", "scroll", "product", "architecture"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../castle-assembly/",
-      "preview": "../castle-assembly/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/castle-assembly",
-      "description": "A single architectural object is progressively dissected into functional systems as the viewer scrolls.",
-      "bestFor": ["Architecture", "Manufacturing", "Engineering", "Product anatomy"],
-      "stack": ["HTML", "CSS", "JavaScript", "Three.js"],
-      "tags": ["Exploded view", "Object continuity", "Scroll chapters", "Drag rotate"],
-      "assetPolicy": "procedural",
-      "rendering": "WebGL / Three.js",
-      "primitives": [
-        {"name": "ExplodedAssembly", "description": "Separates one object into meaningful functional layers rather than arbitrary fragments."},
-        {"name": "ChapterCamera", "description": "Pairs each scroll chapter with a deliberate object pose and camera state."},
-        {"name": "ObjectDrag", "description": "Allows direct rotational inspection without breaking the scroll narrative."}
-      ]
+      "id":"castle-exploded-assembly","index":"003","title":"Exploded Assembly Story","kind":"pattern","family":["3d","scroll","product","architecture"],"status":"production","clientReady":false,
+      "live":"../patterns/castle-assembly/","preview":"../patterns/castle-assembly/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/castle-assembly",
+      "description":"A single architectural object is progressively dissected into functional systems as the viewer scrolls.","bestFor":["Architecture","Manufacturing","Engineering","Product anatomy"],"stack":["HTML","CSS","JavaScript","Three.js"],"tags":["Exploded view","Object continuity","Scroll chapters","Drag rotate"],"assetPolicy":"procedural","rendering":"WebGL / Three.js CDN",
+      "primitives":[{"name":"ExplodedAssembly","description":"Separates one object into meaningful functional layers rather than arbitrary fragments."},{"name":"ChapterCamera","description":"Pairs each scroll chapter with a deliberate object pose and camera state."},{"name":"ObjectDrag","description":"Allows direct rotational inspection without breaking the scroll narrative."}]
     },
     {
-      "id": "aurel-layer-build",
-      "index": "004",
-      "title": "Layer Build Story",
-      "kind": "pattern",
-      "family": ["scroll", "architecture", "svg", "product"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../aurel-build/",
-      "preview": "../aurel-build/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/aurel-build",
-      "description": "An architectural object assembles layer by layer from inline SVG geometry while the narrative advances through a pinned build sequence.",
-      "bestFor": ["Architecture", "Real estate", "Furniture", "Construction systems"],
-      "stack": ["HTML", "CSS", "JavaScript", "SVG"],
-      "tags": ["Inline SVG", "Layer assembly", "Pinned story", "iOS safe"],
-      "assetPolicy": "self-contained",
-      "rendering": "SVG + DOM",
-      "primitives": [
-        {"name": "LayerAssembly", "description": "Reveals or transforms meaningful object layers in a controlled build order."},
-        {"name": "PinnedBuild", "description": "Keeps the object fixed while copy and build phases advance with scroll."},
-        {"name": "StepRail", "description": "Lets the user understand and jump between assembly phases."}
-      ]
+      "id":"aurel-layer-build","index":"004","title":"Layer Build Story","kind":"pattern","family":["scroll","architecture","svg","product"],"status":"production","clientReady":true,
+      "live":"../patterns/aurel-build/","preview":"../patterns/aurel-build/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/aurel-build",
+      "description":"An architectural object assembles layer by layer from inline SVG geometry while the narrative advances through a pinned build sequence.","bestFor":["Architecture","Real estate","Furniture","Construction systems"],"stack":["HTML","CSS","JavaScript","SVG"],"tags":["Inline SVG","Layer assembly","Pinned story","iOS safe"],"assetPolicy":"self-contained","rendering":"SVG + DOM",
+      "primitives":[{"name":"LayerAssembly","description":"Reveals or transforms meaningful object layers in a controlled build order."},{"name":"PinnedBuild","description":"Keeps the object fixed while copy and build phases advance with scroll."},{"name":"StepRail","description":"Lets the user understand and jump between assembly phases."}]
     },
     {
-      "id": "mira-processing-pipeline",
-      "index": "005",
-      "title": "Processing Pipeline",
-      "kind": "pattern",
-      "family": ["saas", "interaction", "motion", "data"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../mira-ai-motion/",
-      "preview": "../mira-ai-motion/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/mira-ai-motion",
-      "description": "Inputs visibly converge into a processing core and re-emerge as structured outputs, turning an invisible AI workflow into a readable motion system.",
-      "bestFor": ["AI SaaS", "Automation tools", "Data products", "Workflow software"],
-      "stack": ["HTML", "CSS", "JavaScript", "Canvas"],
-      "tags": ["Input→core→output", "Data motion", "Interactive demo", "SaaS"],
-      "assetPolicy": "self-contained",
-      "rendering": "DOM + Canvas",
-      "primitives": [
-        {"name": "ProcessingCore", "description": "Creates a clear spatial center where incoming information is transformed."},
-        {"name": "ConsumeEmit", "description": "Animates source items into the core and emits structured result objects."},
-        {"name": "InteractiveSynthesis", "description": "Lets a tap retrigger the transformation so the product mechanic is demonstrable."}
-      ]
+      "id":"mira-processing-pipeline","index":"005","title":"Processing Pipeline","kind":"pattern","family":["saas","interaction","motion","data"],"status":"production","clientReady":true,
+      "live":"../patterns/mira-ai-motion/","preview":"../patterns/mira-ai-motion/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/mira-ai-motion",
+      "description":"Inputs visibly converge into a processing core and re-emerge as structured outputs, turning an invisible AI workflow into a readable motion system.","bestFor":["AI SaaS","Automation tools","Data products","Workflow software"],"stack":["HTML","CSS","JavaScript","Canvas"],"tags":["Input→core→output","Data motion","Interactive demo","SaaS"],"assetPolicy":"self-contained","rendering":"DOM + Canvas",
+      "primitives":[{"name":"ProcessingCore","description":"Creates a clear spatial center where incoming information is transformed."},{"name":"ConsumeEmit","description":"Animates source items into the core and emits structured result objects."},{"name":"InteractiveSynthesis","description":"Lets a tap retrigger the transformation so the product mechanic is demonstrable."}]
     },
     {
-      "id": "signal-continuous-world",
-      "index": "006",
-      "title": "Continuous World Journey",
-      "kind": "pattern",
-      "family": ["scroll", "cinematic", "canvas", "story"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../signal-story/",
-      "preview": "../signal-story/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/signal-story",
-      "description": "Scroll drives one continuous roadside world through changing terrain, settlements, time and narrative beats instead of cutting between disconnected scenes.",
-      "bestFor": ["Automotive", "Travel", "Brand story", "Interactive journalism"],
-      "stack": ["HTML", "CSS", "JavaScript", "Canvas"],
-      "tags": ["Continuous world", "Scroll to drive", "Procedural scene", "Narrative timeline"],
-      "assetPolicy": "procedural",
-      "rendering": "Canvas",
-      "primitives": [
-        {"name": "ScrollDrive", "description": "Treats page progress as forward travel through a persistent world."},
-        {"name": "LivingRoadside", "description": "Populates a continuous route with environmental details that preserve spatial continuity."},
-        {"name": "JourneyNarrative", "description": "Synchronizes chapter copy, clock, progress and end-state with world travel."}
-      ]
+      "id":"signal-continuous-world","index":"006","title":"Continuous World Journey","kind":"pattern","family":["scroll","cinematic","canvas","story"],"status":"production","clientReady":true,
+      "live":"../patterns/signal-story/","preview":"../patterns/signal-story/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/signal-story",
+      "description":"Scroll drives one continuous roadside world through changing terrain, settlements, time and narrative beats instead of cutting between disconnected scenes.","bestFor":["Automotive","Travel","Brand story","Interactive journalism"],"stack":["HTML","CSS","JavaScript","Canvas"],"tags":["Continuous world","Scroll to drive","Procedural scene","Narrative timeline"],"assetPolicy":"procedural","rendering":"Canvas",
+      "primitives":[{"name":"ScrollDrive","description":"Treats page progress as forward travel through a persistent world."},{"name":"LivingRoadside","description":"Populates a continuous route with environmental details that preserve spatial continuity."},{"name":"JourneyNarrative","description":"Synchronizes chapter copy, clock, progress and end-state with world travel."}]
     },
     {
-      "id": "living-atlas-explorer",
-      "index": "007",
-      "title": "Interactive Explorer",
-      "kind": "pattern",
-      "family": ["interaction", "explorer", "canvas", "editorial"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../living-atlas-v3/",
-      "preview": "../living-atlas-v3/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/living-atlas-v3",
-      "description": "A collection browser, interactive canvas, hotspots and contextual inspector work together as one explorer interface.",
-      "bestFor": ["Museums", "Catalogs", "Maps", "Complex product ecosystems"],
-      "stack": ["HTML", "CSS", "JavaScript", "Canvas"],
-      "tags": ["Hotspots", "Inspector", "Tool rail", "Collection browser"],
-      "assetPolicy": "self-contained",
-      "rendering": "Canvas + DOM",
-      "primitives": [
-        {"name": "HotspotCanvas", "description": "Places inspectable points in a pan/zoom visual field."},
-        {"name": "ContextInspector", "description": "Updates a structured information panel from canvas selection."},
-        {"name": "AdaptiveCollectionNav", "description": "Switches from desktop collection rail to touch-safe mobile navigation."}
-      ]
+      "id":"living-atlas-explorer","index":"007","title":"Interactive Explorer","kind":"pattern","family":["interaction","explorer","canvas","editorial"],"status":"production","clientReady":false,
+      "live":"../patterns/living-atlas/","preview":"../patterns/living-atlas/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/living-atlas",
+      "description":"A collection browser, interactive canvas, hotspots and contextual inspector work together as one explorer interface.","bestFor":["Museums","Catalogs","Maps","Complex product ecosystems"],"stack":["HTML","CSS","JavaScript","Canvas"],"tags":["Hotspots","Inspector","Tool rail","Collection browser"],"assetPolicy":"self-contained","rendering":"Canvas + DOM",
+      "primitives":[{"name":"HotspotCanvas","description":"Places inspectable points in a pan/zoom visual field."},{"name":"ContextInspector","description":"Updates a structured information panel from canvas selection."},{"name":"AdaptiveCollectionNav","description":"Switches from desktop collection rail to touch-safe mobile navigation."}]
     },
     {
-      "id": "last-house-cinematic-timeline",
-      "index": "008",
-      "title": "Cinematic Timeline",
-      "kind": "pattern",
-      "family": ["cinematic", "scroll", "story", "photography"],
-      "status": "candidate",
-      "clientReady": false,
-      "live": "../the-last-house-cinematic-v3/",
-      "preview": "../the-last-house-cinematic-v3/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/the-last-house-cinematic-v3",
-      "description": "A fixed cinematic stage blends time states while typography and a timeline move through a long-form historical narrative.",
-      "bestFor": ["Real estate stories", "Heritage", "Film campaigns", "Brand history"],
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "tags": ["Fixed stage", "Timeline", "Frame blend", "Cinematic copy"],
-      "assetPolicy": "review-before-client",
-      "rendering": "Image stage + DOM",
-      "primitives": [
-        {"name": "FrameBlendTimeline", "description": "Crossfades visual states as time advances without replacing the stage."},
-        {"name": "CinematicProgress", "description": "Connects narrative beats to a visible temporal rail."}
-      ]
+      "id":"last-house-cinematic-timeline","index":"008","title":"Cinematic Timeline","kind":"pattern","family":["cinematic","scroll","story","photography"],"status":"candidate","clientReady":false,
+      "live":"../patterns/last-house-cinematic/","preview":"../patterns/last-house-cinematic/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/last-house-cinematic",
+      "description":"A fixed cinematic stage blends time states while typography and a timeline move through a long-form historical narrative.","bestFor":["Real estate stories","Heritage","Film campaigns","Brand history"],"stack":["HTML","CSS","JavaScript"],"tags":["Fixed stage","Timeline","Frame blend","Cinematic copy"],"assetPolicy":"review-before-client","rendering":"Image stage + DOM",
+      "primitives":[{"name":"FrameBlendTimeline","description":"Crossfades visual states as time advances without replacing the stage."},{"name":"CinematicProgress","description":"Connects narrative beats to a visible temporal rail."}]
     },
     {
-      "id": "vanta-editorial-object",
-      "index": "009",
-      "title": "Editorial Object Story",
-      "kind": "pattern",
-      "family": ["product", "scroll", "editorial", "typography"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../vanta-editorial/",
-      "preview": "../vanta-editorial/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/vanta-editorial",
-      "description": "A self-hosted product object moves through sharply different editorial color worlds while typography and composition stay restrained.",
-      "bestFor": ["Eyewear", "Fashion", "Accessories", "Editorial commerce"],
-      "stack": ["HTML", "CSS", "JavaScript", "SVG"],
-      "tags": ["Editorial worlds", "Product object", "SVG asset", "Scroll transformation"],
-      "assetPolicy": "self-hosted",
-      "rendering": "DOM + SVG",
-      "primitives": [
-        {"name": "EditorialWorldShift", "description": "Changes the complete visual world while preserving one focal product."},
-        {"name": "ObjectContinuity", "description": "Keeps the same product visually continuous across editorial scenes."}
-      ]
+      "id":"vanta-editorial-object","index":"009","title":"Editorial Object Story","kind":"pattern","family":["product","scroll","editorial","typography"],"status":"production","clientReady":true,
+      "live":"../patterns/vanta-editorial/","preview":"../patterns/vanta-editorial/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/vanta-editorial",
+      "description":"A self-hosted product object moves through sharply different editorial color worlds while typography and composition stay restrained.","bestFor":["Eyewear","Fashion","Accessories","Editorial commerce"],"stack":["HTML","CSS","JavaScript","SVG"],"tags":["Editorial worlds","Product object","SVG asset","Scroll transformation"],"assetPolicy":"self-hosted","rendering":"DOM + SVG",
+      "primitives":[{"name":"EditorialWorldShift","description":"Changes the complete visual world while preserving one focal product."},{"name":"ObjectContinuity","description":"Keeps the same product visually continuous across editorial scenes."}]
     },
     {
-      "id": "sword-object-viewer",
-      "index": "010",
-      "title": "3D Object Viewer",
-      "kind": "pattern",
-      "family": ["3d", "interaction", "product", "configurator"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../sword-3d/",
-      "preview": "../sword-3d/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/sword-3d",
-      "description": "A focused real-time object viewer with drag, pinch, zoom and toggleable material/effect states.",
-      "bestFor": ["Product configurators", "Collectibles", "Industrial objects", "3D portfolios"],
-      "stack": ["HTML", "CSS", "JavaScript", "Three.js"],
-      "tags": ["Orbit controls", "3D viewer", "Toggle states", "Touch gestures"],
-      "assetPolicy": "procedural",
-      "rendering": "WebGL / Three.js CDN",
-      "primitives": [
-        {"name": "ObjectViewer", "description": "Provides touch-safe orbital inspection of a single 3D object."},
-        {"name": "EffectToggle", "description": "Turns visual object states on and off without leaving the viewer."}
-      ]
+      "id":"sword-object-viewer","index":"010","title":"3D Object Viewer","kind":"pattern","family":["3d","interaction","product","configurator"],"status":"production","clientReady":false,
+      "live":"../patterns/sword-3d/","preview":"../patterns/sword-3d/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/sword-3d",
+      "description":"A focused real-time object viewer with drag, pinch, zoom and toggleable material/effect states.","bestFor":["Product configurators","Collectibles","Industrial objects","3D portfolios"],"stack":["HTML","CSS","JavaScript","Three.js"],"tags":["Orbit controls","3D viewer","Toggle states","Touch gestures"],"assetPolicy":"procedural","rendering":"WebGL / Three.js CDN",
+      "primitives":[{"name":"ObjectViewer","description":"Provides touch-safe orbital inspection of a single 3D object."},{"name":"EffectToggle","description":"Turns visual object states on and off without leaving the viewer."}]
     },
     {
-      "id": "nocturne-hold-awaken",
-      "index": "011",
-      "title": "Hold-to-Awaken Object",
-      "kind": "pattern",
-      "family": ["interaction", "product", "cinematic", "touch"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../nocturne-v3/",
-      "preview": "../nocturne-v3/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/nocturne-v3",
-      "description": "A dormant hero object responds to approach, hold and pulse interactions, making the product feel alive instead of merely animated.",
-      "bestFor": ["Game launches", "Luxury objects", "Entertainment", "Experimental product pages"],
-      "stack": ["HTML", "CSS", "JavaScript", "Canvas"],
-      "tags": ["Hold interaction", "Object awakening", "Pulse feedback", "Atmospheric hero"],
-      "assetPolicy": "self-hosted",
-      "rendering": "Image + Canvas + DOM",
-      "primitives": [
-        {"name": "HoldToActivate", "description": "Uses press duration as an intentional interaction threshold."},
-        {"name": "AwakeningState", "description": "Coordinates object, copy and ambient effects around a single activation state."}
-      ]
+      "id":"nocturne-hold-awaken","index":"011","title":"Hold-to-Awaken Object","kind":"pattern","family":["interaction","product","cinematic","touch"],"status":"production","clientReady":true,
+      "live":"../patterns/nocturne/","preview":"../patterns/nocturne/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/nocturne",
+      "description":"A dormant hero object responds to approach, hold and pulse interactions, making the product feel alive instead of merely animated.","bestFor":["Game launches","Luxury objects","Entertainment","Experimental product pages"],"stack":["HTML","CSS","JavaScript","Canvas"],"tags":["Hold interaction","Object awakening","Pulse feedback","Atmospheric hero"],"assetPolicy":"self-hosted","rendering":"Image + Canvas + DOM",
+      "primitives":[{"name":"HoldToActivate","description":"Uses press duration as an intentional interaction threshold."},{"name":"AwakeningState","description":"Coordinates object, copy and ambient effects around a single activation state."}]
     },
     {
-      "id": "vokie-process-machine",
-      "index": "012",
-      "title": "Process Machine Story",
-      "kind": "pattern",
-      "family": ["saas", "scroll", "interaction", "editorial"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../inspiration-flow-demo/",
-      "preview": "../inspiration-flow-demo/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/inspiration-flow-demo",
-      "description": "A software workflow is represented as a tactile editorial machine: source enters, transforms through stages and leaves as a visible sequence.",
-      "bestFor": ["Content tools", "Automation SaaS", "Operations software", "Creator products"],
-      "stack": ["HTML", "CSS", "JavaScript", "SVG"],
-      "tags": ["Process metaphor", "Pinned workflow", "Draggable path", "Editorial SaaS"],
-      "assetPolicy": "self-contained",
-      "rendering": "DOM + SVG",
-      "primitives": [
-        {"name": "ProcessMachine", "description": "Turns an abstract workflow into a legible physical metaphor."},
-        {"name": "StageSequence", "description": "Reveals intermediate output states instead of jumping from input to final result."},
-        {"name": "DraggableProcessPath", "description": "Lets the viewer directly manipulate the visual process path."}
-      ]
+      "id":"vokie-process-machine","index":"012","title":"Process Machine Story","kind":"pattern","family":["saas","scroll","interaction","editorial"],"status":"production","clientReady":true,
+      "live":"../patterns/vokie-process-machine/","preview":"../patterns/vokie-process-machine/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/vokie-process-machine",
+      "description":"A software workflow is represented as a tactile editorial machine: source enters, transforms through stages and leaves as a visible sequence.","bestFor":["Content tools","Automation SaaS","Operations software","Creator products"],"stack":["HTML","CSS","JavaScript","SVG"],"tags":["Process metaphor","Pinned workflow","Draggable path","Editorial SaaS"],"assetPolicy":"self-contained","rendering":"DOM + SVG",
+      "primitives":[{"name":"ProcessMachine","description":"Turns an abstract workflow into a legible physical metaphor."},{"name":"StageSequence","description":"Reveals intermediate output states instead of jumping from input to final result."},{"name":"DraggableProcessPath","description":"Lets the viewer directly manipulate the visual process path."}]
     },
     {
-      "id": "preflight-interactive-checker",
-      "index": "013",
-      "title": "Interactive Product Checker",
-      "kind": "pattern",
-      "family": ["saas", "interaction", "product", "data"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../preflight/",
-      "preview": "../preflight/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/preflight",
-      "description": "A conversion-focused SaaS page makes the product value concrete with a usable checker, graph metaphor and restrained technical art direction.",
-      "bestFor": ["Developer tools", "B2B SaaS", "Risk products", "Technical services"],
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "tags": ["Interactive checker", "Technical landing", "Risk graph", "Conversion"],
-      "assetPolicy": "self-contained",
-      "rendering": "DOM",
-      "primitives": [
-        {"name": "InlineProductDemo", "description": "Places a usable version of the product mechanic inside the landing page."},
-        {"name": "RiskGraph", "description": "Explains relationship risk spatially instead of through generic feature cards."}
-      ]
+      "id":"preflight-interactive-checker","index":"013","title":"Interactive Product Checker","kind":"pattern","family":["saas","interaction","product","data"],"status":"production","clientReady":true,
+      "live":"../patterns/preflight/","preview":"../patterns/preflight/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/preflight",
+      "description":"A conversion-focused SaaS page makes the product value concrete with a usable checker, graph metaphor and restrained technical art direction.","bestFor":["Developer tools","B2B SaaS","Risk products","Technical services"],"stack":["HTML","CSS","JavaScript"],"tags":["Interactive checker","Technical landing","Risk graph","Conversion"],"assetPolicy":"self-contained","rendering":"DOM",
+      "primitives":[{"name":"InlineProductDemo","description":"Places a usable version of the product mechanic inside the landing page."},{"name":"RiskGraph","description":"Explains relationship risk spatially instead of through generic feature cards."}]
     },
     {
-      "id": "kaizen-frame-sequence",
-      "index": "014",
-      "title": "Frame-Sequence Product",
-      "kind": "pattern",
-      "family": ["product", "interaction", "scroll", "mobile"],
-      "status": "production",
-      "clientReady": true,
-      "live": "../robot/",
-      "preview": "../robot/",
-      "source": "https://github.com/louisalviss/valentine/tree/main/robot",
-      "description": "A lightweight frame sequence gives a photographed product convincing orbit, gesture and camera choreography without requiring real-time 3D on the client device.",
-      "bestFor": ["Hardware launches", "Robotics", "Shoes", "Consumer products"],
-      "stack": ["HTML", "CSS", "JavaScript", "WebP frame sequence"],
-      "tags": ["Frame sequence", "Drag orbit", "Tap gesture", "Scroll camera"],
-      "assetPolicy": "self-hosted",
-      "rendering": "Sprite / image sequence",
-      "primitives": [
-        {"name": "FrameSequenceOrbit", "description": "Maps drag distance to discrete product views to simulate orbit without WebGL."},
-        {"name": "GestureSequence", "description": "Plays a short authored action sequence from a tap and returns to the scroll-controlled state."},
-        {"name": "ScrollCamera", "description": "Adds translation and scale choreography around the same product sequence as the page advances."}
-      ]
+      "id":"kaizen-frame-sequence","index":"014","title":"Frame-Sequence Product","kind":"pattern","family":["product","interaction","scroll","mobile"],"status":"production","clientReady":true,
+      "live":"../patterns/kaizen/","preview":"../patterns/kaizen/","source":"https://github.com/louisalviss/valentine/tree/main/patterns/kaizen",
+      "description":"A lightweight frame sequence gives a photographed product convincing orbit, gesture and camera choreography without requiring real-time 3D on the client device.","bestFor":["Hardware launches","Robotics","Shoes","Consumer products"],"stack":["HTML","CSS","JavaScript","WebP frame sequence"],"tags":["Frame sequence","Drag orbit","Tap gesture","Scroll camera"],"assetPolicy":"self-hosted","rendering":"Sprite / image sequence",
+      "primitives":[{"name":"FrameSequenceOrbit","description":"Maps drag distance to discrete product views to simulate orbit without WebGL."},{"name":"GestureSequence","description":"Plays a short authored action sequence from a tap and returns to the scroll-controlled state."},{"name":"ScrollCamera","description":"Adds translation and scale choreography around the same product sequence as the page advances."}]
     }
   ]
 }

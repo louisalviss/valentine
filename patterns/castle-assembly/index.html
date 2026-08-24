@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Castle Anatomy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div class="grain"></div><div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><span>VALENTINE / STUDY 03</span><b>CASTLE ANATOMY</b></div>
+    <div class="stage"><span id="stageName">WHOLE</span><i></i><b id="stageNow">01</b></div>
+  </header>
+  <div class="rail"><i></i></div>
+  <div class="hint">SCROLL · DRAG TO ROTATE</div>
+
+  <main>
+    <section class="chapter hero"><div class="copy"><span class="kicker">An architectural dissection</span><h1>Một lâu đài<br>là một hệ thống.</h1><p>Không nổ ngẫu nhiên. Mỗi lớp tách ra theo đúng vai trò của nó: tiếp cận, phòng thủ, quan sát, sinh hoạt và quyền lực.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">01 / Whole</span><h2>Nguyên khối</h2><p>Nhìn toàn cảnh trước khi giải phẫu.</p></div></section>
+    <section class="chapter right"><div class="copy small"><span class="kicker">02 / Foundation</span><h2>Nền móng</h2><p>Đảo đá hạ xuống. Phần còn lại bắt đầu nổi như một mô hình trưng bày.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">03 / Approach</span><h2>Đường tiếp cận</h2><p>Cầu và cổng kéo thẳng về phía trước, tạo trục duy nhất dẫn vào thành.</p></div></section>
+    <section class="chapter right"><div class="copy small"><span class="kicker">04 / Defense Ring</span><h2>Vòng phòng thủ</h2><p>Bốn tường thành trượt đúng bốn phương, biến thành một perimeter diagram.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">05 / Watch Network</span><h2>Mạng quan sát</h2><p>Bốn tháp canh bung chéo lên cao — mỗi tháp phụ trách một góc chết.</p></div></section>
+    <section class="chapter right"><div class="copy small"><span class="kicker">06 / Courtyard</span><h2>Sân trung tâm</h2><p>Khoảng rỗng giữa các lớp phòng thủ được lộ ra: đây là vùng phân phối người và hàng hóa.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">07 / Service Wings</span><h2>Bốn cánh chức năng</h2><p>Các wing rời lõi theo bốn hướng để lộ mạng sinh hoạt quanh keep.</p></div></section>
+    <section class="chapter right"><div class="copy small"><span class="kicker">08 / Civic Rooms</span><h2>Tri thức & nghi lễ</h2><p>Thư viện, nhà nguyện và phòng hội đồng mở thành một vòng công cộng.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">09 / Strategic Rooms</span><h2>Chiến tranh & tài sản</h2><p>Kho quân khí, treasury và kho hậu cần kéo sang vòng chiến lược riêng.</p></div></section>
+    <section class="chapter right"><div class="copy small"><span class="kicker">10 / Private Rooms</span><h2>Không gian riêng</h2><p>Phòng ở và chamber đi lên cao hơn, xa vòng công cộng.</p></div></section>
+    <section class="chapter"><div class="copy small"><span class="kicker">11 / Power Spine</span><h2>Trục quyền lực</h2><p>Keep tách thẳng đứng: nền → đại sảnh → tầng trên → phòng chủ. Cấp bậc được biến thành chiều cao.</p></div></section>
+    <section class="chapter final right"><div class="copy small"><span class="kicker">12 / Anatomy</span><h2>Toàn bộ hệ thống</h2><p>Trục vàng là đường tiếp cận và quyền lực. Vòng xanh là phòng thủ. Các phòng trở thành những node chức năng quanh lõi.</p></div></section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
