@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T00:23:54.707Z",
-  "base": "http://127.0.0.1:4173/flow-ab",
+  "generated_at": "2026-08-24T19:19:16.400Z",
+  "base": "http://127.0.0.1:4173/directions/flow-ab",
   "variants": {
     "A-mobile": {
       "key": "A",
@@ -9,8 +9,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/no-flow/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/A-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/no-flow/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/A-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -39,8 +39,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/with-flow/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/B-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/with-flow/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/B-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -69,10 +69,12 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-c/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/C-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-c/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/C-mobile.png",
       "navigationError": null,
-      "consoleErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
       "pageErrors": [],
       "metrics": {
         "title": "SiteOps AI — C / Immersive 3D Archive",
@@ -99,8 +101,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-d/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/D-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-d/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/D-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -129,8 +131,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-e/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/E-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-e/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/E-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -159,8 +161,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-f/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/F-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-f/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/F-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -189,8 +191,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/full-flow-g/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/G-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/full-flow-g/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/G-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -219,8 +221,8 @@
         "width": 390,
         "height": 844
       },
-      "url": "http://127.0.0.1:4173/flow-ab/full-flow-h/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/H-mobile.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/full-flow-h/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/H-mobile.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -249,8 +251,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/no-flow/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/A-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/no-flow/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/A-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -279,8 +281,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/with-flow/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/B-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/with-flow/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/B-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -309,10 +311,12 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-c/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/C-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-c/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/C-desktop.png",
       "navigationError": null,
-      "consoleErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
       "pageErrors": [],
       "metrics": {
         "title": "SiteOps AI — C / Immersive 3D Archive",
@@ -339,8 +343,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-d/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/D-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-d/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/D-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -369,8 +373,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-e/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/E-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-e/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/E-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -399,8 +403,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/flow-f/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/F-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/flow-f/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/F-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -429,8 +433,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/full-flow-g/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/G-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/full-flow-g/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/G-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
@@ -459,8 +463,8 @@
         "width": 1440,
         "height": 900
       },
-      "url": "http://127.0.0.1:4173/flow-ab/full-flow-h/?qa=1",
-      "screenshot": "flow-ab/qa/output/screens/H-desktop.png",
+      "url": "http://127.0.0.1:4173/directions/flow-ab/full-flow-h/?qa=1",
+      "screenshot": "directions/flow-ab/qa/output/screens/H-desktop.png",
       "navigationError": null,
       "consoleErrors": [],
       "pageErrors": [],
