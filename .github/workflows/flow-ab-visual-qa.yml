@@ -7,6 +7,8 @@ on:
       - 'flow-ab/**'
       - 'visual-primitives/**'
       - '.github/workflows/flow-ab-visual-qa.yml'
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
@@ -14,7 +16,10 @@ permissions:
 
 jobs:
   visual-qa:
-    if: github.actor != 'github-actions[bot]'
+    if: >-
+      (github.event_name == 'push' && github.actor != 'github-actions[bot]') ||
+      (github.event_name == 'issues' && contains(github.event.issue.title, '[flow-ab-qa]')) ||
+      github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -26,7 +31,7 @@ jobs:
       - name: Initialize durable status
         run: |
           mkdir -p flow-ab/qa/latest
-          printf 'started_at=%s\nsource_sha=%s\nactor=%s\n' "$(date -u +%FT%TZ)" "$GITHUB_SHA" "$GITHUB_ACTOR" > flow-ab/qa/latest/workflow-status.txt
+          printf 'started_at=%s\nsource_sha=%s\nactor=%s\nevent=%s\n' "$(date -u +%FT%TZ)" "$GITHUB_SHA" "$GITHUB_ACTOR" "$GITHUB_EVENT_NAME" > flow-ab/qa/latest/workflow-status.txt
 
       - name: Commit start receipt
         run: |
