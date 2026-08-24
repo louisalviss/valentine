@@ -1,0 +1,348 @@
+{
+  "views": {
+    "mobile": {
+      "closest_pairs": [
+        {
+          "pair": "D-E",
+          "difference": 14.5
+        },
+        {
+          "pair": "E-G",
+          "difference": 14.61
+        },
+        {
+          "pair": "G-H",
+          "difference": 15.61
+        },
+        {
+          "pair": "E-H",
+          "difference": 16.65
+        },
+        {
+          "pair": "D-G",
+          "difference": 18.07
+        },
+        {
+          "pair": "D-H",
+          "difference": 20.14
+        },
+        {
+          "pair": "B-F",
+          "difference": 21.51
+        },
+        {
+          "pair": "A-G",
+          "difference": 21.85
+        },
+        {
+          "pair": "A-E",
+          "difference": 22.08
+        },
+        {
+          "pair": "A-H",
+          "difference": 24.68
+        }
+      ],
+      "all_pairs": [
+        {
+          "pair": "D-E",
+          "difference": 14.5
+        },
+        {
+          "pair": "E-G",
+          "difference": 14.61
+        },
+        {
+          "pair": "G-H",
+          "difference": 15.61
+        },
+        {
+          "pair": "E-H",
+          "difference": 16.65
+        },
+        {
+          "pair": "D-G",
+          "difference": 18.07
+        },
+        {
+          "pair": "D-H",
+          "difference": 20.14
+        },
+        {
+          "pair": "B-F",
+          "difference": 21.51
+        },
+        {
+          "pair": "A-G",
+          "difference": 21.85
+        },
+        {
+          "pair": "A-E",
+          "difference": 22.08
+        },
+        {
+          "pair": "A-H",
+          "difference": 24.68
+        },
+        {
+          "pair": "B-G",
+          "difference": 25.72
+        },
+        {
+          "pair": "B-E",
+          "difference": 25.94
+        },
+        {
+          "pair": "F-H",
+          "difference": 26.07
+        },
+        {
+          "pair": "B-D",
+          "difference": 27.02
+        },
+        {
+          "pair": "B-H",
+          "difference": 27.19
+        },
+        {
+          "pair": "A-D",
+          "difference": 27.23
+        },
+        {
+          "pair": "A-B",
+          "difference": 27.72
+        },
+        {
+          "pair": "F-G",
+          "difference": 28.52
+        },
+        {
+          "pair": "A-F",
+          "difference": 29.62
+        },
+        {
+          "pair": "E-F",
+          "difference": 30.33
+        },
+        {
+          "pair": "D-F",
+          "difference": 30.73
+        },
+        {
+          "pair": "C-F",
+          "difference": 79.61
+        },
+        {
+          "pair": "B-C",
+          "difference": 82.87
+        },
+        {
+          "pair": "A-C",
+          "difference": 90.0
+        },
+        {
+          "pair": "C-H",
+          "difference": 93.98
+        },
+        {
+          "pair": "C-D",
+          "difference": 97.21
+        },
+        {
+          "pair": "C-G",
+          "difference": 98.76
+        },
+        {
+          "pair": "C-E",
+          "difference": 104.9
+        }
+      ]
+    },
+    "desktop": {
+      "closest_pairs": [
+        {
+          "pair": "E-H",
+          "difference": 17.05
+        },
+        {
+          "pair": "G-H",
+          "difference": 20.83
+        },
+        {
+          "pair": "A-H",
+          "difference": 21.53
+        },
+        {
+          "pair": "B-H",
+          "difference": 22.5
+        },
+        {
+          "pair": "A-G",
+          "difference": 23.21
+        },
+        {
+          "pair": "D-E",
+          "difference": 23.79
+        },
+        {
+          "pair": "D-H",
+          "difference": 24.1
+        },
+        {
+          "pair": "A-E",
+          "difference": 24.16
+        },
+        {
+          "pair": "F-H",
+          "difference": 24.71
+        },
+        {
+          "pair": "E-G",
+          "difference": 24.86
+        }
+      ],
+      "all_pairs": [
+        {
+          "pair": "E-H",
+          "difference": 17.05
+        },
+        {
+          "pair": "G-H",
+          "difference": 20.83
+        },
+        {
+          "pair": "A-H",
+          "difference": 21.53
+        },
+        {
+          "pair": "B-H",
+          "difference": 22.5
+        },
+        {
+          "pair": "A-G",
+          "difference": 23.21
+        },
+        {
+          "pair": "D-E",
+          "difference": 23.79
+        },
+        {
+          "pair": "D-H",
+          "difference": 24.1
+        },
+        {
+          "pair": "A-E",
+          "difference": 24.16
+        },
+        {
+          "pair": "F-H",
+          "difference": 24.71
+        },
+        {
+          "pair": "E-G",
+          "difference": 24.86
+        },
+        {
+          "pair": "B-E",
+          "difference": 25.67
+        },
+        {
+          "pair": "A-D",
+          "difference": 26.65
+        },
+        {
+          "pair": "A-B",
+          "difference": 27.27
+        },
+        {
+          "pair": "B-F",
+          "difference": 29.61
+        },
+        {
+          "pair": "B-D",
+          "difference": 29.63
+        },
+        {
+          "pair": "E-F",
+          "difference": 29.69
+        },
+        {
+          "pair": "D-G",
+          "difference": 29.79
+        },
+        {
+          "pair": "B-G",
+          "difference": 30.63
+        },
+        {
+          "pair": "A-F",
+          "difference": 31.01
+        },
+        {
+          "pair": "F-G",
+          "difference": 31.76
+        },
+        {
+          "pair": "D-F",
+          "difference": 33.03
+        },
+        {
+          "pair": "C-F",
+          "difference": 115.93
+        },
+        {
+          "pair": "B-C",
+          "difference": 121.71
+        },
+        {
+          "pair": "C-D",
+          "difference": 130.12
+        },
+        {
+          "pair": "C-H",
+          "difference": 131.75
+        },
+        {
+          "pair": "C-E",
+          "difference": 132.46
+        },
+        {
+          "pair": "A-C",
+          "difference": 132.53
+        },
+        {
+          "pair": "C-G",
+          "difference": 132.92
+        }
+      ]
+    }
+  },
+  "flag_threshold": 18.0,
+  "flags": [
+    {
+      "view": "mobile",
+      "pair": "D-E",
+      "difference": 14.5
+    },
+    {
+      "view": "mobile",
+      "pair": "E-G",
+      "difference": 14.61
+    },
+    {
+      "view": "mobile",
+      "pair": "E-H",
+      "difference": 16.65
+    },
+    {
+      "view": "mobile",
+      "pair": "G-H",
+      "difference": 15.61
+    },
+    {
+      "view": "desktop",
+      "pair": "E-H",
+      "difference": 17.05
+    }
+  ]
+}

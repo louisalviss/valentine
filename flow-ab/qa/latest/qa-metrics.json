@@ -1,0 +1,499 @@
+{
+  "generated_at": "2026-08-24T00:10:43.001Z",
+  "base": "http://127.0.0.1:4173/flow-ab",
+  "variants": {
+    "A-mobile": {
+      "key": "A",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/no-flow/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/A-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — A / Commercial SaaS Control",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 18,
+          "right": 372,
+          "top": 145,
+          "bottom": 301.5625,
+          "width": 354,
+          "height": 156.5625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 5,
+        "bodyTextLength": 1876
+      }
+    },
+    "B-mobile": {
+      "key": "B",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/with-flow/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/B-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — B / Brutalist Architecture Journal",
+        "scrollWidth": 408,
+        "clientWidth": 390,
+        "horizontalOverflow": true,
+        "h1": {
+          "left": 9,
+          "right": 351,
+          "top": 147,
+          "bottom": 300.140625,
+          "width": 342,
+          "height": 153.140625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1739
+      }
+    },
+    "C-mobile": {
+      "key": "C",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-c/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/C-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — C / Immersive 3D Archive",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 20,
+          "right": 278.046875,
+          "top": 120,
+          "bottom": 310.1875,
+          "width": 258.046875,
+          "height": 190.1875
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 8,
+        "bodyTextLength": 1155
+      }
+    },
+    "D-mobile": {
+      "key": "D",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-d/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/D-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — D / Analog Field Notebook",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 70,
+          "right": 358,
+          "top": 120,
+          "bottom": 348.4375,
+          "width": 288,
+          "height": 228.4375
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 1,
+        "bodyTextLength": 1713
+      }
+    },
+    "E-mobile": {
+      "key": "E",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-e/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/E-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — E / Desktop OS Workspace",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 25,
+          "right": 198.296875,
+          "top": 181.5,
+          "bottom": 213.5,
+          "width": 173.296875,
+          "height": 32
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 6,
+        "bodyTextLength": 822
+      }
+    },
+    "F-mobile": {
+      "key": "F",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-f/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/F-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — F / Sticker Lab",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 20,
+          "right": 370,
+          "top": 141,
+          "bottom": 290.9375,
+          "width": 350,
+          "height": 149.9375
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1406
+      }
+    },
+    "G-mobile": {
+      "key": "G",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/full-flow-g/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/G-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — G / Swiss Technical Spec",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 10,
+          "right": 274.71875,
+          "top": 206,
+          "bottom": 393.625,
+          "width": 264.71875,
+          "height": 187.625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1965
+      }
+    },
+    "H-mobile": {
+      "key": "H",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/full-flow-h/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/H-mobile.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — H / Spatial Network Canvas",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 31,
+          "right": 359,
+          "top": 117,
+          "bottom": 180.34375,
+          "width": 328,
+          "height": 63.34375
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 6,
+        "bodyTextLength": 861
+      }
+    },
+    "A-desktop": {
+      "key": "A",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/no-flow/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/A-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — A / Commercial SaaS Control",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 130,
+          "right": 633.09375,
+          "top": 173,
+          "bottom": 511.375,
+          "width": 503.09375,
+          "height": 338.375
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 8,
+        "bodyTextLength": 1904
+      }
+    },
+    "B-desktop": {
+      "key": "B",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/with-flow/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/B-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — B / Brutalist Architecture Journal",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 14,
+          "right": 968.390625,
+          "top": 147,
+          "bottom": 405.3125,
+          "width": 954.390625,
+          "height": 258.3125
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1766
+      }
+    },
+    "C-desktop": {
+      "key": "C",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-c/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/C-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — C / Immersive 3D Archive",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 86.390625,
+          "right": 542.578125,
+          "top": 208.171875,
+          "bottom": 680.4375,
+          "width": 456.1875,
+          "height": 472.265625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 8,
+        "bodyTextLength": 1241
+      }
+    },
+    "D-desktop": {
+      "key": "D",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-d/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/D-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — D / Analog Field Notebook",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 254,
+          "right": 884,
+          "top": 244.796875,
+          "bottom": 547.1875,
+          "width": 630,
+          "height": 302.390625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 1,
+        "bodyTextLength": 1713
+      }
+    },
+    "E-desktop": {
+      "key": "E",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-e/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/E-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — E / Desktop OS Workspace",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 176.1875,
+          "right": 349.484375,
+          "top": 109.3125,
+          "bottom": 141.3125,
+          "width": 173.296875,
+          "height": 32
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 6,
+        "bodyTextLength": 887
+      }
+    },
+    "F-desktop": {
+      "key": "F",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/flow-f/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/F-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — F / Sticker Lab",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 30,
+          "right": 808.546875,
+          "top": 242.203125,
+          "bottom": 579.90625,
+          "width": 778.546875,
+          "height": 337.703125
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1406
+      }
+    },
+    "G-desktop": {
+      "key": "G",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/full-flow-g/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/G-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — G / Swiss Technical Spec",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 288,
+          "right": 960.703125,
+          "top": 250.625,
+          "bottom": 727.5,
+          "width": 672.703125,
+          "height": 476.875
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 3,
+        "bodyTextLength": 1999
+      }
+    },
+    "H-desktop": {
+      "key": "H",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4173/flow-ab/full-flow-h/?qa=1",
+      "screenshot": "flow-ab/qa/output/screens/H-desktop.png",
+      "navigationError": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "metrics": {
+        "title": "SiteOps AI — H / Spatial Network Canvas",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalOverflow": false,
+        "h1": {
+          "left": 35,
+          "right": 311,
+          "top": 121,
+          "bottom": 194.90625,
+          "width": 276,
+          "height": 73.90625
+        },
+        "h1HorizontalClip": false,
+        "visibleInteractiveCount": 9,
+        "bodyTextLength": 943
+      }
+    }
+  },
+  "interaction_checks": {
+    "E_inspector": {
+      "pass": true,
+      "before": "Performance",
+      "after": "Technical SEO"
+    },
+    "H_canvas": {
+      "pass": true,
+      "before": "Hero asset is heavier than needed.",
+      "after": "Internal links miss the main service page.",
+      "zoomChanged": true
+    }
+  }
+}
