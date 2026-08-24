@@ -1,0 +1,85 @@
+name: Flow AB Visual QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'flow-ab/**'
+      - 'visual-primitives/**'
+      - '.github/workflows/flow-ab-visual-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --save-dev playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local static server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/flow-ab-http.log 2>&1 &
+          echo $! >/tmp/flow-ab-http.pid
+          sleep 2
+          curl --fail http://127.0.0.1:4173/flow-ab/ >/dev/null
+
+      - name: Capture and runtime QA
+        id: runtime
+        continue-on-error: true
+        run: node flow-ab/qa/visual-qa.mjs
+
+      - name: Install Pillow
+        run: python3 -m pip install --quiet pillow
+
+      - name: Analyze silhouette divergence
+        run: python3 flow-ab/qa/analyze-silhouette.py
+
+      - name: Build QA summary
+        if: always()
+        run: |
+          {
+            echo '## Flow A/B Visual QA'
+            echo
+            echo '### Runtime checks'
+            echo '```'
+            cat flow-ab/qa/output/runtime-failures.txt 2>/dev/null || true
+            echo '```'
+            echo
+            cat flow-ab/qa/output/silhouette-report.md 2>/dev/null || true
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flow-ab-visual-qa
+          path: |
+            flow-ab/qa/output/screens/*.png
+            flow-ab/qa/output/qa-metrics.json
+            flow-ab/qa/output/runtime-failures.txt
+            flow-ab/qa/output/silhouette-report.json
+            flow-ab/qa/output/silhouette-report.md
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Fail on runtime regressions
+        if: steps.runtime.outcome == 'failure'
+        run: |
+          echo 'Runtime QA reported failures.'
+          cat flow-ab/qa/output/runtime-failures.txt || true
+          exit 1
