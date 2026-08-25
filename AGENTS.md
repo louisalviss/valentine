@@ -14,6 +14,24 @@ Do not create new project folders at repository root. Root-level legacy demo fol
 
 Do not create `v2`, `v3`, `final`, `final-final` folders. Git history is version control. Promote one canonical implementation and use redirects when a public route moves.
 
+## Context lookup for sites, comparison and showcase
+
+Before answering questions about existing sites, comparing directions, selecting a showcase/demo, or modifying a prior web build, read:
+
+1. `docs/WEB-SHOWCASE-CONTEXT.md`
+2. `docs/site-registry.json`
+3. `web-motion-library/library.json` when pattern-level detail is needed
+4. `web-motion-library/quality.json` when client readiness or quality is relevant
+
+Interpret common references as follows:
+- "web showcase", "site showcase", "motion library" → `web-motion-library/`
+- "site so sánh", "compare site", "A-H" → `directions/flow-ab/`
+- "site mẫu", "pattern", "demo" → canonical source under `patterns/`, resolved through `library.json`
+- "lab", "thử nghiệm" → `labs/`
+- "primitive", "effect tái sử dụng" → `primitives/`
+
+`docs/site-registry.json` is the routing/context index, not a duplicate pattern database. `library.json` remains authoritative for detailed pattern catalog data and `quality.json` remains authoritative for readiness.
+
 ## Visual work
 
 Before creating or materially redesigning a web page, read:
