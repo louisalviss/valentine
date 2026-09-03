@@ -4,7 +4,7 @@
   "feed_authority": {
     "status": "unresolved",
     "source": null,
-    "note": "Connect the user's existing site-library dataset before creating duplicate discovery storage. The Native Content record is a bounded E2E seed selected from the user's current Curated source context, not a replacement feed."
+    "note": "Connect the user's existing site-library dataset before creating duplicate discovery storage. R001 Native Content is the commercial capture/rebuild seed; R002 Motion Primitives is an MIT-licensed source-import validation control, not a replacement feed."
   },
   "fidelity_policy": {
     "visual_pass_min": 98,
@@ -27,16 +27,32 @@
       "id":"native-content",
       "index":"R001",
       "title":"Native Content",
-      "status":"capture-pending",
+      "status":"captured",
       "source_url":"https://www.nativecontent.com/",
       "discovery_source":"https://curated.design/sites/s/4183/",
       "seed_role":"bounded-e2e-seed",
       "reconstruction_mode":"render-equivalent-rebuild",
       "essential_origin_dependency":true,
-      "description":"Animated production-company portfolio selected as the first bounded browser-capture and high-fidelity reconstruction proof.",
+      "description":"Animated production-company portfolio captured with real-browser structural, asset, font and multi-state visual evidence. Reconstruction remains gated by media/provenance review.",
       "tags":["animated","minimal","colorful","dark"],
       "fidelity":{"visual":{"score":0,"status":"pending"},"motion_interaction":{"status":"pending"}},
       "provenance":{"rights_status":"unreviewed"}
+    },
+    {
+      "id":"motion-primitives",
+      "index":"R002",
+      "title":"Motion Primitives",
+      "status":"capture-pending",
+      "source_url":"https://motion-primitives.com/",
+      "discovery_source":"open-source-validation",
+      "seed_role":"source-import-control",
+      "reconstruction_mode":"source-import",
+      "essential_origin_dependency":true,
+      "description":"MIT-licensed animated interface site used to prove exact-source import and measured original-vs-local fidelity before broad reference ingestion.",
+      "tags":["motion","ui","open-source","mit"],
+      "upstream":{"repository":"ibelick/motion-primitives","commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d","license":"MIT"},
+      "fidelity":{"visual":{"score":0,"status":"pending"},"motion_interaction":{"status":"pending"}},
+      "provenance":{"rights_status":"cleared"}
     }
   ]
 }

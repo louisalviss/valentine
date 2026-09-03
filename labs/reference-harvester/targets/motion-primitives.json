@@ -1,0 +1,11 @@
+{
+  "id": "motion-primitives",
+  "source_url": "https://motion-primitives.com/",
+  "discovery_source": "open-source-validation",
+  "reconstruction_mode": "source-import",
+  "upstream": {
+    "repository": "ibelick/motion-primitives",
+    "commit": "92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
+    "license": "MIT"
+  }
+}
