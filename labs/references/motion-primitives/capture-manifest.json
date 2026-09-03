@@ -1,0 +1,143 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "source": {
+    "url": "https://motion-primitives.com/",
+    "discovery_source": "open-source-validation",
+    "captured_at": "2026-09-03T20:41:02.851Z"
+  },
+  "capture": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "states": [
+      {
+        "id": "desktop-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/desktop-initial.png",
+        "original_screenshot": "evidence/desktop-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-25",
+        "kind": "scroll",
+        "ratio": 0.25,
+        "screenshot": "evidence/desktop-scroll-25.png",
+        "original_screenshot": "evidence/desktop-scroll-25.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/desktop-scroll-50.png",
+        "original_screenshot": "evidence/desktop-scroll-50.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-75",
+        "kind": "scroll",
+        "ratio": 0.75,
+        "screenshot": "evidence/desktop-scroll-75.png",
+        "original_screenshot": "evidence/desktop-scroll-75.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "tablet-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/tablet-initial.png",
+        "original_screenshot": "evidence/tablet-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "tablet-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/tablet-scroll-50.png",
+        "original_screenshot": "evidence/tablet-scroll-50.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "mobile-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/mobile-initial.png",
+        "original_screenshot": "evidence/mobile-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "mobile-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/mobile-scroll-50.png",
+        "original_screenshot": "evidence/mobile-scroll-50.png",
+        "reconstruction_screenshot": null
+      }
+    ],
+    "dom": {
+      "path": "evidence/hydrated.html",
+      "sha256": "53cc104870a08118655e83668fc8c3247156b59b06b792d613ab97e511d47a6d",
+      "element_count": 9
+    },
+    "styles_geometry": {
+      "path": "evidence/capture.json",
+      "element_count": 9
+    },
+    "fonts": [],
+    "assets": [],
+    "dependencies": [],
+    "network": [
+      {
+        "name": "https://motion-primitives.com/favicon.ico",
+        "initiatorType": "other",
+        "duration": 20.100000000034925,
+        "transferSize": 32477,
+        "decodedBodySize": 32177
+      },
+      {
+        "name": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+        "initiatorType": "other",
+        "duration": -2.5,
+        "transferSize": 35987,
+        "decodedBodySize": 35687
+      }
+    ]
+  },
+  "reconstruction": {
+    "mode": "source-import",
+    "local_path": "labs/references/motion-primitives/",
+    "essential_origin_dependency": true,
+    "notes": "Capture complete; local reconstruction not yet implemented."
+  },
+  "fidelity": {
+    "visual": {
+      "score": 0,
+      "status": "pending",
+      "method": "original-vs-local screenshot comparison pending",
+      "exceptions": []
+    },
+    "motion_interaction": {
+      "status": "pending",
+      "states_verified": [],
+      "notes": "Animation inventory captured; reconstruction evidence pending."
+    }
+  },
+  "provenance": {
+    "code": "Browser-delivered public frontend evidence captured for analysis; authored-source identity not claimed.",
+    "assets": "External assets inventoried only; reuse rights not inferred from public accessibility.",
+    "rights_status": "unreviewed"
+  }
+}

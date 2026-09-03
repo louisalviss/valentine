@@ -1,0 +1,708 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "source_url": "https://motion-primitives.com/",
+  "discovery_source": "open-source-validation",
+  "captured_at": "2026-09-03T20:41:02.851Z",
+  "browser": "system-chrome+puppeteer-core",
+  "final_url": "https://motion-primitives.com/",
+  "title": "Vercel Security Checkpoint",
+  "hydrated_html_sha256": "53cc104870a08118655e83668fc8c3247156b59b06b792d613ab97e511d47a6d",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "label": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900,
+        "viewport_width": 1440,
+        "viewport_height": 900
+      },
+      "states": [
+        {
+          "id": "desktop-initial",
+          "kind": "initial",
+          "ratio": 0,
+          "screenshot": "evidence/desktop-initial.png"
+        },
+        {
+          "id": "desktop-scroll-25",
+          "kind": "scroll",
+          "ratio": 0.25,
+          "screenshot": "evidence/desktop-scroll-25.png"
+        },
+        {
+          "id": "desktop-scroll-50",
+          "kind": "scroll",
+          "ratio": 0.5,
+          "screenshot": "evidence/desktop-scroll-50.png"
+        },
+        {
+          "id": "desktop-scroll-75",
+          "kind": "scroll",
+          "ratio": 0.75,
+          "screenshot": "evidence/desktop-scroll-75.png"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "label": "tablet",
+      "dimensions": {
+        "width": 768,
+        "height": 1024,
+        "viewport_width": 768,
+        "viewport_height": 1024
+      },
+      "states": [
+        {
+          "id": "tablet-initial",
+          "kind": "initial",
+          "ratio": 0,
+          "screenshot": "evidence/tablet-initial.png"
+        },
+        {
+          "id": "tablet-scroll-50",
+          "kind": "scroll",
+          "ratio": 0.5,
+          "screenshot": "evidence/tablet-scroll-50.png"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "label": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844,
+        "viewport_width": 390,
+        "viewport_height": 844
+      },
+      "states": [
+        {
+          "id": "mobile-initial",
+          "kind": "initial",
+          "ratio": 0,
+          "screenshot": "evidence/mobile-initial.png"
+        },
+        {
+          "id": "mobile-scroll-50",
+          "kind": "scroll",
+          "ratio": 0.5,
+          "screenshot": "evidence/mobile-scroll-50.png"
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "id": "desktop-initial",
+      "kind": "initial",
+      "ratio": 0,
+      "screenshot": "evidence/desktop-initial.png"
+    },
+    {
+      "id": "desktop-scroll-25",
+      "kind": "scroll",
+      "ratio": 0.25,
+      "screenshot": "evidence/desktop-scroll-25.png"
+    },
+    {
+      "id": "desktop-scroll-50",
+      "kind": "scroll",
+      "ratio": 0.5,
+      "screenshot": "evidence/desktop-scroll-50.png"
+    },
+    {
+      "id": "desktop-scroll-75",
+      "kind": "scroll",
+      "ratio": 0.75,
+      "screenshot": "evidence/desktop-scroll-75.png"
+    },
+    {
+      "id": "tablet-initial",
+      "kind": "initial",
+      "ratio": 0,
+      "screenshot": "evidence/tablet-initial.png"
+    },
+    {
+      "id": "tablet-scroll-50",
+      "kind": "scroll",
+      "ratio": 0.5,
+      "screenshot": "evidence/tablet-scroll-50.png"
+    },
+    {
+      "id": "mobile-initial",
+      "kind": "initial",
+      "ratio": 0,
+      "screenshot": "evidence/mobile-initial.png"
+    },
+    {
+      "id": "mobile-scroll-50",
+      "kind": "scroll",
+      "ratio": 0.5,
+      "screenshot": "evidence/mobile-scroll-50.png"
+    }
+  ],
+  "structure": {
+    "title": "Vercel Security Checkpoint",
+    "final_url": "https://motion-primitives.com/",
+    "dimensions": {
+      "width": 1440,
+      "height": 900,
+      "viewport_width": 1440,
+      "viewport_height": 900
+    },
+    "elements": [
+      {
+        "index": 0,
+        "tag": "div",
+        "id": "root",
+        "className": "container",
+        "text": "",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900,
+          "left": 0
+        },
+        "style": {
+          "display": "flex",
+          "position": "static",
+          "overflow": "visible",
+          "width": "1440px",
+          "height": "900px",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+          "fontSize": "19.2px",
+          "fontWeight": "400",
+          "lineHeight": "31.68px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 1,
+        "tag": "main",
+        "id": null,
+        "className": "",
+        "text": "",
+        "rect": {
+          "x": 503.5,
+          "y": 302.921875,
+          "width": 433,
+          "height": 230.171875,
+          "top": 302.921875,
+          "right": 936.5,
+          "bottom": 533.09375,
+          "left": 503.5
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "241px",
+          "height": "102.172px",
+          "margin": "302.922px 503.5px 302.906px",
+          "padding": "64px 96px",
+          "gap": "normal",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+          "fontSize": "19.2px",
+          "fontWeight": "400",
+          "lineHeight": "31.68px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 2,
+        "tag": "p",
+        "id": "header-text",
+        "className": "",
+        "text": "Failed to verify your browser",
+        "rect": {
+          "x": 599.5,
+          "y": 386.109375,
+          "width": 241,
+          "height": 32,
+          "top": 386.109375,
+          "right": 840.5,
+          "bottom": 418.109375,
+          "left": 599.5
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "241px",
+          "height": "32px",
+          "margin": "19.2px 0px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+          "fontSize": "19.2px",
+          "fontWeight": "500",
+          "lineHeight": "32px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgba(0, 0, 0, 0.91)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgba(0, 0, 0, 0.91)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 3,
+        "tag": "p",
+        "id": "failure-text",
+        "className": "metadata-text",
+        "text": "Code 21",
+        "rect": {
+          "x": 599.5,
+          "y": 437.296875,
+          "width": 241,
+          "height": 19.796875,
+          "top": 437.296875,
+          "right": 840.5,
+          "bottom": 457.09375,
+          "left": 599.5
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "241px",
+          "height": "19.7969px",
+          "margin": "4px 0px 12px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "19.8px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "0.7",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 4,
+        "tag": "footer",
+        "id": null,
+        "className": "",
+        "text": "",
+        "rect": {
+          "x": 0,
+          "y": 836,
+          "width": 1440,
+          "height": 64,
+          "top": 836,
+          "right": 1440,
+          "bottom": 900,
+          "left": 0
+        },
+        "style": {
+          "display": "flex",
+          "position": "static",
+          "overflow": "visible",
+          "width": "1440px",
+          "height": "40px",
+          "margin": "0px",
+          "padding": "0px 0px 24px",
+          "gap": "normal",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "16px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 5,
+        "tag": "div",
+        "id": null,
+        "className": "",
+        "text": "",
+        "rect": {
+          "x": 443.34375,
+          "y": 836,
+          "width": 553.296875,
+          "height": 40,
+          "top": 836,
+          "right": 996.640625,
+          "bottom": 876,
+          "left": 443.34375
+        },
+        "style": {
+          "display": "flex",
+          "position": "static",
+          "overflow": "visible",
+          "width": "553.297px",
+          "height": "40px",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "3px",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "16px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 6,
+        "tag": "p",
+        "id": "footer-text",
+        "className": "",
+        "text": "Vercel Security Checkpoint",
+        "rect": {
+          "x": 443.34375,
+          "y": 848,
+          "width": 187.234375,
+          "height": 16,
+          "top": 848,
+          "right": 630.578125,
+          "bottom": 864,
+          "left": 443.34375
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "187.234px",
+          "height": "16px",
+          "margin": "12px 0px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "16px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 7,
+        "tag": "p",
+        "id": null,
+        "className": "hide-mobile",
+        "text": "|",
+        "rect": {
+          "x": 633.578125,
+          "y": 848,
+          "width": 7.203125,
+          "height": 16,
+          "top": 848,
+          "right": 640.78125,
+          "bottom": 864,
+          "left": 633.578125
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "7.20312px",
+          "height": "16px",
+          "margin": "12px 0px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "16px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      },
+      {
+        "index": 8,
+        "tag": "p",
+        "id": null,
+        "className": "",
+        "text": "pdx1::1788468060-AtlY8FHPZofrzylBKzO1wmNFZG8jFn5m",
+        "rect": {
+          "x": 643.78125,
+          "y": 848,
+          "width": 352.859375,
+          "height": 16,
+          "top": 848,
+          "right": 996.640625,
+          "bottom": 864,
+          "left": 643.78125
+        },
+        "style": {
+          "display": "block",
+          "position": "static",
+          "overflow": "visible",
+          "width": "352.859px",
+          "height": "16px",
+          "margin": "12px 0px",
+          "padding": "0px",
+          "gap": "normal",
+          "fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "200",
+          "lineHeight": "16px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "color": "rgb(102, 102, 102)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "border": "0px none rgb(102, 102, 102)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transform": "none",
+          "zIndex": "auto"
+        }
+      }
+    ],
+    "fonts": [],
+    "assets": [],
+    "dependencies": [],
+    "animations": [],
+    "resources": [
+      {
+        "name": "https://motion-primitives.com/favicon.ico",
+        "initiatorType": "other",
+        "duration": 20.100000000034925,
+        "transferSize": 32477,
+        "decodedBodySize": 32177
+      },
+      {
+        "name": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+        "initiatorType": "other",
+        "duration": -2.5,
+        "transferSize": 35987,
+        "decodedBodySize": 35687
+      }
+    ],
+    "links": [
+      {
+        "href": "https://vercel.link/security-checkpoint",
+        "text": "Website owner? Click here to fix"
+      }
+    ]
+  },
+  "responses": [
+    {
+      "url": "https://motion-primitives.com/",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "document",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://motion-primitives.com/favicon.ico",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "other",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.wasm",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/request-challenge",
+      "status": 708,
+      "method": "POST",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
+      "url": "https://motion-primitives.com/",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "document",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://motion-primitives.com/favicon.ico",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "other",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.wasm",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/request-challenge",
+      "status": 708,
+      "method": "POST",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
+      "url": "https://motion-primitives.com/",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "document",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://motion-primitives.com/favicon.ico",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "other",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.wasm",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/request-challenge",
+      "status": 708,
+      "method": "POST",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
+      "url": "https://motion-primitives.com/",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "document",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://motion-primitives.com/favicon.ico",
+      "status": 429,
+      "method": "GET",
+      "resource_type": "other",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.wasm",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://motion-primitives.com/.well-known/vercel/security/request-challenge",
+      "status": 708,
+      "method": "POST",
+      "resource_type": "fetch",
+      "content_type": ""
+    }
+  ]
+}
