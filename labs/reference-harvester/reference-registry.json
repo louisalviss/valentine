@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-04",
+  "feed_authority": {
+    "status": "unresolved",
+    "source": null,
+    "note": "Connect the user's existing site-library dataset before creating duplicate discovery storage."
+  },
+  "fidelity_policy": {
+    "visual_pass_min": 98,
+    "visual_review_min": 95,
+    "motion_requires_separate_evidence": true,
+    "required_viewports": [
+      {"width":390,"height":844},
+      {"width":768,"height":1024},
+      {"width":1440,"height":900}
+    ]
+  },
+  "discovery_adapters": [
+    {"id":"getlayers","url":"https://www.getlayers.ai/","role":"discovery","enabled":false},
+    {"id":"curated","url":"https://curated.design/","role":"discovery","enabled":false},
+    {"id":"60fps","url":"https://60fps.design/","role":"discovery","enabled":false},
+    {"id":"swiped","url":"https://swiped.design/","role":"discovery","enabled":false}
+  ],
+  "references": []
+}

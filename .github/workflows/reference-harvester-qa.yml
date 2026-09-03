@@ -1,0 +1,85 @@
+name: Reference Harvester QA
+
+on:
+  push:
+    branches: [main, 'feature/**']
+    paths:
+      - 'labs/reference-harvester/**'
+      - 'labs/references/**'
+      - 'web-motion-library/references.html'
+      - 'web-motion-library/references.js'
+      - '.github/workflows/reference-harvester-qa.yml'
+  pull_request:
+    paths:
+      - 'labs/reference-harvester/**'
+      - 'labs/references/**'
+      - 'web-motion-library/references.html'
+      - 'web-motion-library/references.js'
+      - '.github/workflows/reference-harvester-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate harvester registry and manifests
+        run: node labs/reference-harvester/validate.mjs
+
+      - name: Protect canonical pattern catalog
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('web-motion-library/library.json').read_text())
+          patterns=data['patterns']
+          assert len(patterns)==14, f'expected 14 canonical patterns, got {len(patterns)}'
+          assert all(p['live'].startswith('../patterns/') for p in patterns)
+          print('CANONICAL_LIBRARY_UNCHANGED', len(patterns))
+          PY
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 4173 --directory . >/tmp/reference-server.log 2>&1 &
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:4173/web-motion-library/references.html >/tmp/references.html && break
+            sleep 1
+          done
+          grep -q 'data-build="reference-harvester-v1"' /tmp/references.html
+          curl -fsS http://127.0.0.1:4173/labs/reference-harvester/reference-registry.json >/tmp/reference-registry.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/reference-registry.json'))
+          assert d['fidelity_policy']['visual_pass_min']==98
+          assert d['fidelity_policy']['motion_requires_separate_evidence'] is True
+          print('REFERENCE_ROUTE_OK', d['feed_authority']['status'])
+          PY
+
+      - name: Capture reference gallery responsive QA
+        run: |
+          set -euo pipefail
+          CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          mkdir -p qa-reference
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=390,844 --screenshot=qa-reference/mobile-390x844.png http://127.0.0.1:4173/web-motion-library/references.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=768,1024 --screenshot=qa-reference/tablet-768x1024.png http://127.0.0.1:4173/web-motion-library/references.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot=qa-reference/desktop-1440x900.png http://127.0.0.1:4173/web-motion-library/references.html
+          test -s qa-reference/mobile-390x844.png
+          test -s qa-reference/tablet-768x1024.png
+          test -s qa-reference/desktop-1440x900.png
+
+      - name: Upload reference QA screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-harvester-qa-${{ github.run_id }}
+          path: qa-reference/
+          retention-days: 2
+
+      - name: PASS
+        run: echo 'REFERENCE_HARVESTER_QA_OK'
