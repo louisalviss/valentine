@@ -1,0 +1,99 @@
+name: Reference Fidelity QA
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/references/**'
+      - 'labs/reference-harvester/capture-local.mjs'
+      - 'labs/reference-harvester/measure-fidelity.py'
+      - '.github/workflows/reference-fidelity-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fidelity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Find runnable reconstruction candidates
+        id: candidates
+        run: |
+          set -euo pipefail
+          mapfile -t items < <(find labs/references -mindepth 2 -maxdepth 2 -name index.html -printf '%h\n' 2>/dev/null | sort)
+          if [ "${#items[@]}" -eq 0 ]; then
+            echo 'has_candidates=false' >> "$GITHUB_OUTPUT"
+            echo 'NO_RUNNABLE_RECONSTRUCTIONS'
+            exit 0
+          fi
+          echo 'has_candidates=true' >> "$GITHUB_OUTPUT"
+          printf '%s\n' "${items[@]}" | sed 's#labs/references/##' >/tmp/reference-candidates.txt
+          cat /tmp/reference-candidates.txt
+
+      - name: Install fidelity runtime
+        if: steps.candidates.outputs.has_candidates == 'true'
+        run: |
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Start local Valentine server
+        if: steps.candidates.outputs.has_candidates == 'true'
+        run: |
+          python3 -m http.server 4173 --directory . >/tmp/reference-fidelity-server.log 2>&1 &
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:4173/web-motion-library/references.html >/dev/null && break
+            sleep 1
+          done
+
+      - name: Capture local states and measure fidelity
+        if: steps.candidates.outputs.has_candidates == 'true'
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          while read -r id; do
+            test -n "$id" || continue
+            node labs/reference-harvester/capture-local.mjs "$id" "http://127.0.0.1:4173/labs/references/$id/"
+            python3 labs/reference-harvester/measure-fidelity.py "$id"
+          done </tmp/reference-candidates.txt
+
+      - name: Upload fidelity evidence
+        if: steps.candidates.outputs.has_candidates == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-fidelity-${{ github.run_id }}
+          path: |
+            labs/references/*/evidence/local/
+            labs/references/*/evidence/fidelity.json
+          retention-days: 5
+
+      - name: Enforce 98 minimum for candidates claiming visual PASS
+        if: steps.candidates.outputs.has_candidates == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for manifest_path in Path('labs/references').glob('*/capture-manifest.json'):
+              ref=manifest_path.parent
+              if not (ref/'index.html').exists():
+                  continue
+              manifest=json.loads(manifest_path.read_text())
+              report_path=ref/'evidence'/'fidelity.json'
+              if not report_path.exists():
+                  raise SystemExit(f'{ref.name}: fidelity report missing')
+              report=json.loads(report_path.read_text())
+              claimed=manifest.get('fidelity',{}).get('visual',{}).get('status')
+              if claimed=='pass' and (report.get('status')!='pass' or float(report.get('minimum_score',0))<98):
+                  raise SystemExit(f'{ref.name}: manifest claims PASS but measured minimum is {report.get("minimum_score")}')
+              print(ref.name, 'measured', report['minimum_score'], report['status'], 'manifest', claimed)
+          PY
+
+      - name: PASS
+        run: echo 'REFERENCE_FIDELITY_QA_OK'

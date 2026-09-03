@@ -90,6 +90,18 @@ if (fs.existsSync(referencesDir)) {
     const motionStatus = data.fidelity?.motion_interaction?.status;
     if (visualStatus === 'pass' && score < 98) fail(`${entry.name}: manifest visual PASS requires score >=98`);
     if (visualStatus === 'pass' && !['pass', 'review', 'not-applicable'].includes(motionStatus)) fail(`${entry.name}: static PASS must not silently imply motion PASS; motion evidence status required`);
+
+    if (visualStatus === 'pass') {
+      const reportPath = path.join(referencesDir, entry.name, 'evidence', 'fidelity.json');
+      if (!fs.existsSync(reportPath)) {
+        fail(`${entry.name}: visual PASS requires measured evidence/fidelity.json`);
+      } else {
+        const report = readJson(reportPath);
+        if (report && (report.status !== 'pass' || Number(report.minimum_score) < 98)) {
+          fail(`${entry.name}: visual PASS conflicts with measured minimum ${report.minimum_score}`);
+        }
+      }
+    }
   }
 }
 
