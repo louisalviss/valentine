@@ -32,7 +32,7 @@ const browser = await puppeteer.launch({
 });
 
 const page = await browser.newPage();
-page.setDefaultNavigationTimeout(60000);
+page.setDefaultNavigationTimeout(30000);
 page.setDefaultTimeout(30000);
 
 const responses = [];
@@ -49,10 +49,17 @@ page.on('response', response => {
 
 async function settle(ms=1200){ await new Promise(resolve => setTimeout(resolve, ms)); }
 
+async function navigate(){
+  // DOM readiness is authoritative. Portfolio/video sites may keep media requests
+  // active indefinitely, so network-idle is a bounded grace period only.
+  await page.goto(target.source_url, { waitUntil:'domcontentloaded', timeout:30000 });
+  try { await page.waitForNetworkIdle({ idleTime:800, timeout:7000 }); } catch {}
+  await settle(1200);
+}
+
 async function captureViewport(width, height, label, scrollRatios=[0]) {
   await page.setViewport({ width, height, deviceScaleFactor: 1 });
-  await page.goto(target.source_url, { waitUntil: 'networkidle2' });
-  await settle();
+  await navigate();
   const dimensions = await page.evaluate(() => ({
     width: document.documentElement.scrollWidth,
     height: document.documentElement.scrollHeight,
@@ -80,8 +87,7 @@ const mobile = await captureViewport(390, 844, 'mobile', [0,.5]);
 
 // Return to desktop for structural evidence.
 await page.setViewport({ width:1440, height:900, deviceScaleFactor:1 });
-await page.goto(target.source_url, { waitUntil:'networkidle2' });
-await settle(1500);
+await navigate();
 
 const structural = await page.evaluate(() => {
   const pickStyle = style => ({
@@ -123,8 +129,8 @@ const structural = await page.evaluate(() => {
   const animations = document.getAnimations().slice(0,400).map((a,index)=>{
     let timing={};
     try { timing=a.effect?.getTiming?.()||{}; } catch {}
-    const target=a.effect?.target;
-    return {index,playState:a.playState,currentTime:a.currentTime,playbackRate:a.playbackRate,timing,target:target?{tag:target.tagName?.toLowerCase(),id:target.id||null,className:typeof target.className==='string'?target.className.slice(0,180):null}:null};
+    const animationTarget=a.effect?.target;
+    return {index,playState:a.playState,currentTime:a.currentTime,playbackRate:a.playbackRate,timing,target:animationTarget?{tag:animationTarget.tagName?.toLowerCase(),id:animationTarget.id||null,className:typeof animationTarget.className==='string'?animationTarget.className.slice(0,180):null}:null};
   });
   const resources = performance.getEntriesByType('resource').map(r=>({name:r.name,initiatorType:r.initiatorType,duration:r.duration,transferSize:r.transferSize,decodedBodySize:r.decodedBodySize}));
   return {
