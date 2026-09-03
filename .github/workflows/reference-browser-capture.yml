@@ -1,0 +1,64 @@
+name: Reference Browser Capture
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/targets/**'
+      - 'labs/reference-harvester/capture-browser.mjs'
+      - '.github/workflows/reference-browser-capture.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install browser capture runtime
+        run: npm install --no-save puppeteer-core@24.16.0
+
+      - name: Capture configured public references
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          found=0
+          for target in labs/reference-harvester/targets/*.json; do
+            [ -e "$target" ] || continue
+            found=1
+            node labs/reference-harvester/capture-browser.mjs "$target"
+          done
+          test "$found" = 1
+          node labs/reference-harvester/validate.mjs
+
+      - name: Commit browser evidence to feature branch
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add labs/references/
+          if git diff --cached --quiet; then
+            echo 'NO_CAPTURE_DIFF'
+            exit 0
+          fi
+          git commit -m 'capture: persist reference browser evidence'
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'CAPTURE_EVIDENCE_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'CAPTURE_EVIDENCE_PUSH_FAILED' >&2
+          exit 1
