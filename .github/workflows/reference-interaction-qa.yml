@@ -6,6 +6,7 @@ on:
     paths:
       - 'labs/reference-harvester/compare-interaction.mjs'
       - 'labs/reference-harvester/measure-interaction.py'
+      - 'labs/reference-harvester/validate.mjs'
       - '.github/workflows/reference-interaction-qa.yml'
   workflow_dispatch:
 
@@ -113,7 +114,6 @@ jobs:
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
           item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score']}
-          # Rights/origin dependency remain blockers; interaction PASS must not mark overall verified.
           item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
           print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'overall_status',item['status'])
@@ -121,6 +121,7 @@ jobs:
           node labs/reference-harvester/validate.mjs
 
       - name: Upload interaction evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: reference-interaction-${{ github.run_id }}
