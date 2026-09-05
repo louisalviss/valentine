@@ -1,10 +1,18 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "reference_id": "motion-primitives",
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
   "visual_state_policy": "deterministic-static",
+  "visual_exclusion_definitions": [
+    {
+      "id": "cursor-demo-pinterest-media",
+      "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+      "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+      "rights_status": "excluded-unverified-third-party-media"
+    }
+  ],
   "capture_timing_policy": "network-idle-800ms-7s+settle-1200ms+state-450ms",
-  "captured_at": "2026-09-05T08:22:14.248Z",
+  "captured_at": "2026-09-05T08:46:27.096Z",
   "states": [
     {
       "id": "desktop-initial",
@@ -19,7 +27,37 @@
         "scroll_x": 0,
         "scroll_y": 0
       },
-      "screenshot": "evidence/local/desktop-initial.png"
+      "screenshot": "evidence/local/desktop-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 3677,
+                "width": 192,
+                "height": 208,
+                "top": 3677,
+                "right": 811,
+                "bottom": 3885,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 3677,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-25",
@@ -34,7 +72,37 @@
         "scroll_x": 0,
         "scroll_y": 1676
       },
-      "screenshot": "evidence/local/desktop-scroll-25.png"
+      "screenshot": "evidence/local/desktop-scroll-25.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 2001,
+                "width": 192,
+                "height": 208,
+                "top": 2001,
+                "right": 811,
+                "bottom": 2209,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 2001,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-50",
@@ -49,7 +117,37 @@
         "scroll_x": 0,
         "scroll_y": 3351
       },
-      "screenshot": "evidence/local/desktop-scroll-50.png"
+      "screenshot": "evidence/local/desktop-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 326,
+                "width": 192,
+                "height": 208,
+                "top": 326,
+                "right": 811,
+                "bottom": 534,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 326,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-75",
@@ -64,7 +162,37 @@
         "scroll_x": 0,
         "scroll_y": 5027
       },
-      "screenshot": "evidence/local/desktop-scroll-75.png"
+      "screenshot": "evidence/local/desktop-scroll-75.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": -1350,
+                "width": 192,
+                "height": 208,
+                "top": -1350,
+                "right": 811,
+                "bottom": -1142,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 0,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tablet-initial",
@@ -79,7 +207,37 @@
         "scroll_x": 0,
         "scroll_y": 0
       },
-      "screenshot": "evidence/local/tablet-initial.png"
+      "screenshot": "evidence/local/tablet-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 283,
+                "y": 3689,
+                "width": 192,
+                "height": 208,
+                "top": 3689,
+                "right": 475,
+                "bottom": 3897,
+                "left": 283
+              },
+              "clipped_rect": {
+                "x": 283,
+                "y": 3689,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tablet-scroll-50",
@@ -94,7 +252,37 @@
         "scroll_x": 0,
         "scroll_y": 3295
       },
-      "screenshot": "evidence/local/tablet-scroll-50.png"
+      "screenshot": "evidence/local/tablet-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 283,
+                "y": 394,
+                "width": 192,
+                "height": 208,
+                "top": 394,
+                "right": 475,
+                "bottom": 602,
+                "left": 283
+              },
+              "clipped_rect": {
+                "x": 283,
+                "y": 394,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mobile-initial",
@@ -109,7 +297,37 @@
         "scroll_x": 0,
         "scroll_y": 0
       },
-      "screenshot": "evidence/local/mobile-initial.png"
+      "screenshot": "evidence/local/mobile-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 94,
+                "y": 3773,
+                "width": 192,
+                "height": 208,
+                "top": 3773,
+                "right": 286,
+                "bottom": 3981,
+                "left": 94
+              },
+              "clipped_rect": {
+                "x": 94,
+                "y": 3773,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mobile-scroll-50",
@@ -124,7 +342,37 @@
         "scroll_x": 0,
         "scroll_y": 3427
       },
-      "screenshot": "evidence/local/mobile-scroll-50.png"
+      "screenshot": "evidence/local/mobile-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 94,
+                "y": 346,
+                "width": 192,
+                "height": 208,
+                "top": 346,
+                "right": 286,
+                "bottom": 554,
+                "left": 94
+              },
+              "clipped_rect": {
+                "x": 94,
+                "y": 346,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

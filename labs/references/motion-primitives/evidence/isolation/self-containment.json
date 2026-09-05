@@ -4,19 +4,14 @@
   "policy": "abort all http(s) requests whose hostname is not localhost or 127.0.0.1",
   "comparison_basis": "normal local runtime vs the same local runtime with all non-local HTTP(S) requests aborted",
   "visual_pass_min": 98.0,
-  "minimum_score": 96.6271,
-  "mean_score": 99.2812,
-  "visual_status": "fail",
+  "minimum_score": 99.921,
+  "mean_score": 99.9836,
+  "visual_status": "pass",
   "interaction_status": "pass",
-  "network_status": "fail",
-  "status": "fail",
-  "blocked_request_count": 22,
-  "blocked_origins": [
-    "https://assets.onedollarstats.com",
-    "https://i.pinimg.com",
-    "https://i.scdn.co",
-    "https://images.beta.cosmos.so"
-  ],
+  "network_status": "pass",
+  "status": "pass",
+  "blocked_request_count": 0,
+  "blocked_origins": [],
   "states": [
     {
       "id": "desktop-initial",
@@ -36,9 +31,9 @@
     },
     {
       "id": "desktop-scroll-50",
-      "ssim": 99.1534,
-      "pixel_similarity": 99.8041,
-      "score": 99.1534,
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
       "local": "evidence/local/desktop-scroll-50.png",
       "isolated": "evidence/isolation/desktop-scroll-50.png"
     },
@@ -60,9 +55,9 @@
     },
     {
       "id": "tablet-scroll-50",
-      "ssim": 98.6008,
-      "pixel_similarity": 99.6772,
-      "score": 98.6008,
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
       "local": "evidence/local/tablet-scroll-50.png",
       "isolated": "evidence/isolation/tablet-scroll-50.png"
     },
@@ -76,9 +71,9 @@
     },
     {
       "id": "mobile-scroll-50",
-      "ssim": 96.6271,
-      "pixel_similarity": 99.2287,
-      "score": 96.6271,
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
       "local": "evidence/local/mobile-scroll-50.png",
       "isolated": "evidence/isolation/mobile-scroll-50.png"
     }
@@ -99,8 +94,8 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": 1.299999999953343,
-        "sample_count": 15
+        "click_to_dialog_ms": 2.400000000000091,
+        "sample_count": 16
       },
       "animation_signature": [
         {
@@ -126,7 +121,7 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": 12.90000000001146,
+        "click_to_dialog_ms": 9.900000000000091,
         "sample_count": 22
       },
       "animation_signature": [

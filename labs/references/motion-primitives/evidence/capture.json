@@ -1,16 +1,24 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "reference_id": "motion-primitives",
   "source_url": "https://motion-primitives.com/",
   "capture_url": "http://127.0.0.1:4180/",
   "baseline_kind": "source-build-control",
   "visual_state_policy": "deterministic-static",
   "discovery_source": "open-source-validation",
-  "captured_at": "2026-09-05T08:20:52.894Z",
+  "captured_at": "2026-09-05T08:44:48.585Z",
   "browser": "system-chrome+puppeteer-core",
   "final_url": "http://127.0.0.1:4180/",
   "title": "Motion-Primitives - UI kit to make beautiful, animated interfaces, faster.",
-  "hydrated_html_sha256": "e2a81e3a12063c7dee485312a5fc8bec59f31fda12040044a6bf96ff8607cda8",
+  "hydrated_html_sha256": "bf9ade4e6f5c809680924b0da984dbe303d456409be7311270612b3b258e3c88",
+  "visual_exclusion_definitions": [
+    {
+      "id": "cursor-demo-pinterest-media",
+      "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+      "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+      "rights_status": "excluded-unverified-third-party-media"
+    }
+  ],
   "viewports": [
     {
       "width": 1440,
@@ -27,25 +35,145 @@
           "id": "desktop-initial",
           "kind": "initial",
           "ratio": 0,
-          "screenshot": "evidence/desktop-initial.png"
+          "screenshot": "evidence/desktop-initial.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 619,
+                    "y": 3677,
+                    "width": 192,
+                    "height": 208,
+                    "top": 3677,
+                    "right": 811,
+                    "bottom": 3885,
+                    "left": 619
+                  },
+                  "clipped_rect": {
+                    "x": 619,
+                    "y": 3677,
+                    "width": 192,
+                    "height": 0
+                  },
+                  "visible": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "desktop-scroll-25",
           "kind": "scroll",
           "ratio": 0.25,
-          "screenshot": "evidence/desktop-scroll-25.png"
+          "screenshot": "evidence/desktop-scroll-25.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 619,
+                    "y": 2001,
+                    "width": 192,
+                    "height": 208,
+                    "top": 2001,
+                    "right": 811,
+                    "bottom": 2209,
+                    "left": 619
+                  },
+                  "clipped_rect": {
+                    "x": 619,
+                    "y": 2001,
+                    "width": 192,
+                    "height": 0
+                  },
+                  "visible": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "desktop-scroll-50",
           "kind": "scroll",
           "ratio": 0.5,
-          "screenshot": "evidence/desktop-scroll-50.png"
+          "screenshot": "evidence/desktop-scroll-50.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 619,
+                    "y": 326,
+                    "width": 192,
+                    "height": 208,
+                    "top": 326,
+                    "right": 811,
+                    "bottom": 534,
+                    "left": 619
+                  },
+                  "clipped_rect": {
+                    "x": 619,
+                    "y": 326,
+                    "width": 192,
+                    "height": 208
+                  },
+                  "visible": true
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "desktop-scroll-75",
           "kind": "scroll",
           "ratio": 0.75,
-          "screenshot": "evidence/desktop-scroll-75.png"
+          "screenshot": "evidence/desktop-scroll-75.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 619,
+                    "y": -1350,
+                    "width": 192,
+                    "height": 208,
+                    "top": -1350,
+                    "right": 811,
+                    "bottom": -1142,
+                    "left": 619
+                  },
+                  "clipped_rect": {
+                    "x": 619,
+                    "y": 0,
+                    "width": 192,
+                    "height": 0
+                  },
+                  "visible": false
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -64,13 +192,73 @@
           "id": "tablet-initial",
           "kind": "initial",
           "ratio": 0,
-          "screenshot": "evidence/tablet-initial.png"
+          "screenshot": "evidence/tablet-initial.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 283,
+                    "y": 3689,
+                    "width": 192,
+                    "height": 208,
+                    "top": 3689,
+                    "right": 475,
+                    "bottom": 3897,
+                    "left": 283
+                  },
+                  "clipped_rect": {
+                    "x": 283,
+                    "y": 3689,
+                    "width": 192,
+                    "height": 0
+                  },
+                  "visible": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "tablet-scroll-50",
           "kind": "scroll",
           "ratio": 0.5,
-          "screenshot": "evidence/tablet-scroll-50.png"
+          "screenshot": "evidence/tablet-scroll-50.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 283,
+                    "y": 394,
+                    "width": 192,
+                    "height": 208,
+                    "top": 394,
+                    "right": 475,
+                    "bottom": 602,
+                    "left": 283
+                  },
+                  "clipped_rect": {
+                    "x": 283,
+                    "y": 394,
+                    "width": 192,
+                    "height": 208
+                  },
+                  "visible": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -89,13 +277,73 @@
           "id": "mobile-initial",
           "kind": "initial",
           "ratio": 0,
-          "screenshot": "evidence/mobile-initial.png"
+          "screenshot": "evidence/mobile-initial.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 94,
+                    "y": 3773,
+                    "width": 192,
+                    "height": 208,
+                    "top": 3773,
+                    "right": 286,
+                    "bottom": 3981,
+                    "left": 94
+                  },
+                  "clipped_rect": {
+                    "x": 94,
+                    "y": 3773,
+                    "width": 192,
+                    "height": 0
+                  },
+                  "visible": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "mobile-scroll-50",
           "kind": "scroll",
           "ratio": 0.5,
-          "screenshot": "evidence/mobile-scroll-50.png"
+          "screenshot": "evidence/mobile-scroll-50.png",
+          "visual_exclusions": [
+            {
+              "id": "cursor-demo-pinterest-media",
+              "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+              "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+              "rights_status": "excluded-unverified-third-party-media",
+              "matched_elements": 1,
+              "rects": [
+                {
+                  "rect": {
+                    "x": 94,
+                    "y": 346,
+                    "width": 192,
+                    "height": 208,
+                    "top": 346,
+                    "right": 286,
+                    "bottom": 554,
+                    "left": 94
+                  },
+                  "clipped_rect": {
+                    "x": 94,
+                    "y": 346,
+                    "width": 192,
+                    "height": 208
+                  },
+                  "visible": true
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -105,49 +353,289 @@
       "id": "desktop-initial",
       "kind": "initial",
       "ratio": 0,
-      "screenshot": "evidence/desktop-initial.png"
+      "screenshot": "evidence/desktop-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 3677,
+                "width": 192,
+                "height": 208,
+                "top": 3677,
+                "right": 811,
+                "bottom": 3885,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 3677,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-25",
       "kind": "scroll",
       "ratio": 0.25,
-      "screenshot": "evidence/desktop-scroll-25.png"
+      "screenshot": "evidence/desktop-scroll-25.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 2001,
+                "width": 192,
+                "height": 208,
+                "top": 2001,
+                "right": 811,
+                "bottom": 2209,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 2001,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-50",
       "kind": "scroll",
       "ratio": 0.5,
-      "screenshot": "evidence/desktop-scroll-50.png"
+      "screenshot": "evidence/desktop-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": 326,
+                "width": 192,
+                "height": 208,
+                "top": 326,
+                "right": 811,
+                "bottom": 534,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 326,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "desktop-scroll-75",
       "kind": "scroll",
       "ratio": 0.75,
-      "screenshot": "evidence/desktop-scroll-75.png"
+      "screenshot": "evidence/desktop-scroll-75.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 619,
+                "y": -1350,
+                "width": 192,
+                "height": 208,
+                "top": -1350,
+                "right": 811,
+                "bottom": -1142,
+                "left": 619
+              },
+              "clipped_rect": {
+                "x": 619,
+                "y": 0,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tablet-initial",
       "kind": "initial",
       "ratio": 0,
-      "screenshot": "evidence/tablet-initial.png"
+      "screenshot": "evidence/tablet-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 283,
+                "y": 3689,
+                "width": 192,
+                "height": 208,
+                "top": 3689,
+                "right": 475,
+                "bottom": 3897,
+                "left": 283
+              },
+              "clipped_rect": {
+                "x": 283,
+                "y": 3689,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tablet-scroll-50",
       "kind": "scroll",
       "ratio": 0.5,
-      "screenshot": "evidence/tablet-scroll-50.png"
+      "screenshot": "evidence/tablet-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 283,
+                "y": 394,
+                "width": 192,
+                "height": 208,
+                "top": 394,
+                "right": 475,
+                "bottom": 602,
+                "left": 283
+              },
+              "clipped_rect": {
+                "x": 283,
+                "y": 394,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mobile-initial",
       "kind": "initial",
       "ratio": 0,
-      "screenshot": "evidence/mobile-initial.png"
+      "screenshot": "evidence/mobile-initial.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 94,
+                "y": 3773,
+                "width": 192,
+                "height": 208,
+                "top": 3773,
+                "right": 286,
+                "bottom": 3981,
+                "left": 94
+              },
+              "clipped_rect": {
+                "x": 94,
+                "y": 3773,
+                "width": 192,
+                "height": 0
+              },
+              "visible": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mobile-scroll-50",
       "kind": "scroll",
       "ratio": 0.5,
-      "screenshot": "evidence/mobile-scroll-50.png"
+      "screenshot": "evidence/mobile-scroll-50.png",
+      "visual_exclusions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media",
+          "matched_elements": 1,
+          "rects": [
+            {
+              "rect": {
+                "x": 94,
+                "y": 346,
+                "width": 192,
+                "height": 208,
+                "top": 346,
+                "right": 286,
+                "bottom": 554,
+                "left": 94
+              },
+              "clipped_rect": {
+                "x": 94,
+                "y": 346,
+                "width": 192,
+                "height": 208
+              },
+              "visible": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "structure": {
@@ -5670,14 +6158,14 @@
         "className": "flex w-max",
         "text": "",
         "rect": {
-          "x": 121.5,
+          "x": 118.5,
           "y": 3083,
           "width": 1704,
           "height": 120,
           "top": 3083,
-          "right": 1825.5,
+          "right": 1822.5,
           "bottom": 3203,
-          "left": 121.5
+          "left": 118.5
         },
         "style": {
           "display": "flex",
@@ -5701,7 +6189,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, -209.5, 0)",
+          "transform": "matrix(1, 0, 0, 1, -212.5, 0)",
           "zIndex": "auto"
         }
       },
@@ -5712,14 +6200,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 121.5,
+          "x": 118.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 241.5,
+          "right": 238.5,
           "bottom": 3203,
-          "left": 121.5
+          "left": 118.5
         },
         "style": {
           "display": "block",
@@ -5754,14 +6242,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 265.5,
+          "x": 262.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 385.5,
+          "right": 382.5,
           "bottom": 3203,
-          "left": 265.5
+          "left": 262.5
         },
         "style": {
           "display": "block",
@@ -5796,14 +6284,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 409.5,
+          "x": 406.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 529.5,
+          "right": 526.5,
           "bottom": 3203,
-          "left": 409.5
+          "left": 406.5
         },
         "style": {
           "display": "block",
@@ -5838,14 +6326,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 553.5,
+          "x": 550.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 673.5,
+          "right": 670.5,
           "bottom": 3203,
-          "left": 553.5
+          "left": 550.5
         },
         "style": {
           "display": "block",
@@ -5880,14 +6368,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 697.5,
+          "x": 694.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 817.5,
+          "right": 814.5,
           "bottom": 3203,
-          "left": 697.5
+          "left": 694.5
         },
         "style": {
           "display": "block",
@@ -5922,14 +6410,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 841.5,
+          "x": 838.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 961.5,
+          "right": 958.5,
           "bottom": 3203,
-          "left": 841.5
+          "left": 838.5
         },
         "style": {
           "display": "block",
@@ -5964,14 +6452,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 985.5,
+          "x": 982.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1105.5,
+          "right": 1102.5,
           "bottom": 3203,
-          "left": 985.5
+          "left": 982.5
         },
         "style": {
           "display": "block",
@@ -6006,14 +6494,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1129.5,
+          "x": 1126.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1249.5,
+          "right": 1246.5,
           "bottom": 3203,
-          "left": 1129.5
+          "left": 1126.5
         },
         "style": {
           "display": "block",
@@ -6048,14 +6536,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1273.5,
+          "x": 1270.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1393.5,
+          "right": 1390.5,
           "bottom": 3203,
-          "left": 1273.5
+          "left": 1270.5
         },
         "style": {
           "display": "block",
@@ -6090,14 +6578,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1417.5,
+          "x": 1414.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1537.5,
+          "right": 1534.5,
           "bottom": 3203,
-          "left": 1417.5
+          "left": 1414.5
         },
         "style": {
           "display": "block",
@@ -6132,14 +6620,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1561.5,
+          "x": 1558.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1681.5,
+          "right": 1678.5,
           "bottom": 3203,
-          "left": 1561.5
+          "left": 1558.5
         },
         "style": {
           "display": "block",
@@ -6174,14 +6662,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1705.5,
+          "x": 1702.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1825.5,
+          "right": 1822.5,
           "bottom": 3203,
-          "left": 1705.5
+          "left": 1702.5
         },
         "style": {
           "display": "block",
@@ -6805,12 +7293,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4327.3193359375,
+          "y": 4324.66650390625,
           "width": 227,
           "height": 20,
-          "top": 4327.3193359375,
+          "top": 4324.66650390625,
           "right": 638,
-          "bottom": 4347.3193359375,
+          "bottom": 4344.66650390625,
           "left": 411
         },
         "style": {
@@ -6835,7 +7323,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "0",
-          "transform": "matrix(1, 0, 0, 1, 0, -10.6807)",
+          "transform": "matrix(1, 0, 0, 1, 0, -13.3333)",
           "zIndex": "auto"
         }
       },
@@ -6847,12 +7335,12 @@
         "text": "How can I assist you today?",
         "rect": {
           "x": 411,
-          "y": 4329.3193359375,
+          "y": 4326.66650390625,
           "width": 226.8125,
           "height": 16,
-          "top": 4329.3193359375,
+          "top": 4326.66650390625,
           "right": 637.8125,
-          "bottom": 4345.3193359375,
+          "bottom": 4342.66650390625,
           "left": 411
         },
         "style": {
@@ -6889,12 +7377,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4347.3193359375,
+          "y": 4344.66650390625,
           "width": 126,
           "height": 20,
-          "top": 4347.3193359375,
+          "top": 4344.66650390625,
           "right": 537,
-          "bottom": 4367.3193359375,
+          "bottom": 4364.66650390625,
           "left": 411
         },
         "style": {
@@ -6919,7 +7407,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 9.31932)",
+          "transform": "matrix(1, 0, 0, 1, 0, 6.66666)",
           "zIndex": "auto"
         }
       },
@@ -6931,12 +7419,12 @@
         "text": "Generate a logo",
         "rect": {
           "x": 411,
-          "y": 4349.3193359375,
+          "y": 4346.66650390625,
           "width": 126,
           "height": 16,
-          "top": 4349.3193359375,
+          "top": 4346.66650390625,
           "right": 537,
-          "bottom": 4365.3193359375,
+          "bottom": 4362.66650390625,
           "left": 411
         },
         "style": {
@@ -8316,14 +8804,14 @@
         "className": "absolute aspect-square bg-zinc-500",
         "text": "",
         "rect": {
-          "x": 753.3291625976562,
-          "y": 6556.6708984375,
-          "width": 139.4818115234375,
-          "height": 139.4814453125,
-          "top": 6556.6708984375,
-          "right": 892.8109741210938,
-          "bottom": 6696.15234375,
-          "left": 753.3291625976562
+          "x": 748.8419189453125,
+          "y": 6561.158203125,
+          "width": 137.6795654296875,
+          "height": 137.6796875,
+          "top": 6561.158203125,
+          "right": 886.521484375,
+          "bottom": 6698.837890625,
+          "left": 748.8419189453125
         },
         "style": {
           "display": "block",
@@ -9704,18 +10192,18 @@
         "decodedBodySize": 58048
       },
       {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 1.900000000023283,
-        "transferSize": 300,
-        "decodedBodySize": 0
-      },
-      {
         "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
         "initiatorType": "link",
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 48432
+      },
+      {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.400000000023283,
+        "transferSize": 300,
+        "decodedBodySize": 0
       },
       {
         "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
@@ -9979,14 +10467,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 11.300000000017462,
+        "duration": 8.900000000023283,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.699999999982538,
+        "duration": 12.099999999976717,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
@@ -10074,11 +10562,11 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
+      "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
       "status": 200,
       "method": "GET",
-      "resource_type": "font",
-      "content_type": "font/woff2"
+      "resource_type": "stylesheet",
+      "content_type": "text/css; charset=UTF-8"
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
@@ -10088,11 +10576,11 @@
       "content_type": "font/woff2"
     },
     {
-      "url": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+      "url": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
       "status": 200,
       "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
+      "resource_type": "font",
+      "content_type": "font/woff2"
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css",
@@ -10102,21 +10590,21 @@
       "content_type": "text/css; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
+      "url": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
       "status": 200,
       "method": "GET",
-      "resource_type": "stylesheet",
-      "content_type": "text/css; charset=UTF-8"
+      "resource_type": "image",
+      "content_type": "image/jpeg"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10130,14 +10618,21 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10158,7 +10653,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10166,13 +10661,6 @@
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10200,7 +10688,21 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+      "url": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10214,14 +10716,91 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
+      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10242,6 +10821,13 @@
       "content_type": "image/jpeg"
     },
     {
+      "url": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
       "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
       "status": 200,
       "method": "GET",
@@ -10256,39 +10842,11 @@
       "content_type": "text/javascript"
     },
     {
-      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+      "url": "http://127.0.0.1:4180/icon.ico?71bbcdb60d31e7d3",
       "status": 200,
       "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
+      "resource_type": "other",
+      "content_type": "image/x-icon"
     },
     {
       "url": "http://127.0.0.1:4180/docs?_rsc=19zvn",
@@ -10326,13 +10884,6 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/3467-49ac6239e42fe874.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
       "status": 200,
       "method": "GET",
@@ -10340,74 +10891,11 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/3467-49ac6239e42fe874.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "http://127.0.0.1:4180/icon.ico?71bbcdb60d31e7d3",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "other",
-      "content_type": "image/x-icon"
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
     },
     {
       "url": "http://127.0.0.1:4180/",
@@ -10697,6 +11185,20 @@
       "content_type": ""
     },
     {
+      "url": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
+      "status": 304,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
+      "url": "http://127.0.0.1:4180/docs?_rsc=19zvn",
+      "status": 304,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
       "status": 200,
       "method": "GET",
@@ -10730,20 +11232,6 @@
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
-      "status": 304,
-      "method": "GET",
-      "resource_type": "fetch",
-      "content_type": ""
-    },
-    {
-      "url": "http://127.0.0.1:4180/docs?_rsc=19zvn",
-      "status": 304,
-      "method": "GET",
-      "resource_type": "fetch",
-      "content_type": ""
     },
     {
       "url": "http://127.0.0.1:4180/",

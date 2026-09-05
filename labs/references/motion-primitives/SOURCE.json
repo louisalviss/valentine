@@ -5,5 +5,5 @@
   "import_mode":"source-import-static-export",
   "base_path":"/labs/references/motion-primitives",
   "relocation":"Framework assets use basePath/assetPrefix; literal paths that resolve to actual upstream public/ files are rewritten to the nested base path before export.",
-  "note":"Static output built from the exact pinned upstream source with deterministic path relocation only. Remote demo media remains external and separately classified."
+  "note":"Static output is built from the exact pinned upstream source. External demo media with unverified independent reuse rights is sanitized after export and is not treated as covered by the software MIT license."
 }
