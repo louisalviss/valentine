@@ -1,17 +1,17 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "reference_id": "motion-primitives",
   "baseline_url": "http://127.0.0.1:4180/",
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
-  "captured_at": "2026-09-05T01:22:02.932Z",
-  "scenario": "EB27 MorphingDialog closed -> open trajectory -> settled open -> Escape -> closed",
+  "captured_at": "2026-09-05T01:23:37.872Z",
+  "scenario": "EB27 MorphingDialog deterministic WAAPI trajectory + active-page open/Escape functional test",
   "viewports": [
     {
       "label": "desktop",
       "width": 1440,
       "height": 900,
-      "closed": {
-        "baseline": {
+      "baseline": {
+        "closed": {
           "trigger": {
             "exists": true,
             "expanded": "false",
@@ -43,1616 +43,449 @@
             "rect": null,
             "opacity": null
           },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2349.9,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.17494999999999994,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            }
-          ]
+          "bodyOverflow": "visible"
         },
-        "local": {
-          "trigger": {
-            "exists": true,
-            "expanded": "false",
-            "rect": {
-              "x": 580,
-              "y": 604,
-              "width": 270,
-              "height": 258,
-              "top": 604,
-              "right": 850,
-              "bottom": 862,
-              "left": 580
+        "trajectory": [
+          {
+            "t": 0,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 490.94512939453125,
+                  "y": 229.72760009765625,
+                  "width": 448.1097412109375,
+                  "height": 568.2279052734375,
+                  "top": 229.72760009765625,
+                  "right": 939.0548706054688,
+                  "bottom": 797.9555053710938,
+                  "left": 490.94512939453125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 490.94512939453125,
+                  "y": 229.72756958007812,
+                  "width": 448.1097412109375,
+                  "height": 568.22802734375,
+                  "top": 229.72756958007812,
+                  "right": 939.0548706054688,
+                  "bottom": 797.9555969238281,
+                  "left": 490.94512939453125
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 491.94512939453125,
+                  "y": 235.67681884765625,
+                  "width": 446.10980224609375,
+                  "height": 310.17919921875,
+                  "top": 235.67681884765625,
+                  "right": 938.054931640625,
+                  "bottom": 545.8560180664062,
+                  "left": 491.94512939453125
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 895.14013671875,
+                  "y": 251.2967987060547,
+                  "width": 21.50927734375,
+                  "height": 20.706466674804688,
+                  "top": 251.2967987060547,
+                  "right": 916.6494140625,
+                  "bottom": 272.0032653808594,
+                  "left": 895.14013671875
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0"
+              },
+              "bodyOverflow": "hidden"
             }
           },
-          "dialog": {
-            "exists": false,
-            "rect": null
-          },
-          "dialogImage": {
-            "exists": false,
-            "rect": null
-          },
-          "close": {
-            "exists": false,
-            "rect": null
-          },
-          "backdrop": {
-            "exists": false,
-            "rect": null,
-            "opacity": null
-          },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2216.5999999999995,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
+          {
+            "t": 50,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 477.9368896484375,
+                  "y": 175.0574951171875,
+                  "width": 474.126220703125,
+                  "height": 613.5430297851562,
+                  "top": 175.0574951171875,
+                  "right": 952.0631103515625,
+                  "bottom": 788.6005249023438,
+                  "left": 477.9368896484375
+                }
               },
-              "progress": 0.10829999999999984,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 209.59999999998803,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 477.9368896484375,
+                  "y": 175.05752563476562,
+                  "width": 474.126220703125,
+                  "height": 613.5430908203125,
+                  "top": 175.05752563476562,
+                  "right": 952.0631103515625,
+                  "bottom": 788.6006164550781,
+                  "left": 477.9368896484375
+                }
               },
-              "progress": 0.8693971314618278,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            },
-            {
-              "index": 2,
-              "playState": "running",
-              "currentTime": 209.59999999998803,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 478.9368896484375,
+                  "y": 178.52532958984375,
+                  "width": 472.126220703125,
+                  "height": 327.441650390625,
+                  "top": 178.52532958984375,
+                  "right": 951.0631103515625,
+                  "bottom": 505.96697998046875,
+                  "left": 478.9368896484375
+                }
               },
-              "progress": 0.8693971314618278,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 905.5987548828125,
+                  "y": 198.34686279296875,
+                  "width": 22.758056640625,
+                  "height": 22.357757568359375,
+                  "top": 198.34686279296875,
+                  "right": 928.3568115234375,
+                  "bottom": 220.70462036132812,
+                  "left": 905.5987548828125
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.518429"
+              },
+              "bodyOverflow": "hidden"
             }
-          ]
-        }
-      },
-      "trajectory": [
-        {
-          "t": 0,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
           },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 565.4452514648438,
-                "y": 542.8304443359375,
-                "width": 299.1094970703125,
-                "height": 308.702392578125,
-                "top": 542.8304443359375,
-                "right": 864.5547485351562,
-                "bottom": 851.5328369140625,
-                "left": 565.4452514648438
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 565.4452514648438,
-                "y": 542.8304443359375,
-                "width": 299.10955810546875,
-                "height": 308.702392578125,
-                "top": 542.8304443359375,
-                "right": 864.5548095703125,
-                "bottom": 851.5328369140625,
-                "left": 565.4452514648438
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 566.4452514648438,
-                "y": 541.8988037109375,
-                "width": 297.10955810546875,
-                "height": 211.314697265625,
-                "top": 541.8988037109375,
-                "right": 863.5548095703125,
-                "bottom": 753.2135009765625,
-                "left": 566.4452514648438
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 835.2420654296875,
-                "y": 533.4560546875,
-                "width": 14.35723876953125,
-                "height": 11.249267578125,
-                "top": 533.4560546875,
-                "right": 849.5993041992188,
-                "bottom": 544.705322265625,
-                "left": 835.2420654296875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0.0396755"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2233.2999999999997,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.11664999999999992,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
+          {
+            "t": 100,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 467.833984375,
+                  "y": 132.59799194335938,
+                  "width": 494.33203125,
+                  "height": 648.7369384765625,
+                  "top": 132.59799194335938,
+                  "right": 962.166015625,
+                  "bottom": 781.3349304199219,
+                  "left": 467.833984375
                 }
               },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 226.2999999999882,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.909440069316658,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 467.833984375,
+                  "y": 132.5980224609375,
+                  "width": 494.33203125,
+                  "height": 648.7369384765625,
+                  "top": 132.5980224609375,
+                  "right": 962.166015625,
+                  "bottom": 781.3349609375,
+                  "left": 467.833984375
                 }
               },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 226.2999999999882,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.909440069316658,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 468.8226623535156,
+                  "y": 134.13864135742188,
+                  "width": 492.3546447753906,
+                  "height": 340.8485107421875,
+                  "top": 134.13864135742188,
+                  "right": 961.1773071289062,
+                  "bottom": 474.9871520996094,
+                  "left": 468.8226623535156
                 }
               },
-              {
-                "index": 3,
-                "playState": "running",
-                "currentTime": 8.600000000035024,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.034400000000140096,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 913.721435546875,
+                  "y": 157.22328186035156,
+                  "width": 23.7279052734375,
+                  "height": 23.640243530273438,
+                  "top": 157.22328186035156,
+                  "right": 937.4493408203125,
+                  "bottom": 180.863525390625,
+                  "left": 913.721435546875
                 }
               },
-              {
-                "index": 4,
-                "playState": "running",
-                "currentTime": 8.600000000035024,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
                 },
-                "progress": 0.034400000000140096,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+                "opacity": "0.873067"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 150,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465.41253662109375,
+                  "y": 122.4212646484375,
+                  "width": 499.1749267578125,
+                  "height": 657.1723022460938,
+                  "top": 122.4212646484375,
+                  "right": 964.5874633789062,
+                  "bottom": 779.5935668945312,
+                  "left": 465.41253662109375
                 }
-              }
-            ]
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465.41253662109375,
+                  "y": 122.4212646484375,
+                  "width": 499.1749267578125,
+                  "height": 657.1723022460938,
+                  "top": 122.4212646484375,
+                  "right": 964.5874633789062,
+                  "bottom": 779.5935668945312,
+                  "left": 465.41253662109375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466.410888671875,
+                  "y": 123.4999771118164,
+                  "width": 497.17822265625,
+                  "height": 344.0618591308594,
+                  "top": 123.4999771118164,
+                  "right": 963.589111328125,
+                  "bottom": 467.5618362426758,
+                  "left": 466.410888671875
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 915.6683349609375,
+                  "y": 147.36671447753906,
+                  "width": 23.96038818359375,
+                  "height": 23.9476318359375,
+                  "top": 147.36671447753906,
+                  "right": 939.6287231445312,
+                  "bottom": 171.31434631347656,
+                  "left": 915.6683349609375
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.975357"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 200,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465.14544677734375,
+                  "y": 121.29873657226562,
+                  "width": 499.7091064453125,
+                  "height": 658.102783203125,
+                  "top": 121.29873657226562,
+                  "right": 964.8545532226562,
+                  "bottom": 779.4015197753906,
+                  "left": 465.14544677734375
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465.14544677734375,
+                  "y": 121.29873657226562,
+                  "width": 499.70916748046875,
+                  "height": 658.102783203125,
+                  "top": 121.29873657226562,
+                  "right": 964.8546142578125,
+                  "bottom": 779.4015197753906,
+                  "left": 465.14544677734375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466.1448669433594,
+                  "y": 122.32647705078125,
+                  "width": 497.7102966308594,
+                  "height": 344.4163818359375,
+                  "top": 122.32647705078125,
+                  "right": 963.8551635742188,
+                  "bottom": 466.74285888671875,
+                  "left": 466.1448669433594
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 915.883056640625,
+                  "y": 146.27951049804688,
+                  "width": 23.986083984375,
+                  "height": 23.981536865234375,
+                  "top": 146.27951049804688,
+                  "right": 939.869140625,
+                  "bottom": 170.26104736328125,
+                  "left": 915.883056640625
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.996567"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 250,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465,
+                  "y": 120.6875,
+                  "width": 500,
+                  "height": 658.609375,
+                  "top": 120.6875,
+                  "right": 965,
+                  "bottom": 779.296875,
+                  "left": 465
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465,
+                  "y": 120.6875,
+                  "width": 500,
+                  "height": 658.609375,
+                  "top": 120.6875,
+                  "right": 965,
+                  "bottom": 779.296875,
+                  "left": 465
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466,
+                  "y": 121.6875,
+                  "width": 498,
+                  "height": 344.609375,
+                  "top": 121.6875,
+                  "right": 964,
+                  "bottom": 466.296875,
+                  "left": 466
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 916,
+                  "y": 145.6875,
+                  "width": 24,
+                  "height": 24,
+                  "top": 145.6875,
+                  "right": 940,
+                  "bottom": 169.6875,
+                  "left": 916
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "1"
+              },
+              "bodyOverflow": "hidden"
+            }
           }
-        },
-        {
-          "t": 50,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 528.2333984375,
-                "y": 386.4395751953125,
-                "width": 373.533203125,
-                "height": 438.33209228515625,
-                "top": 386.4395751953125,
-                "right": 901.7666015625,
-                "bottom": 824.7716674804688,
-                "left": 528.2333984375
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 528.2333984375,
-                "y": 386.4395751953125,
-                "width": 373.533203125,
-                "height": 438.33203125,
-                "top": 386.4395751953125,
-                "right": 901.7666015625,
-                "bottom": 824.7716064453125,
-                "left": 528.2333984375
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 529.2333984375,
-                "y": 386.1910095214844,
-                "width": 371.533203125,
-                "height": 260.6961975097656,
-                "top": 386.1910095214844,
-                "right": 900.7666015625,
-                "bottom": 646.88720703125,
-                "left": 529.2333984375
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 865.160400390625,
-                "y": 389.76727294921875,
-                "width": 17.9295654296875,
-                "height": 15.9730224609375,
-                "top": 389.76727294921875,
-                "right": 883.0899658203125,
-                "bottom": 405.74029541015625,
-                "left": 865.160400390625
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0.424103"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2266.6,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.13329999999999997,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 259.5999999999883,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.9701076758146007,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 259.5999999999883,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.9701076758146007,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 3,
-                "playState": "running",
-                "currentTime": 41.900000000035135,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.16760000000014053,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 4,
-                "playState": "running",
-                "currentTime": 41.900000000035135,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.16760000000014053,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 100,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 476.8026123046875,
-                "y": 170.29049682617188,
-                "width": 476.394775390625,
-                "height": 617.4942626953125,
-                "top": 170.29049682617188,
-                "right": 953.1973876953125,
-                "bottom": 787.7847595214844,
-                "left": 476.8026123046875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 476.8026123046875,
-                "y": 170.29049682617188,
-                "width": 476.394775390625,
-                "height": 617.4942626953125,
-                "top": 170.29049682617188,
-                "right": 953.1973876953125,
-                "bottom": 787.7847595214844,
-                "left": 476.8026123046875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 477.8026123046875,
-                "y": 173.54193115234375,
-                "width": 474.394775390625,
-                "height": 328.9468688964844,
-                "top": 173.54193115234375,
-                "right": 952.1973876953125,
-                "bottom": 502.4888000488281,
-                "left": 477.8026123046875
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 906.5107421875,
-                "y": 193.7298126220703,
-                "width": 22.866943359375,
-                "height": 22.501754760742188,
-                "top": 193.7298126220703,
-                "right": 929.377685546875,
-                "bottom": 216.2315673828125,
-                "left": 906.5107421875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0.837535"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2316.5,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.15825,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 91.80000000003518,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.36720000000014075,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 91.80000000003518,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.36720000000014075,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 150,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 466.8993835449219,
-                "y": 128.67007446289062,
-                "width": 496.2012023925781,
-                "height": 651.9927978515625,
-                "top": 128.67007446289062,
-                "right": 963.1005859375,
-                "bottom": 780.6628723144531,
-                "left": 466.8993835449219
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 466.8993835449219,
-                "y": 128.6700439453125,
-                "width": 496.2012023925781,
-                "height": 651.9927978515625,
-                "top": 128.6700439453125,
-                "right": 963.1005859375,
-                "bottom": 780.662841796875,
-                "left": 466.8993835449219
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 467.8917541503906,
-                "y": 130.03237915039062,
-                "width": 494.2165222167969,
-                "height": 342.08880615234375,
-                "top": 130.03237915039062,
-                "right": 962.1082763671875,
-                "bottom": 472.1211853027344,
-                "left": 467.8917541503906
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 914.472900390625,
-                "y": 153.41888427734375,
-                "width": 23.817626953125,
-                "height": 23.758895874023438,
-                "top": 153.41888427734375,
-                "right": 938.29052734375,
-                "bottom": 177.1777801513672,
-                "left": 914.472900390625
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0.981735"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2383.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.1916,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 158.50000000003516,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.6340000000001407,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 158.50000000003516,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.6340000000001407,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 250,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 465,
-                "y": 120.6875,
-                "width": 500,
-                "height": 658.609375,
-                "top": 120.6875,
-                "right": 965,
-                "bottom": 779.296875,
-                "left": 465
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 465,
-                "y": 120.6875,
-                "width": 500,
-                "height": 658.609375,
-                "top": 120.6875,
-                "right": 965,
-                "bottom": 779.296875,
-                "left": 465
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 466,
-                "y": 121.6875,
-                "width": 498,
-                "height": 344.609375,
-                "top": 121.6875,
-                "right": 964,
-                "bottom": 466.296875,
-                "left": 466
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 916,
-                "y": 145.6875,
-                "width": 24,
-                "height": 24,
-                "top": 145.6875,
-                "right": 940,
-                "bottom": 169.6875,
-                "left": 916
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "1"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2483.2000000000003,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.24160000000000004,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 400,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.5225830078125,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310180664062,
-                "left": 572.6734008789062
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 572.6734008789062,
-                "y": 573.2084350585938,
-                "width": 284.6531982421875,
-                "height": 283.52264404296875,
-                "top": 573.2084350585938,
-                "right": 857.3265991210938,
-                "bottom": 856.7310791015625,
-                "left": 572.6734008789062
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 573.6734008789062,
-                "y": 570.6406860351562,
-                "width": 282.65313720703125,
-                "height": 201.72271728515625,
-                "top": 570.6406860351562,
-                "right": 856.3265380859375,
-                "bottom": 772.3634033203125,
-                "left": 573.6734008789062
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 829.4305419921875,
-                "y": 559.8633422851562,
-                "width": 13.66339111328125,
-                "height": 10.3316650390625,
-                "top": 559.8633422851562,
-                "right": 843.0939331054688,
-                "bottom": 570.1950073242188,
-                "left": 829.4305419921875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2349.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.17494999999999994,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 465,
-                "y": 120.6875,
-                "width": 500,
-                "height": 658.609375,
-                "top": 120.6875,
-                "right": 965,
-                "bottom": 779.296875,
-                "left": 465
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 465,
-                "y": 120.6875,
-                "width": 500,
-                "height": 658.609375,
-                "top": 120.6875,
-                "right": 965,
-                "bottom": 779.296875,
-                "left": 465
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 466,
-                "y": 121.6875,
-                "width": 498,
-                "height": 344.609375,
-                "top": 121.6875,
-                "right": 964,
-                "bottom": 466.296875,
-                "left": 466
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 916,
-                "y": 145.6875,
-                "width": 24,
-                "height": 24,
-                "top": 145.6875,
-                "right": 940,
-                "bottom": 169.6875,
-                "left": 916
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 1430,
-                "height": 900,
-                "top": 0,
-                "right": 1430,
-                "bottom": 900,
-                "left": 0
-              },
-              "opacity": "1"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2649.8999999999996,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.32494999999999985,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "open": {
-        "baseline": {
-          "trigger": {
-            "exists": true,
-            "expanded": "true",
-            "rect": {
-              "x": 572.6734008789062,
-              "y": 573.2084350585938,
-              "width": 284.6531982421875,
-              "height": 283.5225830078125,
-              "top": 573.2084350585938,
-              "right": 857.3265991210938,
-              "bottom": 856.7310180664062,
-              "left": 572.6734008789062
-            }
-          },
-          "dialog": {
-            "exists": true,
-            "rect": {
-              "x": 572.6734008789062,
-              "y": 573.2084350585938,
-              "width": 284.6531982421875,
-              "height": 283.52264404296875,
-              "top": 573.2084350585938,
-              "right": 857.3265991210938,
-              "bottom": 856.7310791015625,
-              "left": 572.6734008789062
-            }
-          },
-          "dialogImage": {
-            "exists": true,
-            "rect": {
-              "x": 573.6734008789062,
-              "y": 570.6406860351562,
-              "width": 282.65313720703125,
-              "height": 201.72271728515625,
-              "top": 570.6406860351562,
-              "right": 856.3265380859375,
-              "bottom": 772.3634033203125,
-              "left": 573.6734008789062
-            }
-          },
-          "close": {
-            "exists": true,
-            "rect": {
-              "x": 829.4305419921875,
-              "y": 559.8633422851562,
-              "width": 13.66339111328125,
-              "height": 10.3316650390625,
-              "top": 559.8633422851562,
-              "right": 843.0939331054688,
-              "bottom": 570.1950073242188,
-              "left": 829.4305419921875
-            }
-          },
-          "backdrop": {
-            "exists": true,
-            "rect": {
-              "x": 0,
-              "y": 0,
-              "width": 1430,
-              "height": 900,
-              "top": 0,
-              "right": 1430,
-              "bottom": 900,
-              "left": 0
-            },
-            "opacity": "0"
-          },
-          "bodyOverflow": "hidden",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2349.9,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.17494999999999994,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            }
-          ]
-        },
-        "local": {
+        ],
+        "open": {
           "trigger": {
             "exists": true,
             "expanded": "true",
@@ -1720,39 +553,522 @@
             },
             "opacity": "1"
           },
-          "bodyOverflow": "hidden",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2816.5,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.40825,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
+          "bodyOverflow": "hidden"
+        },
+        "animation_signature": [
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
-          ]
+          },
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
+            }
+          }
+        ],
+        "screenshots": {
+          "open_dialog": "evidence/interaction/desktop-baseline-open-dialog.png",
+          "open_full": "evidence/interaction/desktop-baseline-open-full.png"
         }
       },
-      "after_close": {
-        "baseline": {
+      "local": {
+        "closed": {
           "trigger": {
             "exists": true,
             "expanded": "false",
+            "rect": {
+              "x": 580,
+              "y": 604,
+              "width": 270,
+              "height": 258,
+              "top": 604,
+              "right": 850,
+              "bottom": 862,
+              "left": 580
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible"
+        },
+        "trajectory": [
+          {
+            "t": 0,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 485.1507568359375,
+                  "y": 205.3753662109375,
+                  "width": 459.698486328125,
+                  "height": 588.4130859375,
+                  "top": 205.3753662109375,
+                  "right": 944.8492431640625,
+                  "bottom": 793.7884521484375,
+                  "left": 485.1507568359375
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 485.1507568359375,
+                  "y": 205.37533569335938,
+                  "width": 459.698486328125,
+                  "height": 588.4130859375,
+                  "top": 205.37533569335938,
+                  "right": 944.8492431640625,
+                  "bottom": 793.7884216308594,
+                  "left": 485.1507568359375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 486.1507568359375,
+                  "y": 210.21925354003906,
+                  "width": 457.69854736328125,
+                  "height": 317.86859130859375,
+                  "top": 210.21925354003906,
+                  "right": 943.8493041992188,
+                  "bottom": 528.0878448486328,
+                  "left": 486.1507568359375
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 899.798828125,
+                  "y": 227.7107696533203,
+                  "width": 22.0655517578125,
+                  "height": 21.4420166015625,
+                  "top": 227.7107696533203,
+                  "right": 921.8643798828125,
+                  "bottom": 249.1527862548828,
+                  "left": 899.798828125
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 50,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 471.88458251953125,
+                  "y": 149.62142944335938,
+                  "width": 486.2308349609375,
+                  "height": 634.62646484375,
+                  "top": 149.62142944335938,
+                  "right": 958.1154174804688,
+                  "bottom": 784.2478942871094,
+                  "left": 471.88458251953125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 471.88458251953125,
+                  "y": 149.62139892578125,
+                  "width": 486.2308349609375,
+                  "height": 634.6265869140625,
+                  "top": 149.62139892578125,
+                  "right": 958.1154174804688,
+                  "bottom": 784.2479858398438,
+                  "left": 471.88458251953125
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 472.88458251953125,
+                  "y": 151.9346923828125,
+                  "width": 484.2308349609375,
+                  "height": 335.4732971191406,
+                  "top": 151.9346923828125,
+                  "right": 957.1154174804688,
+                  "bottom": 487.4079895019531,
+                  "left": 472.88458251953125
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 910.46484375,
+                  "y": 173.71104431152344,
+                  "width": 23.33905029296875,
+                  "height": 23.126052856445312,
+                  "top": 173.71104431152344,
+                  "right": 933.8038940429688,
+                  "bottom": 196.83709716796875,
+                  "left": 910.46484375
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.518429"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 100,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 466.7630615234375,
+                  "y": 128.09710693359375,
+                  "width": 496.473876953125,
+                  "height": 652.4676513671875,
+                  "top": 128.09710693359375,
+                  "right": 963.2369384765625,
+                  "bottom": 780.5647583007812,
+                  "left": 466.7630615234375
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 466.7630615234375,
+                  "y": 128.09710693359375,
+                  "width": 496.473876953125,
+                  "height": 652.4676513671875,
+                  "top": 128.09710693359375,
+                  "right": 963.2369384765625,
+                  "bottom": 780.5647583007812,
+                  "left": 466.7630615234375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 467.7560119628906,
+                  "y": 129.43345642089844,
+                  "width": 494.4880065917969,
+                  "height": 342.2696533203125,
+                  "top": 129.43345642089844,
+                  "right": 962.2440185546875,
+                  "bottom": 471.70310974121094,
+                  "left": 467.7560119628906
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 914.58251953125,
+                  "y": 152.86398315429688,
+                  "width": 23.83074951171875,
+                  "height": 23.77618408203125,
+                  "top": 152.86398315429688,
+                  "right": 938.4132690429688,
+                  "bottom": 176.64016723632812,
+                  "left": 914.58251953125
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.873067"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 150,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465.7165832519531,
+                  "y": 123.69912719726562,
+                  "width": 498.5668640136719,
+                  "height": 656.1131591796875,
+                  "top": 123.69912719726562,
+                  "right": 964.283447265625,
+                  "bottom": 779.8122863769531,
+                  "left": 465.7165832519531
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465.7165832519531,
+                  "y": 123.69912719726562,
+                  "width": 498.5668640136719,
+                  "height": 656.1131591796875,
+                  "top": 123.69912719726562,
+                  "right": 964.283447265625,
+                  "bottom": 779.8122863769531,
+                  "left": 465.7165832519531
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466.7137145996094,
+                  "y": 124.83582305908203,
+                  "width": 496.5725402832031,
+                  "height": 343.658447265625,
+                  "top": 124.83582305908203,
+                  "right": 963.2862548828125,
+                  "bottom": 468.49427032470703,
+                  "left": 466.7137145996094
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 915.423828125,
+                  "y": 148.6043701171875,
+                  "width": 23.9312744140625,
+                  "height": 23.909042358398438,
+                  "top": 148.6043701171875,
+                  "right": 939.3551025390625,
+                  "bottom": 172.51341247558594,
+                  "left": 915.423828125
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.975357"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 200,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465.26214599609375,
+                  "y": 121.7891845703125,
+                  "width": 499.4757080078125,
+                  "height": 657.6962280273438,
+                  "top": 121.7891845703125,
+                  "right": 964.7378540039062,
+                  "bottom": 779.4854125976562,
+                  "left": 465.26214599609375
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465.26214599609375,
+                  "y": 121.7891845703125,
+                  "width": 499.4757080078125,
+                  "height": 657.6962280273438,
+                  "top": 121.7891845703125,
+                  "right": 964.7378540039062,
+                  "bottom": 779.4854125976562,
+                  "left": 465.26214599609375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466.2611083984375,
+                  "y": 122.8392105102539,
+                  "width": 497.477783203125,
+                  "height": 344.261474609375,
+                  "top": 122.8392105102539,
+                  "right": 963.7388916015625,
+                  "bottom": 467.1006851196289,
+                  "left": 466.2611083984375
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 915.7892456054688,
+                  "y": 146.7545166015625,
+                  "width": 23.97479248046875,
+                  "height": 23.96673583984375,
+                  "top": 146.7545166015625,
+                  "right": 939.7640380859375,
+                  "bottom": 170.72125244140625,
+                  "left": 915.7892456054688
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "0.996567"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 250,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 465,
+                  "y": 120.6875,
+                  "width": 500,
+                  "height": 658.609375,
+                  "top": 120.6875,
+                  "right": 965,
+                  "bottom": 779.296875,
+                  "left": 465
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 465,
+                  "y": 120.6875,
+                  "width": 500,
+                  "height": 658.609375,
+                  "top": 120.6875,
+                  "right": 965,
+                  "bottom": 779.296875,
+                  "left": 465
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 466,
+                  "y": 121.6875,
+                  "width": 498,
+                  "height": 344.609375,
+                  "top": 121.6875,
+                  "right": 964,
+                  "bottom": 466.296875,
+                  "left": 466
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 916,
+                  "y": 145.6875,
+                  "width": 24,
+                  "height": 24,
+                  "top": 145.6875,
+                  "right": 940,
+                  "bottom": 169.6875,
+                  "left": 916
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1430,
+                  "height": 900,
+                  "top": 0,
+                  "right": 1430,
+                  "bottom": 900,
+                  "left": 0
+                },
+                "opacity": "1"
+              },
+              "bodyOverflow": "hidden"
+            }
+          }
+        ],
+        "open": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
             "rect": {
               "x": 465,
               "y": 120.6875,
@@ -1815,127 +1131,334 @@
               "bottom": 900,
               "left": 0
             },
-            "opacity": "0.988774"
+            "opacity": "1"
           },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 5616.5,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.8082500000000001,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 171.4000000000002,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
-              },
-              "progress": 0.757787209324483,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            }
-          ]
+          "bodyOverflow": "hidden"
         },
-        "local": {
-          "trigger": {
-            "exists": true,
-            "expanded": "false",
-            "rect": {
-              "x": 580,
-              "y": 604,
-              "width": 270,
-              "height": 258,
-              "top": 604,
-              "right": 850,
-              "bottom": 862,
-              "left": 580
+        "animation_signature": [
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
           },
-          "dialog": {
-            "exists": false,
-            "rect": null
-          },
-          "dialogImage": {
-            "exists": false,
-            "rect": null
-          },
-          "close": {
-            "exists": false,
-            "rect": null
-          },
-          "backdrop": {
-            "exists": false,
-            "rect": null,
-            "opacity": null
-          },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 3616.5,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.8082499999999999,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
-          ]
+          }
+        ],
+        "screenshots": {
+          "open_dialog": "evidence/interaction/desktop-local-open-dialog.png",
+          "open_full": "evidence/interaction/desktop-local-open-full.png"
         }
       },
-      "screenshots": {
-        "baseline_open": "evidence/interaction/desktop-baseline-open.png",
-        "local_open": "evidence/interaction/desktop-local-open.png",
-        "baseline_after_close": "evidence/interaction/desktop-baseline-after-close.png",
-        "local_after_close": "evidence/interaction/desktop-local-after-close.png"
+      "functional": {
+        "baseline": {
+          "before": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 580,
+                "y": 604,
+                "width": 270,
+                "height": 258,
+                "top": 604,
+                "right": 850,
+                "bottom": 862,
+                "left": 580
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          },
+          "opened": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 466,
+                "y": 121.6875,
+                "width": 498,
+                "height": 344.609375,
+                "top": 121.6875,
+                "right": 964,
+                "bottom": 466.296875,
+                "left": 466
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 916,
+                "y": 145.6875,
+                "width": 24,
+                "height": 24,
+                "top": 145.6875,
+                "right": 940,
+                "bottom": 169.6875,
+                "left": 916
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden"
+          },
+          "after_escape": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 580,
+                "y": 604,
+                "width": 270,
+                "height": 258,
+                "top": 604,
+                "right": 850,
+                "bottom": 862,
+                "left": 580
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          }
+        },
+        "local": {
+          "before": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 580,
+                "y": 604,
+                "width": 270,
+                "height": 258,
+                "top": 604,
+                "right": 850,
+                "bottom": 862,
+                "left": 580
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          },
+          "opened": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 466,
+                "y": 121.6875,
+                "width": 498,
+                "height": 344.609375,
+                "top": 121.6875,
+                "right": 964,
+                "bottom": 466.296875,
+                "left": 466
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 916,
+                "y": 145.6875,
+                "width": 24,
+                "height": 24,
+                "top": 145.6875,
+                "right": 940,
+                "bottom": 169.6875,
+                "left": 916
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden"
+          },
+          "after_escape": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 580,
+                "y": 604,
+                "width": 270,
+                "height": 258,
+                "top": 604,
+                "right": 850,
+                "bottom": 862,
+                "left": 580
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          }
+        }
       }
     },
     {
       "label": "mobile",
       "width": 390,
       "height": 844,
-      "closed": {
-        "baseline": {
+      "baseline": {
+        "closed": {
           "trigger": {
             "exists": true,
             "expanded": "false",
@@ -1967,1806 +1490,449 @@
             "rect": null,
             "opacity": null
           },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2183.2,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.0915999999999999,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 164.29999999998836,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
-              },
-              "progress": 0.7343043929822511,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            }
-          ]
+          "bodyOverflow": "visible"
         },
-        "local": {
-          "trigger": {
-            "exists": true,
-            "expanded": "false",
-            "rect": {
-              "x": 55,
-              "y": 700,
-              "width": 270,
-              "height": 258,
-              "top": 700,
-              "right": 325,
-              "bottom": 958,
-              "left": 55
+        "trajectory": [
+          {
+            "t": 0,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 8.585479736328125,
+                  "y": 202.28338623046875,
+                  "width": 362.82904052734375,
+                  "height": 566.4983520507812,
+                  "top": 202.28338623046875,
+                  "right": 371.4145202636719,
+                  "bottom": 768.78173828125,
+                  "left": 8.585479736328125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 8.585479736328125,
+                  "y": 202.28338623046875,
+                  "width": 362.82904052734375,
+                  "height": 566.4983520507812,
+                  "top": 202.28338623046875,
+                  "right": 371.4145202636719,
+                  "bottom": 768.78173828125,
+                  "left": 8.585479736328125
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 9.585472106933594,
+                  "y": 206.57730102539062,
+                  "width": 360.82904052734375,
+                  "height": 250.70382690429688,
+                  "top": 206.57730102539062,
+                  "right": 370.41451263427734,
+                  "bottom": 457.2811279296875,
+                  "left": 9.585472106933594
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 324.628662109375,
+                  "y": 224.9955596923828,
+                  "width": 22.91552734375,
+                  "height": 21.803680419921875,
+                  "top": 224.9955596923828,
+                  "right": 347.544189453125,
+                  "bottom": 246.7992401123047,
+                  "left": 324.628662109375
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0"
+              },
+              "bodyOverflow": "hidden"
             }
           },
-          "dialog": {
-            "exists": false,
-            "rect": null
-          },
-          "dialogImage": {
-            "exists": false,
-            "rect": null
-          },
-          "close": {
-            "exists": false,
-            "rect": null
-          },
-          "backdrop": {
-            "exists": false,
-            "rect": null,
-            "opacity": null
-          },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2166.6000000000004,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
+          {
+            "t": 50,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 3.0837554931640625,
+                  "y": 143.286865234375,
+                  "width": 373.83251953125,
+                  "height": 603.0659790039062,
+                  "top": 143.286865234375,
+                  "right": 376.91627502441406,
+                  "bottom": 746.3528442382812,
+                  "left": 3.0837554931640625
+                }
               },
-              "progress": 0.08330000000000015,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 154.49999999996498,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 3.083770751953125,
+                  "y": 143.286865234375,
+                  "width": 373.83245849609375,
+                  "height": 603.0659790039062,
+                  "top": 143.286865234375,
+                  "right": 376.9162292480469,
+                  "bottom": 746.3528442382812,
+                  "left": 3.083770751953125
+                }
               },
-              "progress": 0.7006033551886262,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            },
-            {
-              "index": 2,
-              "playState": "running",
-              "currentTime": 154.49999999996498,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 4.067540168762207,
+                  "y": 145.469970703125,
+                  "width": 371.86492919921875,
+                  "height": 257.6622314453125,
+                  "top": 145.469970703125,
+                  "right": 375.93246936798096,
+                  "bottom": 403.1322021484375,
+                  "left": 4.067540168762207
+                }
               },
-              "progress": 0.7006033551886262,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 328.7115173339844,
+                  "y": 167.46511840820312,
+                  "width": 23.6104736328125,
+                  "height": 23.21112060546875,
+                  "top": 167.46511840820312,
+                  "right": 352.3219909667969,
+                  "bottom": 190.67623901367188,
+                  "left": 328.7115173339844
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.518429"
+              },
+              "bodyOverflow": "hidden"
             }
-          ]
-        }
-      },
-      "trajectory": [
-        {
-          "t": 0,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
           },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 51.49598693847656,
-                "y": 662.4253540039062,
-                "width": 277.008056640625,
-                "height": 281.289794921875,
-                "top": 662.4253540039062,
-                "right": 328.50404357910156,
-                "bottom": 943.7151489257812,
-                "left": 51.49598693847656
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 51.4959716796875,
-                "y": 662.4253540039062,
-                "width": 277.008056640625,
-                "height": 281.289794921875,
-                "top": 662.4253540039062,
-                "right": 328.5040283203125,
-                "bottom": 943.7151489257812,
-                "left": 51.4959716796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 52.49595642089844,
-                "y": 662.4317016601562,
-                "width": 275.00811767578125,
-                "height": 196.4317626953125,
-                "top": 662.4317016601562,
-                "right": 327.5040740966797,
-                "bottom": 858.8634643554688,
-                "left": 52.49595642089844
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.7845458984375,
-                "y": 652.9522094726562,
-                "width": 17.495269775390625,
-                "height": 10.82647705078125,
-                "top": 652.9522094726562,
-                "right": 310.2798156738281,
-                "bottom": 663.7786865234375,
-                "left": 292.7845458984375
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0.0350621"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2000000000003,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.09160000000000013,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
+          {
+            "t": 100,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0.978118896484375,
+                  "y": 120.707275390625,
+                  "width": 378.04376220703125,
+                  "height": 617.0614624023438,
+                  "top": 120.707275390625,
+                  "right": 379.0218811035156,
+                  "bottom": 737.7687377929688,
+                  "left": 0.978118896484375
                 }
               },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 171.09999999996495,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7568112460771832,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0.9781036376953125,
+                  "y": 120.70730590820312,
+                  "width": 378.0438232421875,
+                  "height": 617.0614013671875,
+                  "top": 120.70730590820312,
+                  "right": 379.0219268798828,
+                  "bottom": 737.7687072753906,
+                  "left": 0.9781036376953125
                 }
               },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 171.09999999996495,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7568112460771832,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1.972970962524414,
+                  "y": 122.08255767822266,
+                  "width": 376.0540771484375,
+                  "height": 260.325439453125,
+                  "top": 122.08255767822266,
+                  "right": 378.0270481109619,
+                  "bottom": 382.40799713134766,
+                  "left": 1.972970962524414
                 }
               },
-              {
-                "index": 3,
-                "playState": "running",
-                "currentTime": 7.599999999964968,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.030399999999859872,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.27410888671875,
+                  "y": 145.4466552734375,
+                  "width": 23.87646484375,
+                  "height": 23.749786376953125,
+                  "top": 145.4466552734375,
+                  "right": 354.15057373046875,
+                  "bottom": 169.19644165039062,
+                  "left": 330.27410888671875
                 }
               },
-              {
-                "index": 4,
-                "playState": "running",
-                "currentTime": 7.599999999964968,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
                 },
-                "progress": 0.030399999999859872,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
+                "opacity": "0.873067"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 150,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0.2557525634765625,
+                  "y": 112.96124267578125,
+                  "width": 379.488525390625,
+                  "height": 621.8626098632812,
+                  "top": 112.96124267578125,
+                  "right": 379.74427795410156,
+                  "bottom": 734.8238525390625,
+                  "left": 0.2557525634765625
                 }
-              }
-            ]
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0.2557525634765625,
+                  "y": 112.96121215820312,
+                  "width": 379.488525390625,
+                  "height": 621.8626708984375,
+                  "top": 112.96121215820312,
+                  "right": 379.74427795410156,
+                  "bottom": 734.8238830566406,
+                  "left": 0.2557525634765625
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1.254406452178955,
+                  "y": 114.05933380126953,
+                  "width": 377.4912109375,
+                  "height": 261.2390441894531,
+                  "top": 114.05933380126953,
+                  "right": 378.74561738967896,
+                  "bottom": 375.29837799072266,
+                  "left": 1.254406452178955
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.8101806640625,
+                  "y": 137.89306640625,
+                  "width": 23.96771240234375,
+                  "height": 23.9345703125,
+                  "top": 137.89306640625,
+                  "right": 354.77789306640625,
+                  "bottom": 161.82763671875,
+                  "left": 330.8101806640625
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.975357"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 200,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0.0533599853515625,
+                  "y": 110.79095458984375,
+                  "width": 379.893310546875,
+                  "height": 623.2078247070312,
+                  "top": 110.79095458984375,
+                  "right": 379.94667053222656,
+                  "bottom": 733.998779296875,
+                  "left": 0.0533599853515625
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0.0533599853515625,
+                  "y": 110.79095458984375,
+                  "width": 379.893310546875,
+                  "height": 623.2078247070312,
+                  "top": 110.79095458984375,
+                  "right": 379.94667053222656,
+                  "bottom": 733.998779296875,
+                  "left": 0.0533599853515625
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1.0530791282653809,
+                  "y": 111.81143188476562,
+                  "width": 377.8938293457031,
+                  "height": 261.4949951171875,
+                  "top": 111.81143188476562,
+                  "right": 378.9469084739685,
+                  "bottom": 373.3064270019531,
+                  "left": 1.0530791282653809
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.96038818359375,
+                  "y": 135.7767333984375,
+                  "width": 23.9932861328125,
+                  "height": 23.986358642578125,
+                  "top": 135.7767333984375,
+                  "right": 354.95367431640625,
+                  "bottom": 159.76309204101562,
+                  "left": 330.96038818359375
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.996567"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 250,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0,
+                  "y": 110.21875,
+                  "width": 380,
+                  "height": 623.5625,
+                  "top": 110.21875,
+                  "right": 380,
+                  "bottom": 733.78125,
+                  "left": 0
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 110.21875,
+                  "width": 380,
+                  "height": 623.5625,
+                  "top": 110.21875,
+                  "right": 380,
+                  "bottom": 733.78125,
+                  "left": 0
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1,
+                  "y": 111.21875,
+                  "width": 378,
+                  "height": 261.5625,
+                  "top": 111.21875,
+                  "right": 379,
+                  "bottom": 372.78125,
+                  "left": 1
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 331,
+                  "y": 135.21875,
+                  "width": 24,
+                  "height": 24,
+                  "top": 135.21875,
+                  "right": 355,
+                  "bottom": 159.21875,
+                  "left": 331
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "1"
+              },
+              "bodyOverflow": "hidden"
+            }
           }
-        },
-        {
-          "t": 50,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 21.950653076171875,
-                "y": 345.6021728515625,
-                "width": 336.09869384765625,
-                "height": 477.6654052734375,
-                "top": 345.6021728515625,
-                "right": 358.0493469238281,
-                "bottom": 823.267578125,
-                "left": 21.950653076171875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 21.950653076171875,
-                "y": 345.6021423339844,
-                "width": 336.09869384765625,
-                "height": 477.6654357910156,
-                "top": 345.6021423339844,
-                "right": 358.0493469238281,
-                "bottom": 823.267578125,
-                "left": 21.950653076171875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 22.95064926147461,
-                "y": 350.4275817871094,
-                "width": 334.09869384765625,
-                "height": 233.79989624023438,
-                "top": 350.4275817871094,
-                "right": 357.04934310913086,
-                "bottom": 584.2274780273438,
-                "left": 22.95064926147461
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 314.7102966308594,
-                "y": 360.1566467285156,
-                "width": 21.227294921875,
-                "height": 18.3846435546875,
-                "top": 360.1566467285156,
-                "right": 335.9375915527344,
-                "bottom": 378.5412902832031,
-                "left": 314.7102966308594
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0.595537"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2233.2000000000003,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.11660000000000004,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 221.09999999996478,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.8976006620698935,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 221.09999999996478,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.8976006620698935,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 3,
-                "playState": "running",
-                "currentTime": 57.599999999964794,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.23039999999985916,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 4,
-                "playState": "running",
-                "currentTime": 57.599999999964794,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.23039999999985916,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 100,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 5.47344970703125,
-                "y": 168.91204833984375,
-                "width": 369.0531005859375,
-                "height": 587.1828002929688,
-                "top": 168.91204833984375,
-                "right": 374.52655029296875,
-                "bottom": 756.0948486328125,
-                "left": 5.47344970703125
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 5.4734344482421875,
-                "y": 168.91204833984375,
-                "width": 369.0531005859375,
-                "height": 587.1828002929688,
-                "top": 168.91204833984375,
-                "right": 374.5265350341797,
-                "bottom": 756.0948486328125,
-                "left": 5.4734344482421875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 6.4734206199646,
-                "y": 172.01199340820312,
-                "width": 367.0531311035156,
-                "height": 254.63986206054688,
-                "top": 172.01199340820312,
-                "right": 373.5265517234802,
-                "bottom": 426.65185546875,
-                "left": 6.4734206199646
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 326.9381103515625,
-                "y": 192.45350646972656,
-                "width": 23.30865478515625,
-                "height": 22.59979248046875,
-                "top": 192.45350646972656,
-                "right": 350.24676513671875,
-                "bottom": 215.0532989501953,
-                "left": 326.9381103515625
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0.898781"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2283.3,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.14165000000000005,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 271.1999999999648,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.9842476803008204,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 271.1999999999648,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.9842476803008204,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 3,
-                "playState": "running",
-                "currentTime": 107.69999999996483,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.4307999999998593,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 4,
-                "playState": "running",
-                "currentTime": 107.69999999996483,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.4307999999998593,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 150,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 1.014739990234375,
-                "y": 121.10009765625,
-                "width": 377.97052001953125,
-                "height": 616.8179321289062,
-                "top": 121.10009765625,
-                "right": 378.9852600097656,
-                "bottom": 737.9180297851562,
-                "left": 1.014739990234375
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 1.014739990234375,
-                "y": 121.10009765625,
-                "width": 377.97052001953125,
-                "height": 616.8179321289062,
-                "top": 121.10009765625,
-                "right": 378.9852600097656,
-                "bottom": 737.9180297851562,
-                "left": 1.014739990234375
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 2.009399175643921,
-                "y": 122.48941802978516,
-                "width": 375.981201171875,
-                "height": 260.2790832519531,
-                "top": 122.48941802978516,
-                "right": 377.9906003475189,
-                "bottom": 382.7685012817383,
-                "left": 2.009399175643921
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 330.2469482421875,
-                "y": 145.82969665527344,
-                "width": 23.871826171875,
-                "height": 23.740402221679688,
-                "top": 145.82969665527344,
-                "right": 354.1187744140625,
-                "bottom": 169.57009887695312,
-                "left": 330.2469482421875
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0.981135"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2333.3,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.1666500000000002,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 157.6999999999651,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.6307999999998604,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              },
-              {
-                "index": 2,
-                "playState": "running",
-                "currentTime": 157.6999999999651,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 250,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "linear"
-                },
-                "progress": 0.6307999999998604,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 250,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 0,
-                "y": 110.21875,
-                "width": 380,
-                "height": 623.5625,
-                "top": 110.21875,
-                "right": 380,
-                "bottom": 733.78125,
-                "left": 0
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 110.21875,
-                "width": 380,
-                "height": 623.5625,
-                "top": 110.21875,
-                "right": 380,
-                "bottom": 733.78125,
-                "left": 0
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 1,
-                "y": 111.21875,
-                "width": 378,
-                "height": 261.5625,
-                "top": 111.21875,
-                "right": 379,
-                "bottom": 372.78125,
-                "left": 1
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 331,
-                "y": 135.21875,
-                "width": 24,
-                "height": 24,
-                "top": 135.21875,
-                "right": 355,
-                "bottom": 159.21875,
-                "left": 331
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "1"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2449.9,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.22494999999999998,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "t": 400,
-          "baseline": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 52.462615966796875,
-                "y": 672.7908325195312,
-                "width": 275.07476806640625,
-                "height": 274.864990234375,
-                "top": 672.7908325195312,
-                "right": 327.5373840332031,
-                "bottom": 947.6558227539062,
-                "left": 52.462615966796875
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 53.46261215209961,
-                "y": 671.43798828125,
-                "width": 273.0747985839844,
-                "height": 195.209228515625,
-                "top": 671.43798828125,
-                "right": 326.537410736084,
-                "bottom": 866.647216796875,
-                "left": 53.46261215209961
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 292.0672302246094,
-                "y": 661.330078125,
-                "width": 17.373138427734375,
-                "height": 10.57916259765625,
-                "top": 661.330078125,
-                "right": 309.44036865234375,
-                "bottom": 671.9092407226562,
-                "left": 292.0672302246094
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "0"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2183.2,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.0915999999999999,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              },
-              {
-                "index": 1,
-                "playState": "running",
-                "currentTime": 164.29999999998836,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 300,
-                  "endDelay": 0,
-                  "iterations": 1,
-                  "easing": "ease-out"
-                },
-                "progress": 0.7343043929822511,
-                "target": {
-                  "tag": "div",
-                  "role": null,
-                  "ariaLabel": null
-                }
-              }
-            ]
-          },
-          "local": {
-            "trigger": {
-              "exists": true,
-              "expanded": "true",
-              "rect": {
-                "x": 0,
-                "y": 110.21875,
-                "width": 380,
-                "height": 623.5625,
-                "top": 110.21875,
-                "right": 380,
-                "bottom": 733.78125,
-                "left": 0
-              }
-            },
-            "dialog": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 110.21875,
-                "width": 380,
-                "height": 623.5625,
-                "top": 110.21875,
-                "right": 380,
-                "bottom": 733.78125,
-                "left": 0
-              }
-            },
-            "dialogImage": {
-              "exists": true,
-              "rect": {
-                "x": 1,
-                "y": 111.21875,
-                "width": 378,
-                "height": 261.5625,
-                "top": 111.21875,
-                "right": 379,
-                "bottom": 372.78125,
-                "left": 1
-              }
-            },
-            "close": {
-              "exists": true,
-              "rect": {
-                "x": 331,
-                "y": 135.21875,
-                "width": 24,
-                "height": 24,
-                "top": 135.21875,
-                "right": 355,
-                "bottom": 159.21875,
-                "left": 331
-              }
-            },
-            "backdrop": {
-              "exists": true,
-              "rect": {
-                "x": 0,
-                "y": 0,
-                "width": 380,
-                "height": 844,
-                "top": 0,
-                "right": 380,
-                "bottom": 844,
-                "left": 0
-              },
-              "opacity": "1"
-            },
-            "bodyOverflow": "hidden",
-            "activeElement": {
-              "tag": "a",
-              "ariaLabel": null
-            },
-            "animations": [
-              {
-                "index": 0,
-                "playState": "running",
-                "currentTime": 2599.9000000000005,
-                "playbackRate": 1,
-                "timing": {
-                  "delay": 0,
-                  "duration": 2000,
-                  "endDelay": 0,
-                  "iterations": null,
-                  "easing": "linear"
-                },
-                "progress": 0.29995000000000016,
-                "target": {
-                  "tag": "div",
-                  "role": "status",
-                  "ariaLabel": "Loading..."
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "open": {
-        "baseline": {
-          "trigger": {
-            "exists": true,
-            "expanded": "true",
-            "rect": {
-              "x": 52.462615966796875,
-              "y": 672.7908325195312,
-              "width": 275.07476806640625,
-              "height": 274.864990234375,
-              "top": 672.7908325195312,
-              "right": 327.5373840332031,
-              "bottom": 947.6558227539062,
-              "left": 52.462615966796875
-            }
-          },
-          "dialog": {
-            "exists": true,
-            "rect": {
-              "x": 52.462615966796875,
-              "y": 672.7908325195312,
-              "width": 275.07476806640625,
-              "height": 274.864990234375,
-              "top": 672.7908325195312,
-              "right": 327.5373840332031,
-              "bottom": 947.6558227539062,
-              "left": 52.462615966796875
-            }
-          },
-          "dialogImage": {
-            "exists": true,
-            "rect": {
-              "x": 53.46261215209961,
-              "y": 671.43798828125,
-              "width": 273.0747985839844,
-              "height": 195.209228515625,
-              "top": 671.43798828125,
-              "right": 326.537410736084,
-              "bottom": 866.647216796875,
-              "left": 53.46261215209961
-            }
-          },
-          "close": {
-            "exists": true,
-            "rect": {
-              "x": 292.0672302246094,
-              "y": 661.330078125,
-              "width": 17.373138427734375,
-              "height": 10.57916259765625,
-              "top": 661.330078125,
-              "right": 309.44036865234375,
-              "bottom": 671.9092407226562,
-              "left": 292.0672302246094
-            }
-          },
-          "backdrop": {
-            "exists": true,
-            "rect": {
-              "x": 0,
-              "y": 0,
-              "width": 380,
-              "height": 844,
-              "top": 0,
-              "right": 380,
-              "bottom": 844,
-              "left": 0
-            },
-            "opacity": "0"
-          },
-          "bodyOverflow": "hidden",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2183.2,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.0915999999999999,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 164.29999999998836,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
-              },
-              "progress": 0.7343043929822511,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            }
-          ]
-        },
-        "local": {
+        ],
+        "open": {
           "trigger": {
             "exists": true,
             "expanded": "true",
@@ -3834,39 +2000,522 @@
             },
             "opacity": "1"
           },
-          "bodyOverflow": "hidden",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 2766.5,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.3832500000000001,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
+          "bodyOverflow": "hidden"
+        },
+        "animation_signature": [
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
-          ]
+          },
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
+            }
+          }
+        ],
+        "screenshots": {
+          "open_dialog": "evidence/interaction/mobile-baseline-open-dialog.png",
+          "open_full": "evidence/interaction/mobile-baseline-open-full.png"
         }
       },
-      "after_close": {
-        "baseline": {
+      "local": {
+        "closed": {
           "trigger": {
             "exists": true,
             "expanded": "false",
+            "rect": {
+              "x": 55,
+              "y": 700,
+              "width": 270,
+              "height": 258,
+              "top": 700,
+              "right": 325,
+              "bottom": 958,
+              "left": 55
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible"
+        },
+        "trajectory": [
+          {
+            "t": 0,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 10.496368408203125,
+                  "y": 222.77447509765625,
+                  "width": 359.00726318359375,
+                  "height": 553.7974243164062,
+                  "top": 222.77447509765625,
+                  "right": 369.5036315917969,
+                  "bottom": 776.5718994140625,
+                  "left": 10.496368408203125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 10.496383666992188,
+                  "y": 222.77450561523438,
+                  "width": 359.0072021484375,
+                  "height": 553.79736328125,
+                  "top": 222.77450561523438,
+                  "right": 369.5035858154297,
+                  "bottom": 776.5718688964844,
+                  "left": 10.496383666992188
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 11.496380805969238,
+                  "y": 227.8015594482422,
+                  "width": 357.0072937011719,
+                  "height": 248.2869415283203,
+                  "top": 227.8015594482422,
+                  "right": 368.5036745071411,
+                  "bottom": 476.0885009765625,
+                  "left": 11.496380805969238
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 323.2105712890625,
+                  "y": 244.9774627685547,
+                  "width": 22.67413330078125,
+                  "height": 21.314834594726562,
+                  "top": 244.9774627685547,
+                  "right": 345.88470458984375,
+                  "bottom": 266.29229736328125,
+                  "left": 323.2105712890625
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 50,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 3.8712005615234375,
+                  "y": 151.7308349609375,
+                  "width": 372.257568359375,
+                  "height": 597.8321533203125,
+                  "top": 151.7308349609375,
+                  "right": 376.12876892089844,
+                  "bottom": 749.56298828125,
+                  "left": 3.8712005615234375
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 3.8712005615234375,
+                  "y": 151.73086547851562,
+                  "width": 372.257568359375,
+                  "height": 597.8321533203125,
+                  "top": 151.73086547851562,
+                  "right": 376.12876892089844,
+                  "bottom": 749.5630187988281,
+                  "left": 3.8712005615234375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 4.871199607849121,
+                  "y": 154.21609497070312,
+                  "width": 370.2575988769531,
+                  "height": 256.66632080078125,
+                  "top": 154.21609497070312,
+                  "right": 375.12879848480225,
+                  "bottom": 410.8824157714844,
+                  "left": 4.871199607849121
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 328.12713623046875,
+                  "y": 175.69927978515625,
+                  "width": 23.51104736328125,
+                  "height": 23.009674072265625,
+                  "top": 175.69927978515625,
+                  "right": 351.63818359375,
+                  "bottom": 198.70895385742188,
+                  "left": 328.12713623046875
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.518429"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 100,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 1.261749267578125,
+                  "y": 123.748779296875,
+                  "width": 377.47650146484375,
+                  "height": 615.1762084960938,
+                  "top": 123.748779296875,
+                  "right": 378.7382507324219,
+                  "bottom": 738.9249877929688,
+                  "left": 1.261749267578125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 1.2617340087890625,
+                  "y": 123.74874877929688,
+                  "width": 377.4765625,
+                  "height": 615.1761474609375,
+                  "top": 123.74874877929688,
+                  "right": 378.73829650878906,
+                  "bottom": 738.9248962402344,
+                  "left": 1.2617340087890625
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 2.2550933361053467,
+                  "y": 125.23281860351562,
+                  "width": 375.4897766113281,
+                  "height": 259.9667053222656,
+                  "top": 125.23281860351562,
+                  "right": 377.7448699474335,
+                  "bottom": 385.19952392578125,
+                  "left": 2.2550933361053467
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.06365966796875,
+                  "y": 148.4125213623047,
+                  "width": 23.84063720703125,
+                  "height": 23.677230834960938,
+                  "top": 148.4125213623047,
+                  "right": 353.904296875,
+                  "bottom": 172.08975219726562,
+                  "left": 330.06365966796875
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.873067"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 150,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0.3427276611328125,
+                  "y": 113.893798828125,
+                  "width": 379.3145751953125,
+                  "height": 621.2846069335938,
+                  "top": 113.893798828125,
+                  "right": 379.6573028564453,
+                  "bottom": 735.1784057617188,
+                  "left": 0.3427276611328125
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0.34271240234375,
+                  "y": 113.893798828125,
+                  "width": 379.3145751953125,
+                  "height": 621.2846069335938,
+                  "top": 113.893798828125,
+                  "right": 379.65728759765625,
+                  "bottom": 735.1784057617188,
+                  "left": 0.34271240234375
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1.3409239053726196,
+                  "y": 115.02528381347656,
+                  "width": 377.31817626953125,
+                  "height": 261.1290283203125,
+                  "top": 115.02528381347656,
+                  "right": 378.65910017490387,
+                  "bottom": 376.15431213378906,
+                  "left": 1.3409239053726196
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.74566650390625,
+                  "y": 138.80247497558594,
+                  "width": 23.95672607421875,
+                  "height": 23.912322998046875,
+                  "top": 138.80247497558594,
+                  "right": 354.702392578125,
+                  "bottom": 162.7147979736328,
+                  "left": 330.74566650390625
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.975357"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 200,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0.077056884765625,
+                  "y": 111.0450439453125,
+                  "width": 379.84588623046875,
+                  "height": 623.0503540039062,
+                  "top": 111.0450439453125,
+                  "right": 379.9229431152344,
+                  "bottom": 734.0953979492188,
+                  "left": 0.077056884765625
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0.077056884765625,
+                  "y": 111.04501342773438,
+                  "width": 379.84588623046875,
+                  "height": 623.05029296875,
+                  "top": 111.04501342773438,
+                  "right": 379.9229431152344,
+                  "bottom": 734.0953063964844,
+                  "left": 0.077056884765625
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1.0766665935516357,
+                  "y": 112.07457733154297,
+                  "width": 377.8466796875,
+                  "height": 261.4650573730469,
+                  "top": 112.07457733154297,
+                  "right": 378.92334628105164,
+                  "bottom": 373.53963470458984,
+                  "left": 1.0766665935516357
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 330.94281005859375,
+                  "y": 136.02447509765625,
+                  "width": 23.990264892578125,
+                  "height": 23.98028564453125,
+                  "top": 136.02447509765625,
+                  "right": 354.9330749511719,
+                  "bottom": 160.0047607421875,
+                  "left": 330.94281005859375
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "0.996567"
+              },
+              "bodyOverflow": "hidden"
+            }
+          },
+          {
+            "t": 250,
+            "state": {
+              "trigger": {
+                "exists": true,
+                "expanded": "true",
+                "rect": {
+                  "x": 0,
+                  "y": 110.21875,
+                  "width": 380,
+                  "height": 623.5625,
+                  "top": 110.21875,
+                  "right": 380,
+                  "bottom": 733.78125,
+                  "left": 0
+                }
+              },
+              "dialog": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 110.21875,
+                  "width": 380,
+                  "height": 623.5625,
+                  "top": 110.21875,
+                  "right": 380,
+                  "bottom": 733.78125,
+                  "left": 0
+                }
+              },
+              "dialogImage": {
+                "exists": true,
+                "rect": {
+                  "x": 1,
+                  "y": 111.21875,
+                  "width": 378,
+                  "height": 261.5625,
+                  "top": 111.21875,
+                  "right": 379,
+                  "bottom": 372.78125,
+                  "left": 1
+                }
+              },
+              "close": {
+                "exists": true,
+                "rect": {
+                  "x": 331,
+                  "y": 135.21875,
+                  "width": 24,
+                  "height": 24,
+                  "top": 135.21875,
+                  "right": 355,
+                  "bottom": 159.21875,
+                  "left": 331
+                }
+              },
+              "backdrop": {
+                "exists": true,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 380,
+                  "height": 844,
+                  "top": 0,
+                  "right": 380,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "opacity": "1"
+              },
+              "bodyOverflow": "hidden"
+            }
+          }
+        ],
+        "open": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
             "rect": {
               "x": 0,
               "y": 110.21875,
@@ -3929,138 +2578,326 @@
               "bottom": 844,
               "left": 0
             },
-            "opacity": "0.862234"
+            "opacity": "1"
           },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "a",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 5249.8,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.6249000000000002,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
-            },
-            {
-              "index": 1,
-              "playState": "running",
-              "currentTime": 97.4999999999655,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
-              },
-              "progress": 0.47767485308951907,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            },
-            {
-              "index": 2,
-              "playState": "running",
-              "currentTime": 97.4999999999655,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 300,
-                "endDelay": 0,
-                "iterations": 1,
-                "easing": "ease-out"
-              },
-              "progress": 0.47767485308951907,
-              "target": {
-                "tag": "div",
-                "role": null,
-                "ariaLabel": null
-              }
-            }
-          ]
+          "bodyOverflow": "hidden"
         },
-        "local": {
-          "trigger": {
-            "exists": true,
-            "expanded": "false",
-            "rect": {
-              "x": 55,
-              "y": 700,
-              "width": 270,
-              "height": 258,
-              "top": 700,
-              "right": 325,
-              "bottom": 958,
-              "left": 55
+        "animation_signature": [
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
           },
-          "dialog": {
-            "exists": false,
-            "rect": null
-          },
-          "dialogImage": {
-            "exists": false,
-            "rect": null
-          },
-          "close": {
-            "exists": false,
-            "rect": null
-          },
-          "backdrop": {
-            "exists": false,
-            "rect": null,
-            "opacity": null
-          },
-          "bodyOverflow": "visible",
-          "activeElement": {
-            "tag": "body",
-            "ariaLabel": null
-          },
-          "animations": [
-            {
-              "index": 0,
-              "playState": "running",
-              "currentTime": 3399.9,
-              "playbackRate": 1,
-              "timing": {
-                "delay": 0,
-                "duration": 2000,
-                "endDelay": 0,
-                "iterations": null,
-                "easing": "linear"
-              },
-              "progress": 0.6999500000000001,
-              "target": {
-                "tag": "div",
-                "role": "status",
-                "ariaLabel": "Loading..."
-              }
+          {
+            "target": {
+              "tag": "div",
+              "role": null,
+              "ariaLabel": null
+            },
+            "timing": {
+              "delay": 0,
+              "duration": 250,
+              "endDelay": 0,
+              "iterations": 1,
+              "easing": "linear"
             }
-          ]
+          }
+        ],
+        "screenshots": {
+          "open_dialog": "evidence/interaction/mobile-local-open-dialog.png",
+          "open_full": "evidence/interaction/mobile-local-open-full.png"
         }
       },
-      "screenshots": {
-        "baseline_open": "evidence/interaction/mobile-baseline-open.png",
-        "local_open": "evidence/interaction/mobile-local-open.png",
-        "baseline_after_close": "evidence/interaction/mobile-baseline-after-close.png",
-        "local_after_close": "evidence/interaction/mobile-local-after-close.png"
+      "functional": {
+        "baseline": {
+          "before": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 55,
+                "y": 700,
+                "width": 270,
+                "height": 258,
+                "top": 700,
+                "right": 325,
+                "bottom": 958,
+                "left": 55
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          },
+          "opened": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 1,
+                "y": 111.21875,
+                "width": 378,
+                "height": 261.5625,
+                "top": 111.21875,
+                "right": 379,
+                "bottom": 372.78125,
+                "left": 1
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 331,
+                "y": 135.21875,
+                "width": 24,
+                "height": 24,
+                "top": 135.21875,
+                "right": 355,
+                "bottom": 159.21875,
+                "left": 331
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden"
+          },
+          "after_escape": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 55,
+                "y": 700,
+                "width": 270,
+                "height": 258,
+                "top": 700,
+                "right": 325,
+                "bottom": 958,
+                "left": 55
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          }
+        },
+        "local": {
+          "before": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 55,
+                "y": 700,
+                "width": 270,
+                "height": 258,
+                "top": 700,
+                "right": 325,
+                "bottom": 958,
+                "left": 55
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          },
+          "opened": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 1,
+                "y": 111.21875,
+                "width": 378,
+                "height": 261.5625,
+                "top": 111.21875,
+                "right": 379,
+                "bottom": 372.78125,
+                "left": 1
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 331,
+                "y": 135.21875,
+                "width": 24,
+                "height": 24,
+                "top": 135.21875,
+                "right": 355,
+                "bottom": 159.21875,
+                "left": 331
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden"
+          },
+          "after_escape": {
+            "trigger": {
+              "exists": true,
+              "expanded": "false",
+              "rect": {
+                "x": 55,
+                "y": 700,
+                "width": 270,
+                "height": 258,
+                "top": 700,
+                "right": 325,
+                "bottom": 958,
+                "left": 55
+              }
+            },
+            "dialog": {
+              "exists": false,
+              "rect": null
+            },
+            "dialogImage": {
+              "exists": false,
+              "rect": null
+            },
+            "close": {
+              "exists": false,
+              "rect": null
+            },
+            "backdrop": {
+              "exists": false,
+              "rect": null,
+              "opacity": null
+            },
+            "bodyOverflow": "visible"
+          }
+        }
       }
     }
   ]

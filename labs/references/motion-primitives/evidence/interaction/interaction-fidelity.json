@@ -1,14 +1,15 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "reference_id": "motion-primitives",
-  "scenario": "EB27 MorphingDialog closed -> open trajectory -> settled open -> Escape -> closed",
+  "scenario": "EB27 MorphingDialog deterministic WAAPI trajectory + active-page open/Escape functional test",
   "policy": {
-    "endpoint_visual_min": 98.0,
-    "trajectory_min": 98.0,
+    "dialog_visual_min": 98.0,
+    "open_geometry_min": 98.0,
+    "deterministic_trajectory_min": 98.0,
     "functional_required": true,
-    "animation_signature_match_required": true
+    "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 33.3445,
+  "minimum_score": 97.0455,
   "status": "fail",
   "viewports": [
     {
@@ -16,76 +17,83 @@
       "width": 1440,
       "height": 900,
       "functional": {
-        "closed": true,
-        "open": true,
-        "escape_close": false,
-        "status": "fail"
+        "baseline": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "local": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "status": "pass"
       },
-      "open_visual": {
-        "score": 92.4953,
-        "ssim": 92.4953,
-        "pixel_similarity": 98.7808
+      "open_dialog_visual": {
+        "score": 100.0,
+        "ssim": 100.0,
+        "pixel_similarity": 100.0
       },
-      "after_close_visual": {
-        "score": 99.7134,
-        "ssim": 99.7671,
-        "pixel_similarity": 99.7134
+      "open_geometry": {
+        "score": 100.0,
+        "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 49.7199,
-        "max_normalized_geometry_error": 0.502801,
-        "animation_signature_match": false,
+        "score": 97.0455,
+        "max_normalized_geometry_error": 0.029545,
         "samples": [
           {
             "t": 0,
-            "dialog_error": 0.03375332302517361,
-            "image_error": 0.0319354248046875,
-            "trigger_error": 0.03375332302517361,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.02705803765190972,
+            "image_error": 0.028286183675130208,
+            "trigger_error": 0.02705803765190972,
+            "presence_match": true
           },
           {
             "t": 50,
-            "dialog_error": 0.20752095540364585,
-            "image_error": 0.20494408501519099,
-            "trigger_error": 0.20752095540364585,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.02826236300998264,
+            "image_error": 0.029545152452256945,
+            "trigger_error": 0.02826229519314236,
+            "presence_match": true
           },
           {
             "t": 100,
-            "dialog_error": 0.4476865980360243,
-            "image_error": 0.44122083875868057,
-            "trigger_error": 0.4476865980360243,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.005001017252604167,
+            "image_error": 0.00522798326280382,
+            "trigger_error": 0.005000983344184028,
+            "presence_match": true
           },
           {
             "t": 150,
-            "dialog_error": 0.4939315456814236,
-            "image_error": 0.48956478542751736,
-            "trigger_error": 0.4939315117730035,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.0014198472764756945,
+            "image_error": 0.0014842732747395832,
+            "trigger_error": 0.0014198472764756945,
+            "presence_match": true
+          },
+          {
+            "t": 200,
+            "dialog_error": 0.0005449422200520833,
+            "image_error": 0.0005697038438585069,
+            "trigger_error": 0.0005449422200520833,
+            "presence_match": true
           },
           {
             "t": 250,
-            "dialog_error": 0.5028010389539931,
-            "image_error": 0.49883687337239585,
-            "trigger_error": 0.5028010389539931,
-            "presence_match": true,
-            "animation_signature_match": true
-          },
-          {
-            "t": 400,
-            "dialog_error": 0.5028010389539931,
-            "image_error": 0.49883687337239585,
-            "trigger_error": 0.5028010389539931,
-            "presence_match": true,
-            "animation_signature_match": true
+            "dialog_error": 0.0,
+            "image_error": 0.0,
+            "trigger_error": 0.0,
+            "presence_match": true
           }
         ]
       },
+      "animation_signature": {
+        "match": true,
+        "baseline_count": 2,
+        "local_count": 2
+      },
+      "minimum_score": 97.0455,
       "status": "fail"
     },
     {
@@ -93,76 +101,83 @@
       "width": 390,
       "height": 844,
       "functional": {
-        "closed": true,
-        "open": true,
-        "escape_close": false,
-        "status": "fail"
+        "baseline": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "local": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "status": "pass"
       },
-      "open_visual": {
-        "score": 73.7654,
-        "ssim": 73.7654,
-        "pixel_similarity": 95.9201
+      "open_dialog_visual": {
+        "score": 100.0,
+        "ssim": 100.0,
+        "pixel_similarity": 100.0
       },
-      "after_close_visual": {
-        "score": 98.9739,
-        "ssim": 99.1915,
-        "pixel_similarity": 98.9739
+      "open_geometry": {
+        "score": 100.0,
+        "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 33.3445,
-        "max_normalized_geometry_error": 0.666555,
-        "animation_signature_match": false,
+        "score": 97.4853,
+        "max_normalized_geometry_error": 0.025147,
         "samples": [
           {
             "t": 0,
-            "dialog_error": 0.012281372648844787,
-            "image_error": 0.010670955712196386,
-            "trigger_error": 0.012281372648844787,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.02427857747010145,
+            "image_error": 0.025147225619492373,
+            "trigger_error": 0.024278541311833532,
+            "presence_match": true
           },
           {
             "t": 50,
-            "dialog_error": 0.387664324864392,
-            "image_error": 0.3803440835238633,
-            "trigger_error": 0.3876642887061241,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.010004739625759035,
+            "image_error": 0.010362706478173134,
+            "trigger_error": 0.010004703467491114,
+            "presence_match": true
           },
           {
             "t": 100,
-            "dialog_error": 0.5970127774640848,
-            "image_error": 0.5917369607500556,
-            "trigger_error": 0.5970127774640848,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.003603605297504443,
+            "image_error": 0.00373253664134238,
+            "trigger_error": 0.0036036776140402843,
+            "presence_match": true
           },
           {
             "t": 150,
-            "dialog_error": 0.6536620081318498,
-            "image_error": 0.6504129979282759,
-            "trigger_error": 0.6536620081318498,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.0011049605093861078,
+            "image_error": 0.0011444905357903214,
+            "trigger_error": 0.0011049243511181872,
+            "presence_match": true
+          },
+          {
+            "t": 200,
+            "dialog_error": 0.00030101758043912916,
+            "image_error": 0.0003117837047124926,
+            "trigger_error": 0.00030105373870704976,
+            "presence_match": true
           },
           {
             "t": 250,
-            "dialog_error": 0.6665546001416247,
-            "image_error": 0.663766870001481,
-            "trigger_error": 0.6665546001416247,
-            "presence_match": true,
-            "animation_signature_match": false
-          },
-          {
-            "t": 400,
-            "dialog_error": 0.6665546001416247,
-            "image_error": 0.663766870001481,
-            "trigger_error": 0.6665546001416247,
-            "presence_match": true,
-            "animation_signature_match": false
+            "dialog_error": 0.0,
+            "image_error": 0.0,
+            "trigger_error": 0.0,
+            "presence_match": true
           }
         ]
       },
+      "animation_signature": {
+        "match": true,
+        "baseline_count": 2,
+        "local_count": 2
+      },
+      "minimum_score": 97.4853,
       "status": "fail"
     }
   ]

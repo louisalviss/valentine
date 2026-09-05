@@ -780,7 +780,7 @@
     "motion_interaction": {
       "status": "fail",
       "states_verified": [],
-      "minimum_score": 33.3445,
+      "minimum_score": 97.0455,
       "method": "Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.",
       "notes": "Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance."
     }
