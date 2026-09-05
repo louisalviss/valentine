@@ -14,12 +14,12 @@ reference_id=sys.argv[1]
 ref=Path.cwd()/'labs'/'references'/reference_id
 interaction_dir=ref/'evidence'/'interaction'
 capture=json.loads((interaction_dir/'interaction-capture.json').read_text())
-if capture.get('version')!='3.3':
-    raise SystemExit(f'{reference_id}: interaction capture protocol must be 3.3')
+if capture.get('version')!='3.4':
+    raise SystemExit(f'{reference_id}: interaction capture protocol must be 3.4')
 
-required_trials=3
+required_trials=5
 if int(capture.get('runtime_trial_count',0)) < required_trials:
-    raise SystemExit(f'{reference_id}: protocol 3.3 requires at least {required_trials} runtime trials')
+    raise SystemExit(f'{reference_id}: protocol 3.4 requires at least {required_trials} runtime trials')
 
 
 def image_score(a_path,b_path):
@@ -214,7 +214,7 @@ for vp in capture['viewports']:
     path_max_error=max(path_errors or [1.0])
     trajectory_score=max(0.0,(1.0-path_max_error)*100.0)
 
-    # Three independent runtime trials per side suppress one-frame scheduler jitter.
+    # Five independent runtime trials per side suppress one-frame scheduler jitter.
     # At each spatial milestone, compare median crossing times, then remove one
     # bounded constant rAF phase offset. Residual curve shape still has to score >=98.
     raw_timing=[]
@@ -290,7 +290,7 @@ for vp in capture['viewports']:
         'trajectory':{
             'score':round(trajectory_score,4),
             'max_median_normalized_geometry_error':round(path_max_error,6),
-            'basis':'median geometry error across 3 independent rAF trials at spatial progress milestones',
+            'basis':'median geometry error across 5 independent rAF trials at spatial progress milestones',
             'milestones':path_samples,
         },
         'timing_curve':{
@@ -304,7 +304,7 @@ for vp in capture['viewports']:
             'rmse_phase_aligned_residual_ms':round(rmse_residual,3) if rmse_residual is not None else None,
             'max_abs_phase_aligned_residual_ms':round(max_abs_residual,3) if max_abs_residual is not None else None,
             'nominal_transition_ms':nominal_transition_ms,
-            'basis':'3-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored',
+            'basis':'5-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored',
             'milestones':timing_samples,
         },
         'timing_diagnostic':{
@@ -325,8 +325,8 @@ for vp in capture['viewports']:
 overall='pass' if all(x['status']=='pass' for x in results) else 'fail'
 minimum=min(x['minimum_score'] for x in results)
 report={
-    'version':'3.3',
-    'capture_protocol':'3.3',
+    'version':'3.4',
+    'capture_protocol':'3.4',
     'reference_id':reference_id,
     'scenario':capture['scenario'],
     'policy':{
@@ -345,7 +345,7 @@ report={
     'viewports':results,
 }
 (interaction_dir/'interaction-fidelity.json').write_text(json.dumps(report,indent=2)+'\n')
-print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} protocol=v3.3 min={minimum:.4f}')
+print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} protocol=v3.4 min={minimum:.4f}')
 for x in results:
     tc=x['timing_curve']; sig=x['animation_signature']
     print(f" {x['viewport']} status={x['status']} dialog={x['open_dialog_visual']['score']:.4f} geometry={x['open_geometry']['score']:.4f} spatial={x['trajectory']['score']:.4f} timing={tc['score']:.4f} phase_ms={tc['phase_offset_ms']} residual_rms_ms={tc['rmse_phase_aligned_residual_ms']} trials={tc['trial_count']} functional={x['functional']['status']} animations_measured={sig['measured']} animations_match={sig['match']} counts={sig['baseline_counts']}/{sig['local_counts']} mount_median_delta_ms={x['timing_diagnostic']['median_click_to_dialog_delta_ms']}")
