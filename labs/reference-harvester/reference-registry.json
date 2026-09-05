@@ -116,7 +116,7 @@
       },
       "provenance": {
         "rights_status": "mixed",
-        "note": "Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown."
+        "note": "Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown. Network-isolation v1 failed; external dependency remains essential until resolved."
       },
       "live": "../labs/references/motion-primitives/",
       "preview": "../labs/references/motion-primitives/",

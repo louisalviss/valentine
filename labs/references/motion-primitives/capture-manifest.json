@@ -768,7 +768,22 @@
     "mode": "source-import",
     "local_path": "labs/references/motion-primitives/",
     "essential_origin_dependency": true,
-    "notes": "Static export built from exact MIT upstream SHA. Framework/public asset paths are deterministically relocated under the nested Valentine base path. Remote demo media remains externally referenced, so candidate is not self-contained."
+    "notes": "Network-isolation gate failed; candidate still has an essential external dependency for the accepted surface. See evidence/isolation/self-containment.json.",
+    "self_containment": {
+      "status": "fail",
+      "protocol": "network-isolation-v1",
+      "visual_minimum_score": 96.6271,
+      "interaction_status": "pass",
+      "blocked_request_count": 22,
+      "blocked_origins": [
+        "https://assets.onedollarstats.com",
+        "https://i.pinimg.com",
+        "https://i.scdn.co",
+        "https://images.beta.cosmos.so"
+      ],
+      "supported_surface": "8 deterministic homepage visual states + EB27 morph dialog open/Escape on desktop and mobile",
+      "evidence": "evidence/isolation/self-containment.json"
+    }
   },
   "fidelity": {
     "visual": {
