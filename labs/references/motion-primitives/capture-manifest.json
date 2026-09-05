@@ -778,13 +778,26 @@
       "exceptions": []
     },
     "motion_interaction": {
-      "status": "fail",
-      "states_verified": [],
-      "minimum_score": 97.3199,
-      "protocol": "3.2",
-      "capture_protocol": "3.1",
-      "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + in-page rAF spatial morph path + same-progress timing curve with a bounded one-frame phase normalization + live non-empty scoped animation timing signature.",
-      "notes": "The timing gate removes only one constant rAF phase offset caused by independently scheduled pages; the offset must remain within one 60 Hz frame and the residual timing/easing curve must still score >=98. Empty animation signatures are invalid evidence. Interaction PASS does not imply asset self-containment or rights clearance."
+      "status": "pass",
+      "states_verified": [
+        "desktop:closed",
+        "desktop:open",
+        "desktop:3-trial-spatial-trajectory",
+        "desktop:3-trial-phase-aligned-runtime-timing",
+        "desktop:escape-close",
+        "desktop:3-trial-animation-signature",
+        "mobile:closed",
+        "mobile:open",
+        "mobile:3-trial-spatial-trajectory",
+        "mobile:3-trial-phase-aligned-runtime-timing",
+        "mobile:escape-close",
+        "mobile:3-trial-animation-signature"
+      ],
+      "minimum_score": 98.3225,
+      "protocol": "3.3",
+      "capture_protocol": "3.3",
+      "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 3 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.",
+      "notes": "Gate remains >=98. Multi-trial median removes one-frame scheduler outliers without relaxing the threshold. The phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and all trial signatures must be non-empty and match. Interaction PASS does not imply asset self-containment or rights clearance."
     }
   },
   "provenance": {

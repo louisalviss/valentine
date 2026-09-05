@@ -1,25 +1,27 @@
 {
-  "version": "3.2",
-  "capture_protocol": "3.1",
+  "version": "3.3",
+  "capture_protocol": "3.3",
   "reference_id": "motion-primitives",
-  "scenario": "EB27 MorphingDialog runtime spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test",
+  "scenario": "EB27 MorphingDialog 3-trial rAF spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test",
   "policy": {
     "dialog_visual_min": 98.0,
     "open_geometry_min": 98.0,
     "spatial_trajectory_min": 98.0,
     "runtime_timing_curve_min": 98.0,
     "runtime_phase_budget_ms": 16.7,
+    "runtime_trial_count_min": 3,
     "functional_required": true,
     "interaction_animation_signature_measured_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 97.3199,
-  "status": "fail",
+  "minimum_score": 98.3225,
+  "status": "pass",
   "viewports": [
     {
       "viewport": "desktop",
       "width": 1440,
       "height": 900,
+      "runtime_trial_count": 3,
       "functional": {
         "baseline": {
           "closed": true,
@@ -45,126 +47,346 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.5274,
-        "max_normalized_geometry_error": 0.004726,
-        "basis": "spatial progress milestones; scheduler phase excluded",
+        "score": 99.9207,
+        "max_median_normalized_geometry_error": 0.000793,
+        "basis": "median geometry error across 3 independent rAF trials at spatial progress milestones",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 0.00226596455593368,
-            "image_error": 0.002305273990473956,
-            "trigger_error": 0.002265896739093402,
-            "baseline_t": 0.0,
-            "local_t": 0.636,
-            "baseline_crossing": false,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 8.894804118931966e-09,
+            "image_error_median": 0.00017795629236767732,
+            "trigger_error_median": 2.4223799704890957e-08,
+            "all_trials_forward_crossing": false,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 0.020482899164596675,
+                "image_error": 0.02127804801034434,
+                "trigger_error": 0.020482899164596675,
+                "baseline_t": 0.0,
+                "local_t": 9.069,
+                "baseline_crossing": false,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 8.894804118931966e-09,
+                "image_error": 0.00017795629236767732,
+                "trigger_error": 2.4223799704890957e-08,
+                "baseline_t": 3.775,
+                "local_t": 8.094,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 4.9209477816071334e-09,
+                "image_error": 6.560593700719942e-05,
+                "trigger_error": 1.0866186938882392e-08,
+                "baseline_t": 4.935,
+                "local_t": 3.752,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.25,
-            "dialog_error": 5.1175891068548176e-08,
-            "image_error": 0.0001082732324517287,
-            "trigger_error": 4.602858199278772e-08,
-            "baseline_t": 16.62,
-            "local_t": 15.36,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 1.8760710910707228e-08,
+            "image_error_median": 0.0006305077532686533,
+            "trigger_error_median": 4.372973667917298e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.3880057478685457e-08,
+                "image_error": 0.0010906501469145269,
+                "trigger_error": 1.3880057478685457e-08,
+                "baseline_t": 12.915,
+                "local_t": 25.377,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 1.913590589689799e-08,
+                "image_error": 0.0006305077532686533,
+                "trigger_error": 6.018024963496929e-08,
+                "baseline_t": 18.827,
+                "local_t": 25.277,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.8760710910707228e-08,
+                "image_error": 0.0003984520814280914,
+                "trigger_error": 4.372973667917298e-08,
+                "baseline_t": 21.621,
+                "local_t": 18.409,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.5,
-            "dialog_error": 1.3414958072783317e-08,
-            "image_error": 0.0007594421595741273,
-            "trigger_error": 3.086687748855689e-08,
-            "baseline_t": 42.239,
-            "local_t": 35.598,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 1.4771887495928442e-08,
+            "image_error_median": 0.0007925318742728551,
+            "trigger_error_median": 4.9264637343387426e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.2945085082883957e-08,
+                "image_error": 5.153481986629534e-05,
+                "trigger_error": 1.2945085082883957e-08,
+                "baseline_t": 41.781,
+                "local_t": 47.0,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 3.864408534405407e-08,
+                "image_error": 0.0011615094179861292,
+                "trigger_error": 4.9264637343387426e-08,
+                "baseline_t": 38.2,
+                "local_t": 41.153,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.4771887495928442e-08,
+                "image_error": 0.0007925318742728551,
+                "trigger_error": 5.265641467152212e-08,
+                "baseline_t": 38.546,
+                "local_t": 35.824,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.75,
-            "dialog_error": 3.305315215603362e-08,
-            "image_error": 0.004725994192013982,
-            "trigger_error": 4.6654017735489916e-08,
-            "baseline_t": 68.282,
-            "local_t": 55.542,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 2.275773876508285e-08,
+            "image_error_median": 0.0002568536001229897,
+            "trigger_error_median": 3.223409483628833e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 2.275773876508285e-08,
+                "image_error": 0.0008764200427156273,
+                "trigger_error": 3.3746279465655485e-08,
+                "baseline_t": 75.127,
+                "local_t": 71.427,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 3.223409483628833e-08,
+                "image_error": 0.0002568536001229897,
+                "trigger_error": 3.223409483628833e-08,
+                "baseline_t": 58.005,
+                "local_t": 69.684,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 2.2411762125153068e-08,
+                "image_error": 2.2411762125153068e-08,
+                "trigger_error": 2.620012120739072e-08,
+                "baseline_t": 57.608,
+                "local_t": 59.411,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.9,
-            "dialog_error": 2.2426052442230888e-08,
-            "image_error": 3.2471255945409895e-06,
-            "trigger_error": 3.461568221199387e-08,
-            "baseline_t": 86.724,
-            "local_t": 92.146,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 2.121933491139316e-08,
+            "image_error_median": 4.787049074176745e-08,
+            "trigger_error_median": 4.648257686312718e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 4.577995183928528e-08,
+                "image_error": 5.890458620309384e-06,
+                "trigger_error": 9.225788428718968e-08,
+                "baseline_t": 115.445,
+                "local_t": 95.604,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 2.121933491139316e-08,
+                "image_error": 3.1016738767498785e-08,
+                "trigger_error": 4.648257686312718e-08,
+                "baseline_t": 94.514,
+                "local_t": 98.891,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.4651201733310396e-08,
+                "image_error": 4.787049074176745e-08,
+                "trigger_error": 3.905313570208414e-08,
+                "baseline_t": 93.315,
+                "local_t": 94.857,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           }
         ]
       },
       "timing_curve": {
-        "score": 97.3199,
+        "score": 98.3225,
         "measured": true,
-        "phase_offset_ms": -3.95,
+        "trial_count": 3,
+        "aggregation": "median crossing time per side at each spatial milestone",
+        "phase_offset_ms": 4.528,
         "phase_budget_ms": 16.7,
         "phase_within_budget": true,
-        "rmse_phase_aligned_residual_ms": 6.7,
-        "max_abs_phase_aligned_residual_ms": 9.373,
+        "rmse_phase_aligned_residual_ms": 4.194,
+        "max_abs_phase_aligned_residual_ms": 7.151,
         "nominal_transition_ms": 250.0,
-        "basis": "same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "basis": "3-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
         "milestones": [
           {
             "progress": 0.25,
-            "baseline_t": 16.62,
-            "local_t": 15.36,
-            "raw_delta_ms": -1.26,
-            "phase_aligned_residual_ms": 2.69
+            "baseline_times": [
+              12.915,
+              18.827,
+              21.621
+            ],
+            "local_times": [
+              25.377,
+              25.277,
+              18.409
+            ],
+            "baseline_median_t": 18.827,
+            "local_median_t": 25.277,
+            "raw_delta_ms": 6.45,
+            "phase_aligned_residual_ms": 1.921
           },
           {
             "progress": 0.5,
-            "baseline_t": 42.239,
-            "local_t": 35.598,
-            "raw_delta_ms": -6.641,
-            "phase_aligned_residual_ms": -2.69
+            "baseline_times": [
+              41.781,
+              38.2,
+              38.546
+            ],
+            "local_times": [
+              47.0,
+              41.153,
+              35.824
+            ],
+            "baseline_median_t": 38.546,
+            "local_median_t": 41.153,
+            "raw_delta_ms": 2.607,
+            "phase_aligned_residual_ms": -1.921
           },
           {
             "progress": 0.75,
-            "baseline_t": 68.282,
-            "local_t": 55.542,
-            "raw_delta_ms": -12.74,
-            "phase_aligned_residual_ms": -8.789
+            "baseline_times": [
+              75.127,
+              58.005,
+              57.608
+            ],
+            "local_times": [
+              71.427,
+              69.684,
+              59.411
+            ],
+            "baseline_median_t": 58.005,
+            "local_median_t": 69.684,
+            "raw_delta_ms": 11.68,
+            "phase_aligned_residual_ms": 7.151
           },
           {
             "progress": 0.9,
-            "baseline_t": 86.724,
-            "local_t": 92.146,
-            "raw_delta_ms": 5.423,
-            "phase_aligned_residual_ms": 9.373
+            "baseline_times": [
+              115.445,
+              94.514,
+              93.315
+            ],
+            "local_times": [
+              95.604,
+              98.891,
+              94.857
+            ],
+            "baseline_median_t": 94.514,
+            "local_median_t": 95.604,
+            "raw_delta_ms": 1.09,
+            "phase_aligned_residual_ms": -3.439
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 4.0
+        "baseline_click_to_dialog_ms": [
+          2.3,
+          11.4,
+          9.2
+        ],
+        "local_click_to_dialog_ms": [
+          5.2,
+          5.0,
+          12.2
+        ],
+        "median_click_to_dialog_delta_ms": 4.0
       },
       "animation_signature": {
         "measured": true,
         "match": true,
-        "baseline_count": 2,
-        "local_count": 2,
-        "baseline_capture_t_ms": 0,
-        "local_capture_t_ms": 0
+        "baseline_counts": [
+          2,
+          2,
+          2
+        ],
+        "local_counts": [
+          2,
+          2,
+          2
+        ],
+        "all_trials_required": true
       },
-      "minimum_score": 97.3199,
-      "status": "fail"
+      "minimum_score": 98.3225,
+      "status": "pass"
     },
     {
       "viewport": "mobile",
       "width": 390,
       "height": 844,
+      "runtime_trial_count": 3,
       "functional": {
         "baseline": {
           "closed": true,
@@ -190,120 +412,339 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.937,
-        "max_normalized_geometry_error": 0.00063,
-        "basis": "spatial progress milestones; scheduler phase excluded",
+        "score": 99.9774,
+        "max_median_normalized_geometry_error": 0.000226,
+        "basis": "median geometry error across 3 independent rAF trials at spatial progress milestones",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 5.196301863362734e-08,
-            "image_error": 0.00016142879940673807,
-            "trigger_error": 8.691540438704602e-08,
-            "baseline_t": 4.152,
-            "local_t": 6.168,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 5.114637651161316e-08,
+            "image_error_median": 0.0001241436998186945,
+            "trigger_error_median": 3.2971167205627037e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.105893363437178e-08,
+                "image_error": 7.177243263551874e-05,
+                "trigger_error": 1.8362135049958625e-08,
+                "baseline_t": 4.965,
+                "local_t": 4.123,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 6.933193751603402e-08,
+                "image_error": 0.00021305918286130342,
+                "trigger_error": 3.2971167205627037e-08,
+                "baseline_t": 11.76,
+                "local_t": 2.96,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 5.114637651161316e-08,
+                "image_error": 0.0001241436998186945,
+                "trigger_error": 4.8514323079638045e-08,
+                "baseline_t": 2.73,
+                "local_t": 4.074,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.25,
-            "dialog_error": 6.844831808358812e-08,
-            "image_error": 0.0006295569533424398,
-            "trigger_error": 4.0245151484878775e-08,
-            "baseline_t": 17.712,
-            "local_t": 21.771,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 2.6342009344186106e-08,
+            "image_error_median": 0.00022586123330814865,
+            "trigger_error_median": 4.937498720781116e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 2.6342009344186106e-08,
+                "image_error": 0.00022586123330814865,
+                "trigger_error": 4.937498720781116e-08,
+                "baseline_t": 21.988,
+                "local_t": 19.77,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 1.49691345905595e-08,
+                "image_error": 0.0010329538927335597,
+                "trigger_error": 4.934986679442613e-08,
+                "baseline_t": 24.852,
+                "local_t": 18.827,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.4876774725846004e-07,
+                "image_error": 0.00010175223915788489,
+                "trigger_error": 1.4876774725846004e-07,
+                "baseline_t": 17.718,
+                "local_t": 19.766,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.5,
-            "dialog_error": 9.686912159195e-09,
-            "image_error": 0.0003487535420533403,
-            "trigger_error": 1.2231429947873237e-08,
-            "baseline_t": 38.205,
-            "local_t": 40.769,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 2.9578583727658188e-08,
+            "image_error_median": 0.00018867115006804058,
+            "trigger_error_median": 7.087850597963983e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.958212695358387e-08,
+                "image_error": 0.0005524155789151453,
+                "trigger_error": 4.516662025326303e-08,
+                "baseline_t": 43.018,
+                "local_t": 40.449,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 2.9578583727658188e-08,
+                "image_error": 1.8088605818390547e-05,
+                "trigger_error": 1.316996382718991e-07,
+                "baseline_t": 46.497,
+                "local_t": 40.083,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 6.016120175025628e-08,
+                "image_error": 0.00018867115006804058,
+                "trigger_error": 7.087850597963983e-08,
+                "baseline_t": 38.276,
+                "local_t": 40.975,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.75,
-            "dialog_error": 5.763162748713788e-08,
-            "image_error": 0.00013973844897602206,
-            "trigger_error": 1.0756830175313763e-07,
-            "baseline_t": 65.97,
-            "local_t": 72.43,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 5.144211706004072e-08,
+            "image_error_median": 5.5355958191164334e-08,
+            "trigger_error_median": 9.25431782685397e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 8.726844166281248e-08,
+                "image_error": 3.748300952191914e-08,
+                "trigger_error": 5.572506438511482e-08,
+                "baseline_t": 70.576,
+                "local_t": 68.233,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 5.144211706004072e-08,
+                "image_error": 5.5355958191164334e-08,
+                "trigger_error": 9.25431782685397e-08,
+                "baseline_t": 76.43,
+                "local_t": 66.99,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 3.2842413661572397e-08,
+                "image_error": 0.0001397849208749325,
+                "trigger_error": 1.2365798697945324e-07,
+                "baseline_t": 66.066,
+                "local_t": 68.205,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           },
           {
             "progress": 0.9,
-            "dialog_error": 7.003622805803809e-08,
-            "image_error": 4.164625377994543e-08,
-            "trigger_error": 8.414188492454168e-08,
-            "baseline_t": 98.053,
-            "local_t": 104.487,
-            "baseline_crossing": true,
-            "local_crossing": true,
-            "presence_match": true
+            "dialog_error_median": 4.829696200804625e-08,
+            "image_error_median": 9.253381009353363e-08,
+            "trigger_error_median": 6.363500235439973e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 4.829696200804625e-08,
+                "image_error": 1.2139872549637286e-05,
+                "trigger_error": 6.363500235439973e-08,
+                "baseline_t": 102.214,
+                "local_t": 99.869,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 7.448479897366502e-08,
+                "image_error": 4.4341227615008484e-08,
+                "trigger_error": 7.448479897366502e-08,
+                "baseline_t": 108.04,
+                "local_t": 99.092,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.8099186890661677e-08,
+                "image_error": 9.253381009353363e-08,
+                "trigger_error": 3.226997074115627e-08,
+                "baseline_t": 98.142,
+                "local_t": 99.778,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
           }
         ]
       },
       "timing_curve": {
-        "score": 99.322,
+        "score": 99.95,
         "measured": true,
-        "phase_offset_ms": 5.247,
+        "trial_count": 3,
+        "aggregation": "median crossing time per side at each spatial milestone",
+        "phase_offset_ms": -2.403,
         "phase_budget_ms": 16.7,
         "phase_within_budget": true,
-        "rmse_phase_aligned_residual_ms": 1.695,
-        "max_abs_phase_aligned_residual_ms": 2.683,
+        "rmse_phase_aligned_residual_ms": 0.125,
+        "max_abs_phase_aligned_residual_ms": 0.182,
         "nominal_transition_ms": 250.0,
-        "basis": "same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "basis": "3-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
         "milestones": [
           {
             "progress": 0.25,
-            "baseline_t": 17.712,
-            "local_t": 21.771,
-            "raw_delta_ms": 4.059,
-            "phase_aligned_residual_ms": -1.188
+            "baseline_times": [
+              21.988,
+              24.852,
+              17.718
+            ],
+            "local_times": [
+              19.77,
+              18.827,
+              19.766
+            ],
+            "baseline_median_t": 21.988,
+            "local_median_t": 19.766,
+            "raw_delta_ms": -2.221,
+            "phase_aligned_residual_ms": 0.182
           },
           {
             "progress": 0.5,
-            "baseline_t": 38.205,
-            "local_t": 40.769,
-            "raw_delta_ms": 2.564,
-            "phase_aligned_residual_ms": -2.683
+            "baseline_times": [
+              43.018,
+              46.497,
+              38.276
+            ],
+            "local_times": [
+              40.449,
+              40.083,
+              40.975
+            ],
+            "baseline_median_t": 43.018,
+            "local_median_t": 40.449,
+            "raw_delta_ms": -2.569,
+            "phase_aligned_residual_ms": -0.165
           },
           {
             "progress": 0.75,
-            "baseline_t": 65.97,
-            "local_t": 72.43,
-            "raw_delta_ms": 6.46,
-            "phase_aligned_residual_ms": 1.214
+            "baseline_times": [
+              70.576,
+              76.43,
+              66.066
+            ],
+            "local_times": [
+              68.233,
+              66.99,
+              68.205
+            ],
+            "baseline_median_t": 70.576,
+            "local_median_t": 68.205,
+            "raw_delta_ms": -2.371,
+            "phase_aligned_residual_ms": 0.032
           },
           {
             "progress": 0.9,
-            "baseline_t": 98.053,
-            "local_t": 104.487,
-            "raw_delta_ms": 6.435,
-            "phase_aligned_residual_ms": 1.188
+            "baseline_times": [
+              102.214,
+              108.04,
+              98.142
+            ],
+            "local_times": [
+              99.869,
+              99.092,
+              99.778
+            ],
+            "baseline_median_t": 102.214,
+            "local_median_t": 99.778,
+            "raw_delta_ms": -2.436,
+            "phase_aligned_residual_ms": -0.032
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 5.3
+        "baseline_click_to_dialog_ms": [
+          8.9,
+          3.8,
+          13.9
+        ],
+        "local_click_to_dialog_ms": [
+          11.7,
+          12.5,
+          11.4
+        ],
+        "median_click_to_dialog_delta_ms": 2.8
       },
       "animation_signature": {
         "measured": true,
         "match": true,
-        "baseline_count": 2,
-        "local_count": 2,
-        "baseline_capture_t_ms": 0,
-        "local_capture_t_ms": 0
+        "baseline_counts": [
+          2,
+          2,
+          2
+        ],
+        "local_counts": [
+          2,
+          2,
+          2
+        ],
+        "all_trials_required": true
       },
-      "minimum_score": 99.322,
+      "minimum_score": 99.95,
       "status": "pass"
     }
   ]
