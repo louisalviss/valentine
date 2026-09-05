@@ -24,7 +24,7 @@ fs.mkdirSync(evidenceDir, { recursive: true });
 const browser = await puppeteer.launch({ executablePath:chrome, headless:true, args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--hide-scrollbars'] });
 const triggerAltPrefix = 'A desk lamp designed by Edouard Wilfrid Buquet';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const runtimeTrialCount = 3;
+const runtimeTrialCount = 5;
 
 async function setupPage(url, width, height) {
   const page = await browser.newPage();
@@ -245,13 +245,13 @@ async function functionalScenario(url, viewport) {
 
 const viewports=[{label:'desktop',width:1440,height:900},{label:'mobile',width:390,height:844}];
 const report={
-  version:'3.3',
+  version:'3.4',
   reference_id:referenceId,
   baseline_url:baselineUrl,
   local_url:localUrl,
   captured_at:new Date().toISOString(),
   runtime_trial_count:runtimeTrialCount,
-  scenario:'EB27 MorphingDialog 3-trial rAF spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test',
+  scenario:'EB27 MorphingDialog 5-trial rAF spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test',
   viewports:[]
 };
 for (const viewport of viewports) {
@@ -263,4 +263,4 @@ for (const viewport of viewports) {
 }
 await browser.close();
 fs.writeFileSync(path.join(evidenceDir,'interaction-capture.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3.3 viewports=${viewports.length} runtime=raf trials=${runtimeTrialCount} live_signature=true`);
+console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3.4 viewports=${viewports.length} runtime=raf trials=${runtimeTrialCount} live_signature=true`);
