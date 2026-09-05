@@ -5,6 +5,7 @@
   "reconstruction_mode": "source-import",
   "browser_capture_enabled": false,
   "capture_policy": "source-build-control",
+  "nested_path_policy": "rebase-framework-and-literal-public-assets",
   "upstream": {
     "repository": "ibelick/motion-primitives",
     "commit": "92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
