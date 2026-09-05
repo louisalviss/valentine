@@ -89,7 +89,9 @@ if (fs.existsSync(referencesDir)) {
     const visualStatus = data.fidelity?.visual?.status;
     const motionStatus = data.fidelity?.motion_interaction?.status;
     if (visualStatus === 'pass' && score < 98) fail(`${entry.name}: manifest visual PASS requires score >=98`);
-    if (visualStatus === 'pass' && !['pass', 'review', 'not-applicable'].includes(motionStatus)) fail(`${entry.name}: static PASS must not silently imply motion PASS; motion evidence status required`);
+    if (visualStatus === 'pass' && !['pending', 'pass', 'review', 'not-applicable'].includes(motionStatus)) {
+      fail(`${entry.name}: visual PASS requires explicit motion/interaction status; pending is allowed until verification`);
+    }
 
     if (visualStatus === 'pass') {
       const reportPath = path.join(referencesDir, entry.name, 'evidence', 'fidelity.json');
