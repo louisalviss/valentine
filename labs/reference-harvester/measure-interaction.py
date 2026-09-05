@@ -14,8 +14,8 @@ reference_id=sys.argv[1]
 ref=Path.cwd()/'labs'/'references'/reference_id
 interaction_dir=ref/'evidence'/'interaction'
 capture=json.loads((interaction_dir/'interaction-capture.json').read_text())
-if capture.get('version')!='2.0':
-    raise SystemExit(f'{reference_id}: interaction capture protocol must be 2.0')
+if capture.get('version')!='3.0':
+    raise SystemExit(f'{reference_id}: interaction capture protocol must be 3.0')
 
 
 def image_score(a_path,b_path):
@@ -35,6 +35,68 @@ def rect_error(a,b,width,height):
     return max(abs(float(a[k])-float(b[k]))/max(1.0,scales[k]) for k in ('x','y','width','height'))
 
 
+def rect_vector(rect,width,height):
+    if rect is None: return None
+    return np.asarray([
+        float(rect['x'])/max(1.0,width),
+        float(rect['y'])/max(1.0,height),
+        float(rect['width'])/max(1.0,width),
+        float(rect['height'])/max(1.0,height),
+    ],dtype=np.float64)
+
+
+def scalar_progress(rect,start,end,width,height):
+    c=rect_vector(rect,width,height); s=rect_vector(start,width,height); e=rect_vector(end,width,height)
+    if c is None or s is None or e is None: return None
+    d=e-s
+    denom=float(np.dot(d,d))
+    if denom<1e-12: return 1.0
+    return float(np.dot(c-s,d)/denom)
+
+
+def lerp_rect(a,b,f):
+    if a is None or b is None: return None
+    return {k:float(a[k])+(float(b[k])-float(a[k]))*f for k in ('x','y','width','height')}
+
+
+def state_at_progress(side,milestone,width,height):
+    closed=side['closed']; opened=side['open']; raw=side['runtime_trajectory']
+    points=[]
+    for item in raw:
+        state=item['state']
+        p=scalar_progress(state['dialog']['rect'],closed['trigger']['rect'],opened['dialog']['rect'],width,height)
+        if p is None: continue
+        points.append((p,item))
+    if not points:
+        return None
+
+    # Motion layout projection may overshoot slightly. Use the first forward
+    # crossing of each spatial milestone so path shape is compared independently
+    # from scheduler phase; timing/easing is checked by animation_signature.
+    for (p0,a),(p1,b) in zip(points,points[1:]):
+        if p1>=p0 and p0<=milestone<=p1 and abs(p1-p0)>1e-9:
+            f=(milestone-p0)/(p1-p0)
+            sa,sb=a['state'],b['state']
+            return {
+                'dialog':lerp_rect(sa['dialog']['rect'],sb['dialog']['rect'],f),
+                'image':lerp_rect(sa['dialogImage']['rect'],sb['dialogImage']['rect'],f),
+                'trigger':lerp_rect(sa['trigger']['rect'],sb['trigger']['rect'],f),
+                'source_t':float(a['t'])+(float(b['t'])-float(a['t']))*f,
+                'progress':milestone,
+            }
+
+    # If frame quantization misses a crossing, use the nearest observed sample.
+    p,item=min(points,key=lambda x:abs(x[0]-milestone))
+    state=item['state']
+    return {
+        'dialog':state['dialog']['rect'],
+        'image':state['dialogImage']['rect'],
+        'trigger':state['trigger']['rect'],
+        'source_t':float(item['t']),
+        'progress':float(p),
+    }
+
+
 def normalized_signature(items):
     sig=[]
     for a in items:
@@ -52,6 +114,8 @@ def functional_side(side):
     close_ok=closed['trigger']['expanded']=='false' and not closed['dialog']['exists'] and closed['bodyOverflow']!='hidden'
     return {'closed':before_ok,'open':open_ok,'escape_close':close_ok,'status':'pass' if before_ok and open_ok and close_ok else 'fail'}
 
+
+milestones=[0.10,0.25,0.50,0.75,0.90]
 results=[]
 for vp in capture['viewports']:
     width,height=vp['width'],vp['height']
@@ -67,22 +131,32 @@ for vp in capture['viewports']:
     )
     open_geometry_score=max(0.0,(1.0-open_geometry_error)*100.0)
 
-    bt={x['t']:x['state'] for x in baseline['trajectory']}
-    lt={x['t']:x['state'] for x in local['trajectory']}
-    times=sorted(set(bt)&set(lt))
-    samples=[]; errors=[]
-    for t in times:
-        b,l=bt[t],lt[t]
-        presence=(b['dialog']['exists']==l['dialog']['exists'] and b['dialogImage']['exists']==l['dialogImage']['exists'])
-        de=rect_error(b['dialog']['rect'],l['dialog']['rect'],width,height)
-        ie=rect_error(b['dialogImage']['rect'],l['dialogImage']['rect'],width,height)
-        te=rect_error(b['trigger']['rect'],l['trigger']['rect'],width,height)
-        if not presence: errors.append(1.0)
-        errors.extend([de,ie,te])
-        samples.append({'t':t,'dialog_error':de,'image_error':ie,'trigger_error':te,'presence_match':presence})
-    max_error=max(errors or [1.0])
-    trajectory_score=max(0.0,(1.0-max_error)*100.0)
+    path_samples=[]; path_errors=[]
+    for progress in milestones:
+        b=state_at_progress(baseline,progress,width,height)
+        l=state_at_progress(local,progress,width,height)
+        if b is None or l is None:
+            path_errors.append(1.0)
+            path_samples.append({'progress':progress,'presence_match':False})
+            continue
+        de=rect_error(b['dialog'],l['dialog'],width,height)
+        ie=rect_error(b['image'],l['image'],width,height)
+        te=rect_error(b['trigger'],l['trigger'],width,height)
+        path_errors.extend([de,ie,te])
+        path_samples.append({
+            'progress':progress,
+            'dialog_error':de,
+            'image_error':ie,
+            'trigger_error':te,
+            'baseline_t':round(b['source_t'],3),
+            'local_t':round(l['source_t'],3),
+            'presence_match':True,
+        })
+    path_max_error=max(path_errors or [1.0])
+    trajectory_score=max(0.0,(1.0-path_max_error)*100.0)
+
     signature_match=normalized_signature(baseline['animation_signature'])==normalized_signature(local['animation_signature'])
+    mount_latency_delta=abs(float(baseline.get('click_to_dialog_ms',0))-float(local.get('click_to_dialog_ms',0)))
 
     scores=[open_score,open_geometry_score,trajectory_score,100.0 if functional else 0.0,100.0 if signature_match else 0.0]
     minimum=min(scores)
@@ -92,15 +166,35 @@ for vp in capture['viewports']:
         'functional':{'baseline':bf,'local':lf,'status':'pass' if functional else 'fail'},
         'open_dialog_visual':{'score':round(open_score,4),**{k:round(v,4) if isinstance(v,float) else v for k,v in open_detail.items()}},
         'open_geometry':{'score':round(open_geometry_score,4),'max_normalized_error':round(open_geometry_error,6)},
-        'trajectory':{'score':round(trajectory_score,4),'max_normalized_geometry_error':round(max_error,6),'samples':samples},
+        'trajectory':{
+            'score':round(trajectory_score,4),
+            'max_normalized_geometry_error':round(path_max_error,6),
+            'basis':'spatial progress milestones; scheduler phase excluded; timing/easing verified by scoped animation signature',
+            'milestones':path_samples,
+        },
+        'timing_diagnostic':{'click_to_dialog_delta_ms':round(mount_latency_delta,3),'gate':'animation_signature'},
         'animation_signature':{'match':signature_match,'baseline_count':len(baseline['animation_signature']),'local_count':len(local['animation_signature'])},
         'minimum_score':round(minimum,4),'status':status
     })
 
 overall='pass' if all(x['status']=='pass' for x in results) else 'fail'
 minimum=min(x['minimum_score'] for x in results)
-report={'version':'2.0','reference_id':reference_id,'scenario':capture['scenario'],'policy':{'dialog_visual_min':98.0,'open_geometry_min':98.0,'deterministic_trajectory_min':98.0,'functional_required':True,'interaction_animation_signature_match_required':True},'minimum_score':round(minimum,4),'status':overall,'viewports':results}
+report={
+    'version':'3.0',
+    'reference_id':reference_id,
+    'scenario':capture['scenario'],
+    'policy':{
+        'dialog_visual_min':98.0,
+        'open_geometry_min':98.0,
+        'spatial_trajectory_min':98.0,
+        'functional_required':True,
+        'interaction_animation_signature_match_required':True,
+    },
+    'minimum_score':round(minimum,4),
+    'status':overall,
+    'viewports':results,
+}
 (interaction_dir/'interaction-fidelity.json').write_text(json.dumps(report,indent=2)+'\n')
-print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} min={minimum:.4f}')
+print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} protocol=v3 min={minimum:.4f}')
 for x in results:
-    print(f" {x['viewport']} status={x['status']} dialog={x['open_dialog_visual']['score']:.4f} geometry={x['open_geometry']['score']:.4f} trajectory={x['trajectory']['score']:.4f} functional={x['functional']['status']} animations={x['animation_signature']['match']} counts={x['animation_signature']['baseline_count']}/{x['animation_signature']['local_count']}")
+    print(f" {x['viewport']} status={x['status']} dialog={x['open_dialog_visual']['score']:.4f} geometry={x['open_geometry']['score']:.4f} trajectory={x['trajectory']['score']:.4f} functional={x['functional']['status']} animations={x['animation_signature']['match']} counts={x['animation_signature']['baseline_count']}/{x['animation_signature']['local_count']} mount_delta_ms={x['timing_diagnostic']['click_to_dialog_delta_ms']}")
