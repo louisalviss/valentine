@@ -4,7 +4,7 @@
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
   "visual_state_policy": "deterministic-static",
   "capture_timing_policy": "network-idle-800ms-7s+settle-1200ms+state-450ms",
-  "captured_at": "2026-09-05T00:22:03.501Z",
+  "captured_at": "2026-09-05T01:08:47.095Z",
   "states": [
     {
       "id": "desktop-initial",

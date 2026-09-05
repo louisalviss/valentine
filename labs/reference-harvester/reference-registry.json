@@ -86,7 +86,7 @@
       "id": "motion-primitives",
       "index": "R002",
       "title": "Motion Primitives",
-      "status": "reconstruction-fail",
+      "status": "reconstructed",
       "source_url": "https://motion-primitives.com/",
       "discovery_source": "open-source-validation",
       "seed_role": "source-import-control",
@@ -107,8 +107,8 @@
       },
       "fidelity": {
         "visual": {
-          "score": 91.9983,
-          "status": "fail"
+          "score": 99.9177,
+          "status": "pass"
         },
         "motion_interaction": {
           "status": "pending"
@@ -116,7 +116,7 @@
       },
       "provenance": {
         "rights_status": "mixed",
-        "note": "Code is MIT at pinned upstream SHA; remote demo media remains separately licensed/unknown."
+        "note": "Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown."
       },
       "live": "../labs/references/motion-primitives/",
       "preview": "../labs/references/motion-primitives/"

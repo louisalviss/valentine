@@ -4,7 +4,7 @@
   "source": {
     "url": "https://motion-primitives.com/",
     "discovery_source": "open-source-validation",
-    "captured_at": "2026-09-05T00:20:25.973Z",
+    "captured_at": "2026-09-05T01:07:12.385Z",
     "baseline_kind": "source-build-control",
     "visual_state_policy": "deterministic-static"
   },
@@ -92,7 +92,7 @@
     ],
     "dom": {
       "path": "evidence/hydrated.html",
-      "sha256": "0201276c1c14af48fdf10a5a23b093c11163b65cd93c138a12193e27f13ec1b5",
+      "sha256": "b422fd9b4489b97442a43b0cc9d7d1b85eb7a9bbcf54b6a3d3ae09b5afc38454",
       "element_count": 218
     },
     "styles_geometry": {
@@ -450,7 +450,7 @@
       {
         "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
         "initiatorType": "link",
-        "duration": 2.2999999999883585,
+        "duration": 2,
         "transferSize": 300,
         "decodedBodySize": 0
       },
@@ -716,14 +716,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.699999999982538,
+        "duration": 10.5,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 11.60000000000582,
+        "duration": 12.10000000000582,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
@@ -768,12 +768,12 @@
     "mode": "source-import",
     "local_path": "labs/references/motion-primitives/",
     "essential_origin_dependency": true,
-    "notes": "Static export built from exact MIT upstream SHA. Remote demo media remains externally referenced, so candidate is not self-contained."
+    "notes": "Static export built from exact MIT upstream SHA. Framework/public asset paths are deterministically relocated under the nested Valentine base path. Remote demo media remains externally referenced, so candidate is not self-contained."
   },
   "fidelity": {
     "visual": {
-      "score": 91.9983,
-      "status": "fail",
+      "score": 99.9177,
+      "status": "pass",
       "method": "min(SSIM, pixel_similarity) per state; aggregate=min(state score)",
       "exceptions": []
     },
@@ -784,8 +784,8 @@
     }
   },
   "provenance": {
-    "code": "Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT.",
-    "assets": "Remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.",
+    "code": "Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT; nested-path relocation is deterministic and limited to actual upstream public assets.",
+    "assets": "Bundled public assets are relocated locally; remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.",
     "rights_status": "mixed"
   }
 }
