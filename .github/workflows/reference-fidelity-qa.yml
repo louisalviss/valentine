@@ -22,18 +22,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Find runnable reconstruction candidates
+      - name: Find runnable generic fidelity candidates
         id: candidates
         run: |
           set -euo pipefail
-          mapfile -t items < <(find labs/references -mindepth 2 -maxdepth 2 -name index.html -printf '%h\n' 2>/dev/null | sort)
-          if [ "${#items[@]}" -eq 0 ]; then
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          profile={item['id']:item.get('qa_profile','generic') for item in registry.get('references',[])}
+          ids=[]
+          for index in Path('labs/references').glob('*/index.html'):
+              rid=index.parent.name
+              if profile.get(rid,'generic')=='generic':
+                  ids.append(rid)
+              else:
+                  print('CUSTOM_QA_SKIP',rid,profile.get(rid))
+          Path('/tmp/reference-candidates.txt').write_text('\n'.join(sorted(ids))+('\n' if ids else ''))
+          print('GENERIC_CANDIDATES',','.join(sorted(ids)) if ids else 'none')
+          PY
+          if [ ! -s /tmp/reference-candidates.txt ]; then
             echo 'has_candidates=false' >> "$GITHUB_OUTPUT"
-            echo 'NO_RUNNABLE_RECONSTRUCTIONS'
             exit 0
           fi
           echo 'has_candidates=true' >> "$GITHUB_OUTPUT"
-          printf '%s\n' "${items[@]}" | sed 's#labs/references/##' >/tmp/reference-candidates.txt
           cat /tmp/reference-candidates.txt
 
       - name: Install fidelity runtime
@@ -80,15 +92,17 @@ jobs:
             labs/references/*/evidence/diff-diagnostics.json
           retention-days: 5
 
-      - name: Enforce 98 minimum for candidates claiming visual PASS
+      - name: Enforce 98 minimum for generic candidates claiming visual PASS
         if: steps.candidates.outputs.has_candidates == 'true'
         run: |
           python3 - <<'PY'
           import json
           from pathlib import Path
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          profile={item['id']:item.get('qa_profile','generic') for item in registry.get('references',[])}
           for manifest_path in Path('labs/references').glob('*/capture-manifest.json'):
               ref=manifest_path.parent
-              if not (ref/'index.html').exists():
+              if not (ref/'index.html').exists() or profile.get(ref.name,'generic')!='generic':
                   continue
               manifest=json.loads(manifest_path.read_text())
               report_path=ref/'evidence'/'fidelity.json'
