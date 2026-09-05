@@ -11,49 +11,115 @@
     "visual_review_min": 95,
     "motion_requires_separate_evidence": true,
     "required_viewports": [
-      {"width":390,"height":844},
-      {"width":768,"height":1024},
-      {"width":1440,"height":900}
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 1440,
+        "height": 900
+      }
     ]
   },
   "discovery_adapters": [
-    {"id":"getlayers","url":"https://www.getlayers.ai/","role":"discovery","enabled":false},
-    {"id":"curated","url":"https://curated.design/","role":"discovery","enabled":false},
-    {"id":"60fps","url":"https://60fps.design/","role":"discovery","enabled":false},
-    {"id":"swiped","url":"https://swiped.design/","role":"discovery","enabled":false}
+    {
+      "id": "getlayers",
+      "url": "https://www.getlayers.ai/",
+      "role": "discovery",
+      "enabled": false
+    },
+    {
+      "id": "curated",
+      "url": "https://curated.design/",
+      "role": "discovery",
+      "enabled": false
+    },
+    {
+      "id": "60fps",
+      "url": "https://60fps.design/",
+      "role": "discovery",
+      "enabled": false
+    },
+    {
+      "id": "swiped",
+      "url": "https://swiped.design/",
+      "role": "discovery",
+      "enabled": false
+    }
   ],
   "references": [
     {
-      "id":"native-content",
-      "index":"R001",
-      "title":"Native Content",
-      "status":"captured",
-      "source_url":"https://www.nativecontent.com/",
-      "discovery_source":"https://curated.design/sites/s/4183/",
-      "seed_role":"bounded-e2e-seed",
-      "reconstruction_mode":"render-equivalent-rebuild",
-      "essential_origin_dependency":true,
-      "description":"Animated production-company portfolio captured with real-browser structural, asset, font and multi-state visual evidence. Reconstruction remains gated by media/provenance review.",
-      "tags":["animated","minimal","colorful","dark"],
-      "fidelity":{"visual":{"score":0,"status":"pending"},"motion_interaction":{"status":"pending"}},
-      "provenance":{"rights_status":"unreviewed"}
+      "id": "native-content",
+      "index": "R001",
+      "title": "Native Content",
+      "status": "captured",
+      "source_url": "https://www.nativecontent.com/",
+      "discovery_source": "https://curated.design/sites/s/4183/",
+      "seed_role": "bounded-e2e-seed",
+      "reconstruction_mode": "render-equivalent-rebuild",
+      "essential_origin_dependency": true,
+      "description": "Animated production-company portfolio captured with real-browser structural, asset, font and multi-state visual evidence. Reconstruction remains gated by media/provenance review.",
+      "tags": [
+        "animated",
+        "minimal",
+        "colorful",
+        "dark"
+      ],
+      "fidelity": {
+        "visual": {
+          "score": 0,
+          "status": "pending"
+        },
+        "motion_interaction": {
+          "status": "pending"
+        }
+      },
+      "provenance": {
+        "rights_status": "unreviewed"
+      }
     },
     {
-      "id":"motion-primitives",
-      "index":"R002",
-      "title":"Motion Primitives",
-      "status":"source-build-pending",
-      "source_url":"https://motion-primitives.com/",
-      "discovery_source":"open-source-validation",
-      "seed_role":"source-import-control",
-      "baseline_policy":"source-build-control",
-      "reconstruction_mode":"source-import",
-      "essential_origin_dependency":true,
-      "description":"MIT-licensed website code used as a deterministic source-import fidelity control. Live GitHub-runner capture is blocked by Vercel Security Checkpoint, so visual baseline is built from the exact pinned upstream source SHA.",
-      "tags":["motion","ui","open-source","mit"],
-      "upstream":{"repository":"ibelick/motion-primitives","commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d","license":"MIT"},
-      "fidelity":{"visual":{"score":0,"status":"pending"},"motion_interaction":{"status":"pending"}},
-      "provenance":{"rights_status":"mixed","note":"Website code is MIT; remotely referenced demo media is not assumed to inherit that license."}
+      "id": "motion-primitives",
+      "index": "R002",
+      "title": "Motion Primitives",
+      "status": "reconstruction-fail",
+      "source_url": "https://motion-primitives.com/",
+      "discovery_source": "open-source-validation",
+      "seed_role": "source-import-control",
+      "baseline_policy": "source-build-control",
+      "reconstruction_mode": "source-import",
+      "essential_origin_dependency": true,
+      "description": "MIT-licensed website code used as a deterministic source-import fidelity control. Live GitHub-runner capture is blocked by Vercel Security Checkpoint, so visual baseline is built from the exact pinned upstream source SHA.",
+      "tags": [
+        "motion",
+        "ui",
+        "open-source",
+        "mit"
+      ],
+      "upstream": {
+        "repository": "ibelick/motion-primitives",
+        "commit": "92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
+        "license": "MIT"
+      },
+      "fidelity": {
+        "visual": {
+          "score": 91.9983,
+          "status": "fail"
+        },
+        "motion_interaction": {
+          "status": "pending"
+        }
+      },
+      "provenance": {
+        "rights_status": "mixed",
+        "note": "Code is MIT at pinned upstream SHA; remote demo media remains separately licensed/unknown."
+      },
+      "live": "../labs/references/motion-primitives/",
+      "preview": "../labs/references/motion-primitives/"
     }
   ]
 }

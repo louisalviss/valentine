@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "method": "min(SSIM, pixel_similarity) per state; aggregate=min(state score)",
+  "visual_pass_min": 98.0,
+  "minimum_score": 91.9983,
+  "mean_score": 98.2292,
+  "status": "fail",
+  "states": [
+    {
+      "id": "desktop-initial",
+      "ssim": 97.7071,
+      "pixel_similarity": 98.9034,
+      "score": 97.7071,
+      "original": "evidence/desktop-initial.png",
+      "local": "evidence/local/desktop-initial.png"
+    },
+    {
+      "id": "desktop-scroll-25",
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
+      "original": "evidence/desktop-scroll-25.png",
+      "local": "evidence/local/desktop-scroll-25.png"
+    },
+    {
+      "id": "desktop-scroll-50",
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
+      "original": "evidence/desktop-scroll-50.png",
+      "local": "evidence/local/desktop-scroll-50.png"
+    },
+    {
+      "id": "desktop-scroll-75",
+      "ssim": 99.9177,
+      "pixel_similarity": 99.9792,
+      "score": 99.9177,
+      "original": "evidence/desktop-scroll-75.png",
+      "local": "evidence/local/desktop-scroll-75.png"
+    },
+    {
+      "id": "tablet-initial",
+      "ssim": 96.2104,
+      "pixel_similarity": 98.1928,
+      "score": 96.2104,
+      "original": "evidence/tablet-initial.png",
+      "local": "evidence/local/tablet-initial.png"
+    },
+    {
+      "id": "tablet-scroll-50",
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
+      "original": "evidence/tablet-scroll-50.png",
+      "local": "evidence/local/tablet-scroll-50.png"
+    },
+    {
+      "id": "mobile-initial",
+      "ssim": 91.9983,
+      "pixel_similarity": 96.7211,
+      "score": 91.9983,
+      "original": "evidence/mobile-initial.png",
+      "local": "evidence/local/mobile-initial.png"
+    },
+    {
+      "id": "mobile-scroll-50",
+      "ssim": 100.0,
+      "pixel_similarity": 100.0,
+      "score": 100.0,
+      "original": "evidence/mobile-scroll-50.png",
+      "local": "evidence/local/mobile-scroll-50.png"
+    }
+  ]
+}

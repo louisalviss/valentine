@@ -1,0 +1,8 @@
+{
+  "repository":"https://github.com/ibelick/motion-primitives",
+  "commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
+  "license":"MIT",
+  "import_mode":"source-import-static-export",
+  "base_path":"/labs/references/motion-primitives",
+  "note":"Static output built from the exact pinned upstream source. Remote demo media remains external and separately classified."
+}

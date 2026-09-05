@@ -4,7 +4,8 @@
   "source": {
     "url": "https://motion-primitives.com/",
     "discovery_source": "open-source-validation",
-    "captured_at": "2026-09-03T20:41:02.851Z"
+    "captured_at": "2026-09-05T00:06:23.233Z",
+    "baseline_kind": "source-build-control"
   },
   "capture": {
     "viewports": [
@@ -89,30 +90,675 @@
     ],
     "dom": {
       "path": "evidence/hydrated.html",
-      "sha256": "53cc104870a08118655e83668fc8c3247156b59b06b792d613ab97e511d47a6d",
-      "element_count": 9
+      "sha256": "bdce3cabb728c714cc68294ec5a85cb2250789214a1ba291e0459e3a361fc5d1",
+      "element_count": 218
     },
     "styles_geometry": {
       "path": "evidence/capture.json",
-      "element_count": 9
+      "element_count": 218
     },
-    "fonts": [],
-    "assets": [],
-    "dependencies": [],
-    "network": [
+    "fonts": [
       {
-        "name": "https://motion-primitives.com/favicon.ico",
-        "initiatorType": "other",
-        "duration": 20.100000000034925,
-        "transferSize": 32477,
-        "decodedBodySize": 32177
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
       },
       {
-        "name": "https://motion-primitives.com/.well-known/vercel/security/static/challenge.v2.min.js",
-        "initiatorType": "other",
-        "duration": -2.5,
-        "transferSize": 35987,
-        "decodedBodySize": 35687
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "loaded"
+      },
+      {
+        "family": "__Inter_Fallback_f367f3",
+        "style": "normal",
+        "weight": "normal",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__GeistMono_c1e5c9",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "loaded"
+      }
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "src": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "width": 2000,
+        "height": 1384,
+        "alt": "A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
+        "width": 600,
+        "height": 396,
+        "alt": "Image placeholder from cosmos.so, index:0"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
+        "width": 1080,
+        "height": 1349,
+        "alt": "Image placeholder from cosmos.so, index:1"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
+        "width": 480,
+        "height": 640,
+        "alt": "Image placeholder from cosmos.so, index:2"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
+        "width": 750,
+        "height": 999,
+        "alt": "Image placeholder from cosmos.so, index:3"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+        "width": 640,
+        "height": 477,
+        "alt": "Image placeholder from cosmos.so, index:4"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
+        "width": 450,
+        "height": 572,
+        "alt": "Image placeholder from cosmos.so, index:5"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
+        "width": 640,
+        "height": 492,
+        "alt": "Image placeholder from cosmos.so, index:6"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
+        "width": 563,
+        "height": 555,
+        "alt": "Image placeholder from cosmos.so, index:7"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
+        "width": 956,
+        "height": 1198,
+        "alt": "Image placeholder from cosmos.so, index:8"
+      },
+      {
+        "type": "image",
+        "src": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
+        "width": 1280,
+        "height": 830,
+        "alt": "Image placeholder from cosmos.so, index:9"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+        "width": 300,
+        "height": 300,
+        "alt": "Dean blunt - Black Metal 2"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
+        "width": 300,
+        "height": 300,
+        "alt": "Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+        "width": 300,
+        "height": 300,
+        "alt": "Yung Lean - Stardust"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
+        "width": 300,
+        "height": 300,
+        "alt": "Lana Del Rey - Ultraviolence"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
+        "width": 300,
+        "height": 300,
+        "alt": "A$AP Rocky - Tailor Swif"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
+        "width": 300,
+        "height": 300,
+        "alt": "Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+        "width": 300,
+        "height": 300,
+        "alt": "Dean blunt - Black Metal 2"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
+        "width": 300,
+        "height": 300,
+        "alt": "Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+        "width": 300,
+        "height": 300,
+        "alt": "Yung Lean - Stardust"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
+        "width": 300,
+        "height": 300,
+        "alt": "Lana Del Rey - Ultraviolence"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
+        "width": 300,
+        "height": 300,
+        "alt": "A$AP Rocky - Tailor Swif"
+      },
+      {
+        "type": "image",
+        "src": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
+        "width": 300,
+        "height": 300,
+        "alt": "Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+      },
+      {
+        "type": "image",
+        "src": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
+        "width": 564,
+        "height": 563,
+        "alt": "Olympic logo Paris 2024"
+      }
+    ],
+    "dependencies": [
+      {
+        "type": "stylesheet",
+        "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css"
+      },
+      {
+        "type": "stylesheet",
+        "url": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/2117-8a19e1dc2897b604.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/6882-ddeb58a4ac6338a6.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/polyfills-42372ed130431b0a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js"
+      },
+      {
+        "type": "script",
+        "url": "https://assets.onedollarstats.com/stonks.js"
+      }
+    ],
+    "network": [
+      {
+        "name": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 58048
+      },
+      {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.6000000000349246,
+        "transferSize": 300,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 48432
+      },
+      {
+        "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 102715
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 2628
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 3583
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 172837
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/2117-8a19e1dc2897b604.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 124727
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 469
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 21205
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/6882-ddeb58a4ac6338a6.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 123739
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 22249
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 8194
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 85838
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 5656
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 31866
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 20812
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 15099
+      },
+      {
+        "name": "https://assets.onedollarstats.com/stonks.js",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 3019
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 97383
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 35830
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 26322
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 40693
+      },
+      {
+        "name": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 37016
+      },
+      {
+        "name": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
+        "initiatorType": "fetch",
+        "duration": 6.400000000023283,
+        "transferSize": 300,
+        "decodedBodySize": 185319
+      },
+      {
+        "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
+        "initiatorType": "fetch",
+        "duration": 7.599999999976717,
+        "transferSize": 300,
+        "decodedBodySize": 7538
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 13089
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/3467-49ac6239e42fe874.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 11216
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 8598
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/314-bece845bb9f22d96.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 12301
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/docs/layout-687a0fb7ef11c4b7.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 18277
       }
     ]
   },
@@ -120,24 +766,24 @@
     "mode": "source-import",
     "local_path": "labs/references/motion-primitives/",
     "essential_origin_dependency": true,
-    "notes": "Capture complete; local reconstruction not yet implemented."
+    "notes": "Static export built from exact MIT upstream SHA. Remote demo media remains externally referenced, so candidate is not self-contained."
   },
   "fidelity": {
     "visual": {
-      "score": 0,
-      "status": "pending",
-      "method": "original-vs-local screenshot comparison pending",
+      "score": 91.9983,
+      "status": "fail",
+      "method": "min(SSIM, pixel_similarity) per state; aggregate=min(state score)",
       "exceptions": []
     },
     "motion_interaction": {
       "status": "pending",
       "states_verified": [],
-      "notes": "Animation inventory captured; reconstruction evidence pending."
+      "notes": "Visual source-import control measured; independent motion/interaction verification still required."
     }
   },
   "provenance": {
-    "code": "Browser-delivered public frontend evidence captured for analysis; authored-source identity not claimed.",
-    "assets": "External assets inventoried only; reuse rights not inferred from public accessibility.",
-    "rights_status": "unreviewed"
+    "code": "Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT.",
+    "assets": "Remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.",
+    "rights_status": "mixed"
   }
 }

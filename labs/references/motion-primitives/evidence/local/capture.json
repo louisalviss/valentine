@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
+  "captured_at": "2026-09-05T00:07:54.332Z",
+  "states": [
+    {
+      "id": "desktop-initial",
+      "ratio": 0,
+      "width": 1440,
+      "height": 900,
+      "screenshot": "evidence/local/desktop-initial.png"
+    },
+    {
+      "id": "desktop-scroll-25",
+      "ratio": 0.25,
+      "width": 1440,
+      "height": 900,
+      "screenshot": "evidence/local/desktop-scroll-25.png"
+    },
+    {
+      "id": "desktop-scroll-50",
+      "ratio": 0.5,
+      "width": 1440,
+      "height": 900,
+      "screenshot": "evidence/local/desktop-scroll-50.png"
+    },
+    {
+      "id": "desktop-scroll-75",
+      "ratio": 0.75,
+      "width": 1440,
+      "height": 900,
+      "screenshot": "evidence/local/desktop-scroll-75.png"
+    },
+    {
+      "id": "tablet-initial",
+      "ratio": 0,
+      "width": 768,
+      "height": 1024,
+      "screenshot": "evidence/local/tablet-initial.png"
+    },
+    {
+      "id": "tablet-scroll-50",
+      "ratio": 0.5,
+      "width": 768,
+      "height": 1024,
+      "screenshot": "evidence/local/tablet-scroll-50.png"
+    },
+    {
+      "id": "mobile-initial",
+      "ratio": 0,
+      "width": 390,
+      "height": 844,
+      "screenshot": "evidence/local/mobile-initial.png"
+    },
+    {
+      "id": "mobile-scroll-50",
+      "ratio": 0.5,
+      "width": 390,
+      "height": 844,
+      "screenshot": "evidence/local/mobile-scroll-50.png"
+    }
+  ]
+}
