@@ -7,6 +7,7 @@ on:
       - 'labs/references/**'
       - 'labs/reference-harvester/capture-local.mjs'
       - 'labs/reference-harvester/measure-fidelity.py'
+      - 'labs/reference-harvester/diff-diagnostics.py'
       - '.github/workflows/reference-fidelity-qa.yml'
   workflow_dispatch:
 
@@ -62,16 +63,21 @@ jobs:
             test -n "$id" || continue
             node labs/reference-harvester/capture-local.mjs "$id" "http://127.0.0.1:4173/labs/references/$id/"
             python3 labs/reference-harvester/measure-fidelity.py "$id"
+            python3 labs/reference-harvester/diff-diagnostics.py "$id"
           done </tmp/reference-candidates.txt
 
-      - name: Upload fidelity evidence
+      - name: Upload fidelity and diff evidence
         if: steps.candidates.outputs.has_candidates == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: reference-fidelity-${{ github.run_id }}
           path: |
+            labs/references/*/evidence/desktop-*.png
+            labs/references/*/evidence/tablet-*.png
+            labs/references/*/evidence/mobile-*.png
             labs/references/*/evidence/local/
             labs/references/*/evidence/fidelity.json
+            labs/references/*/evidence/diff-diagnostics.json
           retention-days: 5
 
       - name: Enforce 98 minimum for candidates claiming visual PASS
