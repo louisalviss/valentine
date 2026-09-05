@@ -1,0 +1,1121 @@
+2:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"Tabs"]
+3:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"TabsList"]
+4:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"TabsTrigger"]
+5:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"TabsContent"]
+6:I[63398,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"default"]
+7:I[81232,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"Carousel"]
+8:I[81232,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"CarouselContent"]
+9:I[81232,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"CarouselItem"]
+a:I[81232,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"CarouselNavigation"]
+b:I[81232,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"CarouselIndicator"]
+c:I[63127,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"default"]
+13:I[64789,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"CarouselCustomIndicator"]
+16:I[21176,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","7300","static/chunks/app/docs/carousel/page-42d3a308289def98.js"],"InstallationCli"]
+19:I[4707,[],""]
+1a:I[36423,[],""]
+1b:I[92258,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","4971","static/chunks/4971-4507af105e39481d.js","314","static/chunks/314-bece845bb9f22d96.js","3998","static/chunks/app/docs/layout-687a0fb7ef11c4b7.js"],"default",1]
+1c:I[88003,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],""]
+1d:I[79150,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"ThemeProvider"]
+1e:I[81103,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"TooltipProvider"]
+d:T513,import {
+  Carousel,
+  CarouselContent,
+  CarouselNavigation,
+  CarouselIndicator,
+  CarouselItem,
+} from '@/components/core/carousel';
+
+export function CarouselBasic() {
+  return (
+    <div className='relative w-full max-w-xs'>
+      <Carousel>
+        <CarouselContent>
+          <CarouselItem className='p-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              1
+            </div>
+          </CarouselItem>
+          <CarouselItem className='p-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              2
+            </div>
+          </CarouselItem>
+          <CarouselItem className='p-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              3
+            </div>
+          </CarouselItem>
+          <CarouselItem className='p-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              4
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselNavigation alwaysShow />
+        <CarouselIndicator />
+      </Carousel>
+    </div>
+  );
+}
+f:T81a,import {
+  Carousel,
+  CarouselContent,
+  CarouselNavigation,
+  CarouselItem,
+} from '@/components/core/carousel';
+
+export function CarouselCustomSizes() {
+  return (
+    <div className='relative w-full max-w-xs'>
+      <Carousel>
+        <CarouselContent>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-l border-t border-zinc-200 dark:border-zinc-800'>
+              1
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              2
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'>
+              3
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'>
+              4
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'>
+              5
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'>
+              6
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3'>
+            <div className='flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'>
+              7
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselNavigation />
+      </Carousel>
+    </div>
+  );
+}
+11:T8a3,import {
+  Carousel,
+  CarouselContent,
+  CarouselNavigation,
+  CarouselItem,
+} from '@/components/core/carousel';
+
+export function CarouselSpacing() {
+  return (
+    <div className='relative w-full px-4'>
+      <Carousel>
+        <CarouselContent className='-ml-4'>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              1
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              2
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              3
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              4
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              5
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              6
+            </div>
+          </CarouselItem>
+          <CarouselItem className='basis-1/3 pl-4'>
+            <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+              7
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselNavigation
+          className='absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'
+          classNameButton='bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800'
+          alwaysShow
+        />
+      </Carousel>
+    </div>
+  );
+}
+14:T532,'use client';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/core/carousel';
+import { useState } from 'react';
+
+const ITEMS = new Array(4).fill(null).map((_, index) => index + 1);
+
+export function CarouselCustomIndicator() {
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div className='relative w-full max-w-xs py-8'>
+      <Carousel index={index} onIndexChange={setIndex}>
+        <CarouselContent className='relative'>
+          {ITEMS.map((item) => {
+            return (
+              <CarouselItem key={item} className='p-4'>
+                <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+                  {item}
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+      </Carousel>
+      <div className='flex w-full justify-center space-x-3 px-4'>
+        {ITEMS.map((item) => {
+          return (
+            <button
+              key={item}
+              type='button'
+              aria-label={`Go to slide ${item}`}
+              onClick={() => setIndex(item - 1)}
+              className='h-12 w-12 border border-zinc-200 dark:border-zinc-800'
+            >
+              {item}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+17:T204d,'use client';
+import {
+  Children,
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import { motion, Transition, useMotionValue } from 'motion/react';
+import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+export type CarouselContextType = {
+  index: number;
+  setIndex: (newIndex: number) => void;
+  itemsCount: number;
+  setItemsCount: (newItemsCount: number) => void;
+  disableDrag: boolean;
+};
+
+const CarouselContext = createContext<CarouselContextType | undefined>(
+  undefined
+);
+
+function useCarousel() {
+  const context = useContext(CarouselContext);
+  if (!context) {
+    throw new Error('useCarousel must be used within an CarouselProvider');
+  }
+  return context;
+}
+
+export type CarouselProviderProps = {
+  children: ReactNode;
+  initialIndex?: number;
+  onIndexChange?: (newIndex: number) => void;
+  disableDrag?: boolean;
+};
+
+function CarouselProvider({
+  children,
+  initialIndex = 0,
+  onIndexChange,
+  disableDrag = false,
+}: CarouselProviderProps) {
+  const [index, setIndex] = useState<number>(initialIndex);
+  const [itemsCount, setItemsCount] = useState<number>(0);
+
+  const handleSetIndex = (newIndex: number) => {
+    setIndex(newIndex);
+    onIndexChange?.(newIndex);
+  };
+
+  useEffect(() => {
+    setIndex(initialIndex);
+  }, [initialIndex]);
+
+  return (
+    <CarouselContext.Provider
+      value={{
+        index,
+        setIndex: handleSetIndex,
+        itemsCount,
+        setItemsCount,
+        disableDrag,
+      }}
+    >
+      {children}
+    </CarouselContext.Provider>
+  );
+}
+
+export type CarouselProps = {
+  children: ReactNode;
+  className?: string;
+  initialIndex?: number;
+  index?: number;
+  onIndexChange?: (newIndex: number) => void;
+  disableDrag?: boolean;
+};
+
+function Carousel({
+  children,
+  className,
+  initialIndex = 0,
+  index: externalIndex,
+  onIndexChange,
+  disableDrag = false,
+}: CarouselProps) {
+  const [internalIndex, setInternalIndex] = useState<number>(initialIndex);
+  const isControlled = externalIndex !== undefined;
+  const currentIndex = isControlled ? externalIndex : internalIndex;
+
+  const handleIndexChange = (newIndex: number) => {
+    if (!isControlled) {
+      setInternalIndex(newIndex);
+    }
+    onIndexChange?.(newIndex);
+  };
+
+  return (
+    <CarouselProvider
+      initialIndex={currentIndex}
+      onIndexChange={handleIndexChange}
+      disableDrag={disableDrag}
+    >
+      <div className={cn('group/hover relative', className)}>
+        <div className='overflow-hidden'>{children}</div>
+      </div>
+    </CarouselProvider>
+  );
+}
+
+export type CarouselNavigationProps = {
+  className?: string;
+  classNameButton?: string;
+  alwaysShow?: boolean;
+};
+
+function CarouselNavigation({
+  className,
+  classNameButton,
+  alwaysShow,
+}: CarouselNavigationProps) {
+  const { index, setIndex, itemsCount } = useCarousel();
+
+  return (
+    <div
+      className={cn(
+        'pointer-events-none absolute left-[-12.5%] top-1/2 flex w-[125%] -translate-y-1/2 justify-between px-2',
+        className
+      )}
+    >
+      <button
+        type='button'
+        aria-label='Previous slide'
+        className={cn(
+          'pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950',
+          alwaysShow
+            ? 'opacity-100'
+            : 'opacity-0 group-hover/hover:opacity-100',
+          alwaysShow
+            ? 'disabled:opacity-40'
+            : 'group-hover/hover:disabled:opacity-40',
+          classNameButton
+        )}
+        disabled={index === 0}
+        onClick={() => {
+          if (index > 0) {
+            setIndex(index - 1);
+          }
+        }}
+      >
+        <ChevronLeft
+          className='stroke-zinc-600 dark:stroke-zinc-50'
+          size={16}
+        />
+      </button>
+      <button
+        type='button'
+        className={cn(
+          'pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950',
+          alwaysShow
+            ? 'opacity-100'
+            : 'opacity-0 group-hover/hover:opacity-100',
+          alwaysShow
+            ? 'disabled:opacity-40'
+            : 'group-hover/hover:disabled:opacity-40',
+          classNameButton
+        )}
+        aria-label='Next slide'
+        disabled={index + 1 === itemsCount}
+        onClick={() => {
+          if (index < itemsCount - 1) {
+            setIndex(index + 1);
+          }
+        }}
+      >
+        <ChevronRight
+          className='stroke-zinc-600 dark:stroke-zinc-50'
+          size={16}
+        />
+      </button>
+    </div>
+  );
+}
+
+export type CarouselIndicatorProps = {
+  className?: string;
+  classNameButton?: string;
+};
+
+function CarouselIndicator({
+  className,
+  classNameButton,
+}: CarouselIndicatorProps) {
+  const { index, itemsCount, setIndex } = useCarousel();
+
+  return (
+    <div
+      className={cn(
+        'absolute bottom-0 z-10 flex w-full items-center justify-center',
+        className
+      )}
+    >
+      <div className='flex space-x-2'>
+        {Array.from({ length: itemsCount }, (_, i) => (
+          <button
+            key={i}
+            type='button'
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={cn(
+              'h-2 w-2 rounded-full transition-opacity duration-300',
+              index === i
+                ? 'bg-zinc-950 dark:bg-zinc-50'
+                : 'bg-zinc-900/50 dark:bg-zinc-100/50',
+              classNameButton
+            )}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export type CarouselContentProps = {
+  children: ReactNode;
+  className?: string;
+  transition?: Transition;
+};
+
+function CarouselContent({
+  children,
+  className,
+  transition,
+}: CarouselContentProps) {
+  const { index, setIndex, setItemsCount, disableDrag } = useCarousel();
+  const [visibleItemsCount, setVisibleItemsCount] = useState(1);
+  const dragX = useMotionValue(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemsLength = Children.count(children);
+
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+
+    const options = {
+      root: containerRef.current,
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const visibleCount = entries.filter(
+        (entry) => entry.isIntersecting
+      ).length;
+      setVisibleItemsCount(visibleCount);
+    }, options);
+
+    const childNodes = containerRef.current.children;
+    Array.from(childNodes).forEach((child) => observer.observe(child));
+
+    return () => observer.disconnect();
+  }, [children, setItemsCount]);
+
+  useEffect(() => {
+    if (!itemsLength) {
+      return;
+    }
+
+    setItemsCount(itemsLength);
+  }, [itemsLength, setItemsCount]);
+
+  const onDragEnd = () => {
+    const x = dragX.get();
+
+    if (x <= -10 && index < itemsLength - 1) {
+      setIndex(index + 1);
+    } else if (x >= 10 && index > 0) {
+      setIndex(index - 1);
+    }
+  };
+
+  return (
+    <motion.div
+      drag={disableDrag ? false : 'x'}
+      dragConstraints={
+        disableDrag
+          ? undefined
+          : {
+              left: 0,
+              right: 0,
+            }
+      }
+      dragMomentum={disableDrag ? undefined : false}
+      style={{
+        x: disableDrag ? undefined : dragX,
+      }}
+      animate={{
+        translateX: `-${index * (100 / visibleItemsCount)}%`,
+      }}
+      onDragEnd={disableDrag ? undefined : onDragEnd}
+      transition={
+        transition || {
+          damping: 18,
+          stiffness: 90,
+          type: 'spring',
+          duration: 0.2,
+        }
+      }
+      className={cn(
+        'flex items-center',
+        !disableDrag && 'cursor-grab active:cursor-grabbing',
+        className
+      )}
+      ref={containerRef}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export type CarouselItemProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+function CarouselItem({ children, className }: CarouselItemProps) {
+  return (
+    <motion.div
+      className={cn(
+        'w-full min-w-0 shrink-0 grow-0 overflow-hidden',
+        className
+      )}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export {
+  Carousel,
+  CarouselContent,
+  CarouselNavigation,
+  CarouselIndicator,
+  CarouselItem,
+  useCarousel,
+};
+0:["rEy1L9vs2e9UG9z8P-1-5",[[["",{"children":["docs",{"children":["carousel",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",{"children":["docs",{"children":["carousel",{"children":["__PAGE__",{},[["$L1",[["$","h1",null,{"id":"carousel","data-heading":"1","children":"Carousel"}],"\n",["$","p",null,{"children":"A flexible and easy-to-use carousel with customizable navigation and indicators."}],"\n",["$","h2",null,{"id":"examples","data-heading":"2","children":"Examples"}],"\n",["$","h3",null,{"id":"carousel-basic","data-heading":"3","children":"Carousel basic"}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","div",null,{"className":"relative w-full max-w-xs","children":["$","$L7",null,{"children":[["$","$L8",null,{"children":[["$","$L9",null,{"className":"p-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"1"}]}],["$","$L9",null,{"className":"p-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"2"}]}],["$","$L9",null,{"className":"p-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"3"}]}],["$","$L9",null,{"className":"p-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"4"}]}]]}],["$","$La",null,{"alwaysShow":true}],["$","$Lb",null,{}]]}]}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/carousel/carousel-basic.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lc",null,{"code":"$d","children":"$Le"}]}]]}]}],"\n",["$","h3",null,{"id":"carousel-with-custom-sizes","data-heading":"3","children":"Carousel with custom sizes"}],"\n",["$","p",null,{"children":["We use ",["$","code",null,{"children":"basis-1/3"}]," to set the width of each carousel item to one-third of the container."]}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","div",null,{"className":"relative w-full max-w-xs","children":["$","$L7",null,{"children":[["$","$L8",null,{"children":[["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-l border-t border-zinc-200 dark:border-zinc-800","children":"1"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"2"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800","children":"3"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800","children":"4"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800","children":"5"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800","children":"6"}]}],["$","$L9",null,{"className":"basis-1/3","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800","children":"7"}]}]]}],["$","$La",null,{}]]}]}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/carousel/carousel-custom-sizes.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lc",null,{"code":"$f","children":"$L10"}]}]]}]}],"\n",["$","h3",null,{"id":"carousel-with-custom-sizes-and-spacing","data-heading":"3","children":"Carousel with custom sizes and spacing"}],"\n",["$","p",null,{"children":["We use ",["$","code",null,{"children":"-ml-4"}]," on ",["$","code",null,{"children":"CarouselContent"}]," and ",["$","code",null,{"children":"pl-4"}]," on ",["$","code",null,{"children":"CarouselItem"}]," to add spacing between carousel items."]}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","div",null,{"className":"relative w-full px-4","children":["$","$L7",null,{"children":[["$","$L8",null,{"className":"-ml-4","children":[["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"1"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"2"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"3"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"4"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"5"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"6"}]}],["$","$L9",null,{"className":"basis-1/3 pl-4","children":["$","div",null,{"className":"flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800","children":"7"}]}]]}],["$","$La",null,{"className":"absolute -bottom-20 left-auto top-auto w-full justify-end gap-2","classNameButton":"bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800","alwaysShow":true}]]}]}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/carousel/carousel-spacing.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lc",null,{"code":"$11","children":"$L12"}]}]]}]}],"\n",["$","h3",null,{"id":"carousel-with-custom-indicators","data-heading":"3","children":"Carousel with custom indicators"}],"\n",["$","p",null,{"children":["We can use ",["$","code",null,{"children":"index"}]," and ",["$","code",null,{"children":"onIndexChange"}]," to create custom indicators for the carousel."]}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","$L13",null,{}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/carousel/carousel-custom-indicator.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lc",null,{"code":"$14","children":"$L15"}]}]]}]}],"\n",["$","h2",null,{"id":"installation","data-heading":"2","children":"Installation"}],"\n",["$","$L2",null,{"className":"relative mt-6 w-full","defaultValue":"cli","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"className":"","value":"cli","children":"CLI"}],["$","$L4",null,{"className":"","value":"manual","children":"Manual"}]]}],["$","$L5",null,{"className":"","value":"cli","children":["$","$L16",null,{"value":"carousel"}]}],["$","$L5",null,{"className":"","value":"manual","children":["$","div",null,{"className":"steps mb-12 ml-4 border-l pl-8 [counter-reset:step]","children":[["$","h3",null,{"id":"copy-and-paste-the-following-code-into-your-project","className":"step","data-heading":"3","children":"Copy and paste the following code into your project."}],["$","div",null,{"className":"not-prose max-h-[650px] overflow-auto overflow-x-auto overflow-y-hidden rounded-md text-sm dark:border dark:border-zinc-800","children":["$","$Lc",null,{"code":"$17","children":"$L18"}]}],["$","h3",null,{"id":"update-the-import-paths-to-match-your-project-setup","className":"step","data-heading":"3","children":"Update the import paths to match your project setup."}]]}]}]]}],"\n",["$","h2",null,{"id":"component-api","data-heading":"2","children":"Component API"}],"\n",["$","h3",null,{"id":"carousel","data-heading":"3","children":"Carousel"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"children"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The content elements of the carousel."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"className"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the carousel container."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"initialIndex"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"number"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"0"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Initial index of the active carousel item."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"index"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"number"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Controlled index of the active carousel item."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"onIndexChange"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"(newIndex: number) => void"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Callback function when the active index changes."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"disableDrag"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"boolean"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"false"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Whether dragging is disabled."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"carouselnavigation","data-heading":"3","children":"CarouselNavigation"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"className"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the navigation container."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"classNameButton"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the navigation buttons."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"alwaysShow"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"boolean"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"false"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Whether navigation buttons are always visible."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"carouselindicator","data-heading":"3","children":"CarouselIndicator"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"className"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the indicator container."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"classNameButton"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the indicator buttons."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"carouselcontent","data-heading":"3","children":"CarouselContent"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"children"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The sliding elements or items of the carousel."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"className"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for additional styling."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"transition"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"Transition"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional motion transition for animating slides."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"carouselitem","data-heading":"3","children":"CarouselItem"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"children"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"ReactNode"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The individual content item within the carousel."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"className"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"string"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the carousel item."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"usecarousel","data-heading":"3","children":"useCarousel"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Return"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"index"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"number"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The current index of the active carousel item."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"setIndex"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"(newIndex: number) => void"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Function to update the index to show a different carousel item."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"itemsCount"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"number"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Total number of items in the carousel."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"setItemsCount"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"(newItemsCount: number) => void"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Function to set the number of items in the carousel."}]]}]]}]]}]}],"\n",["$","p",null,{"children":"This hook provides context values related to the carousel's state, allowing components within the carousel to adjust based on the active item and total items."}]],null],null],null]},[null,["$","$L19",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children","carousel","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L1a",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","$L1b",null,{"children":["$","$L19",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L1a",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}],"params":{}}]],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/94849942fe8d2ad5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/33c512191cee463d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","$L1c",null,{"async":true,"defer":true,"src":"/labs/references/motion-primitives/empty.js"}],["$","body",null,{"className":"__className_e46c09 __variable_3872bd bg-white font-sans antialiased dark:bg-zinc-950","children":["$","$L1d",null,{"attribute":"class","children":["$","$L1e",null,{"children":["$","div",null,{"className":"isolate min-h-screen","children":["$","$L19",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L1a",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]}]]}]],null],null],["$L1f",null]]]]
+20:T27c3,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Carousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselNavigation</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselIndicator</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/carousel'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> CarouselBasic</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'relative w-full max-w-xs'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              1</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              2</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              3</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              4</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselNavigation</span><span style="color:var(--shiki-token-function)"> alwaysShow</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselIndicator</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>e:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$20"}}]}]
+21:T3823,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Carousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselNavigation</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/carousel'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> CarouselCustomSizes</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'relative w-full max-w-xs'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-l border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              1</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              2</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              3</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              4</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              5</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              6</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border-b border-r border-t border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              7</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselNavigation</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>10:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$21"}}]}]
+22:T3b52,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Carousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselNavigation</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/carousel'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> CarouselSpacing</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'relative w-full px-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'-ml-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              1</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              2</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              3</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              4</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              5</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              6</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'basis-1/3 pl-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              7</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselNavigation</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          classNameButton</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          alwaysShow</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>12:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$22"}}]}]
+23:T321e,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-string-expression)">'use client'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Carousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/carousel'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { useState } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> ITEMS</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-keyword)"> new</span><span style="color:var(--shiki-token-function)"> Array</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">4</span><span style="color:var(--shiki-foreground, #B1B1B1)">)</span><span style="color:var(--shiki-token-function)">.fill</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-foreground, #B1B1B1)">)</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">((_</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> index) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> index </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> CarouselCustomIndicator</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">index</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'relative w-full max-w-xs py-8'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-token-function)"> index</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{index} </span><span style="color:var(--shiki-token-function)">onIndexChange</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{setIndex}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'relative'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          {</span><span style="color:var(--shiki-token-constant)">ITEMS</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">((item) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-token-function)"> key</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{item} </span><span style="color:var(--shiki-token-function)">className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">                &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">                  {item}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">                &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          })}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex w-full justify-center space-x-3 px-4'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        {</span><span style="color:var(--shiki-token-constant)">ITEMS</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">((item) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">button</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">              key</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{item}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">              type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">              aria-label</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-string-expression)">`Go to slide </span><span style="color:var(--shiki-token-keyword)">${</span><span style="color:var(--shiki-foreground, #B1B1B1)">item</span><span style="color:var(--shiki-token-keyword)">}</span><span style="color:var(--shiki-token-string-expression)">`</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">              onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-function)"> setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(item </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">              className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-12 w-12 border border-zinc-200 dark:border-zinc-800'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              {item}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">button</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        })}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>15:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$23"}}]}]
+24:T13adc,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-string-expression)">'use client'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  ReactNode</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  createContext</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useContext</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useEffect</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useRef</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useState</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { motion</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> Transition</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> useMotionValue } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'motion/react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { cn } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/lib/utils'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { ChevronLeft</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> ChevronRight } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'lucide-react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselContextType</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  index</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  setIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  itemsCount</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  setItemsCount</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newItemsCount</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  disableDrag</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> boolean</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> CarouselContext</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> createContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">CarouselContextType</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">  undefined</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> useCarousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> context</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">(CarouselContext);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-foreground, #B1B1B1)">context) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    throw</span><span style="color:var(--shiki-token-keyword)"> new</span><span style="color:var(--shiki-token-function)"> Error</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'useCarousel must be used within an CarouselProvider'</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> context;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselProviderProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  initialIndex</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  onIndexChange</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  disableDrag</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> boolean</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> CarouselProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  initialIndex </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  onIndexChange</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  disableDrag </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> false</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselProviderProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">index</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">number</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(initialIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">itemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setItemsCount</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">number</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> handleSetIndex</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    onIndexChange?.</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  useEffect</span><span style="color:var(--shiki-foreground, #B1B1B1)">(() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(initialIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [initialIndex]);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselContext.Provider</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        index</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        setIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> handleSetIndex</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        itemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        setItemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        disableDrag</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselContext.Provider</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  initialIndex</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  index</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  onIndexChange</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  disableDrag</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> boolean</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> Carousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  initialIndex </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  index: externalIndex</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  onIndexChange</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  disableDrag </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> false</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">internalIndex</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setInternalIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">number</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(initialIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isControlled</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> externalIndex </span><span style="color:var(--shiki-token-keyword)">!==</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> currentIndex</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> isControlled </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> externalIndex </span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> internalIndex;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> handleIndexChange</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (newIndex</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-foreground, #B1B1B1)">isControlled) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setInternalIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    onIndexChange?.</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newIndex);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">CarouselProvider</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      initialIndex</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{currentIndex}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onIndexChange</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{handleIndexChange}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      disableDrag</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{disableDrag}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'group/hover relative'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className)}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'overflow-hidden'</span><span style="color:var(--shiki-foreground, #B1B1B1)">>{children}&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">CarouselProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselNavigationProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  classNameButton</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  alwaysShow</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> boolean</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> CarouselNavigation</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  classNameButton</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  alwaysShow</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselNavigationProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">index</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIndex</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> itemsCount</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useCarousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">        'pointer-events-none absolute left-[-12.5%] top-1/2 flex w-[125%] -translate-y-1/2 justify-between px-2'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">button</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        aria-label</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'Previous slide'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">          'pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          alwaysShow</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            ?</span><span style="color:var(--shiki-token-string-expression)"> 'opacity-100'</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            :</span><span style="color:var(--shiki-token-string-expression)"> 'opacity-0 group-hover/hover:opacity-100'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          alwaysShow</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            ?</span><span style="color:var(--shiki-token-string-expression)"> 'disabled:opacity-40'</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            :</span><span style="color:var(--shiki-token-string-expression)"> 'group-hover/hover:disabled:opacity-40'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          classNameButton</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        disabled</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{index </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (index </span><span style="color:var(--shiki-token-keyword)">></span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(index </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronLeft</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'stroke-zinc-600 dark:stroke-zinc-50'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          size</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">16</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">button</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">button</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">          'pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          alwaysShow</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            ?</span><span style="color:var(--shiki-token-string-expression)"> 'opacity-100'</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            :</span><span style="color:var(--shiki-token-string-expression)"> 'opacity-0 group-hover/hover:opacity-100'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          alwaysShow</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            ?</span><span style="color:var(--shiki-token-string-expression)"> 'disabled:opacity-40'</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            :</span><span style="color:var(--shiki-token-string-expression)"> 'group-hover/hover:disabled:opacity-40'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          classNameButton</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        aria-label</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'Next slide'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        disabled</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{index </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-token-keyword)"> ===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> itemsCount}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (index </span><span style="color:var(--shiki-token-keyword)">&#x3C;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> itemsCount </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(index </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronRight</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'stroke-zinc-600 dark:stroke-zinc-50'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          size</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">16</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">button</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselIndicatorProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  classNameButton</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> CarouselIndicator</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  classNameButton</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselIndicatorProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">index</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> itemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useCarousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">        'absolute bottom-0 z-10 flex w-full items-center justify-center'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex space-x-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        {</span><span style="color:var(--shiki-token-constant)">Array</span><span style="color:var(--shiki-token-function)">.from</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ length</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> itemsCount }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (_</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> i) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">button</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            key</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{i}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            aria-label</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-string-expression)">`Go to slide </span><span style="color:var(--shiki-token-keyword)">${</span><span style="color:var(--shiki-foreground, #B1B1B1)">i </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-token-keyword)">}</span><span style="color:var(--shiki-token-string-expression)">`</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-function)"> setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(i)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">              'h-2 w-2 rounded-full transition-opacity duration-300'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              index </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> i</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">                ?</span><span style="color:var(--shiki-token-string-expression)"> 'bg-zinc-950 dark:bg-zinc-50'</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">                :</span><span style="color:var(--shiki-token-string-expression)"> 'bg-zinc-900/50 dark:bg-zinc-100/50'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              classNameButton</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        ))}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselContentProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  transition</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> Transition</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> CarouselContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  transition</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselContentProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">index</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIndex</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setItemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> disableDrag</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useCarousel</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">visibleItemsCount</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setVisibleItemsCount</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> dragX</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> containerRef</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">HTMLDivElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> itemsLength</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> Children</span><span style="color:var(--shiki-token-function)">.count</span><span style="color:var(--shiki-foreground, #B1B1B1)">(children);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  useEffect</span><span style="color:var(--shiki-foreground, #B1B1B1)">(() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-token-constant)">containerRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">.current) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      return</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> options</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      root</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> containerRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">.current</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      threshold</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.5</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> observer</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-keyword)"> new</span><span style="color:var(--shiki-token-function)"> IntersectionObserver</span><span style="color:var(--shiki-foreground, #B1B1B1)">((entries) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      const</span><span style="color:var(--shiki-token-constant)"> visibleCount</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> entries</span><span style="color:var(--shiki-token-function)">.filter</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        (entry) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> entry</span><span style="color:var(--shiki-foreground, #B1B1B1)">.isIntersecting</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ).</span><span style="color:var(--shiki-token-constant)">length</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setVisibleItemsCount</span><span style="color:var(--shiki-foreground, #B1B1B1)">(visibleCount);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> options);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> childNodes</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> containerRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-constant)">current</span><span style="color:var(--shiki-foreground, #B1B1B1)">.children;</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">    Array</span><span style="color:var(--shiki-token-function)">.from</span><span style="color:var(--shiki-foreground, #B1B1B1)">(childNodes)</span><span style="color:var(--shiki-token-function)">.forEach</span><span style="color:var(--shiki-foreground, #B1B1B1)">((child) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> observer</span><span style="color:var(--shiki-token-function)">.observe</span><span style="color:var(--shiki-foreground, #B1B1B1)">(child));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> () </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> observer</span><span style="color:var(--shiki-token-function)">.disconnect</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> setItemsCount]);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  useEffect</span><span style="color:var(--shiki-foreground, #B1B1B1)">(() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-foreground, #B1B1B1)">itemsLength) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      return</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    setItemsCount</span><span style="color:var(--shiki-foreground, #B1B1B1)">(itemsLength);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [itemsLength</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> setItemsCount]);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> onDragEnd</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> () </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> x</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> dragX</span><span style="color:var(--shiki-token-function)">.get</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (x </span><span style="color:var(--shiki-token-keyword)">&#x3C;=</span><span style="color:var(--shiki-token-keyword)"> -</span><span style="color:var(--shiki-token-constant)">10</span><span style="color:var(--shiki-token-keyword)"> &#x26;&#x26;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> index </span><span style="color:var(--shiki-token-keyword)">&#x3C;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> itemsLength </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(index </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    } </span><span style="color:var(--shiki-token-keyword)">else</span><span style="color:var(--shiki-token-keyword)"> if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (x </span><span style="color:var(--shiki-token-keyword)">>=</span><span style="color:var(--shiki-token-constant)"> 10</span><span style="color:var(--shiki-token-keyword)"> &#x26;&#x26;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> index </span><span style="color:var(--shiki-token-keyword)">></span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setIndex</span><span style="color:var(--shiki-foreground, #B1B1B1)">(index </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      drag</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{disableDrag </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-token-constant)"> false</span><span style="color:var(--shiki-token-keyword)"> :</span><span style="color:var(--shiki-token-string-expression)"> 'x'</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      dragConstraints</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        disableDrag</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          ?</span><span style="color:var(--shiki-token-constant)"> undefined</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              left</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              right</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      dragMomentum</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{disableDrag </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-token-keyword)"> :</span><span style="color:var(--shiki-token-constant)"> false</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        x</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> disableDrag </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-token-keyword)"> :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> dragX</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      animate</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        translateX</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> `-</span><span style="color:var(--shiki-token-keyword)">${</span><span style="color:var(--shiki-foreground, #B1B1B1)">index </span><span style="color:var(--shiki-token-keyword)">*</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-constant)">100</span><span style="color:var(--shiki-token-keyword)"> /</span><span style="color:var(--shiki-foreground, #B1B1B1)"> visibleItemsCount)</span><span style="color:var(--shiki-token-keyword)">}</span><span style="color:var(--shiki-token-string-expression)">%`</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onDragEnd</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{disableDrag </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-token-keyword)"> :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> onDragEnd}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      transition</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        transition </span><span style="color:var(--shiki-token-keyword)">||</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          damping</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 18</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          stiffness</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 90</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          type</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'spring'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          duration</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.2</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">        'flex items-center'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">        !</span><span style="color:var(--shiki-foreground, #B1B1B1)">disableDrag </span><span style="color:var(--shiki-token-keyword)">&#x26;&#x26;</span><span style="color:var(--shiki-token-string-expression)"> 'cursor-grab active:cursor-grabbing'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      ref</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{containerRef}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> CarouselItemProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> CarouselItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> CarouselItemProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">        'w-full min-w-0 shrink-0 grow-0 overflow-hidden'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Carousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselNavigation</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselIndicator</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  CarouselItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useCarousel</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span></code></pre>18:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}]}]
+1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Carousel - Motion-Primitives"}],["$","meta","3",{"name":"description","content":"A flexible and easy-to-use carousel with customizable navigation and indicators. Built for React, Next.js, and Tailwind CSS."}],["$","meta","4",{"property":"og:title","content":"Carousel - Motion-Primitives"}],["$","meta","5",{"property":"og:description","content":"A flexible and easy-to-use carousel with customizable navigation and indicators. Built for React, Next.js, and Tailwind CSS."}],["$","meta","6",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","7",{"property":"og:image:width","content":"1200"}],["$","meta","8",{"property":"og:image:height","content":"630"}],["$","meta","9",{"property":"og:image","content":"http://localhost:3000/labs/references/motion-primitives/opengraph-image.jpg?9ca9b9247d6d0fe4"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Carousel - Motion-Primitives"}],["$","meta","12",{"name":"twitter:description","content":"A flexible and easy-to-use carousel with customizable navigation and indicators. Built for React, Next.js, and Tailwind CSS."}],["$","meta","13",{"name":"twitter:image:type","content":"image/jpeg"}],["$","meta","14",{"name":"twitter:image:width","content":"1200"}],["$","meta","15",{"name":"twitter:image:height","content":"630"}],["$","meta","16",{"name":"twitter:image","content":"http://localhost:3000/labs/references/motion-primitives/twitter-image.jpg?9ca9b9247d6d0fe4"}],["$","link","17",{"rel":"icon","href":"/labs/references/motion-primitives/icon.ico?71bbcdb60d31e7d3","type":"image/x-icon","sizes":"256x256"}],["$","meta","18",{"name":"next-size-adjust"}]]
+1:null

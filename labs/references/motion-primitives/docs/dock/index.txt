@@ -1,0 +1,636 @@
+2:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"Tabs"]
+3:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"TabsList"]
+4:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"TabsTrigger"]
+5:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"TabsContent"]
+6:I[63398,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"default"]
+7:I[94928,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"Dock"]
+8:I[94928,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"DockItem"]
+9:I[94928,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"DockLabel"]
+a:I[94928,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"DockIcon"]
+b:I[63127,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"default"]
+e:I[21176,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","5194","static/chunks/5194-e496de2ebd22d346.js","3467","static/chunks/3467-49ac6239e42fe874.js","7068","static/chunks/app/docs/dock/page-a76b5677f0f35b16.js"],"InstallationCli"]
+11:I[4707,[],""]
+12:I[36423,[],""]
+13:I[92258,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","4971","static/chunks/4971-4507af105e39481d.js","314","static/chunks/314-bece845bb9f22d96.js","3998","static/chunks/app/docs/layout-687a0fb7ef11c4b7.js"],"default",1]
+14:I[88003,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],""]
+15:I[79150,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"ThemeProvider"]
+16:I[81103,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"TooltipProvider"]
+c:T6d3,import {
+  Activity,
+  Component,
+  HomeIcon,
+  Mail,
+  Package,
+  ScrollText,
+  SunMoon,
+} from 'lucide-react';
+
+import { Dock, DockIcon, DockItem, DockLabel } from '@/components/core/dock';
+
+const data = [
+  {
+    title: 'Home',
+    icon: (
+      <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Products',
+    icon: (
+      <Package className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Components',
+    icon: (
+      <Component className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Activity',
+    icon: (
+      <Activity className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Change Log',
+    icon: (
+      <ScrollText className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Email',
+    icon: (
+      <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+  {
+    title: 'Theme',
+    icon: (
+      <SunMoon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#',
+  },
+];
+
+export function AppleStyleDock() {
+  return (
+    <div className='absolute bottom-2 left-1/2 max-w-full -translate-x-1/2'>
+      <Dock className='items-end pb-3'>
+        {data.map((item, idx) => (
+          <DockItem
+            key={idx}
+            className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
+          >
+            <DockLabel>{item.title}</DockLabel>
+            <DockIcon>{item.icon}</DockIcon>
+          </DockItem>
+        ))}
+      </Dock>
+    </div>
+  );
+}
+f:T15f9,'use client';
+
+import {
+  motion,
+  MotionValue,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  type SpringOptions,
+  AnimatePresence,
+} from 'motion/react';
+import {
+  Children,
+  cloneElement,
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import { cn } from '@/lib/utils';
+
+const DOCK_HEIGHT = 128;
+const DEFAULT_MAGNIFICATION = 80;
+const DEFAULT_DISTANCE = 150;
+const DEFAULT_PANEL_HEIGHT = 64;
+
+export type DockProps = {
+  children: React.ReactNode;
+  className?: string;
+  distance?: number;
+  panelHeight?: number;
+  magnification?: number;
+  spring?: SpringOptions;
+};
+
+export type DockItemProps = {
+  className?: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+};
+
+export type DockLabelProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export type DockIconProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export type DocContextType = {
+  mouseX: MotionValue;
+  spring: SpringOptions;
+  magnification: number;
+  distance: number;
+};
+
+export type DockProviderProps = {
+  children: React.ReactNode;
+  value: DocContextType;
+};
+
+const DockContext = createContext<DocContextType | undefined>(undefined);
+
+function DockProvider({ children, value }: DockProviderProps) {
+  return <DockContext.Provider value={value}>{children}</DockContext.Provider>;
+}
+
+function useDock() {
+  const context = useContext(DockContext);
+  if (!context) {
+    throw new Error('useDock must be used within an DockProvider');
+  }
+  return context;
+}
+
+function Dock({
+  children,
+  className,
+  spring = { mass: 0.1, stiffness: 150, damping: 12 },
+  magnification = DEFAULT_MAGNIFICATION,
+  distance = DEFAULT_DISTANCE,
+  panelHeight = DEFAULT_PANEL_HEIGHT,
+}: DockProps) {
+  const mouseX = useMotionValue(Infinity);
+  const isHovered = useMotionValue(0);
+
+  const maxHeight = useMemo(() => {
+    return Math.max(DOCK_HEIGHT, magnification + magnification / 2 + 4);
+  }, [magnification]);
+
+  const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
+  const height = useSpring(heightRow, spring);
+
+  return (
+    <motion.div
+      style={{
+        height: height,
+        scrollbarWidth: 'none',
+      }}
+      className='mx-2 flex max-w-full items-end overflow-x-auto'
+    >
+      <motion.div
+        onMouseMove={({ pageX }) => {
+          isHovered.set(1);
+          mouseX.set(pageX);
+        }}
+        onMouseLeave={() => {
+          isHovered.set(0);
+          mouseX.set(Infinity);
+        }}
+        className={cn(
+          'mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900',
+          className
+        )}
+        style={{ height: panelHeight }}
+        role='toolbar'
+        aria-label='Application dock'
+      >
+        <DockProvider value={{ mouseX, spring, distance, magnification }}>
+          {children}
+        </DockProvider>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function DockItem({ children, className, onClick }: DockItemProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { distance, magnification, mouseX, spring } = useDock();
+
+  const isHovered = useMotionValue(0);
+
+  const mouseDistance = useTransform(mouseX, (val) => {
+    const domRect = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+    return val - domRect.x - domRect.width / 2;
+  });
+
+  const widthTransform = useTransform(
+    mouseDistance,
+    [-distance, 0, distance],
+    [40, magnification, 40]
+  );
+
+  const width = useSpring(widthTransform, spring);
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{ width }}
+      onHoverStart={() => isHovered.set(1)}
+      onHoverEnd={() => isHovered.set(0)}
+      onFocus={() => isHovered.set(1)}
+      onBlur={() => isHovered.set(0)}
+      className={cn(
+        'relative inline-flex items-center justify-center',
+        className
+      )}
+      tabIndex={0}
+      role='button'
+      aria-haspopup='true'
+      onClick={onClick}
+    >
+      {Children.map(children, (child) =>
+        cloneElement(child as React.ReactElement, { width, isHovered })
+      )}
+    </motion.div>
+  );
+}
+
+function DockLabel({ children, className, ...rest }: DockLabelProps) {
+  const restProps = rest as Record<string, unknown>;
+  const isHovered = restProps['isHovered'] as MotionValue<number>;
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = isHovered.on('change', (latest) => {
+      setIsVisible(latest === 1);
+    });
+
+    return () => unsubscribe();
+  }, [isHovered]);
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: -10 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            'absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white',
+            className
+          )}
+          role='tooltip'
+          style={{ x: '-50%' }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+function DockIcon({ children, className, ...rest }: DockIconProps) {
+  const restProps = rest as Record<string, unknown>;
+  const width = restProps['width'] as MotionValue<number>;
+
+  const widthTransform = useTransform(width, (val) => val / 2);
+
+  return (
+    <motion.div
+      style={{ width: widthTransform }}
+      className={cn('flex items-center justify-center', className)}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export { Dock, DockIcon, DockItem, DockLabel };
+0:["rEy1L9vs2e9UG9z8P-1-5",[[["",{"children":["docs",{"children":["dock",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",{"children":["docs",{"children":["dock",{"children":["__PAGE__",{},[["$L1",[["$","h1",null,{"id":"dock","data-heading":"1","children":"Dock"}],"\n",["$","p",null,{"children":"A versatile UI element that provides a flexible and customizable way to organize and display menu items within your application."}],"\n",["$","h2",null,{"id":"examples","data-heading":"2","children":"Examples"}],"\n",["$","h3",null,{"id":"apple-style-dock","data-heading":"3","children":"Apple style dock"}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","div",null,{"className":"absolute bottom-2 left-1/2 max-w-full -translate-x-1/2","children":["$","$L7",null,{"className":"items-end pb-3","children":[["$","$L8","0",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Home"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-house h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","5wwlr5",{"d":"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"}],["$","path","1d0kgt",{"d":"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"}],"$undefined"]}]}]]}],["$","$L8","1",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Products"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-package h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","1c824w",{"d":"m7.5 4.27 9 5.15"}],["$","path","hh9hay",{"d":"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"}],["$","path","g66t2b",{"d":"m3.3 7 8.7 5 8.7-5"}],["$","path","d0xqtd",{"d":"M12 22V12"}],"$undefined"]}]}]]}],["$","$L8","2",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Components"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-component h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","1kciei",{"d":"M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z"}],["$","path","1ome0g",{"d":"m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z"}],["$","path","vbupec",{"d":"M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z"}],["$","path","16csic",{"d":"m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z"}],"$undefined"]}]}]]}],["$","$L8","3",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Activity"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-activity h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","169zse",{"d":"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"}],"$undefined"]}]}]]}],["$","$L8","4",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Change Log"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-scroll-text h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","r7krc0",{"d":"M15 12h-5"}],["$","path","1khuty",{"d":"M15 8h-5"}],["$","path","zz82l3",{"d":"M19 17V5a2 2 0 0 0-2-2H4"}],["$","path","1ph1d7",{"d":"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"}],"$undefined"]}]}]]}],["$","$L8","5",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Email"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-mail h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","rect","18n3k1",{"width":"20","height":"16","x":"2","y":"4","rx":"2"}],["$","path","1ocrg3",{"d":"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"}],"$undefined"]}]}]]}],["$","$L8","6",{"className":"aspect-square rounded-full bg-gray-200 dark:bg-neutral-800","children":[["$","$L9",null,{"children":"Theme"}],["$","$La",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-sun-moon h-full w-full text-neutral-600 dark:text-neutral-300","children":[["$","path","1fu5g2",{"d":"M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"}],["$","path","tus03m",{"d":"M12 2v2"}],["$","path","1lh1kg",{"d":"M12 20v2"}],["$","path","b9915j",{"d":"m4.9 4.9 1.4 1.4"}],["$","path","qc3ed3",{"d":"m17.7 17.7 1.4 1.4"}],["$","path","1t8f8n",{"d":"M2 12h2"}],["$","path","1q8mjw",{"d":"M20 12h2"}],["$","path","5gca6",{"d":"m6.3 17.7-1.4 1.4"}],["$","path","wpu9u6",{"d":"m19.1 4.9-1.4 1.4"}],"$undefined"]}]}]]}]]}]}],"hasReTrigger":true,"className":"$undefined","filePath":"app/docs/dock/apple-style-dock.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lb",null,{"code":"$c","children":"$Ld"}]}]]}]}],"\n",["$","h2",null,{"id":"installation","data-heading":"2","children":"Installation"}],"\n",["$","$L2",null,{"className":"relative mt-6 w-full","defaultValue":"cli","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"className":"","value":"cli","children":"CLI"}],["$","$L4",null,{"className":"","value":"manual","children":"Manual"}]]}],["$","$L5",null,{"className":"","value":"cli","children":["$","$Le",null,{"value":"dock"}]}],["$","$L5",null,{"className":"","value":"manual","children":["$","div",null,{"className":"steps mb-12 ml-4 border-l pl-8 [counter-reset:step]","children":[["$","h3",null,{"id":"copy-and-paste-the-following-code-into-your-project","className":"step","data-heading":"3","children":"Copy and paste the following code into your project."}],["$","div",null,{"className":"not-prose max-h-[650px] overflow-auto overflow-x-auto overflow-y-hidden rounded-md text-sm dark:border dark:border-zinc-800","children":["$","$Lb",null,{"code":"$f","children":"$L10"}]}],["$","h3",null,{"id":"update-the-import-paths-to-match-your-project-setup","className":"step","data-heading":"3","children":"Update the import paths to match your project setup."}]]}]}]]}],"\n",["$","h2",null,{"id":"component-api","data-heading":"2","children":"Component API"}],"\n",["$","h3",null,{"id":"dock","data-heading":"3","children":"Dock"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The child elements to be animated."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"undefined"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the component."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"spring"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"SpringOptions"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"{ mass: 0.1, stiffness: 150, damping: 12 }"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Spring options from motion for animation effects."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"magnification"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"number"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"80"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The scaling factor applied to a dock item on hover."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"distance"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"number"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"150"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The distance from the center of a dock item at which the magnification animation starts."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"panelHeight"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"number"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"64"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"dockitem","data-heading":"3","children":"DockItem"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"DockLabel and DockIcon"}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"undefined"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the component."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"onClick"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"() => void"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"undefined"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional click handler triggered when the item is clicked."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"docklabel","data-heading":"3","children":"DockLabel"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Content of the label, typically a string or formatted text."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"undefined"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the component."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"dockicon","data-heading":"3","children":"DockIcon"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Icon"}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"undefined"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the component."}]]}]]}]]}]}],"\n",["$","h2",null,{"id":"credits","data-heading":"2","children":"Credits"}],"\n",["$","p",null,{"children":["Created by ",["$","a",null,{"href":"https://github.com/kashyap20","children":"@kashyap20"}],", inspired by ",["$","a",null,{"href":"https://buildui.com/recipes/magnified-dock","children":"Build UI - Magnified Dock"}]]}]],null],null],null]},[null,["$","$L11",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children","dock","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L12",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","$L13",null,{"children":["$","$L11",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L12",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}],"params":{}}]],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/94849942fe8d2ad5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/33c512191cee463d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","$L14",null,{"async":true,"defer":true,"src":"/labs/references/motion-primitives/empty.js"}],["$","body",null,{"className":"__className_e46c09 __variable_3872bd bg-white font-sans antialiased dark:bg-zinc-950","children":["$","$L15",null,{"attribute":"class","children":["$","$L16",null,{"children":["$","div",null,{"className":"isolate min-h-screen","children":["$","$L11",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L12",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]}]]}]],null],null],["$L17",null]]]]
+18:T494c,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Activity</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Component</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  HomeIcon</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Mail</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Package</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  ScrollText</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  SunMoon</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'lucide-react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Dock</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockIcon</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockItem</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockLabel } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/dock'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> data</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Home'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">HomeIcon</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Products'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Package</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Components'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Component</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Activity'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Activity</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Change Log'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">ScrollText</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Email'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Mail</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    title</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'Theme'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    icon</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">SunMoon</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-full w-full text-neutral-600 dark:text-neutral-300'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    )</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    href</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '#'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> AppleStyleDock</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'absolute bottom-2 left-1/2 max-w-full -translate-x-1/2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Dock</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'items-end pb-3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        {</span><span style="color:var(--shiki-token-constant)">data</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">((item</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> idx) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-constant)">DockItem</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            key</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{idx}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">            className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">DockLabel</span><span style="color:var(--shiki-foreground, #B1B1B1)">>{</span><span style="color:var(--shiki-token-constant)">item</span><span style="color:var(--shiki-foreground, #B1B1B1)">.title}&#x3C;/</span><span style="color:var(--shiki-token-constant)">DockLabel</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">DockIcon</span><span style="color:var(--shiki-foreground, #B1B1B1)">>{</span><span style="color:var(--shiki-token-constant)">item</span><span style="color:var(--shiki-foreground, #B1B1B1)">.icon}&#x3C;/</span><span style="color:var(--shiki-token-constant)">DockIcon</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-constant)">DockItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        ))}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Dock</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>d:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$18"}}]}]
+19:Tef1a,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-string-expression)">'use client'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  motion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  MotionValue</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useMotionValue</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useSpring</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useTransform</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  type</span><span style="color:var(--shiki-foreground, #B1B1B1)"> SpringOptions</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AnimatePresence</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'motion/react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  cloneElement</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  createContext</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useContext</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useEffect</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useMemo</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useRef</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useState</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { cn } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/lib/utils'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> DOCK_HEIGHT</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> 128</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> DEFAULT_MAGNIFICATION</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> 80</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> DEFAULT_DISTANCE</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> 150</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> DEFAULT_PANEL_HEIGHT</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> 64</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DockProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  distance</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  panelHeight</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  magnification</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  spring</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> SpringOptions</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DockItemProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  onClick</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> () </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DockLabelProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DockIconProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DocContextType</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  mouseX</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> MotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  spring</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> SpringOptions</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  magnification</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  distance</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> DockProviderProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DocContextType</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> DockContext</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> createContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">DocContextType</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">undefined</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> DockProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DockProviderProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> &#x3C;</span><span style="color:var(--shiki-token-constant)">DockContext.Provider</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{value}>{children}&#x3C;/</span><span style="color:var(--shiki-token-constant)">DockContext.Provider</span><span style="color:var(--shiki-foreground, #B1B1B1)">>;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> useDock</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> context</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">(DockContext);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-foreground, #B1B1B1)">context) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    throw</span><span style="color:var(--shiki-token-keyword)"> new</span><span style="color:var(--shiki-token-function)"> Error</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'useDock must be used within an DockProvider'</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> context;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> Dock</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  spring </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { mass</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.1</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> stiffness</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 150</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> damping</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 12</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  magnification </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> DEFAULT_MAGNIFICATION</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  distance </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> DEFAULT_DISTANCE</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  panelHeight </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> DEFAULT_PANEL_HEIGHT</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DockProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> mouseX</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">Infinity</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> maxHeight</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMemo</span><span style="color:var(--shiki-foreground, #B1B1B1)">(() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    return</span><span style="color:var(--shiki-token-constant)"> Math</span><span style="color:var(--shiki-token-function)">.max</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">DOCK_HEIGHT</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> magnification </span><span style="color:var(--shiki-token-keyword)">+</span><span style="color:var(--shiki-foreground, #B1B1B1)"> magnification </span><span style="color:var(--shiki-token-keyword)">/</span><span style="color:var(--shiki-token-constant)"> 2</span><span style="color:var(--shiki-token-keyword)"> +</span><span style="color:var(--shiki-token-constant)"> 4</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [magnification]);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> heightRow</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(isHovered</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">]</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [panelHeight</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> maxHeight]);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> height</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useSpring</span><span style="color:var(--shiki-foreground, #B1B1B1)">(heightRow</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> spring);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        height</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> height</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        scrollbarWidth</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'none'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'mx-2 flex max-w-full items-end overflow-x-auto'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        onMouseMove</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{({ pageX }) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">          isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">          mouseX</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(pageX);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        onMouseLeave</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">          isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">          mouseX</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">Infinity</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">          'mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ height</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> panelHeight }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        role</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'toolbar'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        aria-label</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'Application dock'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">DockProvider</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ mouseX</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> spring</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> distance</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> magnification }}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">DockProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> DockItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> onClick }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DockItemProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> ref</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">HTMLDivElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">distance</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> magnification</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> mouseX</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> spring</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useDock</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> mouseDistance</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(mouseX</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (val) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> domRect</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> ref</span><span style="color:var(--shiki-token-function)">.</span><span style="color:var(--shiki-token-constant)">current</span><span style="color:var(--shiki-token-function)">?.getBoundingClientRect</span><span style="color:var(--shiki-foreground, #B1B1B1)">() </span><span style="color:var(--shiki-token-keyword)">??</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { x</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> width</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)"> };</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> val </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> domRect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.x </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> domRect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.width </span><span style="color:var(--shiki-token-keyword)">/</span><span style="color:var(--shiki-token-constant)"> 2</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> widthTransform</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    mouseDistance</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    [</span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-foreground, #B1B1B1)">distance</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> distance]</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    [</span><span style="color:var(--shiki-token-constant)">40</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> magnification</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> 40</span><span style="color:var(--shiki-foreground, #B1B1B1)">]</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> width</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useSpring</span><span style="color:var(--shiki-foreground, #B1B1B1)">(widthTransform</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> spring);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      ref</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{ref}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ width }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onHoverStart</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">1</span><span style="color:var(--shiki-foreground, #B1B1B1)">)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onHoverEnd</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onFocus</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">1</span><span style="color:var(--shiki-foreground, #B1B1B1)">)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onBlur</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">        'relative inline-flex items-center justify-center'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      tabIndex</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      role</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      aria-haspopup</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'true'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{onClick}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {</span><span style="color:var(--shiki-token-constant)">Children</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">(children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (child) </span><span style="color:var(--shiki-token-keyword)">=></span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        cloneElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">(child </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactElement</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { width</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> isHovered })</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> DockLabel</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> ...</span><span style="color:var(--shiki-foreground, #B1B1B1)">rest }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DockLabelProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> restProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> rest </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-token-function)"> Record</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">string</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> unknown</span><span style="color:var(--shiki-foreground, #B1B1B1)">>;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> restProps[</span><span style="color:var(--shiki-token-string-expression)">'isHovered'</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-token-function)"> MotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">number</span><span style="color:var(--shiki-foreground, #B1B1B1)">>;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">isVisible</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setIsVisible</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">false</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  useEffect</span><span style="color:var(--shiki-foreground, #B1B1B1)">(() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> unsubscribe</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> isHovered</span><span style="color:var(--shiki-token-function)">.on</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'change'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (latest) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setIsVisible</span><span style="color:var(--shiki-foreground, #B1B1B1)">(latest </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> () </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-function)"> unsubscribe</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [isHovered]);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">AnimatePresence</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {isVisible </span><span style="color:var(--shiki-token-keyword)">&#x26;&#x26;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          initial</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> y</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          animate</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> y</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-keyword)"> -</span><span style="color:var(--shiki-token-constant)">10</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          exit</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> y</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          transition</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ duration</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.2</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression)">            'absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            className</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          )}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          role</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'tooltip'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ x</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '-50%'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">AnimatePresence</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> DockIcon</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> ...</span><span style="color:var(--shiki-foreground, #B1B1B1)">rest }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> DockIconProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> restProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> rest </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-token-function)"> Record</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">string</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> unknown</span><span style="color:var(--shiki-foreground, #B1B1B1)">>;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> width</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> restProps[</span><span style="color:var(--shiki-token-string-expression)">'width'</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-token-function)"> MotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-constant)">number</span><span style="color:var(--shiki-foreground, #B1B1B1)">>;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> widthTransform</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(width</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (val) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> val </span><span style="color:var(--shiki-token-keyword)">/</span><span style="color:var(--shiki-token-constant)"> 2</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ width</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> widthTransform }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'flex items-center justify-center'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className)}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Dock</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockIcon</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockItem</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> DockLabel };</span></span>
+<span class="line"></span></code></pre>10:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$19"}}]}]
+17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Dock - Motion-Primitives"}],["$","meta","3",{"name":"description","content":"A versatile UI element that provides a flexible and customizable way to organize and display menu items within your application. Built for React, Next.js, and Tailwind CSS."}],["$","meta","4",{"property":"og:title","content":"Dock - Motion-Primitives"}],["$","meta","5",{"property":"og:description","content":"A versatile UI element that provides a flexible and customizable way to organize and display menu items within your application. Built for React, Next.js, and Tailwind CSS."}],["$","meta","6",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","7",{"property":"og:image:width","content":"1200"}],["$","meta","8",{"property":"og:image:height","content":"630"}],["$","meta","9",{"property":"og:image","content":"http://localhost:3000/labs/references/motion-primitives/opengraph-image.jpg?9ca9b9247d6d0fe4"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Dock - Motion-Primitives"}],["$","meta","12",{"name":"twitter:description","content":"A versatile UI element that provides a flexible and customizable way to organize and display menu items within your application. Built for React, Next.js, and Tailwind CSS."}],["$","meta","13",{"name":"twitter:image:type","content":"image/jpeg"}],["$","meta","14",{"name":"twitter:image:width","content":"1200"}],["$","meta","15",{"name":"twitter:image:height","content":"630"}],["$","meta","16",{"name":"twitter:image","content":"http://localhost:3000/labs/references/motion-primitives/twitter-image.jpg?9ca9b9247d6d0fe4"}],["$","link","17",{"rel":"icon","href":"/labs/references/motion-primitives/icon.ico?71bbcdb60d31e7d3","type":"image/x-icon","sizes":"256x256"}],["$","meta","18",{"name":"next-size-adjust"}]]
+1:null

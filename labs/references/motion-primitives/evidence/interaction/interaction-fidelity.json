@@ -1,0 +1,1019 @@
+{
+  "version": "3.4",
+  "capture_protocol": "3.4",
+  "reference_id": "motion-primitives",
+  "scenario": "EB27 MorphingDialog 5-trial rAF spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test",
+  "policy": {
+    "dialog_visual_min": 98.0,
+    "open_geometry_min": 98.0,
+    "spatial_trajectory_min": 98.0,
+    "runtime_timing_curve_min": 98.0,
+    "runtime_phase_budget_ms": 16.7,
+    "runtime_trial_count_min": 5,
+    "functional_required": true,
+    "interaction_animation_signature_measured_required": true,
+    "interaction_animation_signature_match_required": true
+  },
+  "minimum_score": 99.0786,
+  "status": "pass",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 900,
+      "runtime_trial_count": 5,
+      "functional": {
+        "baseline": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "local": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "status": "pass"
+      },
+      "open_dialog_visual": {
+        "score": 100.0,
+        "ssim": 100.0,
+        "pixel_similarity": 100.0
+      },
+      "open_geometry": {
+        "score": 100.0,
+        "max_normalized_error": 0.0
+      },
+      "trajectory": {
+        "score": 99.9053,
+        "max_median_normalized_geometry_error": 0.000947,
+        "basis": "median geometry error across 5 independent rAF trials at spatial progress milestones",
+        "milestones": [
+          {
+            "progress": 0.1,
+            "dialog_error_median": 3.5005115487744357e-08,
+            "image_error_median": 0.0002955481423171275,
+            "trigger_error_median": 4.622098256529878e-08,
+            "all_trials_forward_crossing": false,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 0.020482901483496158,
+                "image_error": 0.021362291085634474,
+                "trigger_error": 0.020482949238775822,
+                "baseline_t": 0.0,
+                "local_t": 11.689,
+                "baseline_crossing": false,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 2.7483412957786235e-08,
+                "image_error": 0.0002955481423171275,
+                "trigger_error": 5.6370842382117796e-08,
+                "baseline_t": 15.394,
+                "local_t": 8.142,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.0411956373622565e-08,
+                "image_error": 0.00016510061686302732,
+                "trigger_error": 1.2174114911229278e-08,
+                "baseline_t": 7.027,
+                "local_t": 3.497,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 3.5005115487744357e-08,
+                "image_error": 9.097564322334822e-05,
+                "trigger_error": 4.622098256529878e-08,
+                "baseline_t": 11.689,
+                "local_t": 3.555,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 4.347124811627307e-08,
+                "image_error": 0.0004559180148981391,
+                "trigger_error": 3.699837007628856e-08,
+                "baseline_t": 4.48,
+                "local_t": 7.259,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.25,
+            "dialog_error_median": 2.1190464281062306e-08,
+            "image_error_median": 0.00042960557801090244,
+            "trigger_error_median": 2.02855400822778e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 2.4889056267814642e-08,
+                "image_error": 4.0704084759744954e-05,
+                "trigger_error": 2.0036984930508574e-08,
+                "baseline_t": 12.448,
+                "local_t": 27.176,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 1.1966649656377133e-08,
+                "image_error": 0.0003938918690352011,
+                "trigger_error": 1.9406636850602708e-08,
+                "baseline_t": 28.961,
+                "local_t": 25.923,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 2.1190464281062306e-08,
+                "image_error": 0.0007206111650810322,
+                "trigger_error": 2.02855400822778e-08,
+                "baseline_t": 24.433,
+                "local_t": 17.718,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 2.8325920769450224e-08,
+                "image_error": 0.00042960557801090244,
+                "trigger_error": 3.123790312050308e-08,
+                "baseline_t": 27.304,
+                "local_t": 20.634,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 1.3169725624114411e-08,
+                "image_error": 0.0004891249753384525,
+                "trigger_error": 3.3515508764341775e-08,
+                "baseline_t": 20.634,
+                "local_t": 31.277,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.5,
+            "dialog_error_median": 2.2771254630053286e-08,
+            "image_error_median": 0.0009465120600476161,
+            "trigger_error_median": 2.7776386875504816e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 2.5960680360981315e-08,
+                "image_error": 0.002007558034925978,
+                "trigger_error": 4.697890294064817e-08,
+                "baseline_t": 40.378,
+                "local_t": 46.923,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 2.2771254630053286e-08,
+                "image_error": 0.0009465120600476161,
+                "trigger_error": 2.7776386875504816e-08,
+                "baseline_t": 51.966,
+                "local_t": 44.87,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 1.490456036713618e-08,
+                "image_error": 0.0005362107272356474,
+                "trigger_error": 1.0436777984068612e-08,
+                "baseline_t": 44.467,
+                "local_t": 36.191,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 3.2380986315022e-08,
+                "image_error": 0.0013562667598015171,
+                "trigger_error": 3.750289200373421e-08,
+                "baseline_t": 41.515,
+                "local_t": 42.246,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 1.4242755936619586e-08,
+                "image_error": 0.00011978311744093793,
+                "trigger_error": 2.2051324953685656e-08,
+                "baseline_t": 41.547,
+                "local_t": 49.591,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.75,
+            "dialog_error_median": 3.9899011881061595e-08,
+            "image_error_median": 0.0005295855794592007,
+            "trigger_error_median": 4.381915567187712e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 3.918305411490211e-08,
+                "image_error": 0.004532478505165866,
+                "trigger_error": 5.8081799794409665e-08,
+                "baseline_t": 68.647,
+                "local_t": 66.833,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 4.358716366602443e-08,
+                "image_error": 0.00026182157103272,
+                "trigger_error": 2.7227884855405034e-08,
+                "baseline_t": 76.793,
+                "local_t": 65.164,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 5.791214662388534e-08,
+                "image_error": 0.000795936861594934,
+                "trigger_error": 5.790867299361303e-08,
+                "baseline_t": 65.105,
+                "local_t": 50.521,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 3.9899011881061595e-08,
+                "image_error": 0.0004331869070973779,
+                "trigger_error": 4.381915567187712e-08,
+                "baseline_t": 67.193,
+                "local_t": 68.673,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.0716004832542645e-08,
+                "image_error": 0.0005295855794592007,
+                "trigger_error": 3.828872220563224e-08,
+                "baseline_t": 65.576,
+                "local_t": 74.208,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.9,
+            "dialog_error_median": 2.4867208697148472e-08,
+            "image_error_median": 4.434494020383934e-08,
+            "trigger_error_median": 8.785677171848268e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.1482729039218814e-08,
+                "image_error": 3.611441918059831e-08,
+                "trigger_error": 1.339417638569608e-07,
+                "baseline_t": 91.591,
+                "local_t": 101.046,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 4.954917509773319e-08,
+                "image_error": 6.241094695269567e-08,
+                "trigger_error": 1.1162321382269308e-07,
+                "baseline_t": 99.278,
+                "local_t": 97.122,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 4.434494020383934e-08,
+                "image_error": 4.434494020383934e-08,
+                "trigger_error": 6.517258624525211e-08,
+                "baseline_t": 93.857,
+                "local_t": 90.106,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 2.4867208697148472e-08,
+                "image_error": 2.786685730566458e-08,
+                "trigger_error": 3.164222460346385e-08,
+                "baseline_t": 98.357,
+                "local_t": 97.773,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.2124637174177527e-08,
+                "image_error": 5.4010056910808794e-08,
+                "trigger_error": 8.785677171848268e-08,
+                "baseline_t": 96.732,
+                "local_t": 109.975,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          }
+        ]
+      },
+      "timing_curve": {
+        "score": 99.4719,
+        "measured": true,
+        "trial_count": 5,
+        "aggregation": "median crossing time per side at each spatial milestone",
+        "phase_offset_ms": 1.265,
+        "phase_budget_ms": 16.7,
+        "phase_within_budget": true,
+        "rmse_phase_aligned_residual_ms": 1.32,
+        "max_abs_phase_aligned_residual_ms": 2.057,
+        "nominal_transition_ms": 250.0,
+        "basis": "5-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "milestones": [
+          {
+            "progress": 0.25,
+            "baseline_times": [
+              12.448,
+              28.961,
+              24.433,
+              27.304,
+              20.634
+            ],
+            "local_times": [
+              27.176,
+              25.923,
+              17.718,
+              20.634,
+              31.277
+            ],
+            "baseline_median_t": 24.433,
+            "local_median_t": 25.923,
+            "raw_delta_ms": 1.49,
+            "phase_aligned_residual_ms": 0.225
+          },
+          {
+            "progress": 0.5,
+            "baseline_times": [
+              40.378,
+              51.966,
+              44.467,
+              41.515,
+              41.547
+            ],
+            "local_times": [
+              46.923,
+              44.87,
+              36.191,
+              42.246,
+              49.591
+            ],
+            "baseline_median_t": 41.547,
+            "local_median_t": 44.87,
+            "raw_delta_ms": 3.322,
+            "phase_aligned_residual_ms": 2.057
+          },
+          {
+            "progress": 0.75,
+            "baseline_times": [
+              68.647,
+              76.793,
+              65.105,
+              67.193,
+              65.576
+            ],
+            "local_times": [
+              66.833,
+              65.164,
+              50.521,
+              68.673,
+              74.208
+            ],
+            "baseline_median_t": 67.193,
+            "local_median_t": 66.833,
+            "raw_delta_ms": -0.359,
+            "phase_aligned_residual_ms": -1.624
+          },
+          {
+            "progress": 0.9,
+            "baseline_times": [
+              91.591,
+              99.278,
+              93.857,
+              98.357,
+              96.732
+            ],
+            "local_times": [
+              101.046,
+              97.122,
+              90.106,
+              97.773,
+              109.975
+            ],
+            "baseline_median_t": 96.732,
+            "local_median_t": 97.773,
+            "raw_delta_ms": 1.04,
+            "phase_aligned_residual_ms": -0.225
+          }
+        ]
+      },
+      "timing_diagnostic": {
+        "baseline_click_to_dialog_ms": [
+          12.6,
+          0.9,
+          6.0,
+          3.3,
+          10.1
+        ],
+        "local_click_to_dialog_ms": [
+          3.1,
+          4.3,
+          13.3,
+          10.3,
+          -0.2
+        ],
+        "median_click_to_dialog_delta_ms": 1.7
+      },
+      "animation_signature": {
+        "measured": true,
+        "match": true,
+        "baseline_counts": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "local_counts": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "all_trials_required": true
+      },
+      "minimum_score": 99.4719,
+      "status": "pass"
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "runtime_trial_count": 5,
+      "functional": {
+        "baseline": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "local": {
+          "closed": true,
+          "open": true,
+          "escape_close": true,
+          "status": "pass"
+        },
+        "status": "pass"
+      },
+      "open_dialog_visual": {
+        "score": 100.0,
+        "ssim": 100.0,
+        "pixel_similarity": 100.0
+      },
+      "open_geometry": {
+        "score": 100.0,
+        "max_normalized_error": 0.0
+      },
+      "trajectory": {
+        "score": 99.9663,
+        "max_median_normalized_geometry_error": 0.000337,
+        "basis": "median geometry error across 5 independent rAF trials at spatial progress milestones",
+        "milestones": [
+          {
+            "progress": 0.1,
+            "dialog_error_median": 2.4206944241692932e-08,
+            "image_error_median": 4.864400802830999e-05,
+            "trigger_error_median": 2.4206944241692932e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.0840166052544074e-08,
+                "image_error": 4.864400802830999e-05,
+                "trigger_error": 1.0840166052544074e-08,
+                "baseline_t": 2.517,
+                "local_t": 2.943,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 2.4206944241692932e-08,
+                "image_error": 0.00024499901837959757,
+                "trigger_error": 2.4206944241692932e-08,
+                "baseline_t": 12.572,
+                "local_t": 6.837,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 2.1283169615297736e-08,
+                "image_error": 2.3411809957697317e-05,
+                "trigger_error": 2.1465163338202233e-08,
+                "baseline_t": 3.545,
+                "local_t": 4.208,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 6.202422807056524e-08,
+                "image_error": 0.0002883238075388757,
+                "trigger_error": 6.400635034098904e-08,
+                "baseline_t": 4.208,
+                "local_t": 5.793,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 7.514844722066848e-08,
+                "image_error": 1.787565967534621e-05,
+                "trigger_error": 5.133431153435362e-08,
+                "baseline_t": 6.888,
+                "local_t": 7.281,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.25,
+            "dialog_error_median": 4.595488605976187e-08,
+            "image_error_median": 0.00033670503597448806,
+            "trigger_error_median": 5.030913610262826e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 6.447554800942248e-08,
+                "image_error": 0.00018945520896867626,
+                "trigger_error": 6.447554800942248e-08,
+                "baseline_t": 16.615,
+                "local_t": 18.608,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 5.030913610262826e-08,
+                "image_error": 5.8360982521254253e-05,
+                "trigger_error": 5.030913610262826e-08,
+                "baseline_t": 29.724,
+                "local_t": 29.457,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 4.595488605976187e-08,
+                "image_error": 0.0005034286374253148,
+                "trigger_error": 6.678889832974638e-08,
+                "baseline_t": 23.851,
+                "local_t": 21.833,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 2.6435688701335143e-08,
+                "image_error": 0.00033670503597448806,
+                "trigger_error": 2.6435688701335143e-08,
+                "baseline_t": 24.914,
+                "local_t": 22.166,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.5769573469985447e-08,
+                "image_error": 0.0010540853651307218,
+                "trigger_error": 4.099220660018071e-08,
+                "baseline_t": 22.887,
+                "local_t": 31.371,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.5,
+            "dialog_error_median": 6.154803920766519e-08,
+            "image_error_median": 0.00016259390773864068,
+            "trigger_error_median": 7.47665175016431e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 6.154803920766519e-08,
+                "image_error": 0.00016259390773864068,
+                "trigger_error": 6.154803920766519e-08,
+                "baseline_t": 37.107,
+                "local_t": 39.286,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 6.370410007615155e-08,
+                "image_error": 4.617483612371233e-05,
+                "trigger_error": 1.5201981128507797e-07,
+                "baseline_t": 47.982,
+                "local_t": 51.542,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 2.9141955337763648e-08,
+                "image_error": 0.0004228358753610033,
+                "trigger_error": 7.47665175016431e-08,
+                "baseline_t": 45.457,
+                "local_t": 36.534,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 6.419313532928637e-08,
+                "image_error": 0.0006036829111742512,
+                "trigger_error": 5.24322140394454e-08,
+                "baseline_t": 45.745,
+                "local_t": 40.179,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.2019557808501894e-08,
+                "image_error": 0.00013360830658546124,
+                "trigger_error": 1.523919004343136e-07,
+                "baseline_t": 40.509,
+                "local_t": 52.551,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.75,
+            "dialog_error_median": 2.6238780778452075e-08,
+            "image_error_median": 0.00024539565730140973,
+            "trigger_error_median": 5.6611552534774106e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 3.8753148892749615e-08,
+                "image_error": 0.00024539565730140973,
+                "trigger_error": 5.6611552534774106e-08,
+                "baseline_t": 65.135,
+                "local_t": 66.974,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 0.0,
+                "image_error": 0.0,
+                "trigger_error": 0.0,
+                "baseline_t": 80.199,
+                "local_t": 80.099,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 5.29100794630302e-08,
+                "image_error": 0.0006801899909632223,
+                "trigger_error": 5.834453501688262e-08,
+                "baseline_t": 73.465,
+                "local_t": 64.13,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 0.0,
+                "image_error": 0.0,
+                "trigger_error": 0.0,
+                "baseline_t": 73.916,
+                "local_t": 73.816,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.6238780778452075e-08,
+                "image_error": 0.0002813992984353272,
+                "trigger_error": 8.068588618090647e-08,
+                "baseline_t": 74.929,
+                "local_t": 80.814,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          },
+          {
+            "progress": 0.9,
+            "dialog_error_median": 2.2756314476096007e-08,
+            "image_error_median": 1.562075964523747e-08,
+            "trigger_error_median": 6.339324793380992e-08,
+            "all_trials_forward_crossing": true,
+            "presence_match": true,
+            "trials": [
+              {
+                "trial": 1,
+                "dialog_error": 1.3339046762876723e-08,
+                "image_error": 5.2001600363674254e-08,
+                "trigger_error": 6.339324793380992e-08,
+                "baseline_t": 97.245,
+                "local_t": 99.016,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 2,
+                "dialog_error": 6.832343105181794e-08,
+                "image_error": 1.562075964523747e-08,
+                "trigger_error": 6.832343105181794e-08,
+                "baseline_t": 112.108,
+                "local_t": 111.514,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 3,
+                "dialog_error": 7.699481521649863e-08,
+                "image_error": 4.5535006758344726e-08,
+                "trigger_error": 1.0860433502907718e-07,
+                "baseline_t": 105.543,
+                "local_t": 97.02,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 4,
+                "dialog_error": 0.0,
+                "image_error": 0.0,
+                "trigger_error": 0.0,
+                "baseline_t": 105.576,
+                "local_t": 105.543,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              },
+              {
+                "trial": 5,
+                "dialog_error": 2.2756314476096007e-08,
+                "image_error": 1.4862862906715176e-08,
+                "trigger_error": 2.2756314476096007e-08,
+                "baseline_t": 106.86,
+                "local_t": 112.339,
+                "baseline_crossing": true,
+                "local_crossing": true,
+                "presence_match": true
+              }
+            ]
+          }
+        ]
+      },
+      "timing_curve": {
+        "score": 99.0786,
+        "measured": true,
+        "trial_count": 5,
+        "aggregation": "median crossing time per side at each spatial milestone",
+        "phase_offset_ms": -0.892,
+        "phase_budget_ms": 16.7,
+        "phase_within_budget": true,
+        "rmse_phase_aligned_residual_ms": 2.304,
+        "max_abs_phase_aligned_residual_ms": 4.385,
+        "nominal_transition_ms": 250.0,
+        "basis": "5-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "milestones": [
+          {
+            "progress": 0.25,
+            "baseline_times": [
+              16.615,
+              29.724,
+              23.851,
+              24.914,
+              22.887
+            ],
+            "local_times": [
+              18.608,
+              29.457,
+              21.833,
+              22.166,
+              31.371
+            ],
+            "baseline_median_t": 23.851,
+            "local_median_t": 22.166,
+            "raw_delta_ms": -1.685,
+            "phase_aligned_residual_ms": -0.792
+          },
+          {
+            "progress": 0.5,
+            "baseline_times": [
+              37.107,
+              47.982,
+              45.457,
+              45.745,
+              40.509
+            ],
+            "local_times": [
+              39.286,
+              51.542,
+              36.534,
+              40.179,
+              52.551
+            ],
+            "baseline_median_t": 45.457,
+            "local_median_t": 40.179,
+            "raw_delta_ms": -5.278,
+            "phase_aligned_residual_ms": -4.385
+          },
+          {
+            "progress": 0.75,
+            "baseline_times": [
+              65.135,
+              80.199,
+              73.465,
+              73.916,
+              74.929
+            ],
+            "local_times": [
+              66.974,
+              80.099,
+              64.13,
+              73.816,
+              80.814
+            ],
+            "baseline_median_t": 73.916,
+            "local_median_t": 73.816,
+            "raw_delta_ms": -0.1,
+            "phase_aligned_residual_ms": 0.792
+          },
+          {
+            "progress": 0.9,
+            "baseline_times": [
+              97.245,
+              112.108,
+              105.543,
+              105.576,
+              106.86
+            ],
+            "local_times": [
+              99.016,
+              111.514,
+              97.02,
+              105.543,
+              112.339
+            ],
+            "baseline_median_t": 105.576,
+            "local_median_t": 105.543,
+            "raw_delta_ms": -0.033,
+            "phase_aligned_residual_ms": 0.859
+          }
+        ]
+      },
+      "timing_diagnostic": {
+        "baseline_click_to_dialog_ms": [
+          14.7,
+          0.6,
+          7.2,
+          6.7,
+          4.7
+        ],
+        "local_click_to_dialog_ms": [
+          12.3,
+          0.0,
+          6.0,
+          6.6,
+          -0.5
+        ],
+        "median_click_to_dialog_delta_ms": 0.7
+      },
+      "animation_signature": {
+        "measured": true,
+        "match": true,
+        "baseline_counts": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "local_counts": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "all_trials_required": true
+      },
+      "minimum_score": 99.0786,
+      "status": "pass"
+    }
+  ]
+}

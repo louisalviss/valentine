@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://louisalviss.github.io/valentine/labs/reference-harvester/capture-manifest.schema.json",
+  "title": "Valentine Reference Capture Manifest",
+  "type": "object",
+  "required": ["version", "reference_id", "source", "capture", "reconstruction", "fidelity", "provenance"],
+  "properties": {
+    "version": {"type": "string", "const": "1.0"},
+    "reference_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "source": {
+      "type": "object",
+      "required": ["url", "captured_at"],
+      "properties": {
+        "url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "discovery_source": {"type": ["string", "null"]},
+        "captured_at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": true
+    },
+    "capture": {
+      "type": "object",
+      "required": ["viewports", "states", "dom", "styles_geometry", "fonts", "assets", "dependencies"],
+      "properties": {
+        "viewports": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": {
+              "width": {"type": "integer", "minimum": 1},
+              "height": {"type": "integer", "minimum": 1}
+            }
+          }
+        },
+        "states": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "kind"],
+            "properties": {
+              "id": {"type": "string"},
+              "kind": {"enum": ["initial", "scroll", "hover", "focus", "menu", "modal", "interaction", "custom"]},
+              "original_screenshot": {"type": ["string", "null"]},
+              "reconstruction_screenshot": {"type": ["string", "null"]}
+            },
+            "additionalProperties": true
+          }
+        },
+        "dom": {"type": "object"},
+        "styles_geometry": {"type": "object"},
+        "fonts": {"type": "array"},
+        "assets": {"type": "array"},
+        "dependencies": {"type": "array"},
+        "network": {"type": "array"}
+      },
+      "additionalProperties": true
+    },
+    "reconstruction": {
+      "type": "object",
+      "required": ["mode", "local_path", "essential_origin_dependency"],
+      "properties": {
+        "mode": {"enum": ["source-import", "localized-public-source", "render-equivalent-rebuild"]},
+        "local_path": {"type": "string", "pattern": "^labs/references/"},
+        "essential_origin_dependency": {"type": "boolean"},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "fidelity": {
+      "type": "object",
+      "required": ["visual", "motion_interaction"],
+      "properties": {
+        "visual": {
+          "type": "object",
+          "required": ["score", "status"],
+          "properties": {
+            "score": {"type": "number", "minimum": 0, "maximum": 100},
+            "status": {"enum": ["pending", "pass", "review", "fail"]},
+            "method": {"type": "string"},
+            "exceptions": {"type": "array"}
+          }
+        },
+        "motion_interaction": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": {"enum": ["pending", "pass", "review", "fail", "not-applicable"]},
+            "states_verified": {"type": "array"},
+            "notes": {"type": "string"}
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["code", "assets", "rights_status"],
+      "properties": {
+        "code": {"type": "string"},
+        "assets": {"type": "string"},
+        "rights_status": {"enum": ["unreviewed", "reference-only", "cleared", "mixed", "restricted"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

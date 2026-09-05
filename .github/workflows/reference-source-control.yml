@@ -1,0 +1,352 @@
+name: Reference Source Control
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/targets/motion-primitives.json'
+      - 'labs/reference-harvester/capture-browser.mjs'
+      - 'labs/reference-harvester/capture-local.mjs'
+      - 'labs/reference-harvester/capture-isolated.mjs'
+      - 'labs/reference-harvester/measure-fidelity.py'
+      - 'labs/reference-harvester/measure-isolation.py'
+      - 'labs/reference-harvester/sanitize-static-import.mjs'
+      - 'labs/reference-harvester/validate.mjs'
+      - '.github/workflows/reference-source-control.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reference-source-control-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  motion-primitives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout Valentine
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install capture and fidelity runtime
+        run: |
+          set -euo pipefail
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Checkout exact MIT upstream
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/motion-primitives
+          git clone --no-checkout https://github.com/ibelick/motion-primitives.git /tmp/motion-primitives
+          cd /tmp/motion-primitives
+          git checkout --detach 92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d
+          test "$(git rev-parse HEAD)" = '92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d'
+          grep -q '^MIT License$' LICENCE.md
+          npm ci
+
+      - name: Build exact upstream production baseline
+        run: |
+          set -euo pipefail
+          cd /tmp/motion-primitives
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('next.config.mjs')
+          s=p.read_text()
+          marker='const nextConfig = {'
+          assert marker in s
+          replacement="""const nextConfig = {
+            // Visual-control build only: upstream website compilation succeeds,
+            // but root Next validation traverses a separately packaged CLI whose
+            // own deps/config are not installed by the website root package.
+            // Skipping lint/type gates does not alter the rendered runtime bundle.
+            eslint: { ignoreDuringBuilds: true },
+            typescript: { ignoreBuildErrors: true },"""
+          p.write_text(s.replace(marker,replacement,1))
+          PY
+          npm run build
+          npm run start -- -p 4180 >/tmp/motion-primitives-source.log 2>&1 &
+          echo $! >/tmp/motion-primitives-source.pid
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:4180/ >/tmp/motion-primitives-source.html; then
+              break
+            fi
+            sleep 1
+          done
+          grep -q 'motion-primitives' /tmp/motion-primitives-source.html
+
+      - name: Capture deterministic source-build baseline
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          cat >/tmp/motion-primitives-capture.json <<'JSON'
+          {
+            "id":"motion-primitives",
+            "source_url":"https://motion-primitives.com/",
+            "capture_url":"http://127.0.0.1:4180/",
+            "baseline_kind":"source-build-control",
+            "discovery_source":"open-source-validation",
+            "reconstruction_mode":"source-import",
+            "min_visible_elements":20,
+            "rights_status":"mixed",
+            "visual_exclusions":[
+              {
+                "id":"cursor-demo-pinterest-media",
+                "selector":"img[alt=\"Olympic logo Paris 2024\"]",
+                "reason":"Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+                "rights_status":"excluded-unverified-third-party-media"
+              }
+            ],
+            "provenance_code":"Exact upstream source build from ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d under MIT; live-site identity is not claimed because Vercel blocks GitHub-runner browser capture.",
+            "provenance_assets":"Repository software is MIT; third-party remote demo media is separately classified and may be excluded from accepted-surface pixel scoring when reuse rights are not established."
+          }
+          JSON
+          node labs/reference-harvester/capture-browser.mjs /tmp/motion-primitives-capture.json
+          kill "$(cat /tmp/motion-primitives-source.pid)" || true
+
+      - name: Build and sanitize nested static source import
+        run: |
+          set -euo pipefail
+          cd /tmp/motion-primitives
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('next.config.mjs')
+          s=p.read_text()
+          marker='const nextConfig = {'
+          assert marker in s
+          replacement="""const nextConfig = {
+            output: 'export',
+            basePath: '/labs/references/motion-primitives',
+            assetPrefix: '/labs/references/motion-primitives',
+            trailingSlash: true,
+            images: { unoptimized: true },"""
+          p.write_text(s.replace(marker,replacement,1))
+          PY
+
+          python3 - <<'PY'
+          from pathlib import Path
+          base='/labs/references/motion-primitives'
+          public=Path('public')
+          rels=sorted((p.relative_to(public).as_posix() for p in public.rglob('*') if p.is_file()), key=len, reverse=True)
+          roots=[Path('app'),Path('components')]
+          suffixes={'.js','.jsx','.ts','.tsx','.css','.scss','.md','.mdx'}
+          touched=[]
+          rewrites=0
+          for root in roots:
+            if not root.exists():
+              continue
+            for file in root.rglob('*'):
+              if not file.is_file() or file.suffix.lower() not in suffixes:
+                continue
+              try:
+                text=file.read_text()
+              except UnicodeDecodeError:
+                continue
+              original=text
+              for rel in rels:
+                for quote in ("'", '"', '`'):
+                  old=f'{quote}/{rel}{quote}'
+                  new=f'{quote}{base}/{rel}{quote}'
+                  n=text.count(old)
+                  if n:
+                    text=text.replace(old,new)
+                    rewrites += n
+              if text != original:
+                file.write_text(text)
+                touched.append(str(file))
+          assert rewrites > 0, 'expected at least one public-asset relocation'
+          expected="/labs/references/motion-primitives/eb-27-lamp-edouard-wilfrid-buquet.jpg"
+          target=Path('app/docs/morphing-dialog/morphing-dialog-basic-1.tsx').read_text()
+          assert expected in target, 'EB27 first-fold asset was not relocated'
+          print('PUBLIC_ASSET_RELOCATION_OK', 'rewrites=', rewrites, 'files=', len(touched))
+          PY
+
+          rm -rf .next out
+          npm run build
+          test -s out/index.html
+          test -s out/eb-27-lamp-edouard-wilfrid-buquet.jpg
+
+          REF="$GITHUB_WORKSPACE/labs/references/motion-primitives"
+          mkdir -p "$REF"
+          find "$REF" -mindepth 1 -maxdepth 1 ! -name evidence ! -name capture-manifest.json -exec rm -rf {} +
+          cp -a out/. "$REF"/
+          cp LICENCE.md "$REF/UPSTREAM-LICENCE.md"
+          cat >"$REF/SOURCE.json" <<'JSON'
+          {
+            "repository":"https://github.com/ibelick/motion-primitives",
+            "commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
+            "license":"MIT",
+            "import_mode":"source-import-static-export",
+            "base_path":"/labs/references/motion-primitives",
+            "relocation":"Framework assets use basePath/assetPrefix; literal paths that resolve to actual upstream public/ files are rewritten to the nested base path before export.",
+            "note":"Static output is built from the exact pinned upstream source. External demo media with unverified independent reuse rights is sanitized after export and is not treated as covered by the software MIT license."
+          }
+          JSON
+          cd "$GITHUB_WORKSPACE"
+          node labs/reference-harvester/sanitize-static-import.mjs motion-primitives
+          test -s labs/references/motion-primitives/SANITIZATION.json
+
+      - name: Capture local, measure source fidelity, and prove isolation
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          python3 -m http.server 4173 --directory . >/tmp/valentine-reference-server.log 2>&1 &
+          echo $! >/tmp/valentine-reference-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/labs/references/motion-primitives/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node labs/reference-harvester/capture-local.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-fidelity.py motion-primitives
+          node labs/reference-harvester/capture-isolated.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-isolation.py motion-primitives
+          kill "$(cat /tmp/valentine-reference-server.pid)" || true
+
+      - name: Finalize measured candidate metadata
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/motion-primitives')
+          report=json.loads((ref/'evidence/fidelity.json').read_text())
+          isolation=json.loads((ref/'evidence/isolation/self-containment.json').read_text())
+          sanitization=json.loads((ref/'SANITIZATION.json').read_text())
+          manifest=json.loads((ref/'capture-manifest.json').read_text())
+          score=float(report['minimum_score'])
+          status=report['status']
+          self_contained=isolation['status']=='pass'
+          manifest['reconstruction']={
+            'mode':'source-import',
+            'local_path':'labs/references/motion-primitives/',
+            'essential_origin_dependency':not self_contained,
+            'self_containment':{
+              'status':isolation['status'],
+              'protocol':'network-isolation-v2',
+              'visual_minimum_score':isolation['minimum_score'],
+              'interaction_status':isolation['interaction_status'],
+              'network_status':isolation.get('network_status'),
+              'blocked_request_count':isolation['blocked_request_count'],
+              'blocked_origins':isolation.get('blocked_origins',[]),
+              'evidence':'evidence/isolation/self-containment.json'
+            },
+            'sanitization':{
+              'policy':'third-party demo media with unverified reuse rights is replaced with local inert assets; analytics is disabled',
+              'replacements':sanitization['total_replacements'],
+              'receipt':'SANITIZATION.json'
+            },
+            'notes':'Static export built from exact MIT upstream SHA, nested-path relocated, then sanitized. Source fidelity and self-containment are measured independently.'
+          }
+          manifest['fidelity']['visual']={
+            'score':score,
+            'status':status,
+            'method':report['method'],
+            'full_frame_minimum_score':report.get('full_frame_minimum_score'),
+            'exceptions':report.get('visual_exclusions',[])
+          }
+          manifest['fidelity']['motion_interaction']={
+            'status':'pending',
+            'states_verified':[],
+            'notes':'Rebuild invalidates prior runtime timing evidence; independent interaction workflow must re-verify the sanitized artifact.'
+          }
+          manifest['provenance']={
+            'code':'Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT; nested-path relocation is deterministic and limited to actual upstream public assets.',
+            'assets':'Bundled public assets remain local. External Cosmos/Spotify/Pinterest demo media with unverified independent reuse rights is not copied or re-hosted; sanitized placeholders and explicit accepted-surface exclusions are recorded.',
+            'rights_status':'mixed-reviewed'
+          }
+          (ref/'capture-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          item['status']='reconstructed' if status=='pass' else ('reconstruction-review' if status=='review' else 'reconstruction-fail')
+          item['live']='../labs/references/motion-primitives/'
+          item['preview']='../labs/references/motion-primitives/'
+          item['essential_origin_dependency']=not self_contained
+          item['self_containment']={
+            'status':isolation['status'],
+            'protocol':'network-isolation-v2',
+            'visual_score':isolation['minimum_score'],
+            'interaction_status':isolation['interaction_status'],
+            'network_status':isolation.get('network_status'),
+            'evidence':'../labs/references/motion-primitives/evidence/isolation/self-containment.json'
+          }
+          item['fidelity']['visual']={
+            'score':score,
+            'status':status,
+            'full_frame_score':report.get('full_frame_minimum_score')
+          }
+          item['fidelity']['motion_interaction']={'status':'pending'}
+          item['provenance']={
+            'rights_status':'mixed-reviewed',
+            'note':'MIT code is pinned. Third-party demo media is sanitized rather than copied; accepted-surface visual exclusions are explicit and bounded, and self-containment is tested independently.'
+          }
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          print('SOURCE_CONTROL_RESULT',status,score,'full',report.get('full_frame_minimum_score'),'self_containment',isolation['status'])
+          PY
+          node labs/reference-harvester/validate.mjs
+
+      - name: Commit source-import control output
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          SNAP=/tmp/source-control-snapshot
+          rm -rf "$SNAP"
+          mkdir -p "$SNAP/labs/references" "$SNAP/labs/reference-harvester"
+          cp -a labs/references/motion-primitives "$SNAP/labs/references/"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          Path('/tmp/source-control-snapshot/labs/reference-harvester/motion-primitives-item.json').write_text(json.dumps(item,indent=2)+'\n')
+          PY
+
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+
+            rm -rf labs/references/motion-primitives
+            cp -a "$SNAP/labs/references/motion-primitives" labs/references/
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          desired=json.loads(Path('/tmp/source-control-snapshot/labs/reference-harvester/motion-primitives-item.json').read_text())
+          for index,item in enumerate(registry['references']):
+              if item['id']=='motion-primitives':
+                  registry['references'][index]=desired
+                  break
+          else:
+              raise SystemExit('motion-primitives registry item disappeared from remote')
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          PY
+
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/motion-primitives labs/reference-harvester/reference-registry.json
+            if git diff --cached --quiet; then
+              echo 'SOURCE_CONTROL_ALREADY_CURRENT'
+              exit 0
+            fi
+            git commit -m 'test: persist sanitized source-import control'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'SOURCE_CONTROL_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'SOURCE_CONTROL_PUSH_FAILED' >&2
+          exit 1

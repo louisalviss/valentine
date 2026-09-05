@@ -1,0 +1,1079 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "source": {
+    "url": "https://motion-primitives.com/",
+    "discovery_source": "open-source-validation",
+    "captured_at": "2026-09-05T08:44:48.585Z",
+    "baseline_kind": "source-build-control",
+    "visual_state_policy": "deterministic-static"
+  },
+  "capture": {
+    "visual_state_policy": "deterministic-static",
+    "visual_exclusions": [
+      {
+        "id": "cursor-demo-pinterest-media",
+        "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+        "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+        "rights_status": "excluded-unverified-third-party-media"
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "states": [
+      {
+        "id": "desktop-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/desktop-initial.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 619,
+                  "y": 3677,
+                  "width": 192,
+                  "height": 208,
+                  "top": 3677,
+                  "right": 811,
+                  "bottom": 3885,
+                  "left": 619
+                },
+                "clipped_rect": {
+                  "x": 619,
+                  "y": 3677,
+                  "width": 192,
+                  "height": 0
+                },
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/desktop-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-25",
+        "kind": "scroll",
+        "ratio": 0.25,
+        "screenshot": "evidence/desktop-scroll-25.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 619,
+                  "y": 2001,
+                  "width": 192,
+                  "height": 208,
+                  "top": 2001,
+                  "right": 811,
+                  "bottom": 2209,
+                  "left": 619
+                },
+                "clipped_rect": {
+                  "x": 619,
+                  "y": 2001,
+                  "width": 192,
+                  "height": 0
+                },
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/desktop-scroll-25.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/desktop-scroll-50.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 619,
+                  "y": 326,
+                  "width": 192,
+                  "height": 208,
+                  "top": 326,
+                  "right": 811,
+                  "bottom": 534,
+                  "left": 619
+                },
+                "clipped_rect": {
+                  "x": 619,
+                  "y": 326,
+                  "width": 192,
+                  "height": 208
+                },
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/desktop-scroll-50.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "desktop-scroll-75",
+        "kind": "scroll",
+        "ratio": 0.75,
+        "screenshot": "evidence/desktop-scroll-75.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 619,
+                  "y": -1350,
+                  "width": 192,
+                  "height": 208,
+                  "top": -1350,
+                  "right": 811,
+                  "bottom": -1142,
+                  "left": 619
+                },
+                "clipped_rect": {
+                  "x": 619,
+                  "y": 0,
+                  "width": 192,
+                  "height": 0
+                },
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/desktop-scroll-75.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "tablet-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/tablet-initial.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 283,
+                  "y": 3689,
+                  "width": 192,
+                  "height": 208,
+                  "top": 3689,
+                  "right": 475,
+                  "bottom": 3897,
+                  "left": 283
+                },
+                "clipped_rect": {
+                  "x": 283,
+                  "y": 3689,
+                  "width": 192,
+                  "height": 0
+                },
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/tablet-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "tablet-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/tablet-scroll-50.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 283,
+                  "y": 394,
+                  "width": 192,
+                  "height": 208,
+                  "top": 394,
+                  "right": 475,
+                  "bottom": 602,
+                  "left": 283
+                },
+                "clipped_rect": {
+                  "x": 283,
+                  "y": 394,
+                  "width": 192,
+                  "height": 208
+                },
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/tablet-scroll-50.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "mobile-initial",
+        "kind": "initial",
+        "ratio": 0,
+        "screenshot": "evidence/mobile-initial.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 94,
+                  "y": 3773,
+                  "width": 192,
+                  "height": 208,
+                  "top": 3773,
+                  "right": 286,
+                  "bottom": 3981,
+                  "left": 94
+                },
+                "clipped_rect": {
+                  "x": 94,
+                  "y": 3773,
+                  "width": 192,
+                  "height": 0
+                },
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/mobile-initial.png",
+        "reconstruction_screenshot": null
+      },
+      {
+        "id": "mobile-scroll-50",
+        "kind": "scroll",
+        "ratio": 0.5,
+        "screenshot": "evidence/mobile-scroll-50.png",
+        "visual_exclusions": [
+          {
+            "id": "cursor-demo-pinterest-media",
+            "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+            "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+            "rights_status": "excluded-unverified-third-party-media",
+            "matched_elements": 1,
+            "rects": [
+              {
+                "rect": {
+                  "x": 94,
+                  "y": 346,
+                  "width": 192,
+                  "height": 208,
+                  "top": 346,
+                  "right": 286,
+                  "bottom": 554,
+                  "left": 94
+                },
+                "clipped_rect": {
+                  "x": 94,
+                  "y": 346,
+                  "width": 192,
+                  "height": 208
+                },
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "original_screenshot": "evidence/mobile-scroll-50.png",
+        "reconstruction_screenshot": null
+      }
+    ],
+    "dom": {
+      "path": "evidence/hydrated.html",
+      "sha256": "bf9ade4e6f5c809680924b0da984dbe303d456409be7311270612b3b258e3c88",
+      "element_count": 218
+    },
+    "styles_geometry": {
+      "path": "evidence/capture.json",
+      "element_count": 218
+    },
+    "fonts": [
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__Inter_f367f3",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "loaded"
+      },
+      {
+        "family": "__Inter_Fallback_f367f3",
+        "style": "normal",
+        "weight": "normal",
+        "stretch": "normal",
+        "status": "unloaded"
+      },
+      {
+        "family": "__GeistMono_c1e5c9",
+        "style": "normal",
+        "weight": "100 900",
+        "stretch": "normal",
+        "status": "loaded"
+      }
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "src": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "width": 2000,
+        "height": 1384,
+        "alt": "A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1500,
+        "height": 2000,
+        "alt": "impressionist painting, uploaded to Cosmos"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 600,
+        "height": 396,
+        "alt": "Image placeholder from cosmos.so, index:0"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1080,
+        "height": 1349,
+        "alt": "Image placeholder from cosmos.so, index:1"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 480,
+        "height": 640,
+        "alt": "Image placeholder from cosmos.so, index:2"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 750,
+        "height": 999,
+        "alt": "Image placeholder from cosmos.so, index:3"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 640,
+        "height": 477,
+        "alt": "Image placeholder from cosmos.so, index:4"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 450,
+        "height": 572,
+        "alt": "Image placeholder from cosmos.so, index:5"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 640,
+        "height": 492,
+        "alt": "Image placeholder from cosmos.so, index:6"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 563,
+        "height": 555,
+        "alt": "Image placeholder from cosmos.so, index:7"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 956,
+        "height": 1198,
+        "alt": "Image placeholder from cosmos.so, index:8"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 1280,
+        "height": 830,
+        "alt": "Image placeholder from cosmos.so, index:9"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Dean blunt - Black Metal 2"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Yung Lean - Stardust"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Lana Del Rey - Ultraviolence"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "A$AP Rocky - Tailor Swif"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Dean blunt - Black Metal 2"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Yung Lean - Stardust"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Lana Del Rey - Ultraviolence"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "A$AP Rocky - Tailor Swif"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 300,
+        "height": 300,
+        "alt": "Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+      },
+      {
+        "type": "image",
+        "src": "/labs/references/motion-primitives/media-placeholder.svg",
+        "width": 564,
+        "height": 563,
+        "alt": "Olympic logo Paris 2024"
+      }
+    ],
+    "dependencies": [
+      {
+        "type": "stylesheet",
+        "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css"
+      },
+      {
+        "type": "stylesheet",
+        "url": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/2117-8a19e1dc2897b604.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/6882-ddeb58a4ac6338a6.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/polyfills-42372ed130431b0a.js"
+      },
+      {
+        "type": "script",
+        "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js"
+      },
+      {
+        "type": "script",
+        "url": "/labs/references/motion-primitives/empty.js"
+      }
+    ],
+    "network": [
+      {
+        "name": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 58048
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 48432
+      },
+      {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.400000000023283,
+        "transferSize": 300,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 102715
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 2628
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 3583
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 172837
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/2117-8a19e1dc2897b604.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 124727
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 469
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 21205
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/6882-ddeb58a4ac6338a6.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 123739
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 22249
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 8194
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 85838
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 5656
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 31866
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 20812
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 15099
+      },
+      {
+        "name": "/labs/references/motion-primitives/empty.js",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 3019
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 97383
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 35830
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 26322
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 40693
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 37016
+      },
+      {
+        "name": "/labs/references/motion-primitives/media-placeholder.svg",
+        "initiatorType": "link",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
+        "initiatorType": "fetch",
+        "duration": 8.900000000023283,
+        "transferSize": 300,
+        "decodedBodySize": 185319
+      },
+      {
+        "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
+        "initiatorType": "fetch",
+        "duration": 12.099999999976717,
+        "transferSize": 300,
+        "decodedBodySize": 7538
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 13089
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/3467-49ac6239e42fe874.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 11216
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 8598
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/314-bece845bb9f22d96.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 12301
+      },
+      {
+        "name": "http://127.0.0.1:4180/_next/static/chunks/app/docs/layout-687a0fb7ef11c4b7.js",
+        "initiatorType": "script",
+        "duration": 0,
+        "transferSize": 0,
+        "decodedBodySize": 18277
+      }
+    ]
+  },
+  "reconstruction": {
+    "mode": "source-import",
+    "local_path": "labs/references/motion-primitives/",
+    "essential_origin_dependency": false,
+    "self_containment": {
+      "status": "pass",
+      "protocol": "network-isolation-v2",
+      "visual_minimum_score": 99.921,
+      "interaction_status": "pass",
+      "network_status": "pass",
+      "blocked_request_count": 0,
+      "blocked_origins": [],
+      "evidence": "evidence/isolation/self-containment.json"
+    },
+    "sanitization": {
+      "policy": "third-party demo media with unverified reuse rights is replaced with local inert assets; analytics is disabled",
+      "replacements": 618,
+      "receipt": "SANITIZATION.json"
+    },
+    "notes": "Static export built from exact MIT upstream SHA, nested-path relocated, then sanitized. Source fidelity and self-containment are measured independently."
+  },
+  "fidelity": {
+    "visual": {
+      "score": 99.9177,
+      "status": "pass",
+      "method": "accepted surface: min(SSIM-map mean, pixel_similarity) outside explicit DOM-derived rights masks; full-frame metrics are retained separately",
+      "full_frame_minimum_score": 97.4557,
+      "exceptions": [
+        {
+          "id": "cursor-demo-pinterest-media",
+          "selector": "img[alt=\"Olympic logo Paris 2024\"]",
+          "reason": "Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+          "rights_status": "excluded-unverified-third-party-media"
+        }
+      ]
+    },
+    "motion_interaction": {
+      "status": "pass",
+      "states_verified": [
+        "desktop:closed",
+        "desktop:open",
+        "desktop:5-trial-spatial-trajectory",
+        "desktop:5-trial-phase-aligned-runtime-timing",
+        "desktop:escape-close",
+        "desktop:5-trial-animation-signature",
+        "mobile:closed",
+        "mobile:open",
+        "mobile:5-trial-spatial-trajectory",
+        "mobile:5-trial-phase-aligned-runtime-timing",
+        "mobile:escape-close",
+        "mobile:5-trial-animation-signature"
+      ],
+      "minimum_score": 99.0786,
+      "protocol": "3.4",
+      "capture_protocol": "3.4",
+      "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 5 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.",
+      "notes": "Gate remains >=98. Five-trial median suppresses isolated scheduler jitter without relaxing the threshold. Phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and every trial signature must be non-empty and match. Interaction PASS does not grant asset rights; self-containment remains independently measured."
+    }
+  },
+  "provenance": {
+    "code": "Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT; nested-path relocation is deterministic and limited to actual upstream public assets.",
+    "assets": "Bundled public assets remain local. External Cosmos/Spotify/Pinterest demo media with unverified independent reuse rights is not copied or re-hosted; sanitized placeholders and explicit accepted-surface exclusions are recorded.",
+    "rights_status": "mixed-reviewed"
+  }
+}

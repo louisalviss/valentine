@@ -1,0 +1,201 @@
+name: Reference Self Containment QA
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/capture-isolated.mjs'
+      - 'labs/reference-harvester/measure-isolation.py'
+      - 'labs/reference-harvester/validate.mjs'
+      - 'labs/references/motion-primitives/index.html'
+      - 'labs/references/motion-primitives/_next/**'
+      - 'labs/references/motion-primitives/eb-27-lamp-edouard-wilfrid-buquet.jpg'
+      - '.github/workflows/reference-self-containment-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  motion-primitives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout Valentine
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install isolation QA runtime
+        run: |
+          set -euo pipefail
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Start local reference server
+        run: |
+          set -euo pipefail
+          test -s labs/references/motion-primitives/index.html
+          python3 -m http.server 4173 --directory . >/tmp/valentine-isolation-server.log 2>&1 &
+          echo $! >/tmp/valentine-isolation-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/labs/references/motion-primitives/ >/tmp/isolation-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'motion-primitives' /tmp/isolation-home.html
+
+      - name: Capture with every non-local request blocked
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          node labs/reference-harvester/capture-isolated.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-isolation.py motion-primitives
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('labs/references/motion-primitives/evidence/isolation/self-containment.json')
+          r=json.loads(p.read_text())
+          print('SELF_CONTAINMENT_MEASURED',r['status'],'visual',r['minimum_score'],'interaction',r['interaction_status'],'blocked',r['blocked_request_count'])
+          print('BLOCKED_ORIGINS',','.join(r.get('blocked_origins',[])))
+          PY
+
+      - name: Persist self-containment state
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/motion-primitives')
+          report=json.loads((ref/'evidence/isolation/self-containment.json').read_text())
+          passed=report['status']=='pass'
+
+          manifest_path=ref/'capture-manifest.json'
+          manifest=json.loads(manifest_path.read_text())
+          manifest['reconstruction']['self_containment']={
+              'status':report['status'],
+              'protocol':'network-isolation-v1',
+              'visual_minimum_score':report['minimum_score'],
+              'interaction_status':report['interaction_status'],
+              'blocked_request_count':report['blocked_request_count'],
+              'blocked_origins':report.get('blocked_origins',[]),
+              'supported_surface':'8 deterministic homepage visual states + EB27 morph dialog open/Escape on desktop and mobile',
+              'evidence':'evidence/isolation/self-containment.json'
+          }
+          manifest['reconstruction']['essential_origin_dependency']=not passed
+          if passed:
+              manifest['reconstruction']['notes']='Accepted surface remains >=98 visual fidelity and functional with every non-local HTTP(S) request blocked. External demo-media requests are therefore classified as non-essential to the verified surface; their separate rights are not inferred.'
+          else:
+              manifest['reconstruction']['notes']='Network-isolation gate failed; candidate still has an essential external dependency for the accepted surface. See evidence/isolation/self-containment.json.'
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          item['self_containment']={
+              'status':report['status'],
+              'protocol':'network-isolation-v1',
+              'visual_score':report['minimum_score'],
+              'interaction_status':report['interaction_status'],
+              'evidence':'../labs/references/motion-primitives/evidence/isolation/self-containment.json'
+          }
+          item['essential_origin_dependency']=not passed
+          visual=item.get('fidelity',{}).get('visual',{}).get('status')
+          motion=item.get('fidelity',{}).get('motion_interaction',{}).get('status')
+          item['status']='verified' if passed and visual=='pass' and motion=='pass' else 'reconstructed'
+          note=item.setdefault('provenance',{}).get('note','')
+          suffix=' Network-isolation v1 verifies the accepted surface without loading any external HTTP(S) dependency; blocked demo media remains outside the verified surface and its rights remain unknown.' if passed else ' Network-isolation v1 failed; external dependency remains essential until resolved.'
+          if suffix.strip() not in note:
+              item['provenance']['note']=(note+suffix).strip()
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          print('SELF_CONTAINMENT_METADATA',item['status'],'origin_dependency',item['essential_origin_dependency'])
+          PY
+          node labs/reference-harvester/validate.mjs
+
+      - name: Upload isolation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-self-containment-${{ github.run_id }}
+          path: labs/references/motion-primitives/evidence/isolation/
+          retention-days: 5
+
+      - name: Commit isolation evidence and metadata
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          SNAP=/tmp/isolation-snapshot
+          rm -rf "$SNAP"
+          mkdir -p "$SNAP/evidence"
+          cp -a labs/references/motion-primitives/evidence/isolation/. "$SNAP/evidence/"
+          cp labs/references/motion-primitives/capture-manifest.json "$SNAP/manifest.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          Path('/tmp/isolation-snapshot/registry-item.json').write_text(json.dumps(item,indent=2)+'\n')
+          PY
+
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+
+            rm -rf labs/references/motion-primitives/evidence/isolation
+            mkdir -p labs/references/motion-primitives/evidence/isolation
+            cp -a "$SNAP/evidence/." labs/references/motion-primitives/evidence/isolation/
+            cp "$SNAP/manifest.json" labs/references/motion-primitives/capture-manifest.json
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          desired=json.loads(Path('/tmp/isolation-snapshot/registry-item.json').read_text())
+          for index,item in enumerate(registry['references']):
+              if item['id']=='motion-primitives':
+                  registry['references'][index]=desired
+                  break
+          else:
+              raise SystemExit('motion-primitives registry item disappeared from remote')
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          PY
+
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/motion-primitives/evidence/isolation labs/references/motion-primitives/capture-manifest.json labs/reference-harvester/reference-registry.json
+            if git diff --cached --quiet; then
+              echo 'SELF_CONTAINMENT_ALREADY_CURRENT'
+              break
+            fi
+            git commit -m 'test: persist reference self-containment evidence'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'SELF_CONTAINMENT_EVIDENCE_PUSHED'
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo 'SELF_CONTAINMENT_EVIDENCE_PUSH_FAILED' >&2
+              exit 1
+            fi
+            sleep $((attempt * 2))
+          done
+
+      - name: Enforce self-containment gate
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('labs/references/motion-primitives/evidence/isolation/self-containment.json').read_text())
+          assert report['status']=='pass', f"self-containment FAIL: visual={report['minimum_score']} interaction={report['interaction_status']} blocked={report['blocked_origins']}"
+          assert float(report['minimum_score'])>=98.0
+          assert report['interaction_status']=='pass'
+          print('REFERENCE_SELF_CONTAINMENT_GATE_PASS',report['minimum_score'],'blocked',report['blocked_request_count'])
+          PY
+
+      - name: Cleanup server
+        if: always()
+        run: |
+          kill "$(cat /tmp/valentine-isolation-server.pid 2>/dev/null)" 2>/dev/null || true

@@ -1,0 +1,319 @@
+2:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"Tabs"]
+3:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"TabsList"]
+4:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"TabsTrigger"]
+5:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"TabsContent"]
+6:I[63398,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"default"]
+7:I[30410,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"Tilt"]
+8:I[63127,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"default"]
+a:I[87123,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"Spotlight"]
+d:I[21176,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","3587","static/chunks/app/docs/tilt/page-b3e8007d24682915.js"],"InstallationCli"]
+10:I[4707,[],""]
+11:I[36423,[],""]
+12:I[92258,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","4971","static/chunks/4971-4507af105e39481d.js","314","static/chunks/314-bece845bb9f22d96.js","3998","static/chunks/app/docs/layout-687a0fb7ef11c4b7.js"],"default",1]
+13:I[88003,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],""]
+14:I[79150,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"ThemeProvider"]
+15:I[81103,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"TooltipProvider"]
+b:T58d,import { Spotlight } from '@/components/core/spotlight';
+import { Tilt } from '@/components/core/tilt';
+
+export function TiltSpotlight() {
+  return (
+    <div className='aspect-video max-w-sm'>
+      <Tilt
+        rotationFactor={6}
+        isRevese
+        style={{
+          transformOrigin: 'center center',
+        }}
+        springOptions={{
+          stiffness: 26.7,
+          damping: 4.1,
+          mass: 0.2,
+        }}
+        className='group relative rounded-lg'
+      >
+        <Spotlight
+          className='z-10 from-white/50 via-white/20 to-white/10 blur-2xl'
+          size={248}
+          springOptions={{
+            stiffness: 26.7,
+            damping: 4.1,
+            mass: 0.2,
+          }}
+        />
+        <img
+          // src='/labs/references/motion-primitives/media-placeholder.svg
+          src='/labs/references/motion-primitives/media-placeholder.svg
+          alt='Ghost in the shell - Kôkaku kidôtai'
+          className='h-32 w-full rounded-lg object-cover grayscale duration-700 group-hover:grayscale-0'
+        />
+      </Tilt>
+      <div className='flex flex-col space-y-0.5 pb-0 pt-3'>
+        <h3 className='font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400'>
+          2001: A Space Odyssey
+        </h3>
+        <p className='text-sm text-black dark:text-white'>Stanley Kubrick</p>
+      </div>
+    </div>
+  );
+}
+e:T791,'use client';
+
+import React, { useRef } from 'react';
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  MotionStyle,
+  SpringOptions,
+} from 'motion/react';
+
+export type TiltProps = {
+  children: React.ReactNode;
+  className?: string;
+  style?: MotionStyle;
+  rotationFactor?: number;
+  isRevese?: boolean;
+  springOptions?: SpringOptions;
+};
+
+export function Tilt({
+  children,
+  className,
+  style,
+  rotationFactor = 15,
+  isRevese = false,
+  springOptions,
+}: TiltProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const xSpring = useSpring(x, springOptions);
+  const ySpring = useSpring(y, springOptions);
+
+  const rotateX = useTransform(
+    ySpring,
+    [-0.5, 0.5],
+    isRevese
+      ? [rotationFactor, -rotationFactor]
+      : [-rotationFactor, rotationFactor]
+  );
+  const rotateY = useTransform(
+    xSpring,
+    [-0.5, 0.5],
+    isRevese
+      ? [-rotationFactor, rotationFactor]
+      : [rotationFactor, -rotationFactor]
+  );
+
+  const transform = useMotionTemplate`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return;
+
+    const rect = ref.current.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPos = mouseX / width - 0.5;
+    const yPos = mouseY / height - 0.5;
+
+    x.set(xPos);
+    y.set(yPos);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{
+        transformStyle: 'preserve-3d',
+        ...style,
+        transform,
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      {children}
+    </motion.div>
+  );
+}
+0:["rEy1L9vs2e9UG9z8P-1-5",[[["",{"children":["docs",{"children":["tilt",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",{"children":["docs",{"children":["tilt",{"children":["__PAGE__",{},[["$L1",[["$","h1",null,{"id":"tilt","data-heading":"1","children":"Tilt"}],"\n",["$","p",null,{"children":"3D tilt effect that responds to mouse movement, enhancing UI elements with a dynamic depth effect, customizable rotation factors and spring options."}],"\n",["$","h2",null,{"id":"examples","data-heading":"2","children":"Examples"}],"\n",["$","h3",null,{"id":"basic-tilt-card","data-heading":"3","children":"Basic Tilt Card"}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","$L7",null,{"rotationFactor":8,"isRevese":true,"children":["$","div",null,{"style":{"borderRadius":"12px"},"className":"flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900","children":[["$","img",null,{"src":"/labs/references/motion-primitives/media-placeholder.svg","alt":"Ghost in the shell - Kôkaku kidôtai","className":"h-48 w-full object-cover"}],["$","div",null,{"className":"p-2","children":[["$","h1",null,{"className":"font-mono leading-snug text-zinc-950 dark:text-zinc-50","children":"Ghost in the Shell"}],["$","p",null,{"className":"text-zinc-700 dark:text-zinc-400","children":"Kôkaku kidôtai"}]]}]]}]}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/tilt/tilt-card-1.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L8",null,{"code":"import { Tilt } from '@/components/core/tilt';\n\nexport function TiltCard1() {\n  return (\n    <Tilt rotationFactor={8} isRevese>\n      <div\n        style={{\n          borderRadius: '12px',\n        }}\n        className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'\n      >\n        <img\n          src='/labs/references/motion-primitives/media-placeholder.svg\n          alt='Ghost in the shell - Kôkaku kidôtai'\n          className='h-48 w-full object-cover'\n        />\n        <div className='p-2'>\n          <h1 className='font-mono leading-snug text-zinc-950 dark:text-zinc-50'>\n            Ghost in the Shell\n          </h1>\n          <p className='text-zinc-700 dark:text-zinc-400'>Kôkaku kidôtai</p>\n        </div>\n      </div>\n    </Tilt>\n  );\n}\n","children":"$L9"}]}]]}]}],"\n",["$","h3",null,{"id":"tilt-with-spotlight","data-heading":"3","children":"Tilt with Spotlight"}],"\n",["$","p",null,{"children":["Example of the ",["$","a",null,{"href":"/docs/spotlight","children":"Spotlight component"}]," used with the Tilt component."]}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","div",null,{"className":"aspect-video max-w-sm","children":[["$","$L7",null,{"rotationFactor":6,"isRevese":true,"style":{"transformOrigin":"center center"},"springOptions":{"stiffness":26.7,"damping":4.1,"mass":0.2},"className":"group relative rounded-lg","children":[["$","$La",null,{"className":"z-10 from-white/50 via-white/20 to-white/10 blur-2xl","size":248,"springOptions":{"stiffness":26.7,"damping":4.1,"mass":0.2}}],["$","img",null,{"src":"/labs/references/motion-primitives/media-placeholder.svg","alt":"Ghost in the shell - Kôkaku kidôtai","className":"h-32 w-full rounded-lg object-cover grayscale duration-700 group-hover:grayscale-0"}]]}],["$","div",null,{"className":"flex flex-col space-y-0.5 pb-0 pt-3","children":[["$","h3",null,{"className":"font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400","children":"2001: A Space Odyssey"}],["$","p",null,{"className":"text-sm text-black dark:text-white","children":"Stanley Kubrick"}]]}]]}],"hasReTrigger":"$undefined","className":"$undefined","filePath":"app/docs/tilt/tilt-spotlight.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L8",null,{"code":"$b","children":"$Lc"}]}]]}]}],"\n",["$","h2",null,{"id":"installation","data-heading":"2","children":"Installation"}],"\n",["$","$L2",null,{"className":"relative mt-6 w-full","defaultValue":"cli","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"className":"","value":"cli","children":"CLI"}],["$","$L4",null,{"className":"","value":"manual","children":"Manual"}]]}],["$","$L5",null,{"className":"","value":"cli","children":["$","$Ld",null,{"value":"tilt"}]}],["$","$L5",null,{"className":"","value":"manual","children":["$","div",null,{"className":"steps mb-12 ml-4 border-l pl-8 [counter-reset:step]","children":[["$","h3",null,{"id":"copy-and-paste-the-following-code-into-your-project","className":"step","data-heading":"3","children":"Copy and paste the following code into your project."}],["$","div",null,{"className":"not-prose max-h-[650px] overflow-auto overflow-x-auto overflow-y-hidden rounded-md text-sm dark:border dark:border-zinc-800","children":["$","$L8",null,{"code":"$e","children":"$Lf"}]}],["$","h3",null,{"id":"update-the-import-paths-to-match-your-project-setup","className":"step","data-heading":"3","children":"Update the import paths to match your project setup."}]]}]}]]}],"\n",["$","h2",null,{"id":"component-api","data-heading":"2","children":"Component API"}],"\n",["$","h3",null,{"id":"border-trail","data-heading":"3","children":"Border Trail"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Additional CSS classes for styling the tilt."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"style"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"MotionStyle"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Additional CSS classes for styling the tilt."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"rotationFactor"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"number"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"15"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Controls the maximum rotation angle in degrees."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"isRevese"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"boolean"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"false"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Reverses the tilt effect's rotation direction."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"springOptions"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"SpringOptions"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Spring options for the tilt effect."}]]}]]}]]}]}],"\n",["$","h2",null,{"id":"credits","data-heading":"2","children":"Credits"}],"\n",["$","p",null,{"children":["Initiated by ",["$","a",null,{"href":"https://github.com/AFPedreros","children":"@AFPedreros"}]]}]],null],null],null]},[null,["$","$L10",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children","tilt","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","$L12",null,{"children":["$","$L10",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}],"params":{}}]],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/94849942fe8d2ad5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/33c512191cee463d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","$L13",null,{"async":true,"defer":true,"src":"/labs/references/motion-primitives/empty.js"}],["$","body",null,{"className":"__className_e46c09 __variable_3872bd bg-white font-sans antialiased dark:bg-zinc-950","children":["$","$L14",null,{"attribute":"class","children":["$","$L15",null,{"children":["$","div",null,{"className":"isolate min-h-screen","children":["$","$L10",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]}]]}]],null],null],["$L16",null]]]]
+17:T1983,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Tilt } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/tilt'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> TiltCard1</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">Tilt</span><span style="color:var(--shiki-token-function)"> rotationFactor</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">8</span><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-function)">isRevese</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          borderRadius</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> '12px'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">img</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          src</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'/labs/references/motion-primitives/media-placeholder.svg</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          alt</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'Ghost in the shell - Kôkaku kidôtai'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-48 w-full object-cover'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'p-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">h1</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'font-mono leading-snug text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Ghost in the Shell</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">h1</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-700 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Kôkaku kidôtai&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">Tilt</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>9:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$17"}}]}]
+18:T2931,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Spotlight } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/spotlight'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Tilt } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/tilt'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> TiltSpotlight</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'aspect-video max-w-sm'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">Tilt</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        rotationFactor</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">6</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        isRevese</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          transformOrigin</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'center center'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        springOptions</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          stiffness</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 26.7</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          damping</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 4.1</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          mass</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.2</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">        className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'group relative rounded-lg'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">Spotlight</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'z-10 from-white/50 via-white/20 to-white/10 blur-2xl'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          size</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">248</span><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          springOptions</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            stiffness</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 26.7</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            damping</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 4.1</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            mass</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.2</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">img</span></span>
+<span class="line"><span style="color:var(--shiki-token-comment)">          // src='/labs/references/motion-primitives/media-placeholder.svg</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          src</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'/labs/references/motion-primitives/media-placeholder.svg</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          alt</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'Ghost in the shell - Kôkaku kidôtai'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-32 w-full rounded-lg object-cover grayscale duration-700 group-hover:grayscale-0'</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">Tilt</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex flex-col space-y-0.5 pb-0 pt-3'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">h3</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          2001: A Space Odyssey</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">h3</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-sm text-black dark:text-white'</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Stanley Kubrick&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>c:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$18"}}]}]
+19:T5980,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-string-expression)">'use client'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> React</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { useRef } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  motion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useMotionTemplate</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useMotionValue</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useSpring</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  useTransform</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  MotionStyle</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  SpringOptions</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'motion/react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> TiltProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  style</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> MotionStyle</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  rotationFactor</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> number</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  isRevese</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> boolean</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  springOptions</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> SpringOptions</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> Tilt</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  style</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  rotationFactor </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> 15</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  isRevese </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-constant)"> false</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  springOptions</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> TiltProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> ref</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useRef</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">HTMLDivElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> x</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> y</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> xSpring</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useSpring</span><span style="color:var(--shiki-foreground, #B1B1B1)">(x</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> springOptions);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> ySpring</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useSpring</span><span style="color:var(--shiki-foreground, #B1B1B1)">(y</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> springOptions);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> rotateX</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ySpring</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    [</span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)">0.5</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> 0.5</span><span style="color:var(--shiki-foreground, #B1B1B1)">]</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    isRevese</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      ?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [rotationFactor</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> -</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotationFactor]</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotationFactor</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> rotationFactor]</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> rotateY</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useTransform</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    xSpring</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    [</span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)">0.5</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> 0.5</span><span style="color:var(--shiki-foreground, #B1B1B1)">]</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    isRevese</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      ?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotationFactor</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> rotationFactor]</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [rotationFactor</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> -</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotationFactor]</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> transform</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useMotionTemplate</span><span style="color:var(--shiki-token-string-expression)">`perspective(1000px) rotateX(</span><span style="color:var(--shiki-token-keyword)">${</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotateX</span><span style="color:var(--shiki-token-keyword)">}</span><span style="color:var(--shiki-token-string-expression)">deg) rotateY(</span><span style="color:var(--shiki-token-keyword)">${</span><span style="color:var(--shiki-foreground, #B1B1B1)">rotateY</span><span style="color:var(--shiki-token-keyword)">}</span><span style="color:var(--shiki-token-string-expression)">deg)`</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> handleMouseMove</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (e</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">MouseEvent</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">HTMLDivElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">>) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-token-constant)">ref</span><span style="color:var(--shiki-foreground, #B1B1B1)">.current) </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> rect</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> ref</span><span style="color:var(--shiki-token-function)">.</span><span style="color:var(--shiki-token-constant)">current</span><span style="color:var(--shiki-token-function)">.getBoundingClientRect</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> width</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> rect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.width;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> height</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> rect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.height;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> mouseX</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> e</span><span style="color:var(--shiki-foreground, #B1B1B1)">.clientX </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> rect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.left;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> mouseY</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-constant)"> e</span><span style="color:var(--shiki-foreground, #B1B1B1)">.clientY </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> rect</span><span style="color:var(--shiki-foreground, #B1B1B1)">.top;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> xPos</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> mouseX </span><span style="color:var(--shiki-token-keyword)">/</span><span style="color:var(--shiki-foreground, #B1B1B1)"> width </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 0.5</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> yPos</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> mouseY </span><span style="color:var(--shiki-token-keyword)">/</span><span style="color:var(--shiki-foreground, #B1B1B1)"> height </span><span style="color:var(--shiki-token-keyword)">-</span><span style="color:var(--shiki-token-constant)"> 0.5</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">    x</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(xPos);</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">    y</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(yPos);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> handleMouseLeave</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> () </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">    x</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">    y</span><span style="color:var(--shiki-token-function)">.set</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-constant)">0</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      ref</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{ref}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{className}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      style</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        transformStyle</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'preserve-3d'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">        ...</span><span style="color:var(--shiki-foreground, #B1B1B1)">style</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        transform</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onMouseMove</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{handleMouseMove}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onMouseLeave</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{handleMouseLeave}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>f:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$19"}}]}]
+16:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Tilt - Motion-Primitives"}],["$","meta","3",{"name":"description","content":"3D tilt effect that responds to mouse movement, enhancing UI elements with a dynamic depth effect, customizable rotation factors and spring options. Built for React, Next.js, and Tailwind CSS."}],["$","meta","4",{"property":"og:title","content":"Tilt - Motion-Primitives"}],["$","meta","5",{"property":"og:description","content":"3D tilt effect that responds to mouse movement, enhancing UI elements with a dynamic depth effect, customizable rotation factors and spring options. Built for React, Next.js, and Tailwind CSS."}],["$","meta","6",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","7",{"property":"og:image:width","content":"1200"}],["$","meta","8",{"property":"og:image:height","content":"630"}],["$","meta","9",{"property":"og:image","content":"http://localhost:3000/labs/references/motion-primitives/opengraph-image.jpg?9ca9b9247d6d0fe4"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Tilt - Motion-Primitives"}],["$","meta","12",{"name":"twitter:description","content":"3D tilt effect that responds to mouse movement, enhancing UI elements with a dynamic depth effect, customizable rotation factors and spring options. Built for React, Next.js, and Tailwind CSS."}],["$","meta","13",{"name":"twitter:image:type","content":"image/jpeg"}],["$","meta","14",{"name":"twitter:image:width","content":"1200"}],["$","meta","15",{"name":"twitter:image:height","content":"630"}],["$","meta","16",{"name":"twitter:image","content":"http://localhost:3000/labs/references/motion-primitives/twitter-image.jpg?9ca9b9247d6d0fe4"}],["$","link","17",{"rel":"icon","href":"/labs/references/motion-primitives/icon.ico?71bbcdb60d31e7d3","type":"image/x-icon","sizes":"256x256"}],["$","meta","18",{"name":"next-size-adjust"}]]
+1:null

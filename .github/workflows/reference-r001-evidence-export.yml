@@ -1,0 +1,31 @@
+name: Reference R001 Evidence Export
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - '.github/workflows/reference-r001-evidence-export.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify R001 evidence
+        run: |
+          set -euo pipefail
+          test -s labs/references/native-content/evidence/desktop-initial.png
+          test -s labs/references/native-content/evidence/desktop-scroll-50.png
+          test -s labs/references/native-content/evidence/mobile-initial.png
+          test -s labs/references/native-content/evidence/mobile-scroll-50.png
+      - name: Upload R001 baseline evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-content-baseline-evidence
+          path: labs/references/native-content/evidence/
+          retention-days: 2

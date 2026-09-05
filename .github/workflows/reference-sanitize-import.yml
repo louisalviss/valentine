@@ -1,0 +1,48 @@
+name: Reference Sanitize Import
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/sanitize-static-import.mjs'
+      - '.github/workflows/reference-sanitize-import.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  motion-primitives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Valentine
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Sanitize current source import on latest branch head
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            node labs/reference-harvester/sanitize-static-import.mjs motion-primitives
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/motion-primitives
+            if git diff --cached --quiet; then
+              echo 'REFERENCE_SANITIZATION_ALREADY_CURRENT'
+              exit 0
+            fi
+            git commit -m 'fix: localize unlicensed reference demo media'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'REFERENCE_SANITIZATION_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'REFERENCE_SANITIZATION_PUSH_FAILED' >&2
+          exit 1

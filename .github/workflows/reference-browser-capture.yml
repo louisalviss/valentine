@@ -1,0 +1,152 @@
+name: Reference Browser Capture
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/targets/**'
+      - 'labs/reference-harvester/capture-browser.mjs'
+      - '.github/workflows/reference-browser-capture.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reference-browser-capture-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install browser capture runtime
+        run: npm install --no-save puppeteer-core@24.16.0
+
+      - name: Resolve only applicable capture targets
+        id: targets
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          : >/tmp/reference-browser-targets.txt
+
+          select_all=0
+          if [ "$EVENT_NAME" = 'workflow_dispatch' ]; then
+            select_all=1
+          elif [ -z "${BEFORE_SHA:-}" ] || printf '%s' "$BEFORE_SHA" | grep -Eq '^0+$'; then
+            select_all=1
+          else
+            mapfile -t changed < <(git diff --name-only "$BEFORE_SHA" "$HEAD_SHA")
+            printf '%s\n' "${changed[@]}" >/tmp/reference-browser-changed.txt
+            if printf '%s\n' "${changed[@]}" | grep -Eq '^(labs/reference-harvester/capture-browser\.mjs|\.github/workflows/reference-browser-capture\.yml)$'; then
+              select_all=1
+            else
+              printf '%s\n' "${changed[@]}" | grep '^labs/reference-harvester/targets/.*\.json$' >>/tmp/reference-browser-targets.txt || true
+            fi
+          fi
+
+          if [ "$select_all" = 1 ]; then
+            find labs/reference-harvester/targets -maxdepth 1 -type f -name '*.json' -print | sort >/tmp/reference-browser-targets.txt
+          fi
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          candidates=[]
+          seen=set()
+          source=Path('/tmp/reference-browser-targets.txt')
+          for raw in source.read_text().splitlines() if source.exists() else []:
+              path=Path(raw.strip())
+              if not raw.strip() or path in seen or not path.exists():
+                  continue
+              seen.add(path)
+              data=json.loads(path.read_text())
+              if data.get('browser_capture_enabled') is False:
+                  print('CAPTURE_TARGET_DISABLED',path,data.get('id'))
+                  continue
+              ref_id=data.get('id')
+              if not ref_id:
+                  raise SystemExit(f'{path}: id missing')
+              candidates.append((str(path),ref_id))
+          Path('/tmp/reference-browser-selected.tsv').write_text(''.join(f'{p}\t{i}\n' for p,i in candidates))
+          print('CAPTURE_TARGET_COUNT',len(candidates))
+          for p,i in candidates:
+              print('CAPTURE_TARGET',i,p)
+          PY
+
+          if [ -s /tmp/reference-browser-selected.tsv ]; then
+            echo 'has_targets=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'has_targets=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Capture selected public references
+        if: steps.targets.outputs.has_targets == 'true'
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          while IFS=$'\t' read -r target ref_id; do
+            [ -n "$target" ] || continue
+            node labs/reference-harvester/capture-browser.mjs "$target"
+          done </tmp/reference-browser-selected.tsv
+          node labs/reference-harvester/validate.mjs
+
+      - name: Persist only selected reference evidence
+        if: steps.targets.outputs.has_targets == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          SNAP=/tmp/reference-browser-snapshot
+          rm -rf "$SNAP"
+          mkdir -p "$SNAP"
+          while IFS=$'\t' read -r target ref_id; do
+            [ -n "$ref_id" ] || continue
+            test -d "labs/references/$ref_id"
+            mkdir -p "$SNAP/$ref_id"
+            cp -a "labs/references/$ref_id/." "$SNAP/$ref_id/"
+          done </tmp/reference-browser-selected.tsv
+
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+
+            while IFS=$'\t' read -r target ref_id; do
+              [ -n "$ref_id" ] || continue
+              rm -rf "labs/references/$ref_id"
+              mkdir -p "labs/references/$ref_id"
+              cp -a "$SNAP/$ref_id/." "labs/references/$ref_id/"
+              git add "labs/references/$ref_id"
+            done </tmp/reference-browser-selected.tsv
+
+            node labs/reference-harvester/validate.mjs
+            if git diff --cached --quiet; then
+              echo 'NO_CAPTURE_DIFF'
+              exit 0
+            fi
+            git commit -m 'capture: persist scoped reference browser evidence'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'CAPTURE_EVIDENCE_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'CAPTURE_EVIDENCE_PUSH_FAILED' >&2
+          exit 1
+
+      - name: No applicable browser targets
+        if: steps.targets.outputs.has_targets != 'true'
+        run: echo 'NO_APPLICABLE_BROWSER_CAPTURE_TARGETS'

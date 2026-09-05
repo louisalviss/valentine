@@ -1,0 +1,922 @@
+2:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"Tabs"]
+3:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"TabsList"]
+4:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"TabsTrigger"]
+5:I[9006,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"TabsContent"]
+6:I[63398,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"default"]
+7:I[82396,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"Accordion"]
+8:I[82396,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"AccordionItem"]
+9:I[82396,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"AccordionTrigger"]
+a:I[82396,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"AccordionContent"]
+b:I[63127,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"default"]
+12:I[21176,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","5092","static/chunks/5092-5d22f06807fadbe2.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3467","static/chunks/3467-49ac6239e42fe874.js","849","static/chunks/app/docs/accordion/page-55f89e0dc9924b77.js"],"InstallationCli"]
+15:I[4707,[],""]
+16:I[36423,[],""]
+17:I[92258,["7974","static/chunks/7974-a826272213c31ec1.js","6882","static/chunks/6882-ddeb58a4ac6338a6.js","7410","static/chunks/7410-fefd81715c16252e.js","4971","static/chunks/4971-4507af105e39481d.js","314","static/chunks/314-bece845bb9f22d96.js","3998","static/chunks/app/docs/layout-687a0fb7ef11c4b7.js"],"default",1]
+18:I[88003,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],""]
+19:I[79150,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"ThemeProvider"]
+1a:I[81103,["7974","static/chunks/7974-a826272213c31ec1.js","7410","static/chunks/7410-fefd81715c16252e.js","5616","static/chunks/5616-6f78f3f9b66c194c.js","3185","static/chunks/app/layout-f30778254bce1d69.js"],"TooltipProvider"]
+c:Tc1f,import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/core/accordion';
+
+export function AccordionBasic() {
+  return (
+    <Accordion className='flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700'>
+      <AccordionItem value='getting-started'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          Getting Started
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Discover the fundamental concepts of Motion-Primitives. This section
+            guides you through the installation process and provides an overview
+            of how to integrate these components into your projects. Learn about
+            the core functionalities and how to set up your first animation
+            effectively.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='animation-properties'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          Animation Properties
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Explore the comprehensive range of animation properties available in
+            Motion-Primitives. Understand how to manipulate timing, easing, and
+            delays to create smooth, dynamic animations. This segment also
+            covers the customization of animations to fit the flow and style of
+            your web applications.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='advanced-usage'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          Advanced Usage
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Dive deeper into advanced techniques and features of
+            Motion-Primitives. Learn about chaining animations, creating complex
+            sequences, and utilizing motion sensors for interactive animations.
+            Gain insights on how to leverage these advanced features to enhance
+            user experience and engagement.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='community-and-support'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          Community and Support
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Engage with the Motion-Primitives community to gain additional
+            support and insight. Find out how to participate in discussions,
+            contribute to the project, and access a wealth of shared knowledge
+            and resources. Learn about upcoming features, best practices, and
+            how to get help with your specific use cases.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+e:T1064,import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/core/accordion';
+import { ChevronUp } from 'lucide-react';
+
+export function AccordionIcons() {
+  return (
+    <Accordion
+      className='flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700'
+      transition={{ duration: 0.2, ease: 'easeInOut' }}
+    >
+      <AccordionItem value='getting-started' className='py-2'>
+        <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center justify-between'>
+            <div>Getting Started</div>
+            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Discover the fundamental concepts of Motion-Primitives. This section
+            guides you through the installation process and provides an overview
+            of how to integrate these components into your projects. Learn about
+            the core functionalities and how to set up your first animation
+            effectively.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='animation-properties' className='py-2'>
+        <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center justify-between'>
+            <div>Animation Properties</div>
+            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Explore the comprehensive range of animation properties available in
+            Motion-Primitives. Understand how to manipulate timing, easing, and
+            delays to create smooth, dynamic animations. This segment also
+            covers the customization of animations to fit the flow and style of
+            your web applications.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='advanced-usage' className='py-2'>
+        <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center justify-between'>
+            <div>Advanced Usage</div>
+            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Dive deeper into advanced techniques and features of
+            Motion-Primitives. Learn about chaining animations, creating complex
+            sequences, and utilizing motion sensors for interactive animations.
+            Gain insights on how to leverage these advanced features to enhance
+            user experience and engagement.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='community-and-support' className='py-2'>
+        <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center justify-between'>
+            <div>Community and Support</div>
+            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className='text-zinc-500 dark:text-zinc-400'>
+            Engage with the Motion-Primitives community to gain additional
+            support and insight. Find out how to participate in discussions,
+            contribute to the project, and access a wealth of shared knowledge
+            and resources. Learn about upcoming features, best practices, and
+            how to get help with your specific use cases.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+10:T113e,import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/core/accordion';
+import { ChevronRight } from 'lucide-react';
+
+export function AccordionVariant() {
+  return (
+    <Accordion
+      className='flex w-full flex-col'
+      transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+      variants={{
+        expanded: {
+          opacity: 1,
+          scale: 1,
+        },
+        collapsed: {
+          opacity: 0,
+          scale: 0.7,
+        },
+      }}
+    >
+      <AccordionItem value='getting-started' className='py-2'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center'>
+            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
+              How do I start with Motion-Primitives?
+            </div>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className='origin-left'>
+          <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+            Kick off your experience by setting up Motion-Primitives. This
+            section covers the basics of installation and how to add animations
+            to your projects. You’ll get familiar with the initial setup and the
+            core features quickly.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='animation-properties' className='py-2'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center'>
+            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
+              What are the key animation properties?
+            </div>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className='origin-left'>
+          <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+            Discover a variety of properties to customize your animations. Learn
+            to adjust timing, easing, and delays for smoother effects. This
+            guide will help you tailor these settings to your app’s needs.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='advanced-features' className='py-2'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center'>
+            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
+              How do I use advanced features?
+            </div>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className='origin-left'>
+          <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+            Advance your skills by using more complex functions of
+            Motion-Primitives. Explore how to link animations together, create
+            intricate sequences, and interact with motion sensors for dynamic
+            effects.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='community-support' className='py-2'>
+        <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+          <div className='flex items-center'>
+            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
+              How do I engage with the community?
+            </div>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className='origin-left'>
+          <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+            Connect with the Motion-Primitives community for support and
+            collaboration. Learn how to contribute, share knowledge, and access
+            helpful resources. Stay updated on new updates and collective
+            insights.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+13:T12c6,'use client';
+import {
+  motion,
+  AnimatePresence,
+  Transition,
+  Variants,
+  Variant,
+  MotionConfig,
+} from 'motion/react';
+import { cn } from '@/lib/utils';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+export type AccordionContextType = {
+  expandedValue: React.Key | null;
+  toggleItem: (value: React.Key) => void;
+  variants?: { expanded: Variant; collapsed: Variant };
+};
+
+const AccordionContext = createContext<AccordionContextType | undefined>(
+  undefined
+);
+
+function useAccordion() {
+  const context = useContext(AccordionContext);
+  if (!context) {
+    throw new Error('useAccordion must be used within an AccordionProvider');
+  }
+  return context;
+}
+
+export type AccordionProviderProps = {
+  children: ReactNode;
+  variants?: { expanded: Variant; collapsed: Variant };
+  expandedValue?: React.Key | null;
+  onValueChange?: (value: React.Key | null) => void;
+};
+
+function AccordionProvider({
+  children,
+  variants,
+  expandedValue: externalExpandedValue,
+  onValueChange,
+}: AccordionProviderProps) {
+  const [internalExpandedValue, setInternalExpandedValue] =
+    useState<React.Key | null>(null);
+
+  const expandedValue =
+    externalExpandedValue !== undefined
+      ? externalExpandedValue
+      : internalExpandedValue;
+
+  const toggleItem = (value: React.Key) => {
+    const newValue = expandedValue === value ? null : value;
+    if (onValueChange) {
+      onValueChange(newValue);
+    } else {
+      setInternalExpandedValue(newValue);
+    }
+  };
+
+  return (
+    <AccordionContext.Provider value={{ expandedValue, toggleItem, variants }}>
+      {children}
+    </AccordionContext.Provider>
+  );
+}
+
+export type AccordionProps = {
+  children: ReactNode;
+  className?: string;
+  transition?: Transition;
+  variants?: { expanded: Variant; collapsed: Variant };
+  expandedValue?: React.Key | null;
+  onValueChange?: (value: React.Key | null) => void;
+};
+
+function Accordion({
+  children,
+  className,
+  transition,
+  variants,
+  expandedValue,
+  onValueChange,
+}: AccordionProps) {
+  return (
+    <MotionConfig transition={transition}>
+      <div className={cn('relative', className)} aria-orientation='vertical'>
+        <AccordionProvider
+          variants={variants}
+          expandedValue={expandedValue}
+          onValueChange={onValueChange}
+        >
+          {children}
+        </AccordionProvider>
+      </div>
+    </MotionConfig>
+  );
+}
+
+export type AccordionItemProps = {
+  value: React.Key;
+  children: ReactNode;
+  className?: string;
+};
+
+function AccordionItem({ value, children, className }: AccordionItemProps) {
+  const { expandedValue } = useAccordion();
+  const isExpanded = value === expandedValue;
+
+  return (
+    <div
+      className={cn('overflow-hidden', className)}
+      {...(isExpanded ? { 'data-expanded': '' } : {'data-closed': ''})}
+    >
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, {
+            ...child.props,
+            value,
+            expanded: isExpanded,
+          });
+        }
+        return child;
+      })}
+    </div>
+  );
+}
+
+export type AccordionTriggerProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+function AccordionTrigger({
+  children,
+  className,
+  ...props
+}: AccordionTriggerProps) {
+  const { toggleItem, expandedValue } = useAccordion();
+  const value = (props as { value?: React.Key }).value;
+  const isExpanded = value === expandedValue;
+
+  return (
+    <button
+      onClick={() => value !== undefined && toggleItem(value)}
+      aria-expanded={isExpanded}
+      type='button'
+      className={cn('group', className)}
+      {...(isExpanded ? { 'data-expanded': '' } : {'data-closed': ''})}
+    >
+      {children}
+    </button>
+  );
+}
+
+export type AccordionContentProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+function AccordionContent({
+  children,
+  className,
+  ...props
+}: AccordionContentProps) {
+  const { expandedValue, variants } = useAccordion();
+  const value = (props as { value?: React.Key }).value;
+  const isExpanded = value === expandedValue;
+
+  const BASE_VARIANTS: Variants = {
+    expanded: { height: 'auto', opacity: 1 },
+    collapsed: { height: 0, opacity: 0 },
+  };
+
+  const combinedVariants = {
+    expanded: { ...BASE_VARIANTS.expanded, ...variants?.expanded },
+    collapsed: { ...BASE_VARIANTS.collapsed, ...variants?.collapsed },
+  };
+
+  return (
+    <AnimatePresence initial={false}>
+      {isExpanded && (
+        <motion.div
+          initial='collapsed'
+          animate='expanded'
+          exit='collapsed'
+          variants={combinedVariants}
+          className={className}
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+0:["rEy1L9vs2e9UG9z8P-1-5",[[["",{"children":["docs",{"children":["accordion",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",{"children":["docs",{"children":["accordion",{"children":["__PAGE__",{},[["$L1",[["$","h1",null,{"id":"accordion","data-heading":"1","children":"Accordion"}],"\n",["$","p",null,{"children":"A vertically stacked set of collapsible containers allowing users to toggle content visibility. Customize the animation effects with variants and transitions for expanding/collapsing the sections."}],"\n",["$","h2",null,{"id":"examples","data-heading":"2","children":"Examples"}],"\n",["$","h3",null,{"id":"accordion-basic","data-heading":"3","children":"Accordion Basic"}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","$L7",null,{"className":"flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700","children":[["$","$L8",null,{"value":"getting-started","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":"Getting Started"}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Discover the fundamental concepts of Motion-Primitives. This section guides you through the installation process and provides an overview of how to integrate these components into your projects. Learn about the core functionalities and how to set up your first animation effectively."}]}]]}],["$","$L8",null,{"value":"animation-properties","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":"Animation Properties"}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Explore the comprehensive range of animation properties available in Motion-Primitives. Understand how to manipulate timing, easing, and delays to create smooth, dynamic animations. This segment also covers the customization of animations to fit the flow and style of your web applications."}]}]]}],["$","$L8",null,{"value":"advanced-usage","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":"Advanced Usage"}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Dive deeper into advanced techniques and features of Motion-Primitives. Learn about chaining animations, creating complex sequences, and utilizing motion sensors for interactive animations. Gain insights on how to leverage these advanced features to enhance user experience and engagement."}]}]]}],["$","$L8",null,{"value":"community-and-support","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":"Community and Support"}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Engage with the Motion-Primitives community to gain additional support and insight. Find out how to participate in discussions, contribute to the project, and access a wealth of shared knowledge and resources. Learn about upcoming features, best practices, and how to get help with your specific use cases."}]}]]}]]}],"hasReTrigger":"$undefined","className":"min-h-0 py-24 lg:px-32 px-8","filePath":"app/docs/accordion/accordion-basic.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lb",null,{"code":"$c","children":"$Ld"}]}]]}]}],"\n",["$","h3",null,{"id":"accordion-with-icons","data-heading":"3","children":"Accordion with icons"}],"\n",["$","p",null,{"children":["You can control transformations on elements inside ",["$","code",null,{"children":"AccordionTrigger"}]," using ",["$","code",null,{"children":"group-data-[expanded]:...."}],".\nHere, we apply ",["$","code",null,{"children":"-rotate-180"}]," to rotate the icon 180 degrees when its associated section is expanded."]}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","$L7",null,{"className":"flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700","transition":{"duration":0.2,"ease":"easeInOut"},"children":[["$","$L8",null,{"value":"getting-started","className":"py-2","children":[["$","$L9",null,{"className":"w-full text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"children":"Getting Started"}],["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-up h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50","children":[["$","path","153udz",{"d":"m18 15-6-6-6 6"}],"$undefined"]}]]}]}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Discover the fundamental concepts of Motion-Primitives. This section guides you through the installation process and provides an overview of how to integrate these components into your projects. Learn about the core functionalities and how to set up your first animation effectively."}]}]]}],["$","$L8",null,{"value":"animation-properties","className":"py-2","children":[["$","$L9",null,{"className":"w-full text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"children":"Animation Properties"}],["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-up h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50","children":[["$","path","153udz",{"d":"m18 15-6-6-6 6"}],"$undefined"]}]]}]}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Explore the comprehensive range of animation properties available in Motion-Primitives. Understand how to manipulate timing, easing, and delays to create smooth, dynamic animations. This segment also covers the customization of animations to fit the flow and style of your web applications."}]}]]}],["$","$L8",null,{"value":"advanced-usage","className":"py-2","children":[["$","$L9",null,{"className":"w-full text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"children":"Advanced Usage"}],["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-up h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50","children":[["$","path","153udz",{"d":"m18 15-6-6-6 6"}],"$undefined"]}]]}]}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Dive deeper into advanced techniques and features of Motion-Primitives. Learn about chaining animations, creating complex sequences, and utilizing motion sensors for interactive animations. Gain insights on how to leverage these advanced features to enhance user experience and engagement."}]}]]}],["$","$L8",null,{"value":"community-and-support","className":"py-2","children":[["$","$L9",null,{"className":"w-full text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center justify-between","children":[["$","div",null,{"children":"Community and Support"}],["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-up h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50","children":[["$","path","153udz",{"d":"m18 15-6-6-6 6"}],"$undefined"]}]]}]}],["$","$La",null,{"children":["$","p",null,{"className":"text-zinc-500 dark:text-zinc-400","children":"Engage with the Motion-Primitives community to gain additional support and insight. Find out how to participate in discussions, contribute to the project, and access a wealth of shared knowledge and resources. Learn about upcoming features, best practices, and how to get help with your specific use cases."}]}]]}]]}],"hasReTrigger":"$undefined","className":"min-h-0 py-24 lg:px-32 px-8","filePath":"app/docs/accordion/accordion-icons.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lb",null,{"code":"$e","children":"$Lf"}]}]]}]}],"\n",["$","h3",null,{"id":"accordion-custom-variants","data-heading":"3","children":"Accordion custom variants"}],"\n",["$","div",null,{"className":"not-prose relative z-0 flex items-center justify-between pb-4","children":["$","$L2",null,{"defaultValue":"preview","className":"relative mr-auto w-full","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"value":"preview","children":"Preview"}],["$","$L4",null,{"value":"code","children":"Code"}]]}],["$","$L5",null,{"value":"preview","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$L6",null,{"component":["$","$L7",null,{"className":"flex w-full flex-col","transition":{"type":"spring","stiffness":120,"damping":20},"variants":{"expanded":{"opacity":1,"scale":1},"collapsed":{"opacity":0,"scale":0.7}},"children":[["$","$L8",null,{"value":"getting-started","className":"py-2","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-right h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50","children":[["$","path","mthhwq",{"d":"m9 18 6-6-6-6"}],"$undefined"]}],["$","div",null,{"className":"ml-2 text-zinc-950 dark:text-zinc-50","children":"How do I start with Motion-Primitives?"}]]}]}],["$","$La",null,{"className":"origin-left","children":["$","p",null,{"className":"pl-6 pr-2 text-zinc-500 dark:text-zinc-400","children":"Kick off your experience by setting up Motion-Primitives. This section covers the basics of installation and how to add animations to your projects. You’ll get familiar with the initial setup and the core features quickly."}]}]]}],["$","$L8",null,{"value":"animation-properties","className":"py-2","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-right h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50","children":[["$","path","mthhwq",{"d":"m9 18 6-6-6-6"}],"$undefined"]}],["$","div",null,{"className":"ml-2 text-zinc-950 dark:text-zinc-50","children":"What are the key animation properties?"}]]}]}],["$","$La",null,{"className":"origin-left","children":["$","p",null,{"className":"pl-6 pr-2 text-zinc-500 dark:text-zinc-400","children":"Discover a variety of properties to customize your animations. Learn to adjust timing, easing, and delays for smoother effects. This guide will help you tailor these settings to your app’s needs."}]}]]}],["$","$L8",null,{"value":"advanced-features","className":"py-2","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-right h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50","children":[["$","path","mthhwq",{"d":"m9 18 6-6-6-6"}],"$undefined"]}],["$","div",null,{"className":"ml-2 text-zinc-950 dark:text-zinc-50","children":"How do I use advanced features?"}]]}]}],["$","$La",null,{"className":"origin-left","children":["$","p",null,{"className":"pl-6 pr-2 text-zinc-500 dark:text-zinc-400","children":"Advance your skills by using more complex functions of Motion-Primitives. Explore how to link animations together, create intricate sequences, and interact with motion sensors for dynamic effects."}]}]]}],["$","$L8",null,{"value":"community-support","className":"py-2","children":[["$","$L9",null,{"className":"w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50","children":["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-right h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50","children":[["$","path","mthhwq",{"d":"m9 18 6-6-6-6"}],"$undefined"]}],["$","div",null,{"className":"ml-2 text-zinc-950 dark:text-zinc-50","children":"How do I engage with the community?"}]]}]}],["$","$La",null,{"className":"origin-left","children":["$","p",null,{"className":"pl-6 pr-2 text-zinc-500 dark:text-zinc-400","children":"Connect with the Motion-Primitives community for support and collaboration. Learn how to contribute, share knowledge, and access helpful resources. Stay updated on new updates and collective insights."}]}]]}]]}],"hasReTrigger":"$undefined","className":"min-h-0 py-24 lg:px-32 px-8","filePath":"app/docs/accordion/accordion-variant.tsx"}]}],["$","$L5",null,{"value":"code","className":"border border-zinc-200 dark:border-zinc-800","children":["$","$Lb",null,{"code":"$10","children":"$L11"}]}]]}]}],"\n",["$","h2",null,{"id":"installation","data-heading":"2","children":"Installation"}],"\n",["$","$L2",null,{"className":"relative mt-6 w-full","defaultValue":"cli","children":[["$","$L3",null,{"className":"","children":[["$","$L4",null,{"className":"","value":"cli","children":"CLI"}],["$","$L4",null,{"className":"","value":"manual","children":"Manual"}]]}],["$","$L5",null,{"className":"","value":"cli","children":["$","$L12",null,{"value":"accordion"}]}],["$","$L5",null,{"className":"","value":"manual","children":["$","div",null,{"className":"steps mb-12 ml-4 border-l pl-8 [counter-reset:step]","children":[["$","h3",null,{"id":"copy-and-paste-the-following-code-into-your-project","className":"step","data-heading":"3","children":"Copy and paste the following code into your project."}],["$","div",null,{"className":"not-prose max-h-[650px] overflow-auto overflow-x-auto overflow-y-hidden rounded-md text-sm dark:border dark:border-zinc-800","children":["$","$Lb",null,{"code":"$13","children":"$L14"}]}],["$","h3",null,{"id":"update-the-import-paths-to-match-your-project-setup","className":"step","data-heading":"3","children":"Update the import paths to match your project setup."}]]}]}]]}],"\n",["$","h2",null,{"id":"component-api","data-heading":"2","children":"Component API"}],"\n",["$","h3",null,{"id":"accordion","data-heading":"3","children":"Accordion"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The content elements of the accordion."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the accordion container."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"transition"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Transition"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Transition settings from motion for animation effects."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"variants"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":["$","code",null,{"children":"{ expanded: Variant; collapsed: Variant }"}]}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Custom variants for expanded and collapsed states."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"expandedValue"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"React.Key | null"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Controlled expanded value."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"onValueChange"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"(value: React.Key | null) => void"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Callback function when the expanded value changes."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"accordionitem","data-heading":"3","children":"AccordionItem"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"value"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"React.Key"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Unique identifier for controlling the accordion item state."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The content elements of the accordion item."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the accordion item container."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"accordiontrigger","data-heading":"3","children":"AccordionTrigger"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Content of the trigger, typically a string or formatted text."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the trigger element."}]]}]]}]]}]}],"\n",["$","h3",null,{"id":"accordioncontent","data-heading":"3","children":"AccordionContent"}],"\n",["$","div",null,{"className":"not-prose relative w-full table-auto overflow-auto rounded-lg border border-zinc-200 text-sm dark:border-zinc-800","children":["$","table",null,{"className":"w-full","children":[["$","thead",null,{"className":"bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100","children":["$","tr",null,{"className":"h-10","children":[["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Prop"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Type"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Default"}],["$","th",null,{"className":"px-4 pb-0 text-left align-middle font-[450]","style":{"textAlign":"left"},"children":"Description"}]]}]}],["$","tbody",null,{"className":"divide-y divide-zinc-200 dark:divide-y dark:divide-zinc-600","children":[["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"children"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"ReactNode"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"The content displayed when the accordion item is expanded."}]]}],["$","tr",null,{"className":"h-10","children":[["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"className"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"string"}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"}}],["$","td",null,{"className":"px-4 py-2 text-left align-middle","style":{"textAlign":"left"},"children":"Optional CSS class for styling the content container."}]]}]]}]]}]}]],null],null],null]},[null,["$","$L15",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children","accordion","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L16",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","$L17",null,{"children":["$","$L15",null,{"parallelRouterKey":"children","segmentPath":["children","docs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L16",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}],"params":{}}]],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/94849942fe8d2ad5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/labs/references/motion-primitives/_next/static/css/33c512191cee463d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","$L18",null,{"async":true,"defer":true,"src":"/labs/references/motion-primitives/empty.js"}],["$","body",null,{"className":"__className_e46c09 __variable_3872bd bg-white font-sans antialiased dark:bg-zinc-950","children":["$","$L19",null,{"attribute":"class","children":["$","$L1a",null,{"children":["$","div",null,{"className":"isolate min-h-screen","children":["$","$L15",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L16",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]}]]}]],null],null],["$L1b",null]]]]
+1b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Accordion - Motion-Primitives"}],["$","meta","3",{"name":"description","content":"A vertically stacked set of collapsible containers allowing users to toggle content visibility. Customize the animation effects with variants and transitions for expanding/collapsing the sections. Built for React, Next.js, and Tailwind CSS."}],["$","meta","4",{"property":"og:title","content":"Accordion - Motion-Primitives"}],["$","meta","5",{"property":"og:description","content":"A vertically stacked set of collapsible containers allowing users to toggle content visibility. Customize the animation effects with variants and transitions for expanding/collapsing the sections. Built for React, Next.js, and Tailwind CSS."}],["$","meta","6",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","7",{"property":"og:image:width","content":"1200"}],["$","meta","8",{"property":"og:image:height","content":"630"}],["$","meta","9",{"property":"og:image","content":"http://localhost:3000/labs/references/motion-primitives/opengraph-image.jpg?9ca9b9247d6d0fe4"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Accordion - Motion-Primitives"}],["$","meta","12",{"name":"twitter:description","content":"A vertically stacked set of collapsible containers allowing users to toggle content visibility. Customize the animation effects with variants and transitions for expanding/collapsing the sections. Built for React, Next.js, and Tailwind CSS."}],["$","meta","13",{"name":"twitter:image:type","content":"image/jpeg"}],["$","meta","14",{"name":"twitter:image:width","content":"1200"}],["$","meta","15",{"name":"twitter:image:height","content":"630"}],["$","meta","16",{"name":"twitter:image","content":"http://localhost:3000/labs/references/motion-primitives/twitter-image.jpg?9ca9b9247d6d0fe4"}],["$","link","17",{"rel":"icon","href":"/labs/references/motion-primitives/icon.ico?71bbcdb60d31e7d3","type":"image/x-icon","sizes":"256x256"}],["$","meta","18",{"name":"next-size-adjust"}]]
+1:null
+1c:T3f6e,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Accordion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionTrigger</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/accordion'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> AccordionBasic</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">Accordion</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'getting-started'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          Getting Started</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Discover the fundamental concepts of Motion-Primitives. This section</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            guides you through the installation process and provides an overview</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            of how to integrate these components into your projects. Learn about</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            the core functionalities and how to set up your first animation</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            effectively.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'animation-properties'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          Animation Properties</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Explore the comprehensive range of animation properties available in</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Motion-Primitives. Understand how to manipulate timing, easing, and</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            delays to create smooth, dynamic animations. This segment also</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            covers the customization of animations to fit the flow and style of</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            your web applications.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'advanced-usage'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          Advanced Usage</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Dive deeper into advanced techniques and features of</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Motion-Primitives. Learn about chaining animations, creating complex</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            sequences, and utilizing motion sensors for interactive animations.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Gain insights on how to leverage these advanced features to enhance</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            user experience and engagement.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'community-and-support'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          Community and Support</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Engage with the Motion-Primitives community to gain additional</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            support and insight. Find out how to participate in discussions,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            contribute to the project, and access a wealth of shared knowledge</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            and resources. Learn about upcoming features, best practices, and</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            how to get help with your specific use cases.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">Accordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>d:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$1c"}}]}]
+1d:T5d91,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Accordion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionTrigger</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/accordion'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { ChevronUp } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'lucide-react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> AccordionIcons</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">Accordion</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex w-full flex-col divide-y divide-zinc-200 dark:divide-zinc-700'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      transition</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ duration</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.2</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> ease</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'easeInOut'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'getting-started'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center justify-between'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Getting Started&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronUp</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Discover the fundamental concepts of Motion-Primitives. This section</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            guides you through the installation process and provides an overview</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            of how to integrate these components into your projects. Learn about</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            the core functionalities and how to set up your first animation</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            effectively.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'animation-properties'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center justify-between'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Animation Properties&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronUp</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Explore the comprehensive range of animation properties available in</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Motion-Primitives. Understand how to manipulate timing, easing, and</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            delays to create smooth, dynamic animations. This segment also</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            covers the customization of animations to fit the flow and style of</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            your web applications.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'advanced-usage'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center justify-between'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Advanced Usage&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronUp</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Dive deeper into advanced techniques and features of</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Motion-Primitives. Learn about chaining animations, creating complex</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            sequences, and utilizing motion sensors for interactive animations.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Gain insights on how to leverage these advanced features to enhance</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            user experience and engagement.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'community-and-support'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center justify-between'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">>Community and Support&#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronUp</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Engage with the Motion-Primitives community to gain additional</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            support and insight. Find out how to participate in discussions,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            contribute to the project, and access a wealth of shared knowledge</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            and resources. Learn about upcoming features, best practices, and</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            how to get help with your specific use cases.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">Accordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>f:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$1d"}}]}]
+1e:T6d75,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Accordion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionItem</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionTrigger</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AccordionContent</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/components/core/accordion'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { ChevronRight } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'lucide-react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> function</span><span style="color:var(--shiki-token-function)"> AccordionVariant</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">Accordion</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex w-full flex-col'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      transition</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ type</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'spring'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> stiffness</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 120</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> damping</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 20</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      variants</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          scale</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          scale</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0.7</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      }}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'getting-started'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronRight</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'ml-2 text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              How do I start with Motion-Primitives?</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'origin-left'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'pl-6 pr-2 text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Kick off your experience by setting up Motion-Primitives. This</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            section covers the basics of installation and how to add animations</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            to your projects. You’ll get familiar with the initial setup and the</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            core features quickly.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'animation-properties'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronRight</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'ml-2 text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              What are the key animation properties?</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'origin-left'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'pl-6 pr-2 text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Discover a variety of properties to customize your animations. Learn</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            to adjust timing, easing, and delays for smoother effects. This</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            guide will help you tailor these settings to your app’s needs.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'advanced-features'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronRight</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'ml-2 text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              How do I use advanced features?</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'origin-left'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'pl-6 pr-2 text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Advance your skills by using more complex functions of</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Motion-Primitives. Explore how to link animations together, create</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            intricate sequences, and interact with motion sensors for dynamic</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            effects.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'community-support'</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'py-2'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'flex items-center'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-constant)">ChevronRight</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)"> /></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'ml-2 text-zinc-950 dark:text-zinc-50'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">              How do I engage with the community?</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'origin-left'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'pl-6 pr-2 text-zinc-500 dark:text-zinc-400'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            Connect with the Motion-Primitives community for support and</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            collaboration. Learn how to contribute, share knowledge, and access</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            helpful resources. Stay updated on new updates and collective</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            insights.</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">Accordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span></code></pre>11:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$1e"}}]}]
+1f:Tc95b,<pre class="shiki noir" style="background-color:var(--shiki-background, #18181b);color:var(--shiki-foreground, #B1B1B1)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token-string-expression)">'use client'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  motion</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  AnimatePresence</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Transition</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Variants</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  Variant</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  MotionConfig</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">} </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'motion/react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { cn } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> '@/lib/utils'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-foreground, #B1B1B1)"> React</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { createContext</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> useContext</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> useState</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> ReactNode } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-token-string-expression)"> 'react'</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionContextType</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  expandedValue</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  toggleItem</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  variants</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)">; collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)"> };</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-token-constant)"> AccordionContext</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> createContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">AccordionContextType</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span></span>
+<span class="line"><span style="color:var(--shiki-token-constant)">  undefined</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> useAccordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> context</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-token-function)"> useContext</span><span style="color:var(--shiki-foreground, #B1B1B1)">(AccordionContext);</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-keyword)">!</span><span style="color:var(--shiki-foreground, #B1B1B1)">context) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    throw</span><span style="color:var(--shiki-token-keyword)"> new</span><span style="color:var(--shiki-token-function)"> Error</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'useAccordion must be used within an AccordionProvider'</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  }</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> context;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionProviderProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  variants</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)">; collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)"> };</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  expandedValue</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  onValueChange</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> AccordionProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  variants</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  expandedValue: externalExpandedValue</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  onValueChange</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> AccordionProviderProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> [</span><span style="color:var(--shiki-token-constant)">internalExpandedValue</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> setInternalExpandedValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">] </span><span style="color:var(--shiki-token-keyword)">=</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">    useState</span><span style="color:var(--shiki-foreground, #B1B1B1)">&#x3C;</span><span style="color:var(--shiki-token-function)">React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">>(</span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-foreground, #B1B1B1)">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> expandedValue</span><span style="color:var(--shiki-token-keyword)"> =</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    externalExpandedValue </span><span style="color:var(--shiki-token-keyword)">!==</span><span style="color:var(--shiki-token-constant)"> undefined</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      ?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> externalExpandedValue</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">      :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> internalExpandedValue;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-function)"> toggleItem</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    const</span><span style="color:var(--shiki-token-constant)"> newValue</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> expandedValue </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-token-keyword)"> :</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">    if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (onValueChange) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onValueChange</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newValue);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    } </span><span style="color:var(--shiki-token-keyword)">else</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      setInternalExpandedValue</span><span style="color:var(--shiki-foreground, #B1B1B1)">(newValue);</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    }</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionContext.Provider</span><span style="color:var(--shiki-token-function)"> value</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{{ expandedValue</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> toggleItem</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> variants }}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionContext.Provider</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  transition</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> Transition</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  variants</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)">; collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variant</span><span style="color:var(--shiki-foreground, #B1B1B1)"> };</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  expandedValue</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">  onValueChange</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-token-keyword)"> |</span><span style="color:var(--shiki-token-constant)"> null</span><span style="color:var(--shiki-foreground, #B1B1B1)">) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-token-constant)"> void</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> Accordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  transition</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  variants</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  expandedValue</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  onValueChange</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> AccordionProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">MotionConfig</span><span style="color:var(--shiki-token-function)"> transition</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{transition}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-token-function)"> className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'relative'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className)} </span><span style="color:var(--shiki-token-function)">aria-orientation</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'vertical'</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">AccordionProvider</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          variants</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{variants}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          expandedValue</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{expandedValue}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          onValueChange</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{onValueChange}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">AccordionProvider</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">MotionConfig</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionItemProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  value</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> AccordionItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">({ value</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className }</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> AccordionItemProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">expandedValue</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useAccordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isExpanded</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> expandedValue;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'overflow-hidden'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className)}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {</span><span style="color:var(--shiki-token-keyword)">...</span><span style="color:var(--shiki-foreground, #B1B1B1)">(isExpanded </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-string-expression)">'data-expanded'</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> ''</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span><span style="color:var(--shiki-token-string-expression)">'data-closed'</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> ''</span><span style="color:var(--shiki-foreground, #B1B1B1)">})}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {</span><span style="color:var(--shiki-token-constant)">React</span><span style="color:var(--shiki-token-function)">.</span><span style="color:var(--shiki-token-constant)">Children</span><span style="color:var(--shiki-token-function)">.map</span><span style="color:var(--shiki-foreground, #B1B1B1)">(children</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (child) </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">        if</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span><span style="color:var(--shiki-token-constant)">React</span><span style="color:var(--shiki-token-function)">.isValidElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">(child)) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">          return</span><span style="color:var(--shiki-token-constant)"> React</span><span style="color:var(--shiki-token-function)">.cloneElement</span><span style="color:var(--shiki-foreground, #B1B1B1)">(child</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">            ...</span><span style="color:var(--shiki-token-constant)">child</span><span style="color:var(--shiki-foreground, #B1B1B1)">.props</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            value</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">            expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> isExpanded</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          });</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        }</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">        return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> child;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      })}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionTriggerProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> AccordionTrigger</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  ...</span><span style="color:var(--shiki-foreground, #B1B1B1)">props</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> AccordionTriggerProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">toggleItem</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> expandedValue</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useAccordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> value</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (props </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { value</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }).value;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isExpanded</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> expandedValue;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-string-expression)">button</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      onClick</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{() </span><span style="color:var(--shiki-token-keyword)">=></span><span style="color:var(--shiki-foreground, #B1B1B1)"> value </span><span style="color:var(--shiki-token-keyword)">!==</span><span style="color:var(--shiki-token-constant)"> undefined</span><span style="color:var(--shiki-token-keyword)"> &#x26;&#x26;</span><span style="color:var(--shiki-token-function)"> toggleItem</span><span style="color:var(--shiki-foreground, #B1B1B1)">(value)}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      aria-expanded</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{isExpanded}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'button'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">      className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-function)">cn</span><span style="color:var(--shiki-foreground, #B1B1B1)">(</span><span style="color:var(--shiki-token-string-expression)">'group'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> className)}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {</span><span style="color:var(--shiki-token-keyword)">...</span><span style="color:var(--shiki-foreground, #B1B1B1)">(isExpanded </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-string-expression)">'data-expanded'</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> ''</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span><span style="color:var(--shiki-token-string-expression)">'data-closed'</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> ''</span><span style="color:var(--shiki-foreground, #B1B1B1)">})}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-string-expression)">button</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-token-keyword)"> type</span><span style="color:var(--shiki-token-function)"> AccordionContentProps</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> ReactNode</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-constant)"> string</span><span style="color:var(--shiki-foreground, #B1B1B1)">;</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-token-function)"> AccordionContent</span><span style="color:var(--shiki-foreground, #B1B1B1)">({</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  children</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  className</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  ...</span><span style="color:var(--shiki-foreground, #B1B1B1)">props</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> AccordionContentProps</span><span style="color:var(--shiki-foreground, #B1B1B1)">) {</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-constant)">expandedValue</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-constant)"> variants</span><span style="color:var(--shiki-foreground, #B1B1B1)"> } </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-function)"> useAccordion</span><span style="color:var(--shiki-foreground, #B1B1B1)">();</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> value</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (props </span><span style="color:var(--shiki-token-keyword)">as</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { value</span><span style="color:var(--shiki-token-keyword)">?:</span><span style="color:var(--shiki-token-function)"> React</span><span style="color:var(--shiki-foreground, #B1B1B1)">.</span><span style="color:var(--shiki-token-function)">Key</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }).value;</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> isExpanded</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> value </span><span style="color:var(--shiki-token-keyword)">===</span><span style="color:var(--shiki-foreground, #B1B1B1)"> expandedValue;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> BASE_VARIANTS</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-function)"> Variants</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { height</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-string-expression)"> 'auto'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 1</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { height</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> opacity</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-token-constant)"> 0</span><span style="color:var(--shiki-foreground, #B1B1B1)"> }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  const</span><span style="color:var(--shiki-token-constant)"> combinedVariants</span><span style="color:var(--shiki-token-keyword)"> =</span><span style="color:var(--shiki-foreground, #B1B1B1)"> {</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    expanded</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-keyword)">...</span><span style="color:var(--shiki-token-constant)">BASE_VARIANTS</span><span style="color:var(--shiki-foreground, #B1B1B1)">.expanded</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> ...</span><span style="color:var(--shiki-token-constant)">variants</span><span style="color:var(--shiki-foreground, #B1B1B1)">?.expanded }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    collapsed</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { </span><span style="color:var(--shiki-token-keyword)">...</span><span style="color:var(--shiki-token-constant)">BASE_VARIANTS</span><span style="color:var(--shiki-foreground, #B1B1B1)">.collapsed</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-token-keyword)"> ...</span><span style="color:var(--shiki-token-constant)">variants</span><span style="color:var(--shiki-foreground, #B1B1B1)">?.collapsed }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">  return</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;</span><span style="color:var(--shiki-token-constant)">AnimatePresence</span><span style="color:var(--shiki-token-function)"> initial</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{</span><span style="color:var(--shiki-token-constant)">false</span><span style="color:var(--shiki-foreground, #B1B1B1)">}></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      {isExpanded </span><span style="color:var(--shiki-token-keyword)">&#x26;&#x26;</span><span style="color:var(--shiki-foreground, #B1B1B1)"> (</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;</span><span style="color:var(--shiki-token-constant)">motion.div</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          initial</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'collapsed'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          animate</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'expanded'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          exit</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">'collapsed'</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          variants</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{combinedVariants}</span></span>
+<span class="line"><span style="color:var(--shiki-token-function)">          className</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-foreground, #B1B1B1)">{className}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        ></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">          {children}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">        &#x3C;/</span><span style="color:var(--shiki-token-constant)">motion.div</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">      )}</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">    &#x3C;/</span><span style="color:var(--shiki-token-constant)">AnimatePresence</span><span style="color:var(--shiki-foreground, #B1B1B1)">></span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">  );</span></span>
+<span class="line"><span style="color:var(--shiki-foreground, #B1B1B1)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-foreground, #B1B1B1)"> { Accordion</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> AccordionItem</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> AccordionTrigger</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-foreground, #B1B1B1)"> AccordionContent };</span></span>
+<span class="line"></span></code></pre>14:["$","div",null,{"className":"font-mono","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$1f"}}]}]

@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "policy": "Replace externally hosted demo media with a neutral local SVG and external analytics with a no-op local script; outbound navigation links are not rewritten.",
+  "replacement_assets": {
+    "media": "media-placeholder.svg",
+    "analytics": "empty.js"
+  },
+  "replacements": {
+    "cosmos-demo-media": 253,
+    "spotify-demo-media": 222,
+    "pinterest-demo-media": 29,
+    "onedollarstats-analytics": 114
+  },
+  "total_replacements": 618,
+  "touched_files": 90
+}
