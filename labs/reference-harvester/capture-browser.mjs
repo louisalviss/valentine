@@ -16,6 +16,7 @@ if (target.browser_capture_enabled === false) {
 }
 
 const captureUrl = target.capture_url || target.source_url;
+const deterministicVisual = target.deterministic_visual === true || target.baseline_kind === 'source-build-control';
 if (target.capture_url && !/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(target.capture_url)) {
   throw new Error('capture_url override is restricted to localhost source-build controls');
 }
@@ -45,6 +46,9 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage();
 page.setDefaultNavigationTimeout(30000);
 page.setDefaultTimeout(30000);
+if (deterministicVisual) {
+  await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
+}
 
 const responses = [];
 page.on('response', response => {
@@ -60,10 +64,46 @@ page.on('response', response => {
 
 async function settle(ms=1200){ await new Promise(resolve => setTimeout(resolve, ms)); }
 
+async function stabilizeVisualState(){
+  if (!deterministicVisual) return;
+  await page.evaluate(() => {
+    if (!document.getElementById('valentine-deterministic-visual')) {
+      const style = document.createElement('style');
+      style.id = 'valentine-deterministic-visual';
+      style.textContent = `
+        *, *::before, *::after {
+          animation-delay: 0s !important;
+          animation-duration: 0.001s !important;
+          animation-iteration-count: 1 !important;
+          transition-delay: 0s !important;
+          transition-duration: 0s !important;
+          scroll-behavior: auto !important;
+          caret-color: transparent !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    for (const animation of document.getAnimations({ subtree: true })) {
+      try {
+        const timing = animation.effect?.getComputedTiming?.();
+        const endTime = Number(timing?.endTime);
+        if (Number.isFinite(endTime)) {
+          animation.currentTime = Math.max(0, endTime);
+        } else {
+          animation.currentTime = 0;
+        }
+        animation.pause();
+      } catch {}
+    }
+  });
+  await settle(80);
+}
+
 async function navigate(){
   await page.goto(captureUrl, { waitUntil:'domcontentloaded', timeout:30000 });
   try { await page.waitForNetworkIdle({ idleTime:800, timeout:7000 }); } catch {}
   await settle(1200);
+  await stabilizeVisualState();
 }
 
 async function captureViewport(width, height, label, scrollRatios=[0]) {
@@ -82,6 +122,7 @@ async function captureViewport(width, height, label, scrollRatios=[0]) {
       scrollTo(0, Math.round(max*r));
     }, ratio);
     await settle(450);
+    await stabilizeVisualState();
     const suffix = ratio===0 ? 'initial' : `scroll-${Math.round(ratio*100)}`;
     const file = `${label}-${suffix}.png`;
     await page.screenshot({ path: path.join(evidenceDir, file), fullPage: false });
@@ -181,6 +222,7 @@ try {
     version:'1.0', reference_id:target.id, source_url:target.source_url,
     capture_url:target.capture_url||null,
     baseline_kind:target.baseline_kind||'live-browser',
+    visual_state_policy:deterministicVisual?'deterministic-static':'runtime',
     discovery_source:target.discovery_source||null,
     captured_at:new Date().toISOString(), browser:'system-chrome+puppeteer-core',
     final_url:structural.final_url, title:structural.title,
@@ -194,8 +236,9 @@ try {
   const manifest = {
     version:'1.0',
     reference_id:target.id,
-    source:{url:target.source_url,discovery_source:target.discovery_source||null,captured_at:capture.captured_at,baseline_kind:capture.baseline_kind},
+    source:{url:target.source_url,discovery_source:target.discovery_source||null,captured_at:capture.captured_at,baseline_kind:capture.baseline_kind,visual_state_policy:capture.visual_state_policy},
     capture:{
+      visual_state_policy:capture.visual_state_policy,
       viewports:[desktop,tablet,mobile].map(v=>({width:v.width,height:v.height})),
       states:allStates.map(s=>({...s,original_screenshot:s.screenshot,reconstruction_screenshot:null})),
       dom:{path:'evidence/hydrated.html',sha256:htmlHash,element_count:structural.elements.length},
@@ -217,7 +260,7 @@ try {
   fs.cpSync(evidenceDir, finalEvidenceDir, { recursive:true });
   fs.copyFileSync(path.join(tempOutDir,'capture-manifest.json'), path.join(finalOutDir,'capture-manifest.json'));
 
-  console.log(`REFERENCE_BROWSER_CAPTURE_OK id=${target.id} baseline=${capture.baseline_kind} elements=${structural.elements.length} states=${allStates.length} responses=${responses.length}`);
+  console.log(`REFERENCE_BROWSER_CAPTURE_OK id=${target.id} baseline=${capture.baseline_kind} visual=${capture.visual_state_policy} elements=${structural.elements.length} states=${allStates.length} responses=${responses.length}`);
 } finally {
   await browser.close();
   fs.rmSync(tempOutDir, { recursive:true, force:true });
