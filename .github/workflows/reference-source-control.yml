@@ -1,0 +1,208 @@
+name: Reference Source Control
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/targets/motion-primitives.json'
+      - 'labs/reference-harvester/capture-browser.mjs'
+      - 'labs/reference-harvester/capture-local.mjs'
+      - 'labs/reference-harvester/measure-fidelity.py'
+      - '.github/workflows/reference-source-control.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  motion-primitives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout Valentine
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install capture and fidelity runtime
+        run: |
+          set -euo pipefail
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Checkout exact MIT upstream
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/motion-primitives
+          git clone --no-checkout https://github.com/ibelick/motion-primitives.git /tmp/motion-primitives
+          cd /tmp/motion-primitives
+          git checkout --detach 92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d
+          test "$(git rev-parse HEAD)" = '92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d'
+          grep -q '^MIT License$' LICENCE.md
+          npm ci
+
+      - name: Build exact upstream production baseline
+        run: |
+          set -euo pipefail
+          cd /tmp/motion-primitives
+          npm run build
+          npm run start -- -p 4180 >/tmp/motion-primitives-source.log 2>&1 &
+          echo $! >/tmp/motion-primitives-source.pid
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:4180/ >/tmp/motion-primitives-source.html; then
+              break
+            fi
+            sleep 1
+          done
+          grep -q 'motion-primitives' /tmp/motion-primitives-source.html
+
+      - name: Capture deterministic source-build baseline
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          cat >/tmp/motion-primitives-capture.json <<'JSON'
+          {
+            "id":"motion-primitives",
+            "source_url":"https://motion-primitives.com/",
+            "capture_url":"http://127.0.0.1:4180/",
+            "baseline_kind":"source-build-control",
+            "discovery_source":"open-source-validation",
+            "reconstruction_mode":"source-import",
+            "min_visible_elements":20,
+            "rights_status":"mixed",
+            "provenance_code":"Exact upstream source build from ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d under MIT; live-site identity is not claimed because Vercel blocks GitHub-runner browser capture.",
+            "provenance_assets":"Repository software is MIT; remote demo media remains externally referenced and is not assumed to inherit the software license."
+          }
+          JSON
+          node labs/reference-harvester/capture-browser.mjs /tmp/motion-primitives-capture.json
+          kill "$(cat /tmp/motion-primitives-source.pid)" || true
+
+      - name: Build nested static source import
+        run: |
+          set -euo pipefail
+          cd /tmp/motion-primitives
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('next.config.mjs')
+          s=p.read_text()
+          marker='const nextConfig = {'
+          assert marker in s
+          replacement="""const nextConfig = {
+            output: 'export',
+            basePath: '/labs/references/motion-primitives',
+            assetPrefix: '/labs/references/motion-primitives',
+            trailingSlash: true,
+            images: { unoptimized: true },"""
+          p.write_text(s.replace(marker,replacement,1))
+          PY
+          rm -rf .next out
+          npm run build
+          test -s out/index.html
+
+          REF="$GITHUB_WORKSPACE/labs/references/motion-primitives"
+          mkdir -p "$REF"
+          find "$REF" -mindepth 1 -maxdepth 1 ! -name evidence ! -name capture-manifest.json -exec rm -rf {} +
+          cp -a out/. "$REF"/
+          cp LICENCE.md "$REF/UPSTREAM-LICENCE.md"
+          cat >"$REF/SOURCE.json" <<'JSON'
+          {
+            "repository":"https://github.com/ibelick/motion-primitives",
+            "commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d",
+            "license":"MIT",
+            "import_mode":"source-import-static-export",
+            "base_path":"/labs/references/motion-primitives",
+            "note":"Static output built from the exact pinned upstream source. Remote demo media remains external and separately classified."
+          }
+          JSON
+
+      - name: Capture nested import and measure visual fidelity
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          python3 -m http.server 4173 --directory . >/tmp/valentine-reference-server.log 2>&1 &
+          echo $! >/tmp/valentine-reference-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/labs/references/motion-primitives/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node labs/reference-harvester/capture-local.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-fidelity.py motion-primitives
+          kill "$(cat /tmp/valentine-reference-server.pid)" || true
+
+      - name: Finalize measured candidate metadata
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/motion-primitives')
+          report=json.loads((ref/'evidence/fidelity.json').read_text())
+          manifest=json.loads((ref/'capture-manifest.json').read_text())
+          score=float(report['minimum_score'])
+          status=report['status']
+          manifest['reconstruction']={
+            'mode':'source-import',
+            'local_path':'labs/references/motion-primitives/',
+            'essential_origin_dependency':True,
+            'notes':'Static export built from exact MIT upstream SHA. Remote demo media remains externally referenced, so candidate is not self-contained.'
+          }
+          manifest['fidelity']['visual']={
+            'score':score,
+            'status':status,
+            'method':report['method'],
+            'exceptions':[]
+          }
+          manifest['fidelity']['motion_interaction']={
+            'status':'pending',
+            'states_verified':[],
+            'notes':'Visual source-import control measured; independent motion/interaction verification still required.'
+          }
+          manifest['provenance']={
+            'code':'Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT.',
+            'assets':'Remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.',
+            'rights_status':'mixed'
+          }
+          (ref/'capture-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          item['status']='reconstructed' if status=='pass' else ('reconstruction-review' if status=='review' else 'reconstruction-fail')
+          item['live']='../labs/references/motion-primitives/'
+          item['preview']='../labs/references/motion-primitives/'
+          item['essential_origin_dependency']=True
+          item['fidelity']['visual']={'score':score,'status':status}
+          item['fidelity']['motion_interaction']={'status':'pending'}
+          item['provenance']={'rights_status':'mixed','note':'Code is MIT at pinned upstream SHA; remote demo media remains separately licensed/unknown.'}
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          print('SOURCE_CONTROL_RESULT',status,score)
+          PY
+          node labs/reference-harvester/validate.mjs
+
+      - name: Commit source-import control output
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add labs/references/motion-primitives labs/reference-harvester/reference-registry.json
+          if git diff --cached --quiet; then
+            echo 'NO_SOURCE_CONTROL_DIFF'
+            exit 0
+          fi
+          git commit -m 'test: persist measured source-import control'
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'SOURCE_CONTROL_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'SOURCE_CONTROL_PUSH_FAILED' >&2
+          exit 1

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import crypto from 'node:crypto';
@@ -9,6 +10,15 @@ if (!targetFile) throw new Error('usage: node capture-browser.mjs <target.json>'
 const target = JSON.parse(fs.readFileSync(targetFile, 'utf8'));
 if (!target.id || !/^[a-z0-9][a-z0-9-]*$/.test(target.id)) throw new Error('target.id must be lowercase kebab-case');
 if (!/^https:\/\//.test(target.source_url || '')) throw new Error('target.source_url must be https');
+if (target.browser_capture_enabled === false) {
+  console.log(`REFERENCE_BROWSER_CAPTURE_SKIPPED id=${target.id} reason=disabled`);
+  process.exit(0);
+}
+
+const captureUrl = target.capture_url || target.source_url;
+if (target.capture_url && !/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(target.capture_url)) {
+  throw new Error('capture_url override is restricted to localhost source-build controls');
+}
 
 function which(names) {
   for (const name of names) {
@@ -21,8 +31,9 @@ const chrome = process.env.CHROME_BIN || which(['google-chrome', 'chromium', 'ch
 if (!chrome) throw new Error('Chrome/Chromium not found');
 
 const root = process.cwd();
-const outDir = path.join(root, 'labs', 'references', target.id);
-const evidenceDir = path.join(outDir, 'evidence');
+const finalOutDir = path.join(root, 'labs', 'references', target.id);
+const tempOutDir = fs.mkdtempSync(path.join(os.tmpdir(), `valentine-capture-${target.id}-`));
+const evidenceDir = path.join(tempOutDir, 'evidence');
 fs.mkdirSync(evidenceDir, { recursive: true });
 
 const browser = await puppeteer.launch({
@@ -50,9 +61,7 @@ page.on('response', response => {
 async function settle(ms=1200){ await new Promise(resolve => setTimeout(resolve, ms)); }
 
 async function navigate(){
-  // DOM readiness is authoritative. Portfolio/video sites may keep media requests
-  // active indefinitely, so network-idle is a bounded grace period only.
-  await page.goto(target.source_url, { waitUntil:'domcontentloaded', timeout:30000 });
+  await page.goto(captureUrl, { waitUntil:'domcontentloaded', timeout:30000 });
   try { await page.waitForNetworkIdle({ idleTime:800, timeout:7000 }); } catch {}
   await settle(1200);
 }
@@ -81,102 +90,135 @@ async function captureViewport(width, height, label, scrollRatios=[0]) {
   return { width, height, label, dimensions, states:shots };
 }
 
-const desktop = await captureViewport(1440, 900, 'desktop', [0,.25,.5,.75]);
-const tablet = await captureViewport(768, 1024, 'tablet', [0,.5]);
-const mobile = await captureViewport(390, 844, 'mobile', [0,.5]);
+try {
+  const desktop = await captureViewport(1440, 900, 'desktop', [0,.25,.5,.75]);
+  const tablet = await captureViewport(768, 1024, 'tablet', [0,.5]);
+  const mobile = await captureViewport(390, 844, 'mobile', [0,.5]);
 
-// Return to desktop for structural evidence.
-await page.setViewport({ width:1440, height:900, deviceScaleFactor:1 });
-await navigate();
+  await page.setViewport({ width:1440, height:900, deviceScaleFactor:1 });
+  await navigate();
 
-const structural = await page.evaluate(() => {
-  const pickStyle = style => ({
-    display:style.display, position:style.position, overflow:style.overflow,
-    width:style.width, height:style.height,
-    margin:style.margin, padding:style.padding, gap:style.gap,
-    fontFamily:style.fontFamily, fontSize:style.fontSize, fontWeight:style.fontWeight,
-    lineHeight:style.lineHeight, letterSpacing:style.letterSpacing, textTransform:style.textTransform,
-    color:style.color, backgroundColor:style.backgroundColor, backgroundImage:style.backgroundImage,
-    border:style.border, borderRadius:style.borderRadius,
-    boxShadow:style.boxShadow, opacity:style.opacity, transform:style.transform,
-    zIndex:style.zIndex
-  });
-  const visible = el => {
-    const r=el.getBoundingClientRect();
-    const s=getComputedStyle(el);
-    return r.width>0 && r.height>0 && s.display!=='none' && s.visibility!=='hidden';
-  };
-  const elements = Array.from(document.querySelectorAll('body *')).filter(visible).slice(0,1800).map((el,index)=>{
-    const r=el.getBoundingClientRect();
+  const structural = await page.evaluate(() => {
+    const pickStyle = style => ({
+      display:style.display, position:style.position, overflow:style.overflow,
+      width:style.width, height:style.height,
+      margin:style.margin, padding:style.padding, gap:style.gap,
+      fontFamily:style.fontFamily, fontSize:style.fontSize, fontWeight:style.fontWeight,
+      lineHeight:style.lineHeight, letterSpacing:style.letterSpacing, textTransform:style.textTransform,
+      color:style.color, backgroundColor:style.backgroundColor, backgroundImage:style.backgroundImage,
+      border:style.border, borderRadius:style.borderRadius,
+      boxShadow:style.boxShadow, opacity:style.opacity, transform:style.transform,
+      zIndex:style.zIndex
+    });
+    const visible = el => {
+      const r=el.getBoundingClientRect();
+      const s=getComputedStyle(el);
+      return r.width>0 && r.height>0 && s.display!=='none' && s.visibility!=='hidden';
+    };
+    const elements = Array.from(document.querySelectorAll('body *')).filter(visible).slice(0,1800).map((el,index)=>{
+      const r=el.getBoundingClientRect();
+      return {
+        index,
+        tag:el.tagName.toLowerCase(), id:el.id||null,
+        className:typeof el.className==='string'?el.className.slice(0,240):null,
+        text:(el.childElementCount===0 ? (el.textContent||'').trim().replace(/\s+/g,' ').slice(0,220) : ''),
+        rect:{x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,right:r.right,bottom:r.bottom,left:r.left},
+        style:pickStyle(getComputedStyle(el))
+      };
+    });
+    const fonts = Array.from(document.fonts || []).map(f=>({family:f.family,style:f.style,weight:f.weight,stretch:f.stretch,status:f.status}));
+    const assets = [
+      ...Array.from(document.images).map(x=>({type:'image',src:x.currentSrc||x.src,width:x.naturalWidth,height:x.naturalHeight,alt:x.alt||''})),
+      ...Array.from(document.querySelectorAll('video')).map(x=>({type:'video',src:x.currentSrc||x.src,poster:x.poster||'',autoplay:x.autoplay,muted:x.muted,loop:x.loop})),
+      ...Array.from(document.querySelectorAll('source')).map(x=>({type:'source',src:x.src||'',media:x.media||'',mime:x.type||''}))
+    ];
+    const dependencies = Array.from(document.querySelectorAll('script[src],link[rel="stylesheet"][href]')).map(el=>({
+      type:el.tagName==='SCRIPT'?'script':'stylesheet', url:el.src||el.href
+    }));
+    const animations = document.getAnimations().slice(0,400).map((a,index)=>{
+      let timing={};
+      try { timing=a.effect?.getTiming?.()||{}; } catch {}
+      const animationTarget=a.effect?.target;
+      return {index,playState:a.playState,currentTime:a.currentTime,playbackRate:a.playbackRate,timing,target:animationTarget?{tag:animationTarget.tagName?.toLowerCase(),id:animationTarget.id||null,className:typeof animationTarget.className==='string'?animationTarget.className.slice(0,180):null}:null};
+    });
+    const resources = performance.getEntriesByType('resource').map(r=>({name:r.name,initiatorType:r.initiatorType,duration:r.duration,transferSize:r.transferSize,decodedBodySize:r.decodedBodySize}));
     return {
-      index,
-      tag:el.tagName.toLowerCase(), id:el.id||null,
-      className:typeof el.className==='string'?el.className.slice(0,240):null,
-      text:(el.childElementCount===0 ? (el.textContent||'').trim().replace(/\s+/g,' ').slice(0,220) : ''),
-      rect:{x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,right:r.right,bottom:r.bottom,left:r.left},
-      style:pickStyle(getComputedStyle(el))
+      title:document.title,
+      body_text:(document.body?.innerText||'').replace(/\s+/g,' ').trim().slice(0,4000),
+      final_url:location.href,
+      dimensions:{width:document.documentElement.scrollWidth,height:document.documentElement.scrollHeight,viewport_width:innerWidth,viewport_height:innerHeight},
+      elements, fonts, assets, dependencies, animations, resources,
+      links:Array.from(document.links).slice(0,1000).map(a=>({href:a.href,text:(a.textContent||'').trim().replace(/\s+/g,' ').slice(0,160)}))
     };
   });
-  const fonts = Array.from(document.fonts || []).map(f=>({family:f.family,style:f.style,weight:f.weight,stretch:f.stretch,status:f.status}));
-  const assets = [
-    ...Array.from(document.images).map(x=>({type:'image',src:x.currentSrc||x.src,width:x.naturalWidth,height:x.naturalHeight,alt:x.alt||''})),
-    ...Array.from(document.querySelectorAll('video')).map(x=>({type:'video',src:x.currentSrc||x.src,poster:x.poster||'',autoplay:x.autoplay,muted:x.muted,loop:x.loop})),
-    ...Array.from(document.querySelectorAll('source')).map(x=>({type:'source',src:x.src||'',media:x.media||'',mime:x.type||''}))
+
+  const challengeText = `${structural.title}\n${structural.body_text}`.toLowerCase();
+  const challengeSignals = [
+    'vercel security checkpoint',
+    'failed to verify your browser',
+    'checking your browser',
+    'security challenge',
+    'captcha',
+    'access denied',
+    'just a moment...'
   ];
-  const dependencies = Array.from(document.querySelectorAll('script[src],link[rel="stylesheet"][href]')).map(el=>({
-    type:el.tagName==='SCRIPT'?'script':'stylesheet', url:el.src||el.href
-  }));
-  const animations = document.getAnimations().slice(0,400).map((a,index)=>{
-    let timing={};
-    try { timing=a.effect?.getTiming?.()||{}; } catch {}
-    const animationTarget=a.effect?.target;
-    return {index,playState:a.playState,currentTime:a.currentTime,playbackRate:a.playbackRate,timing,target:animationTarget?{tag:animationTarget.tagName?.toLowerCase(),id:animationTarget.id||null,className:typeof animationTarget.className==='string'?animationTarget.className.slice(0,180):null}:null};
-  });
-  const resources = performance.getEntriesByType('resource').map(r=>({name:r.name,initiatorType:r.initiatorType,duration:r.duration,transferSize:r.transferSize,decodedBodySize:r.decodedBodySize}));
-  return {
-    title:document.title,
-    final_url:location.href,
-    dimensions:{width:document.documentElement.scrollWidth,height:document.documentElement.scrollHeight,viewport_width:innerWidth,viewport_height:innerHeight},
-    elements, fonts, assets, dependencies, animations, resources,
-    links:Array.from(document.links).slice(0,1000).map(a=>({href:a.href,text:(a.textContent||'').trim().replace(/\s+/g,' ').slice(0,160)}))
+  const challengeResource = responses.some(r => /\/\.well-known\/vercel\/security\/|challenge\./i.test(r.url));
+  if (challengeSignals.some(signal => challengeText.includes(signal)) || challengeResource) {
+    throw new Error(`REFERENCE_CAPTURE_REJECTED id=${target.id} reason=challenge-shell title=${JSON.stringify(structural.title)}`);
+  }
+
+  const minimumElements = Number(target.min_visible_elements ?? 12);
+  const material = structural.elements.length >= minimumElements || structural.assets.length > 0 || structural.dependencies.length > 0;
+  if (!material) {
+    throw new Error(`REFERENCE_CAPTURE_REJECTED id=${target.id} reason=thin-body elements=${structural.elements.length} assets=${structural.assets.length} deps=${structural.dependencies.length}`);
+  }
+
+  const html = await page.content();
+  fs.writeFileSync(path.join(evidenceDir,'hydrated.html'), html);
+  const htmlHash = crypto.createHash('sha256').update(html).digest('hex');
+  const allStates = [...desktop.states, ...tablet.states, ...mobile.states];
+  const capture = {
+    version:'1.0', reference_id:target.id, source_url:target.source_url,
+    capture_url:target.capture_url||null,
+    baseline_kind:target.baseline_kind||'live-browser',
+    discovery_source:target.discovery_source||null,
+    captured_at:new Date().toISOString(), browser:'system-chrome+puppeteer-core',
+    final_url:structural.final_url, title:structural.title,
+    hydrated_html_sha256:htmlHash,
+    viewports:[desktop,tablet,mobile], states:allStates,
+    structure:structural,
+    responses
   };
-});
+  fs.writeFileSync(path.join(evidenceDir,'capture.json'), JSON.stringify(capture,null,2));
 
-const html = await page.content();
-fs.writeFileSync(path.join(evidenceDir,'hydrated.html'), html);
-const htmlHash = crypto.createHash('sha256').update(html).digest('hex');
-const allStates = [...desktop.states, ...tablet.states, ...mobile.states];
-const capture = {
-  version:'1.0', reference_id:target.id, source_url:target.source_url,
-  discovery_source:target.discovery_source||null,
-  captured_at:new Date().toISOString(), browser:'system-chrome+puppeteer-core',
-  final_url:structural.final_url, title:structural.title,
-  hydrated_html_sha256:htmlHash,
-  viewports:[desktop,tablet,mobile], states:allStates,
-  structure:structural,
-  responses
-};
-fs.writeFileSync(path.join(evidenceDir,'capture.json'), JSON.stringify(capture,null,2));
+  const manifest = {
+    version:'1.0',
+    reference_id:target.id,
+    source:{url:target.source_url,discovery_source:target.discovery_source||null,captured_at:capture.captured_at,baseline_kind:capture.baseline_kind},
+    capture:{
+      viewports:[desktop,tablet,mobile].map(v=>({width:v.width,height:v.height})),
+      states:allStates.map(s=>({...s,original_screenshot:s.screenshot,reconstruction_screenshot:null})),
+      dom:{path:'evidence/hydrated.html',sha256:htmlHash,element_count:structural.elements.length},
+      styles_geometry:{path:'evidence/capture.json',element_count:structural.elements.length},
+      fonts:structural.fonts,
+      assets:structural.assets,
+      dependencies:structural.dependencies,
+      network:structural.resources
+    },
+    reconstruction:{mode:target.reconstruction_mode||'render-equivalent-rebuild',local_path:`labs/references/${target.id}/`,essential_origin_dependency:true,notes:'Capture complete; local reconstruction not yet implemented.'},
+    fidelity:{visual:{score:0,status:'pending',method:'original-vs-local screenshot comparison pending',exceptions:[]},motion_interaction:{status:'pending',states_verified:[],notes:'Animation inventory captured; reconstruction evidence pending.'}},
+    provenance:{code:target.provenance_code||'Browser-delivered public frontend evidence captured for analysis; authored-source identity not claimed.',assets:target.provenance_assets||'External assets inventoried only; reuse rights not inferred from public accessibility.',rights_status:target.rights_status||'unreviewed'}
+  };
+  fs.writeFileSync(path.join(tempOutDir,'capture-manifest.json'), JSON.stringify(manifest,null,2));
 
-const manifest = {
-  version:'1.0',
-  reference_id:target.id,
-  source:{url:target.source_url,discovery_source:target.discovery_source||null,captured_at:capture.captured_at},
-  capture:{
-    viewports:[desktop,tablet,mobile].map(v=>({width:v.width,height:v.height})),
-    states:allStates.map(s=>({...s,original_screenshot:s.screenshot,reconstruction_screenshot:null})),
-    dom:{path:'evidence/hydrated.html',sha256:htmlHash,element_count:structural.elements.length},
-    styles_geometry:{path:'evidence/capture.json',element_count:structural.elements.length},
-    fonts:structural.fonts,
-    assets:structural.assets,
-    dependencies:structural.dependencies,
-    network:structural.resources
-  },
-  reconstruction:{mode:target.reconstruction_mode||'render-equivalent-rebuild',local_path:`labs/references/${target.id}/`,essential_origin_dependency:true,notes:'Capture complete; local reconstruction not yet implemented.'},
-  fidelity:{visual:{score:0,status:'pending',method:'original-vs-local screenshot comparison pending',exceptions:[]},motion_interaction:{status:'pending',states_verified:[],notes:'Animation inventory captured; reconstruction evidence pending.'}},
-  provenance:{code:'Browser-delivered public frontend evidence captured for analysis; authored-source identity not claimed.',assets:'External assets inventoried only; reuse rights not inferred from public accessibility.',rights_status:'unreviewed'}
-};
-fs.writeFileSync(path.join(outDir,'capture-manifest.json'), JSON.stringify(manifest,null,2));
+  fs.mkdirSync(finalOutDir, { recursive:true });
+  const finalEvidenceDir = path.join(finalOutDir, 'evidence');
+  fs.rmSync(finalEvidenceDir, { recursive:true, force:true });
+  fs.cpSync(evidenceDir, finalEvidenceDir, { recursive:true });
+  fs.copyFileSync(path.join(tempOutDir,'capture-manifest.json'), path.join(finalOutDir,'capture-manifest.json'));
 
-await browser.close();
-console.log(`REFERENCE_BROWSER_CAPTURE_OK id=${target.id} elements=${structural.elements.length} states=${allStates.length} responses=${responses.length}`);
+  console.log(`REFERENCE_BROWSER_CAPTURE_OK id=${target.id} baseline=${capture.baseline_kind} elements=${structural.elements.length} states=${allStates.length} responses=${responses.length}`);
+} finally {
+  await browser.close();
+  fs.rmSync(tempOutDir, { recursive:true, force:true });
+}

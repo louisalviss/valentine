@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-04",
+  "updated_at": "2026-09-05",
   "feed_authority": {
     "status": "unresolved",
     "source": null,
-    "note": "Connect the user's existing site-library dataset before creating duplicate discovery storage. R001 Native Content is the commercial capture/rebuild seed; R002 Motion Primitives is an MIT-licensed source-import validation control, not a replacement feed."
+    "note": "Connect the user's existing site-library dataset before creating duplicate discovery storage. R001 Native Content is the commercial capture/rebuild seed; R002 Motion Primitives is a source-build control, not a replacement feed."
   },
   "fidelity_policy": {
     "visual_pass_min": 98,
@@ -42,17 +42,18 @@
       "id":"motion-primitives",
       "index":"R002",
       "title":"Motion Primitives",
-      "status":"capture-pending",
+      "status":"source-build-pending",
       "source_url":"https://motion-primitives.com/",
       "discovery_source":"open-source-validation",
       "seed_role":"source-import-control",
+      "baseline_policy":"source-build-control",
       "reconstruction_mode":"source-import",
       "essential_origin_dependency":true,
-      "description":"MIT-licensed animated interface site used to prove exact-source import and measured original-vs-local fidelity before broad reference ingestion.",
+      "description":"MIT-licensed website code used as a deterministic source-import fidelity control. Live GitHub-runner capture is blocked by Vercel Security Checkpoint, so visual baseline is built from the exact pinned upstream source SHA.",
       "tags":["motion","ui","open-source","mit"],
       "upstream":{"repository":"ibelick/motion-primitives","commit":"92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d","license":"MIT"},
       "fidelity":{"visual":{"score":0,"status":"pending"},"motion_interaction":{"status":"pending"}},
-      "provenance":{"rights_status":"cleared"}
+      "provenance":{"rights_status":"mixed","note":"Website code is MIT; remotely referenced demo media is not assumed to inherit that license."}
     }
   ]
 }
