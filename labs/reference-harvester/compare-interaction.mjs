@@ -84,29 +84,6 @@ async function clickTrigger(page) {
   }, triggerAltPrefix);
 }
 
-async function interactionAnimations(page) {
-  return page.evaluate(prefix => {
-    const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
-    const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]')||null;
-    const dialog=document.querySelector('[role="dialog"]');
-    const backdrop=[...document.body.children].find(el=>{
-      const s=getComputedStyle(el), r=el.getBoundingClientRect();
-      return s.position==='fixed' && r.width>=innerWidth*.95 && r.height>=innerHeight*.95 && !el.querySelector('[role="dialog"]');
-    })||null;
-    const belongs = target => Boolean(target && (
-      target===trigger || trigger?.contains(target) || target===dialog || dialog?.contains(target) || target===backdrop || backdrop?.contains(target)
-    ));
-    return document.getAnimations({subtree:true}).filter(a=>belongs(a.effect?.target)).map(a=>{
-      const target=a.effect?.target;
-      let timing={}; try { timing=a.effect?.getTiming?.()||{}; } catch {}
-      return {
-        target:{tag:target?.tagName?.toLowerCase()||null,role:target?.getAttribute?.('role')||null,ariaLabel:target?.getAttribute?.('aria-label')||null},
-        timing:{delay:Number(timing.delay||0),duration:typeof timing.duration==='number'?timing.duration:String(timing.duration||''),endDelay:Number(timing.endDelay||0),iterations:Number(timing.iterations||1),easing:String(timing.easing||'')}
-      };
-    });
-  }, triggerAltPrefix);
-}
-
 async function captureRuntimeTrajectory(page) {
   return page.evaluate(async prefix => {
     const rect = el => {
@@ -114,7 +91,7 @@ async function captureRuntimeTrajectory(page) {
       const r=el.getBoundingClientRect();
       return {x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,right:r.right,bottom:r.bottom,left:r.left};
     };
-    const readState = () => {
+    const readNodes = () => {
       const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
       const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]')||null;
       const dialog=document.querySelector('[role="dialog"]');
@@ -124,6 +101,10 @@ async function captureRuntimeTrajectory(page) {
         const s=getComputedStyle(el), r=el.getBoundingClientRect();
         return s.position==='fixed' && r.width>=innerWidth*.95 && r.height>=innerHeight*.95 && !el.querySelector('[role="dialog"]');
       })||null;
+      return {sourceImg,trigger,dialog,dialogImg,close,backdrop};
+    };
+    const readState = () => {
+      const {sourceImg,trigger,dialog,dialogImg,close,backdrop}=readNodes();
       return {
         sourceImage:{exists:Boolean(sourceImg),rect:rect(sourceImg)},
         trigger:{exists:Boolean(trigger),expanded:trigger?.getAttribute('aria-expanded')||null,rect:rect(trigger)},
@@ -134,12 +115,34 @@ async function captureRuntimeTrajectory(page) {
         bodyOverflow:getComputedStyle(document.body).overflow
       };
     };
+    const readAnimations = () => {
+      const {trigger,dialog,backdrop}=readNodes();
+      const belongs = target => Boolean(target && (
+        target===trigger || trigger?.contains(target) || target===dialog || dialog?.contains(target) || target===backdrop || backdrop?.contains(target)
+      ));
+      return document.getAnimations({subtree:true}).filter(a=>belongs(a.effect?.target)).map(a=>{
+        const target=a.effect?.target;
+        let timing={}; try { timing=a.effect?.getTiming?.()||{}; } catch {}
+        return {
+          target:{tag:target?.tagName?.toLowerCase()||null,role:target?.getAttribute?.('role')||null,ariaLabel:target?.getAttribute?.('aria-label')||null},
+          timing:{
+            delay:Number(timing.delay||0),
+            duration:typeof timing.duration==='number'?timing.duration:String(timing.duration||''),
+            endDelay:Number(timing.endDelay||0),
+            iterations:Number(timing.iterations||1),
+            easing:String(timing.easing||'')
+          }
+        };
+      });
+    };
 
     const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
     const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]');
     if (!trigger) throw new Error('trajectory trigger not found');
 
     const samples=[];
+    let animationSignature=[];
+    let animationSignatureCaptureT=null;
     const clickAt=performance.now();
     trigger.click();
     return await new Promise((resolve,reject) => {
@@ -147,9 +150,21 @@ async function captureRuntimeTrajectory(page) {
       const frame = now => {
         const state=readState();
         if (state.dialog.exists && dialogStart===null) dialogStart=now;
-        if (dialogStart!==null) samples.push({t:now-dialogStart,state});
+        if (dialogStart!==null) {
+          samples.push({t:now-dialogStart,state});
+          const currentSignature=readAnimations();
+          if (currentSignature.length>animationSignature.length) {
+            animationSignature=currentSignature;
+            animationSignatureCaptureT=now-dialogStart;
+          }
+        }
         if (dialogStart!==null && now-dialogStart>=340) {
-          resolve({click_to_dialog_ms:dialogStart-clickAt,samples});
+          resolve({
+            click_to_dialog_ms:dialogStart-clickAt,
+            samples,
+            animation_signature:animationSignature,
+            animation_signature_capture_t_ms:animationSignatureCaptureT,
+          });
           return;
         }
         if (now-clickAt>1200) {
@@ -173,7 +188,6 @@ async function deterministicScenario(url, side, viewport) {
   const page=await setupPage(url,viewport.width,viewport.height);
   const closed=await snapshot(page);
   const runtime=await captureRuntimeTrajectory(page);
-  const signature=await interactionAnimations(page);
   await sleep(120);
   const open=await snapshot(page);
   const dialogFile=`${viewport.label}-${side}-open-dialog.png`;
@@ -186,7 +200,8 @@ async function deterministicScenario(url, side, viewport) {
     runtime_trajectory:runtime.samples,
     click_to_dialog_ms:runtime.click_to_dialog_ms,
     open,
-    animation_signature:signature,
+    animation_signature:runtime.animation_signature,
+    animation_signature_capture_t_ms:runtime.animation_signature_capture_t_ms,
     screenshots:{open_dialog:`evidence/interaction/${dialogFile}`,open_full:`evidence/interaction/${fullFile}`}
   };
 }
@@ -206,12 +221,12 @@ async function functionalScenario(url, viewport) {
 
 const viewports=[{label:'desktop',width:1440,height:900},{label:'mobile',width:390,height:844}];
 const report={
-  version:'3.0',
+  version:'3.1',
   reference_id:referenceId,
   baseline_url:baselineUrl,
   local_url:localUrl,
   captured_at:new Date().toISOString(),
-  scenario:'EB27 MorphingDialog runtime spatial trajectory + scoped animation signature + active-page open/Escape functional test',
+  scenario:'EB27 MorphingDialog runtime spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test',
   viewports:[]
 };
 for (const viewport of viewports) {
@@ -223,4 +238,4 @@ for (const viewport of viewports) {
 }
 await browser.close();
 fs.writeFileSync(path.join(evidenceDir,'interaction-capture.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3 viewports=${viewports.length} runtime=raf`);
+console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3.1 viewports=${viewports.length} runtime=raf live_signature=true`);
