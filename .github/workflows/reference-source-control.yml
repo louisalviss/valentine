@@ -113,9 +113,54 @@ jobs:
             images: { unoptimized: true },"""
           p.write_text(s.replace(marker,replacement,1))
           PY
+
+          # Next basePath/assetPrefix relocate framework assets, but literal public
+          # paths such as src='/eb-27-lamp-edouard-wilfrid-buquet.jpg' remain rooted
+          # at /. Rewrite only literals that map to an actual file in public/ so
+          # nested source imports stay render-equivalent without polluting repo root.
+          python3 - <<'PY'
+          from pathlib import Path
+          base='/labs/references/motion-primitives'
+          public=Path('public')
+          rels=sorted((p.relative_to(public).as_posix() for p in public.rglob('*') if p.is_file()), key=len, reverse=True)
+          roots=[Path('app'),Path('components')]
+          suffixes={'.js','.jsx','.ts','.tsx','.css','.scss','.md','.mdx'}
+          touched=[]
+          rewrites=0
+          for root in roots:
+            if not root.exists():
+              continue
+            for file in root.rglob('*'):
+              if not file.is_file() or file.suffix.lower() not in suffixes:
+                continue
+              try:
+                text=file.read_text()
+              except UnicodeDecodeError:
+                continue
+              original=text
+              for rel in rels:
+                for quote in ("'", '"', '`'):
+                  old=f'{quote}/{rel}{quote}'
+                  new=f'{quote}{base}/{rel}{quote}'
+                  n=text.count(old)
+                  if n:
+                    text=text.replace(old,new)
+                    rewrites += n
+              if text != original:
+                file.write_text(text)
+                touched.append(str(file))
+          assert rewrites > 0, 'expected at least one public-asset relocation'
+          expected="/labs/references/motion-primitives/eb-27-lamp-edouard-wilfrid-buquet.jpg"
+          target=Path('app/docs/morphing-dialog/morphing-dialog-basic-1.tsx').read_text()
+          assert expected in target, 'EB27 first-fold asset was not relocated'
+          print('PUBLIC_ASSET_RELOCATION_OK', 'rewrites=', rewrites, 'files=', len(touched))
+          for file in touched[:30]: print(' relocated', file)
+          PY
+
           rm -rf .next out
           npm run build
           test -s out/index.html
+          test -s out/eb-27-lamp-edouard-wilfrid-buquet.jpg
 
           REF="$GITHUB_WORKSPACE/labs/references/motion-primitives"
           mkdir -p "$REF"
@@ -129,7 +174,8 @@ jobs:
             "license":"MIT",
             "import_mode":"source-import-static-export",
             "base_path":"/labs/references/motion-primitives",
-            "note":"Static output built from the exact pinned upstream source. Remote demo media remains external and separately classified."
+            "relocation":"Framework assets use basePath/assetPrefix; literal paths that resolve to actual upstream public/ files are rewritten to the nested base path before export.",
+            "note":"Static output built from the exact pinned upstream source with deterministic path relocation only. Remote demo media remains external and separately classified."
           }
           JSON
 
@@ -165,7 +211,7 @@ jobs:
             'mode':'source-import',
             'local_path':'labs/references/motion-primitives/',
             'essential_origin_dependency':True,
-            'notes':'Static export built from exact MIT upstream SHA. Remote demo media remains externally referenced, so candidate is not self-contained.'
+            'notes':'Static export built from exact MIT upstream SHA. Framework/public asset paths are deterministically relocated under the nested Valentine base path. Remote demo media remains externally referenced, so candidate is not self-contained.'
           }
           manifest['fidelity']['visual']={
             'score':score,
@@ -179,8 +225,8 @@ jobs:
             'notes':'Visual source-import control measured; independent motion/interaction verification still required.'
           }
           manifest['provenance']={
-            'code':'Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT.',
-            'assets':'Remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.',
+            'code':'Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT; nested-path relocation is deterministic and limited to actual upstream public assets.',
+            'assets':'Bundled public assets are relocated locally; remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.',
             'rights_status':'mixed'
           }
           (ref/'capture-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
@@ -194,7 +240,7 @@ jobs:
           item['essential_origin_dependency']=True
           item['fidelity']['visual']={'score':score,'status':status}
           item['fidelity']['motion_interaction']={'status':'pending'}
-          item['provenance']={'rights_status':'mixed','note':'Code is MIT at pinned upstream SHA; remote demo media remains separately licensed/unknown.'}
+          item['provenance']={'rights_status':'mixed','note':'Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown.'}
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
           print('SOURCE_CONTROL_RESULT',status,score)
           PY
