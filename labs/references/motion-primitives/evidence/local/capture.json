@@ -2,7 +2,8 @@
   "version": "1.0",
   "reference_id": "motion-primitives",
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
-  "captured_at": "2026-09-05T00:07:54.332Z",
+  "visual_state_policy": "deterministic-static",
+  "captured_at": "2026-09-05T00:14:42.045Z",
   "states": [
     {
       "id": "desktop-initial",

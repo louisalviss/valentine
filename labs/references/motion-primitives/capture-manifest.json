@@ -4,10 +4,12 @@
   "source": {
     "url": "https://motion-primitives.com/",
     "discovery_source": "open-source-validation",
-    "captured_at": "2026-09-05T00:06:23.233Z",
-    "baseline_kind": "source-build-control"
+    "captured_at": "2026-09-05T00:13:33.489Z",
+    "baseline_kind": "source-build-control",
+    "visual_state_policy": "deterministic-static"
   },
   "capture": {
+    "visual_state_policy": "deterministic-static",
     "viewports": [
       {
         "width": 1440,
@@ -90,7 +92,7 @@
     ],
     "dom": {
       "path": "evidence/hydrated.html",
-      "sha256": "bdce3cabb728c714cc68294ec5a85cb2250789214a1ba291e0459e3a361fc5d1",
+      "sha256": "325847f3e6db63885a032c51e8b8b08b51f7c66fdb35114fa71972448b20f7f8",
       "element_count": 218
     },
     "styles_geometry": {
@@ -432,18 +434,18 @@
     ],
     "network": [
       {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.1000000000058208,
+        "transferSize": 300,
+        "decodedBodySize": 0
+      },
+      {
         "name": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
         "initiatorType": "link",
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 58048
-      },
-      {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 2.6000000000349246,
-        "transferSize": 300,
-        "decodedBodySize": 0
       },
       {
         "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
@@ -714,14 +716,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 6.400000000023283,
+        "duration": 10.200000000011642,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 7.599999999976717,
+        "duration": 9.799999999988358,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
