@@ -252,14 +252,51 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add labs/references/motion-primitives labs/reference-harvester/reference-registry.json
-          if git diff --cached --quiet; then
-            echo 'NO_SOURCE_CONTROL_DIFF'
-            exit 0
-          fi
-          git commit -m 'test: persist measured source-import control'
+
+          # Generated Next output contains build-id-specific filenames. A concurrent
+          # privacy-scrub force update can therefore make a normal rebase conflict
+          # even when the remote tree is semantically unchanged. Preserve the
+          # measured output outside Git, then replay it on the latest remote head.
+          SNAP=/tmp/source-control-snapshot
+          rm -rf "$SNAP"
+          mkdir -p "$SNAP/labs/references" "$SNAP/labs/reference-harvester"
+          cp -a labs/references/motion-primitives "$SNAP/labs/references/"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          Path('/tmp/source-control-snapshot/labs/reference-harvester/motion-primitives-item.json').write_text(json.dumps(item,indent=2)+'\n')
+          PY
+
           for attempt in 1 2 3; do
-            git pull --rebase origin "$GITHUB_REF_NAME"
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+
+            rm -rf labs/references/motion-primitives
+            cp -a "$SNAP/labs/references/motion-primitives" labs/references/
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          desired=json.loads(Path('/tmp/source-control-snapshot/labs/reference-harvester/motion-primitives-item.json').read_text())
+          for index,item in enumerate(registry['references']):
+              if item['id']=='motion-primitives':
+                  registry['references'][index]=desired
+                  break
+          else:
+              raise SystemExit('motion-primitives registry item disappeared from remote')
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          PY
+
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/motion-primitives labs/reference-harvester/reference-registry.json
+            if git diff --cached --quiet; then
+              echo 'SOURCE_CONTROL_ALREADY_CURRENT'
+              exit 0
+            fi
+            git commit -m 'test: persist measured source-import control'
             if git push origin "HEAD:$GITHUB_REF_NAME"; then
               echo 'SOURCE_CONTROL_PUSHED'
               exit 0
