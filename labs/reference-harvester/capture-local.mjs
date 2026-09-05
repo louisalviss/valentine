@@ -71,8 +71,11 @@ async function stabilizeVisualState(){
 
 async function navigate() {
   await page.goto(localUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
-  try { await page.waitForNetworkIdle({ idleTime: 500, timeout: 4000 }); } catch {}
-  await settle(700);
+  // Keep local reconstruction timing identical to capture-browser.mjs. A shorter
+  // settle window can sample finite client-side demo states at a different phase
+  // and create a false fidelity delta even when source and export are equivalent.
+  try { await page.waitForNetworkIdle({ idleTime: 800, timeout: 7000 }); } catch {}
+  await settle(1200);
   await stabilizeVisualState();
 }
 
@@ -88,9 +91,17 @@ for (const viewport of original.viewports || []) {
     }, ratio);
     await settle(450);
     await stabilizeVisualState();
+    const dimensions = await page.evaluate(() => ({
+      width: document.documentElement.scrollWidth,
+      height: document.documentElement.scrollHeight,
+      viewport_width: innerWidth,
+      viewport_height: innerHeight,
+      scroll_x: scrollX,
+      scroll_y: scrollY
+    }));
     const file = `${state.id}.png`;
     await page.screenshot({ path: path.join(outDir, file), fullPage: false });
-    captures.push({ id: state.id, ratio, width: viewport.width, height: viewport.height, screenshot: `evidence/local/${file}` });
+    captures.push({ id: state.id, ratio, width: viewport.width, height: viewport.height, dimensions, screenshot: `evidence/local/${file}` });
   }
 }
 
@@ -98,6 +109,7 @@ await browser.close();
 fs.writeFileSync(path.join(outDir, 'capture.json'), JSON.stringify({
   version:'1.0', reference_id:referenceId, local_url:localUrl,
   visual_state_policy:original.visual_state_policy||'runtime',
+  capture_timing_policy:'network-idle-800ms-7s+settle-1200ms+state-450ms',
   captured_at:new Date().toISOString(), states:captures
 }, null, 2));
 console.log(`REFERENCE_LOCAL_CAPTURE_OK id=${referenceId} visual=${original.visual_state_policy||'runtime'} states=${captures.length}`);
