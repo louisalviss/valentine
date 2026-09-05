@@ -24,6 +24,7 @@ fs.mkdirSync(evidenceDir, { recursive: true });
 const browser = await puppeteer.launch({ executablePath:chrome, headless:true, args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--hide-scrollbars'] });
 const triggerAltPrefix = 'A desk lamp designed by Edouard Wilfrid Buquet';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const runtimeTrialCount = 3;
 
 async function setupPage(url, width, height) {
   const page = await browser.newPage();
@@ -184,25 +185,48 @@ async function captureDialog(page, file) {
   await dialog.screenshot({path:path.join(evidenceDir,file)});
 }
 
-async function deterministicScenario(url, side, viewport) {
+async function runtimeTrial(url, side, viewport, trialIndex) {
   const page=await setupPage(url,viewport.width,viewport.height);
   const closed=await snapshot(page);
   const runtime=await captureRuntimeTrajectory(page);
   await sleep(120);
   const open=await snapshot(page);
-  const dialogFile=`${viewport.label}-${side}-open-dialog.png`;
-  const fullFile=`${viewport.label}-${side}-open-full.png`;
-  await captureDialog(page,dialogFile);
-  await page.screenshot({path:path.join(evidenceDir,fullFile),fullPage:false});
+  let screenshots=null;
+  if (trialIndex===0) {
+    const dialogFile=`${viewport.label}-${side}-open-dialog.png`;
+    const fullFile=`${viewport.label}-${side}-open-full.png`;
+    await captureDialog(page,dialogFile);
+    await page.screenshot({path:path.join(evidenceDir,fullFile),fullPage:false});
+    screenshots={open_dialog:`evidence/interaction/${dialogFile}`,open_full:`evidence/interaction/${fullFile}`};
+  }
   await page.close();
   return {
+    trial:trialIndex+1,
     closed,
     runtime_trajectory:runtime.samples,
     click_to_dialog_ms:runtime.click_to_dialog_ms,
     open,
     animation_signature:runtime.animation_signature,
     animation_signature_capture_t_ms:runtime.animation_signature_capture_t_ms,
-    screenshots:{open_dialog:`evidence/interaction/${dialogFile}`,open_full:`evidence/interaction/${fullFile}`}
+    screenshots,
+  };
+}
+
+async function deterministicScenario(url, side, viewport) {
+  const runtimeTrials=[];
+  for (let i=0;i<runtimeTrialCount;i++) {
+    runtimeTrials.push(await runtimeTrial(url,side,viewport,i));
+  }
+  const primary=runtimeTrials[0];
+  return {
+    closed:primary.closed,
+    runtime_trajectory:primary.runtime_trajectory,
+    click_to_dialog_ms:primary.click_to_dialog_ms,
+    open:primary.open,
+    animation_signature:primary.animation_signature,
+    animation_signature_capture_t_ms:primary.animation_signature_capture_t_ms,
+    screenshots:primary.screenshots,
+    runtime_trials:runtimeTrials,
   };
 }
 
@@ -221,12 +245,13 @@ async function functionalScenario(url, viewport) {
 
 const viewports=[{label:'desktop',width:1440,height:900},{label:'mobile',width:390,height:844}];
 const report={
-  version:'3.1',
+  version:'3.3',
   reference_id:referenceId,
   baseline_url:baselineUrl,
   local_url:localUrl,
   captured_at:new Date().toISOString(),
-  scenario:'EB27 MorphingDialog runtime spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test',
+  runtime_trial_count:runtimeTrialCount,
+  scenario:'EB27 MorphingDialog 3-trial rAF spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test',
   viewports:[]
 };
 for (const viewport of viewports) {
@@ -238,4 +263,4 @@ for (const viewport of viewports) {
 }
 await browser.close();
 fs.writeFileSync(path.join(evidenceDir,'interaction-capture.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3.1 viewports=${viewports.length} runtime=raf live_signature=true`);
+console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v3.3 viewports=${viewports.length} runtime=raf trials=${runtimeTrialCount} live_signature=true`);
