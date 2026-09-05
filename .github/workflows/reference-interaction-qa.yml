@@ -1,0 +1,156 @@
+name: Reference Interaction QA
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/reference-harvester/compare-interaction.mjs'
+      - 'labs/reference-harvester/measure-interaction.py'
+      - '.github/workflows/reference-interaction-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  motion-primitives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout Valentine
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install interaction QA runtime
+        run: |
+          set -euo pipefail
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Build exact upstream baseline
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/motion-primitives
+          git clone --no-checkout https://github.com/ibelick/motion-primitives.git /tmp/motion-primitives
+          cd /tmp/motion-primitives
+          git checkout --detach 92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d
+          test "$(git rev-parse HEAD)" = '92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d'
+          grep -q '^MIT License$' LICENCE.md
+          npm ci
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('next.config.mjs')
+          s=p.read_text()
+          marker='const nextConfig = {'
+          assert marker in s
+          replacement="""const nextConfig = {
+            eslint: { ignoreDuringBuilds: true },
+            typescript: { ignoreBuildErrors: true },"""
+          p.write_text(s.replace(marker,replacement,1))
+          PY
+          npm run build
+          npm run start -- -p 4180 >/tmp/motion-primitives-interaction-source.log 2>&1 &
+          echo $! >/tmp/motion-primitives-interaction-source.pid
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:4180/ >/tmp/source-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'motion-primitives' /tmp/source-home.html
+
+      - name: Start nested Valentine import
+        run: |
+          set -euo pipefail
+          test -s labs/references/motion-primitives/index.html
+          test -s labs/references/motion-primitives/eb-27-lamp-edouard-wilfrid-buquet.jpg
+          python3 -m http.server 4173 --directory . >/tmp/valentine-interaction-server.log 2>&1 &
+          echo $! >/tmp/valentine-interaction-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/labs/references/motion-primitives/ >/tmp/local-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'motion-primitives' /tmp/local-home.html
+
+      - name: Capture and measure interaction fidelity
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          node labs/reference-harvester/compare-interaction.mjs motion-primitives http://127.0.0.1:4180/ http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-interaction.py motion-primitives
+
+      - name: Persist independent motion state
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/motion-primitives')
+          report=json.loads((ref/'evidence/interaction/interaction-fidelity.json').read_text())
+          manifest_path=ref/'capture-manifest.json'
+          manifest=json.loads(manifest_path.read_text())
+          status=report['status']
+          verified=[]
+          for vp in report['viewports']:
+              verified.extend([
+                  f"{vp['viewport']}:closed",
+                  f"{vp['viewport']}:open",
+                  f"{vp['viewport']}:trajectory",
+                  f"{vp['viewport']}:escape-close",
+              ])
+          manifest['fidelity']['motion_interaction']={
+              'status':status,
+              'states_verified':verified if status=='pass' else [],
+              'minimum_score':report['minimum_score'],
+              'method':'Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.',
+              'notes':'Independent interaction gate; visual PASS is not used to infer this result.'
+          }
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score']}
+          # Rights/origin dependency remain blockers; interaction PASS must not mark overall verified.
+          item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'overall_status',item['status'])
+          PY
+          node labs/reference-harvester/validate.mjs
+
+      - name: Upload interaction evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-interaction-${{ github.run_id }}
+          path: labs/references/motion-primitives/evidence/interaction/
+          retention-days: 5
+
+      - name: Commit interaction evidence and metadata
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add labs/references/motion-primitives/evidence/interaction labs/references/motion-primitives/capture-manifest.json labs/reference-harvester/reference-registry.json
+          if git diff --cached --quiet; then
+            echo 'NO_INTERACTION_DIFF'
+            exit 0
+          fi
+          git commit -m 'test: persist interaction fidelity evidence'
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo 'INTERACTION_EVIDENCE_PUSHED'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'INTERACTION_EVIDENCE_PUSH_FAILED' >&2
+          exit 1
+
+      - name: Cleanup servers
+        if: always()
+        run: |
+          kill "$(cat /tmp/motion-primitives-interaction-source.pid 2>/dev/null)" 2>/dev/null || true
+          kill "$(cat /tmp/valentine-interaction-server.pid 2>/dev/null)" 2>/dev/null || true
