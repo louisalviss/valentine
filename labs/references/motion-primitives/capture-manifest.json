@@ -778,9 +778,11 @@
       "exceptions": []
     },
     "motion_interaction": {
-      "status": "pending",
+      "status": "fail",
       "states_verified": [],
-      "notes": "Visual source-import control measured; independent motion/interaction verification still required."
+      "minimum_score": 34.5727,
+      "method": "Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.",
+      "notes": "Independent interaction gate; visual PASS is not used to infer this result."
     }
   },
   "provenance": {
