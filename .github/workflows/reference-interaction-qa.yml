@@ -81,6 +81,16 @@ jobs:
           export CHROME_BIN
           node labs/reference-harvester/compare-interaction.mjs motion-primitives http://127.0.0.1:4180/ http://127.0.0.1:4173/labs/references/motion-primitives/
           python3 labs/reference-harvester/measure-interaction.py motion-primitives
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path('labs/references/motion-primitives/evidence/interaction')
+          capture=json.loads((base/'interaction-capture.json').read_text())
+          report=json.loads((base/'interaction-fidelity.json').read_text())
+          assert capture.get('version')=='2.0', f"unexpected interaction capture protocol {capture.get('version')}"
+          assert report.get('version')=='2.0', f"unexpected interaction report protocol {report.get('version')}"
+          print('INTERACTION_PROTOCOL_V2_OK', report['status'], report['minimum_score'])
+          PY
 
       - name: Persist independent motion state
         run: |
@@ -90,6 +100,7 @@ jobs:
           from pathlib import Path
           ref=Path('labs/references/motion-primitives')
           report=json.loads((ref/'evidence/interaction/interaction-fidelity.json').read_text())
+          assert report.get('version')=='2.0'
           manifest_path=ref/'capture-manifest.json'
           manifest=json.loads(manifest_path.read_text())
           status=report['status']
@@ -105,7 +116,8 @@ jobs:
               'status':status,
               'states_verified':verified if status=='pass' else [],
               'minimum_score':report['minimum_score'],
-              'method':'Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.',
+              'protocol':'2.0',
+              'method':'Independent active-page functional dialog/Escape contract + open-dialog visual/geometry fidelity + deterministic WAAPI morph trajectory + scoped animation signature.',
               'notes':'Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance.'
           }
           # Do not mutate reconstruction.essential_origin_dependency here. The
@@ -116,12 +128,12 @@ jobs:
           registry_path=Path('labs/reference-harvester/reference-registry.json')
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
-          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score']}
+          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'2.0'}
           # Keep this as a reconstructed control while essential origin dependencies
           # or mixed asset rights remain. Do not auto-promote to verified/pattern.
           item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=2.0','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
           PY
           node labs/reference-harvester/validate.mjs
 
