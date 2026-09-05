@@ -1,0 +1,169 @@
+name: Reference Native Content QA
+
+on:
+  push:
+    branches: ['feature/**']
+    paths:
+      - 'labs/references/native-content/**'
+      - 'labs/reference-harvester/native-content-contract.mjs'
+      - 'labs/reference-harvester/measure-native-fullframe.py'
+      - 'labs/reference-harvester/capture-local.mjs'
+      - 'labs/reference-harvester/reference-registry.json'
+      - '.github/workflows/reference-native-content-qa.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: reference-native-content-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install QA runtime
+        run: |
+          set -euo pipefail
+          npm install --no-save puppeteer-core@24.16.0
+          python3 -m pip install --disable-pip-version-check pillow numpy scikit-image
+
+      - name: Start local Valentine server
+        run: |
+          set -euo pipefail
+          test -s labs/references/native-content/index.html
+          python3 -m http.server 4173 --directory . >/tmp/native-server.log 2>&1 &
+          echo $! >/tmp/native-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/labs/references/native-content/ >/tmp/native-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'native-content-rebuild-v1' /tmp/native-home.html
+
+      - name: Capture local reconstruction states
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          node labs/reference-harvester/capture-local.mjs native-content http://127.0.0.1:4173/labs/references/native-content/
+          python3 labs/reference-harvester/measure-native-fullframe.py
+
+      - name: Measure commercial-media contract against live reference
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          set -euo pipefail
+          test -x "$CHROME_BIN" || CHROME_BIN=$(command -v google-chrome || command -v chromium || command -v chromium-browser)
+          export CHROME_BIN
+          set +e
+          node labs/reference-harvester/native-content-contract.mjs https://www.nativecontent.com/ http://127.0.0.1:4173/labs/references/native-content/
+          code=$?
+          set -e
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path('labs/references/native-content/evidence/native-contract.json').read_text())
+          f=json.loads(Path('labs/references/native-content/evidence/native-fullframe.json').read_text())
+          print('NATIVE_CONTRACT',c['status'],'min',c['minimum_score'],'menu',c['menu_score'],'network',c['network_status'],'menu_fn',c['menu_functional_status'])
+          print('NATIVE_FULLFRAME_INFORMATIONAL',f['minimum_score'],f['mean_score'])
+          for s in c['states']:
+              worst=min(s['parts'], key=lambda p:p['score'])
+              print(s['id'],'score',s['score'],'worst',worst['name'],worst['score'],'error',worst['error'])
+          PY
+          exit "$code"
+
+      - name: Upload R001 QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-content-qa-${{ github.run_id }}
+          path: |
+            labs/references/native-content/evidence/local/
+            labs/references/native-content/evidence/native-contract.json
+            labs/references/native-content/evidence/native-fullframe.json
+          retention-days: 5
+
+      - name: Persist PASS metadata and evidence
+        if: success()
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/native-content')
+          contract=json.loads((ref/'evidence/native-contract.json').read_text())
+          full=json.loads((ref/'evidence/native-fullframe.json').read_text())
+          if contract['status']!='pass' or float(contract['minimum_score'])<98 or contract['network_status']!='pass' or contract['menu_functional_status']!='pass':
+              raise SystemExit('R001 contract not eligible for PASS metadata')
+          manifest_path=ref/'capture-manifest.json'
+          manifest=json.loads(manifest_path.read_text())
+          manifest['qa_profile']='commercial-media-contract'
+          manifest['reconstruction']['essential_origin_dependency']=False
+          manifest['reconstruction']['self_containment']={
+              'status':'pass','protocol':'native-contract-1.0','network_status':'pass','evidence':'evidence/native-contract.json'
+          }
+          manifest['reconstruction']['notes']='Independent local rebuild. Commercial source footage/posters/fonts/bundles are not copied. Verified surface is section geometry, typography placement, scroll-state sequencing, navigation and mobile menu; raw full-frame score is retained separately as a rights-exception metric.'
+          manifest['fidelity']['visual']={
+              'score':contract['minimum_score'],'status':'pass','method':'commercial-media-contract-1.0','full_frame_score':full['minimum_score'],'rights_exception':'commercial project footage intentionally replaced'
+          }
+          manifest['fidelity']['motion_interaction']={
+              'status':'review','score':contract['menu_score'],'protocol':'native-contract-1.0','notes':'Functional/endpoint menu and scroll-state contract passed; transition timing remains to be measured separately before final verified status.'
+          }
+          manifest['provenance']={
+              'code':'Independent HTML/CSS/JS reconstruction from captured DOM/geometry evidence; authored Native Content bundles not copied.',
+              'assets':'Commercial project media and source font files are not copied; local CSS-generated abstract scenes are used instead.',
+              'rights_status':'mixed-reviewed'
+          }
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='native-content')
+          item['status']='reconstructed'
+          item['essential_origin_dependency']=False
+          item['fidelity']['visual']={'score':contract['minimum_score'],'status':'pass','method':'commercial-media-contract-1.0','full_frame_score':full['minimum_score']}
+          item['fidelity']['motion_interaction']={'status':'review','score':contract['menu_score'],'protocol':'native-contract-1.0'}
+          item['self_containment']={'status':'pass','protocol':'native-contract-1.0','network_status':'pass','evidence':'../labs/references/native-content/evidence/native-contract.json'}
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          print('R001_PASS_METADATA_PREPARED',contract['minimum_score'],full['minimum_score'])
+          PY
+          node labs/reference-harvester/validate.mjs
+
+          SNAP=/tmp/native-r001-pass
+          rm -rf "$SNAP" && mkdir -p "$SNAP/evidence"
+          cp labs/references/native-content/evidence/native-contract.json "$SNAP/evidence/"
+          cp labs/references/native-content/evidence/native-fullframe.json "$SNAP/evidence/"
+          cp labs/references/native-content/capture-manifest.json "$SNAP/manifest.json"
+          cp labs/reference-harvester/reference-registry.json "$SNAP/registry.json"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            mkdir -p labs/references/native-content/evidence
+            cp "$SNAP/evidence/native-contract.json" labs/references/native-content/evidence/native-contract.json
+            cp "$SNAP/evidence/native-fullframe.json" labs/references/native-content/evidence/native-fullframe.json
+            cp "$SNAP/manifest.json" labs/references/native-content/capture-manifest.json
+            cp "$SNAP/registry.json" labs/reference-harvester/reference-registry.json
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/native-content/evidence/native-contract.json labs/references/native-content/evidence/native-fullframe.json labs/references/native-content/capture-manifest.json labs/reference-harvester/reference-registry.json
+            if git diff --cached --quiet; then echo 'R001_EVIDENCE_ALREADY_CURRENT'; exit 0; fi
+            git commit -m 'test: persist Native Content reconstruction evidence'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then echo 'R001_EVIDENCE_PUSHED'; exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
+
+      - name: Cleanup
+        if: always()
+        run: kill "$(cat /tmp/native-server.pid 2>/dev/null)" 2>/dev/null || true
