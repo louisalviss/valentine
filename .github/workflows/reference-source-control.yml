@@ -8,6 +8,7 @@ on:
       - 'labs/reference-harvester/capture-browser.mjs'
       - 'labs/reference-harvester/capture-local.mjs'
       - 'labs/reference-harvester/measure-fidelity.py'
+      - 'labs/reference-harvester/validate.mjs'
       - '.github/workflows/reference-source-control.yml'
   workflow_dispatch:
 
