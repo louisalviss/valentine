@@ -6,11 +6,11 @@
   "baseline_kind": "source-build-control",
   "visual_state_policy": "deterministic-static",
   "discovery_source": "open-source-validation",
-  "captured_at": "2026-09-05T00:13:33.489Z",
+  "captured_at": "2026-09-05T00:20:25.973Z",
   "browser": "system-chrome+puppeteer-core",
   "final_url": "http://127.0.0.1:4180/",
   "title": "Motion-Primitives - UI kit to make beautiful, animated interfaces, faster.",
-  "hydrated_html_sha256": "325847f3e6db63885a032c51e8b8b08b51f7c66fdb35114fa71972448b20f7f8",
+  "hydrated_html_sha256": "0201276c1c14af48fdf10a5a23b093c11163b65cd93c138a12193e27f13ec1b5",
   "viewports": [
     {
       "width": 1440,
@@ -5670,14 +5670,14 @@
         "className": "flex w-max",
         "text": "",
         "rect": {
-          "x": 119.89999389648438,
+          "x": 120.60000610351562,
           "y": 3083,
           "width": 1704,
           "height": 120,
           "top": 3083,
-          "right": 1823.8999938964844,
+          "right": 1824.6000061035156,
           "bottom": 3203,
-          "left": 119.89999389648438
+          "left": 120.60000610351562
         },
         "style": {
           "display": "flex",
@@ -5701,7 +5701,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, -211.1, 0)",
+          "transform": "matrix(1, 0, 0, 1, -210.4, 0)",
           "zIndex": "auto"
         }
       },
@@ -5712,14 +5712,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 119.89999389648438,
+          "x": 120.60000610351562,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 239.89999389648438,
+          "right": 240.60000610351562,
           "bottom": 3203,
-          "left": 119.89999389648438
+          "left": 120.60000610351562
         },
         "style": {
           "display": "block",
@@ -5754,14 +5754,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 263.8999938964844,
+          "x": 264.6000061035156,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 383.8999938964844,
+          "right": 384.6000061035156,
           "bottom": 3203,
-          "left": 263.8999938964844
+          "left": 264.6000061035156
         },
         "style": {
           "display": "block",
@@ -5796,14 +5796,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 407.8999938964844,
+          "x": 408.6000061035156,
           "y": 3083,
-          "width": 120.00003051757812,
+          "width": 119.99996948242188,
           "height": 120,
           "top": 3083,
-          "right": 527.9000244140625,
+          "right": 528.5999755859375,
           "bottom": 3203,
-          "left": 407.8999938964844
+          "left": 408.6000061035156
         },
         "style": {
           "display": "block",
@@ -5838,14 +5838,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 551.9000244140625,
+          "x": 552.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 671.9000244140625,
+          "right": 672.5999755859375,
           "bottom": 3203,
-          "left": 551.9000244140625
+          "left": 552.5999755859375
         },
         "style": {
           "display": "block",
@@ -5880,14 +5880,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 695.9000244140625,
+          "x": 696.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 815.9000244140625,
+          "right": 816.5999755859375,
           "bottom": 3203,
-          "left": 695.9000244140625
+          "left": 696.5999755859375
         },
         "style": {
           "display": "block",
@@ -5922,14 +5922,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 839.9000244140625,
+          "x": 840.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 959.9000244140625,
+          "right": 960.5999755859375,
           "bottom": 3203,
-          "left": 839.9000244140625
+          "left": 840.5999755859375
         },
         "style": {
           "display": "block",
@@ -5964,14 +5964,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 983.9000244140625,
+          "x": 984.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1103.9000244140625,
+          "right": 1104.5999755859375,
           "bottom": 3203,
-          "left": 983.9000244140625
+          "left": 984.5999755859375
         },
         "style": {
           "display": "block",
@@ -6006,14 +6006,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1127.9000244140625,
+          "x": 1128.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1247.9000244140625,
+          "right": 1248.5999755859375,
           "bottom": 3203,
-          "left": 1127.9000244140625
+          "left": 1128.5999755859375
         },
         "style": {
           "display": "block",
@@ -6048,14 +6048,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1271.9000244140625,
+          "x": 1272.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1391.9000244140625,
+          "right": 1392.5999755859375,
           "bottom": 3203,
-          "left": 1271.9000244140625
+          "left": 1272.5999755859375
         },
         "style": {
           "display": "block",
@@ -6090,14 +6090,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1415.9000244140625,
+          "x": 1416.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1535.9000244140625,
+          "right": 1536.5999755859375,
           "bottom": 3203,
-          "left": 1415.9000244140625
+          "left": 1416.5999755859375
         },
         "style": {
           "display": "block",
@@ -6132,14 +6132,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1559.9000244140625,
+          "x": 1560.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1679.9000244140625,
+          "right": 1680.5999755859375,
           "bottom": 3203,
-          "left": 1559.9000244140625
+          "left": 1560.5999755859375
         },
         "style": {
           "display": "block",
@@ -6174,14 +6174,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1703.9000244140625,
+          "x": 1704.5999755859375,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1823.9000244140625,
+          "right": 1824.5999755859375,
           "bottom": 3203,
-          "left": 1703.9000244140625
+          "left": 1704.5999755859375
         },
         "style": {
           "display": "block",
@@ -6805,12 +6805,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4326.576171875,
+          "y": 4326.50341796875,
           "width": 227,
           "height": 20,
-          "top": 4326.576171875,
+          "top": 4326.50341796875,
           "right": 638,
-          "bottom": 4346.576171875,
+          "bottom": 4346.50341796875,
           "left": 411
         },
         "style": {
@@ -6835,7 +6835,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "0",
-          "transform": "matrix(1, 0, 0, 1, 0, -11.4239)",
+          "transform": "matrix(1, 0, 0, 1, 0, -11.4965)",
           "zIndex": "auto"
         }
       },
@@ -6847,12 +6847,12 @@
         "text": "How can I assist you today?",
         "rect": {
           "x": 411,
-          "y": 4328.576171875,
+          "y": 4328.50341796875,
           "width": 226.8125,
           "height": 16,
-          "top": 4328.576171875,
+          "top": 4328.50341796875,
           "right": 637.8125,
-          "bottom": 4344.576171875,
+          "bottom": 4344.50341796875,
           "left": 411
         },
         "style": {
@@ -6889,12 +6889,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4346.576171875,
+          "y": 4346.50341796875,
           "width": 126,
           "height": 20,
-          "top": 4346.576171875,
+          "top": 4346.50341796875,
           "right": 537,
-          "bottom": 4366.576171875,
+          "bottom": 4366.50341796875,
           "left": 411
         },
         "style": {
@@ -6919,7 +6919,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 8.57609)",
+          "transform": "matrix(1, 0, 0, 1, 0, 8.50355)",
           "zIndex": "auto"
         }
       },
@@ -6931,12 +6931,12 @@
         "text": "Generate a logo",
         "rect": {
           "x": 411,
-          "y": 4348.576171875,
+          "y": 4348.50341796875,
           "width": 126,
           "height": 16,
-          "top": 4348.576171875,
+          "top": 4348.50341796875,
           "right": 537,
-          "bottom": 4364.576171875,
+          "bottom": 4364.50341796875,
           "left": 411
         },
         "style": {
@@ -8316,14 +8316,14 @@
         "className": "absolute aspect-square bg-zinc-500",
         "text": "",
         "rect": {
-          "x": 752.7537231445312,
-          "y": 6557.24609375,
-          "width": 139.2843017578125,
-          "height": 139.28466796875,
-          "top": 6557.24609375,
-          "right": 892.0380249023438,
-          "bottom": 6696.53076171875,
-          "left": 752.7537231445312
+          "x": 751.9501953125,
+          "y": 6558.0498046875,
+          "width": 138.9920654296875,
+          "height": 138.9921875,
+          "top": 6558.0498046875,
+          "right": 890.9422607421875,
+          "bottom": 6697.0419921875,
+          "left": 751.9501953125
         },
         "style": {
           "display": "block",
@@ -9697,13 +9697,6 @@
     ],
     "resources": [
       {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 2.1000000000058208,
-        "transferSize": 300,
-        "decodedBodySize": 0
-      },
-      {
         "name": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
         "initiatorType": "link",
         "duration": 0,
@@ -9716,6 +9709,13 @@
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 48432
+      },
+      {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.2999999999883585,
+        "transferSize": 300,
+        "decodedBodySize": 0
       },
       {
         "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
@@ -9979,14 +9979,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.200000000011642,
+        "duration": 10.699999999982538,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 9.799999999988358,
+        "duration": 11.60000000000582,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
@@ -10074,13 +10074,6 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "font",
-      "content_type": "font/woff2"
-    },
-    {
       "url": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
       "status": 200,
       "method": "GET",
@@ -10102,6 +10095,13 @@
       "content_type": "font/woff2"
     },
     {
+      "url": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "font",
+      "content_type": "font/woff2"
+    },
+    {
       "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
       "status": 200,
       "method": "GET",
@@ -10109,35 +10109,7 @@
       "content_type": "text/css; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+      "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10151,84 +10123,14 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10242,6 +10144,34 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/6882-ddeb58a4ac6338a6.js",
       "status": 200,
       "method": "GET",
@@ -10249,7 +10179,70 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/app/layout-39f7103bf9ae0249.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/app/page-b97d865f094c5a93.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/5616-6f78f3f9b66c194c.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://assets.onedollarstats.com/stonks.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10263,7 +10256,28 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
+      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10284,13 +10298,6 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
       "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
       "status": 200,
       "method": "GET",
@@ -10299,20 +10306,6 @@
     },
     {
       "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
       "status": 200,
       "method": "GET",
       "resource_type": "image",
@@ -10333,6 +10326,20 @@
       "content_type": "image/jpeg"
     },
     {
+      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
       "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
       "status": 200,
       "method": "GET",
@@ -10345,13 +10352,6 @@
       "method": "GET",
       "resource_type": "image",
       "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://assets.onedollarstats.com/stonks.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
     },
     {
       "url": "http://127.0.0.1:4180/icon.ico?71bbcdb60d31e7d3",
@@ -10382,13 +10382,6 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/layout-687a0fb7ef11c4b7.js",
       "status": 200,
       "method": "GET",
@@ -10404,6 +10397,13 @@
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/chunks/3467-49ac6239e42fe874.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",

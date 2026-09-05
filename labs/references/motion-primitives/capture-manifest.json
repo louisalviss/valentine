@@ -4,7 +4,7 @@
   "source": {
     "url": "https://motion-primitives.com/",
     "discovery_source": "open-source-validation",
-    "captured_at": "2026-09-05T00:13:33.489Z",
+    "captured_at": "2026-09-05T00:20:25.973Z",
     "baseline_kind": "source-build-control",
     "visual_state_policy": "deterministic-static"
   },
@@ -92,7 +92,7 @@
     ],
     "dom": {
       "path": "evidence/hydrated.html",
-      "sha256": "325847f3e6db63885a032c51e8b8b08b51f7c66fdb35114fa71972448b20f7f8",
+      "sha256": "0201276c1c14af48fdf10a5a23b093c11163b65cd93c138a12193e27f13ec1b5",
       "element_count": 218
     },
     "styles_geometry": {
@@ -434,13 +434,6 @@
     ],
     "network": [
       {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 2.1000000000058208,
-        "transferSize": 300,
-        "decodedBodySize": 0
-      },
-      {
         "name": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
         "initiatorType": "link",
         "duration": 0,
@@ -453,6 +446,13 @@
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 48432
+      },
+      {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.2999999999883585,
+        "transferSize": 300,
+        "decodedBodySize": 0
       },
       {
         "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
@@ -716,14 +716,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.200000000011642,
+        "duration": 10.699999999982538,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 9.799999999988358,
+        "duration": 11.60000000000582,
         "transferSize": 300,
         "decodedBodySize": 7538
       },

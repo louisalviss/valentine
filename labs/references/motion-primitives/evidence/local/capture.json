@@ -3,13 +3,22 @@
   "reference_id": "motion-primitives",
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
   "visual_state_policy": "deterministic-static",
-  "captured_at": "2026-09-05T00:14:42.045Z",
+  "capture_timing_policy": "network-idle-800ms-7s+settle-1200ms+state-450ms",
+  "captured_at": "2026-09-05T00:22:03.501Z",
   "states": [
     {
       "id": "desktop-initial",
       "ratio": 0,
       "width": 1440,
       "height": 900,
+      "dimensions": {
+        "width": 1430,
+        "height": 7602,
+        "viewport_width": 1440,
+        "viewport_height": 900,
+        "scroll_x": 0,
+        "scroll_y": 0
+      },
       "screenshot": "evidence/local/desktop-initial.png"
     },
     {
@@ -17,6 +26,14 @@
       "ratio": 0.25,
       "width": 1440,
       "height": 900,
+      "dimensions": {
+        "width": 1430,
+        "height": 7602,
+        "viewport_width": 1440,
+        "viewport_height": 900,
+        "scroll_x": 0,
+        "scroll_y": 1676
+      },
       "screenshot": "evidence/local/desktop-scroll-25.png"
     },
     {
@@ -24,6 +41,14 @@
       "ratio": 0.5,
       "width": 1440,
       "height": 900,
+      "dimensions": {
+        "width": 1430,
+        "height": 7602,
+        "viewport_width": 1440,
+        "viewport_height": 900,
+        "scroll_x": 0,
+        "scroll_y": 3351
+      },
       "screenshot": "evidence/local/desktop-scroll-50.png"
     },
     {
@@ -31,6 +56,14 @@
       "ratio": 0.75,
       "width": 1440,
       "height": 900,
+      "dimensions": {
+        "width": 1430,
+        "height": 7602,
+        "viewport_width": 1440,
+        "viewport_height": 900,
+        "scroll_x": 0,
+        "scroll_y": 5027
+      },
       "screenshot": "evidence/local/desktop-scroll-75.png"
     },
     {
@@ -38,6 +71,14 @@
       "ratio": 0,
       "width": 768,
       "height": 1024,
+      "dimensions": {
+        "width": 834,
+        "height": 7614,
+        "viewport_width": 768,
+        "viewport_height": 1024,
+        "scroll_x": 0,
+        "scroll_y": 0
+      },
       "screenshot": "evidence/local/tablet-initial.png"
     },
     {
@@ -45,6 +86,14 @@
       "ratio": 0.5,
       "width": 768,
       "height": 1024,
+      "dimensions": {
+        "width": 834,
+        "height": 7614,
+        "viewport_width": 768,
+        "viewport_height": 1024,
+        "scroll_x": 0,
+        "scroll_y": 3295
+      },
       "screenshot": "evidence/local/tablet-scroll-50.png"
     },
     {
@@ -52,6 +101,14 @@
       "ratio": 0,
       "width": 390,
       "height": 844,
+      "dimensions": {
+        "width": 380,
+        "height": 7698,
+        "viewport_width": 390,
+        "viewport_height": 844,
+        "scroll_x": 0,
+        "scroll_y": 0
+      },
       "screenshot": "evidence/local/mobile-initial.png"
     },
     {
@@ -59,6 +116,14 @@
       "ratio": 0.5,
       "width": 390,
       "height": 844,
+      "dimensions": {
+        "width": 380,
+        "height": 7698,
+        "viewport_width": 390,
+        "viewport_height": 844,
+        "scroll_x": 0,
+        "scroll_y": 3427
+      },
       "screenshot": "evidence/local/mobile-scroll-50.png"
     }
   ]
