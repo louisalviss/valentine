@@ -6,11 +6,11 @@
   "baseline_kind": "source-build-control",
   "visual_state_policy": "deterministic-static",
   "discovery_source": "open-source-validation",
-  "captured_at": "2026-09-05T01:07:12.385Z",
+  "captured_at": "2026-09-05T01:16:44.405Z",
   "browser": "system-chrome+puppeteer-core",
   "final_url": "http://127.0.0.1:4180/",
   "title": "Motion-Primitives - UI kit to make beautiful, animated interfaces, faster.",
-  "hydrated_html_sha256": "b422fd9b4489b97442a43b0cc9d7d1b85eb7a9bbcf54b6a3d3ae09b5afc38454",
+  "hydrated_html_sha256": "d0b7384ba2b3120cae65e85007e9b0f1c6727784760fe9e83a85d402c6f3f7d0",
   "viewports": [
     {
       "width": 1440,
@@ -5670,14 +5670,14 @@
         "className": "flex w-max",
         "text": "",
         "rect": {
-          "x": 119.69999694824219,
+          "x": 118.5,
           "y": 3083,
           "width": 1704,
           "height": 120,
           "top": 3083,
-          "right": 1823.6999969482422,
+          "right": 1822.5,
           "bottom": 3203,
-          "left": 119.69999694824219
+          "left": 118.5
         },
         "style": {
           "display": "flex",
@@ -5701,7 +5701,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, -211.3, 0)",
+          "transform": "matrix(1, 0, 0, 1, -212.5, 0)",
           "zIndex": "auto"
         }
       },
@@ -5712,14 +5712,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 119.69999694824219,
+          "x": 118.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 239.6999969482422,
+          "right": 238.5,
           "bottom": 3203,
-          "left": 119.69999694824219
+          "left": 118.5
         },
         "style": {
           "display": "block",
@@ -5754,14 +5754,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 263.70001220703125,
+          "x": 262.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 383.70001220703125,
+          "right": 382.5,
           "bottom": 3203,
-          "left": 263.70001220703125
+          "left": 262.5
         },
         "style": {
           "display": "block",
@@ -5796,14 +5796,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 407.70001220703125,
+          "x": 406.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 527.7000122070312,
+          "right": 526.5,
           "bottom": 3203,
-          "left": 407.70001220703125
+          "left": 406.5
         },
         "style": {
           "display": "block",
@@ -5838,14 +5838,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 551.7000122070312,
+          "x": 550.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 671.7000122070312,
+          "right": 670.5,
           "bottom": 3203,
-          "left": 551.7000122070312
+          "left": 550.5
         },
         "style": {
           "display": "block",
@@ -5880,14 +5880,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 695.7000122070312,
+          "x": 694.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 815.7000122070312,
+          "right": 814.5,
           "bottom": 3203,
-          "left": 695.7000122070312
+          "left": 694.5
         },
         "style": {
           "display": "block",
@@ -5922,14 +5922,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 839.7000122070312,
+          "x": 838.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 959.7000122070312,
+          "right": 958.5,
           "bottom": 3203,
-          "left": 839.7000122070312
+          "left": 838.5
         },
         "style": {
           "display": "block",
@@ -5964,14 +5964,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 983.7000122070312,
+          "x": 982.5,
           "y": 3083,
-          "width": 119.99993896484375,
+          "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1103.699951171875,
+          "right": 1102.5,
           "bottom": 3203,
-          "left": 983.7000122070312
+          "left": 982.5
         },
         "style": {
           "display": "block",
@@ -6006,14 +6006,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1127.699951171875,
+          "x": 1126.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1247.699951171875,
+          "right": 1246.5,
           "bottom": 3203,
-          "left": 1127.699951171875
+          "left": 1126.5
         },
         "style": {
           "display": "block",
@@ -6048,14 +6048,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1271.699951171875,
+          "x": 1270.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1391.699951171875,
+          "right": 1390.5,
           "bottom": 3203,
-          "left": 1271.699951171875
+          "left": 1270.5
         },
         "style": {
           "display": "block",
@@ -6090,14 +6090,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1415.699951171875,
+          "x": 1414.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1535.699951171875,
+          "right": 1534.5,
           "bottom": 3203,
-          "left": 1415.699951171875
+          "left": 1414.5
         },
         "style": {
           "display": "block",
@@ -6132,14 +6132,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1559.699951171875,
+          "x": 1558.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1679.699951171875,
+          "right": 1678.5,
           "bottom": 3203,
-          "left": 1559.699951171875
+          "left": 1558.5
         },
         "style": {
           "display": "block",
@@ -6174,14 +6174,14 @@
         "className": "aspect-square w-[120px] rounded-[4px]",
         "text": "",
         "rect": {
-          "x": 1703.699951171875,
+          "x": 1702.5,
           "y": 3083,
           "width": 120,
           "height": 120,
           "top": 3083,
-          "right": 1823.699951171875,
+          "right": 1822.5,
           "bottom": 3203,
-          "left": 1703.699951171875
+          "left": 1702.5
         },
         "style": {
           "display": "block",
@@ -6805,12 +6805,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4325.48291015625,
+          "y": 4324.9599609375,
           "width": 227,
           "height": 20,
-          "top": 4325.48291015625,
+          "top": 4324.9599609375,
           "right": 638,
-          "bottom": 4345.48291015625,
+          "bottom": 4344.9599609375,
           "left": 411
         },
         "style": {
@@ -6835,7 +6835,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "0",
-          "transform": "matrix(1, 0, 0, 1, 0, -12.5172)",
+          "transform": "matrix(1, 0, 0, 1, 0, -13.0401)",
           "zIndex": "auto"
         }
       },
@@ -6847,12 +6847,12 @@
         "text": "How can I assist you today?",
         "rect": {
           "x": 411,
-          "y": 4327.48291015625,
+          "y": 4326.9599609375,
           "width": 226.8125,
           "height": 16,
-          "top": 4327.48291015625,
+          "top": 4326.9599609375,
           "right": 637.8125,
-          "bottom": 4343.48291015625,
+          "bottom": 4342.9599609375,
           "left": 411
         },
         "style": {
@@ -6889,12 +6889,12 @@
         "text": "",
         "rect": {
           "x": 411,
-          "y": 4345.48291015625,
+          "y": 4344.9599609375,
           "width": 126,
           "height": 20,
-          "top": 4345.48291015625,
+          "top": 4344.9599609375,
           "right": 537,
-          "bottom": 4365.48291015625,
+          "bottom": 4364.9599609375,
           "left": 411
         },
         "style": {
@@ -6919,7 +6919,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 7.48282)",
+          "transform": "matrix(1, 0, 0, 1, 0, 6.95994)",
           "zIndex": "auto"
         }
       },
@@ -6931,12 +6931,12 @@
         "text": "Generate a logo",
         "rect": {
           "x": 411,
-          "y": 4347.48291015625,
+          "y": 4346.9599609375,
           "width": 126,
           "height": 16,
-          "top": 4347.48291015625,
+          "top": 4346.9599609375,
           "right": 537,
-          "bottom": 4363.48291015625,
+          "bottom": 4362.9599609375,
           "left": 411
         },
         "style": {
@@ -8316,14 +8316,14 @@
         "className": "absolute aspect-square bg-zinc-500",
         "text": "",
         "rect": {
-          "x": 750.5787963867188,
-          "y": 6559.42138671875,
-          "width": 138.448974609375,
-          "height": 138.44873046875,
-          "top": 6559.42138671875,
-          "right": 889.0277709960938,
-          "bottom": 6697.8701171875,
-          "left": 750.5787963867188
+          "x": 749.5355224609375,
+          "y": 6560.46435546875,
+          "width": 137.997802734375,
+          "height": 137.998046875,
+          "top": 6560.46435546875,
+          "right": 887.5333251953125,
+          "bottom": 6698.46240234375,
+          "left": 749.5355224609375
         },
         "style": {
           "display": "block",
@@ -9704,18 +9704,18 @@
         "decodedBodySize": 58048
       },
       {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.300000000046566,
+        "transferSize": 300,
+        "decodedBodySize": 0
+      },
+      {
         "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
         "initiatorType": "link",
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 48432
-      },
-      {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 2,
-        "transferSize": 300,
-        "decodedBodySize": 0
       },
       {
         "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
@@ -9979,14 +9979,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.5,
+        "duration": 10.400000000023283,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 12.10000000000582,
+        "duration": 11.699999999953434,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
@@ -10074,13 +10074,6 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "stylesheet",
-      "content_type": "text/css; charset=UTF-8"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/media/66f30814ff6d7cdf.p.woff2",
       "status": 200,
       "method": "GET",
@@ -10095,6 +10088,13 @@
       "content_type": "font/woff2"
     },
     {
+      "url": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
       "url": "http://127.0.0.1:4180/_next/static/css/4fc832f4f0d0d2c1.css",
       "status": 200,
       "method": "GET",
@@ -10102,11 +10102,11 @@
       "content_type": "text/css; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+      "url": "http://127.0.0.1:4180/_next/static/css/94849942fe8d2ad5.css",
       "status": 200,
       "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
+      "resource_type": "stylesheet",
+      "content_type": "text/css; charset=UTF-8"
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/chunks/webpack-3f8f8a3030415794.js",
@@ -10116,35 +10116,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/main-app-60c3b25ab06591a7.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://assets.onedollarstats.com/stonks.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10158,146 +10130,6 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "image",
-      "content_type": "image/jpeg"
-    },
-    {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/7974-a826272213c31ec1.js",
       "status": 200,
       "method": "GET",
@@ -10305,7 +10137,14 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/fd9d1056-efbb5f4a710e7b0a.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/7410-fefd81715c16252e.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10319,7 +10158,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
+      "url": "http://127.0.0.1:4180/_next/static/chunks/8111-d31632fcf3a5414d.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10327,6 +10166,13 @@
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/chunks/4971-725fd8ab2c23db1a.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/2237-b67da7d8a892c365.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10354,11 +10200,158 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/icon.ico?71bbcdb60d31e7d3",
+      "url": "https://assets.onedollarstats.com/stonks.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "other",
-      "content_type": "image/x-icon"
+      "resource_type": "script",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "image",
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://127.0.0.1:4180/icon.ico?71bbcdb60d31e7d3",
@@ -10389,13 +10382,6 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/layout-687a0fb7ef11c4b7.js",
       "status": 200,
       "method": "GET",
@@ -10411,6 +10397,13 @@
     },
     {
       "url": "http://127.0.0.1:4180/_next/static/chunks/app/docs/text-effect/page-42633ef29434e7c2.js",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -10711,6 +10704,13 @@
       "content_type": ""
     },
     {
+      "url": "http://127.0.0.1:4180/docs?_rsc=19zvn",
+      "status": 304,
+      "method": "GET",
+      "resource_type": "fetch",
+      "content_type": ""
+    },
+    {
       "url": "http://127.0.0.1:4180/_next/static/chunks/5092-5d22f06807fadbe2.js",
       "status": 200,
       "method": "GET",
@@ -10744,13 +10744,6 @@
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "http://127.0.0.1:4180/docs?_rsc=19zvn",
-      "status": 304,
-      "method": "GET",
-      "resource_type": "fetch",
-      "content_type": ""
     },
     {
       "url": "http://127.0.0.1:4180/",

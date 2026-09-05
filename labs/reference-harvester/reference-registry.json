@@ -111,8 +111,7 @@
           "status": "pass"
         },
         "motion_interaction": {
-          "status": "fail",
-          "score": 34.5727
+          "status": "pending"
         }
       },
       "provenance": {

@@ -4,7 +4,7 @@
   "source": {
     "url": "https://motion-primitives.com/",
     "discovery_source": "open-source-validation",
-    "captured_at": "2026-09-05T01:07:12.385Z",
+    "captured_at": "2026-09-05T01:16:44.405Z",
     "baseline_kind": "source-build-control",
     "visual_state_policy": "deterministic-static"
   },
@@ -92,7 +92,7 @@
     ],
     "dom": {
       "path": "evidence/hydrated.html",
-      "sha256": "b422fd9b4489b97442a43b0cc9d7d1b85eb7a9bbcf54b6a3d3ae09b5afc38454",
+      "sha256": "d0b7384ba2b3120cae65e85007e9b0f1c6727784760fe9e83a85d402c6f3f7d0",
       "element_count": 218
     },
     "styles_geometry": {
@@ -441,18 +441,18 @@
         "decodedBodySize": 58048
       },
       {
+        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
+        "initiatorType": "link",
+        "duration": 2.300000000046566,
+        "transferSize": 300,
+        "decodedBodySize": 0
+      },
+      {
         "name": "http://127.0.0.1:4180/_next/static/media/e4af272ccee01ff0-s.p.woff2",
         "initiatorType": "link",
         "duration": 0,
         "transferSize": 0,
         "decodedBodySize": 48432
-      },
-      {
-        "name": "http://127.0.0.1:4180/eb-27-lamp-edouard-wilfrid-buquet.jpg",
-        "initiatorType": "link",
-        "duration": 2,
-        "transferSize": 300,
-        "decodedBodySize": 0
       },
       {
         "name": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
@@ -716,14 +716,14 @@
       {
         "name": "http://127.0.0.1:4180/docs/text-effect?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 10.5,
+        "duration": 10.400000000023283,
         "transferSize": 300,
         "decodedBodySize": 185319
       },
       {
         "name": "http://127.0.0.1:4180/docs?_rsc=19zvn",
         "initiatorType": "fetch",
-        "duration": 12.10000000000582,
+        "duration": 11.699999999953434,
         "transferSize": 300,
         "decodedBodySize": 7538
       },
@@ -778,11 +778,9 @@
       "exceptions": []
     },
     "motion_interaction": {
-      "status": "fail",
+      "status": "pending",
       "states_verified": [],
-      "minimum_score": 34.5727,
-      "method": "Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.",
-      "notes": "Independent interaction gate; visual PASS is not used to infer this result."
+      "notes": "Visual source-import control measured; independent motion/interaction verification still required."
     }
   },
   "provenance": {
