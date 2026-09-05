@@ -1,5 +1,6 @@
 {
-  "version": "3.1",
+  "version": "3.2",
+  "capture_protocol": "3.1",
   "reference_id": "motion-primitives",
   "scenario": "EB27 MorphingDialog runtime spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test",
   "policy": {
@@ -7,11 +8,12 @@
     "open_geometry_min": 98.0,
     "spatial_trajectory_min": 98.0,
     "runtime_timing_curve_min": 98.0,
+    "runtime_phase_budget_ms": 16.7,
     "functional_required": true,
     "interaction_animation_signature_measured_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 91.711,
+  "minimum_score": 97.3199,
   "status": "fail",
   "viewports": [
     {
@@ -43,122 +45,110 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.7685,
-        "max_normalized_geometry_error": 0.002315,
+        "score": 99.5274,
+        "max_normalized_geometry_error": 0.004726,
         "basis": "spatial progress milestones; scheduler phase excluded",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 0.0022659558203529033,
-            "image_error": 0.0023150381345149323,
-            "trigger_error": 0.0022658880035126257,
+            "dialog_error": 0.00226596455593368,
+            "image_error": 0.002305273990473956,
+            "trigger_error": 0.002265896739093402,
             "baseline_t": 0.0,
-            "local_t": 7.026,
+            "local_t": 0.636,
+            "baseline_crossing": false,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.25,
-            "dialog_error": 1.1711856492032287e-08,
-            "image_error": 0.0007599569109179861,
-            "trigger_error": 2.884253818693752e-08,
-            "baseline_t": 17.058,
-            "local_t": 22.577,
+            "dialog_error": 5.1175891068548176e-08,
+            "image_error": 0.0001082732324517287,
+            "trigger_error": 4.602858199278772e-08,
+            "baseline_t": 16.62,
+            "local_t": 15.36,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.5,
-            "dialog_error": 2.2983294043241484e-08,
-            "image_error": 0.0012135929076871814,
-            "trigger_error": 2.8708649403420673e-08,
-            "baseline_t": 42.369,
-            "local_t": 41.049,
+            "dialog_error": 1.3414958072783317e-08,
+            "image_error": 0.0007594421595741273,
+            "trigger_error": 3.086687748855689e-08,
+            "baseline_t": 42.239,
+            "local_t": 35.598,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.75,
-            "dialog_error": 3.2149404284432924e-08,
-            "image_error": 0.0017994086617642323,
-            "trigger_error": 5.3307465779855394e-08,
-            "baseline_t": 62.69,
-            "local_t": 65.924,
+            "dialog_error": 3.305315215603362e-08,
+            "image_error": 0.004725994192013982,
+            "trigger_error": 4.6654017735489916e-08,
+            "baseline_t": 68.282,
+            "local_t": 55.542,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.9,
-            "dialog_error": 2.2181827574740966e-08,
-            "image_error": 4.502392799723667e-08,
-            "trigger_error": 7.801982519595185e-08,
-            "baseline_t": 93.223,
-            "local_t": 97.133,
+            "dialog_error": 2.2426052442230888e-08,
+            "image_error": 3.2471255945409895e-06,
+            "trigger_error": 3.461568221199387e-08,
+            "baseline_t": 86.724,
+            "local_t": 92.146,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           }
         ]
       },
       "timing_curve": {
-        "score": 92.7228,
-        "max_progress_error": 0.072772,
-        "basis": "runtime morph progress versus elapsed time from first dialog frame",
-        "samples": [
+        "score": 97.3199,
+        "measured": true,
+        "phase_offset_ms": -3.95,
+        "phase_budget_ms": 16.7,
+        "phase_within_budget": true,
+        "rmse_phase_aligned_residual_ms": 6.7,
+        "max_abs_phase_aligned_residual_ms": 9.373,
+        "nominal_transition_ms": 250.0,
+        "basis": "same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "milestones": [
           {
-            "t_ms": 16.7,
-            "baseline_progress": 0.246937,
-            "local_progress": 0.174165,
-            "progress_error": 0.072772,
-            "presence_match": true
+            "progress": 0.25,
+            "baseline_t": 16.62,
+            "local_t": 15.36,
+            "raw_delta_ms": -1.26,
+            "phase_aligned_residual_ms": 2.69
           },
           {
-            "t_ms": 33.3,
-            "baseline_progress": 0.3888,
-            "local_progress": 0.388364,
-            "progress_error": 0.000436,
-            "presence_match": true
+            "progress": 0.5,
+            "baseline_t": 42.239,
+            "local_t": 35.598,
+            "raw_delta_ms": -6.641,
+            "phase_aligned_residual_ms": -2.69
           },
           {
-            "t_ms": 50.0,
-            "baseline_progress": 0.59388,
-            "local_progress": 0.629134,
-            "progress_error": 0.035254,
-            "presence_match": true
+            "progress": 0.75,
+            "baseline_t": 68.282,
+            "local_t": 55.542,
+            "raw_delta_ms": -12.74,
+            "phase_aligned_residual_ms": -8.789
           },
           {
-            "t_ms": 75.0,
-            "baseline_progress": 0.841071,
-            "local_progress": 0.799517,
-            "progress_error": 0.041554,
-            "presence_match": true
-          },
-          {
-            "t_ms": 100.0,
-            "baseline_progress": 0.911013,
-            "local_progress": 0.911713,
-            "progress_error": 0.000701,
-            "presence_match": true
-          },
-          {
-            "t_ms": 150.0,
-            "baseline_progress": 0.985778,
-            "local_progress": 0.984597,
-            "progress_error": 0.001181,
-            "presence_match": true
-          },
-          {
-            "t_ms": 200.0,
-            "baseline_progress": 0.99836,
-            "local_progress": 0.998115,
-            "progress_error": 0.000245,
-            "presence_match": true
-          },
-          {
-            "t_ms": 250.0,
-            "baseline_progress": 1.0,
-            "local_progress": 1.0,
-            "progress_error": 0.0,
-            "presence_match": true
+            "progress": 0.9,
+            "baseline_t": 86.724,
+            "local_t": 92.146,
+            "raw_delta_ms": 5.423,
+            "phase_aligned_residual_ms": 9.373
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 0.5
+        "click_to_dialog_delta_ms": 4.0
       },
       "animation_signature": {
         "measured": true,
@@ -168,7 +158,7 @@
         "baseline_capture_t_ms": 0,
         "local_capture_t_ms": 0
       },
-      "minimum_score": 92.7228,
+      "minimum_score": 97.3199,
       "status": "fail"
     },
     {
@@ -200,122 +190,110 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.9314,
-        "max_normalized_geometry_error": 0.000686,
+        "score": 99.937,
+        "max_normalized_geometry_error": 0.00063,
         "basis": "spatial progress milestones; scheduler phase excluded",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 1.6442917081477413e-08,
-            "image_error": 3.7561494509721286e-05,
-            "trigger_error": 3.580385183066985e-08,
-            "baseline_t": 12.497,
-            "local_t": 5.277,
+            "dialog_error": 5.196301863362734e-08,
+            "image_error": 0.00016142879940673807,
+            "trigger_error": 8.691540438704602e-08,
+            "baseline_t": 4.152,
+            "local_t": 6.168,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.25,
-            "dialog_error": 4.811898196171504e-08,
-            "image_error": 0.0005340356538256746,
-            "trigger_error": 5.1687678743718786e-08,
-            "baseline_t": 26.676,
-            "local_t": 20.971,
+            "dialog_error": 6.844831808358812e-08,
+            "image_error": 0.0006295569533424398,
+            "trigger_error": 4.0245151484878775e-08,
+            "baseline_t": 17.712,
+            "local_t": 21.771,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.5,
-            "dialog_error": 1.122741738212286e-08,
-            "image_error": 0.0006859489508855311,
-            "trigger_error": 2.871271601311082e-08,
-            "baseline_t": 49.263,
-            "local_t": 42.053,
+            "dialog_error": 9.686912159195e-09,
+            "image_error": 0.0003487535420533403,
+            "trigger_error": 1.2231429947873237e-08,
+            "baseline_t": 38.205,
+            "local_t": 40.769,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.75,
-            "dialog_error": 6.836841868253265e-08,
-            "image_error": 5.108580187250202e-08,
-            "trigger_error": 6.836841868253265e-08,
-            "baseline_t": 77.412,
-            "local_t": 70.388,
+            "dialog_error": 5.763162748713788e-08,
+            "image_error": 0.00013973844897602206,
+            "trigger_error": 1.0756830175313763e-07,
+            "baseline_t": 65.97,
+            "local_t": 72.43,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           },
           {
             "progress": 0.9,
-            "dialog_error": 7.172416397298156e-08,
-            "image_error": 5.95505606585133e-06,
-            "trigger_error": 6.082235484264414e-08,
-            "baseline_t": 109.599,
-            "local_t": 101.171,
+            "dialog_error": 7.003622805803809e-08,
+            "image_error": 4.164625377994543e-08,
+            "trigger_error": 8.414188492454168e-08,
+            "baseline_t": 98.053,
+            "local_t": 104.487,
+            "baseline_crossing": true,
+            "local_crossing": true,
             "presence_match": true
           }
         ]
       },
       "timing_curve": {
-        "score": 91.711,
-        "max_progress_error": 0.08289,
-        "basis": "runtime morph progress versus elapsed time from first dialog frame",
-        "samples": [
+        "score": 99.322,
+        "measured": true,
+        "phase_offset_ms": 5.247,
+        "phase_budget_ms": 16.7,
+        "phase_within_budget": true,
+        "rmse_phase_aligned_residual_ms": 1.695,
+        "max_abs_phase_aligned_residual_ms": 2.683,
+        "nominal_transition_ms": 250.0,
+        "basis": "same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
+        "milestones": [
           {
-            "t_ms": 16.7,
-            "baseline_progress": 0.115245,
-            "local_progress": 0.198136,
-            "progress_error": 0.08289,
-            "presence_match": true
+            "progress": 0.25,
+            "baseline_t": 17.712,
+            "local_t": 21.771,
+            "raw_delta_ms": 4.059,
+            "phase_aligned_residual_ms": -1.188
           },
           {
-            "t_ms": 33.3,
-            "baseline_progress": 0.339475,
-            "local_progress": 0.400754,
-            "progress_error": 0.061278,
-            "presence_match": true
+            "progress": 0.5,
+            "baseline_t": 38.205,
+            "local_t": 40.769,
+            "raw_delta_ms": 2.564,
+            "phase_aligned_residual_ms": -2.683
           },
           {
-            "t_ms": 50.0,
-            "baseline_progress": 0.507412,
-            "local_progress": 0.590022,
-            "progress_error": 0.082611,
-            "presence_match": true
+            "progress": 0.75,
+            "baseline_t": 65.97,
+            "local_t": 72.43,
+            "raw_delta_ms": 6.46,
+            "phase_aligned_residual_ms": 1.214
           },
           {
-            "t_ms": 75.0,
-            "baseline_progress": 0.732641,
-            "local_progress": 0.77826,
-            "progress_error": 0.045619,
-            "presence_match": true
-          },
-          {
-            "t_ms": 100.0,
-            "baseline_progress": 0.869532,
-            "local_progress": 0.896964,
-            "progress_error": 0.027432,
-            "presence_match": true
-          },
-          {
-            "t_ms": 150.0,
-            "baseline_progress": 0.974463,
-            "local_progress": 0.980862,
-            "progress_error": 0.006399,
-            "presence_match": true
-          },
-          {
-            "t_ms": 200.0,
-            "baseline_progress": 0.996413,
-            "local_progress": 0.997498,
-            "progress_error": 0.001086,
-            "presence_match": true
-          },
-          {
-            "t_ms": 250.0,
-            "baseline_progress": 0.999813,
-            "local_progress": 1.0,
-            "progress_error": 0.000187,
-            "presence_match": true
+            "progress": 0.9,
+            "baseline_t": 98.053,
+            "local_t": 104.487,
+            "raw_delta_ms": 6.435,
+            "phase_aligned_residual_ms": 1.188
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 7.1
+        "click_to_dialog_delta_ms": 5.3
       },
       "animation_signature": {
         "measured": true,
@@ -325,8 +303,8 @@
         "baseline_capture_t_ms": 0,
         "local_capture_t_ms": 0
       },
-      "minimum_score": 91.711,
-      "status": "fail"
+      "minimum_score": 99.322,
+      "status": "pass"
     }
   ]
 }
