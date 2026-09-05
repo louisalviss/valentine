@@ -21,29 +21,28 @@ if (!chrome) throw new Error('Chrome/Chromium not found');
 const root = process.cwd();
 const evidenceDir = path.join(root, 'labs', 'references', referenceId, 'evidence', 'interaction');
 fs.mkdirSync(evidenceDir, { recursive: true });
-
-const browser = await puppeteer.launch({
-  executablePath: chrome,
-  headless: true,
-  args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--hide-scrollbars']
-});
-
+const browser = await puppeteer.launch({ executablePath:chrome, headless:true, args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--hide-scrollbars'] });
 const triggerAltPrefix = 'A desk lamp designed by Edouard Wilfrid Buquet';
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sampleTimes = [0, 50, 100, 150, 200, 250];
 
-async function newPage(url, width, height) {
+async function setupPage(url, width, height) {
   const page = await browser.newPage();
+  await page.bringToFront();
   page.setDefaultNavigationTimeout(30000);
-  await page.setViewport({ width, height, deviceScaleFactor: 1 });
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-  try { await page.waitForNetworkIdle({ idleTime: 800, timeout: 7000 }); } catch {}
+  await page.setViewport({ width, height, deviceScaleFactor:1 });
+  await page.emulateMediaFeatures([{ name:'prefers-color-scheme', value:'light' }]);
+  await page.evaluateOnNewDocument(() => {
+    try { localStorage.setItem('theme', 'light'); } catch {}
+  });
+  await page.goto(url, { waitUntil:'domcontentloaded', timeout:30000 });
+  try { await page.waitForNetworkIdle({ idleTime:800, timeout:7000 }); } catch {}
   await sleep(1200);
-  await page.evaluate(() => scrollTo(0, 0));
-  await sleep(120);
+  await page.evaluate(() => scrollTo(0,0));
+  await sleep(100);
   const found = await page.evaluate(prefix => {
-    const img = [...document.images].find(x => (x.alt || '').startsWith(prefix));
-    const trigger = img?.closest('button[aria-haspopup="dialog"]');
-    return Boolean(img && trigger);
+    const img=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
+    return Boolean(img?.closest('button[aria-haspopup="dialog"]'));
   }, triggerAltPrefix);
   if (!found) throw new Error(`${url}: EB27 morphing-dialog trigger not found`);
   return page;
@@ -53,131 +52,134 @@ async function snapshot(page) {
   return page.evaluate(prefix => {
     const rect = el => {
       if (!el) return null;
-      const r = el.getBoundingClientRect();
-      return { x:r.x, y:r.y, width:r.width, height:r.height, top:r.top, right:r.right, bottom:r.bottom, left:r.left };
+      const r=el.getBoundingClientRect();
+      return {x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,right:r.right,bottom:r.bottom,left:r.left};
     };
-    const img = [...document.images].find(x => (x.alt || '').startsWith(prefix));
-    const trigger = img?.closest('button[aria-haspopup="dialog"]') || null;
-    const dialog = document.querySelector('[role="dialog"]');
-    const dialogImg = dialog ? [...dialog.querySelectorAll('img')].find(x => (x.alt || '').startsWith(prefix)) : null;
-    const close = document.querySelector('button[aria-label="Close dialog"]');
-    const backdrop = [...document.body.children].find(el => {
-      const s = getComputedStyle(el);
-      const r = el.getBoundingClientRect();
-      return s.position === 'fixed' && r.width >= innerWidth * .95 && r.height >= innerHeight * .95 && !el.querySelector('[role="dialog"]');
-    }) || null;
-    const animations = document.getAnimations({ subtree:true }).map((a, index) => {
-      let timing = {};
-      let computed = {};
-      try { timing = a.effect?.getTiming?.() || {}; } catch {}
-      try { computed = a.effect?.getComputedTiming?.() || {}; } catch {}
-      const target = a.effect?.target;
-      return {
-        index,
-        playState:a.playState,
-        currentTime:Number.isFinite(Number(a.currentTime)) ? Number(a.currentTime) : null,
-        playbackRate:a.playbackRate,
-        timing:{
-          delay:Number(timing.delay || 0),
-          duration:typeof timing.duration === 'number' ? timing.duration : String(timing.duration || ''),
-          endDelay:Number(timing.endDelay || 0),
-          iterations:Number(timing.iterations || 1),
-          easing:String(timing.easing || '')
-        },
-        progress:Number.isFinite(Number(computed.progress)) ? Number(computed.progress) : null,
-        target:target ? { tag:target.tagName?.toLowerCase() || null, role:target.getAttribute?.('role') || null, ariaLabel:target.getAttribute?.('aria-label') || null } : null
-      };
-    });
+    const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
+    const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]')||null;
+    const dialog=document.querySelector('[role="dialog"]');
+    const dialogImg=dialog?[...dialog.querySelectorAll('img')].find(x=>(x.alt||'').startsWith(prefix)):null;
+    const close=document.querySelector('button[aria-label="Close dialog"]');
+    const backdrop=[...document.body.children].find(el=>{
+      const s=getComputedStyle(el), r=el.getBoundingClientRect();
+      return s.position==='fixed' && r.width>=innerWidth*.95 && r.height>=innerHeight*.95 && !el.querySelector('[role="dialog"]');
+    })||null;
     return {
-      trigger:{ exists:Boolean(trigger), expanded:trigger?.getAttribute('aria-expanded') || null, rect:rect(trigger) },
-      dialog:{ exists:Boolean(dialog), rect:rect(dialog) },
-      dialogImage:{ exists:Boolean(dialogImg), rect:rect(dialogImg) },
-      close:{ exists:Boolean(close), rect:rect(close) },
-      backdrop:{ exists:Boolean(backdrop), rect:rect(backdrop), opacity:backdrop ? getComputedStyle(backdrop).opacity : null },
-      bodyOverflow:getComputedStyle(document.body).overflow,
-      activeElement:{ tag:document.activeElement?.tagName?.toLowerCase() || null, ariaLabel:document.activeElement?.getAttribute?.('aria-label') || null },
-      animations
+      trigger:{exists:Boolean(trigger),expanded:trigger?.getAttribute('aria-expanded')||null,rect:rect(trigger)},
+      dialog:{exists:Boolean(dialog),rect:rect(dialog)},
+      dialogImage:{exists:Boolean(dialogImg),rect:rect(dialogImg)},
+      close:{exists:Boolean(close),rect:rect(close)},
+      backdrop:{exists:Boolean(backdrop),rect:rect(backdrop),opacity:backdrop?getComputedStyle(backdrop).opacity:null},
+      bodyOverflow:getComputedStyle(document.body).overflow
     };
   }, triggerAltPrefix);
 }
 
 async function clickTrigger(page) {
   await page.evaluate(prefix => {
-    const img = [...document.images].find(x => (x.alt || '').startsWith(prefix));
-    const trigger = img?.closest('button[aria-haspopup="dialog"]');
+    const img=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
+    const trigger=img?.closest('button[aria-haspopup="dialog"]');
     if (!trigger) throw new Error('trigger not found');
     trigger.click();
   }, triggerAltPrefix);
 }
 
-async function pressEscape(page) {
-  await page.keyboard.press('Escape');
+async function interactionAnimations(page) {
+  return page.evaluate(prefix => {
+    const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
+    const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]')||null;
+    const dialog=document.querySelector('[role="dialog"]');
+    const backdrop=[...document.body.children].find(el=>{
+      const s=getComputedStyle(el), r=el.getBoundingClientRect();
+      return s.position==='fixed' && r.width>=innerWidth*.95 && r.height>=innerHeight*.95 && !el.querySelector('[role="dialog"]');
+    })||null;
+    const belongs = target => Boolean(target && (
+      target===trigger || trigger?.contains(target) || target===dialog || dialog?.contains(target) || target===backdrop || backdrop?.contains(target)
+    ));
+    return document.getAnimations({subtree:true}).filter(a=>belongs(a.effect?.target)).map(a=>{
+      const target=a.effect?.target;
+      let timing={}; try { timing=a.effect?.getTiming?.()||{}; } catch {}
+      return {
+        target:{tag:target?.tagName?.toLowerCase()||null,role:target?.getAttribute?.('role')||null,ariaLabel:target?.getAttribute?.('aria-label')||null},
+        timing:{delay:Number(timing.delay||0),duration:typeof timing.duration==='number'?timing.duration:String(timing.duration||''),endDelay:Number(timing.endDelay||0),iterations:Number(timing.iterations||1),easing:String(timing.easing||'')}
+      };
+    });
+  }, triggerAltPrefix);
 }
 
-const viewports = [
-  { label:'desktop', width:1440, height:900 },
-  { label:'mobile', width:390, height:844 }
-];
-const sampleTimes = [0, 50, 100, 150, 250, 400];
-const report = {
-  version:'1.0',
-  reference_id:referenceId,
-  baseline_url:baselineUrl,
-  local_url:localUrl,
-  captured_at:new Date().toISOString(),
-  scenario:'EB27 MorphingDialog closed -> open trajectory -> settled open -> Escape -> closed',
-  viewports:[]
-};
-
-for (const viewport of viewports) {
-  const baseline = await newPage(baselineUrl, viewport.width, viewport.height);
-  const local = await newPage(localUrl, viewport.width, viewport.height);
-
-  const closed = { baseline:await snapshot(baseline), local:await snapshot(local) };
-  await Promise.all([clickTrigger(baseline), clickTrigger(local)]);
-
-  const trajectory=[];
-  let elapsed = 0;
-  for (const t of sampleTimes) {
-    const wait = Math.max(0, t - elapsed);
-    if (wait) await sleep(wait);
-    trajectory.push({ t, baseline:await snapshot(baseline), local:await snapshot(local) });
-    elapsed = t;
-  }
-
-  await sleep(160);
-  const open = { baseline:await snapshot(baseline), local:await snapshot(local) };
-  const baselineOpenFile = `${viewport.label}-baseline-open.png`;
-  const localOpenFile = `${viewport.label}-local-open.png`;
-  await baseline.screenshot({ path:path.join(evidenceDir, baselineOpenFile), fullPage:false });
-  await local.screenshot({ path:path.join(evidenceDir, localOpenFile), fullPage:false });
-
-  await Promise.all([pressEscape(baseline), pressEscape(local)]);
-  await sleep(450);
-  const afterClose = { baseline:await snapshot(baseline), local:await snapshot(local) };
-  const baselineClosedFile = `${viewport.label}-baseline-after-close.png`;
-  const localClosedFile = `${viewport.label}-local-after-close.png`;
-  await baseline.screenshot({ path:path.join(evidenceDir, baselineClosedFile), fullPage:false });
-  await local.screenshot({ path:path.join(evidenceDir, localClosedFile), fullPage:false });
-
-  report.viewports.push({
-    ...viewport,
-    closed,
-    trajectory,
-    open,
-    after_close:afterClose,
-    screenshots:{
-      baseline_open:`evidence/interaction/${baselineOpenFile}`,
-      local_open:`evidence/interaction/${localOpenFile}`,
-      baseline_after_close:`evidence/interaction/${baselineClosedFile}`,
-      local_after_close:`evidence/interaction/${localClosedFile}`
+async function setInteractionTime(page, time) {
+  await page.evaluate((prefix,time) => {
+    const sourceImg=[...document.images].find(x=>(x.alt||'').startsWith(prefix));
+    const trigger=sourceImg?.closest('button[aria-haspopup="dialog"]')||null;
+    const dialog=document.querySelector('[role="dialog"]');
+    const backdrop=[...document.body.children].find(el=>{
+      const s=getComputedStyle(el), r=el.getBoundingClientRect();
+      return s.position==='fixed' && r.width>=innerWidth*.95 && r.height>=innerHeight*.95 && !el.querySelector('[role="dialog"]');
+    })||null;
+    const belongs = target => Boolean(target && (
+      target===trigger || trigger?.contains(target) || target===dialog || dialog?.contains(target) || target===backdrop || backdrop?.contains(target)
+    ));
+    for (const a of document.getAnimations({subtree:true}).filter(a=>belongs(a.effect?.target))) {
+      try {
+        a.pause();
+        const timing=a.effect?.getTiming?.()||{};
+        const duration=typeof timing.duration==='number'?timing.duration:time;
+        a.currentTime=Math.max(0,Math.min(time,duration));
+      } catch {}
     }
-  });
-
-  await baseline.close();
-  await local.close();
+  }, triggerAltPrefix, time);
+  await sleep(30);
 }
 
+async function captureDialog(page, file) {
+  const dialog=await page.$('[role="dialog"]');
+  if (!dialog) throw new Error('open dialog element missing');
+  await dialog.screenshot({path:path.join(evidenceDir,file)});
+}
+
+async function deterministicScenario(url, side, viewport) {
+  const page=await setupPage(url,viewport.width,viewport.height);
+  const closed=await snapshot(page);
+  await clickTrigger(page);
+  await sleep(50);
+  const signature=await interactionAnimations(page);
+  const trajectory=[];
+  for (const t of sampleTimes) {
+    await setInteractionTime(page,t);
+    trajectory.push({t,state:await snapshot(page)});
+  }
+  await setInteractionTime(page,250);
+  const open=await snapshot(page);
+  const dialogFile=`${viewport.label}-${side}-open-dialog.png`;
+  const fullFile=`${viewport.label}-${side}-open-full.png`;
+  await captureDialog(page,dialogFile);
+  await page.screenshot({path:path.join(evidenceDir,fullFile),fullPage:false});
+  await page.close();
+  return {closed,trajectory,open,animation_signature:signature,screenshots:{open_dialog:`evidence/interaction/${dialogFile}`,open_full:`evidence/interaction/${fullFile}`}};
+}
+
+async function functionalScenario(url, viewport) {
+  const page=await setupPage(url,viewport.width,viewport.height);
+  const before=await snapshot(page);
+  await clickTrigger(page);
+  await sleep(450);
+  const opened=await snapshot(page);
+  await page.keyboard.press('Escape');
+  await sleep(550);
+  const closed=await snapshot(page);
+  await page.close();
+  return {before,opened,after_escape:closed};
+}
+
+const viewports=[{label:'desktop',width:1440,height:900},{label:'mobile',width:390,height:844}];
+const report={version:'2.0',reference_id:referenceId,baseline_url:baselineUrl,local_url:localUrl,captured_at:new Date().toISOString(),scenario:'EB27 MorphingDialog deterministic WAAPI trajectory + active-page open/Escape functional test',viewports:[]};
+for (const viewport of viewports) {
+  const baseline=await deterministicScenario(baselineUrl,'baseline',viewport);
+  const local=await deterministicScenario(localUrl,'local',viewport);
+  const baselineFunctional=await functionalScenario(baselineUrl,viewport);
+  const localFunctional=await functionalScenario(localUrl,viewport);
+  report.viewports.push({...viewport,baseline,local,functional:{baseline:baselineFunctional,local:localFunctional}});
+}
 await browser.close();
-fs.writeFileSync(path.join(evidenceDir, 'interaction-capture.json'), JSON.stringify(report, null, 2) + '\n');
-console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} viewports=${viewports.length} samples=${sampleTimes.length}`);
+fs.writeFileSync(path.join(evidenceDir,'interaction-capture.json'),JSON.stringify(report,null,2)+'\n');
+console.log(`REFERENCE_INTERACTION_CAPTURE_OK id=${referenceId} protocol=v2 viewports=${viewports.length} deterministic_samples=${sampleTimes.length}`);
