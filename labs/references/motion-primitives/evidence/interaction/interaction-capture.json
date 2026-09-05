@@ -1,0 +1,4067 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "baseline_url": "http://127.0.0.1:4180/",
+  "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
+  "captured_at": "2026-09-05T01:22:02.932Z",
+  "scenario": "EB27 MorphingDialog closed -> open trajectory -> settled open -> Escape -> closed",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "closed": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 580,
+              "y": 604,
+              "width": 270,
+              "height": 258,
+              "top": 604,
+              "right": 850,
+              "bottom": 862,
+              "left": 580
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2349.9,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.17494999999999994,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 580,
+              "y": 604,
+              "width": 270,
+              "height": 258,
+              "top": 604,
+              "right": 850,
+              "bottom": 862,
+              "left": 580
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2216.5999999999995,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.10829999999999984,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 209.59999999998803,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.8693971314618278,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            },
+            {
+              "index": 2,
+              "playState": "running",
+              "currentTime": 209.59999999998803,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.8693971314618278,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        }
+      },
+      "trajectory": [
+        {
+          "t": 0,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 565.4452514648438,
+                "y": 542.8304443359375,
+                "width": 299.1094970703125,
+                "height": 308.702392578125,
+                "top": 542.8304443359375,
+                "right": 864.5547485351562,
+                "bottom": 851.5328369140625,
+                "left": 565.4452514648438
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 565.4452514648438,
+                "y": 542.8304443359375,
+                "width": 299.10955810546875,
+                "height": 308.702392578125,
+                "top": 542.8304443359375,
+                "right": 864.5548095703125,
+                "bottom": 851.5328369140625,
+                "left": 565.4452514648438
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 566.4452514648438,
+                "y": 541.8988037109375,
+                "width": 297.10955810546875,
+                "height": 211.314697265625,
+                "top": 541.8988037109375,
+                "right": 863.5548095703125,
+                "bottom": 753.2135009765625,
+                "left": 566.4452514648438
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 835.2420654296875,
+                "y": 533.4560546875,
+                "width": 14.35723876953125,
+                "height": 11.249267578125,
+                "top": 533.4560546875,
+                "right": 849.5993041992188,
+                "bottom": 544.705322265625,
+                "left": 835.2420654296875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0.0396755"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2233.2999999999997,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.11664999999999992,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 226.2999999999882,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.909440069316658,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 226.2999999999882,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.909440069316658,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 3,
+                "playState": "running",
+                "currentTime": 8.600000000035024,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.034400000000140096,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 4,
+                "playState": "running",
+                "currentTime": 8.600000000035024,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.034400000000140096,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 50,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 528.2333984375,
+                "y": 386.4395751953125,
+                "width": 373.533203125,
+                "height": 438.33209228515625,
+                "top": 386.4395751953125,
+                "right": 901.7666015625,
+                "bottom": 824.7716674804688,
+                "left": 528.2333984375
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 528.2333984375,
+                "y": 386.4395751953125,
+                "width": 373.533203125,
+                "height": 438.33203125,
+                "top": 386.4395751953125,
+                "right": 901.7666015625,
+                "bottom": 824.7716064453125,
+                "left": 528.2333984375
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 529.2333984375,
+                "y": 386.1910095214844,
+                "width": 371.533203125,
+                "height": 260.6961975097656,
+                "top": 386.1910095214844,
+                "right": 900.7666015625,
+                "bottom": 646.88720703125,
+                "left": 529.2333984375
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 865.160400390625,
+                "y": 389.76727294921875,
+                "width": 17.9295654296875,
+                "height": 15.9730224609375,
+                "top": 389.76727294921875,
+                "right": 883.0899658203125,
+                "bottom": 405.74029541015625,
+                "left": 865.160400390625
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0.424103"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2266.6,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.13329999999999997,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 259.5999999999883,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.9701076758146007,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 259.5999999999883,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.9701076758146007,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 3,
+                "playState": "running",
+                "currentTime": 41.900000000035135,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.16760000000014053,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 4,
+                "playState": "running",
+                "currentTime": 41.900000000035135,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.16760000000014053,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 100,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 476.8026123046875,
+                "y": 170.29049682617188,
+                "width": 476.394775390625,
+                "height": 617.4942626953125,
+                "top": 170.29049682617188,
+                "right": 953.1973876953125,
+                "bottom": 787.7847595214844,
+                "left": 476.8026123046875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 476.8026123046875,
+                "y": 170.29049682617188,
+                "width": 476.394775390625,
+                "height": 617.4942626953125,
+                "top": 170.29049682617188,
+                "right": 953.1973876953125,
+                "bottom": 787.7847595214844,
+                "left": 476.8026123046875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 477.8026123046875,
+                "y": 173.54193115234375,
+                "width": 474.394775390625,
+                "height": 328.9468688964844,
+                "top": 173.54193115234375,
+                "right": 952.1973876953125,
+                "bottom": 502.4888000488281,
+                "left": 477.8026123046875
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 906.5107421875,
+                "y": 193.7298126220703,
+                "width": 22.866943359375,
+                "height": 22.501754760742188,
+                "top": 193.7298126220703,
+                "right": 929.377685546875,
+                "bottom": 216.2315673828125,
+                "left": 906.5107421875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0.837535"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2316.5,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.15825,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 91.80000000003518,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.36720000000014075,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 91.80000000003518,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.36720000000014075,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 150,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 466.8993835449219,
+                "y": 128.67007446289062,
+                "width": 496.2012023925781,
+                "height": 651.9927978515625,
+                "top": 128.67007446289062,
+                "right": 963.1005859375,
+                "bottom": 780.6628723144531,
+                "left": 466.8993835449219
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 466.8993835449219,
+                "y": 128.6700439453125,
+                "width": 496.2012023925781,
+                "height": 651.9927978515625,
+                "top": 128.6700439453125,
+                "right": 963.1005859375,
+                "bottom": 780.662841796875,
+                "left": 466.8993835449219
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 467.8917541503906,
+                "y": 130.03237915039062,
+                "width": 494.2165222167969,
+                "height": 342.08880615234375,
+                "top": 130.03237915039062,
+                "right": 962.1082763671875,
+                "bottom": 472.1211853027344,
+                "left": 467.8917541503906
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 914.472900390625,
+                "y": 153.41888427734375,
+                "width": 23.817626953125,
+                "height": 23.758895874023438,
+                "top": 153.41888427734375,
+                "right": 938.29052734375,
+                "bottom": 177.1777801513672,
+                "left": 914.472900390625
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0.981735"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2383.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.1916,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 158.50000000003516,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.6340000000001407,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 158.50000000003516,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.6340000000001407,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 250,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 466,
+                "y": 121.6875,
+                "width": 498,
+                "height": 344.609375,
+                "top": 121.6875,
+                "right": 964,
+                "bottom": 466.296875,
+                "left": 466
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 916,
+                "y": 145.6875,
+                "width": 24,
+                "height": 24,
+                "top": 145.6875,
+                "right": 940,
+                "bottom": 169.6875,
+                "left": 916
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2483.2000000000003,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.24160000000000004,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 400,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.5225830078125,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310180664062,
+                "left": 572.6734008789062
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 572.6734008789062,
+                "y": 573.2084350585938,
+                "width": 284.6531982421875,
+                "height": 283.52264404296875,
+                "top": 573.2084350585938,
+                "right": 857.3265991210938,
+                "bottom": 856.7310791015625,
+                "left": 572.6734008789062
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 573.6734008789062,
+                "y": 570.6406860351562,
+                "width": 282.65313720703125,
+                "height": 201.72271728515625,
+                "top": 570.6406860351562,
+                "right": 856.3265380859375,
+                "bottom": 772.3634033203125,
+                "left": 573.6734008789062
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 829.4305419921875,
+                "y": 559.8633422851562,
+                "width": 13.66339111328125,
+                "height": 10.3316650390625,
+                "top": 559.8633422851562,
+                "right": 843.0939331054688,
+                "bottom": 570.1950073242188,
+                "left": 829.4305419921875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2349.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.17494999999999994,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 465,
+                "y": 120.6875,
+                "width": 500,
+                "height": 658.609375,
+                "top": 120.6875,
+                "right": 965,
+                "bottom": 779.296875,
+                "left": 465
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 466,
+                "y": 121.6875,
+                "width": 498,
+                "height": 344.609375,
+                "top": 121.6875,
+                "right": 964,
+                "bottom": 466.296875,
+                "left": 466
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 916,
+                "y": 145.6875,
+                "width": 24,
+                "height": 24,
+                "top": 145.6875,
+                "right": 940,
+                "bottom": 169.6875,
+                "left": 916
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1430,
+                "height": 900,
+                "top": 0,
+                "right": 1430,
+                "bottom": 900,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2649.8999999999996,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.32494999999999985,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "open": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
+            "rect": {
+              "x": 572.6734008789062,
+              "y": 573.2084350585938,
+              "width": 284.6531982421875,
+              "height": 283.5225830078125,
+              "top": 573.2084350585938,
+              "right": 857.3265991210938,
+              "bottom": 856.7310180664062,
+              "left": 572.6734008789062
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 572.6734008789062,
+              "y": 573.2084350585938,
+              "width": 284.6531982421875,
+              "height": 283.52264404296875,
+              "top": 573.2084350585938,
+              "right": 857.3265991210938,
+              "bottom": 856.7310791015625,
+              "left": 572.6734008789062
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 573.6734008789062,
+              "y": 570.6406860351562,
+              "width": 282.65313720703125,
+              "height": 201.72271728515625,
+              "top": 570.6406860351562,
+              "right": 856.3265380859375,
+              "bottom": 772.3634033203125,
+              "left": 573.6734008789062
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 829.4305419921875,
+              "y": 559.8633422851562,
+              "width": 13.66339111328125,
+              "height": 10.3316650390625,
+              "top": 559.8633422851562,
+              "right": 843.0939331054688,
+              "bottom": 570.1950073242188,
+              "left": 829.4305419921875
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1430,
+              "height": 900,
+              "top": 0,
+              "right": 1430,
+              "bottom": 900,
+              "left": 0
+            },
+            "opacity": "0"
+          },
+          "bodyOverflow": "hidden",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2349.9,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.17494999999999994,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
+            "rect": {
+              "x": 465,
+              "y": 120.6875,
+              "width": 500,
+              "height": 658.609375,
+              "top": 120.6875,
+              "right": 965,
+              "bottom": 779.296875,
+              "left": 465
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 465,
+              "y": 120.6875,
+              "width": 500,
+              "height": 658.609375,
+              "top": 120.6875,
+              "right": 965,
+              "bottom": 779.296875,
+              "left": 465
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 466,
+              "y": 121.6875,
+              "width": 498,
+              "height": 344.609375,
+              "top": 121.6875,
+              "right": 964,
+              "bottom": 466.296875,
+              "left": 466
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 916,
+              "y": 145.6875,
+              "width": 24,
+              "height": 24,
+              "top": 145.6875,
+              "right": 940,
+              "bottom": 169.6875,
+              "left": 916
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1430,
+              "height": 900,
+              "top": 0,
+              "right": 1430,
+              "bottom": 900,
+              "left": 0
+            },
+            "opacity": "1"
+          },
+          "bodyOverflow": "hidden",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2816.5,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.40825,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        }
+      },
+      "after_close": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 465,
+              "y": 120.6875,
+              "width": 500,
+              "height": 658.609375,
+              "top": 120.6875,
+              "right": 965,
+              "bottom": 779.296875,
+              "left": 465
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 465,
+              "y": 120.6875,
+              "width": 500,
+              "height": 658.609375,
+              "top": 120.6875,
+              "right": 965,
+              "bottom": 779.296875,
+              "left": 465
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 466,
+              "y": 121.6875,
+              "width": 498,
+              "height": 344.609375,
+              "top": 121.6875,
+              "right": 964,
+              "bottom": 466.296875,
+              "left": 466
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 916,
+              "y": 145.6875,
+              "width": 24,
+              "height": 24,
+              "top": 145.6875,
+              "right": 940,
+              "bottom": 169.6875,
+              "left": 916
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1430,
+              "height": 900,
+              "top": 0,
+              "right": 1430,
+              "bottom": 900,
+              "left": 0
+            },
+            "opacity": "0.988774"
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 5616.5,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.8082500000000001,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 171.4000000000002,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.757787209324483,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 580,
+              "y": 604,
+              "width": 270,
+              "height": 258,
+              "top": 604,
+              "right": 850,
+              "bottom": 862,
+              "left": 580
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 3616.5,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.8082499999999999,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        }
+      },
+      "screenshots": {
+        "baseline_open": "evidence/interaction/desktop-baseline-open.png",
+        "local_open": "evidence/interaction/desktop-local-open.png",
+        "baseline_after_close": "evidence/interaction/desktop-baseline-after-close.png",
+        "local_after_close": "evidence/interaction/desktop-local-after-close.png"
+      }
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "height": 844,
+      "closed": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 55,
+              "y": 700,
+              "width": 270,
+              "height": 258,
+              "top": 700,
+              "right": 325,
+              "bottom": 958,
+              "left": 55
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2183.2,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.0915999999999999,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 164.29999999998836,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.7343043929822511,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 55,
+              "y": 700,
+              "width": 270,
+              "height": 258,
+              "top": 700,
+              "right": 325,
+              "bottom": 958,
+              "left": 55
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2166.6000000000004,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.08330000000000015,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 154.49999999996498,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.7006033551886262,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            },
+            {
+              "index": 2,
+              "playState": "running",
+              "currentTime": 154.49999999996498,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.7006033551886262,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        }
+      },
+      "trajectory": [
+        {
+          "t": 0,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 51.49598693847656,
+                "y": 662.4253540039062,
+                "width": 277.008056640625,
+                "height": 281.289794921875,
+                "top": 662.4253540039062,
+                "right": 328.50404357910156,
+                "bottom": 943.7151489257812,
+                "left": 51.49598693847656
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 51.4959716796875,
+                "y": 662.4253540039062,
+                "width": 277.008056640625,
+                "height": 281.289794921875,
+                "top": 662.4253540039062,
+                "right": 328.5040283203125,
+                "bottom": 943.7151489257812,
+                "left": 51.4959716796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 52.49595642089844,
+                "y": 662.4317016601562,
+                "width": 275.00811767578125,
+                "height": 196.4317626953125,
+                "top": 662.4317016601562,
+                "right": 327.5040740966797,
+                "bottom": 858.8634643554688,
+                "left": 52.49595642089844
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.7845458984375,
+                "y": 652.9522094726562,
+                "width": 17.495269775390625,
+                "height": 10.82647705078125,
+                "top": 652.9522094726562,
+                "right": 310.2798156738281,
+                "bottom": 663.7786865234375,
+                "left": 292.7845458984375
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0.0350621"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2000000000003,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.09160000000000013,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 171.09999999996495,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7568112460771832,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 171.09999999996495,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7568112460771832,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 3,
+                "playState": "running",
+                "currentTime": 7.599999999964968,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.030399999999859872,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 4,
+                "playState": "running",
+                "currentTime": 7.599999999964968,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.030399999999859872,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 50,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 21.950653076171875,
+                "y": 345.6021728515625,
+                "width": 336.09869384765625,
+                "height": 477.6654052734375,
+                "top": 345.6021728515625,
+                "right": 358.0493469238281,
+                "bottom": 823.267578125,
+                "left": 21.950653076171875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 21.950653076171875,
+                "y": 345.6021423339844,
+                "width": 336.09869384765625,
+                "height": 477.6654357910156,
+                "top": 345.6021423339844,
+                "right": 358.0493469238281,
+                "bottom": 823.267578125,
+                "left": 21.950653076171875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 22.95064926147461,
+                "y": 350.4275817871094,
+                "width": 334.09869384765625,
+                "height": 233.79989624023438,
+                "top": 350.4275817871094,
+                "right": 357.04934310913086,
+                "bottom": 584.2274780273438,
+                "left": 22.95064926147461
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 314.7102966308594,
+                "y": 360.1566467285156,
+                "width": 21.227294921875,
+                "height": 18.3846435546875,
+                "top": 360.1566467285156,
+                "right": 335.9375915527344,
+                "bottom": 378.5412902832031,
+                "left": 314.7102966308594
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0.595537"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2233.2000000000003,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.11660000000000004,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 221.09999999996478,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.8976006620698935,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 221.09999999996478,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.8976006620698935,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 3,
+                "playState": "running",
+                "currentTime": 57.599999999964794,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.23039999999985916,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 4,
+                "playState": "running",
+                "currentTime": 57.599999999964794,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.23039999999985916,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 100,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 5.47344970703125,
+                "y": 168.91204833984375,
+                "width": 369.0531005859375,
+                "height": 587.1828002929688,
+                "top": 168.91204833984375,
+                "right": 374.52655029296875,
+                "bottom": 756.0948486328125,
+                "left": 5.47344970703125
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 5.4734344482421875,
+                "y": 168.91204833984375,
+                "width": 369.0531005859375,
+                "height": 587.1828002929688,
+                "top": 168.91204833984375,
+                "right": 374.5265350341797,
+                "bottom": 756.0948486328125,
+                "left": 5.4734344482421875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 6.4734206199646,
+                "y": 172.01199340820312,
+                "width": 367.0531311035156,
+                "height": 254.63986206054688,
+                "top": 172.01199340820312,
+                "right": 373.5265517234802,
+                "bottom": 426.65185546875,
+                "left": 6.4734206199646
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 326.9381103515625,
+                "y": 192.45350646972656,
+                "width": 23.30865478515625,
+                "height": 22.59979248046875,
+                "top": 192.45350646972656,
+                "right": 350.24676513671875,
+                "bottom": 215.0532989501953,
+                "left": 326.9381103515625
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0.898781"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2283.3,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.14165000000000005,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 271.1999999999648,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.9842476803008204,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 271.1999999999648,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.9842476803008204,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 3,
+                "playState": "running",
+                "currentTime": 107.69999999996483,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.4307999999998593,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 4,
+                "playState": "running",
+                "currentTime": 107.69999999996483,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.4307999999998593,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 150,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 1.014739990234375,
+                "y": 121.10009765625,
+                "width": 377.97052001953125,
+                "height": 616.8179321289062,
+                "top": 121.10009765625,
+                "right": 378.9852600097656,
+                "bottom": 737.9180297851562,
+                "left": 1.014739990234375
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 1.014739990234375,
+                "y": 121.10009765625,
+                "width": 377.97052001953125,
+                "height": 616.8179321289062,
+                "top": 121.10009765625,
+                "right": 378.9852600097656,
+                "bottom": 737.9180297851562,
+                "left": 1.014739990234375
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 2.009399175643921,
+                "y": 122.48941802978516,
+                "width": 375.981201171875,
+                "height": 260.2790832519531,
+                "top": 122.48941802978516,
+                "right": 377.9906003475189,
+                "bottom": 382.7685012817383,
+                "left": 2.009399175643921
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 330.2469482421875,
+                "y": 145.82969665527344,
+                "width": 23.871826171875,
+                "height": 23.740402221679688,
+                "top": 145.82969665527344,
+                "right": 354.1187744140625,
+                "bottom": 169.57009887695312,
+                "left": 330.2469482421875
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0.981135"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2333.3,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.1666500000000002,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 157.6999999999651,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.6307999999998604,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              },
+              {
+                "index": 2,
+                "playState": "running",
+                "currentTime": 157.6999999999651,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 250,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "linear"
+                },
+                "progress": 0.6307999999998604,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 250,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 1,
+                "y": 111.21875,
+                "width": 378,
+                "height": 261.5625,
+                "top": 111.21875,
+                "right": 379,
+                "bottom": 372.78125,
+                "left": 1
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 331,
+                "y": 135.21875,
+                "width": 24,
+                "height": 24,
+                "top": 135.21875,
+                "right": 355,
+                "bottom": 159.21875,
+                "left": 331
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2449.9,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.22494999999999998,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "t": 400,
+          "baseline": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 52.462615966796875,
+                "y": 672.7908325195312,
+                "width": 275.07476806640625,
+                "height": 274.864990234375,
+                "top": 672.7908325195312,
+                "right": 327.5373840332031,
+                "bottom": 947.6558227539062,
+                "left": 52.462615966796875
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 53.46261215209961,
+                "y": 671.43798828125,
+                "width": 273.0747985839844,
+                "height": 195.209228515625,
+                "top": 671.43798828125,
+                "right": 326.537410736084,
+                "bottom": 866.647216796875,
+                "left": 53.46261215209961
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 292.0672302246094,
+                "y": 661.330078125,
+                "width": 17.373138427734375,
+                "height": 10.57916259765625,
+                "top": 661.330078125,
+                "right": 309.44036865234375,
+                "bottom": 671.9092407226562,
+                "left": 292.0672302246094
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "0"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2183.2,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.0915999999999999,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              },
+              {
+                "index": 1,
+                "playState": "running",
+                "currentTime": 164.29999999998836,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 300,
+                  "endDelay": 0,
+                  "iterations": 1,
+                  "easing": "ease-out"
+                },
+                "progress": 0.7343043929822511,
+                "target": {
+                  "tag": "div",
+                  "role": null,
+                  "ariaLabel": null
+                }
+              }
+            ]
+          },
+          "local": {
+            "trigger": {
+              "exists": true,
+              "expanded": "true",
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialog": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 110.21875,
+                "width": 380,
+                "height": 623.5625,
+                "top": 110.21875,
+                "right": 380,
+                "bottom": 733.78125,
+                "left": 0
+              }
+            },
+            "dialogImage": {
+              "exists": true,
+              "rect": {
+                "x": 1,
+                "y": 111.21875,
+                "width": 378,
+                "height": 261.5625,
+                "top": 111.21875,
+                "right": 379,
+                "bottom": 372.78125,
+                "left": 1
+              }
+            },
+            "close": {
+              "exists": true,
+              "rect": {
+                "x": 331,
+                "y": 135.21875,
+                "width": 24,
+                "height": 24,
+                "top": 135.21875,
+                "right": 355,
+                "bottom": 159.21875,
+                "left": 331
+              }
+            },
+            "backdrop": {
+              "exists": true,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 380,
+                "height": 844,
+                "top": 0,
+                "right": 380,
+                "bottom": 844,
+                "left": 0
+              },
+              "opacity": "1"
+            },
+            "bodyOverflow": "hidden",
+            "activeElement": {
+              "tag": "a",
+              "ariaLabel": null
+            },
+            "animations": [
+              {
+                "index": 0,
+                "playState": "running",
+                "currentTime": 2599.9000000000005,
+                "playbackRate": 1,
+                "timing": {
+                  "delay": 0,
+                  "duration": 2000,
+                  "endDelay": 0,
+                  "iterations": null,
+                  "easing": "linear"
+                },
+                "progress": 0.29995000000000016,
+                "target": {
+                  "tag": "div",
+                  "role": "status",
+                  "ariaLabel": "Loading..."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "open": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
+            "rect": {
+              "x": 52.462615966796875,
+              "y": 672.7908325195312,
+              "width": 275.07476806640625,
+              "height": 274.864990234375,
+              "top": 672.7908325195312,
+              "right": 327.5373840332031,
+              "bottom": 947.6558227539062,
+              "left": 52.462615966796875
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 52.462615966796875,
+              "y": 672.7908325195312,
+              "width": 275.07476806640625,
+              "height": 274.864990234375,
+              "top": 672.7908325195312,
+              "right": 327.5373840332031,
+              "bottom": 947.6558227539062,
+              "left": 52.462615966796875
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 53.46261215209961,
+              "y": 671.43798828125,
+              "width": 273.0747985839844,
+              "height": 195.209228515625,
+              "top": 671.43798828125,
+              "right": 326.537410736084,
+              "bottom": 866.647216796875,
+              "left": 53.46261215209961
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 292.0672302246094,
+              "y": 661.330078125,
+              "width": 17.373138427734375,
+              "height": 10.57916259765625,
+              "top": 661.330078125,
+              "right": 309.44036865234375,
+              "bottom": 671.9092407226562,
+              "left": 292.0672302246094
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 380,
+              "height": 844,
+              "top": 0,
+              "right": 380,
+              "bottom": 844,
+              "left": 0
+            },
+            "opacity": "0"
+          },
+          "bodyOverflow": "hidden",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2183.2,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.0915999999999999,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 164.29999999998836,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.7343043929822511,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "true",
+            "rect": {
+              "x": 0,
+              "y": 110.21875,
+              "width": 380,
+              "height": 623.5625,
+              "top": 110.21875,
+              "right": 380,
+              "bottom": 733.78125,
+              "left": 0
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 110.21875,
+              "width": 380,
+              "height": 623.5625,
+              "top": 110.21875,
+              "right": 380,
+              "bottom": 733.78125,
+              "left": 0
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 1,
+              "y": 111.21875,
+              "width": 378,
+              "height": 261.5625,
+              "top": 111.21875,
+              "right": 379,
+              "bottom": 372.78125,
+              "left": 1
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 331,
+              "y": 135.21875,
+              "width": 24,
+              "height": 24,
+              "top": 135.21875,
+              "right": 355,
+              "bottom": 159.21875,
+              "left": 331
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 380,
+              "height": 844,
+              "top": 0,
+              "right": 380,
+              "bottom": 844,
+              "left": 0
+            },
+            "opacity": "1"
+          },
+          "bodyOverflow": "hidden",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 2766.5,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.3832500000000001,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        }
+      },
+      "after_close": {
+        "baseline": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 0,
+              "y": 110.21875,
+              "width": 380,
+              "height": 623.5625,
+              "top": 110.21875,
+              "right": 380,
+              "bottom": 733.78125,
+              "left": 0
+            }
+          },
+          "dialog": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 110.21875,
+              "width": 380,
+              "height": 623.5625,
+              "top": 110.21875,
+              "right": 380,
+              "bottom": 733.78125,
+              "left": 0
+            }
+          },
+          "dialogImage": {
+            "exists": true,
+            "rect": {
+              "x": 1,
+              "y": 111.21875,
+              "width": 378,
+              "height": 261.5625,
+              "top": 111.21875,
+              "right": 379,
+              "bottom": 372.78125,
+              "left": 1
+            }
+          },
+          "close": {
+            "exists": true,
+            "rect": {
+              "x": 331,
+              "y": 135.21875,
+              "width": 24,
+              "height": 24,
+              "top": 135.21875,
+              "right": 355,
+              "bottom": 159.21875,
+              "left": 331
+            }
+          },
+          "backdrop": {
+            "exists": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 380,
+              "height": 844,
+              "top": 0,
+              "right": 380,
+              "bottom": 844,
+              "left": 0
+            },
+            "opacity": "0.862234"
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "a",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 5249.8,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.6249000000000002,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            },
+            {
+              "index": 1,
+              "playState": "running",
+              "currentTime": 97.4999999999655,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.47767485308951907,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            },
+            {
+              "index": 2,
+              "playState": "running",
+              "currentTime": 97.4999999999655,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 300,
+                "endDelay": 0,
+                "iterations": 1,
+                "easing": "ease-out"
+              },
+              "progress": 0.47767485308951907,
+              "target": {
+                "tag": "div",
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ]
+        },
+        "local": {
+          "trigger": {
+            "exists": true,
+            "expanded": "false",
+            "rect": {
+              "x": 55,
+              "y": 700,
+              "width": 270,
+              "height": 258,
+              "top": 700,
+              "right": 325,
+              "bottom": 958,
+              "left": 55
+            }
+          },
+          "dialog": {
+            "exists": false,
+            "rect": null
+          },
+          "dialogImage": {
+            "exists": false,
+            "rect": null
+          },
+          "close": {
+            "exists": false,
+            "rect": null
+          },
+          "backdrop": {
+            "exists": false,
+            "rect": null,
+            "opacity": null
+          },
+          "bodyOverflow": "visible",
+          "activeElement": {
+            "tag": "body",
+            "ariaLabel": null
+          },
+          "animations": [
+            {
+              "index": 0,
+              "playState": "running",
+              "currentTime": 3399.9,
+              "playbackRate": 1,
+              "timing": {
+                "delay": 0,
+                "duration": 2000,
+                "endDelay": 0,
+                "iterations": null,
+                "easing": "linear"
+              },
+              "progress": 0.6999500000000001,
+              "target": {
+                "tag": "div",
+                "role": "status",
+                "ariaLabel": "Loading..."
+              }
+            }
+          ]
+        }
+      },
+      "screenshots": {
+        "baseline_open": "evidence/interaction/mobile-baseline-open.png",
+        "local_open": "evidence/interaction/mobile-local-open.png",
+        "baseline_after_close": "evidence/interaction/mobile-baseline-after-close.png",
+        "local_after_close": "evidence/interaction/mobile-local-after-close.png"
+      }
+    }
+  ]
+}

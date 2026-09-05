@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "reference_id": "motion-primitives",
+  "scenario": "EB27 MorphingDialog closed -> open trajectory -> settled open -> Escape -> closed",
+  "policy": {
+    "endpoint_visual_min": 98.0,
+    "trajectory_min": 98.0,
+    "functional_required": true,
+    "animation_signature_match_required": true
+  },
+  "minimum_score": 33.3445,
+  "status": "fail",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 900,
+      "functional": {
+        "closed": true,
+        "open": true,
+        "escape_close": false,
+        "status": "fail"
+      },
+      "open_visual": {
+        "score": 92.4953,
+        "ssim": 92.4953,
+        "pixel_similarity": 98.7808
+      },
+      "after_close_visual": {
+        "score": 99.7134,
+        "ssim": 99.7671,
+        "pixel_similarity": 99.7134
+      },
+      "trajectory": {
+        "score": 49.7199,
+        "max_normalized_geometry_error": 0.502801,
+        "animation_signature_match": false,
+        "samples": [
+          {
+            "t": 0,
+            "dialog_error": 0.03375332302517361,
+            "image_error": 0.0319354248046875,
+            "trigger_error": 0.03375332302517361,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 50,
+            "dialog_error": 0.20752095540364585,
+            "image_error": 0.20494408501519099,
+            "trigger_error": 0.20752095540364585,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 100,
+            "dialog_error": 0.4476865980360243,
+            "image_error": 0.44122083875868057,
+            "trigger_error": 0.4476865980360243,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 150,
+            "dialog_error": 0.4939315456814236,
+            "image_error": 0.48956478542751736,
+            "trigger_error": 0.4939315117730035,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 250,
+            "dialog_error": 0.5028010389539931,
+            "image_error": 0.49883687337239585,
+            "trigger_error": 0.5028010389539931,
+            "presence_match": true,
+            "animation_signature_match": true
+          },
+          {
+            "t": 400,
+            "dialog_error": 0.5028010389539931,
+            "image_error": 0.49883687337239585,
+            "trigger_error": 0.5028010389539931,
+            "presence_match": true,
+            "animation_signature_match": true
+          }
+        ]
+      },
+      "status": "fail"
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "functional": {
+        "closed": true,
+        "open": true,
+        "escape_close": false,
+        "status": "fail"
+      },
+      "open_visual": {
+        "score": 73.7654,
+        "ssim": 73.7654,
+        "pixel_similarity": 95.9201
+      },
+      "after_close_visual": {
+        "score": 98.9739,
+        "ssim": 99.1915,
+        "pixel_similarity": 98.9739
+      },
+      "trajectory": {
+        "score": 33.3445,
+        "max_normalized_geometry_error": 0.666555,
+        "animation_signature_match": false,
+        "samples": [
+          {
+            "t": 0,
+            "dialog_error": 0.012281372648844787,
+            "image_error": 0.010670955712196386,
+            "trigger_error": 0.012281372648844787,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 50,
+            "dialog_error": 0.387664324864392,
+            "image_error": 0.3803440835238633,
+            "trigger_error": 0.3876642887061241,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 100,
+            "dialog_error": 0.5970127774640848,
+            "image_error": 0.5917369607500556,
+            "trigger_error": 0.5970127774640848,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 150,
+            "dialog_error": 0.6536620081318498,
+            "image_error": 0.6504129979282759,
+            "trigger_error": 0.6536620081318498,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 250,
+            "dialog_error": 0.6665546001416247,
+            "image_error": 0.663766870001481,
+            "trigger_error": 0.6665546001416247,
+            "presence_match": true,
+            "animation_signature_match": false
+          },
+          {
+            "t": 400,
+            "dialog_error": 0.6665546001416247,
+            "image_error": 0.663766870001481,
+            "trigger_error": 0.6665546001416247,
+            "presence_match": true,
+            "animation_signature_match": false
+          }
+        ]
+      },
+      "status": "fail"
+    }
+  ]
+}
