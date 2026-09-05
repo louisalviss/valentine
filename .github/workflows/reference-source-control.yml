@@ -45,6 +45,21 @@ jobs:
         run: |
           set -euo pipefail
           cd /tmp/motion-primitives
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('next.config.mjs')
+          s=p.read_text()
+          marker='const nextConfig = {'
+          assert marker in s
+          replacement="""const nextConfig = {
+            // Visual-control build only: upstream website compilation succeeds,
+            // but root Next validation traverses a separately packaged CLI whose
+            // own deps/config are not installed by the website root package.
+            // Skipping lint/type gates does not alter the rendered runtime bundle.
+            eslint: { ignoreDuringBuilds: true },
+            typescript: { ignoreBuildErrors: true },"""
+          p.write_text(s.replace(marker,replacement,1))
+          PY
           npm run build
           npm run start -- -p 4180 >/tmp/motion-primitives-source.log 2>&1 &
           echo $! >/tmp/motion-primitives-source.pid
