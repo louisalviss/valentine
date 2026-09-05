@@ -1,15 +1,15 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "reference_id": "motion-primitives",
-  "scenario": "EB27 MorphingDialog deterministic WAAPI trajectory + active-page open/Escape functional test",
+  "scenario": "EB27 MorphingDialog runtime spatial trajectory + scoped animation signature + active-page open/Escape functional test",
   "policy": {
     "dialog_visual_min": 98.0,
     "open_geometry_min": 98.0,
-    "deterministic_trajectory_min": 98.0,
+    "spatial_trajectory_min": 98.0,
     "functional_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 98.7044,
+  "minimum_score": 99.6353,
   "status": "pass",
   "viewports": [
     {
@@ -41,59 +41,67 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 98.7044,
-        "max_normalized_geometry_error": 0.012956,
-        "samples": [
+        "score": 99.6353,
+        "max_normalized_geometry_error": 0.003647,
+        "basis": "spatial progress milestones; scheduler phase excluded; timing/easing verified by scoped animation signature",
+        "milestones": [
           {
-            "t": 0,
-            "dialog_error": 0.008831278483072916,
-            "image_error": 0.009232109917534722,
-            "trigger_error": 0.008831278483072916,
+            "progress": 0.1,
+            "dialog_error": 3.406099899115765e-08,
+            "image_error": 0.000106969851502375,
+            "trigger_error": 7.546921077998074e-08,
+            "baseline_t": 4.182,
+            "local_t": 3.047,
             "presence_match": true
           },
           {
-            "t": 50,
-            "dialog_error": 0.012393120659722222,
-            "image_error": 0.01295564439561632,
-            "trigger_error": 0.012393120659722222,
+            "progress": 0.25,
+            "dialog_error": 2.2197436501237967e-08,
+            "image_error": 0.0009630325665990035,
+            "trigger_error": 1.7302349925153572e-08,
+            "baseline_t": 22.166,
+            "local_t": 15.639,
             "presence_match": true
           },
           {
-            "t": 100,
-            "dialog_error": 0.0017304823133680557,
-            "image_error": 0.0018090057373046876,
-            "trigger_error": 0.0017305162217881944,
+            "progress": 0.5,
+            "dialog_error": 1.643533988410834e-08,
+            "image_error": 0.0006614814608809638,
+            "trigger_error": 1.9329527592364885e-08,
+            "baseline_t": 40.635,
+            "local_t": 37.372,
             "presence_match": true
           },
           {
-            "t": 150,
-            "dialog_error": 0.0017734781901041668,
-            "image_error": 0.0018539683024088541,
-            "trigger_error": 0.0017734442816840278,
+            "progress": 0.75,
+            "dialog_error": 3.371200364199467e-08,
+            "image_error": 0.0036474984930165355,
+            "trigger_error": 1.1731564414832166e-07,
+            "baseline_t": 77.415,
+            "local_t": 63.42,
             "presence_match": true
           },
           {
-            "t": 200,
-            "dialog_error": 1.617431640625e-05,
-            "image_error": 1.7869737413194446e-05,
-            "trigger_error": 1.617431640625e-05,
-            "presence_match": true
-          },
-          {
-            "t": 250,
-            "dialog_error": 0.0,
-            "image_error": 0.0,
-            "trigger_error": 0.0,
+            "progress": 0.9,
+            "dialog_error": 7.206962848727016e-09,
+            "image_error": 0.00011463094986696533,
+            "trigger_error": 7.155662574278823e-08,
+            "baseline_t": 99.483,
+            "local_t": 88.228,
             "presence_match": true
           }
         ]
       },
+      "timing_diagnostic": {
+        "click_to_dialog_delta_ms": 13.3,
+        "gate": "animation_signature"
+      },
       "animation_signature": {
         "match": true,
-        "baseline_count": 2,
-        "local_count": 2
+        "baseline_count": 0,
+        "local_count": 0
       },
-      "minimum_score": 98.7044,
+      "minimum_score": 99.6353,
       "status": "pass"
     },
     {
@@ -125,59 +133,67 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.8388,
-        "max_normalized_geometry_error": 0.001612,
-        "samples": [
+        "score": 99.9421,
+        "max_normalized_geometry_error": 0.000579,
+        "basis": "spatial progress milestones; scheduler phase excluded; timing/easing verified by scoped animation signature",
+        "milestones": [
           {
-            "t": 0,
-            "dialog_error": 0.0,
-            "image_error": 0.0,
-            "trigger_error": 0.0,
+            "progress": 0.1,
+            "dialog_error": 1.4124787246094573e-08,
+            "image_error": 0.00021726893354913536,
+            "trigger_error": 4.054751183246434e-08,
+            "baseline_t": 5.008,
+            "local_t": 2.517,
             "presence_match": true
           },
           {
-            "t": 50,
-            "dialog_error": 0.0015563603261070794,
-            "image_error": 0.0016120440587048283,
-            "trigger_error": 0.0015563241678391588,
+            "progress": 0.25,
+            "dialog_error": 2.078851005608675e-08,
+            "image_error": 0.0005785022323428724,
+            "trigger_error": 1.048408014762222e-07,
+            "baseline_t": 22.162,
+            "local_t": 16.615,
             "presence_match": true
           },
           {
-            "t": 100,
-            "dialog_error": 0.0005666723748518958,
-            "image_error": 0.0005869300444544209,
-            "trigger_error": 0.000566744691387737,
+            "progress": 0.5,
+            "dialog_error": 1.9464061292680884e-08,
+            "image_error": 0.0001730723640970619,
+            "trigger_error": 1.9464061292680884e-08,
+            "baseline_t": 41.795,
+            "local_t": 36.989,
             "presence_match": true
           },
           {
-            "t": 150,
-            "dialog_error": 0.0,
-            "image_error": 0.0,
-            "trigger_error": 0.0,
+            "progress": 0.75,
+            "dialog_error": 2.9430943926947805e-08,
+            "image_error": 0.0002652504412410815,
+            "trigger_error": 2.9430943926947805e-08,
+            "baseline_t": 73.465,
+            "local_t": 65.118,
             "presence_match": true
           },
           {
-            "t": 200,
-            "dialog_error": 4.8632870353228675e-05,
-            "image_error": 5.0386546347378554e-05,
-            "trigger_error": 4.859671208530806e-05,
-            "presence_match": true
-          },
-          {
-            "t": 250,
-            "dialog_error": 0.0,
-            "image_error": 0.0,
-            "trigger_error": 0.0,
+            "progress": 0.9,
+            "dialog_error": 8.045992978203196e-08,
+            "image_error": 5.281648572736015e-08,
+            "trigger_error": 8.250719047207041e-08,
+            "baseline_t": 104.678,
+            "local_t": 96.61,
             "presence_match": true
           }
         ]
       },
+      "timing_diagnostic": {
+        "click_to_dialog_delta_ms": 8.2,
+        "gate": "animation_signature"
+      },
       "animation_signature": {
         "match": true,
-        "baseline_count": 2,
-        "local_count": 2
+        "baseline_count": 0,
+        "local_count": 0
       },
-      "minimum_score": 99.8388,
+      "minimum_score": 99.9421,
       "status": "pass"
     }
   ]

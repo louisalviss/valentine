@@ -782,17 +782,19 @@
       "states_verified": [
         "desktop:closed",
         "desktop:open",
-        "desktop:trajectory",
+        "desktop:spatial-trajectory",
         "desktop:escape-close",
+        "desktop:animation-signature",
         "mobile:closed",
         "mobile:open",
-        "mobile:trajectory",
-        "mobile:escape-close"
+        "mobile:spatial-trajectory",
+        "mobile:escape-close",
+        "mobile:animation-signature"
       ],
-      "minimum_score": 98.7044,
-      "protocol": "2.0",
-      "method": "Independent active-page functional dialog/Escape contract + open-dialog visual/geometry fidelity + deterministic WAAPI morph trajectory + scoped animation signature.",
-      "notes": "Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance."
+      "minimum_score": 99.6353,
+      "protocol": "3.0",
+      "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + in-page rAF spatial morph path normalized by progress + scoped animation timing signature.",
+      "notes": "Spatial trajectory is phase-independent because Motion layout projection is JS-driven; scheduler timing is not conflated with path geometry. Timing/easing remains a separate required animation-signature gate. Interaction PASS does not imply asset self-containment or rights clearance."
     }
   },
   "provenance": {
