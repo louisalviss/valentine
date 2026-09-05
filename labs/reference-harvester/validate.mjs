@@ -65,6 +65,9 @@ for (const ref of registry.references || []) {
   if (ref.status === 'verified' && ref.essential_origin_dependency === true) {
     fail(`${ref.id}: verified reference cannot depend on origin for essential rendering`);
   }
+  if (ref.status === 'verified' && ref.self_containment?.status !== 'pass') {
+    fail(`${ref.id}: verified reference requires measured self-containment PASS`);
+  }
   if (!ref.provenance?.rights_status) fail(`${ref.id}: provenance.rights_status required`);
 }
 
@@ -91,6 +94,9 @@ if (fs.existsSync(referencesDir)) {
     if (visualStatus === 'pass' && score < 98) fail(`${entry.name}: manifest visual PASS requires score >=98`);
     if (visualStatus === 'pass' && !['pending', 'pass', 'review', 'fail', 'not-applicable'].includes(motionStatus)) {
       fail(`${entry.name}: visual PASS requires explicit motion/interaction status; pending/fail remain valid until verification`);
+    }
+    if (data.reconstruction?.essential_origin_dependency === false && data.reconstruction?.self_containment?.status !== 'pass') {
+      fail(`${entry.name}: origin-independent reconstruction requires measured self-containment PASS`);
     }
 
     if (visualStatus === 'pass') {
