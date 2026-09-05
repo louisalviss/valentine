@@ -7,13 +7,20 @@ on:
       - 'labs/reference-harvester/targets/motion-primitives.json'
       - 'labs/reference-harvester/capture-browser.mjs'
       - 'labs/reference-harvester/capture-local.mjs'
+      - 'labs/reference-harvester/capture-isolated.mjs'
       - 'labs/reference-harvester/measure-fidelity.py'
+      - 'labs/reference-harvester/measure-isolation.py'
+      - 'labs/reference-harvester/sanitize-static-import.mjs'
       - 'labs/reference-harvester/validate.mjs'
       - '.github/workflows/reference-source-control.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: reference-source-control-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   motion-primitives:
@@ -89,14 +96,22 @@ jobs:
             "reconstruction_mode":"source-import",
             "min_visible_elements":20,
             "rights_status":"mixed",
+            "visual_exclusions":[
+              {
+                "id":"cursor-demo-pinterest-media",
+                "selector":"img[alt=\"Olympic logo Paris 2024\"]",
+                "reason":"Third-party Pinterest demo image is not part of the MIT software grant and is intentionally not copied or re-hosted.",
+                "rights_status":"excluded-unverified-third-party-media"
+              }
+            ],
             "provenance_code":"Exact upstream source build from ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d under MIT; live-site identity is not claimed because Vercel blocks GitHub-runner browser capture.",
-            "provenance_assets":"Repository software is MIT; remote demo media remains externally referenced and is not assumed to inherit the software license."
+            "provenance_assets":"Repository software is MIT; third-party remote demo media is separately classified and may be excluded from accepted-surface pixel scoring when reuse rights are not established."
           }
           JSON
           node labs/reference-harvester/capture-browser.mjs /tmp/motion-primitives-capture.json
           kill "$(cat /tmp/motion-primitives-source.pid)" || true
 
-      - name: Build nested static source import
+      - name: Build and sanitize nested static source import
         run: |
           set -euo pipefail
           cd /tmp/motion-primitives
@@ -115,10 +130,6 @@ jobs:
           p.write_text(s.replace(marker,replacement,1))
           PY
 
-          # Next basePath/assetPrefix relocate framework assets, but literal public
-          # paths such as src='/eb-27-lamp-edouard-wilfrid-buquet.jpg' remain rooted
-          # at /. Rewrite only literals that map to an actual file in public/ so
-          # nested source imports stay render-equivalent without polluting repo root.
           python3 - <<'PY'
           from pathlib import Path
           base='/labs/references/motion-primitives'
@@ -155,7 +166,6 @@ jobs:
           target=Path('app/docs/morphing-dialog/morphing-dialog-basic-1.tsx').read_text()
           assert expected in target, 'EB27 first-fold asset was not relocated'
           print('PUBLIC_ASSET_RELOCATION_OK', 'rewrites=', rewrites, 'files=', len(touched))
-          for file in touched[:30]: print(' relocated', file)
           PY
 
           rm -rf .next out
@@ -176,11 +186,14 @@ jobs:
             "import_mode":"source-import-static-export",
             "base_path":"/labs/references/motion-primitives",
             "relocation":"Framework assets use basePath/assetPrefix; literal paths that resolve to actual upstream public/ files are rewritten to the nested base path before export.",
-            "note":"Static output built from the exact pinned upstream source with deterministic path relocation only. Remote demo media remains external and separately classified."
+            "note":"Static output is built from the exact pinned upstream source. External demo media with unverified independent reuse rights is sanitized after export and is not treated as covered by the software MIT license."
           }
           JSON
+          cd "$GITHUB_WORKSPACE"
+          node labs/reference-harvester/sanitize-static-import.mjs motion-primitives
+          test -s labs/references/motion-primitives/SANITIZATION.json
 
-      - name: Capture nested import and measure visual fidelity
+      - name: Capture local, measure source fidelity, and prove isolation
         env:
           CHROME_BIN: /usr/bin/google-chrome
         run: |
@@ -195,6 +208,8 @@ jobs:
           done
           node labs/reference-harvester/capture-local.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
           python3 labs/reference-harvester/measure-fidelity.py motion-primitives
+          node labs/reference-harvester/capture-isolated.mjs motion-primitives http://127.0.0.1:4173/labs/references/motion-primitives/
+          python3 labs/reference-harvester/measure-isolation.py motion-primitives
           kill "$(cat /tmp/valentine-reference-server.pid)" || true
 
       - name: Finalize measured candidate metadata
@@ -205,30 +220,49 @@ jobs:
           from pathlib import Path
           ref=Path('labs/references/motion-primitives')
           report=json.loads((ref/'evidence/fidelity.json').read_text())
+          isolation=json.loads((ref/'evidence/isolation/self-containment.json').read_text())
+          sanitization=json.loads((ref/'SANITIZATION.json').read_text())
           manifest=json.loads((ref/'capture-manifest.json').read_text())
           score=float(report['minimum_score'])
           status=report['status']
+          self_contained=isolation['status']=='pass'
           manifest['reconstruction']={
             'mode':'source-import',
             'local_path':'labs/references/motion-primitives/',
-            'essential_origin_dependency':True,
-            'notes':'Static export built from exact MIT upstream SHA. Framework/public asset paths are deterministically relocated under the nested Valentine base path. Remote demo media remains externally referenced, so candidate is not self-contained.'
+            'essential_origin_dependency':not self_contained,
+            'self_containment':{
+              'status':isolation['status'],
+              'protocol':'network-isolation-v2',
+              'visual_minimum_score':isolation['minimum_score'],
+              'interaction_status':isolation['interaction_status'],
+              'network_status':isolation.get('network_status'),
+              'blocked_request_count':isolation['blocked_request_count'],
+              'blocked_origins':isolation.get('blocked_origins',[]),
+              'evidence':'evidence/isolation/self-containment.json'
+            },
+            'sanitization':{
+              'policy':'third-party demo media with unverified reuse rights is replaced with local inert assets; analytics is disabled',
+              'replacements':sanitization['total_replacements'],
+              'receipt':'SANITIZATION.json'
+            },
+            'notes':'Static export built from exact MIT upstream SHA, nested-path relocated, then sanitized. Source fidelity and self-containment are measured independently.'
           }
           manifest['fidelity']['visual']={
             'score':score,
             'status':status,
             'method':report['method'],
-            'exceptions':[]
+            'full_frame_minimum_score':report.get('full_frame_minimum_score'),
+            'exceptions':report.get('visual_exclusions',[])
           }
           manifest['fidelity']['motion_interaction']={
             'status':'pending',
             'states_verified':[],
-            'notes':'Visual source-import control measured; independent motion/interaction verification still required.'
+            'notes':'Rebuild invalidates prior runtime timing evidence; independent interaction workflow must re-verify the sanitized artifact.'
           }
           manifest['provenance']={
             'code':'Exact upstream source ibelick/motion-primitives@92586e62a951eb9b6bfd1cc7c8a4e6e2ab6ba17d, MIT; nested-path relocation is deterministic and limited to actual upstream public assets.',
-            'assets':'Bundled public assets are relocated locally; remote demo media is not assumed to inherit the repository MIT license and remains externally referenced.',
-            'rights_status':'mixed'
+            'assets':'Bundled public assets remain local. External Cosmos/Spotify/Pinterest demo media with unverified independent reuse rights is not copied or re-hosted; sanitized placeholders and explicit accepted-surface exclusions are recorded.',
+            'rights_status':'mixed-reviewed'
           }
           (ref/'capture-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 
@@ -238,12 +272,27 @@ jobs:
           item['status']='reconstructed' if status=='pass' else ('reconstruction-review' if status=='review' else 'reconstruction-fail')
           item['live']='../labs/references/motion-primitives/'
           item['preview']='../labs/references/motion-primitives/'
-          item['essential_origin_dependency']=True
-          item['fidelity']['visual']={'score':score,'status':status}
+          item['essential_origin_dependency']=not self_contained
+          item['self_containment']={
+            'status':isolation['status'],
+            'protocol':'network-isolation-v2',
+            'visual_score':isolation['minimum_score'],
+            'interaction_status':isolation['interaction_status'],
+            'network_status':isolation.get('network_status'),
+            'evidence':'../labs/references/motion-primitives/evidence/isolation/self-containment.json'
+          }
+          item['fidelity']['visual']={
+            'score':score,
+            'status':status,
+            'full_frame_score':report.get('full_frame_minimum_score')
+          }
           item['fidelity']['motion_interaction']={'status':'pending'}
-          item['provenance']={'rights_status':'mixed','note':'Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown.'}
+          item['provenance']={
+            'rights_status':'mixed-reviewed',
+            'note':'MIT code is pinned. Third-party demo media is sanitized rather than copied; accepted-surface visual exclusions are explicit and bounded, and self-containment is tested independently.'
+          }
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('SOURCE_CONTROL_RESULT',status,score)
+          print('SOURCE_CONTROL_RESULT',status,score,'full',report.get('full_frame_minimum_score'),'self_containment',isolation['status'])
           PY
           node labs/reference-harvester/validate.mjs
 
@@ -253,10 +302,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # Generated Next output contains build-id-specific filenames. A concurrent
-          # privacy-scrub force update can therefore make a normal rebase conflict
-          # even when the remote tree is semantically unchanged. Preserve the
-          # measured output outside Git, then replay it on the latest remote head.
           SNAP=/tmp/source-control-snapshot
           rm -rf "$SNAP"
           mkdir -p "$SNAP/labs/references" "$SNAP/labs/reference-harvester"
@@ -296,7 +341,7 @@ jobs:
               echo 'SOURCE_CONTROL_ALREADY_CURRENT'
               exit 0
             fi
-            git commit -m 'test: persist measured source-import control'
+            git commit -m 'test: persist sanitized source-import control'
             if git push origin "HEAD:$GITHUB_REF_NAME"; then
               echo 'SOURCE_CONTROL_PUSHED'
               exit 0
