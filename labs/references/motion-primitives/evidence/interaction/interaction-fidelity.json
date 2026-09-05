@@ -9,8 +9,8 @@
     "functional_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 97.0455,
-  "status": "fail",
+  "minimum_score": 98.7044,
+  "status": "pass",
   "viewports": [
     {
       "viewport": "desktop",
@@ -41,42 +41,42 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 97.0455,
-        "max_normalized_geometry_error": 0.029545,
+        "score": 98.7044,
+        "max_normalized_geometry_error": 0.012956,
         "samples": [
           {
             "t": 0,
-            "dialog_error": 0.02705803765190972,
-            "image_error": 0.028286183675130208,
-            "trigger_error": 0.02705803765190972,
+            "dialog_error": 0.008831278483072916,
+            "image_error": 0.009232109917534722,
+            "trigger_error": 0.008831278483072916,
             "presence_match": true
           },
           {
             "t": 50,
-            "dialog_error": 0.02826236300998264,
-            "image_error": 0.029545152452256945,
-            "trigger_error": 0.02826229519314236,
+            "dialog_error": 0.012393120659722222,
+            "image_error": 0.01295564439561632,
+            "trigger_error": 0.012393120659722222,
             "presence_match": true
           },
           {
             "t": 100,
-            "dialog_error": 0.005001017252604167,
-            "image_error": 0.00522798326280382,
-            "trigger_error": 0.005000983344184028,
+            "dialog_error": 0.0017304823133680557,
+            "image_error": 0.0018090057373046876,
+            "trigger_error": 0.0017305162217881944,
             "presence_match": true
           },
           {
             "t": 150,
-            "dialog_error": 0.0014198472764756945,
-            "image_error": 0.0014842732747395832,
-            "trigger_error": 0.0014198472764756945,
+            "dialog_error": 0.0017734781901041668,
+            "image_error": 0.0018539683024088541,
+            "trigger_error": 0.0017734442816840278,
             "presence_match": true
           },
           {
             "t": 200,
-            "dialog_error": 0.0005449422200520833,
-            "image_error": 0.0005697038438585069,
-            "trigger_error": 0.0005449422200520833,
+            "dialog_error": 1.617431640625e-05,
+            "image_error": 1.7869737413194446e-05,
+            "trigger_error": 1.617431640625e-05,
             "presence_match": true
           },
           {
@@ -93,8 +93,8 @@
         "baseline_count": 2,
         "local_count": 2
       },
-      "minimum_score": 97.0455,
-      "status": "fail"
+      "minimum_score": 98.7044,
+      "status": "pass"
     },
     {
       "viewport": "mobile",
@@ -125,42 +125,42 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 97.4853,
-        "max_normalized_geometry_error": 0.025147,
+        "score": 99.8388,
+        "max_normalized_geometry_error": 0.001612,
         "samples": [
           {
             "t": 0,
-            "dialog_error": 0.02427857747010145,
-            "image_error": 0.025147225619492373,
-            "trigger_error": 0.024278541311833532,
+            "dialog_error": 0.0,
+            "image_error": 0.0,
+            "trigger_error": 0.0,
             "presence_match": true
           },
           {
             "t": 50,
-            "dialog_error": 0.010004739625759035,
-            "image_error": 0.010362706478173134,
-            "trigger_error": 0.010004703467491114,
+            "dialog_error": 0.0015563603261070794,
+            "image_error": 0.0016120440587048283,
+            "trigger_error": 0.0015563241678391588,
             "presence_match": true
           },
           {
             "t": 100,
-            "dialog_error": 0.003603605297504443,
-            "image_error": 0.00373253664134238,
-            "trigger_error": 0.0036036776140402843,
+            "dialog_error": 0.0005666723748518958,
+            "image_error": 0.0005869300444544209,
+            "trigger_error": 0.000566744691387737,
             "presence_match": true
           },
           {
             "t": 150,
-            "dialog_error": 0.0011049605093861078,
-            "image_error": 0.0011444905357903214,
-            "trigger_error": 0.0011049243511181872,
+            "dialog_error": 0.0,
+            "image_error": 0.0,
+            "trigger_error": 0.0,
             "presence_match": true
           },
           {
             "t": 200,
-            "dialog_error": 0.00030101758043912916,
-            "image_error": 0.0003117837047124926,
-            "trigger_error": 0.00030105373870704976,
+            "dialog_error": 4.8632870353228675e-05,
+            "image_error": 5.0386546347378554e-05,
+            "trigger_error": 4.859671208530806e-05,
             "presence_match": true
           },
           {
@@ -177,8 +177,8 @@
         "baseline_count": 2,
         "local_count": 2
       },
-      "minimum_score": 97.4853,
-      "status": "fail"
+      "minimum_score": 99.8388,
+      "status": "pass"
     }
   ]
 }

@@ -778,10 +778,20 @@
       "exceptions": []
     },
     "motion_interaction": {
-      "status": "fail",
-      "states_verified": [],
-      "minimum_score": 97.0455,
-      "method": "Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.",
+      "status": "pass",
+      "states_verified": [
+        "desktop:closed",
+        "desktop:open",
+        "desktop:trajectory",
+        "desktop:escape-close",
+        "mobile:closed",
+        "mobile:open",
+        "mobile:trajectory",
+        "mobile:escape-close"
+      ],
+      "minimum_score": 98.7044,
+      "protocol": "2.0",
+      "method": "Independent active-page functional dialog/Escape contract + open-dialog visual/geometry fidelity + deterministic WAAPI morph trajectory + scoped animation signature.",
       "notes": "Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance."
     }
   },
