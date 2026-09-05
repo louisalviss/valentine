@@ -86,8 +86,12 @@ def state_at_progress(side,milestone,width,height):
                 'trigger':lerp_rect(sa['trigger']['rect'],sb['trigger']['rect'],f),
                 'source_t':float(a['t'])+(float(b['t'])-float(a['t']))*f,
                 'progress':milestone,
+                'crossing':True,
             }
 
+    # Nearest-frame fallback is useful for spatial geometry only. Timing evidence
+    # must use actual forward crossings so the first sampled frame cannot become
+    # a fake clock origin.
     p,item=min(points,key=lambda x:abs(x[0]-milestone))
     state=item['state']
     return {
@@ -96,24 +100,8 @@ def state_at_progress(side,milestone,width,height):
         'trigger':state['trigger']['rect'],
         'source_t':float(item['t']),
         'progress':float(p),
+        'crossing':False,
     }
-
-
-def progress_at_time(side,t,width,height):
-    points=progress_points(side,width,height)
-    if not points:
-        return None
-    if t<=points[0][0]:
-        return points[0][1]
-    if t>=points[-1][0]:
-        return points[-1][1]
-    for (t0,p0,_),(t1,p1,_) in zip(points,points[1:]):
-        if t0<=t<=t1:
-            if abs(t1-t0)<1e-9:
-                return p1
-            f=(t-t0)/(t1-t0)
-            return p0+(p1-p0)*f
-    return points[-1][1]
 
 
 def normalized_signature(items):
@@ -135,7 +123,10 @@ def functional_side(side):
 
 
 spatial_milestones=[0.10,0.25,0.50,0.75,0.90]
-timing_samples_ms=[16.7,33.3,50.0,75.0,100.0,150.0,200.0,250.0]
+timing_milestones=[0.25,0.50,0.75,0.90]
+phase_budget_ms=16.7
+nominal_transition_ms=250.0
+
 results=[]
 for vp in capture['viewports']:
     width,height=vp['width'],vp['height']
@@ -151,7 +142,7 @@ for vp in capture['viewports']:
     )
     open_geometry_score=max(0.0,(1.0-open_geometry_error)*100.0)
 
-    path_samples=[]; path_errors=[]
+    path_samples=[]; path_errors=[]; crossing_by_progress={}
     for progress in spatial_milestones:
         b=state_at_progress(baseline,progress,width,height)
         l=state_at_progress(local,progress,width,height)
@@ -170,30 +161,58 @@ for vp in capture['viewports']:
             'trigger_error':te,
             'baseline_t':round(b['source_t'],3),
             'local_t':round(l['source_t'],3),
+            'baseline_crossing':bool(b['crossing']),
+            'local_crossing':bool(l['crossing']),
             'presence_match':True,
         })
+        crossing_by_progress[progress]=(b,l)
     path_max_error=max(path_errors or [1.0])
     trajectory_score=max(0.0,(1.0-path_max_error)*100.0)
 
-    timing_samples=[]; timing_errors=[]
-    for t in timing_samples_ms:
-        bp=progress_at_time(baseline,t,width,height)
-        lp=progress_at_time(local,t,width,height)
-        if bp is None or lp is None:
-            timing_errors.append(1.0)
-            timing_samples.append({'t_ms':t,'presence_match':False})
+    # Baseline and local pages are captured independently, so their requestAnimationFrame
+    # clocks can begin on different display phases. Compare the time required to cross
+    # the SAME spatial milestones, subtract one constant phase offset, and score only
+    # the residual curve shape. A phase offset larger than one 60 Hz frame is invalid.
+    raw_timing=[]
+    for progress in timing_milestones:
+        pair=crossing_by_progress.get(progress)
+        if not pair:
             continue
-        error=abs(bp-lp)
-        timing_errors.append(error)
-        timing_samples.append({
-            't_ms':t,
-            'baseline_progress':round(bp,6),
-            'local_progress':round(lp,6),
-            'progress_error':round(error,6),
-            'presence_match':True,
+        b,l=pair
+        if not b['crossing'] or not l['crossing']:
+            continue
+        delta=float(l['source_t'])-float(b['source_t'])
+        raw_timing.append({
+            'progress':progress,
+            'baseline_t':float(b['source_t']),
+            'local_t':float(l['source_t']),
+            'raw_delta_ms':delta,
         })
-    timing_max_error=max(timing_errors or [1.0])
-    timing_curve_score=max(0.0,(1.0-timing_max_error)*100.0)
+
+    timing_measured=len(raw_timing)==len(timing_milestones)
+    if timing_measured:
+        phase_offset=float(np.median([x['raw_delta_ms'] for x in raw_timing]))
+        residuals=[x['raw_delta_ms']-phase_offset for x in raw_timing]
+        rmse_residual=float(np.sqrt(np.mean(np.square(residuals))))
+        max_abs_residual=max(abs(x) for x in residuals)
+        phase_within_budget=abs(phase_offset)<=phase_budget_ms
+        timing_curve_score=max(0.0,(1.0-rmse_residual/nominal_transition_ms)*100.0) if phase_within_budget else 0.0
+        timing_samples=[]
+        for item,residual in zip(raw_timing,residuals):
+            timing_samples.append({
+                'progress':item['progress'],
+                'baseline_t':round(item['baseline_t'],3),
+                'local_t':round(item['local_t'],3),
+                'raw_delta_ms':round(item['raw_delta_ms'],3),
+                'phase_aligned_residual_ms':round(residual,3),
+            })
+    else:
+        phase_offset=None
+        rmse_residual=None
+        max_abs_residual=None
+        phase_within_budget=False
+        timing_curve_score=0.0
+        timing_samples=raw_timing
 
     baseline_signature=baseline.get('animation_signature') or []
     local_signature=local.get('animation_signature') or []
@@ -224,9 +243,15 @@ for vp in capture['viewports']:
         },
         'timing_curve':{
             'score':round(timing_curve_score,4),
-            'max_progress_error':round(timing_max_error,6),
-            'basis':'runtime morph progress versus elapsed time from first dialog frame',
-            'samples':timing_samples,
+            'measured':timing_measured,
+            'phase_offset_ms':round(phase_offset,3) if phase_offset is not None else None,
+            'phase_budget_ms':phase_budget_ms,
+            'phase_within_budget':phase_within_budget,
+            'rmse_phase_aligned_residual_ms':round(rmse_residual,3) if rmse_residual is not None else None,
+            'max_abs_phase_aligned_residual_ms':round(max_abs_residual,3) if max_abs_residual is not None else None,
+            'nominal_transition_ms':nominal_transition_ms,
+            'basis':'same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored',
+            'milestones':timing_samples,
         },
         'timing_diagnostic':{'click_to_dialog_delta_ms':round(mount_latency_delta,3)},
         'animation_signature':{
@@ -243,7 +268,8 @@ for vp in capture['viewports']:
 overall='pass' if all(x['status']=='pass' for x in results) else 'fail'
 minimum=min(x['minimum_score'] for x in results)
 report={
-    'version':'3.1',
+    'version':'3.2',
+    'capture_protocol':'3.1',
     'reference_id':reference_id,
     'scenario':capture['scenario'],
     'policy':{
@@ -251,6 +277,7 @@ report={
         'open_geometry_min':98.0,
         'spatial_trajectory_min':98.0,
         'runtime_timing_curve_min':98.0,
+        'runtime_phase_budget_ms':phase_budget_ms,
         'functional_required':True,
         'interaction_animation_signature_measured_required':True,
         'interaction_animation_signature_match_required':True,
@@ -260,6 +287,7 @@ report={
     'viewports':results,
 }
 (interaction_dir/'interaction-fidelity.json').write_text(json.dumps(report,indent=2)+'\n')
-print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} protocol=v3.1 min={minimum:.4f}')
+print(f'REFERENCE_INTERACTION_{overall.upper()} id={reference_id} protocol=v3.2 min={minimum:.4f}')
 for x in results:
-    print(f" {x['viewport']} status={x['status']} dialog={x['open_dialog_visual']['score']:.4f} geometry={x['open_geometry']['score']:.4f} spatial={x['trajectory']['score']:.4f} timing={x['timing_curve']['score']:.4f} functional={x['functional']['status']} animations_measured={x['animation_signature']['measured']} animations_match={x['animation_signature']['match']} counts={x['animation_signature']['baseline_count']}/{x['animation_signature']['local_count']} mount_delta_ms={x['timing_diagnostic']['click_to_dialog_delta_ms']}")
+    tc=x['timing_curve']; sig=x['animation_signature']
+    print(f" {x['viewport']} status={x['status']} dialog={x['open_dialog_visual']['score']:.4f} geometry={x['open_geometry']['score']:.4f} spatial={x['trajectory']['score']:.4f} timing={tc['score']:.4f} phase_ms={tc['phase_offset_ms']} residual_rms_ms={tc['rmse_phase_aligned_residual_ms']} functional={x['functional']['status']} animations_measured={sig['measured']} animations_match={sig['match']} counts={sig['baseline_count']}/{sig['local_count']} mount_delta_ms={x['timing_diagnostic']['click_to_dialog_delta_ms']}")
