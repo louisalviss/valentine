@@ -106,17 +106,22 @@ jobs:
               'states_verified':verified if status=='pass' else [],
               'minimum_score':report['minimum_score'],
               'method':'Functional ARIA/dialog/body-lock contract + open/closed screenshot fidelity + normalized morph geometry trajectory + animation timing signature.',
-              'notes':'Independent interaction gate; visual PASS is not used to infer this result.'
+              'notes':'Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance.'
           }
+          # Do not mutate reconstruction.essential_origin_dependency here. The
+          # source-import control still has separately licensed/unknown remote demo
+          # media even when visual and interaction fidelity both pass.
           manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 
           registry_path=Path('labs/reference-harvester/reference-registry.json')
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
           item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score']}
+          # Keep this as a reconstructed control while essential origin dependencies
+          # or mixed asset rights remain. Do not auto-promote to verified/pattern.
           item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'overall_status',item['status'])
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
           PY
           node labs/reference-harvester/validate.mjs
 
@@ -133,14 +138,59 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add labs/references/motion-primitives/evidence/interaction labs/references/motion-primitives/capture-manifest.json labs/reference-harvester/reference-registry.json
-          if git diff --cached --quiet; then
-            echo 'NO_INTERACTION_DIFF'
-            exit 0
-          fi
-          git commit -m 'test: persist interaction fidelity evidence'
+
+          # Privacy scrub can force-update this feature branch while the QA job is
+          # running. Snapshot only the interaction result, then replay that result
+          # onto the latest remote tree instead of rebasing generated artifacts.
+          SNAP=/tmp/interaction-snapshot
+          rm -rf "$SNAP"
+          mkdir -p "$SNAP/evidence"
+          cp -a labs/references/motion-primitives/evidence/interaction/. "$SNAP/evidence/"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ref=Path('labs/references/motion-primitives')
+          manifest=json.loads((ref/'capture-manifest.json').read_text())
+          registry=json.loads(Path('labs/reference-harvester/reference-registry.json').read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          Path('/tmp/interaction-snapshot/motion.json').write_text(json.dumps(manifest['fidelity']['motion_interaction'],indent=2)+'\n')
+          Path('/tmp/interaction-snapshot/registry-motion.json').write_text(json.dumps(item['fidelity']['motion_interaction'],indent=2)+'\n')
+          PY
+
           for attempt in 1 2 3; do
-            git pull --rebase origin "$GITHUB_REF_NAME"
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+
+            rm -rf labs/references/motion-primitives/evidence/interaction
+            mkdir -p labs/references/motion-primitives/evidence/interaction
+            cp -a "$SNAP/evidence/." labs/references/motion-primitives/evidence/interaction/
+
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          manifest_path=Path('labs/references/motion-primitives/capture-manifest.json')
+          manifest=json.loads(manifest_path.read_text())
+          manifest['fidelity']['motion_interaction']=json.loads(Path('/tmp/interaction-snapshot/motion.json').read_text())
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+
+          registry_path=Path('labs/reference-harvester/reference-registry.json')
+          registry=json.loads(registry_path.read_text())
+          item=next(x for x in registry['references'] if x['id']=='motion-primitives')
+          item['fidelity']['motion_interaction']=json.loads(Path('/tmp/interaction-snapshot/registry-motion.json').read_text())
+          if item.get('fidelity',{}).get('visual',{}).get('status')=='pass':
+              item['status']='reconstructed'
+          # Preserve essential_origin_dependency and provenance from the latest
+          # remote registry; interaction equivalence does not clear either.
+          registry_path.write_text(json.dumps(registry,indent=2)+'\n')
+          PY
+
+            node labs/reference-harvester/validate.mjs
+            git add labs/references/motion-primitives/evidence/interaction labs/references/motion-primitives/capture-manifest.json labs/reference-harvester/reference-registry.json
+            if git diff --cached --quiet; then
+              echo 'INTERACTION_ALREADY_CURRENT'
+              exit 0
+            fi
+            git commit -m 'test: persist interaction fidelity evidence'
             if git push origin "HEAD:$GITHUB_REF_NAME"; then
               echo 'INTERACTION_EVIDENCE_PUSHED'
               exit 0
