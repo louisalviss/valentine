@@ -19,7 +19,31 @@ local_capture = json.loads((ref_dir / 'evidence' / 'local' / 'capture.json').rea
 local_by_id = {state['id']: state for state in local_capture.get('states', [])}
 exclusion_definitions = original_capture.get('visual_exclusion_definitions', []) or []
 MASK_PADDING_PX = 6
-MAX_EXCLUDED_FRACTION = 0.10
+# A single 192x208 demo image occupies ~12.1% of the 390x844 viewport before
+# SSIM-boundary padding. Keep the cap narrowly above that known element while
+# requiring exact declared-selector identity; this is not a generic diff mask.
+MAX_EXCLUDED_FRACTION = 0.15
+MAX_MATCHED_ELEMENTS_PER_EXCLUSION = 1
+
+
+def validate_definitions():
+    ids = set()
+    for definition in exclusion_definitions:
+        exclusion_id = definition.get('id')
+        if not exclusion_id or exclusion_id in ids:
+            raise SystemExit(f'{reference_id}: every rights exclusion requires a unique id')
+        ids.add(exclusion_id)
+        if not definition.get('selector'):
+            raise SystemExit(f'{reference_id}:{exclusion_id}: selector required')
+        if not definition.get('reason'):
+            raise SystemExit(f'{reference_id}:{exclusion_id}: reason required')
+        rights_status = str(definition.get('rights_status') or '')
+        if not rights_status.startswith('excluded-'):
+            raise SystemExit(f'{reference_id}:{exclusion_id}: explicit excluded-* rights_status required')
+    return ids
+
+
+DECLARED_EXCLUSION_IDS = validate_definitions()
 
 
 def metric_pair(a, b, valid_mask=None):
@@ -39,26 +63,45 @@ def metric_pair(a, b, valid_mask=None):
     return ssim * 100.0, pixel_similarity * 100.0, score
 
 
-def visible_rects(exclusions):
+def visible_rects(exclusions, state_id, side):
     result = []
+    observed_ids = set()
     for exclusion in exclusions or []:
+        exclusion_id = exclusion.get('id')
+        if exclusion_id not in DECLARED_EXCLUSION_IDS:
+            raise SystemExit(f'{reference_id}:{state_id}:{side}: undeclared rights exclusion {exclusion_id!r}')
+        observed_ids.add(exclusion_id)
+        matched = int(exclusion.get('matched_elements', 0))
+        if matched != MAX_MATCHED_ELEMENTS_PER_EXCLUSION:
+            raise SystemExit(
+                f'{reference_id}:{state_id}:{side}:{exclusion_id}: selector must match exactly '
+                f'{MAX_MATCHED_ELEMENTS_PER_EXCLUSION} element, got {matched}'
+            )
+        if not str(exclusion.get('rights_status') or '').startswith('excluded-'):
+            raise SystemExit(f'{reference_id}:{state_id}:{side}:{exclusion_id}: invalid rights_status')
         for item in exclusion.get('rects', []) or []:
             rect = item.get('clipped_rect') or {}
             if item.get('visible') and float(rect.get('width', 0)) > 0 and float(rect.get('height', 0)) > 0:
                 result.append({
-                    'id': exclusion.get('id'),
+                    'id': exclusion_id,
                     'selector': exclusion.get('selector'),
                     'reason': exclusion.get('reason'),
                     'rights_status': exclusion.get('rights_status'),
                     'rect': rect,
                 })
+    missing = DECLARED_EXCLUSION_IDS - observed_ids
+    if missing:
+        raise SystemExit(f'{reference_id}:{state_id}:{side}: missing declared rights exclusions {sorted(missing)}')
     return result
 
 
 def build_rights_mask(shape, original_state, local_state):
     height, width = shape[:2]
     mask = np.zeros((height, width), dtype=bool)
-    rects = visible_rects(original_state.get('visual_exclusions')) + visible_rects(local_state.get('visual_exclusions'))
+    rects = (
+        visible_rects(original_state.get('visual_exclusions'), original_state['id'], 'original')
+        + visible_rects(local_state.get('visual_exclusions'), original_state['id'], 'local')
+    )
     normalized = []
     seen = set()
     for item in rects:
@@ -77,7 +120,10 @@ def build_rights_mask(shape, original_state, local_state):
         normalized.append({**item, 'mask_rect': {'x': x0, 'y': y0, 'width': x1 - x0, 'height': y1 - y0}})
     fraction = float(np.mean(mask))
     if fraction > MAX_EXCLUDED_FRACTION:
-        raise SystemExit(f'{reference_id}:{original_state["id"]}: rights mask {fraction:.4%} exceeds {MAX_EXCLUDED_FRACTION:.0%} cap')
+        raise SystemExit(
+            f'{reference_id}:{original_state["id"]}: rights mask {fraction:.4%} exceeds '
+            f'{MAX_EXCLUDED_FRACTION:.0%} cap despite exact selector constraints'
+        )
     return mask, normalized, fraction
 
 
@@ -130,16 +176,18 @@ full_frame_minimum = min(item['full_frame']['score'] for item in scores)
 full_frame_mean = sum(item['full_frame']['score'] for item in scores) / len(scores)
 status = 'pass' if minimum >= 98.0 else ('review' if minimum >= 95.0 else 'fail')
 report = {
-    'version': '2.0',
+    'version': '2.1',
     'reference_id': reference_id,
     'method': 'accepted surface: min(SSIM-map mean, pixel_similarity) outside explicit DOM-derived rights masks; full-frame metrics are retained separately',
     'visual_pass_min': 98.0,
     'rights_mask_policy': {
         'allowed_reason': 'only explicitly declared third-party media whose independent reuse rights are not established',
         'geometry_source': 'union of original and local DOM client rects per captured state',
+        'selector_cardinality_required': MAX_MATCHED_ELEMENTS_PER_EXCLUSION,
         'padding_px': MASK_PADDING_PX,
         'max_excluded_fraction_per_state': MAX_EXCLUDED_FRACTION,
         'threshold_is_not_lowered': True,
+        'full_frame_metrics_retained': True,
     },
     'visual_exclusions': exclusion_definitions,
     'minimum_score': round(minimum, 4),
