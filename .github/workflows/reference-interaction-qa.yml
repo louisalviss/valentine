@@ -13,15 +13,32 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: reference-interaction-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   motion-primitives:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 24
     steps:
       - name: Checkout Valentine
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+
+      - name: Pin tested local artifact identity
+        run: |
+          set -euo pipefail
+          test -s labs/references/motion-primitives/index.html
+          test -s labs/references/motion-primitives/SOURCE.json
+          test -s labs/references/motion-primitives/SANITIZATION.json
+          sha256sum \
+            labs/references/motion-primitives/index.html \
+            labs/references/motion-primitives/SOURCE.json \
+            labs/references/motion-primitives/SANITIZATION.json \
+            >/tmp/interaction-tested-artifact.sha256
+          cat /tmp/interaction-tested-artifact.sha256
 
       - name: Install interaction QA runtime
         run: |
@@ -64,6 +81,7 @@ jobs:
           set -euo pipefail
           test -s labs/references/motion-primitives/index.html
           test -s labs/references/motion-primitives/eb-27-lamp-edouard-wilfrid-buquet.jpg
+          test -s labs/references/motion-primitives/SANITIZATION.json
           python3 -m http.server 4173 --directory . >/tmp/valentine-interaction-server.log 2>&1 &
           echo $! >/tmp/valentine-interaction-server.pid
           for i in $(seq 1 30); do
@@ -87,21 +105,21 @@ jobs:
           base=Path('labs/references/motion-primitives/evidence/interaction')
           capture=json.loads((base/'interaction-capture.json').read_text())
           report=json.loads((base/'interaction-fidelity.json').read_text())
-          assert capture.get('version')=='3.3', f"unexpected interaction capture protocol {capture.get('version')}"
-          assert capture.get('runtime_trial_count',0)>=3, 'interaction capture requires >=3 runtime trials'
-          assert report.get('version')=='3.3', f"unexpected interaction report protocol {report.get('version')}"
-          assert report.get('capture_protocol')=='3.3'
+          assert capture.get('version')=='3.4', f"unexpected interaction capture protocol {capture.get('version')}"
+          assert capture.get('runtime_trial_count',0)>=5, 'interaction capture requires >=5 runtime trials'
+          assert report.get('version')=='3.4', f"unexpected interaction report protocol {report.get('version')}"
+          assert report.get('capture_protocol')=='3.4'
           for vp in report['viewports']:
               sig=vp['animation_signature']
               timing=vp['timing_curve']
-              assert vp.get('runtime_trial_count',0)>=3, f"{vp['viewport']}: insufficient runtime trials"
+              assert vp.get('runtime_trial_count',0)>=5, f"{vp['viewport']}: insufficient runtime trials"
               assert sig.get('measured') is True, f"{vp['viewport']}: animation signature not measured"
               assert all(x>0 for x in sig.get('baseline_counts',[])), f"{vp['viewport']}: empty baseline animation signature"
               assert all(x>0 for x in sig.get('local_counts',[])), f"{vp['viewport']}: empty local animation signature"
               assert timing.get('measured') is True, f"{vp['viewport']}: timing curve not measured"
-              assert timing.get('trial_count',0)>=3, f"{vp['viewport']}: timing curve lacks 3 trials"
+              assert timing.get('trial_count',0)>=5, f"{vp['viewport']}: timing curve lacks 5 trials"
               assert timing.get('phase_within_budget') is True, f"{vp['viewport']}: rAF phase offset exceeds one-frame budget"
-          print('INTERACTION_PROTOCOL_V3_3_OK', report['status'], report['minimum_score'])
+          print('INTERACTION_PROTOCOL_V3_4_OK', report['status'], report['minimum_score'])
           PY
 
       - name: Persist independent motion state
@@ -112,7 +130,7 @@ jobs:
           from pathlib import Path
           ref=Path('labs/references/motion-primitives')
           report=json.loads((ref/'evidence/interaction/interaction-fidelity.json').read_text())
-          assert report.get('version')=='3.3'
+          assert report.get('version')=='3.4'
           manifest_path=ref/'capture-manifest.json'
           manifest=json.loads(manifest_path.read_text())
           status=report['status']
@@ -121,29 +139,32 @@ jobs:
               verified.extend([
                   f"{vp['viewport']}:closed",
                   f"{vp['viewport']}:open",
-                  f"{vp['viewport']}:3-trial-spatial-trajectory",
-                  f"{vp['viewport']}:3-trial-phase-aligned-runtime-timing",
+                  f"{vp['viewport']}:5-trial-spatial-trajectory",
+                  f"{vp['viewport']}:5-trial-phase-aligned-runtime-timing",
                   f"{vp['viewport']}:escape-close",
-                  f"{vp['viewport']}:3-trial-animation-signature",
+                  f"{vp['viewport']}:5-trial-animation-signature",
               ])
           manifest['fidelity']['motion_interaction']={
               'status':status,
               'states_verified':verified if status=='pass' else [],
               'minimum_score':report['minimum_score'],
-              'protocol':'3.3',
-              'capture_protocol':'3.3',
-              'method':'Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 3 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.',
-              'notes':'Gate remains >=98. Multi-trial median removes one-frame scheduler outliers without relaxing the threshold. The phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and all trial signatures must be non-empty and match. Interaction PASS does not imply asset self-containment or rights clearance.'
+              'protocol':'3.4',
+              'capture_protocol':'3.4',
+              'method':'Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 5 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.',
+              'notes':'Gate remains >=98. Five-trial median suppresses isolated scheduler jitter without relaxing the threshold. Phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and every trial signature must be non-empty and match. Interaction PASS does not grant asset rights; self-containment remains independently measured.'
           }
           manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 
           registry_path=Path('labs/reference-harvester/reference-registry.json')
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
-          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'3.3'}
-          item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
+          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'3.4'}
+          visual_pass=item.get('fidelity',{}).get('visual',{}).get('status')=='pass'
+          self_contained=item.get('self_containment',{}).get('status')=='pass'
+          origin_independent=item.get('essential_origin_dependency') is False
+          item['status']='verified' if status=='pass' and visual_pass and self_contained and origin_independent else ('reconstructed' if visual_pass else item['status'])
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=3.3','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=3.4','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
           PY
           node labs/reference-harvester/validate.mjs
 
@@ -165,6 +186,7 @@ jobs:
           rm -rf "$SNAP"
           mkdir -p "$SNAP/evidence"
           cp -a labs/references/motion-primitives/evidence/interaction/. "$SNAP/evidence/"
+          cp /tmp/interaction-tested-artifact.sha256 "$SNAP/tested-artifact.sha256"
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -174,11 +196,26 @@ jobs:
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
           Path('/tmp/interaction-snapshot/motion.json').write_text(json.dumps(manifest['fidelity']['motion_interaction'],indent=2)+'\n')
           Path('/tmp/interaction-snapshot/registry-motion.json').write_text(json.dumps(item['fidelity']['motion_interaction'],indent=2)+'\n')
+          Path('/tmp/interaction-snapshot/registry-status.txt').write_text(item['status']+'\n')
           PY
 
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
+
+            sha256sum \
+              labs/references/motion-primitives/index.html \
+              labs/references/motion-primitives/SOURCE.json \
+              labs/references/motion-primitives/SANITIZATION.json \
+              >/tmp/interaction-current-artifact.sha256
+            if ! cmp -s "$SNAP/tested-artifact.sha256" /tmp/interaction-current-artifact.sha256; then
+              echo 'INTERACTION_STALE_ARTIFACT_ABORT' >&2
+              echo 'tested:' >&2
+              cat "$SNAP/tested-artifact.sha256" >&2
+              echo 'current:' >&2
+              cat /tmp/interaction-current-artifact.sha256 >&2
+              exit 1
+            fi
 
             rm -rf labs/references/motion-primitives/evidence/interaction
             mkdir -p labs/references/motion-primitives/evidence/interaction
@@ -196,7 +233,13 @@ jobs:
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
           item['fidelity']['motion_interaction']=json.loads(Path('/tmp/interaction-snapshot/registry-motion.json').read_text())
-          if item.get('fidelity',{}).get('visual',{}).get('status')=='pass':
+          desired_status=Path('/tmp/interaction-snapshot/registry-status.txt').read_text().strip()
+          visual_pass=item.get('fidelity',{}).get('visual',{}).get('status')=='pass'
+          self_contained=item.get('self_containment',{}).get('status')=='pass'
+          origin_independent=item.get('essential_origin_dependency') is False
+          if desired_status=='verified' and visual_pass and self_contained and origin_independent and item['fidelity']['motion_interaction'].get('status')=='pass':
+              item['status']='verified'
+          elif visual_pass:
               item['status']='reconstructed'
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
           PY
@@ -207,7 +250,7 @@ jobs:
               echo 'INTERACTION_ALREADY_CURRENT'
               exit 0
             fi
-            git commit -m 'test: persist interaction fidelity evidence'
+            git commit -m 'test: persist five-trial interaction evidence'
             if git push origin "HEAD:$GITHUB_REF_NAME"; then
               echo 'INTERACTION_EVIDENCE_PUSHED'
               exit 0
