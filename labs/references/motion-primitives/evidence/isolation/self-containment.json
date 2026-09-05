@@ -3,18 +3,13 @@
   "reference_id": "motion-primitives",
   "policy": "abort all http(s) requests whose hostname is not localhost or 127.0.0.1",
   "visual_pass_min": 98.0,
-  "minimum_score": 96.6271,
-  "mean_score": 99.2709,
+  "minimum_score": 97.4557,
+  "mean_score": 99.4435,
   "visual_status": "fail",
   "interaction_status": "pass",
   "status": "fail",
-  "blocked_request_count": 22,
-  "blocked_origins": [
-    "https://assets.onedollarstats.com",
-    "https://i.pinimg.com",
-    "https://i.scdn.co",
-    "https://images.beta.cosmos.so"
-  ],
+  "blocked_request_count": 0,
+  "blocked_origins": [],
   "states": [
     {
       "id": "desktop-initial",
@@ -34,9 +29,9 @@
     },
     {
       "id": "desktop-scroll-50",
-      "ssim": 99.1534,
+      "ssim": 99.3614,
       "pixel_similarity": 99.8041,
-      "score": 99.1534,
+      "score": 99.3614,
       "original": "evidence/desktop-scroll-50.png",
       "isolated": "evidence/isolation/desktop-scroll-50.png"
     },
@@ -58,9 +53,9 @@
     },
     {
       "id": "tablet-scroll-50",
-      "ssim": 98.6008,
+      "ssim": 98.9446,
       "pixel_similarity": 99.6772,
-      "score": 98.6008,
+      "score": 98.9446,
       "original": "evidence/tablet-scroll-50.png",
       "isolated": "evidence/isolation/tablet-scroll-50.png"
     },
@@ -74,9 +69,9 @@
     },
     {
       "id": "mobile-scroll-50",
-      "ssim": 96.6271,
-      "pixel_similarity": 99.2287,
-      "score": 96.6271,
+      "ssim": 97.4557,
+      "pixel_similarity": 99.2288,
+      "score": 97.4557,
       "original": "evidence/mobile-scroll-50.png",
       "isolated": "evidence/isolation/mobile-scroll-50.png"
     }
@@ -97,8 +92,8 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": -0.6000000000030923,
-        "sample_count": 18
+        "click_to_dialog_ms": 7.69999999999709,
+        "sample_count": 19
       },
       "animation_signature": [
         {
@@ -124,7 +119,7 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": 1.5999999999912689,
+        "click_to_dialog_ms": 7.199999999988449,
         "sample_count": 22
       },
       "animation_signature": [

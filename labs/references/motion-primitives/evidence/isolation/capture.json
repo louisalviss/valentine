@@ -3,7 +3,7 @@
   "reference_id": "motion-primitives",
   "local_url": "http://127.0.0.1:4173/labs/references/motion-primitives/",
   "isolation_policy": "abort all http(s) requests whose hostname is not localhost or 127.0.0.1",
-  "captured_at": "2026-09-05T08:13:07.417Z",
+  "captured_at": "2026-09-05T08:19:38.657Z",
   "visual_state_policy": "deterministic-static",
   "states": [
     {
@@ -143,8 +143,8 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": -0.6000000000030923,
-        "sample_count": 18
+        "click_to_dialog_ms": 7.69999999999709,
+        "sample_count": 19
       },
       "animation_signature": [
         {
@@ -170,7 +170,7 @@
         "dialog": false
       },
       "trajectory": {
-        "click_to_dialog_ms": 1.5999999999912689,
+        "click_to_dialog_ms": 7.199999999988449,
         "sample_count": 22
       },
       "animation_signature": [
@@ -183,123 +183,7 @@
       "animation_signature_count": 1
     }
   ],
-  "blocked_request_count": 22,
-  "blocked_origins": [
-    "https://assets.onedollarstats.com",
-    "https://i.pinimg.com",
-    "https://i.scdn.co",
-    "https://images.beta.cosmos.so"
-  ],
-  "blocked_requests": [
-    {
-      "url": "https://assets.onedollarstats.com/stonks.js",
-      "origin": "https://assets.onedollarstats.com",
-      "resource_type": "script"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/fc6fdd93-552c-47e6-98aa-b8fb3ba070a2?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/cb674d14-ebd1-4408-bab1-79df895017b6?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/e5a6c3ed-82ad-4084-9a11-1eccd7bc91aa?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4d02a1e7-d1f2-4575-86a9-bed243e59132?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/e5ebb6f8-8202-40ec-bc70-976f81153501?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/9968a6cf-d7f6-4ec9-a56d-ac4eef3f8689?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/4b88a39c-c657-4911-b843-b473237e83b5?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/6ff16bc9-dc94-4549-a057-673a603ce203?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/d67c3185-4480-4408-8f9d-1cbf541e5d91?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/a7b19274-3370-4080-b734-e8ac268d8c8e.?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://images.beta.cosmos.so/551daf0d-77e8-472c-9324-468fed15a0ba?format=jpeg",
-      "origin": "https://images.beta.cosmos.so",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520",
-      "origin": "https://i.scdn.co",
-      "resource_type": "image"
-    },
-    {
-      "url": "https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg",
-      "origin": "https://i.pinimg.com",
-      "resource_type": "image"
-    }
-  ]
+  "blocked_request_count": 0,
+  "blocked_origins": [],
+  "blocked_requests": []
 }

@@ -772,15 +772,10 @@
     "self_containment": {
       "status": "fail",
       "protocol": "network-isolation-v1",
-      "visual_minimum_score": 96.6271,
+      "visual_minimum_score": 97.4557,
       "interaction_status": "pass",
-      "blocked_request_count": 22,
-      "blocked_origins": [
-        "https://assets.onedollarstats.com",
-        "https://i.pinimg.com",
-        "https://i.scdn.co",
-        "https://images.beta.cosmos.so"
-      ],
+      "blocked_request_count": 0,
+      "blocked_origins": [],
       "supported_surface": "8 deterministic homepage visual states + EB27 morph dialog open/Escape on desktop and mobile",
       "evidence": "evidence/isolation/self-containment.json"
     }

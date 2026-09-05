@@ -125,7 +125,7 @@
       "self_containment": {
         "status": "fail",
         "protocol": "network-isolation-v1",
-        "visual_score": 96.6271,
+        "visual_score": 97.4557,
         "interaction_status": "pass",
         "evidence": "../labs/references/motion-primitives/evidence/isolation/self-containment.json"
       }
