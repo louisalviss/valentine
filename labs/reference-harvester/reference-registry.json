@@ -86,7 +86,7 @@
       "id": "motion-primitives",
       "index": "R002",
       "title": "Motion Primitives",
-      "status": "reconstructed",
+      "status": "verified",
       "source_url": "https://motion-primitives.com/",
       "discovery_source": "open-source-validation",
       "seed_role": "source-import-control",
@@ -112,7 +112,9 @@
           "full_frame_score": 97.4557
         },
         "motion_interaction": {
-          "status": "pending"
+          "status": "pass",
+          "score": 99.0786,
+          "protocol": "3.4"
         }
       },
       "provenance": {

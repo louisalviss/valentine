@@ -1049,9 +1049,26 @@
       ]
     },
     "motion_interaction": {
-      "status": "pending",
-      "states_verified": [],
-      "notes": "Rebuild invalidates prior runtime timing evidence; independent interaction workflow must re-verify the sanitized artifact."
+      "status": "pass",
+      "states_verified": [
+        "desktop:closed",
+        "desktop:open",
+        "desktop:5-trial-spatial-trajectory",
+        "desktop:5-trial-phase-aligned-runtime-timing",
+        "desktop:escape-close",
+        "desktop:5-trial-animation-signature",
+        "mobile:closed",
+        "mobile:open",
+        "mobile:5-trial-spatial-trajectory",
+        "mobile:5-trial-phase-aligned-runtime-timing",
+        "mobile:escape-close",
+        "mobile:5-trial-animation-signature"
+      ],
+      "minimum_score": 99.0786,
+      "protocol": "3.4",
+      "capture_protocol": "3.4",
+      "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 5 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.",
+      "notes": "Gate remains >=98. Five-trial median suppresses isolated scheduler jitter without relaxing the threshold. Phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and every trial signature must be non-empty and match. Interaction PASS does not grant asset rights; self-containment remains independently measured."
     }
   },
   "provenance": {
