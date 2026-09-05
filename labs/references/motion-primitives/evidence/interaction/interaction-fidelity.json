@@ -14,8 +14,8 @@
     "interaction_animation_signature_measured_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 98.3225,
-  "status": "pass",
+  "minimum_score": 97.5437,
+  "status": "fail",
   "viewports": [
     {
       "viewport": "desktop",
@@ -47,47 +47,47 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.9207,
-        "max_median_normalized_geometry_error": 0.000793,
+        "score": 99.9256,
+        "max_median_normalized_geometry_error": 0.000744,
         "basis": "median geometry error across 3 independent rAF trials at spatial progress milestones",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error_median": 8.894804118931966e-09,
-            "image_error_median": 0.00017795629236767732,
-            "trigger_error_median": 2.4223799704890957e-08,
+            "dialog_error_median": 3.4609255787169484e-08,
+            "image_error_median": 0.00013193398315984774,
+            "trigger_error_median": 3.214704267722684e-08,
             "all_trials_forward_crossing": false,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 0.020482899164596675,
-                "image_error": 0.02127804801034434,
-                "trigger_error": 0.020482899164596675,
+                "dialog_error": 0.01426480255626959,
+                "image_error": 0.014338203491902783,
+                "trigger_error": 0.01426480255626959,
                 "baseline_t": 0.0,
-                "local_t": 9.069,
+                "local_t": 5.487,
                 "baseline_crossing": false,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 8.894804118931966e-09,
-                "image_error": 0.00017795629236767732,
-                "trigger_error": 2.4223799704890957e-08,
-                "baseline_t": 3.775,
-                "local_t": 8.094,
+                "dialog_error": 7.798901554186462e-09,
+                "image_error": 0.00013193398315984774,
+                "trigger_error": 1.416657659723973e-08,
+                "baseline_t": 5.487,
+                "local_t": 3.237,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 4.9209477816071334e-09,
-                "image_error": 6.560593700719942e-05,
-                "trigger_error": 1.0866186938882392e-08,
-                "baseline_t": 4.935,
-                "local_t": 3.752,
+                "dialog_error": 3.4609255787169484e-08,
+                "image_error": 0.00011759184994945018,
+                "trigger_error": 3.214704267722684e-08,
+                "baseline_t": 15.487,
+                "local_t": 3.73,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -96,41 +96,41 @@
           },
           {
             "progress": 0.25,
-            "dialog_error_median": 1.8760710910707228e-08,
-            "image_error_median": 0.0006305077532686533,
-            "trigger_error_median": 4.372973667917298e-08,
+            "dialog_error_median": 3.676338925136709e-08,
+            "image_error_median": 0.0007442247910667751,
+            "trigger_error_median": 3.055329304718018e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 1.3880057478685457e-08,
-                "image_error": 0.0010906501469145269,
-                "trigger_error": 1.3880057478685457e-08,
-                "baseline_t": 12.915,
-                "local_t": 25.377,
+                "dialog_error": 3.676338925136709e-08,
+                "image_error": 0.0016736777549206433,
+                "trigger_error": 2.0134674885399463e-08,
+                "baseline_t": 14.208,
+                "local_t": 22.899,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 1.913590589689799e-08,
-                "image_error": 0.0006305077532686533,
-                "trigger_error": 6.018024963496929e-08,
-                "baseline_t": 18.827,
-                "local_t": 25.277,
+                "dialog_error": 4.326722338040175e-08,
+                "image_error": 0.0007442247910667751,
+                "trigger_error": 3.055329304718018e-08,
+                "baseline_t": 22.899,
+                "local_t": 16.613,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 1.8760710910707228e-08,
-                "image_error": 0.0003984520814280914,
-                "trigger_error": 4.372973667917298e-08,
-                "baseline_t": 21.621,
-                "local_t": 18.409,
+                "dialog_error": 1.4884610127157632e-08,
+                "image_error": 7.260860819750784e-05,
+                "trigger_error": 4.6743425438459475e-08,
+                "baseline_t": 30.002,
+                "local_t": 18.627,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -139,41 +139,41 @@
           },
           {
             "progress": 0.5,
-            "dialog_error_median": 1.4771887495928442e-08,
-            "image_error_median": 0.0007925318742728551,
-            "trigger_error_median": 4.9264637343387426e-08,
+            "dialog_error_median": 2.9718614326965407e-08,
+            "image_error_median": 0.0006602283111304056,
+            "trigger_error_median": 3.9581532954950185e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 1.2945085082883957e-08,
-                "image_error": 5.153481986629534e-05,
-                "trigger_error": 1.2945085082883957e-08,
-                "baseline_t": 41.781,
-                "local_t": 47.0,
+                "dialog_error": 2.9718614326965407e-08,
+                "image_error": 0.0006602283111304056,
+                "trigger_error": 3.26798111574236e-08,
+                "baseline_t": 42.985,
+                "local_t": 44.118,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 3.864408534405407e-08,
-                "image_error": 0.0011615094179861292,
-                "trigger_error": 4.9264637343387426e-08,
-                "baseline_t": 38.2,
-                "local_t": 41.153,
+                "dialog_error": 4.7728227943682416e-08,
+                "image_error": 0.00012691373076803656,
+                "trigger_error": 5.467603456408041e-08,
+                "baseline_t": 43.79,
+                "local_t": 32.82,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 1.4771887495928442e-08,
-                "image_error": 0.0007925318742728551,
-                "trigger_error": 5.265641467152212e-08,
-                "baseline_t": 38.546,
-                "local_t": 35.824,
+                "dialog_error": 1.7946064861323268e-08,
+                "image_error": 0.0019892755725192048,
+                "trigger_error": 3.9581532954950185e-08,
+                "baseline_t": 50.687,
+                "local_t": 37.288,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -182,41 +182,41 @@
           },
           {
             "progress": 0.75,
-            "dialog_error_median": 2.275773876508285e-08,
-            "image_error_median": 0.0002568536001229897,
-            "trigger_error_median": 3.223409483628833e-08,
+            "dialog_error_median": 3.997986242312537e-08,
+            "image_error_median": 0.00021621304211900374,
+            "trigger_error_median": 7.877280198600703e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 2.275773876508285e-08,
-                "image_error": 0.0008764200427156273,
-                "trigger_error": 3.3746279465655485e-08,
-                "baseline_t": 75.127,
-                "local_t": 71.427,
+                "dialog_error": 2.638037024382811e-08,
+                "image_error": 0.00021621304211900374,
+                "trigger_error": 1.1163208644878372e-07,
+                "baseline_t": 74.998,
+                "local_t": 66.148,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 3.223409483628833e-08,
-                "image_error": 0.0002568536001229897,
-                "trigger_error": 3.223409483628833e-08,
-                "baseline_t": 58.005,
-                "local_t": 69.684,
+                "dialog_error": 7.684469235553277e-08,
+                "image_error": 0.0007996037747112913,
+                "trigger_error": 7.877280198600703e-08,
+                "baseline_t": 65.152,
+                "local_t": 54.111,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 2.2411762125153068e-08,
-                "image_error": 2.2411762125153068e-08,
-                "trigger_error": 2.620012120739072e-08,
-                "baseline_t": 57.608,
-                "local_t": 59.411,
+                "dialog_error": 3.997986242312537e-08,
+                "image_error": 5.224613040076697e-08,
+                "trigger_error": 2.0188649764286815e-08,
+                "baseline_t": 73.118,
+                "local_t": 55.706,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -225,41 +225,41 @@
           },
           {
             "progress": 0.9,
-            "dialog_error_median": 2.121933491139316e-08,
-            "image_error_median": 4.787049074176745e-08,
-            "trigger_error_median": 4.648257686312718e-08,
+            "dialog_error_median": 3.11474868810693e-08,
+            "image_error_median": 5.98461779001506e-06,
+            "trigger_error_median": 3.11474868810693e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 4.577995183928528e-08,
-                "image_error": 5.890458620309384e-06,
-                "trigger_error": 9.225788428718968e-08,
-                "baseline_t": 115.445,
-                "local_t": 95.604,
+                "dialog_error": 3.11474868810693e-08,
+                "image_error": 2.109014157506787e-05,
+                "trigger_error": 3.11474868810693e-08,
+                "baseline_t": 104.322,
+                "local_t": 96.713,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 2.121933491139316e-08,
-                "image_error": 3.1016738767498785e-08,
-                "trigger_error": 4.648257686312718e-08,
-                "baseline_t": 94.514,
-                "local_t": 98.891,
+                "dialog_error": 6.4067288955508655e-09,
+                "image_error": 5.98461779001506e-06,
+                "trigger_error": 1.453052670778258e-08,
+                "baseline_t": 90.658,
+                "local_t": 93.126,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 1.4651201733310396e-08,
-                "image_error": 4.787049074176745e-08,
-                "trigger_error": 3.905313570208414e-08,
-                "baseline_t": 93.315,
-                "local_t": 94.857,
+                "dialog_error": 4.040453569744942e-08,
+                "image_error": 2.6694000412577325e-08,
+                "trigger_error": 5.130147100216062e-08,
+                "baseline_t": 96.58,
+                "local_t": 92.791,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -269,100 +269,100 @@
         ]
       },
       "timing_curve": {
-        "score": 98.3225,
+        "score": 97.5437,
         "measured": true,
         "trial_count": 3,
         "aggregation": "median crossing time per side at each spatial milestone",
-        "phase_offset_ms": 4.528,
+        "phase_offset_ms": -5.387,
         "phase_budget_ms": 16.7,
         "phase_within_budget": true,
-        "rmse_phase_aligned_residual_ms": 4.194,
-        "max_abs_phase_aligned_residual_ms": 7.151,
+        "rmse_phase_aligned_residual_ms": 6.141,
+        "max_abs_phase_aligned_residual_ms": 12.025,
         "nominal_transition_ms": 250.0,
         "basis": "3-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
         "milestones": [
           {
             "progress": 0.25,
             "baseline_times": [
-              12.915,
-              18.827,
-              21.621
+              14.208,
+              22.899,
+              30.002
             ],
             "local_times": [
-              25.377,
-              25.277,
-              18.409
+              22.899,
+              16.613,
+              18.627
             ],
-            "baseline_median_t": 18.827,
-            "local_median_t": 25.277,
-            "raw_delta_ms": 6.45,
-            "phase_aligned_residual_ms": 1.921
+            "baseline_median_t": 22.899,
+            "local_median_t": 18.627,
+            "raw_delta_ms": -4.272,
+            "phase_aligned_residual_ms": 1.115
           },
           {
             "progress": 0.5,
             "baseline_times": [
-              41.781,
-              38.2,
-              38.546
+              42.985,
+              43.79,
+              50.687
             ],
             "local_times": [
-              47.0,
-              41.153,
-              35.824
+              44.118,
+              32.82,
+              37.288
             ],
-            "baseline_median_t": 38.546,
-            "local_median_t": 41.153,
-            "raw_delta_ms": 2.607,
-            "phase_aligned_residual_ms": -1.921
+            "baseline_median_t": 43.79,
+            "local_median_t": 37.288,
+            "raw_delta_ms": -6.502,
+            "phase_aligned_residual_ms": -1.115
           },
           {
             "progress": 0.75,
             "baseline_times": [
-              75.127,
-              58.005,
-              57.608
+              74.998,
+              65.152,
+              73.118
             ],
             "local_times": [
-              71.427,
-              69.684,
-              59.411
+              66.148,
+              54.111,
+              55.706
             ],
-            "baseline_median_t": 58.005,
-            "local_median_t": 69.684,
-            "raw_delta_ms": 11.68,
-            "phase_aligned_residual_ms": 7.151
+            "baseline_median_t": 73.118,
+            "local_median_t": 55.706,
+            "raw_delta_ms": -17.412,
+            "phase_aligned_residual_ms": -12.025
           },
           {
             "progress": 0.9,
             "baseline_times": [
-              115.445,
-              94.514,
-              93.315
+              104.322,
+              90.658,
+              96.58
             ],
             "local_times": [
-              95.604,
-              98.891,
-              94.857
+              96.713,
+              93.126,
+              92.791
             ],
-            "baseline_median_t": 94.514,
-            "local_median_t": 95.604,
-            "raw_delta_ms": 1.09,
-            "phase_aligned_residual_ms": -3.439
+            "baseline_median_t": 96.58,
+            "local_median_t": 93.126,
+            "raw_delta_ms": -3.453,
+            "phase_aligned_residual_ms": 1.934
           }
         ]
       },
       "timing_diagnostic": {
         "baseline_click_to_dialog_ms": [
-          2.3,
-          11.4,
-          9.2
+          3.5,
+          8.7,
+          1.3
         ],
         "local_click_to_dialog_ms": [
-          5.2,
-          5.0,
-          12.2
+          7.8,
+          14.3,
+          12.0
         ],
-        "median_click_to_dialog_delta_ms": 4.0
+        "median_click_to_dialog_delta_ms": 8.5
       },
       "animation_signature": {
         "measured": true,
@@ -379,8 +379,8 @@
         ],
         "all_trials_required": true
       },
-      "minimum_score": 98.3225,
-      "status": "pass"
+      "minimum_score": 97.5437,
+      "status": "fail"
     },
     {
       "viewport": "mobile",
@@ -412,47 +412,47 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.9774,
-        "max_median_normalized_geometry_error": 0.000226,
+        "score": 99.9743,
+        "max_median_normalized_geometry_error": 0.000257,
         "basis": "median geometry error across 3 independent rAF trials at spatial progress milestones",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error_median": 5.114637651161316e-08,
-            "image_error_median": 0.0001241436998186945,
-            "trigger_error_median": 3.2971167205627037e-08,
+            "dialog_error_median": 2.544965497951789e-08,
+            "image_error_median": 9.691369159627334e-05,
+            "trigger_error_median": 1.4732451341019247e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 1.105893363437178e-08,
-                "image_error": 7.177243263551874e-05,
-                "trigger_error": 1.8362135049958625e-08,
-                "baseline_t": 4.965,
-                "local_t": 4.123,
+                "dialog_error": 5.727823329908068e-09,
+                "image_error": 9.691369159627334e-05,
+                "trigger_error": 2.0871608870909172e-08,
+                "baseline_t": 4.48,
+                "local_t": 3.497,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 6.933193751603402e-08,
-                "image_error": 0.00021305918286130342,
-                "trigger_error": 3.2971167205627037e-08,
-                "baseline_t": 11.76,
-                "local_t": 2.96,
+                "dialog_error": 2.8990211976867075e-08,
+                "image_error": 8.954896599853326e-05,
+                "trigger_error": 1.4732451341019247e-08,
+                "baseline_t": 3.752,
+                "local_t": 13.016,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 5.114637651161316e-08,
-                "image_error": 0.0001241436998186945,
-                "trigger_error": 4.8514323079638045e-08,
-                "baseline_t": 2.73,
-                "local_t": 4.074,
+                "dialog_error": 2.544965497951789e-08,
+                "image_error": 0.00014593031170414617,
+                "trigger_error": 9.128110640183067e-09,
+                "baseline_t": 11.76,
+                "local_t": 3.775,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -461,41 +461,41 @@
           },
           {
             "progress": 0.25,
-            "dialog_error_median": 2.6342009344186106e-08,
-            "image_error_median": 0.00022586123330814865,
-            "trigger_error_median": 4.937498720781116e-08,
+            "dialog_error_median": 4.840207161111884e-08,
+            "image_error_median": 0.0002568713862994953,
+            "trigger_error_median": 7.098337636268612e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 2.6342009344186106e-08,
-                "image_error": 0.00022586123330814865,
-                "trigger_error": 4.937498720781116e-08,
-                "baseline_t": 21.988,
-                "local_t": 19.77,
+                "dialog_error": 4.840207161111884e-08,
+                "image_error": 0.00018905662253455784,
+                "trigger_error": 7.098337636268612e-08,
+                "baseline_t": 20.658,
+                "local_t": 17.778,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 1.49691345905595e-08,
-                "image_error": 0.0010329538927335597,
-                "trigger_error": 4.934986679442613e-08,
-                "baseline_t": 24.852,
-                "local_t": 18.827,
+                "dialog_error": 1.1248649288156742e-07,
+                "image_error": 0.0002568713862994953,
+                "trigger_error": 1.1248649288156742e-07,
+                "baseline_t": 18.62,
+                "local_t": 28.804,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 1.4876774725846004e-07,
-                "image_error": 0.00010175223915788489,
-                "trigger_error": 1.4876774725846004e-07,
-                "baseline_t": 17.718,
-                "local_t": 19.766,
+                "dialog_error": 3.779654936153794e-08,
+                "image_error": 0.00047082876105857083,
+                "trigger_error": 5.116564009970488e-08,
+                "baseline_t": 27.34,
+                "local_t": 18.708,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -504,41 +504,41 @@
           },
           {
             "progress": 0.5,
-            "dialog_error_median": 2.9578583727658188e-08,
-            "image_error_median": 0.00018867115006804058,
-            "trigger_error_median": 7.087850597963983e-08,
+            "dialog_error_median": 6.045222958552168e-08,
+            "image_error_median": 0.00019466269555697038,
+            "trigger_error_median": 5.2990050977999596e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 1.958212695358387e-08,
-                "image_error": 0.0005524155789151453,
-                "trigger_error": 4.516662025326303e-08,
-                "baseline_t": 43.018,
-                "local_t": 40.449,
+                "dialog_error": 4.265127687786495e-08,
+                "image_error": 5.926565019553751e-05,
+                "trigger_error": 1.8781158736691873e-08,
+                "baseline_t": 41.449,
+                "local_t": 39.075,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 2.9578583727658188e-08,
-                "image_error": 1.8088605818390547e-05,
-                "trigger_error": 1.316996382718991e-07,
-                "baseline_t": 46.497,
-                "local_t": 40.083,
+                "dialog_error": 6.045222958552168e-08,
+                "image_error": 0.00019466269555697038,
+                "trigger_error": 5.2990050977999596e-08,
+                "baseline_t": 39.35,
+                "local_t": 50.393,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 6.016120175025628e-08,
-                "image_error": 0.00018867115006804058,
-                "trigger_error": 7.087850597963983e-08,
-                "baseline_t": 38.276,
-                "local_t": 40.975,
+                "dialog_error": 1.0370364042827508e-07,
+                "image_error": 0.0002002448256477182,
+                "trigger_error": 1.0370364042827508e-07,
+                "baseline_t": 48.494,
+                "local_t": 39.35,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -547,41 +547,41 @@
           },
           {
             "progress": 0.75,
-            "dialog_error_median": 5.144211706004072e-08,
-            "image_error_median": 5.5355958191164334e-08,
-            "trigger_error_median": 9.25431782685397e-08,
+            "dialog_error_median": 5.096232371754392e-08,
+            "image_error_median": 7.716091155170986e-08,
+            "trigger_error_median": 9.279570535887891e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 8.726844166281248e-08,
-                "image_error": 3.748300952191914e-08,
-                "trigger_error": 5.572506438511482e-08,
-                "baseline_t": 70.576,
-                "local_t": 68.233,
+                "dialog_error": 3.509335132337376e-08,
+                "image_error": 7.716091155170986e-08,
+                "trigger_error": 3.509335132337376e-08,
+                "baseline_t": 69.263,
+                "local_t": 66.974,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 5.144211706004072e-08,
-                "image_error": 5.5355958191164334e-08,
-                "trigger_error": 9.25431782685397e-08,
-                "baseline_t": 76.43,
-                "local_t": 66.99,
+                "dialog_error": 1.0679030876230965e-07,
+                "image_error": 0.0002315666495969137,
+                "trigger_error": 1.027258429641768e-07,
+                "baseline_t": 66.877,
+                "local_t": 79.31,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 3.2842413661572397e-08,
-                "image_error": 0.0001397849208749325,
-                "trigger_error": 1.2365798697945324e-07,
-                "baseline_t": 66.066,
-                "local_t": 68.205,
+                "dialog_error": 5.096232371754392e-08,
+                "image_error": 5.579489842445595e-08,
+                "trigger_error": 9.279570535887891e-08,
+                "baseline_t": 76.471,
+                "local_t": 66.976,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -590,41 +590,41 @@
           },
           {
             "progress": 0.9,
-            "dialog_error_median": 4.829696200804625e-08,
-            "image_error_median": 9.253381009353363e-08,
-            "trigger_error_median": 6.363500235439973e-08,
+            "dialog_error_median": 4.369508264272344e-08,
+            "image_error_median": 4.2117393871074994e-08,
+            "trigger_error_median": 2.9469951896451893e-08,
             "all_trials_forward_crossing": true,
             "presence_match": true,
             "trials": [
               {
                 "trial": 1,
-                "dialog_error": 4.829696200804625e-08,
-                "image_error": 1.2139872549637286e-05,
-                "trigger_error": 6.363500235439973e-08,
-                "baseline_t": 102.214,
-                "local_t": 99.869,
+                "dialog_error": 1.5251453340900587e-08,
+                "image_error": 9.005113354713755e-08,
+                "trigger_error": 2.9469951896451893e-08,
+                "baseline_t": 99.878,
+                "local_t": 98.275,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 2,
-                "dialog_error": 7.448479897366502e-08,
-                "image_error": 4.4341227615008484e-08,
-                "trigger_error": 7.448479897366502e-08,
-                "baseline_t": 108.04,
-                "local_t": 99.092,
+                "dialog_error": 4.369508264272344e-08,
+                "image_error": 2.692974886277838e-08,
+                "trigger_error": 5.40967093320396e-08,
+                "baseline_t": 99.022,
+                "local_t": 111.111,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
               },
               {
                 "trial": 3,
-                "dialog_error": 1.8099186890661677e-08,
-                "image_error": 9.253381009353363e-08,
-                "trigger_error": 3.226997074115627e-08,
-                "baseline_t": 98.142,
-                "local_t": 99.778,
+                "dialog_error": 6.601672884183835e-08,
+                "image_error": 4.2117393871074994e-08,
+                "trigger_error": 2.9002170866586033e-08,
+                "baseline_t": 108.667,
+                "local_t": 99.022,
                 "baseline_crossing": true,
                 "local_crossing": true,
                 "presence_match": true
@@ -634,100 +634,100 @@
         ]
       },
       "timing_curve": {
-        "score": 99.95,
+        "score": 99.7595,
         "measured": true,
         "trial_count": 3,
         "aggregation": "median crossing time per side at each spatial milestone",
-        "phase_offset_ms": -2.403,
+        "phase_offset_ms": -2.025,
         "phase_budget_ms": 16.7,
         "phase_within_budget": true,
-        "rmse_phase_aligned_residual_ms": 0.125,
-        "max_abs_phase_aligned_residual_ms": 0.182,
+        "rmse_phase_aligned_residual_ms": 0.601,
+        "max_abs_phase_aligned_residual_ms": 1.169,
         "nominal_transition_ms": 250.0,
         "basis": "3-trial median same-spatial-progress crossing times with one bounded constant rAF phase offset removed; residual timing/easing curve is scored",
         "milestones": [
           {
             "progress": 0.25,
             "baseline_times": [
-              21.988,
-              24.852,
-              17.718
+              20.658,
+              18.62,
+              27.34
             ],
             "local_times": [
-              19.77,
-              18.827,
-              19.766
+              17.778,
+              28.804,
+              18.708
             ],
-            "baseline_median_t": 21.988,
-            "local_median_t": 19.766,
-            "raw_delta_ms": -2.221,
-            "phase_aligned_residual_ms": 0.182
+            "baseline_median_t": 20.658,
+            "local_median_t": 18.708,
+            "raw_delta_ms": -1.95,
+            "phase_aligned_residual_ms": 0.075
           },
           {
             "progress": 0.5,
             "baseline_times": [
-              43.018,
-              46.497,
-              38.276
+              41.449,
+              39.35,
+              48.494
             ],
             "local_times": [
-              40.449,
-              40.083,
-              40.975
+              39.075,
+              50.393,
+              39.35
             ],
-            "baseline_median_t": 43.018,
-            "local_median_t": 40.449,
-            "raw_delta_ms": -2.569,
-            "phase_aligned_residual_ms": -0.165
+            "baseline_median_t": 41.449,
+            "local_median_t": 39.35,
+            "raw_delta_ms": -2.099,
+            "phase_aligned_residual_ms": -0.075
           },
           {
             "progress": 0.75,
             "baseline_times": [
-              70.576,
-              76.43,
-              66.066
+              69.263,
+              66.877,
+              76.471
             ],
             "local_times": [
-              68.233,
-              66.99,
-              68.205
+              66.974,
+              79.31,
+              66.976
             ],
-            "baseline_median_t": 70.576,
-            "local_median_t": 68.205,
-            "raw_delta_ms": -2.371,
-            "phase_aligned_residual_ms": 0.032
+            "baseline_median_t": 69.263,
+            "local_median_t": 66.976,
+            "raw_delta_ms": -2.287,
+            "phase_aligned_residual_ms": -0.263
           },
           {
             "progress": 0.9,
             "baseline_times": [
-              102.214,
-              108.04,
-              98.142
+              99.878,
+              99.022,
+              108.667
             ],
             "local_times": [
-              99.869,
-              99.092,
-              99.778
+              98.275,
+              111.111,
+              99.022
             ],
-            "baseline_median_t": 102.214,
-            "local_median_t": 99.778,
-            "raw_delta_ms": -2.436,
-            "phase_aligned_residual_ms": -0.032
+            "baseline_median_t": 99.878,
+            "local_median_t": 99.022,
+            "raw_delta_ms": -0.856,
+            "phase_aligned_residual_ms": 1.169
           }
         ]
       },
       "timing_diagnostic": {
         "baseline_click_to_dialog_ms": [
-          8.9,
-          3.8,
-          13.9
+          10.9,
+          12.4,
+          3.1
         ],
         "local_click_to_dialog_ms": [
-          11.7,
-          12.5,
-          11.4
+          12.3,
+          0.1,
+          12.1
         ],
-        "median_click_to_dialog_delta_ms": 2.8
+        "median_click_to_dialog_delta_ms": 1.2
       },
       "animation_signature": {
         "measured": true,
@@ -744,7 +744,7 @@
         ],
         "all_trials_required": true
       },
-      "minimum_score": 99.95,
+      "minimum_score": 99.7595,
       "status": "pass"
     }
   ]

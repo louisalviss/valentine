@@ -788,22 +788,9 @@
       "exceptions": []
     },
     "motion_interaction": {
-      "status": "pass",
-      "states_verified": [
-        "desktop:closed",
-        "desktop:open",
-        "desktop:3-trial-spatial-trajectory",
-        "desktop:3-trial-phase-aligned-runtime-timing",
-        "desktop:escape-close",
-        "desktop:3-trial-animation-signature",
-        "mobile:closed",
-        "mobile:open",
-        "mobile:3-trial-spatial-trajectory",
-        "mobile:3-trial-phase-aligned-runtime-timing",
-        "mobile:escape-close",
-        "mobile:3-trial-animation-signature"
-      ],
-      "minimum_score": 98.3225,
+      "status": "fail",
+      "states_verified": [],
+      "minimum_score": 97.5437,
       "protocol": "3.3",
       "capture_protocol": "3.3",
       "method": "Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 3 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.",

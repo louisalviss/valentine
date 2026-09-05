@@ -111,8 +111,8 @@
           "status": "pass"
         },
         "motion_interaction": {
-          "status": "pass",
-          "score": 98.3225,
+          "status": "fail",
+          "score": 97.5437,
           "protocol": "3.3"
         }
       },
