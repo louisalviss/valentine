@@ -6,11 +6,11 @@
   "baseline_kind": "live-browser",
   "visual_state_policy": "runtime",
   "discovery_source": "https://curated.design/sites/s/4183/",
-  "captured_at": "2026-09-05T08:36:59.556Z",
+  "captured_at": "2026-09-05T08:43:32.662Z",
   "browser": "system-chrome+puppeteer-core",
   "final_url": "https://www.nativecontent.com/",
   "title": "Native Content",
-  "hydrated_html_sha256": "6878ea890a57fe25c1ce383896efc79322a97f81a44b6a1a57534b9e31ccf30b",
+  "hydrated_html_sha256": "11d661d8b806961bdd5088c08f355afde0a80621fb698f91d7c6f42c5589d0a8",
   "visual_exclusion_definitions": [],
   "viewports": [
     {
@@ -606,12 +606,12 @@
         "text": "",
         "rect": {
           "x": 549.3515625,
-          "y": 16.04246711730957,
+          "y": 16,
           "width": 115.296875,
-          "height": 20.796873092651367,
-          "top": 16.04246711730957,
+          "height": 20.796875,
+          "top": 16,
           "right": 664.6484375,
-          "bottom": 36.83934020996094,
+          "bottom": 36.796875,
           "left": 549.3515625
         },
         "style": {
@@ -636,7 +636,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 0.0424672)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -648,12 +648,12 @@
         "text": "Collaborators",
         "rect": {
           "x": 554.3515625,
-          "y": 19.04246711730957,
+          "y": 19,
           "width": 105.296875,
-          "height": 13.999998092651367,
-          "top": 19.04246711730957,
+          "height": 14,
+          "top": 19,
           "right": 659.6484375,
-          "bottom": 33.04246520996094,
+          "bottom": 33,
           "left": 554.3515625
         },
         "style": {
@@ -732,12 +732,12 @@
         "text": "",
         "rect": {
           "x": 856.9921875,
-          "y": 16.06967544555664,
+          "y": 16,
           "width": 42.015625,
           "height": 20.796875,
-          "top": 16.06967544555664,
+          "top": 16,
           "right": 899.0078125,
-          "bottom": 36.86655044555664,
+          "bottom": 36.796875,
           "left": 856.9921875
         },
         "style": {
@@ -762,7 +762,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 0.0696758)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -774,12 +774,12 @@
         "text": "Post",
         "rect": {
           "x": 861.9921875,
-          "y": 19.06967544555664,
+          "y": 19,
           "width": 32.015625,
           "height": 14,
-          "top": 19.06967544555664,
+          "top": 19,
           "right": 894.0078125,
-          "bottom": 33.06967544555664,
+          "bottom": 33,
           "left": 861.9921875
         },
         "style": {
@@ -858,12 +858,12 @@
         "text": "",
         "rect": {
           "x": 1123.2578125,
-          "y": 16.114316940307617,
+          "y": 16,
           "width": 51.484375,
-          "height": 20.796876907348633,
-          "top": 16.114316940307617,
+          "height": 20.796875,
+          "top": 16,
           "right": 1174.7421875,
-          "bottom": 36.91119384765625,
+          "bottom": 36.796875,
           "left": 1123.2578125
         },
         "style": {
@@ -888,7 +888,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 0.114316)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -900,12 +900,12 @@
         "text": "About",
         "rect": {
           "x": 1128.2578125,
-          "y": 19.114316940307617,
+          "y": 19,
           "width": 41.484375,
-          "height": 14.000001907348633,
-          "top": 19.114316940307617,
+          "height": 14,
+          "top": 19,
           "right": 1169.7421875,
-          "bottom": 33.11431884765625,
+          "bottom": 33,
           "left": 1128.2578125
         },
         "style": {
@@ -984,12 +984,12 @@
         "text": "",
         "rect": {
           "x": 1353.046875,
-          "y": 16.18755531311035,
+          "y": 16,
           "width": 66.953125,
-          "height": 20.796873092651367,
-          "top": 16.18755531311035,
+          "height": 20.796875,
+          "top": 16,
           "right": 1420,
-          "bottom": 36.98442840576172,
+          "bottom": 36.796875,
           "left": 1353.046875
         },
         "style": {
@@ -1014,7 +1014,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 0.187555)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -1026,12 +1026,12 @@
         "text": "Contact",
         "rect": {
           "x": 1358.046875,
-          "y": 19.18755531311035,
+          "y": 19,
           "width": 56.953125,
-          "height": 13.999998092651367,
-          "top": 19.18755531311035,
+          "height": 14,
+          "top": 19,
           "right": 1415,
-          "bottom": 33.18755340576172,
+          "bottom": 33,
           "left": 1358.046875
         },
         "style": {
@@ -4470,12 +4470,12 @@
         "text": "Patron",
         "rect": {
           "x": 25,
-          "y": 436.135986328125,
+          "y": 436,
           "width": 167.234375,
           "height": 32,
-          "top": 436.135986328125,
+          "top": 436,
           "right": 192.234375,
-          "bottom": 468.135986328125,
+          "bottom": 468,
           "left": 25
         },
         "style": {
@@ -4500,7 +4500,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, 0.135997)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -4553,14 +4553,14 @@
         "className": "absolute left-[50%] top-[50%] h-[100vh] w-[100vw]",
         "text": "",
         "rect": {
-          "x": 33.217529296875,
-          "y": 20.760955810546875,
-          "width": 1373.56494140625,
-          "height": 858.47802734375,
-          "top": 20.760955810546875,
-          "right": 1406.782470703125,
-          "bottom": 879.2389831542969,
-          "left": 33.217529296875
+          "x": -652.88134765625,
+          "y": -408.05084228515625,
+          "width": 2745.7626953125,
+          "height": 1716.1015625,
+          "top": -408.05084228515625,
+          "right": 2092.88134765625,
+          "bottom": 1308.0507202148438,
+          "left": -652.88134765625
         },
         "style": {
           "display": "block",
@@ -4584,7 +4584,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(0.953865, 0, 0, 0.953865, 0, 0)",
+          "transform": "matrix(1.90678, 0, 0, 1.90678, 0, 0)",
           "zIndex": "auto"
         }
       },
@@ -4595,14 +4595,14 @@
         "className": "absolute left-[50%] top-[50%] aspect-[1201/473] h-auto w-[1201px] translate-x-[-50%] translate-y-[-50%]",
         "text": "",
         "rect": {
-          "x": 147.204345703125,
-          "y": 224.41104125976562,
-          "width": 1145.59130859375,
-          "height": 451.1779479980469,
-          "top": 224.41104125976562,
-          "right": 1292.795654296875,
-          "bottom": 675.5889892578125,
-          "left": 147.204345703125
+          "x": -425.02117919921875,
+          "y": -0.953399658203125,
+          "width": 2290.04248046875,
+          "height": 901.9068603515625,
+          "top": -0.953399658203125,
+          "right": 1865.0213012695312,
+          "bottom": 900.9534606933594,
+          "left": -425.02117919921875
         },
         "style": {
           "display": "block",
@@ -4638,12 +4638,12 @@
         "text": "",
         "rect": {
           "x": 0,
-          "y": -0.00000762939453125,
-          "width": 1440.0001220703125,
-          "height": 900.0001220703125,
-          "top": -0.00000762939453125,
-          "right": 1440.0001220703125,
-          "bottom": 900.000114440918,
+          "y": 0,
+          "width": 1440,
+          "height": 899.9999389648438,
+          "top": 0,
+          "right": 1440,
+          "bottom": 899.9999389648438,
           "left": 0
         },
         "style": {
@@ -4668,7 +4668,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1.04837, 0, 0, 1.04837, 0, 0)",
+          "transform": "matrix(0.524444, 0, 0, 0.524444, 0, 0)",
           "zIndex": "auto"
         }
       },
@@ -4680,12 +4680,12 @@
         "text": "",
         "rect": {
           "x": 0,
-          "y": -0.00000762939453125,
-          "width": 1440.0001220703125,
-          "height": 900.0001220703125,
-          "top": -0.00000762939453125,
-          "right": 1440.0001220703125,
-          "bottom": 900.000114440918,
+          "y": 0,
+          "width": 1440,
+          "height": 899.9999389648438,
+          "top": 0,
+          "right": 1440,
+          "bottom": 899.9999389648438,
           "left": 0
         },
         "style": {
@@ -7200,12 +7200,12 @@
         "text": "",
         "rect": {
           "x": 25,
-          "y": 869.9873046875,
+          "y": 870,
           "width": 68.15625,
           "height": 9,
-          "top": 869.9873046875,
+          "top": 870,
           "right": 93.15625,
-          "bottom": 878.9873046875,
+          "bottom": 879,
           "left": 25
         },
         "style": {
@@ -7230,7 +7230,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.0126774)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -7242,12 +7242,12 @@
         "text": "Instagram",
         "rect": {
           "x": 25,
-          "y": 869.9873046875,
+          "y": 870,
           "width": 57.65625,
           "height": 9,
-          "top": 869.9873046875,
+          "top": 870,
           "right": 82.65625,
-          "bottom": 878.9873046875,
+          "bottom": 879,
           "left": 25
         },
         "style": {
@@ -7284,12 +7284,12 @@
         "text": "",
         "rect": {
           "x": 84.040771484375,
-          "y": 869.371826171875,
+          "y": 869.384521484375,
           "width": 10.23095703125,
           "height": 10.23095703125,
-          "top": 869.371826171875,
+          "top": 869.384521484375,
           "right": 94.271728515625,
-          "bottom": 879.602783203125,
+          "bottom": 879.615478515625,
           "left": 84.040771484375
         },
         "style": {
@@ -7368,12 +7368,12 @@
         "text": "",
         "rect": {
           "x": 117.15625,
-          "y": 869.9764404296875,
+          "y": 870,
           "width": 55.125,
           "height": 9,
-          "top": 869.9764404296875,
+          "top": 870,
           "right": 172.28125,
-          "bottom": 878.9764404296875,
+          "bottom": 879,
           "left": 117.15625
         },
         "style": {
@@ -7398,7 +7398,7 @@
           "borderRadius": "0px",
           "boxShadow": "none",
           "opacity": "1",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.0235404)",
+          "transform": "none",
           "zIndex": "auto"
         }
       },
@@ -7410,12 +7410,12 @@
         "text": "LinkedIn",
         "rect": {
           "x": 117.15625,
-          "y": 869.9764404296875,
+          "y": 870,
           "width": 44.625,
           "height": 9,
-          "top": 869.9764404296875,
+          "top": 870,
           "right": 161.78125,
-          "bottom": 878.9764404296875,
+          "bottom": 879,
           "left": 117.15625
         },
         "style": {
@@ -7452,12 +7452,12 @@
         "text": "",
         "rect": {
           "x": 163.165771484375,
-          "y": 869.3609619140625,
+          "y": 869.384521484375,
           "width": 10.23095703125,
           "height": 10.23095703125,
-          "top": 869.3609619140625,
+          "top": 869.384521484375,
           "right": 173.396728515625,
-          "bottom": 879.5919189453125,
+          "bottom": 879.615478515625,
           "left": 163.165771484375
         },
         "style": {
@@ -7850,7 +7850,7 @@
       {
         "name": "https://www.nativecontent.com/icons/arrow-right-white.svg",
         "initiatorType": "img",
-        "duration": 17.30000000000291,
+        "duration": 15.10000000000582,
         "transferSize": 300,
         "decodedBodySize": 0
       },
@@ -8002,135 +8002,261 @@
         "decodedBodySize": 0
       },
       {
-        "name": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 61.799999999995634,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 35.5,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 67.5,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
         "name": "https://stream.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 46.700000000004366,
+        "duration": 32.599999999998545,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
         "name": "https://stream.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 66.79999999999563,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://stream.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 45.299999999995634,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 55.900000000001455,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
-        "initiatorType": "xmlhttprequest",
-        "duration": 62.30000000000291,
+        "duration": 33.5,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
         "name": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 105.30000000000291,
+        "duration": 51,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZTRiM2I1OGIwY2ExNzQyYmEwMGZiYWRlY2Q1MWU1ZmY1ODVhZjFmZTU1YjIyMjkwNTQ3ODg4Nzg4NWNlMzM4Nw==",
+        "name": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 6.30000000000291,
+        "duration": 53.900000000001455,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2UyNTM0ZjliNDljMDdkMmNiNWY1MGFlODkyZTFiN2VmZTlhOTEyOGI0ZjIwYzc2NmFlNTIxMTMwZWQ4YjgyYw==",
+        "name": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 6.799999999995634,
+        "duration": 56.19999999999709,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfMjNlMjU5MmY2M2IyNTI4OWJlOGY3NGFlYTVkYjlhYTlkZDg1MDc4ZDgzNGEwYjRjOTZmZDNmZDg0YTBiMzRhMA==",
+        "name": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 6.19999999999709,
+        "duration": 43.700000000004366,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfMTAzMTc0MTkzODI0MTg0MDM0ODQ4YTg2MTU5ZDNhZTQ5NDVjZTg5ZTc0MTk4MTg2MzcxZGU2NmQ3YTQ0YzEzMQ==",
+        "name": "https://stream.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 6.19999999999709,
+        "duration": 32.200000000004366,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfYmQ1NzAxOWRhNmI3NjMzNjM3ZmJkZDAzOWFjNzNiM2U0YjVkMzdiYjBhNmY3NWQ4NWM2NWY5YjZiZjA0YmJjNQ==",
+        "name": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 5.80000000000291,
+        "duration": 32.80000000000291,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZTJjZTZiMzgwYWVjODIwNGEyZWJlMmU1MTZmY2I1Y2NiZGUxZTQ2NmViMWVhYTFmZGYwMDViYmZiYTk4YzhkZQ==",
+        "name": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
         "initiatorType": "xmlhttprequest",
-        "duration": 5.900000000001455,
+        "duration": 77.89999999999418,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZGE4MDNlNzk0OTRmY2I1ZWFhMDMzZWM4YTJmMzdkOWMwY2NiMDQ4YzkyM2VhMTEzMTE0YTBiYjEwMGE5MjFjOQ==",
+        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfMzhjZDM0MGYyOGM2MWRkYjY0ZDBlZTc3NzVlYTZhNzQwMDNjMWVjODdiMzFiMzRhMzdmNGJiN2MxN2MzYzA2Ng==",
         "initiatorType": "xmlhttprequest",
-        "duration": 6.299999999995634,
+        "duration": 37.400000000001455,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2ZiNjExN2RjMjRkY2VkNjU4OGU1YjZjNWNlMWE2MmYzNTdmMDlmMzQ5NDAwMTE4NGNjZWY1MGFkZTNiMjllNA==",
+        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfNTk5YWYwYWQ5YmI2N2I2ZGY1Y2QxNDY0MjgzZGY1N2IzNGMzMjZiNzVjOWRhMTZlODMwYmFkMTg5Yzk1ZmU1Nw==",
         "initiatorType": "xmlhttprequest",
-        "duration": 4.80000000000291,
+        "duration": 40.89999999999418,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfYmQ1NzAxOWRhNmI3NjMzNjM3ZmJkZDAzOWFjNzNiM2U0YjVkMzdiYjBhNmY3NWQ4NWM2NWY5YjZiZjA0YmJjNQ==",
+        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfODk5MGQ0ZTUzYmE2ODVkZDc2NGY1ZTVhMzZjZGE1NTI4NjgyMGFjYTFlMjVkMGYwNzhhYTU3N2YwMDRhYmRhNg==",
         "initiatorType": "xmlhttprequest",
-        "duration": 6,
+        "duration": 6.400000000001455,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfNTVmMjlmMThkMTc3YzlhMzQyOTRmZTNjZGRhMGU3YjMwNGE5YTE0NzFkOWE5N2MwNzk4N2UxNjFiOTNkZjI4MQ==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 5.799999999995634,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfN2YyZTNiNzA3ZWEwOTk5MDZiODYwNzZmNDUzYWRhM2FhNDFiZWI0NzJhNmZkZjQ5ZmM4ZWY5NmZjYTEwOTZlNA==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 7.5,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDQyZDc3NzE2MTc1MTkzY2EyZWIyOGQ2Y2FkNGZiNzM4ZDAwMDI5NTViOGZiMGU0NTg1MmRlZjU1NGE2YmExZQ==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 37.099999999998545,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZGQ2ZGE5NDI2ZTgwYzI5NjkwMjFkY2E3NWVkOTAxOTAwMGY5ZmM2NjI1YjBkZGE5MzAxY2M4OGY2OGZjYjljNQ==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 36.799999999995634,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDhkOGJjNTk1ZGNiZWNiNGIyZmI4YzI0Y2RkMDZkMTM4YjVjZGUxOTM1NjVlOWI3MzcwZGRhMmY3MDc1NGZiZg==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 36.39999999999418,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDQyZDc3NzE2MTc1MTkzY2EyZWIyOGQ2Y2FkNGZiNzM4ZDAwMDI5NTViOGZiMGU0NTg1MmRlZjU1NGE2YmExZQ==",
+        "initiatorType": "xmlhttprequest",
+        "duration": 38.400000000001455,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 7.900000000001455,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/Fl5crxlI9t8Wq00RGZrLZGjsI6a41lMJJqEH6J3jETePErec9SeggxUh4nzfJIPUITwMf9a60102YMdRHPL2n6ftQRMw02WvMgPD00nZVTaAPUxA/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmRiYjQxMjRkNDk3ODA4NzJhNTc1ZmFiOTUwZjg2MGRjY2RjZDQ0ZTI2NzYwNzVjYTA4OWU5NzVhNTVhNGY2MQ==&zone=0",
+        "initiatorType": "xmlhttprequest",
+        "duration": 85.10000000000582,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/j9QmHHKmgLFdgEyl5uQtaP8af00HLSmLWFsUTFqxT00W9SRR5pqOVBy9I5yMboJ7VQQJF0037008MUtRZMyND9IpuL4vWaGlP3yeJAZGxa6nFuw/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjdmNDQyYWU4MjJmYjMxODU2ZWE0NmM4ZTQ4MDg4MzEzYjI2YzY5MTZhMDYyYWQ4NzM3MTEwNGFhZjczYjE5MA==&zone=2",
+        "initiatorType": "xmlhttprequest",
+        "duration": 10.30000000000291,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 11.499999999992724,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 14.200000000004366,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 9.89999999999418,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 9.5,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/2DbcShhQtJHFbqNipIPrr01HMXJcV6psDHq12fHkBdJmtzsLlTwHyku5jqli6IfO02RzuOmdmtyLoromBsIFlECBBkbKa00z5mE/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMzllY2MzNTRmY2ZiNjE1ODJkMDU0YmUxMmM5NDgwNzNiNWJmNDFkNGI3ZjQ3NTg5YzM4MTY5OTIzNTA3MGY2OQ==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 115.19999999999709,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfOWU5ZDJkOTMwZGE0Y2Y4MmZkOTIxNjRjN2E4NmY4OGM1MWQyM2YyZjk0OWFjZDdlNGUyYzI5ZjdjYTI3YjY2NA==&zone=1",
+        "initiatorType": "xmlhttprequest",
+        "duration": 7.100000000005821,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 0.8999999999941792,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 4.599999999991269,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 4.19999999999709,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 4.69999999999709,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 8,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 8,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 8.099999999991269,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 1.5,
+        "transferSize": 0,
+        "decodedBodySize": 0
+      },
+      {
+        "name": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
+        "initiatorType": "track",
+        "duration": 1.6999999999970896,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
         "name": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
         "initiatorType": "script",
-        "duration": 15.900000000001455,
+        "duration": 7.899999999994179,
         "transferSize": 0,
         "decodedBodySize": 0
       },
@@ -8142,177 +8268,51 @@
         "decodedBodySize": 0
       },
       {
-        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYTQ5Y2FkMTg4YTU2ZTdiODQyMjhmOWFiMDA0ODlmY2U1M2VjZjA2Y2RjZjk5ODQ2NTM1MTUxNGVjMzYxNGE2ZQ==",
         "initiatorType": "xmlhttprequest",
-        "duration": 5.80000000000291,
+        "duration": 39.59999999999127,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/Fl5crxlI9t8Wq00RGZrLZGjsI6a41lMJJqEH6J3jETePErec9SeggxUh4nzfJIPUITwMf9a60102YMdRHPL2n6ftQRMw02WvMgPD00nZVTaAPUxA/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmRiYjQxMjRkNDk3ODA4NzJhNTc1ZmFiOTUwZjg2MGRjY2RjZDQ0ZTI2NzYwNzVjYTA4OWU5NzVhNTVhNGY2MQ==&zone=0",
+        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYjI3YzQ1NDI1MDMyMjgwYTQyZjA5NDUwZTg4MDkwYmUwMjYwMjQ4MTYzYjNkOTY5OTMyZDZlNzY0ZDY1Y2M2Mw==",
         "initiatorType": "xmlhttprequest",
-        "duration": 102.40000000000146,
+        "duration": 37.30000000000291,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/j9QmHHKmgLFdgEyl5uQtaP8af00HLSmLWFsUTFqxT00W9SRR5pqOVBy9I5yMboJ7VQQJF0037008MUtRZMyND9IpuL4vWaGlP3yeJAZGxa6nFuw/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjdmNDQyYWU4MjJmYjMxODU2ZWE0NmM4ZTQ4MDg4MzEzYjI2YzY5MTZhMDYyYWQ4NzM3MTEwNGFhZjczYjE5MA==&zone=2",
+        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYmRiZDUyMTA3NmQwMTQ3MGZmZDg4MmIwOWY4NGU2NTNlZTA2MTJmNjhhNWM2NmJmOGFjY2U3ODdhZmY2NjNmNA==",
         "initiatorType": "xmlhttprequest",
-        "duration": 4.900000000001455,
+        "duration": 40.29999999998836,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+        "name": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYTFhZjc1NzNlNjEyZWFmNzE3YjI4ZTljODNmOGNmZTE1NWUwNjkxYTIzYTg2N2ZiZTJmZjkxYWQ3YzM4N2Q5Nw==",
         "initiatorType": "xmlhttprequest",
-        "duration": 4.599999999998545,
+        "duration": 7.600000000005821,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
+        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfMzJlY2Y3YWIxOGNlNWE1MmRhZWJjNTM5OWJkYmQ2YTY4YjQ4ZGFiNjdjYWIyMWM1MDQ5YzMyN2VhN2E5YWUzYg==",
         "initiatorType": "xmlhttprequest",
-        "duration": 2.8000000000029104,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/2DbcShhQtJHFbqNipIPrr01HMXJcV6psDHq12fHkBdJmtzsLlTwHyku5jqli6IfO02RzuOmdmtyLoromBsIFlECBBkbKa00z5mE/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMzllY2MzNTRmY2ZiNjE1ODJkMDU0YmUxMmM5NDgwNzNiNWJmNDFkNGI3ZjQ3NTg5YzM4MTY5OTIzNTA3MGY2OQ==&zone=1",
-        "initiatorType": "xmlhttprequest",
-        "duration": 117.80000000000291,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfOWU5ZDJkOTMwZGE0Y2Y4MmZkOTIxNjRjN2E4NmY4OGM1MWQyM2YyZjk0OWFjZDdlNGUyYzI5ZjdjYTI3YjY2NA==&zone=1",
-        "initiatorType": "xmlhttprequest",
-        "duration": 6.899999999994179,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 1.0999999999985448,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
-        "initiatorType": "xmlhttprequest",
-        "duration": 9.80000000000291,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
-        "initiatorType": "xmlhttprequest",
-        "duration": 10.80000000000291,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 4,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 4.099999999998545,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 4.5,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 5.80000000000291,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 5.799999999995634,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 5.900000000001455,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 3.6000000000058208,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
-        "initiatorType": "track",
-        "duration": 3.7999999999956344,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfOGZlMTdmM2Q4NWViOTAwNDRlZjNhZDg5MzNkMTVkMDBiNTVkNWY0YmUzN2ZhNDQzYmM3NzU0MzhlZDliODgxOA==",
-        "initiatorType": "xmlhttprequest",
-        "duration": 8.69999999999709,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZmQ2YjkzZDFiNDBhYmMyZDkyYTMyNGU0OWVlNmIzOWQ4NWVlN2MwMzBkMzI2MmQzODEwMWYyODAwNWIwZWJkMQ==",
-        "initiatorType": "xmlhttprequest",
-        "duration": 8.69999999999709,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfNmRjZDNlZDlhMjM0M2EwNjU4ZDAzYWFhYzM0NTM2MjRlYzRhYTEzOWMxMWVhN2Y1MGU4MjhlODVhMDg1NDQyNg==",
-        "initiatorType": "xmlhttprequest",
-        "duration": 7.80000000000291,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZjNhZDgwN2YyOGM1OWZjZTBiYjM0MGE1NzQ1NTY4NDRmNjFkZWFlNzVmN2U5YWJlZDI3ZDU0MDY4ZTg2ZDU2NQ==",
-        "initiatorType": "xmlhttprequest",
-        "duration": 7.19999999999709,
-        "transferSize": 0,
-        "decodedBodySize": 0
-      },
-      {
-        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfNzM0ZGI2NGUzYTJiODFiYWE0MjU5Mjk5MTBlY2UwZTMxN2Y1MTM2Mjg5YTRiYmU3MDVmZDgzMWZkZmM4ODBjNw==",
-        "initiatorType": "xmlhttprequest",
-        "duration": 7.399999999994179,
+        "duration": 10.900000000008731,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
         "name": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/1.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmY2ZmI1NzA2YmI5MTQ3NGM5YjdlZGZlNTAzYWM0NmVhNWFlOWI4Mzk1YzE0NTkxNzAxNjZiN2FiY2RhNGRmMw==&zone=1",
         "initiatorType": "xmlhttprequest",
-        "duration": 2.6000000000058208,
+        "duration": 13.80000000000291,
         "transferSize": 0,
         "decodedBodySize": 0
       },
       {
-        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2E1Yjk4Y2Q0NGNjZTU1YjIyYTY0YjMwYTYyOTlmOTY4NzYxYzc4N2RhY2YzY2Q1ZTc0YzZmMjE3YWJiOTZkNw==",
+        "name": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYzM2MzA0NTU5YTkxMDM1MzlkMDg3MWFhYzllOWQ0NzA0MmY5Yjk1ZjRlM2IxMGMzYWY0ZDFkNzliMmMwZTA2YQ==",
         "initiatorType": "xmlhttprequest",
-        "duration": 7.599999999991269,
+        "duration": 8.39999999999418,
         "transferSize": 0,
         "decodedBodySize": 0
       }
@@ -8593,11 +8593,11 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/webpack-6b1621df169ca1fd.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "url": "https://www.nativecontent.com/_next/static/media/9ca7701bd809359c-s.p.woff2",
       "status": 200,
       "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=utf-8"
+      "resource_type": "font",
+      "content_type": "font/woff2"
     },
     {
       "url": "https://www.nativecontent.com/_next/static/media/e1b399e75c1df2d8-s.p.woff2",
@@ -8607,6 +8607,13 @@
       "content_type": "font/woff2"
     },
     {
+      "url": "https://www.nativecontent.com/_next/static/css/d12adf2e0ac1ed9e.css?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
       "url": "https://www.nativecontent.com/_next/static/css/22ab38c759632582.css?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
@@ -8614,14 +8621,21 @@
       "content_type": "text/css; charset=utf-8"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/106-06ad1d918e086113.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "url": "https://www.nativecontent.com/_next/static/media/8060a6715a238ab2-s.p.woff2",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "font",
+      "content_type": "font/woff2"
+    },
+    {
+      "url": "https://www.nativecontent.com/_next/static/chunks/94f53f20-608f2eaf898dd239.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=utf-8"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/847-b34a952095a31e79.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "url": "https://www.nativecontent.com/_next/static/chunks/webpack-6b1621df169ca1fd.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -8635,6 +8649,13 @@
       "content_type": "application/javascript; charset=utf-8"
     },
     {
+      "url": "https://www.nativecontent.com/_next/static/chunks/15-00788615d2de8b32.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
       "url": "https://www.nativecontent.com/_next/static/chunks/app/(pages)/(home)/page-3e427583ad687545.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
@@ -8642,28 +8663,7 @@
       "content_type": "application/javascript; charset=utf-8"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/560-3fbcaa9da096943f.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=utf-8"
-    },
-    {
-      "url": "https://www.nativecontent.com/_next/static/css/d12adf2e0ac1ed9e.css?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "stylesheet",
-      "content_type": "text/css; charset=utf-8"
-    },
-    {
       "url": "https://www.nativecontent.com/_next/static/chunks/943-9f93f591924d4ec3.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=utf-8"
-    },
-    {
-      "url": "https://www.nativecontent.com/_next/static/chunks/app/layout-3f6cdb7906fef589.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -8677,6 +8677,27 @@
       "content_type": "application/javascript; charset=utf-8"
     },
     {
+      "url": "https://www.nativecontent.com/_next/static/chunks/847-b34a952095a31e79.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.nativecontent.com/_next/static/chunks/106-06ad1d918e086113.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.nativecontent.com/_next/static/chunks/app/layout-3f6cdb7906fef589.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
       "url": "https://www.nativecontent.com/_next/static/chunks/399-b20a60ad22fd26d6.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
@@ -8684,32 +8705,11 @@
       "content_type": "application/javascript; charset=utf-8"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/94f53f20-608f2eaf898dd239.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "url": "https://www.nativecontent.com/_next/static/chunks/560-3fbcaa9da096943f.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
       "content_type": "application/javascript; charset=utf-8"
-    },
-    {
-      "url": "https://www.nativecontent.com/_next/static/chunks/15-00788615d2de8b32.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=utf-8"
-    },
-    {
-      "url": "https://www.nativecontent.com/_next/static/media/9ca7701bd809359c-s.p.woff2",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "font",
-      "content_type": "font/woff2"
-    },
-    {
-      "url": "https://www.nativecontent.com/_next/static/media/8060a6715a238ab2-s.p.woff2",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "font",
-      "content_type": "font/woff2"
     },
     {
       "url": "https://www.nativecontent.com/icons/arrow-right-white.svg",
@@ -8726,13 +8726,6 @@
       "content_type": "image/avif"
     },
     {
-      "url": "https://www.nativecontent.com/_next/static/chunks/e217e3ef.ce7826a0edadeb2c.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "application/javascript; charset=utf-8"
-    },
-    {
       "url": "https://www.nativecontent.com/_next/static/chunks/319.a88aa37f2d3839cb.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
       "status": 200,
       "method": "GET",
@@ -8740,21 +8733,14 @@
       "content_type": "application/javascript; charset=utf-8"
     },
     {
+      "url": "https://www.nativecontent.com/_next/static/chunks/e217e3ef.ce7826a0edadeb2c.js?dpl=dpl_J1JS7qy8tNKv43BYPVp22N8MvUam",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
       "url": "https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
       "status": 200,
       "method": "GET",
       "resource_type": "script",
@@ -8817,49 +8803,21 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
+      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
+      "resource_type": "script",
+      "content_type": "text/javascript"
     },
     {
-      "url": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
+      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
+      "resource_type": "script",
+      "content_type": "text/javascript"
     },
     {
       "url": "https://stream.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -8873,6 +8831,34 @@
       "content_type": "application/x-mpegURL"
     },
     {
+      "url": "https://stream.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU.m3u8?redundant_streams=true",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
       "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
@@ -8880,63 +8866,77 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfNzM2ZjNjMjJmYzY4YWI3YzI0MjYxYTg3MDYwMDlmNmJmYzYyODI5ZjMyZmFmMWM4YTdjMjNkNWEwOWUxNjFhMw==",
+      "url": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfMzBmNGJjNGNmZTQ1YzA1ZDllMzYwYmFkZjYyMGE5YjUxMDMyOWU2Y2M1ZmJlNzA2YjgzMzJmNjdmODk5MjM4Yg==",
+      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZjRmYWNjY2E2YWY2ZmI1MGQxNTUyYmYyMzBiMGNmODk5YTY5NWIyMzFmNWFhNGY5YjdiNzZlODdmNGRmMWZlMA==",
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfZThjOThiZDU0NzU2MTAzY2FiNjQyZjAxMmE4OTAxZjJkZDY3YWJkOWQ3YmFlYjk1YjMwNTRkYzM2ZTkzYjU4Yw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfM2Y0MTQ5YmUwZjQyN2JkOTAwNjUxNjJhNzA1OWY2MmEwYjIxNzcxOTIyNjgwMzgxZGQxYjEzY2IyNDhlZTVjNw==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfZDVlMzY2NTk4YmUxNTQyMTM2Mzk3YmNkNjc0NGZmZTIwZjU5MDJjMjMxMzg4OWYwNzgyNmYwMjhjZDFjMGI5Nw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfYzJhZGY3MzI1YTBlMzE2OWQyZjY4YTQyMDU4MGI4MzAwZmQ0MGM5ZTg5ZTNmMzkyNDM2YTgwOWZiZTBhNmQ0Mw==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfODQ0NzNlZDQ3ZWE2YjExMGI0OTc5MDhiNjExODEyZjg3MzQwOTZhMzlhZDJlNDk3Y2NjZDcyNmE4YWIzMDkwNg==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfN2I3NTQ0NjQ1NGMwZDA3YzQzMjdjZTVmOTI0N2FiYzM4MGM5OTQwZGY0ZDQwZDU0ZWE2MzAzMWNhN2M5OGQwNA==",
+      "url": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/j9QmHHKmgLFdgEyl5uQtaP8af00HLSmLWFsUTFqxT00W9SRR5pqOVBy9I5yMboJ7VQQJF0037008MUtRZMyND9IpuL4vWaGlP3yeJAZGxa6nFuw/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjdmNDQyYWU4MjJmYjMxODU2ZWE0NmM4ZTQ4MDg4MzEzYjI2YzY5MTZhMDYyYWQ4NzM3MTEwNGFhZjczYjE5MA==&zone=2",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfZGYyMTgwOWFjMzcyMzMwYjE2ZDVmYTNlOTM3YWIzNzhkMDFlZmQ0MmE0MTRjNDk1M2M2ZWUxMTY4MTA0ZWY5OQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfMWRiZjIxNTZkOWRlM2MwZjQ3ZWM5ZjY1ZTgwZGY4NmY3OTY3N2NiMmNlMGEwYjUyNDdjZDcxMDBmZDRmMmEzNg==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfMzhhZTU2M2JiMzQ1ZTk5MGQzYzI5YTc1OWQxMTg4YzRiZGE0MTQxOWMwNTI1MWE0NzNjMGI1Mzk2YzhhZDI3Ng==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfMWRiZjIxNTZkOWRlM2MwZjQ3ZWM5ZjY1ZTgwZGY4NmY3OTY3N2NiMmNlMGEwYjUyNDdjZDcxMDBmZDRmMmEzNg==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfMWU3ZGM0NzRmMmZmYzg1OTZiMmE5ZTRkNWMxZGRjYmZkYjIxMzJlYzZkMGI3ZWJjNzhhZTc0MWViNjY5NmY3OQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -8957,6 +8957,27 @@
       "content_type": "video/MP2T"
     },
     {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfNTQyNmQ4NTc5Y2ZiMmZmZWU5MmZkZTM2NDYwNWM1OTFlMTk4NjI5MWIxYzYwMmQyMWIwZDZjMDI3YmM3MjY3Yg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfMTQ0ZGY4YjlmODIxYTFkOTVmZTEzODc4NjkxMjM3ZWI4YjVjMmQ4MGY0Mjg3YzdkMmYwZDE2MWU2YTVhZjFiNA==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfY2E2N2M0Y2Q4M2E4YmIxMTllOTY2NWM0MDZmZTI4MTBhNDJkMzA1MThjZTQxNDE1ZTlkNWM1ZjU5ODFkNTAwZg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
       "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfOWU5ZDJkOTMwZGE0Y2Y4MmZkOTIxNjRjN2E4NmY4OGM1MWQyM2YyZjk0OWFjZDdlNGUyYzI5ZjdjYTI3YjY2NA==&zone=1",
       "status": 200,
       "method": "GET",
@@ -8964,14 +8985,14 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
+      "url": "https://image.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
       "content_type": "text/vtt"
     },
     {
-      "url": "https://image.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU/storyboard.vtt?format=webp",
+      "url": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -8985,18 +9006,11 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/j9QmHHKmgLFdgEyl5uQtaP8af00HLSmLWFsUTFqxT00W9SRR5pqOVBy9I5yMboJ7VQQJF0037008MUtRZMyND9IpuL4vWaGlP3yeJAZGxa6nFuw/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjdmNDQyYWU4MjJmYjMxODU2ZWE0NmM4ZTQ4MDg4MzEzYjI2YzY5MTZhMDYyYWQ4NzM3MTEwNGFhZjczYjE5MA==&zone=2",
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfY2E2N2M0Y2Q4M2E4YmIxMTllOTY2NWM0MDZmZTI4MTBhNDJkMzA1MThjZTQxNDE1ZTlkNWM1ZjU5ODFkNTAwZg==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
+      "content_type": "application/x-mpegURL"
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
@@ -9020,35 +9034,14 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
+      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
       "status": 200,
       "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
     },
     {
       "url": "https://image.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -9062,11 +9055,53 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
+      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
       "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfNWJkNzI1ZGRmM2EyMTBiNDQ1MTM0OGQ2ODNjN2U3ZmJiNDMyNDU2MWZlNTEyM2JiOGJiZDdkMmNkZWNjZjc0Mg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfN2ViNmNmOTVhYTBhZjJhZTA5ZjdmMGIwMzhjYzlmMmYxZDU2MzVkNzA5YzE2MTRjNTJhODZiZDBmN2VlM2MxYQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfNDdmMGZhZWI2MjMxY2NiYmM0ZjUxMDc5MzgzNzYzYjMxODE4OWQwMWY1MjM0ZGM1MjE2ZTU0ODkyMDc1YjVkYg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfOGJmNTJlN2VjZTEwZGJjZmRmOGJmMjU4MDQxNzMzZGUwZmU3Y2U2NTk0MmJlM2Y1YTU2ZTdmMDA1N2FjMDY5Zg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfZTUzNDQyMDNlMTU5ZmM4ZDBiMDgyYzg4ZThiNmQ1YWY5NWE1ZjExNDJlNzgwZjY4NjFhNmIwMmFkZDc5N2VmYg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/1.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmY2ZmI1NzA2YmI5MTQ3NGM5YjdlZGZlNTAzYWM0NmVhNWFlOWI4Mzk1YzE0NTkxNzAxNjZiN2FiY2RhNGRmMw==&zone=1",
@@ -9076,42 +9111,7 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZTY3NDNkOTY2NTQzYWIzN2QxMWY0MDMxZGRlZjg3NmVjYWI1NTcyNjM0NzFkZDMyMDZkMWVjMGM4MWRmNzQ3Nw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZDJiYjA3ODBjMzgyOWYxZDExZWVjZTI5ZDhmYTI3ZDA4ZTFjMTI4ZGIxYTUxNjk0YmZiZDI4NDg4ZWIxYjEwZg==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZTEyYzI1YTRiMTQxYzZkMzJlNjBjNGIyYTM5NzE0MjgzMjc2ODBlZWUwOGJjZWExYzBlMDFlYzQyYWUyYjQ3ZQ==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZTZhMmJjNWRhZmUxMjAwMmMxMmExMWZmOTg3ZWRhYjBkYmNiZTFhZThmNGYyZmYyYWUwYzg0ZGU2OTU5NDJhMA==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfZjhiMDMyM2E2ZGRjZDRhMjA5ZTU1ODY2OWM3ZmJmN2NkYmY0MTcxYjBlZmJlOWE3OTJhNTJiYmQ0NGMyZmZlMQ==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMTNfOTVmMGY3ZDdiMDhhMWY4YzAzYzZlMDVmYmVhN2ZlNmQwOWNjZDNkZjJjY2IzMzNlMjM0YWRmMzVmM2M2NDVmNw==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwOWFfOTgyYTlkOWVmMWQ3NTI1MGMzMWY1MjMwOGQ1MzQwZTU4NDQwMGJmM2RiZTZkNTY3MWIzYjVlYWZiZmU0MDJkYQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9370,13 +9370,6 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://stream.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
       "url": "https://stream.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
@@ -9405,55 +9398,6 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfN2UzYTdmMWRjMzFlNmFkMWViZGFjZGQ3NDQ0MGY3NzhjMWRmY2QzOWIxMmFhMmY3ZDllMzRhYjZjZjVhZjIxYg==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfNjAxYzI0ZTI4MWUwZTk3NjFmNDRmYzFkZjAwODdiMDY1YjI2YmY4YmZlYWE4YTI5OWJmMDhhYjM2MWYwODgzMw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfMmI3MjBiNTE0ZjRiNGUyZDg4ZDQ5MzI0ZGIxMzI4ODg3OGFjNjU2YjRmMWRiNGIxYzBmZjg1ZTFlZjE4OGM4Ng==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfN2JjNGQ1MWUwYzBlY2Q1M2FhNjdlOGM1MjE5YThmMWYwMDBhODA3NDA5ZmE2NDZlZjBhMGEzYzM1NzYzMDc5Ng==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfMjM1NDk5OTI2Zjg1ODI3OTRjNWZmNGQ4ZGU0NTMwYzhkODYzMDFjZmNkOWI0Njk3YjQ2MDVkYjVmZDA1ZjY1Yg==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfMzkyNDRkYWZhYjA4Yjk0ZTcyMjc1MzA3MTZkNjcwM2Y1Yzc0N2U2MDE1OGNjYWM1ZmZhMDFhYWVhYThmZjUzMA==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfMjM2NWExMzRhOGZmYTFlYmE2OTdjN2FmNjdhNDBkYzQwYTVjZTkxZGQ2NjYyOTZkNDBiMmEwZGRiZTFmMWE5ZQ==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
       "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
@@ -9461,25 +9405,95 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfYTg4Njk2NmY2MmVmOTFiYmQ2Mjk1YTdjNWRiNDQxOGE4ZGRhMTM3ZDg4YjZlNzEyZjNmOWFhZjVlZTAwN2FiMQ==",
+      "url": "https://stream.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfMmI3MjBiNTE0ZjRiNGUyZDg4ZDQ5MzI0ZGIxMzI4ODg3OGFjNjU2YjRmMWRiNGIxYzBmZjg1ZTFlZjE4OGM4Ng==",
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfYWY0M2RjYjMwYzM5MTNhYjBhYzc4ODQ1MGQ1MWY3YjAwNjdiNmU0ZDdkOGZjNjFjMTM1MmZmNzJiZDg5YzM3MQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfYjA0ZDg4MjQ2ZjM1ODRjOTVmZTY1ZWYwYWVkYzk2MTQ4YjUwMWQ3NjFkZjljN2IxZGEwZWVlYjBmZDY2MWNlOA==",
       "status": 200,
       "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfNTlkYWYwMDE1N2FlZDIxMmE4Zjk3YmExN2Q0YjUzZmU4ODQ1OGI4M2M2NDZhZTJiYzNiYTgyNGQxODA1NGMyOA==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfOWI3MzAzYmU2NDRkNGMwMDgzMDE5ZmY1MzYzZjZjNDM0ZjEzN2JkNWM1Njk0MTMyN2U4OGQ1YWM5Yjc0YmRiNQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfMzlhMTg0OTMwMTJiNWJmNDg0M2I3NzE2MjMxNWEwOGRhNzBmYTRjYTYxNGQ3YzhlNzU2NWFiZGFhZWFhOTc3YQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfODVhMTc1YjFmNmQyYWFlZDQ4YTFmZDA0Yjc4YjM5YTA4MzI0OTljYmY0MGU4OWU4OWZhOTE5YzU2MzAxNTcwZA==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfY2E4ODVkZGZkZjNiOGY4NjBlYjA1NTY5ZWYyOWE4OTVmYTk4ZTA3NDE5ODE0YzdiMDIzNmJjNWI3ZTc1N2IxZQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfMzlhMTg0OTMwMTJiNWJmNDg0M2I3NzE2MjMxNWEwOGRhNzBmYTRjYTYxNGQ3YzhlNzU2NWFiZGFhZWFhOTc3YQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfZjdlYzQ5YTY5OTJhN2E5ZTUxZmM5ZGY5MzRlNDI4ZTE3Zjg2ZTFkNzEyY2E0NGM5YzBiNGM4OGYyNWQ4M2MzNA==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/2DbcShhQtJHFbqNipIPrr01HMXJcV6psDHq12fHkBdJmtzsLlTwHyku5jqli6IfO02RzuOmdmtyLoromBsIFlECBBkbKa00z5mE/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMzllY2MzNTRmY2ZiNjE1ODJkMDU0YmUxMmM5NDgwNzNiNWJmNDFkNGI3ZjQ3NTg5YzM4MTY5OTIzNTA3MGY2OQ==&zone=1",
@@ -9497,13 +9511,6 @@
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9531,28 +9538,21 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
-      "status": 304,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": ""
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
     },
     {
       "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -9580,21 +9580,7 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
       "url": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -9615,14 +9601,21 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/lUagtpapQYHsLR01blW7EMoi84j2HHZNeA00La3jpwVoR02P3RqIcjboaQkfkj5unFC5XjOe3RDZklNCIAnYklt8Q7cALMUz9RwCqCAfifd5is/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfYzVhZTczNjY2OTMzY2YyMDFiMTA1YmU5YTYyNGJkYzc1Y2FhMjdlNWM3YzdmYjVmM2NhMjdkOTY2NjkwODE1OA==",
+      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
+      "resource_type": "script",
+      "content_type": "text/javascript"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/wfKAw01kMKHxr9Wy8EkVrajkb5PKMb76jBumNrcH01zoQpMlIgBAuesFbaX9dnUo9oXbaeFr9Vf8VKA01b01C1Pv7eOxLRoyUKvBy02BrNFbrcaA/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMWJfY2E1MzhkNDAzNTNlNWY4ZmM3ODdkZDc2MTRkMDQ3Y2FmZDk1ZjA0ODQxZmQxOWVjNTgxZWNiMDMxOGZjNjg5Zg==",
+      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
+      "status": 304,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": ""
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/wfKAw01kMKHxr9Wy8EkVrajkb5PKMb76jBumNrcH01zoQpMlIgBAuesFbaX9dnUo9oXbaeFr9Vf8VKA01b01C1Pv7eOxLRoyUKvBy02BrNFbrcaA/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfNGFhOGQ1NzI3NzQ0YzczYjc1OTVkMzc1MjQxYzBiMjkwNDk0YTFjZTcwOGU2NzE4NDk0NDE1YmE2N2YyNmYyYQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9634,6 +9627,13 @@
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/lUagtpapQYHsLR01blW7EMoi84j2HHZNeA00La3jpwVoR02P3RqIcjboaQkfkj5unFC5XjOe3RDZklNCIAnYklt8Q7cALMUz9RwCqCAfifd5is/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYTVfYzdmOWJhM2EyNThmZjFkYmRjZDk0YWE1ZmM1MDkxYmU5ZDU3MTJkMGI2NzJjMWMwM2RlMWYxYWE3OGU1ZDI5ZQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
     },
     {
       "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/1.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDg3NGEyYWYxYjE3Zjc3NWEzMWZjYjRkMzIzMTQyNzRlZGNmYzNiZmExMzhhZjI5NWJmM2Y0MzViMmQ0ZTc1OA==&zone=2",
@@ -9860,7 +9860,7 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
+      "url": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9888,7 +9888,7 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://stream.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG.m3u8?redundant_streams=true",
+      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9909,14 +9909,21 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfM2JkODJlNTYyNTUyNTgyYjRjMWJkNTZmODRjNmJlN2MyMWIzM2Y1YjQ5NmMyYzRkMzcyZTg0MjAxM2MwYmRiMw==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfNzE2ZTJlOGI4YjNhZjgzYWZkMWFjYzc2NmQ2YWYwOWZjMGNkM2JhZWU4MzRhN2MxMDBkMzRiYzM0MzM1MzUxYw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfMjZkYTI4MDQwMGJiYjUyYTIwNmViNDU5ZWI5OTE1MDMyNGYxZTc3OWQ4MjE3YjQyZDAxZGMwMmMyMTY5NDI3OA==",
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfZjk3MTIxYmZmYTY4ZTYxZWJhZTg0ZTQwZmI5MGFlZWY5ZDE0NWI0YWMzZmUyZDk1YmYzMzlkM2JlN2ZlNzYzMQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMjU4NzFhOWVkYTIzYTUwMzZhZDg1MGI2YjBiY2ZjODFjZTUwNGI5MDA3ODkxY2JkNDdmNjJhZWI4NzI0NjBiMw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9930,42 +9937,14 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfNDA2NDY3MzE1YTJkZjUzYjRjODQwZGM5N2ZjOGFlNDc1OWY0NDlkZjQ2NzM0ZGExOTc4M2VhZTI2OTJjYzgyNw==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMTkwZTgzOWJhNTIxZGVkMDRhNzcxZGZiYzQ1NzU4MmM3NDI0MDBjMWY4MDdjODEyMGZlNDAxMjFhMWM4YzNmMQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfZjgwNmE3ZTEzM2RkZGRiZGU4ZWQ5MWIxOTQ4MjJiYzE1MWY3OTMyNDk0NzM3NDI2ZDViYTExMTVlNzQ0ODAzOA==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfYjBlNGE4YzM2YmEyYmVlY2U5MjUxM2Q3OGU2ZTg2MjVhZjY3ZWIyYWQ3ZTFjZGMxYzdhNzVkN2RiY2VhYTRiNA==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfNjVhN2I4YTk2MDA2NDAyZWE5NzMxNzhkZDY0OGE1NzY1ZDZmZDM5MTRhYmQzMGVhYjZkNmYxOGRlMTQxNDM5Mw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfOGRhZGMyNTFmZmM1YWUyYTcyMTcxYTY3YzMwOTNhNWVkNjQ5ZDdkMWM2Y2MxODYyOGE2YzE0YmEzN2ZkMDNmZA==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/Fl5crxlI9t8Wq00RGZrLZGjsI6a41lMJJqEH6J3jETePErec9SeggxUh4nzfJIPUITwMf9a60102YMdRHPL2n6ftQRMw02WvMgPD00nZVTaAPUxA/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmRiYjQxMjRkNDk3ODA4NzJhNTc1ZmFiOTUwZjg2MGRjY2RjZDQ0ZTI2NzYwNzVjYTA4OWU5NzVhNTVhNGY2MQ==&zone=0",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -9979,20 +9958,6 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfM2JkODJlNTYyNTUyNTgyYjRjMWJkNTZmODRjNmJlN2MyMWIzM2Y1YjQ5NmMyYzRkMzcyZTg0MjAxM2MwYmRiMw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
       "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
       "status": 200,
       "method": "GET",
@@ -10000,11 +9965,67 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/Fl5crxlI9t8Wq00RGZrLZGjsI6a41lMJJqEH6J3jETePErec9SeggxUh4nzfJIPUITwMf9a60102YMdRHPL2n6ftQRMw02WvMgPD00nZVTaAPUxA/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNmRiYjQxMjRkNDk3ODA4NzJhNTc1ZmFiOTUwZjg2MGRjY2RjZDQ0ZTI2NzYwNzVjYTA4OWU5NzVhNTVhNGY2MQ==&zone=0",
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMWU5NThmMjc2MjJkN2QwYTQ2NzMzNjQwZDhhZTFlYzhhNmNkYzY3NjNlNWNhMDY1NzlkZDgyZjIxOWRiZWIzNw==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMWExNzVmNmQzZmEwMTJiZTYwNmUyYzUwMTA5Y2MwODc1ZjY3ZDBlNjMzMGQ4ZThhN2ZmNTk3MTRmMTcwYzNmNg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfOThiZjg2NjkxNGRhYTZhNDIwMDBjNDMyMWZhNDQ1MWNkMTRhODI2ZTcyMjdjM2NkYWQzNWUzNDc0ODI3YmRmZg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMWU5NThmMjc2MjJkN2QwYTQ2NzMzNjQwZDhhZTFlYzhhNmNkYzY3NjNlNWNhMDY1NzlkZDgyZjIxOWRiZWIzNw==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
@@ -10021,27 +10042,6 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/eOg3ECbyXS7kkpOn4sAAJxEhjVYHmQgxPLDLVv1kZcpnB2c8PCr9VbPpPbP3Biac500NO5027KlL7Y7OkIWI2ytKGHtYwN3CPW1XLqigBpliw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfNWE5ZWQwYTFlYzA1MGE1M2RiNDhjYjMxZTk0ODg4M2E1ZGZhZGFkOTBhZWIwZGY2MDBhYjAxZjcwMmZiNjU0Yw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/Af00VCSk01iyrimhWFqMLbCZjDy4aMfdVk/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
       "url": "https://image.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
@@ -10049,14 +10049,7 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://image.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/FCB7wF2zO9qSqyiac00uDNGjoLiJw7KqG/storyboard.vtt?format=webp",
+      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -10070,6 +10063,13 @@
       "content_type": "video/MP2T"
     },
     {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/eOg3ECbyXS7kkpOn4sAAJxEhjVYHmQgxPLDLVv1kZcpnB2c8PCr9VbPpPbP3Biac500NO5027KlL7Y7OkIWI2ytKGHtYwN3CPW1XLqigBpliw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMDhjYTE0MWE5ZTY4MDI3ODhkOGQyYjEyMjliMTk3YTI4MWM5YmY4ZTg4MGIxZTNmOTA3MzczMzMwMmMyZjU3Nw==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
       "url": "https://image.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
@@ -10078,6 +10078,20 @@
     },
     {
       "url": "https://image.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "texttrack",
+      "content_type": "text/vtt"
+    },
+    {
+      "url": "https://image.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM/storyboard.vtt?format=webp",
       "status": 200,
       "method": "GET",
       "resource_type": "texttrack",
@@ -10098,20 +10112,6 @@
       "content_type": "text/javascript"
     },
     {
-      "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
-      "url": "https://image.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM/storyboard.vtt?format=webp",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "texttrack",
-      "content_type": "text/vtt"
-    },
-    {
       "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
       "status": 304,
       "method": "GET",
@@ -10119,14 +10119,14 @@
       "content_type": ""
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/lUagtpapQYHsLR01blW7EMoi84j2HHZNeA00La3jpwVoR02P3RqIcjboaQkfkj5unFC5XjOe3RDZklNCIAnYklt8Q7cALMUz9RwCqCAfifd5is/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfYzYzYjcwNDI3YWRjMGI4MzA3YWM1ZjM4ODQ3ODJiYjkxZWU3ZWQ0NzI4MTY1YzRkYTYzODFlMzRiZjk4YTFlNQ==",
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/lUagtpapQYHsLR01blW7EMoi84j2HHZNeA00La3jpwVoR02P3RqIcjboaQkfkj5unFC5XjOe3RDZklNCIAnYklt8Q7cALMUz9RwCqCAfifd5is/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfMzUyMzQzNTVmODNhZTFkNjU1NjE2OGFiMzYwNThjYzcxZjlkNTVjZTMxNDFjNGQ4YzA5YzU5NzkzNjdhNWI0Mw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/wfKAw01kMKHxr9Wy8EkVrajkb5PKMb76jBumNrcH01zoQpMlIgBAuesFbaX9dnUo9oXbaeFr9Vf8VKA01b01C1Pv7eOxLRoyUKvBy02BrNFbrcaA/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjJfNWU3YWVlMmU5ZWQ5YmI5N2FiYTEyZTdjOWRhYjU4ZDZmYjMzNzY3YzA5OGVmYmQ3YTllYzk3ZDNhZmFlMDc4OQ==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/wfKAw01kMKHxr9Wy8EkVrajkb5PKMb76jBumNrcH01zoQpMlIgBAuesFbaX9dnUo9oXbaeFr9Vf8VKA01b01C1Pv7eOxLRoyUKvBy02BrNFbrcaA/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYWJfZjBhOGY2YmM4MGUzYTQ2M2NiM2M0OWQ1ZGZhNzhlMjczN2ViMWY1M2RiMDAxZWVmMzdjMTcwNWEyYzI3M2I1OQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10357,13 +10357,6 @@
       "content_type": "image/jpeg"
     },
     {
-      "url": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
       "url": "https://stream.mux.com/OBRVdDHRAolOO02XtznIUAB6kPucNBpNU.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
@@ -10372,20 +10365,6 @@
     },
     {
       "url": "https://stream.mux.com/qq1NsaEli01wSI00cM2WYe5Bi3RWdDEPKm.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10406,7 +10385,7 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
+      "url": "https://stream.mux.com/1fGD3stl6jBNKwSjxVSIaXX5qvn93bfs.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10420,84 +10399,91 @@
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZTRiM2I1OGIwY2ExNzQyYmEwMGZiYWRlY2Q1MWU1ZmY1ODVhZjFmZTU1YjIyMjkwNTQ3ODg4Nzg4NWNlMzM4Nw==",
+      "url": "https://stream.mux.com/3J3igVyISyWQ3nQLt02vwf00c3Dy2KE3ps.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2UyNTM0ZjliNDljMDdkMmNiNWY1MGFlODkyZTFiN2VmZTlhOTEyOGI0ZjIwYzc2NmFlNTIxMTMwZWQ4YjgyYw==",
+      "url": "https://stream.mux.com/K5vHiVOA007I1Rv1HfRRYfm32q3fgbbnM.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfMjNlMjU5MmY2M2IyNTI4OWJlOGY3NGFlYTVkYjlhYTlkZDg1MDc4ZDgzNGEwYjRjOTZmZDNmZDg0YTBiMzRhMA==",
+      "url": "https://stream.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ.m3u8?redundant_streams=true",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfMTAzMTc0MTkzODI0MTg0MDM0ODQ4YTg2MTU5ZDNhZTQ5NDVjZTg5ZTc0MTk4MTg2MzcxZGU2NmQ3YTQ0YzEzMQ==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfODk5MGQ0ZTUzYmE2ODVkZDc2NGY1ZTVhMzZjZGE1NTI4NjgyMGFjYTFlMjVkMGYwNzhhYTU3N2YwMDRhYmRhNg==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfYmQ1NzAxOWRhNmI3NjMzNjM3ZmJkZDAzOWFjNzNiM2U0YjVkMzdiYjBhNmY3NWQ4NWM2NWY5YjZiZjA0YmJjNQ==",
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfNTVmMjlmMThkMTc3YzlhMzQyOTRmZTNjZGRhMGU3YjMwNGE5YTE0NzFkOWE5N2MwNzk4N2UxNjFiOTNkZjI4MQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/EaPbROQRuOXbx5B004oYCx49yPE9PHLlCdK4FtKaNCtkXPd6YRnMQTR15W3xbiYxSMxSzf6efc401F5vSXHdx7TkzRrcX01pfmbgRCUBmoZvqU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZTJjZTZiMzgwYWVjODIwNGEyZWJlMmU1MTZmY2I1Y2NiZGUxZTQ2NmViMWVhYTFmZGYwMDViYmZiYTk4YzhkZQ==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfN2YyZTNiNzA3ZWEwOTk5MDZiODYwNzZmNDUzYWRhM2FhNDFiZWI0NzJhNmZkZjQ5ZmM4ZWY5NmZjYTEwOTZlNA==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/Pl02DkmVjo8Y8YCDEtjPZFdOxDfUQrnO00jFRuXEF2q01kXQ007vO02zqe8ZHpY82M6TeFs200JgkTbKndHk01s1N9dVPO8ii6lNwxuOSx1avp4No4/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZGE4MDNlNzk0OTRmY2I1ZWFhMDMzZWM4YTJmMzdkOWMwY2NiMDQ4YzkyM2VhMTEzMTE0YTBiYjEwMGE5MjFjOQ==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/t57Qo8q9VXcdqo7gkUll00602zgS009Te100ipwdFD01ID1LQmUu6HJSu02RCt2mYJxXIl9BX01eCQz47VkZBRDPgwtLaSEFN3ai8IQ49I5S000200T5o/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfMzhjZDM0MGYyOGM2MWRkYjY0ZDBlZTc3NzVlYTZhNzQwMDNjMWVjODdiMzFiMzRhMzdmNGJiN2MxN2MzYzA2Ng==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2ZiNjExN2RjMjRkY2VkNjU4OGU1YjZjNWNlMWE2MmYzNTdmMDlmMzQ5NDAwMTE4NGNjZWY1MGFkZTNiMjllNA==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/nbaDgheEMVpzssYbIfHE5sJ0084iZjgpAilLrrDr6761qlBf9801D6FWlI008VRmHgEsNZQIy5TnJFyIb5VYL1zgCGTdaPXfyPY500iOEbRm01Qc/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfNTk5YWYwYWQ5YmI2N2I2ZGY1Y2QxNDY0MjgzZGY1N2IzNGMzMjZiNzVjOWRhMTZlODMwYmFkMTg5Yzk1ZmU1Nw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "script",
-      "content_type": "text/javascript"
-    },
-    {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfYmQ1NzAxOWRhNmI3NjMzNjM3ZmJkZDAzOWFjNzNiM2U0YjVkMzdiYjBhNmY3NWQ4NWM2NWY5YjZiZjA0YmJjNQ==",
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDQyZDc3NzE2MTc1MTkzY2EyZWIyOGQ2Y2FkNGZiNzM4ZDAwMDI5NTViOGZiMGU0NTg1MmRlZjU1NGE2YmExZQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
-      "status": 304,
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/T02YWccDYmKqPunAn02qkAzKa82faBzeaevDTIYhID8T2b1VqQdAjvjOl6UxyD01ybIJj7M6ueroZImFS4Zw1vf6SZq00EgMoujSRDNXqe5K01q8/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZGQ2ZGE5NDI2ZTgwYzI5NjkwMjFkY2E3NWVkOTAxOTAwMGY5ZmM2NjI1YjBkZGE5MzAxY2M4OGY2OGZjYjljNQ==",
+      "status": 200,
       "method": "GET",
-      "resource_type": "script",
-      "content_type": ""
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/1Q5JLomCEmxWHTicerK5OtUWsTqCJ00XoD702K5SvSrggGMCJU2KxFEGLDPM7UhsLCEs37dXFr0121uW00XI00FkYDw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDhkOGJjNTk1ZGNiZWNiNGIyZmI4YzI0Y2RkMDZkMTM4YjVjZGUxOTM1NjVlOWI3MzcwZGRhMmY3MDc1NGZiZg==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/t8QNXHYqUdKJpk8MFhsbdQbJ01YRCSdcIn6IqEeaOzVRlF1yPCtUM00Dk18SP8xdLsW1RWNq02A8tHOZAdNe7EHaw/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfZDQyZDc3NzE2MTc1MTkzY2EyZWIyOGQ2Y2FkNGZiNzM4ZDAwMDI5NTViOGZiMGU0NTg1MmRlZjU1NGE2YmExZQ==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10518,6 +10504,13 @@
       "content_type": "video/MP2T"
     },
     {
+      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
       "status": 200,
       "method": "GET",
@@ -10526,6 +10519,13 @@
     },
     {
       "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/5gNugvDcx00j3aA8hV9Wr00ZXFpnwRlonpSFg2Nj1APabN1c2GQtzu21D1M98yfp0002UFMZ02Nhw1t79nQJNg1Qfg3c5wgU1QxmpoAwkLZILuP00/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNTM0MmY1ZjQ1ZDE4YTc2NjhlODNjMTA1NDhjOGNlYWNlMWYwNDRmNWYxNjJlNmZkNDRhYmJlZmY1Y2RkZjQyZQ==&zone=1",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "video/MP2T"
+    },
+    {
+      "url": "https://chunk-oci-us-phoenix-1-vop1.edgemv.mux.com/v1/chunk/T4LSuXUHr4mUVhCdPXhsqDMH8u401pEAxyZEIJrzslz01BcnYhgIrY01zWSXsY9Qm00p6ziZIWyAgxpdL01Eylon01OIKEnbbCd5oz/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfMDYwNzRkNzhjYzE1NzQ2ZjM4YjAzMTg2NTQ0Y2UwMmYxOGVhNTJlZGE4NmMwMjFhZGZkZDc1NjFiNjVlMjZhMg==&zone=1",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10553,18 +10553,11 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/S34UUQLGLRzdQWCkwnINSWFusCVjg9HuweViwG00Ao5sxkg74QaB00KzgD90254qQFdBAvjz5BsDfcEY7h9cck2Y6BoVEECNahZubyRJOIdl8Y/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfYzM2YjU5Yzg2MmQwOWEwOGYzMTJmODI3MWRjODlmMjZjNWE3YmY2ODg1MWYxZGNlMDVjMWRkNGZhMTA1MTYyZA==&zone=1",
+      "url": "https://www.gstatic.com/eureka/clank/152/cast_sender.js",
       "status": 200,
       "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
-    },
-    {
-      "url": "https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com/v1/chunk/fBKHw37cg01cjNmtAMxid9UEmV9L6dRCljEwBKw01bHDU8bsuSrFGcXUpGYbsSRPrRi3C6pW01nR2hFbdlj1iBwTx2D00NPUhSwuTtepsukYtpU/0.ts?skid=edgemv-default-1&signature=NmFhNTE0OTBfNjUyZGYzNmQwOWE2M2NlOGY1ZjZlYjM3NWRhYWNjODhhMjgyYWZjYjNmMDA4NWU3ZjE3ODNmNTk3MjZlNTQ2NQ==&zone=1",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "video/MP2T"
+      "resource_type": "script",
+      "content_type": "text/javascript"
     },
     {
       "url": "https://image.mux.com/TeI01Tg4SyUP1sGFxNkmfYgckESI3GNwZ/storyboard.vtt?format=webp",
@@ -10623,28 +10616,42 @@
       "content_type": "text/vtt"
     },
     {
-      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfOGZlMTdmM2Q4NWViOTAwNDRlZjNhZDg5MzNkMTVkMDBiNTVkNWY0YmUzN2ZhNDQzYmM3NzU0MzhlZDliODgxOA==",
+      "url": "https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js",
+      "status": 304,
+      "method": "GET",
+      "resource_type": "script",
+      "content_type": ""
+    },
+    {
+      "url": "https://manifest-oci-us-phoenix-1-vop1.edgemv.mux.com/bHYzxZrboDrfBp3KHfpNS01kDpe0201sj00pXsMC2tvU4AGtraaPoAkcWrcIEMKrr400E54MWx68A02H02GKcuSTIb5Jg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYTQ5Y2FkMTg4YTU2ZTdiODQyMjhmOWFiMDA0ODlmY2U1M2VjZjA2Y2RjZjk5ODQ2NTM1MTUxNGVjMzYxNGE2ZQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZmQ2YjkzZDFiNDBhYmMyZDkyYTMyNGU0OWVlNmIzOWQ4NWVlN2MwMzBkMzI2MmQzODEwMWYyODAwNWIwZWJkMQ==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYjI3YzQ1NDI1MDMyMjgwYTQyZjA5NDUwZTg4MDkwYmUwMjYwMjQ4MTYzYjNkOTY5OTMyZDZlNzY0ZDY1Y2M2Mw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfNmRjZDNlZDlhMjM0M2EwNjU4ZDAzYWFhYzM0NTM2MjRlYzRhYTEzOWMxMWVhN2Y1MGU4MjhlODVhMDg1NDQyNg==",
+      "url": "https://manifest-oci-us-ashburn-1-vop1.edgemv.mux.com/WokiLfwqh02uZb3yIvs02EV5YzIkJqUYm6DFjHkX8p016d38H1m3zwgpmXFE5cM9pb1sdDQe6r31ua8Xr9fnN8r1Q/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYTFhZjc1NzNlNjEyZWFmNzE3YjI4ZTljODNmOGNmZTE1NWUwNjkxYTIzYTg2N2ZiZTJmZjkxYWQ3YzM4N2Q5Nw==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
       "content_type": "application/x-mpegURL"
     },
     {
-      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/ULBTRUyXm01dllZYT9v1zApNgB5M01DgHlyT02VtJULRaY6nAPudYZg2eNi8GxXmmdYzy5Y8Dd01mAjj3khqFs01PNQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfZjNhZDgwN2YyOGM1OWZjZTBiYjM0MGE1NzQ1NTY4NDRmNjFkZWFlNzVmN2U5YWJlZDI3ZDU0MDY4ZTg2ZDU2NQ==",
+      "url": "https://manifest-gcp-us-east1-vop1.edgemv.mux.com/L4ccLryKbLQ9F7XYLgB4zGHMUD2dtLl0218HYXTvnpqP9vT41HKiej7yN7z8Fdu02u1kqor1HWa02XDIi37HVAP8w/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYmRiZDUyMTA3NmQwMTQ3MGZmZDg4MmIwOWY4NGU2NTNlZTA2MTJmNjhhNWM2NmJmOGFjY2U3ODdhZmY2NjNmNA==",
+      "status": 200,
+      "method": "GET",
+      "resource_type": "xhr",
+      "content_type": "application/x-mpegURL"
+    },
+    {
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfMzJlY2Y3YWIxOGNlNWE1MmRhZWJjNTM5OWJkYmQ2YTY4YjQ4ZGFiNjdjYWIyMWM1MDQ5YzMyN2VhN2E5YWUzYg==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
@@ -10658,14 +10665,7 @@
       "content_type": "video/MP2T"
     },
     {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/x8WvXc8ESY02YREsEs3XSmL00kKxf5ymAt5013fx013NXH1sMjjODPWlU2i00JrRSpVq7SWdfpjrLS00X5Fc02hRcDiQQ/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfNzM0ZGI2NGUzYTJiODFiYWE0MjU5Mjk5MTBlY2UwZTMxN2Y1MTM2Mjg5YTRiYmU3MDVmZDgzMWZkZmM4ODBjNw==",
-      "status": 200,
-      "method": "GET",
-      "resource_type": "xhr",
-      "content_type": "application/x-mpegURL"
-    },
-    {
-      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTBmMjhfM2E1Yjk4Y2Q0NGNjZTU1YjIyYTY0YjMwYTYyOTlmOTY4NzYxYzc4N2RhY2YzY2Q1ZTc0YzZmMjE3YWJiOTZkNw==",
+      "url": "https://manifest-gcp-us-east4-vop1.edgemv.mux.com/01OJBT3IHZ2lJ15MeJDVvrE01SWBqwO1odyMogMZkBEk3x2uY46sQ1Fu01K8C2Tg6WN9h01aQwliVxbKhCV01nAbBFg/rendition.m3u8?cdn=edgemv&expires=1789203600&skid=edgemv-default-1&signature=NmFhNTEwYjBfYzM2MzA0NTU5YTkxMDM1MzlkMDg3MWFhYzllOWQ0NzA0MmY5Yjk1ZjRlM2IxMGMzYWY0ZDFkNzliMmMwZTA2YQ==",
       "status": 200,
       "method": "GET",
       "resource_type": "xhr",
