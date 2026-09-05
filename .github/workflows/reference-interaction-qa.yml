@@ -87,9 +87,9 @@ jobs:
           base=Path('labs/references/motion-primitives/evidence/interaction')
           capture=json.loads((base/'interaction-capture.json').read_text())
           report=json.loads((base/'interaction-fidelity.json').read_text())
-          assert capture.get('version')=='2.0', f"unexpected interaction capture protocol {capture.get('version')}"
-          assert report.get('version')=='2.0', f"unexpected interaction report protocol {report.get('version')}"
-          print('INTERACTION_PROTOCOL_V2_OK', report['status'], report['minimum_score'])
+          assert capture.get('version')=='3.0', f"unexpected interaction capture protocol {capture.get('version')}"
+          assert report.get('version')=='3.0', f"unexpected interaction report protocol {report.get('version')}"
+          print('INTERACTION_PROTOCOL_V3_OK', report['status'], report['minimum_score'])
           PY
 
       - name: Persist independent motion state
@@ -100,7 +100,7 @@ jobs:
           from pathlib import Path
           ref=Path('labs/references/motion-primitives')
           report=json.loads((ref/'evidence/interaction/interaction-fidelity.json').read_text())
-          assert report.get('version')=='2.0'
+          assert report.get('version')=='3.0'
           manifest_path=ref/'capture-manifest.json'
           manifest=json.loads(manifest_path.read_text())
           status=report['status']
@@ -109,31 +109,27 @@ jobs:
               verified.extend([
                   f"{vp['viewport']}:closed",
                   f"{vp['viewport']}:open",
-                  f"{vp['viewport']}:trajectory",
+                  f"{vp['viewport']}:spatial-trajectory",
                   f"{vp['viewport']}:escape-close",
+                  f"{vp['viewport']}:animation-signature",
               ])
           manifest['fidelity']['motion_interaction']={
               'status':status,
               'states_verified':verified if status=='pass' else [],
               'minimum_score':report['minimum_score'],
-              'protocol':'2.0',
-              'method':'Independent active-page functional dialog/Escape contract + open-dialog visual/geometry fidelity + deterministic WAAPI morph trajectory + scoped animation signature.',
-              'notes':'Independent interaction gate; visual PASS is not used to infer this result. Interaction PASS does not imply asset self-containment or rights clearance.'
+              'protocol':'3.0',
+              'method':'Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + in-page rAF spatial morph path normalized by progress + scoped animation timing signature.',
+              'notes':'Spatial trajectory is phase-independent because Motion layout projection is JS-driven; scheduler timing is not conflated with path geometry. Timing/easing remains a separate required animation-signature gate. Interaction PASS does not imply asset self-containment or rights clearance.'
           }
-          # Do not mutate reconstruction.essential_origin_dependency here. The
-          # source-import control still has separately licensed/unknown remote demo
-          # media even when visual and interaction fidelity both pass.
           manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 
           registry_path=Path('labs/reference-harvester/reference-registry.json')
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
-          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'2.0'}
-          # Keep this as a reconstructed control while essential origin dependencies
-          # or mixed asset rights remain. Do not auto-promote to verified/pattern.
+          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'3.0'}
           item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=2.0','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=3.0','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
           PY
           node labs/reference-harvester/validate.mjs
 
@@ -151,9 +147,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # Privacy scrub can force-update this feature branch while the QA job is
-          # running. Snapshot only the interaction result, then replay that result
-          # onto the latest remote tree instead of rebasing generated artifacts.
           SNAP=/tmp/interaction-snapshot
           rm -rf "$SNAP"
           mkdir -p "$SNAP/evidence"
@@ -191,8 +184,6 @@ jobs:
           item['fidelity']['motion_interaction']=json.loads(Path('/tmp/interaction-snapshot/registry-motion.json').read_text())
           if item.get('fidelity',{}).get('visual',{}).get('status')=='pass':
               item['status']='reconstructed'
-          # Preserve essential_origin_dependency and provenance from the latest
-          # remote registry; interaction equivalence does not clear either.
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
           PY
 
