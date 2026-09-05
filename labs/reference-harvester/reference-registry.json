@@ -118,10 +118,17 @@
       },
       "provenance": {
         "rights_status": "mixed",
-        "note": "Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown."
+        "note": "Code is MIT at pinned upstream SHA; bundled public assets are path-relocated locally; remote demo media remains separately licensed/unknown. Network-isolation v1 failed; external dependency remains essential until resolved."
       },
       "live": "../labs/references/motion-primitives/",
-      "preview": "../labs/references/motion-primitives/"
+      "preview": "../labs/references/motion-primitives/",
+      "self_containment": {
+        "status": "fail",
+        "protocol": "network-isolation-v1",
+        "visual_score": 96.6271,
+        "interaction_status": "pass",
+        "evidence": "../labs/references/motion-primitives/evidence/isolation/self-containment.json"
+      }
     }
   ]
 }
