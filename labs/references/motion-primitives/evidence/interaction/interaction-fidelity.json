@@ -1,16 +1,18 @@
 {
-  "version": "3.0",
+  "version": "3.1",
   "reference_id": "motion-primitives",
-  "scenario": "EB27 MorphingDialog runtime spatial trajectory + scoped animation signature + active-page open/Escape functional test",
+  "scenario": "EB27 MorphingDialog runtime spatial/temporal trajectory + live scoped animation signature + active-page open/Escape functional test",
   "policy": {
     "dialog_visual_min": 98.0,
     "open_geometry_min": 98.0,
     "spatial_trajectory_min": 98.0,
+    "runtime_timing_curve_min": 98.0,
     "functional_required": true,
+    "interaction_animation_signature_measured_required": true,
     "interaction_animation_signature_match_required": true
   },
-  "minimum_score": 99.6353,
-  "status": "pass",
+  "minimum_score": 91.711,
+  "status": "fail",
   "viewports": [
     {
       "viewport": "desktop",
@@ -41,68 +43,133 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.6353,
-        "max_normalized_geometry_error": 0.003647,
-        "basis": "spatial progress milestones; scheduler phase excluded; timing/easing verified by scoped animation signature",
+        "score": 99.7685,
+        "max_normalized_geometry_error": 0.002315,
+        "basis": "spatial progress milestones; scheduler phase excluded",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 3.406099899115765e-08,
-            "image_error": 0.000106969851502375,
-            "trigger_error": 7.546921077998074e-08,
-            "baseline_t": 4.182,
-            "local_t": 3.047,
+            "dialog_error": 0.0022659558203529033,
+            "image_error": 0.0023150381345149323,
+            "trigger_error": 0.0022658880035126257,
+            "baseline_t": 0.0,
+            "local_t": 7.026,
             "presence_match": true
           },
           {
             "progress": 0.25,
-            "dialog_error": 2.2197436501237967e-08,
-            "image_error": 0.0009630325665990035,
-            "trigger_error": 1.7302349925153572e-08,
-            "baseline_t": 22.166,
-            "local_t": 15.639,
+            "dialog_error": 1.1711856492032287e-08,
+            "image_error": 0.0007599569109179861,
+            "trigger_error": 2.884253818693752e-08,
+            "baseline_t": 17.058,
+            "local_t": 22.577,
             "presence_match": true
           },
           {
             "progress": 0.5,
-            "dialog_error": 1.643533988410834e-08,
-            "image_error": 0.0006614814608809638,
-            "trigger_error": 1.9329527592364885e-08,
-            "baseline_t": 40.635,
-            "local_t": 37.372,
+            "dialog_error": 2.2983294043241484e-08,
+            "image_error": 0.0012135929076871814,
+            "trigger_error": 2.8708649403420673e-08,
+            "baseline_t": 42.369,
+            "local_t": 41.049,
             "presence_match": true
           },
           {
             "progress": 0.75,
-            "dialog_error": 3.371200364199467e-08,
-            "image_error": 0.0036474984930165355,
-            "trigger_error": 1.1731564414832166e-07,
-            "baseline_t": 77.415,
-            "local_t": 63.42,
+            "dialog_error": 3.2149404284432924e-08,
+            "image_error": 0.0017994086617642323,
+            "trigger_error": 5.3307465779855394e-08,
+            "baseline_t": 62.69,
+            "local_t": 65.924,
             "presence_match": true
           },
           {
             "progress": 0.9,
-            "dialog_error": 7.206962848727016e-09,
-            "image_error": 0.00011463094986696533,
-            "trigger_error": 7.155662574278823e-08,
-            "baseline_t": 99.483,
-            "local_t": 88.228,
+            "dialog_error": 2.2181827574740966e-08,
+            "image_error": 4.502392799723667e-08,
+            "trigger_error": 7.801982519595185e-08,
+            "baseline_t": 93.223,
+            "local_t": 97.133,
+            "presence_match": true
+          }
+        ]
+      },
+      "timing_curve": {
+        "score": 92.7228,
+        "max_progress_error": 0.072772,
+        "basis": "runtime morph progress versus elapsed time from first dialog frame",
+        "samples": [
+          {
+            "t_ms": 16.7,
+            "baseline_progress": 0.246937,
+            "local_progress": 0.174165,
+            "progress_error": 0.072772,
+            "presence_match": true
+          },
+          {
+            "t_ms": 33.3,
+            "baseline_progress": 0.3888,
+            "local_progress": 0.388364,
+            "progress_error": 0.000436,
+            "presence_match": true
+          },
+          {
+            "t_ms": 50.0,
+            "baseline_progress": 0.59388,
+            "local_progress": 0.629134,
+            "progress_error": 0.035254,
+            "presence_match": true
+          },
+          {
+            "t_ms": 75.0,
+            "baseline_progress": 0.841071,
+            "local_progress": 0.799517,
+            "progress_error": 0.041554,
+            "presence_match": true
+          },
+          {
+            "t_ms": 100.0,
+            "baseline_progress": 0.911013,
+            "local_progress": 0.911713,
+            "progress_error": 0.000701,
+            "presence_match": true
+          },
+          {
+            "t_ms": 150.0,
+            "baseline_progress": 0.985778,
+            "local_progress": 0.984597,
+            "progress_error": 0.001181,
+            "presence_match": true
+          },
+          {
+            "t_ms": 200.0,
+            "baseline_progress": 0.99836,
+            "local_progress": 0.998115,
+            "progress_error": 0.000245,
+            "presence_match": true
+          },
+          {
+            "t_ms": 250.0,
+            "baseline_progress": 1.0,
+            "local_progress": 1.0,
+            "progress_error": 0.0,
             "presence_match": true
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 13.3,
-        "gate": "animation_signature"
+        "click_to_dialog_delta_ms": 0.5
       },
       "animation_signature": {
+        "measured": true,
         "match": true,
-        "baseline_count": 0,
-        "local_count": 0
+        "baseline_count": 2,
+        "local_count": 2,
+        "baseline_capture_t_ms": 0,
+        "local_capture_t_ms": 0
       },
-      "minimum_score": 99.6353,
-      "status": "pass"
+      "minimum_score": 92.7228,
+      "status": "fail"
     },
     {
       "viewport": "mobile",
@@ -133,68 +200,133 @@
         "max_normalized_error": 0.0
       },
       "trajectory": {
-        "score": 99.9421,
-        "max_normalized_geometry_error": 0.000579,
-        "basis": "spatial progress milestones; scheduler phase excluded; timing/easing verified by scoped animation signature",
+        "score": 99.9314,
+        "max_normalized_geometry_error": 0.000686,
+        "basis": "spatial progress milestones; scheduler phase excluded",
         "milestones": [
           {
             "progress": 0.1,
-            "dialog_error": 1.4124787246094573e-08,
-            "image_error": 0.00021726893354913536,
-            "trigger_error": 4.054751183246434e-08,
-            "baseline_t": 5.008,
-            "local_t": 2.517,
+            "dialog_error": 1.6442917081477413e-08,
+            "image_error": 3.7561494509721286e-05,
+            "trigger_error": 3.580385183066985e-08,
+            "baseline_t": 12.497,
+            "local_t": 5.277,
             "presence_match": true
           },
           {
             "progress": 0.25,
-            "dialog_error": 2.078851005608675e-08,
-            "image_error": 0.0005785022323428724,
-            "trigger_error": 1.048408014762222e-07,
-            "baseline_t": 22.162,
-            "local_t": 16.615,
+            "dialog_error": 4.811898196171504e-08,
+            "image_error": 0.0005340356538256746,
+            "trigger_error": 5.1687678743718786e-08,
+            "baseline_t": 26.676,
+            "local_t": 20.971,
             "presence_match": true
           },
           {
             "progress": 0.5,
-            "dialog_error": 1.9464061292680884e-08,
-            "image_error": 0.0001730723640970619,
-            "trigger_error": 1.9464061292680884e-08,
-            "baseline_t": 41.795,
-            "local_t": 36.989,
+            "dialog_error": 1.122741738212286e-08,
+            "image_error": 0.0006859489508855311,
+            "trigger_error": 2.871271601311082e-08,
+            "baseline_t": 49.263,
+            "local_t": 42.053,
             "presence_match": true
           },
           {
             "progress": 0.75,
-            "dialog_error": 2.9430943926947805e-08,
-            "image_error": 0.0002652504412410815,
-            "trigger_error": 2.9430943926947805e-08,
-            "baseline_t": 73.465,
-            "local_t": 65.118,
+            "dialog_error": 6.836841868253265e-08,
+            "image_error": 5.108580187250202e-08,
+            "trigger_error": 6.836841868253265e-08,
+            "baseline_t": 77.412,
+            "local_t": 70.388,
             "presence_match": true
           },
           {
             "progress": 0.9,
-            "dialog_error": 8.045992978203196e-08,
-            "image_error": 5.281648572736015e-08,
-            "trigger_error": 8.250719047207041e-08,
-            "baseline_t": 104.678,
-            "local_t": 96.61,
+            "dialog_error": 7.172416397298156e-08,
+            "image_error": 5.95505606585133e-06,
+            "trigger_error": 6.082235484264414e-08,
+            "baseline_t": 109.599,
+            "local_t": 101.171,
+            "presence_match": true
+          }
+        ]
+      },
+      "timing_curve": {
+        "score": 91.711,
+        "max_progress_error": 0.08289,
+        "basis": "runtime morph progress versus elapsed time from first dialog frame",
+        "samples": [
+          {
+            "t_ms": 16.7,
+            "baseline_progress": 0.115245,
+            "local_progress": 0.198136,
+            "progress_error": 0.08289,
+            "presence_match": true
+          },
+          {
+            "t_ms": 33.3,
+            "baseline_progress": 0.339475,
+            "local_progress": 0.400754,
+            "progress_error": 0.061278,
+            "presence_match": true
+          },
+          {
+            "t_ms": 50.0,
+            "baseline_progress": 0.507412,
+            "local_progress": 0.590022,
+            "progress_error": 0.082611,
+            "presence_match": true
+          },
+          {
+            "t_ms": 75.0,
+            "baseline_progress": 0.732641,
+            "local_progress": 0.77826,
+            "progress_error": 0.045619,
+            "presence_match": true
+          },
+          {
+            "t_ms": 100.0,
+            "baseline_progress": 0.869532,
+            "local_progress": 0.896964,
+            "progress_error": 0.027432,
+            "presence_match": true
+          },
+          {
+            "t_ms": 150.0,
+            "baseline_progress": 0.974463,
+            "local_progress": 0.980862,
+            "progress_error": 0.006399,
+            "presence_match": true
+          },
+          {
+            "t_ms": 200.0,
+            "baseline_progress": 0.996413,
+            "local_progress": 0.997498,
+            "progress_error": 0.001086,
+            "presence_match": true
+          },
+          {
+            "t_ms": 250.0,
+            "baseline_progress": 0.999813,
+            "local_progress": 1.0,
+            "progress_error": 0.000187,
             "presence_match": true
           }
         ]
       },
       "timing_diagnostic": {
-        "click_to_dialog_delta_ms": 8.2,
-        "gate": "animation_signature"
+        "click_to_dialog_delta_ms": 7.1
       },
       "animation_signature": {
+        "measured": true,
         "match": true,
-        "baseline_count": 0,
-        "local_count": 0
+        "baseline_count": 2,
+        "local_count": 2,
+        "baseline_capture_t_ms": 0,
+        "local_capture_t_ms": 0
       },
-      "minimum_score": 99.9421,
-      "status": "pass"
+      "minimum_score": 91.711,
+      "status": "fail"
     }
   ]
 }
