@@ -87,17 +87,21 @@ jobs:
           base=Path('labs/references/motion-primitives/evidence/interaction')
           capture=json.loads((base/'interaction-capture.json').read_text())
           report=json.loads((base/'interaction-fidelity.json').read_text())
-          assert capture.get('version')=='3.1', f"unexpected interaction capture protocol {capture.get('version')}"
-          assert report.get('version')=='3.2', f"unexpected interaction report protocol {report.get('version')}"
-          assert report.get('capture_protocol')=='3.1'
+          assert capture.get('version')=='3.3', f"unexpected interaction capture protocol {capture.get('version')}"
+          assert capture.get('runtime_trial_count',0)>=3, 'interaction capture requires >=3 runtime trials'
+          assert report.get('version')=='3.3', f"unexpected interaction report protocol {report.get('version')}"
+          assert report.get('capture_protocol')=='3.3'
           for vp in report['viewports']:
               sig=vp['animation_signature']
               timing=vp['timing_curve']
+              assert vp.get('runtime_trial_count',0)>=3, f"{vp['viewport']}: insufficient runtime trials"
               assert sig.get('measured') is True, f"{vp['viewport']}: animation signature not measured"
-              assert sig.get('baseline_count',0)>0 and sig.get('local_count',0)>0, f"{vp['viewport']}: empty animation signature"
+              assert all(x>0 for x in sig.get('baseline_counts',[])), f"{vp['viewport']}: empty baseline animation signature"
+              assert all(x>0 for x in sig.get('local_counts',[])), f"{vp['viewport']}: empty local animation signature"
               assert timing.get('measured') is True, f"{vp['viewport']}: timing curve not measured"
+              assert timing.get('trial_count',0)>=3, f"{vp['viewport']}: timing curve lacks 3 trials"
               assert timing.get('phase_within_budget') is True, f"{vp['viewport']}: rAF phase offset exceeds one-frame budget"
-          print('INTERACTION_PROTOCOL_V3_2_OK', report['status'], report['minimum_score'])
+          print('INTERACTION_PROTOCOL_V3_3_OK', report['status'], report['minimum_score'])
           PY
 
       - name: Persist independent motion state
@@ -108,7 +112,7 @@ jobs:
           from pathlib import Path
           ref=Path('labs/references/motion-primitives')
           report=json.loads((ref/'evidence/interaction/interaction-fidelity.json').read_text())
-          assert report.get('version')=='3.2'
+          assert report.get('version')=='3.3'
           manifest_path=ref/'capture-manifest.json'
           manifest=json.loads(manifest_path.read_text())
           status=report['status']
@@ -117,29 +121,29 @@ jobs:
               verified.extend([
                   f"{vp['viewport']}:closed",
                   f"{vp['viewport']}:open",
-                  f"{vp['viewport']}:spatial-trajectory",
-                  f"{vp['viewport']}:phase-aligned-runtime-timing",
+                  f"{vp['viewport']}:3-trial-spatial-trajectory",
+                  f"{vp['viewport']}:3-trial-phase-aligned-runtime-timing",
                   f"{vp['viewport']}:escape-close",
-                  f"{vp['viewport']}:animation-signature",
+                  f"{vp['viewport']}:3-trial-animation-signature",
               ])
           manifest['fidelity']['motion_interaction']={
               'status':status,
               'states_verified':verified if status=='pass' else [],
               'minimum_score':report['minimum_score'],
-              'protocol':'3.2',
-              'capture_protocol':'3.1',
-              'method':'Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + in-page rAF spatial morph path + same-progress timing curve with a bounded one-frame phase normalization + live non-empty scoped animation timing signature.',
-              'notes':'The timing gate removes only one constant rAF phase offset caused by independently scheduled pages; the offset must remain within one 60 Hz frame and the residual timing/easing curve must still score >=98. Empty animation signatures are invalid evidence. Interaction PASS does not imply asset self-containment or rights clearance.'
+              'protocol':'3.3',
+              'capture_protocol':'3.3',
+              'method':'Independent active-page dialog/Escape contract + open-dialog visual/geometry fidelity + 3 independent rAF trials per side; spatial errors and same-progress crossing times use median aggregation; one bounded one-frame phase normalization; live non-empty animation signatures required in every trial.',
+              'notes':'Gate remains >=98. Multi-trial median removes one-frame scheduler outliers without relaxing the threshold. The phase offset must remain within one 60 Hz frame, residual timing/easing must still score >=98, and all trial signatures must be non-empty and match. Interaction PASS does not imply asset self-containment or rights clearance.'
           }
           manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 
           registry_path=Path('labs/reference-harvester/reference-registry.json')
           registry=json.loads(registry_path.read_text())
           item=next(x for x in registry['references'] if x['id']=='motion-primitives')
-          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'3.2'}
+          item['fidelity']['motion_interaction']={'status':status,'score':report['minimum_score'],'protocol':'3.3'}
           item['status']='reconstructed' if item['fidelity']['visual']['status']=='pass' else item['status']
           registry_path.write_text(json.dumps(registry,indent=2)+'\n')
-          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=3.2','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
+          print('INTERACTION_GATE_RESULT',status,report['minimum_score'],'protocol=3.3','overall_status',item['status'],'origin_dependency',item.get('essential_origin_dependency'))
           PY
           node labs/reference-harvester/validate.mjs
 
