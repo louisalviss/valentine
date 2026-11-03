@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f9f5eb">
+<meta name="description" content="A bold editorial design exploration for the SiteOps AI review-first operator. Sample data only; no audit is running.">
+<title>SiteOps AI — The evidence desk</title>
+<link rel="stylesheet" href="./site.css">
+<script src="./site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#desk">Skip to issue desk</a>
+<div class="utility"><a class="brand" href="#top"><span class="brand-mark">S<span>/</span></span><span>SiteOps<strong>AI</strong></span></a><span class="utility-label">FIELD NOTES / WEB OPERATIONS</span><button class="shortcut" type="button" id="open-search" aria-haspopup="dialog">Search findings <kbd>⌘ K</kbd></button></div>
+<main id="top">
+<section class="masthead" aria-labelledby="main-title">
+ <div class="mast-meta"><span>NO. 001 / THE OPERATING DESK</span><span>DESIGN EXPERIMENT · SAMPLE CONTENT</span></div>
+ <div class="mast-hero"><div><p class="lead-in">Inspect → Decide → Approve</p><h1 id="main-title">EVERY<br>ISSUE.<br><em>IN FOCUS.</em></h1></div><div class="mast-side"><div class="seal" aria-hidden="true">S<span>✓</span></div><p>Stop guessing what to fix next. Turn performance, SEO, content and maintenance findings into decisions you can review.</p><a href="#desk" class="jump">EXPLORE THE REVIEW DESK <span aria-hidden="true">↘</span></a></div></div>
+ <div class="mast-foot"><span>AN EVIDENCE-FIRST WORKSPACE</span><span>NO LIVE WEBSITE CONNECTED</span></div>
+</section>
+<section class="desk" id="desk" aria-labelledby="desk-title">
+ <div class="desk-head"><div><span class="section-index">01 / TRIAGE</span><h2 id="desk-title">What needs a decision?</h2><p>Four fictional findings to demonstrate the review workflow. Nothing here runs against a real website.</p></div><div class="control-box"><span class="live-indicator" aria-hidden="true"></span><strong>Sample workspace</strong><small>Read-only preview</small></div></div>
+ <div class="desk-toolbar"><div class="filter-set" role="group" aria-label="Filter sample findings"><button class="filter active" data-filter="all" aria-pressed="true">All <span>04</span></button><button class="filter" data-filter="performance" aria-pressed="false">Speed</button><button class="filter" data-filter="seo" aria-pressed="false">SEO</button><button class="filter" data-filter="content" aria-pressed="false">Content</button><button class="filter" data-filter="maintenance" aria-pressed="false">Maintenance</button></div><button type="button" class="find-action" id="open-search-secondary">Find a task <span>⌘ K</span></button></div>
+ <div class="triage-board">
+  <div class="issue-column">
+   <div class="column-top"><span>REVIEW QUEUE</span><span id="visible-count" aria-live="polite">4 ITEMS</span></div>
+   <div class="issue-list" id="issue-list" role="group" aria-label="Choose a sample issue">
+    <button class="issue selected" type="button" data-issue="asset" data-category="performance" aria-pressed="true"><span class="issue-meta"><span class="issue-id">PERF–001</span><span class="issue-tag urgent">CHECK FIRST</span></span><strong>Hero image takes too much work to load</strong><span class="issue-bottom"><span>Performance</span><span aria-hidden="true">↗</span></span></button>
+    <button class="issue" type="button" data-issue="links" data-category="seo" aria-pressed="false"><span class="issue-meta"><span class="issue-id">SEO–002</span><span class="issue-tag">REVIEW</span></span><strong>Service page is hard to discover</strong><span class="issue-bottom"><span>Technical SEO</span><span aria-hidden="true">↗</span></span></button>
+    <button class="issue" type="button" data-issue="copy" data-category="content" aria-pressed="false"><span class="issue-meta"><span class="issue-id">COPY–003</span><span class="issue-tag">REVIEW</span></span><strong>Service description is out of date</strong><span class="issue-bottom"><span>Content</span><span aria-hidden="true">↗</span></span></button>
+    <button class="issue" type="button" data-issue="plugins" data-category="maintenance" aria-pressed="false"><span class="issue-meta"><span class="issue-id">OPS–004</span><span class="issue-tag">REVIEW</span></span><strong>Update needs a compatibility check</strong><span class="issue-bottom"><span>Maintenance</span><span aria-hidden="true">↗</span></span></button>
+   </div>
+   <div class="queue-footer"><span>FILTERED RESULTS ARE LOCAL</span><span>↴ SELECT A FINDING</span></div>
+  </div>
+  <article class="evidence" id="evidence" aria-live="polite" aria-atomic="true">
+   <div class="column-top"><span>EVIDENCE SHEET</span><span>ILLUSTRATIVE / NOT VERIFIED</span></div>
+   <div class="evidence-main"><p class="evidence-overline" id="detail-code">PERFORMANCE / PERF–001</p><h3 id="detail-title">Hero image takes too much work to load</h3><p class="detail-summary" id="detail-summary">A large first-screen asset could delay the page. The sample suggests checking delivery before assuming a code rewrite is needed.</p>
+    <div class="detail-strip"><div><span class="label">EVIDENCE STATUS</span><strong>Unverified example</strong></div><div><span class="label">NEXT STEP</span><strong id="detail-next-short">Inspect asset delivery</strong></div></div>
+    <div class="evidence-block"><div class="block-head"><span>01</span><strong>WHY THIS MATTERS</strong></div><p id="detail-why">Visitors see the hero first. Asset weight can hurt how quickly the main content appears.</p></div>
+    <div class="evidence-block"><div class="block-head"><span>02</span><strong>RECOMMENDED REVIEW</strong></div><p id="detail-plan">Check file sizes, responsive sources, formats and caching. Estimate impact before preparing a proposed change.</p></div>
+   </div>
+  </article>
+  <aside class="decision" aria-label="Approval controls"><div class="column-top"><span>DECISION GATE</span><span>HUMAN FIRST</span></div><div class="decision-body">
+   <div class="stamp">NOT APPROVED<span>REVIEW REQUIRED</span></div>
+   <h3>A recommendation is not a deployment.</h3><p>No code is changed and no task is executed until a person approves real evidence.</p>
+   <div class="decision-record"><span>SELECTED RECORD</span><strong id="decision-id">PERF–001</strong><span id="decision-state">Pending human review</span></div>
+   <button type="button" class="review-btn" id="mark-review">Mark for review <span>↗</span></button>
+   <p class="hint" id="review-feedback" role="status">This only marks the local demo record. No backend action.</p>
+   <a class="method-link" href="#method">How approvals work <span aria-hidden="true">↓</span></a>
+  </div></aside>
+ </div>
+</section>
+<section class="method" id="method" aria-labelledby="method-title"><div class="method-copy"><span class="section-index">02 / METHOD</span><h2 id="method-title">NOTHING<br>SHIPS ON<br><em>A GUESS.</em></h2><p>Inspect before you propose. Review before you approve. Verify after any authorized change.</p></div><div class="method-steps"><div><span>01 / READ</span><strong>Inspect</strong><p>Understand the actual website and how it behaves.</p></div><div><span>02 / DECIDE</span><strong>Prioritize</strong><p>Separate important changes from decorative tweaks.</p></div><div><span>03 / PERMISSION</span><strong>Review</strong><p>Show the rationale and seek explicit approval.</p></div><div><span>04 / PROOF</span><strong>Verify</strong><p>Confirm the outcome after authorized work.</p></div></div></section>
+</main>
+<footer class="footer"><span>SiteOps AI / EVIDENCE DESK / CONCEPT ONLY</span><span>Design grammar: <a href="https://www.saasui.design/application/linear" rel="noopener noreferrer" target="_blank">SaaSUI / Linear</a> · <a href="https://www.saasui.design/blog/saas-search-command-palette-ux-patterns" rel="noopener noreferrer" target="_blank">Command palette patterns</a></span></footer>
+<div class="dialog-backdrop" id="search-dialog" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="dialog-head"><label for="search-input" id="dialog-title">SEARCH THE REVIEW QUEUE</label><button type="button" id="close-search" aria-label="Close search">×</button></div><input id="search-input" type="search" autocomplete="off" placeholder="Find an issue or category…" aria-controls="search-results"><div id="search-results" role="listbox" aria-label="Matching sample findings"></div><p class="dialog-foot">↑ ↓ move · Enter select · Esc close · sample records only</p></div></div>
+</body>
+</html>
