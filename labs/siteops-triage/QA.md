@@ -57,6 +57,14 @@ Ran pinned `impeccable@4.8.0 detect --json` on four exact source assets at commi
 
 Remaining nine: `tiny-text` 5 warnings, `numbered-section-labels` 2 advisory, `cramped-padding` 1 warning and `cream-palette` 1 warning. Not a proof of WCAG compliance or visual preference. No rule suppressions. Previous B's detector score is not directly part of this A→B comparison.
 
+## User visual choice — 2026-11-03 (VN)
+
+The user reviewed the rendered alternatives and accepted **the latest B / Evidence Desk** as the preferred SiteOps AI design direction for further work. This is a qualitative user selection, **not** a blinded panel study, production approval or a claim that outstanding Impeccable/WCAG/R2 QA gates passed.
+
+Canonical durable decision has been merged into the **existing Dropbox EXPLORE alias**, not into a new workflow:
+`/Apps/remotely-save/AI/AI-MEMORY/FLOWS/Website/A-B Design Library & Testing Flow.md`
+at revision `0165f61fb8df65d000000034da19313`, independently fetched and verified. The implementation and acceptance authority remains `louisalviss/ui-ab-copy/docs/FLOW.md`.
+
 ## Live links
 
 - A: https://louisalviss.github.io/valentine/directions/flow-ab/no-flow/
