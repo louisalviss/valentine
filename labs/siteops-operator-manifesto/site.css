@@ -89,7 +89,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #2a1d17;outline-offset:4p
 .process-item h3{font-size:clamp(38px,5vw,80px);line-height:1.05;letter-spacing:-.065em;font-weight:500;margin:0}
 .process-item p{font-size:16px;color:#ddd5ca;margin:0;max-width:380px}
 .end{background:var(--forest);color:var(--paper);padding:90px clamp(18px,5vw,80px);min-height:78svh;display:flex;flex-direction:column;justify-content:space-between;gap:55px}
-.end h2{font-size:clamp(60px,10.5vw,165px);font-weight:800;letter-spacing:-.075em;line-height:.96;margin:0;max-width:1250px}
+.end h2{font-size:clamp(60px,10.5vw,165px);font-weight:800;letter-spacing:-.055em;line-height:.96;margin:0;max-width:1250px}
 .end-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 .end-bottom p{font-size:18px;max-width:490px;margin:0}
 .end-bottom a{display:inline-flex;justify-content:center;align-items:center;min-height:54px;padding:13px 25px;background:var(--paper);color:var(--ink);font-weight:600;text-decoration:none}
@@ -114,7 +114,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #2a1d17;outline-offset:4p
  .hero-center{padding:0 18px;margin-top:-12px}
  .hero-line{font-size:clamp(45px,12vw,76px);letter-spacing:-.075em}
  .hero-line.second{padding-left:0}
- .edge-note{top:calc(46% - 26px);right:18px;font-size:11px}
+ .edge-note{top:calc(46% - 26px);right:18px;font-size:13px}
  .hero-bottom{left:18px;right:18px;bottom:36px;display:block}
  .hero-bottom p{font-size:17px;max-width:330px}
  .hero-bottom a{margin-top:30px;align-items:flex-start}
@@ -129,7 +129,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #2a1d17;outline-offset:4p
  .rail-foot{margin:0;border:0;padding:0;font-size:12px}
  .desk-title{padding:18px 15px}
  .desk-title h3{font-size:21px}
- .desk-title .sample{font-size:11px}
+ .desk-title .sample{font-size:13px}
  .queue-panel{padding:10px 12px}
  .queue-row{grid-template-columns:75px minmax(0,1fr);gap:9px;padding:15px 4px}
  .queue-row .row-kind{font-size:12px}
