@@ -4,7 +4,7 @@
  SiteOps AI — Unslop polish canary
  Design direction: precise, accountable, calm.
  Product world: an operations review desk, not a generic AI dashboard.
- Signature: understated audit rail on review items.
+ Signature: subtle high-priority queue outline.
  Source: https://github.com/heydamir/unslop (CC BY 4.0, Damir Sokolovsky)
  Existing content, claims, links and section order intentionally preserved.
 */
@@ -62,9 +62,9 @@ a:focus-visible{outline:3px solid #578d2e;outline-offset:4px}
 .item{
   grid-template-columns:94px minmax(0,1fr) 66px;
   min-height:66px;gap:12px;border-radius:8px;padding:12px;
-  border:1px solid #d3ded2;border-left:3px solid #c2cfbf;
+  border:1px solid #d3ded2;
 }
-.item:first-child{border-left-color:#78a94b}
+.item:first-child{border-color:#9bbc93}
 .item small{
   font-size:11px;text-transform:none;letter-spacing:0;
   color:#4b6250;line-height:1.35
@@ -90,11 +90,11 @@ a:focus-visible{outline:3px solid #578d2e;outline-offset:4px}
 .feature small{font-size:12px;text-transform:none;letter-spacing:0;color:#526557}
 .feature h3{font-size:27px;line-height:1.12;font-weight:550}
 .feature p{font-size:15px;line-height:1.55}
-.workflow{padding:80px 0}
+.workflow{padding:80px 16px}
 .workflow h2,.final h2{font-size:clamp(40px,4.5vw,58px);font-weight:550;line-height:1.03}
 .workflow p{font-size:16px;line-height:1.65;color:#c1cdc2}
 .steps{margin-top:40px}
-.step{padding-top:24px}
+.steps .step,.steps .step:not(:first-child){padding:24px 18px 20px}
 .step b{font-size:12px}
 .step strong{font-size:20px;font-weight:600;margin:36px 0 8px}
 .step span{font-size:14px;line-height:1.55;color:#c1cdc2}
