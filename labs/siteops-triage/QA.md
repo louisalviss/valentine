@@ -72,6 +72,21 @@ at revision `0165f61fb8df65d000000034da19313`, independently fetched and verifie
 - Compare original A/B: https://raw.githack.com/louisalviss/valentine/experiment/siteops-evidence-triage-20261103/labs/siteops-triage/compare.html
 - Compare old B/new B: https://raw.githack.com/louisalviss/valentine/experiment/siteops-evidence-triage-20261103/labs/siteops-triage/compare-previous.html
 
+## 2026-11-04 — integrated EXPLORE technical canary
+
+The previously accepted Evidence Desk UI remains the **selected design direction**. A new, read-only pipeline canary was executed using the GitHub control A and this B's **exact source blobs**, served temporarily on `127.0.0.1`; this is *not* a production origin test.
+
+- Implementation owner: `louisalviss/ui-ab-copy/docs/FLOW.md`, EXPLORE toolchain Draft PR #6. No separate Website flow.
+- Chromium 156 + Playwright 1.55.0 with real browser sandbox, non-root `uiab`, 390×844 / 768×1024 / 1440×900: **12 screenshot receipts**, control/browser proof `CONTROL_BROWSER_TECHNICAL_PASS`, blockers empty.
+- Impeccable pinned 4.8.0 detector on paired actual source: **A=43, B=2**, both valid JSON arrays. This supersedes the older B=9 **as a new source-only measurement**, not a human-preference claim.
+- Iris 0.4.1 independently captured 4 mobile/desktop PNGs; byte hashes and viewport dimensions verified. No CLONE similarity threshold was incorrectly applied.
+- Existing R2/D1 owner stored a ZIP containing the screenshot and JSON proof set. **R2 GET/readback SHA/bytes MATCH; D1 checkpoint readback success**, phase `qa-only-captured`.
+  - R2 key: `core/ui-ab-copy/siteops-evidence-desk-20261104/siteops-explore-qa-evidence-b5ab163d.zip`
+  - Bytes: `2342691`
+  - SHA-256: `1e575e08c3b58d1138d21e5d8f7a726286c0c68eb87e89845a350f673b7846fc`
+  - Control proof SHA-256: `964ca3ea74f3b7e52cd437480432df3727a3d0893b3008b2c33b8308083fdc4f`.
+- **Scope** `QA_ONLY_LOCAL_SOURCE`; blind human comparison, exhaustive accessibility audit, production deployment verification and real traffic A/B are still separate gates. The selected B does not ship automatically.
+
 ## Pending gates
 
 No blind user aesthetic judgment, independent engine/Iris check, full WCAG keyboard/focus/assistive audit, real traffic A/B, actual audit backend, screenshots durably shipped to R2 or D1 readback. Keep PR Draft; do not deploy or merge to production without those checks and explicit authorization.
