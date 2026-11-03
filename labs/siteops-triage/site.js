@@ -46,7 +46,7 @@
   });
   function renderSearch(){
     const term=q(input.value);
-    searched=Object.keys(issues).filter(id=>{const v=issues[id];return q(v.title+" "+v.code+" "+v.id+" "+v.category).includes(term)});
+    searched=Object.keys(issues).filter(id=>{const v=issues[id];return q(v.title+" "+v.code+" "+v.id+" "+v.category+" "+id).includes(term)});
     searchIndex=0;
     results.replaceChildren();
     if(!searched.length){const empty=document.createElement("p");empty.className="no-results";empty.textContent="No matching sample findings.";results.append(empty);return}
