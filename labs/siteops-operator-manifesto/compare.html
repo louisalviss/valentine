@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SiteOps AI — So sánh thiết kế A/B trực tiếp</title>
+<meta name="description" content="So sánh trực tiếp SiteOps A SaaS control và SiteOps B Operator Manifesto cùng một nội dung sản phẩm.">
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}body{background:#121913;color:#f1f3ed;margin:0}
+header{position:sticky;top:0;z-index:10;background:#121913;padding:13px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid #344137}
+h1{font-size:17px;font-weight:650;margin:0}small{font-size:12px;color:#a9b7ab}
+nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+button,a{font:inherit}button{border:1px solid #728677;background:transparent;color:white;padding:10px 14px;min-height:44px;cursor:pointer;border-radius:7px}
+button[aria-pressed=true]{background:#d9ed8b;color:#162019;border-color:#d9ed8b}
+a{font-size:13px;color:#d9ed8b}
+.frames{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;min-height:calc(100dvh - 77px)}
+.panel{min-width:0;display:flex;flex-direction:column}
+.panel h2{font-size:13px;font-weight:500;color:#c5d1c6;margin:0 0 8px 4px}
+iframe{border:0;background:white;display:block;width:100%;height:calc(100dvh - 145px);min-height:600px}
+.note{font-size:12px;padding:8px 18px;color:#b3c0b7}
+@media(max-width:820px){
+ header{padding:12px}
+ h1{font-size:15px}
+ .frames{display:block;min-height:calc(100dvh - 130px)}
+ .panel{display:none}
+ body[data-mode=a] .panel.a,body[data-mode=b] .panel.b{display:flex}
+ iframe{height:calc(100dvh - 180px);min-height:550px}
+ .note{padding:7px 12px}
+}
+</style>
+</head>
+<body data-mode="b">
+<header>
+ <div><h1>SiteOps AI / A–B trực tiếp</h1><small>A: SaaS control · B: Operator manifesto</small></div>
+ <nav aria-label="Chọn giao diện">
+  <button type="button" data-choice="a" aria-pressed="false">Xem A</button>
+  <button type="button" data-choice="b" aria-pressed="true">Xem B</button>
+  <a href="./index.html" target="_blank" rel="noopener noreferrer">Mở B toàn màn hình</a>
+ </nav>
+</header>
+<div class="frames">
+ <section class="panel a"><h2>A / Bản gốc</h2><iframe title="A: giao diện gốc SiteOps AI" src="https://louisalviss.github.io/valentine/directions/flow-ab/no-flow/"></iframe></section>
+ <section class="panel b"><h2>B / Thiết kế mới với Taste Skill + Unslop</h2><iframe title="B: SiteOps AI Operator Manifesto" src="./index.html"></iframe></section>
+</div>
+<p class="note">Trên mobile, chọn A hoặc B ở thanh trên. Trên desktop, hai bản hiện cùng lúc. Đây là demo thiết kế, không chạy audit thật.</p>
+<script>
+const choices=[...document.querySelectorAll('[data-choice]')];
+choices.forEach(button=>button.addEventListener('click',()=>{
+ document.body.dataset.mode=button.dataset.choice;
+ choices.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+}));
+</script>
+</body>
+</html>
