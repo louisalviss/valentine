@@ -1,6 +1,6 @@
 /* SiteOps Evidence Desk — reference grammar from SaaSUI's Linear triage and command palette analysis.
    Original SiteOps layout; no copied code/assets, all records illustrative. */
-:root{--ink:#101010;--cream:#f9f6ee;--paper:#fffdf6;--orange:#ff6841;--orange-dark:#cf3d1d;--fog:#e9e7de;--line:#aaa89e;--muted:#595b57;--sage:#d9e2d5;--signal:#d4f66f;--dark:#171717}
+:root{--ink:#101010;--cream:#f9f6ee;--paper:#fffdf6;--orange:#ef542f;--orange-dark:#cf3d1d;--fog:#e9e7de;--line:#aaa89e;--muted:#595b57;--sage:#d9e2d5;--signal:#d4f66f;--dark:#171717}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.42 system-ui,-apple-system,"Segoe UI",sans-serif}button,a,input{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #2161db;outline-offset:3px}
 .skip{position:absolute;left:15px;top:-100px;background:white;padding:10px;z-index:100}.skip:focus{top:8px}
 .utility{display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--dark);color:white;padding:14px clamp(18px,4vw,65px);min-height:64px}
@@ -15,7 +15,7 @@
 .lead-in{margin:0 0 13px;font-size:15px;font-weight:650;letter-spacing:.04em}
 .masthead h1{font-size:clamp(76px,10.3vw,180px);line-height:.85;font-weight:900;letter-spacing:-.095em;margin:0}
 .masthead h1 em{font-style:normal;color:var(--cream);text-shadow:3px 3px 0 var(--ink);white-space:nowrap}
-.mast-side{align-self:end;display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-bottom:5px}.mast-side p{font-size:clamp(17px,1.5vw,21px);line-height:1.3;max-width:335px;margin:0;font-weight:550}
+.mast-side{align-self:end;display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-bottom:5px}.mast-side p{font-size:clamp(17px,1.5vw,21px);line-height:1.4;max-width:335px;margin:0;font-weight:550}
 .seal{width:110px;height:110px;border:3px solid var(--ink);border-radius:50%;display:flex;justify-content:center;align-items:center;transform:rotate(-14deg);font-size:50px;font-weight:900;letter-spacing:-.08em}
 .seal span{color:var(--cream);font-size:45px;margin-left:-6px}
 .jump{background:var(--ink);color:var(--cream);text-decoration:none;display:flex;gap:24px;align-items:center;justify-content:space-between;padding:13px 17px;font-size:13px;font-weight:750;min-height:48px}.jump span{font-size:22px}
