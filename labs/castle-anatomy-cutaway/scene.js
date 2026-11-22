@@ -8,15 +8,15 @@ let renderer;
 try{
   renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
   renderer.outputColorSpace=THREE.SRGBColorSpace;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.18;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.36;
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 }catch(e){loader.remove();document.getElementById('fallback').style.display='block';throw e}
 const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x0a1a28,.011);
 const camera=new THREE.PerspectiveCamera(36,1,.1,140);
 const world=new THREE.Group();scene.add(world);
-const hemisphere=new THREE.HemisphereLight(0xbad4e6,0x223041,2.15);scene.add(hemisphere);
-const key=new THREE.DirectionalLight(0xffe8cb,3.15);key.position.set(-12,20,14);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-23;key.shadow.camera.right=23;key.shadow.camera.top=23;key.shadow.camera.bottom=-23;scene.add(key);
-const rim=new THREE.DirectionalLight(0x8bb6e3,2.35);rim.position.set(11,12,-12);scene.add(rim);
+const hemisphere=new THREE.HemisphereLight(0xbad4e6,0x223041,3.15);scene.add(hemisphere);
+const key=new THREE.DirectionalLight(0xffe8cb,4.1);key.position.set(-12,20,14);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-23;key.shadow.camera.right=23;key.shadow.camera.top=23;key.shadow.camera.bottom=-23;scene.add(key);
+const rim=new THREE.DirectionalLight(0x8bb6e3,2.65);rim.position.set(11,12,-12);scene.add(rim);
 const fill=new THREE.DirectionalLight(0x6c90b7,1.15);fill.position.set(12,2,18);scene.add(fill);
 const warmA=new THREE.PointLight(0xffa64e,28,14,2);warmA.position.set(-1,5,1);world.add(warmA);
 const warmB=new THREE.PointLight(0xffc383,19,11,2);warmB.position.set(3,3,-.8);world.add(warmB);
@@ -119,6 +119,18 @@ function roof(g,x,y,z,w,d,height=.9){
  ];
  geom.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geom.computeVertexNormals();
  const q=mesh(g,geom,mat.slate,x,y,z);q.material.side=THREE.DoubleSide;
+ // Slate shingles are real overlapping 3D tiles (instanced to keep draw calls bounded).
+ const rows=10,cols=Math.max(8,Math.ceil(d/.22)),tileW=w/(rows*2),tileD=d/cols;
+ const tiles=new THREE.InstancedMesh(new THREE.BoxGeometry(tileW*1.18,.024,tileD*.96),mat.slate,rows*cols*2);
+ const dummy=new THREE.Object3D(),pitch=Math.atan2(height,w/2);
+ let tileIndex=0;
+ for(const side of [-1,1])for(let row=0;row<rows;row++)for(let j=0;j<cols;j++){
+   const u=(row+.5)/rows;
+   dummy.position.set(x+side*u*w/2,y+height*(1-u)+.035,z-d/2+(j+.5)*tileD);
+   dummy.rotation.set(0,0,-side*pitch);
+   dummy.updateMatrix();tiles.setMatrixAt(tileIndex++,dummy.matrix);
+ }
+ tiles.instanceMatrix.needsUpdate=true;tiles.castShadow=true;g.add(tiles);
  for(let k=0;k<3;k++){const zz=z+(k-1)*d/3;line(g,[x-w/2-.06,y-.03,zz],[x,y+height+.035,zz],new THREE.LineBasicMaterial({color:0x92a4b2,transparent:true,opacity:.45}));line(g,[x,y+height+.035,zz],[x+w/2+.06,y-.03,zz],new THREE.LineBasicMaterial({color:0x92a4b2,transparent:true,opacity:.45}))}
  for(let i=0;i<Math.max(5,Math.floor(d/.22));i++){
    const zz=z-d/2+(i+.5)*d/Math.max(5,Math.floor(d/.22));
@@ -235,6 +247,14 @@ for(let z of [-1.65,.2])for(let xx of [-2.1,2.1]){
 for(let x of [-2.1,2.1])for(let z of [-1.7,.15,.95]){B(palace,x*1.13,6.3,z,.34,2.2,.4,mat.stone);C(palace,x*1.13,7.52,z,.2,.2,.21,mat.brass,8)}
 ledge(palace,0,7.78,-.65,5.3,3.77);
 roof(palace,0,7.95,-.66,5.38,3.9,2.05);
+// Projecting side chapel gables and a front tracery balustrade.
+for(const xx of [-1.45,1.45]) {
+ B(palace,xx,7.35,1.12,1.65,1.25,1.5,mat.stone2);
+ roof(palace,xx,8.04,1.12,1.84,1.65,1.05);
+ windowG(palace,xx,7.3,1.93,.24,0,true);
+ for(const bx of [-.57,.57])C(palace,xx+bx,7.46,1.98,.075,.075,.74,mat.brass,10);
+}
+for(let ix=-2;ix<=2;ix++)B(palace,ix*.62,7.87,1.07,.18,.35,.18,mat.stone2);
 for(const x of [-1.8,1.8])for(const z of [-1.7,.4])turret(palace,x,z,.39,2.0,7.36);
 turret(palace,0,-.9,.64,3.3,8.1);
 const rose=new THREE.Group();rose.position.set(0,6.75,1.07);palace.add(rose);
@@ -298,7 +318,7 @@ size();addEventListener('resize',size);
 // iPhones can spend seconds compiling shaders; easing from the origin clips the castle.
 const mobileInitial=mobile();
 const firstView=new THREE.Vector3(mobileInitial?0:-3.1,5.25,0);
-camera.position.copy(new THREE.Vector3(17,12,20).normalize().multiplyScalar(mobileInitial?53:46).add(firstView));
+camera.position.copy(new THREE.Vector3(17,12,20).normalize().multiplyScalar(mobileInitial?47:38).add(firstView));
 camera.lookAt(firstView);
 let paused=false;addEventListener('visibilitychange',()=>paused=document.hidden);
 const origin=layers.map(g=>g.position.clone());
@@ -320,7 +340,7 @@ function animate(){
  if(!reduced)targetAngle+=dt*.013;
  world.rotation.y=angle;world.rotation.x=tilt;
  const m=mobile(),exp=ease((phase-2)/5),spread=m?1:1;
- const distance=m?53+exp*8:46+exp*7;
+ const distance=m?47+exp*10:38+exp*9;
  const targetX=m?0:-3.1,ty=5.25+exp*.6;
  const view=new THREE.Vector3(targetX,ty,0);
  const cameraTarget=new THREE.Vector3(17,12,20).normalize().multiplyScalar(distance).add(view);
