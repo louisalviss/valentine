@@ -220,6 +220,18 @@ B(palace,-2.42,6.2,-.65,.45,3.6,3.5,mat.stone);
 B(palace,2.42,6.2,-.65,.45,3.6,3.5,mat.stone);
 for(let x of [-1.6,-.75,.75,1.6])windowG(palace,x,6.4,1,.36,0,true);
 for(let x of [-1.75,0,1.75])windowG(palace,x,6.4,-2.28,.38,Math.PI,true);
+// The side elevations need actual gothic windows and projecting buttresses:
+for(const side of [-1,1]){
+ for(let z of [-1.5,-.6,.3]){
+  windowG(palace,side*2.67,6.34,z,.34,side*Math.PI/2,true);
+  B(palace,side*2.83,5.69,z+.45,.32,1.55,.3,mat.stone2);
+  C(palace,side*2.83,6.51,z+.45,.19,.19,.22,mat.brass,10);
+ }
+}
+for(let z of [-1.65,.2])for(let xx of [-2.1,2.1]){
+ B(palace,xx,7.76,z,.44,.18,.36,mat.brass);
+}
+
 for(let x of [-2.1,2.1])for(let z of [-1.7,.15,.95]){B(palace,x*1.13,6.3,z,.34,2.2,.4,mat.stone);C(palace,x*1.13,7.52,z,.2,.2,.21,mat.brass,8)}
 ledge(palace,0,7.78,-.65,5.3,3.77);
 roof(palace,0,7.95,-.66,5.38,3.9,2.05);
@@ -282,6 +294,12 @@ function size(){
  renderer.setPixelRatio(dpr);renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=mobile()?42:36;camera.updateProjectionMatrix();
 }
 size();addEventListener('resize',size);
+// Begin in the final framing on the very first WebGL frame. SwiftShader/older
+// iPhones can spend seconds compiling shaders; easing from the origin clips the castle.
+const mobileInitial=mobile();
+const firstView=new THREE.Vector3(mobileInitial?0:-3.1,5.25,0);
+camera.position.copy(new THREE.Vector3(17,12,20).normalize().multiplyScalar(mobileInitial?53:46).add(firstView));
+camera.lookAt(firstView);
 let paused=false;addEventListener('visibilitychange',()=>paused=document.hidden);
 const origin=layers.map(g=>g.position.clone());
 const clock=new THREE.Clock();
@@ -302,8 +320,8 @@ function animate(){
  if(!reduced)targetAngle+=dt*.013;
  world.rotation.y=angle;world.rotation.x=tilt;
  const m=mobile(),exp=ease((phase-2)/5),spread=m?1:1;
- const distance=m?35+exp*8:31+exp*9;
- const targetX=m?0:-2.0,ty=4.1+exp*1.25;
+ const distance=m?53+exp*8:46+exp*7;
+ const targetX=m?0:-3.1,ty=5.25+exp*.6;
  const view=new THREE.Vector3(targetX,ty,0);
  const cameraTarget=new THREE.Vector3(17,12,20).normalize().multiplyScalar(distance).add(view);
  camera.position.lerp(cameraTarget,Math.min(1,dt*3));
