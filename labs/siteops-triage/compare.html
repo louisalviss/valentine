@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SiteOps AI — A/B thiết kế tham chiếu SaaSUI</title>
+<style>
+*{box-sizing:border-box}html{background:#161616;color:white}body{font:14px system-ui,-apple-system,sans-serif;margin:0}header{position:sticky;top:0;background:#171717;z-index:10;border-bottom:2px solid #ff6841;padding:11px 15px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header strong{font-size:15px}header small{display:block;color:#c9c6bf;font-size:12px;margin-top:3px}
+nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}button{background:#2c2c2a;color:white;border:1px solid #85847c;font:inherit;padding:10px 14px;min-height:43px;cursor:pointer}button[aria-pressed=true]{background:#ff6841;color:#111;border-color:#ff6841;font-weight:700}a{color:#ffa98c;font-size:12px}
+main{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:10px}.panel{min-width:0}.panel h2{font-size:13px;font-weight:550;color:#dedbd6;margin:4px 0 9px}.panel iframe{width:100%;height:calc(100dvh - 136px);min-height:600px;border:0;background:white}.note{padding:0 14px 12px;color:#bdbab3;font-size:12px}
+@media(max-width:800px){header{padding:9px 11px}main{display:block;padding:7px}main .panel{display:none}body[data-active=a] .panel.a,body[data-active=b] .panel.b{display:block}.panel iframe{height:calc(100dvh - 196px);min-height:470px}button{padding:8px 10px;min-height:41px;font-size:13px}}
+</style>
+</head><body data-active="b"><header><div><strong>SiteOps AI / So sánh giao diện</strong><small>A — landing SaaS · B — editorial evidence desk</small></div><nav aria-label="Chọn giao diện"><button type="button" data-mode="a" aria-pressed="false">A · Bản gốc</button><button type="button" data-mode="b" aria-pressed="true">B · Mẫu mới</button><a href="./index.html" rel="noopener" target="_blank">Mở B toàn màn hình</a></nav></header>
+<main><section class="panel a"><h2>A / Commercial SaaS control</h2><iframe loading="eager" title="A — SiteOps AI original" src="https://louisalviss.github.io/valentine/directions/flow-ab/no-flow/"></iframe></section><section class="panel b"><h2>B / Evidence Desk — Linear-inspired triage</h2><iframe loading="eager" title="B — SiteOps AI Evidence Desk" src="./index.html"></iframe></section></main>
+<p class="note">Trên iPhone chọn A hoặc B ở thanh trên. Đây là demo visual, không có kết nối audit backend.</p>
+<script>for(const b of document.querySelectorAll("[data-mode]"))b.addEventListener("click",()=>{document.body.dataset.active=b.dataset.mode;document.querySelectorAll("[data-mode]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)))})</script>
+</body></html>
