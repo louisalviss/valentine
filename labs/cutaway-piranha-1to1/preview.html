@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f8f5"><title>Serrasal PX-7 — Cutaway 3D</title>
+<meta name="description" content="Serrasal PX-7: bản demo Cutaway nguyên gốc với video dự phòng và bản 3D tương tác.">
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4f8f5;color:#19312b}
+body{min-height:100svh;display:flex;flex-direction:column}
+header{padding:16px clamp(18px,4vw,52px);display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #dce6e0;background:#fff}
+.brand{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;letter-spacing:.12em}
+.mark{background:#31ad76;color:#fff;width:23px;height:23px;display:grid;place-items:center;border-radius:6px;font-weight:900}
+header a{font-size:12px;color:#31674e;text-decoration:none}
+main{flex:1;display:grid;grid-template-rows:auto 1fr auto}
+.heading{text-align:center;padding:17px 15px 8px}
+.heading small{font-size:11px;color:#369e72;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+h1{font-size:clamp(24px,3.1vw,41px);line-height:1.16;margin:9px auto 5px;letter-spacing:-.05em}
+.heading p{margin:0;color:#6e8279;font-size:12px}
+.viewer{position:relative;min-height:clamp(230px,58vh,800px);overflow:hidden;background:radial-gradient(ellipse at center,#fff 25%,#ecf7ee 100%);display:grid;place-items:center}
+.poster{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.poster:before{content:"";position:absolute;inset:0;background:url("./preview.jpg") center/contain no-repeat;filter:blur(10px);opacity:.22;transform:scale(1.2)}
+.poster video{width:100%;height:100%;max-height:780px;object-fit:contain;position:relative;display:block}
+#loading{position:absolute;inset:0;background:rgba(240,248,242,.94);display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:10px;z-index:3;padding:20px}
+#loading.active{display:flex}
+#loading strong{font-size:16px}
+#loading p{max-width:320px;font-size:13px;line-height:1.5;color:#5b7769}
+#demo-frame{display:none;position:absolute;inset:0;width:100%;height:100%;border:0;background:white}
+#demo-frame.active{display:block}
+#back{display:none}
+.actions{display:flex;align-items:center;justify-content:center;gap:11px;flex-wrap:wrap;padding:15px 18px 20px;background:#fff;border-top:1px solid #e3e9e5}
+button,.action{cursor:pointer;appearance:none;border:1px solid #2f9c6d;border-radius:7px;padding:12px 18px;background:#229e6b;color:#fff;font-size:13px;font-weight:700;text-decoration:none;line-height:1.15;min-height:43px}
+button.secondary,.action.secondary{background:#fff;color:#237b53}
+button:focus-visible,.action:focus-visible{outline:3px solid #a3dab4;outline-offset:3px}
+.note{text-align:center;font-size:11px;color:#648475;padding:0 18px 16px;background:#fff}
+footer{font-size:11px;color:#61776a;padding:15px 20px;text-align:center}
+footer a{color:#236644}
+@media(max-width:700px){
+header{padding:11px 14px}.brand{font-size:10px;letter-spacing:.03em}
+.heading{padding:15px 12px 9px}
+.heading h1{font-size:clamp(22px,6vw,31px)}
+.viewer{min-height:clamp(300px,51svh,650px)}
+.poster video{height:100%;width:100%;object-fit:contain}
+.actions{padding:11px 9px;gap:7px}
+button,.action{padding:10px 11px;font-size:12px}
+#demo-frame.active{height:min(100%,56.25vw);top:50%;transform:translateY(-50%)}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body><header><div class="brand"><span class="mark">C</span> SERRASAL PX-7 · CUTAWAY</div><a href="https://github.com/Nyxera0x/cutaway" rel="noopener noreferrer">MIT · Nguồn gốc</a></header>
+<main><section class="heading"><small>Original 3D mechanical cutaway</small><h1>Robotic Piranha, Taken Apart</h1><p>Bản nguồn giữ nguyên 100% · Tháo lắp từng bộ phận</p></section>
+<div class="viewer" id="viewer" aria-label="Trình xem mô hình 3D và animation">
+<div class="poster" id="poster"><video controls autoplay muted loop playsinline webkit-playsinline preload="auto" poster="./preview.jpg" id="preview"><source src="./preview.mp4" type="video/mp4"><img src="./preview.jpg" alt="Bản xem trước Serrasal Piranha"></video></div>
+<iframe id="demo-frame" title="Cutaway Piranha — demo 3D nguyên gốc" allow="fullscreen"></iframe>
+<div id="loading" role="status" aria-live="polite"><strong>Đang tải mô hình 3D…</strong><p id="status">Nếu thiết bị không hỗ trợ WebGL, animation dự phòng luôn có sẵn.</p></div>
+</div>
+<div class="actions"><button id="play-video">Phát video</button><a class="action" href="./mobile-3d.html">Chạy 3D thật (mobile)</a><button id="start" hidden style="display:none">Chạy bản 3D gốc</button><button class="secondary" id="back">Quay lại animation</button><a class="action secondary" href="./original.html" target="_blank" rel="noopener">Mở bản 3D gốc</a></div>
+<div class="note">Trên iPhone, xoay ngang để xem toàn bộ điều khiển 3D. Animation dự phòng hiển thị ngay cả khi WebGL không chạy.</div></main>
+<footer>Được tái xuất bản nguyên mẫu từ <a href="https://github.com/Nyxera0x/cutaway">Nyxera0x/cutaway</a> · Ghi công theo giấy phép MIT. <a href="./LICENSE">LICENSE</a></footer>
+<script>
+const start=document.getElementById('start'),back=document.getElementById('back'),frame=document.getElementById('demo-frame'),loading=document.getElementById('loading'),poster=document.getElementById('poster'),status=document.getElementById('status');
+let check=null,expire=null;
+function reset(){if(check)clearInterval(check);if(expire)clearTimeout(expire);check=expire=null;frame.classList.remove('active');frame.removeAttribute('src');poster.style.display='flex';loading.classList.remove('active');start.style.display='';back.style.display='none';document.getElementById('preview').play().catch(()=>{});}
+function show3D(){if(check)clearInterval(check);if(expire)clearTimeout(expire);loading.classList.add('active');start.style.display='none';back.style.display='';frame.src='./original.html';let ready=false;
+check=setInterval(()=>{try{if(frame.contentWindow?.SIM_SHOWN===true){ready=true;clearInterval(check);clearTimeout(expire);loading.classList.remove('active');poster.style.display='none';frame.classList.add('active');document.getElementById('preview').pause();}}catch(e){}},400);
+expire=setTimeout(()=>{if(!ready){clearInterval(check);status.textContent='3D không khởi chạy trên thiết bị này. Chọn “Quay lại animation” hoặc mở trực tiếp bản gốc.';loading.classList.remove('active');frame.removeAttribute('src');poster.style.display='flex';start.style.display='';back.style.display='none';}},15000);}
+document.getElementById("play-video").onclick=()=>{const v=document.getElementById("preview");v.muted=true;v.play().catch(()=>{v.controls=true})};start.addEventListener('click',show3D);back.addEventListener('click',reset);
+document.getElementById('preview').addEventListener('error',()=>{document.getElementById('poster').style.background='center / contain no-repeat url("./preview.jpg")';});
+</script>
+</body></html>
