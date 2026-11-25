@@ -1,0 +1,54 @@
+{
+  "index.html": {
+    "bytes": 25380,
+    "sha256": "f513ba59014092f69ed3abf227a6700537f929daf702cf10b2f311702467f23a"
+  },
+  "movement.glb": {
+    "bytes": 8569688,
+    "sha256": "ee2f9127bd2d23f802722d0e70a1395d9d6f9878356e7cdf83be1727e070e568"
+  },
+  "qa/v18-1440-0.jpg": {
+    "bytes": 119396,
+    "sha256": "a3a145f596c320f54c33508db24bdf63d5c117387176417dcde75ec6bf1df370"
+  },
+  "qa/v18-390-0.jpg": {
+    "bytes": 44363,
+    "sha256": "4f7fe00f3b99fd0da74e1c3261a4f78d0c1c591bab7cdbb1c105a27d7ebb0786"
+  },
+  "qa/v18-390-1.jpg": {
+    "bytes": 51150,
+    "sha256": "c45e68f5c016bc363918c0fe251e055034de67cf2c3ae5476677a9e84c94c1b6"
+  },
+  "qa/v18-390-2.jpg": {
+    "bytes": 53774,
+    "sha256": "8446566f4b24e70b9b2e3dff14cbe9bb00ae0fb359025b925d3f49ef0b2fce6e"
+  },
+  "qa/v18-390-4.jpg": {
+    "bytes": 40435,
+    "sha256": "a7e868ede9224f1e37ad60155872814ba14d831d464776aeb97fbf3f140e2f0e"
+  },
+  "qa/v18-last-anatomy.jpg": {
+    "bytes": 54199,
+    "sha256": "324580de189ea9b46abccb6e7a547a430f9d776ee6418d40240ae16e5ed928db"
+  },
+  "source/build.py": {
+    "bytes": 9282,
+    "sha256": "a4c7b65de698a97345866d28ccdb3ae4b4a3f77fb048e42e4b587bf3d4bfaf26"
+  },
+  "source/movement.blend": {
+    "bytes": 17685544,
+    "sha256": "d10385c1186438a5afe497fc7893962ec8cf45bafcd1dd7a5d363db987779b02"
+  },
+  "source/refine_v3.py": {
+    "bytes": 6127,
+    "sha256": "c5ae0376a36a830b7804b6b582daed204bf8240a175a1498cbbf355c0575d1c2"
+  },
+  "source/refine_v4.py": {
+    "bytes": 6767,
+    "sha256": "19121f2706155edd55c66a60fb6f045e329e68f0d6248696b70251478df942ef"
+  },
+  "source/refine_v5.py": {
+    "bytes": 2922,
+    "sha256": "e19c289da4ad022c851cc1b20ef568cc2e3c384638a46e48abfbc23d7317e304"
+  }
+}

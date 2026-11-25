@@ -1,0 +1,190 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>ATELIER — The architecture of time</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e9e5db;color:#202425;font:14px system-ui,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}#live{position:fixed;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}header{position:absolute;top:0;left:0;right:0;height:78px;padding:0 5vw;display:flex;justify-content:space-between;align-items:center;z-index:5;color:#f0ede4;border-bottom:1px solid #ffffff30}.brand{font:23px Georgia,serif;letter-spacing:.16em}header nav{display:flex;gap:25px;font-size:10px;letter-spacing:.16em}.scene{position:relative;min-height:110svh;padding:8vw 6vw;overflow:hidden}.scene .ink{position:relative;z-index:3}.scene .behind{position:absolute;z-index:1;pointer-events:none}h1,h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.07em;margin:0;line-height:.89}h1{font-size:clamp(90px,15vw,235px)}h2{font-size:clamp(65px,10vw,150px)}p{font-size:15px;line-height:1.65;max-width:360px;margin:18px 0}.kicker{font-size:10px;letter-spacing:.22em;font-weight:600;text-transform:uppercase;display:block;margin-bottom:22px}.hero{background:radial-gradient(ellipse at 74% 58%,#4a545b,#20282d 55%,#161c20 90%);color:#eae5d9;padding-top:125px}.hero .behind{top:21%;left:5%;right:0}.hero .copy{position:absolute;bottom:12%;left:6%;max-width:270px}.hero .copy p{color:#c7c9c7;font-size:13px}.chapter{position:absolute;bottom:5%;right:6%;font-size:10px;letter-spacing:.17em;z-index:3}.finish{display:flex;gap:11px;align-items:center;margin-top:22px}.finish span{font-size:9px;letter-spacing:.16em;color:#b6bfbd}.finish button{width:22px;height:22px;padding:0;border:1px solid #aeb6b8;background:var(--sw);border-radius:50%}.finish button.on{outline:1px solid #dec08d;outline-offset:4px}.craft{background:#e9e5db;color:#2c3436;min-height:112svh}.craft .ink{margin-left:56%;padding-top:12vh}.craft .behind{font:400 clamp(250px,46vw,720px)/.8 Georgia,serif;left:0;top:25%;color:#222a2d0b}.craft p{color:#59605e}.rule{width:85px;border-top:1px solid currentColor;margin:24px 0}.movement{background:radial-gradient(ellipse at 66% 45%,#51585a,#252d30 58%,#151d21);color:#f0e9dc;min-height:130svh}.movement .ink{padding-top:8vh;max-width:44%}.movement .behind{font:400 clamp(160px,30vw,480px)/.8 Georgia,serif;color:#ffffff07;right:-3%;bottom:8%}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px;max-width:330px}.controls button{border:1px solid #d4c6a16b;background:transparent;color:#e7d9c0;font-size:11px;padding:10px 13px}.controls button.on{background:#e1c69a;color:#222b2d}.readout{font-size:12px;color:#c5c7c3;min-height:3em;max-width:300px}.anatomy{background:#dcd7ca;color:#222b2d;min-height:130svh}.anatomy .ink{padding-top:6vh;max-width:54%}.anatomy h2{font-size:clamp(60px,8vw,120px)}.parts{margin-top:28px;max-width:420px;border-top:1px solid #a7a89e}.parts button{display:grid;grid-template-columns:30px 1fr 20px;align-items:center;text-align:left;width:100%;border:0;border-bottom:1px solid #a7a89e;background:none;padding:13px 0;color:#354043;font-size:13px}.parts button span{font-size:10px;color:#8a7354}.parts button strong{font:23px Georgia,serif}.parts button.on strong{color:#986827}.parts button em{font-style:normal}.partdesc{min-height:3em;font-size:12px;color:#5b625e}.finale{background:radial-gradient(ellipse at 50% 45%,#46545c,#182227 74%);color:#eae5d9;min-height:105svh;text-align:center}.finale .behind{left:0;right:0;top:16%;font:400 clamp(90px,15vw,220px)/.9 Georgia,serif;letter-spacing:-.08em}.finale .ink{position:absolute;bottom:8%;left:5%;right:5%;display:flex;justify-content:space-between;align-items:end;text-align:left}.finale p{font-size:12px;color:#b9c4c5}.finale a{border-bottom:1px solid #d9c8a9;padding:8px 0;font-size:11px;letter-spacing:.1em}footer{position:relative;z-index:3;background:#151c20;color:#afb6b3;padding:24px 6vw;font-size:11px;display:flex;justify-content:space-between;gap:20px}#boot{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;color:#eee4d1;background:#202a30;padding:14px;font-size:12px}#line{position:fixed;left:0;top:0;height:2px;background:#c9a56c;z-index:7;width:0;pointer-events:none}
+@media(max-width:760px){header{height:57px;padding:0 20px}.brand{font-size:16px}header nav{gap:11px;font-size:8px;letter-spacing:.04em}.scene{padding:45px 22px;min-height:110svh}.hero{padding-top:84px;min-height:112svh}.hero .behind{top:14%;left:20px;right:15px}.hero h1{font-size:clamp(68px,20vw,100px)}.hero .copy{bottom:6%;left:22px;right:22px;max-width:none;display:flex;flex-direction:column;gap:0}.hero .copy p{margin:0;max-width:250px;font-size:12px}.finish{margin-top:16px}.hero .chapter{bottom:2%;font-size:8px}.kicker{font-size:9px;margin-bottom:13px}.craft{min-height:118svh}.craft .ink{margin:0;padding:0}.craft h2,.movement h2,.anatomy h2{font-size:clamp(57px,15vw,76px)}.craft p,.movement p,.anatomy p{font-size:13px;margin:12px 0;max-width:320px}.craft .behind{top:47%;font-size:430px;left:-30%}.craft .rule{margin:12px 0}.craft .chapter{bottom:3%}.movement{min-height:128svh}.movement .ink{padding:0;max-width:none}.movement .controls{position:absolute;top:82svh;left:0;right:0;max-width:none;margin:0}.movement .readout{position:absolute;top:88svh;left:0;font-size:11px}.movement .behind{bottom:19%;font-size:230px}.anatomy{min-height:160svh}.anatomy .ink{padding:0;max-width:none}.anatomy .parts{margin-top:51svh;max-width:none}.parts button{padding:9px 0}.parts button strong{font-size:18px}.anatomy .partdesc{font-size:11px}.finale{min-height:106svh}.finale .behind{top:12%;font-size:80px}.finale .ink{bottom:6%;gap:15px}.finale p{font-size:11px;max-width:205px}.finale a{white-space:nowrap;font-size:10px}footer{font-size:10px;padding:20px 22px}.chapter{font-size:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Composition first: fixed editorial lanes, with a dedicated blank beat between chapters. */
+.hero .behind{right:auto;top:16%}.hero h1{font-size:clamp(90px,12.5vw,200px)}
+.craft .ink{margin-left:57%}.movement .ink{max-width:38%}
+.anatomy .ink{margin-left:56%;max-width:40%}
+.finale .behind{top:8%;font-size:clamp(80px,11vw,180px)}
+.hero .behind,.finale .behind{z-index:3}
+@media(max-width:760px){
+.hero{min-height:121svh}.hero .behind{top:9%;left:22px;right:16px}
+.hero h1{font-size:clamp(65px,18vw,91px);line-height:.94}
+.hero .copy{top:29svh;bottom:auto;left:24px;max-width:310px}
+.hero .copy p{max-width:275px}.hero .finish{margin-top:12px}
+.hero .chapter{bottom:5%}
+.craft{min-height:124svh}.craft .ink{margin:0;padding:0;text-align:right}
+.craft .ink p{margin-left:auto;max-width:285px}.craft .rule{margin-left:auto}
+.craft .behind{top:36%;left:-14%}
+.craft h2,.movement h2,.anatomy h2{font-size:clamp(54px,14.2vw,76px);line-height:.94}
+.movement{min-height:132svh}.movement .ink{max-width:100%}
+.movement .controls{position:relative;top:auto;margin-top:18px}
+.movement .readout{position:relative;top:auto;min-height:30px;max-width:300px}
+.anatomy{min-height:162svh}.anatomy .ink{margin:0;max-width:none}
+.anatomy .ink>h2,.anatomy .ink>.kicker,.anatomy .ink>p:first-of-type{text-align:right}
+.anatomy .ink>p:first-of-type{margin-left:auto}
+.anatomy .parts{margin-top:56svh}
+.finale{min-height:112svh}.finale .behind{top:8%;font-size:clamp(68px,18.5vw,81px)}
+.finale .ink{bottom:7%}
+}
+@media(min-width:761px){.finale .behind{left:6%;right:auto;top:26%;text-align:left;font-size:clamp(75px,10vw,155px)}.finale .ink{bottom:8%}.anatomy .ink{margin-left:59%;max-width:37%}}
+@media(max-width:760px){.finale{min-height:128svh}.finale .ink{bottom:5%}}
+/* Preserve editorial typography. The text has its own authored entrance and exit beats. */
+.scene .ink,.hero .behind,.finale .behind,.chapter{will-change:opacity}
+@media(max-width:760px){
+.hero .copy{top:29svh}.hero .chapter{bottom:4%}
+.anatomy .parts{margin-top:50svh}
+.anatomy .parts button{padding:11px 0}
+.finale .ink{bottom:4%}
+}
+@media(max-width:760px){
+.anatomy .parts{width:44%;margin-top:50svh}
+.anatomy .parts button{grid-template-columns:20px 1fr 10px;gap:3px;padding:11px 0}
+.anatomy .parts button strong{font-size:16px}
+.anatomy .partdesc{max-width:44%;font-size:10px}
+}
+/* Layout repair: readable text and controls stay in document flow. */
+.scene .ink,.hero .behind,.finale .behind,.chapter{will-change:auto}
+@media(max-width:760px){
+.hero .behind{position:relative;top:auto;left:auto;right:auto;margin-top:0}
+.hero .copy{position:relative;top:auto;bottom:auto;left:auto;right:auto;margin-top:14px;width:100%;max-width:310px}
+.hero .behind h1{font-size:clamp(58px,18vw,91px)}
+.hero .chapter{bottom:4%}
+.anatomy .parts{width:100%;max-width:none;margin-top:51svh}
+.anatomy .parts button{grid-template-columns:28px minmax(0,1fr) 20px;gap:8px;padding:12px 0;min-height:44px}
+.anatomy .parts button strong{font-size:19px}
+.anatomy .partdesc{max-width:100%;font-size:12px}
+.anatomy .ink{max-width:100%}
+.anatomy{min-height:172svh}
+.movement .controls{max-width:100%;flex-wrap:wrap}
+.finale .behind{font-size:clamp(56px,18vw,81px)}
+}
+/* Compact editorial rhythm. Keep V17 accessible document flow and the continuous V9 scene. */
+@media(min-width:761px){
+.scene{padding-top:6vw;padding-bottom:5vw}
+.hero{min-height:100svh}.craft{min-height:94svh}.movement{min-height:100svh}.anatomy{min-height:108svh}.finale{min-height:100svh}
+.craft .ink{padding-top:9vh}.movement .ink{padding-top:6vh}.anatomy .ink{padding-top:3vh}
+}
+@media(max-width:760px){
+.scene{padding:32px 22px 24px}
+.hero{padding-top:76px;min-height:104svh}
+.hero .copy{margin-top:9px}.hero .finish{margin-top:10px}
+.hero .chapter{bottom:2.5%}
+.craft{min-height:91svh}.movement{min-height:98svh}
+.anatomy{min-height:139svh}
+.anatomy .parts{margin-top:46svh}
+.anatomy .parts button{padding:9px 0;min-height:44px}
+.finale{min-height:99svh}
+.finale .behind{top:5%}.finale .ink{bottom:3%}
+.craft .rule{margin:9px 0}
+.movement .controls{margin-top:12px}
+}
+</style></head><body><div id="line"></div><canvas id="live" aria-label="A continuous interactive 3D watch"></canvas><div id="boot">Preparing the movement…</div><header id="top"><a class="brand" href="#top">ATELIER.</a><nav><a href="#craft">CRAFT</a><a href="#movement">CALIBRE</a><a href="#anatomy">ANATOMY</a></nav></header>
+<main id="main"><section id="hero" class="scene hero"><div class="behind"><span class="kicker">01 / An object in time</span><h1>Time,<br>distilled.</h1></div><div class="ink copy"><p>Calibre 02. An exploration of the space between precision and beauty.</p><div class="finish"><span>FINISH</span><button data-finish="blue" style="--sw:#203d57" aria-label="Midnight blue"></button><button data-finish="silver" style="--sw:#b6babd" aria-label="Silver"></button><button data-finish="black" style="--sw:#292b2c" aria-label="Graphite"></button></div></div><div class="chapter">SCROLL TO DISCOVER ↓</div></section>
+<section id="craft" class="scene craft"><div class="behind">02</div><div class="ink"><span class="kicker">02 / Form &amp; finish</span><h2>Beyond<br>the dial.</h2><div class="rule"></div><p>Light travels across the sunray face. The hands and dial separate to reveal the sculpted bridges and open-work wheels underneath.</p></div><div class="chapter">STEEL / BRASS / RUBY</div></section>
+<section id="movement" class="scene movement"><div class="behind">03</div><div class="ink"><span class="kicker">03 / Mechanical rhythm</span><h2>A rhythm<br>within.</h2><p>Every motion is part of a system. Follow the gear train, the balance and the bridges that hold the mechanism together.</p><div class="controls"><button data-part="TRAIN">Wheel train</button><button data-part="BALANCE">Balance</button><button id="motion">Pause</button></div><p class="readout" id="readout">Select a component to inspect its role.</p></div></section>
+<section id="anatomy" class="scene anatomy"><div class="ink"><span class="kicker">04 / Architecture</span><h2>Every layer<br>matters.</h2><p>From the visible indications to the supporting plate. Select a layer to trace its position in the assembly.</p><div class="parts" id="parts"></div><p class="partdesc" id="partdesc">Eight core assemblies, one mechanical concept.</p></div></section>
+<section id="finale" class="scene finale"><div class="behind">One<br>movement.</div><div class="ink"><p>Designed as an original mechanical study.<br>Real-time 3D, not a film.</p><a href="#top">BACK TO TOP ↑</a></div></section></main><footer><span>ATELIER / CALIBRE 02</span><span>Concept geometry · Illustrative mechanism, not validated CAD.</span></footer>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script><script type="module">
+import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const $=id=>document.getElementById(id),canvas=$('live'),scene=new T.Scene();
+try{
+const renderer=new T.WebGLRenderer({canvas,alpha:true,antialias:true,preserveDrawingBuffer:true,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;renderer.shadowMap.enabled=false;renderer.shadowMap.type=T.PCFSoftShadowMap;
+// A purpose-built lightbox reflection environment. No proprietary HDR assets.
+const room=new T.Scene();room.background=new T.Color(0x33383b);
+function panel(x,y,z,w,h,color,intensity){const m=new T.Mesh(new T.PlaneGeometry(w,h),new T.MeshBasicMaterial({color:new T.Color(color).multiplyScalar(intensity),side:T.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);room.add(m)}
+panel(-4,5,3,4,6,0xfff4e8,3.3);panel(4,3,-2,1.6,5,0xe1edff,3.5);panel(0,5,-4,5,2,0xffffff,2.7);panel(-4,1,-3,2,3,0xffdfb9,1.6);panel(0,2,5,2,1.2,0xffffff,1.4);
+const pm=new T.PMREMGenerator(renderer);scene.environment=pm.fromScene(room,.015,.1,30).texture;pm.dispose();
+scene.add(new T.HemisphereLight(0xf1f5ff,0x34312e,.65));const key=new T.DirectionalLight(0xffeddd,1.15);key.position.set(-4,6,3);key.castShadow=true;key.shadow.mapSize.set(1024,1024);Object.assign(key.shadow.camera,{left:-4,right:4,top:4,bottom:-4,near:.1,far:20});key.shadow.bias=-.0005;scene.add(key);const rim=new T.DirectionalLight(0xc4d9ff,.8);rim.position.set(5,4,-3);scene.add(rim);
+const model=(await new GLTFLoader().loadAsync('./movement.glb')).scene;scene.add(model);model.updateMatrixWorld(true);
+const groups={};const nodes=[];model.traverse(o=>{if(o.isMesh)nodes.push(o)});
+for(const o of nodes){const name=o.userData.assembly_group||'MAINPLATE';if(!groups[name]){groups[name]=new T.Group();groups[name].name=name;scene.add(groups[name])}groups[name].attach(o);o.castShadow=true;o.receiveShadow=true;if(o.material?.normalMap){const v=/satin/i.test(o.name)?0.22:0.33;o.material.normalScale.set(v,v);}if(o.material?.aoMap)o.material.aoMapIntensity=.6}
+scene.remove(model);const root=new T.Group();scene.add(root);for(const g of Object.values(groups))root.attach(g);
+const b=new T.Box3();for(const [n,g] of Object.entries(groups))if(!n.startsWith("BRACELET"))b.union(new T.Box3().setFromObject(g));const center=b.getCenter(new T.Vector3());root.position.sub(center);root.updateMatrixWorld(true);
+const rotors={};for(const o of nodes){const id=o.userData.rotor_id,c=o.userData.rotor_center;if(!id||!c)continue;const parent=o.parent;if(!rotors[id]){const g=new T.Group();g.name=id;g.position.set(c[0],0,-c[1]);parent.add(g);g.updateMatrixWorld(true);rotors[id]=g;}rotors[id].attach(o);}
+const motion=matchMedia('(prefers-reduced-motion: reduce)').matches;let playing=!motion;const t0=performance.now();let lastFrame=0;
+
+const floor=new T.Mesh(new T.PlaneGeometry(100,100),new T.ShadowMaterial({opacity:0}));floor.rotation.x=-Math.PI/2;floor.position.y=-2.2;floor.receiveShadow=true;scene.add(floor);
+
+
+const camera=new T.PerspectiveCamera(34,1,.1,100);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),smooth=v=>{v=clamp(v,0,1);return v*v*(3-2*v)},mix=(a,b,t)=>a+(b-a)*t;
+const sections=['hero','craft','movement','anatomy','finale'].map($);
+const parts=[['DIAL','Dial','Sunray face and applied indices.'],['BRIDGES','Bridges','Support the moving assemblies.'],['TRAIN','Wheel train','Gears transmit rotation in the concept.'],['BALANCE','Balance','Oscillating wheel and hairspring.'],['MAINPLATE','Mainplate','Foundation of the movement.']];
+const info=Object.fromEntries(parts.map(p=>[p[0],p]));
+let selected=null,finish='blue',phase=0,goal=0,dirty=true,time=0,last=0,frames=0,screenW=1,screenH=1;
+const base=new Map();for(const o of nodes){if(!o.material||Array.isArray(o.material))continue;o.material=o.material.clone();base.set(o,{e:o.material.emissive?.clone(),i:o.material.emissiveIntensity})}
+const dial=nodes.filter(n=>n.material?.name?.includes('Midnight dial'));
+const finishes={blue:0x203d57,silver:0xb6babd,black:0x292b2c};
+function setFinish(k){finish=k;for(const o of dial)o.material.color.setHex(finishes[k]);document.querySelectorAll('[data-finish]').forEach(b=>{b.classList.toggle('on',b.dataset.finish===k);b.setAttribute('aria-pressed',String(b.dataset.finish===k))});dirty=true}
+document.querySelectorAll('[data-finish]').forEach(b=>b.onclick=()=>setFinish(b.dataset.finish));setFinish('blue');
+for(const [k,n,d] of parts){const b=document.createElement('button');b.dataset.part=k;b.innerHTML='<span>'+String(parts.findIndex(p=>p[0]===k)+1).padStart(2,'0')+'</span><strong>'+n+'</strong><em>+</em>';$('parts').append(b)}
+document.querySelectorAll('[data-part]').forEach(b=>b.onclick=()=>{selected=selected===b.dataset.part?null:b.dataset.part;document.querySelectorAll('[data-part]').forEach(x=>{x.classList.toggle('on',x.dataset.part===selected);x.setAttribute('aria-pressed',String(x.dataset.part===selected))});$('readout').textContent=selected?info[selected][1]+' — '+info[selected][2]:'Select a component to inspect its role.';$('partdesc').textContent=selected?info[selected][2]:'Eight core assemblies, one mechanical concept.';dirty=true});
+$('motion').textContent=playing?'Pause':'Play';$('motion').onclick=()=>{playing=!playing;$('motion').textContent=playing?'Pause':'Play';dirty=true};
+function size(){screenW=innerWidth;screenH=innerHeight;renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5,1500/screenW,1050/screenH));renderer.setSize(screenW,screenH,false);camera.aspect=screenW/screenH;dirty=true;update()}
+function update(){const y=scrollY;let i=0;while(i<4&&y>=sections[i+1].offsetTop)i++;goal=i===4?4+clamp((y-sections[4].offsetTop)/Math.max(1,sections[4].offsetHeight),0,1):i+clamp((y-sections[i].offsetTop)/(sections[i+1].offsetTop-sections[i].offsetTop),0,1);dirty=true}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',size,{passive:true});
+// A single choreography carries the object through the actual document, independent of the DOM text scroll.
+const desk=[
+[.73,.54,15.3,.28,1.26,0,0,0],[.67,.47,13.8,.54,1.10,0,0,0],[.30,.55,13.7,.25,.95,0,1.1,0],[.34,.48,11.8,.18,1.1,0,.1,0],[.73,.57,11.4,.55,.83,0,.6,0],[.70,.48,10.7,.77,.70,-.1,.75,0],[.69,.57,15.6,.62,.56,0,1.6,0],[.67,.43,15.8,.48,.57,0,1.6,0],[.52,.55,15.8,.28,1.23,0,0,0],[.50,.51,15.4,.48,1.12,0,0,0],[.50,.12,17,.65,1.0,0,0,0]];
+const mobile=[
+[.50,.57,21,.20,1.28,0,0,0],[.53,.43,20,.45,1.12,0,0,0],[.50,.64,18,.28,.93,0,1.05,0],[.50,.48,15.5,.18,1.08,0,.1,0],[.50,.57,15.6,.45,.84,0,.55,0],[.50,.50,15.1,.65,.71,-.1,.75,0],[.50,.51,19.2,.62,.56,0,1.55,0],[.50,.23,20,.46,.57,0,1.6,0],[.50,.59,21,.25,1.25,0,0,0],[.50,.50,20,.44,1.12,0,0,0],[.50,.05,23,.58,1.0,0,0,0]];
+// Authored camera stations. Alternating diagonals connect the same object across editorial chapters.
+// A short excursion outside the viewport is intentional at narrow-screen text crossings.
+const routeD=[
+[0,.77,.55,16],[.30,.78,.42,15],[.55,.62,.26,15],[.75,.34,.33,14],[1,.28,.58,14],
+[1.35,.27,.39,13],[1.6,.36,.20,13],[1.8,.73,.29,13],[2,.75,.57,12],
+[2.35,.74,.45,12],[2.65,.61,.22,15],[2.85,.23,.30,16],[3,.21,.56,17.2],
+[3.15,.19,.50,19.4],[3.35,.19,.40,19.4],[3.55,.35,.20,17.5],[3.72,.76,.22,18],[3.85,.77,.53,18],[4,.77,.54,18],[4.5,.73,.46,17],[5,.68,.10,18]];
+const routeM=[
+[0,.54,.64,30],[.22,.57,.59,29],[.48,.63,.47,27],[.72,.55,.42,26],[.89,.42,.58,24],[1,.43,.63,23],
+[1.22,.39,.57,22],[1.46,.37,.47,22],[1.70,.45,.40,23],[1.88,.56,.53,23],[2,.57,.67,23],
+[2.23,.61,.60,22],[2.45,.63,.49,23],[2.70,.55,.41,24],[2.88,.46,.49,24],[3,.48,.51,27],
+[3.12,.55,.31,29],[3.25,.59,.17,32],[3.43,.60,.12,34],[3.58,.63,.22,32],[3.77,.61,.39,30],[3.90,.55,.53,30],[4,.52,.60,31],[4.5,.50,.48,29],[5,.50,.04,29]];
+function routeAt(p,a){let i=0;while(i<a.length-2&&p>a[i+1][0])i++;const h=a[i+1][0]-a[i][0],t=clamp((p-a[i][0])/h,0,1);
+function sl(j,k){if(j===0)return (a[1][k]-a[0][k])/(a[1][0]-a[0][0]);if(j===a.length-1)return (a[j][k]-a[j-1][k])/(a[j][0]-a[j-1][0]);const u=(a[j][k]-a[j-1][k])/(a[j][0]-a[j-1][0]),v=(a[j+1][k]-a[j][k])/(a[j+1][0]-a[j][0]);return u*v<=0?0:2*u*v/(u+v)}
+return [1,2,3].map(k=>(2*t*t*t-3*t*t+1)*a[i][k]+(t*t*t-2*t*t+t)*h*sl(i,k)+(-2*t*t*t+3*t*t)*a[i+1][k]+(t*t*t-t*t)*h*sl(i+1,k));}
+function cameraKey(p){const a=screenW<=760?mobile:desk,t=clamp(p*2,0,10),i=Math.min(9,Math.floor(t)),u=smooth(t-i),v=a[i].map((v,j)=>mix(v,a[i+1][j],u));v.splice(0,3,...routeAt(p,screenW<=760?routeM:routeD));return v}
+// Text beats are authored per chapter. No geometry-dependent fitting, masking or collision response.
+const beats=[
+ {i:0,head:document.querySelector('.hero .behind'),body:document.querySelector('.hero .copy'),out:.30},
+ {i:1,head:document.querySelector('.craft .ink'),out:.30},
+ {i:2,head:document.querySelector('.movement .ink'),out:.30},
+ {i:3,head:document.querySelector('.anatomy .ink'),out:.47},
+ {i:4,head:document.querySelector('.finale .behind'),body:document.querySelector('.finale .ink'),out:1}
+];
+function opacity(el,f){if(!el)return;el.style.opacity=f.toFixed(3);el.inert=f<.12}
+function editorialBeat(p){
+ const mob=screenW<=760;
+ for(const {i,head,body,out} of beats){
+  const q=p-i;
+  const enter=i===0?1:smooth((q+(mob?.14:.42))/(mob?.13:.26));
+  const exit=1-smooth((q-out)/.16);
+  if(i===3&&mob){
+   const title=[...head.children].filter(e=>!e.matches('.parts,.partdesc'));
+   for(const el of title)opacity(el,enter*(1-smooth((q-.08)/.17)));
+   const list=head.querySelector('.parts'),desc=head.querySelector('.partdesc');
+   const listIn=smooth((q+.12)/.12),listOut=1-smooth((q-.40)/.15);
+   opacity(list,listIn*listOut);opacity(desc,listIn*listOut);
+  }else{
+   opacity(head,enter*exit);
+   if(body)opacity(body,i===0?1-smooth((q-.10)/.21):enter);
+  }
+ }
+ for(const el of document.querySelectorAll('.chapter')){const i=sections.indexOf(el.closest('section'));opacity(el,(1-smooth((p-i-.20)/.25))*smooth((p-i+.1)/.10));}
+}
+const off={CASE:[0,.35,0],BRIDGES:[0,1.5,0],FASTENERS:[0,2.25,0],TRAIN:[.75,.8,0],BALANCE:[-1.25,1.1,.15],MAINPLATE:[0,-.4,0]};
+function draw(now){requestAnimationFrame(draw);if(document.hidden)return;if(!dirty&&!playing&&Math.abs(phase-goal)<.001)return;if(now-last<32&&!dirty)return;const dt=Math.min(.12,Math.max(.001,(now-last)/1000));last=now;if(playing)time+=dt;phase+=(goal-phase)*(1-Math.exp(-dt*9));if(Math.abs(goal-phase)<.001)phase=goal;dirty=false;
+ const p=phase,closing=smooth((p-3.55)/.45),opening=smooth(p/.82)*(1-closing),lift=smooth((p-.65)/.72)*(1-closing),park=smooth((p-1.15)/.60)*(1-smooth((p-2.65)/.38))*(1-closing),explode=smooth((p-1.6)/1.4)*(1-closing);
+ for(const [n,g] of Object.entries(groups)){g.position.set(0,0,0);g.visible=true;if(n.startsWith('BRACELET')){g.position.set(0,-.8*opening,(n.endsWith('TOP')?-1:1)*28*opening);continue}if(n==='DIAL'||n==='HANDS'){g.position.set(-22*park,(n==='DIAL'?3.5:4)*lift,0);continue}const o=off[n]||[0,0,0];g.position.set(...o.map(v=>v*explode))}
+ let j=0;for(const [id,g] of Object.entries(rotors))g.rotation.y=id==='SEC'?-time*Math.PI/30:id==='BAL'?Math.sin(time*9)*.42:time*(j++%2?-1:1)*1.8*36/Number(id.slice(1));
+ for(const [o,b] of base){if(!b.e)continue;const hit=selected&&p>1.8&&p<3.65&&o.userData.assembly_group===selected;o.material.emissive.copy(b.e);if(hit)o.material.emissive.setHex(0x96713d);o.material.emissiveIntensity=hit?.4:b.i}
+ const [sx,sy,d,az,el,x,y,z]=cameraKey(p),target=new T.Vector3(x,y,z),dir=new T.Vector3(Math.sin(az)*Math.cos(el),Math.sin(el),Math.cos(az)*Math.cos(el));
+ camera.position.copy(target).addScaledVector(dir,d);camera.lookAt(target);camera.updateProjectionMatrix();camera.projectionMatrix.elements[8]=1-2*sx;camera.projectionMatrix.elements[9]=2*sy-1;camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
+ renderer.render(scene,camera);canvas.style.opacity=String(1-smooth((p-4.60)/.4));$('line').style.width=clamp(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*100,0,100)+'%';if(++frames===1)$('boot').remove();
+ window.EDITORIAL_STATE={frames,phase,goal,finish,dialColor:dial[0]?.material.color.getHex(),selected,playing,screen:[sx,sy],opening,explode,closing,mesh:nodes.length,canvas:[canvas.width,canvas.height]};
+}
+size();update();requestAnimationFrame(draw);
+}catch(e){$('boot').textContent='3D startup failed: '+e.message;console.error(e)}
+</script></body></html>
