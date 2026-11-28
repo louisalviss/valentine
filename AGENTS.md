@@ -54,6 +54,10 @@ If the gate derives `DELETE` or `SUPERSEDE`, remove it from the active catalog. 
 - Prefer self-hosted/static assets over unstable hotlinks.
 - Do not use Vercel unless explicitly requested.
 
+## Hybrid media hosting
+
+Follow [Hybrid Media Hosting](agent-skills/web-design/HYBRID-MEDIA-HOSTING.md): light runtime assets stay in GitHub; heavy rights-cleared runtime assets use the shared static Cloudflare Pages origin. Keep existing site URLs.
+
 ## Default workflow
 
 1. Inspect the strongest relevant existing pattern/direction.
