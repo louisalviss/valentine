@@ -1,11 +1,14 @@
 {
   "index.html": {
-    "bytes": 25380,
-    "sha256": "f513ba59014092f69ed3abf227a6700537f929daf702cf10b2f311702467f23a"
+    "bytes": 25503,
+    "sha256": "5d8180ba38999288f2ee25f219d16b5c519802ce863ac8a11dfd9d31f2179cfb"
   },
   "movement.glb": {
     "bytes": 8569688,
-    "sha256": "ee2f9127bd2d23f802722d0e70a1395d9d6f9878356e7cdf83be1727e070e568"
+    "sha256": "ee2f9127bd2d23f802722d0e70a1395d9d6f9878356e7cdf83be1727e070e568",
+    "url": "https://valentine-site-media.pages.dev/atelier-horology/ee2f9127bd2d/movement.glb",
+    "hosting": "cloudflare-pages-static-primary",
+    "fallback": "./movement.glb"
   },
   "qa/v18-1440-0.jpg": {
     "bytes": 119396,
