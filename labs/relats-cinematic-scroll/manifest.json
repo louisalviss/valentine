@@ -1,0 +1,523 @@
+{
+  "status": "USER_APPROVED_EXPERIENCE / LAB / REVIEW",
+  "approved_date": "2026-11-28",
+  "checkpoint": "V12",
+  "reference_url": "https://toptier.relats.com/",
+  "preview_url": "https://62-83-35-116.sslip.io/ab-ui/relats-scroll-study-v12-cinematic-20261128/index.html",
+  "rollback_url": "https://62-83-35-116.sslip.io/ab-ui/relats-scroll-study-v10-stable-20261128/index.html",
+  "source/index.html": {
+    "bytes": 46509,
+    "sha256": "bd9529d9ad5d53abdc628a69175a0d46a5de475338cd569a21d4b6c46e41d1e4"
+  },
+  "media_policy": "Reference media excluded from public Git repository; asset hashes are evidence, not rights clearance.",
+  "media": {
+    "media/battery.jpg": {
+      "bytes": 42290,
+      "sha256": "60da52e3316acf70ee470cd390a0f472d78e85bc2fe96138d2d2c4ef95008f56"
+    },
+    "media/battery.webp": {
+      "bytes": 25900,
+      "sha256": "55cb1232145e0f5a1667d87cb55d44d54698759e173e285d6a9de6090a124257"
+    },
+    "media/hero-hero-frame.jpg": {
+      "bytes": 44525,
+      "sha256": "bab37ed9816ff4ca15fb43ef69a6a60e7fcda37fb4a409dd2431660b9fc2cac5"
+    },
+    "media/hero-hero-mobile-frame.jpg": {
+      "bytes": 119424,
+      "sha256": "0e3d2c30cb58210f63067cba02987281ffbceae80b5a856d43fe88e91d397aa0"
+    },
+    "media/hero-hero-mobile.mp4": {
+      "bytes": 2954389,
+      "sha256": "3b6085b0b2234f8b84da079ff744d904a34e90d961d5a7d191141d46cfd5b0f6"
+    },
+    "media/hero-hero.jpg": {
+      "bytes": 135789,
+      "sha256": "0b8f3973a10a42ff0f419531dfe7ae72a02f2a698f1ab53f565b25fa8fd7a8ff"
+    },
+    "media/hero-hero.mp4": {
+      "bytes": 3534100,
+      "sha256": "46e3e43dbeab45af7778fe31ec5a97df5a374251e797e1aed7d65a8efec93998"
+    },
+    "media/hero-hero.webp": {
+      "bytes": 28596,
+      "sha256": "dbce9dd849d0f8d1e48912fcc1071a30e5f74c5576588938b32f390150406dfd"
+    },
+    "media/industries-hybrid-desktop.mp4": {
+      "bytes": 486014,
+      "sha256": "478155232bd0c7c021d79058a9b1a732f2b686fbcd6e70b485c91f20d88f4c20"
+    },
+    "media/industries-hybrid-mobile.mp4": {
+      "bytes": 1900411,
+      "sha256": "d68361eb204213b4dae42d8466eda23aedb0de73d089bc721c31bf36b850ed14"
+    },
+    "media/industries-hybrid.jpg": {
+      "bytes": 33347,
+      "sha256": "f015d1544955c1b620987f7fa5f84fdb17fce20b52b8a5dfe2da77615f6c427f"
+    },
+    "media/industries-hybrid.webp": {
+      "bytes": 8940,
+      "sha256": "6b05dd07e34eb55f2defdf6674b7ee83683008b1e755262a88c30e944844a176"
+    },
+    "media/industry-agriculture-mobile.mp4": {
+      "bytes": 1369284,
+      "sha256": "1173162244ffcc7ad554e13b56a3d3af58075c2ca62cddebdf13f9cdd305d977"
+    },
+    "media/industry-agriculture.jpg": {
+      "bytes": 17559,
+      "sha256": "5b8d8ae5fb85a73307c01399f7a0282e475067e9c0d3ffa6f0faeb50b0bea94c"
+    },
+    "media/industry-agriculture.webp": {
+      "bytes": 6106,
+      "sha256": "f11e6a11a84950015ae1b4d0d556c93171215e90dd65a5ba1e3de2aba8aa295e"
+    },
+    "media/industry-buses-mobile.mp4": {
+      "bytes": 1582384,
+      "sha256": "e14188895c3920f96544a5989464e1df2b6d279016fb7733cc28fb93512e694a"
+    },
+    "media/industry-buses.jpg": {
+      "bytes": 51318,
+      "sha256": "079e28c316ea5eea97e2cec92731e6d4efea9980b5a43af41e968d217c345e82"
+    },
+    "media/industry-buses.webp": {
+      "bytes": 17118,
+      "sha256": "d766bf8b26fa5e270026f6f0972aa06bc8a487e0456c749cd144f78fabdda69d"
+    },
+    "media/industry-construction-mobile.mp4": {
+      "bytes": 1835499,
+      "sha256": "87714c6bae67fb3f0abe036daa922f70bac8b32645b65453eee4515d734e9168"
+    },
+    "media/industry-construction.jpg": {
+      "bytes": 72869,
+      "sha256": "27f469e5f2f588cb8e4ce31c69cf3a8249ddcae66069bacb0699979dc4649aa2"
+    },
+    "media/industry-construction.webp": {
+      "bytes": 31886,
+      "sha256": "97cbd8eca253594ccaccc5c7ca76cb0f8b918d961ccc3c21d1b91708647c0739"
+    },
+    "media/industry-periflex-ps.png": {
+      "bytes": 714733,
+      "sha256": "918b79586e3bbea3129c94f7786957a83b0ab240606f0fd3d980d9ad3c68b9ec"
+    },
+    "media/industry-plas8-na.png": {
+      "bytes": 719382,
+      "sha256": "b17659f37f59d33ab06e32e9efda6d7bcf8613c4e2dba43b7bc36a8844d45b58"
+    },
+    "media/industry-railway-mobile.mp4": {
+      "bytes": 1639534,
+      "sha256": "f817e03f63c7967be5531e9980d4c97f329bb67411fa6341eb5832da5befa4f0"
+    },
+    "media/industry-railway.jpg": {
+      "bytes": 76666,
+      "sha256": "e3330e54596a0e99d44f064ed7c425354ea19161eb0468d1a456c139bee52c75"
+    },
+    "media/industry-railway.webp": {
+      "bytes": 30872,
+      "sha256": "ce69a94193b456118f902782770c2be8f426892e89e8fdabb27735c582d4fcbe"
+    },
+    "media/industry-revitex-vhg10.png": {
+      "bytes": 617825,
+      "sha256": "ca936adf0ce38a53949c4f7bb01fc37fc5788fe434de4d8899083bd53b336545"
+    },
+    "media/industry-self-closing-mobile.mp4": {
+      "bytes": 1440019,
+      "sha256": "8235a3752b6d54af4b3fd5eee030e6ce90540730e71195fb66d5e5bf0480dbbc"
+    },
+    "media/industry-self-closing.jpg": {
+      "bytes": 67584,
+      "sha256": "0f74542702b6369701b20830afb71601bf54ff07688406444200b42975e41e9b"
+    },
+    "media/intro-atlas-mobile.mp4": {
+      "bytes": 1045744,
+      "sha256": "d635a97b006ca8eaa4ce64c3266f28395a0b0f98e4bf7de2862b5dae0ba0e690"
+    },
+    "media/intro-bottom-left-desktop.mp4": {
+      "bytes": 668125,
+      "sha256": "1601999678e55aa16ce2fd047909fc38d5bcaa2fa9cced8c73f26624a7cdc4d0"
+    },
+    "media/intro-bottom-left-mobile.mp4": {
+      "bytes": 1333761,
+      "sha256": "5e83be5a53ec1a09b414f3681116506c117939fa6474b1776e9f6595967b7c97"
+    },
+    "media/intro-bottom-left.jpg": {
+      "bytes": 270195,
+      "sha256": "c711b5bc7ac098c65cbe1a26bd4be914814eb8f83282ade51fe9ce9054f65be6"
+    },
+    "media/intro-bottom-left.webp": {
+      "bytes": 55048,
+      "sha256": "69b599daa105009c25d2cea70be2373771db2e6ea56b303aad765c0c651a948a"
+    },
+    "media/intro-bottom-right-desktop.mp4": {
+      "bytes": 210815,
+      "sha256": "bbba77cd6dc31a66864e666391c612fc889beab2f4fbf1697400acdccb10fac1"
+    },
+    "media/intro-bottom-right-mobile.mp4": {
+      "bytes": 1737410,
+      "sha256": "a0e26d5f91ba83c9d0905b278693de283ff411dec437e4b8c0c234d76d69ab5b"
+    },
+    "media/intro-bottom-right.jpg": {
+      "bytes": 152546,
+      "sha256": "c2b653a001503976a9824d3a0706ebbc44768e1e605f5488d543ce728ffc9345"
+    },
+    "media/intro-bottom-right.webp": {
+      "bytes": 21012,
+      "sha256": "e853d38d7810a98d3d7bcd0f111495819175e2cbfeee34c1a1c989607c40e5d6"
+    },
+    "media/intro-center-desktop.mp4": {
+      "bytes": 9200612,
+      "sha256": "88c9b503170dc6192e806287cba6ccbb088134bf7ff5938306f81bfeaa5603bc"
+    },
+    "media/intro-center-left-desktop.mp4": {
+      "bytes": 1039561,
+      "sha256": "8c661538373afdb35a26381ad405a7d923b3d3667bf5233d1d83f3c6a5303e9b"
+    },
+    "media/intro-center-left-mobile.mp4": {
+      "bytes": 1293944,
+      "sha256": "d78c95bc262924eee78edd41328458a8cef0d1e09eb5724b47d8f737c30a34a1"
+    },
+    "media/intro-center-left.jpg": {
+      "bytes": 363392,
+      "sha256": "693c1021d1cba5a262180a08ac185b8cbf347cae53d7e980b848e85dc7dd86ea"
+    },
+    "media/intro-center-left.webp": {
+      "bytes": 98222,
+      "sha256": "5eece31da30112827161a4b22c697c947ebfba23227788509ab40621e14571d8"
+    },
+    "media/intro-center-mobile.mp4": {
+      "bytes": 3632292,
+      "sha256": "6a59e0253a086073dee28cf4b5f617c2b83d6a886b990325b7cfcc17c0be493a"
+    },
+    "media/intro-center-right-desktop.mp4": {
+      "bytes": 300996,
+      "sha256": "53710b9aa8a3935f4d22853a7bbb8e2296ddbe3aab93c4c0fef80ad77a687a94"
+    },
+    "media/intro-center-right-mobile.mp4": {
+      "bytes": 1324787,
+      "sha256": "9feccc7dabea5dd7998c97db0bfa931efe1f98fb3c5d257316854de9db4ead33"
+    },
+    "media/intro-center-right.jpg": {
+      "bytes": 163410,
+      "sha256": "d776c1e6655d108ced2eb0c1372a9d5e6027fb8b6932bd6fc89c5e4d9b9b8e6c"
+    },
+    "media/intro-center-right.webp": {
+      "bytes": 25794,
+      "sha256": "2edf62c839f8ca7b1aa3e2a4e49ed4c9108a60a47a8c1b0540a5d92ebc707a38"
+    },
+    "media/intro-center.jpg": {
+      "bytes": 700849,
+      "sha256": "7085972cae582ed92c376feb56dea68dad903a3adf560cdb2a0009a8c913677a"
+    },
+    "media/intro-center.webp": {
+      "bytes": 84012,
+      "sha256": "1854b358695a78bcca6d14e1cad02868251f178a20bdec9b12839585686dfca4"
+    },
+    "media/intro-top-left-desktop.mp4": {
+      "bytes": 946613,
+      "sha256": "e349ae82886d9b418c4cc7404df03904810923080ec4b8387384877028a657b7"
+    },
+    "media/intro-top-left-mobile.mp4": {
+      "bytes": 1347832,
+      "sha256": "07abc64240e445160098a3e9935bb87547f67fb7917e1d665f6ac014e8fdd006"
+    },
+    "media/intro-top-left.jpg": {
+      "bytes": 231427,
+      "sha256": "810eb0f6cc063cd258da2aa1c759d6fda3bf39026e9994aa8eb29883fbcd84a1"
+    },
+    "media/intro-top-left.webp": {
+      "bytes": 40426,
+      "sha256": "c198ccd4bbd542566f343de46f965f3048cb871d7162bb461f0eee033b74532f"
+    },
+    "media/intro-top-right-desktop.mp4": {
+      "bytes": 414216,
+      "sha256": "927567f7c9fec7a1492ef72171f718c202d973fa8fe22359cefe77c551090053"
+    },
+    "media/intro-top-right-mobile.mp4": {
+      "bytes": 1286105,
+      "sha256": "83372b7e8a25a6f3ce3b680d5a90f8c5c74b9219a4b441340624371db33538a8"
+    },
+    "media/intro-top-right.jpg": {
+      "bytes": 188951,
+      "sha256": "dd50b0d9b1493f90bf268ec4d1912fd24a6aa4f86a7336aeee213525469b3e50"
+    },
+    "media/intro-top-right.webp": {
+      "bytes": 29598,
+      "sha256": "bddbe65bb39a6beed64bbc19da38d35b23f11890d794898afe6e63b2c005b929"
+    },
+    "media/jointheride-cable-desktop.mp4": {
+      "bytes": 8001534,
+      "sha256": "01fd7dbe34336294820fa5acefab81366f6fa6e75798074746cc3e96a929d8d5"
+    },
+    "media/jointheride-cable-mobile.mp4": {
+      "bytes": 2086049,
+      "sha256": "e4e46479b2a4344bb766cd6da4a78529dfc86ce818a023ac40ec2bb07d137c8f"
+    },
+    "media/movera.jpg": {
+      "bytes": 90550,
+      "sha256": "95a5f069d454abbf55fe9d267292410d4e71f1bfaba471c4d997cb9002fa65cb"
+    },
+    "media/movera.webp": {
+      "bytes": 74878,
+      "sha256": "56dcdb55d1a239d90fadb43282eefc05666c5aad579459b88a1f7cd99f9471d9"
+    },
+    "media/other-electricity.jpg": {
+      "bytes": 571361,
+      "sha256": "60f23baa00cd39791617ce2d00edef8c0570fd53aa8dddda2243244a0cd30e17"
+    },
+    "media/other-electricity.webp": {
+      "bytes": 400314,
+      "sha256": "6e63f5ab9c57c7a61e667c010f78a023f38af2443d6ab8dfae721ca2a01e515b"
+    },
+    "media/other-electromagnetic.jpg": {
+      "bytes": 124582,
+      "sha256": "0929de756a964a00752d0fc8346dd56958e5bdcce0ed6038fc2dcdbf8366a625"
+    },
+    "media/other-electromagnetic.webp": {
+      "bytes": 41506,
+      "sha256": "d4d4463728496e6201d3f42c2e29cc7de6d6a76657bfbf81d072b607c757922d"
+    },
+    "media/other-heat.jpg": {
+      "bytes": 142660,
+      "sha256": "d7ab89369e24f15252ad247bf6720b41506d8bfc74e2ccda6eec43322032fbbc"
+    },
+    "media/other-heat.webp": {
+      "bytes": 64832,
+      "sha256": "e97d8c3061147dd0103876bd5d08c115c3bac6cd54bc183ff7ded57ba1373585"
+    },
+    "media/other-industrial-installations.jpg": {
+      "bytes": 152867,
+      "sha256": "56ef57cbff2aeda0c7d1de76fabcf6de1ba92682359b5dd5e46a4e0e90d4555e"
+    },
+    "media/other-industrial-installations.webp": {
+      "bytes": 56516,
+      "sha256": "fdedc08daa9ac0dde88c849f9e7ca85c866bea6bd08df83372c51c56a5be49bd"
+    },
+    "media/other-ovens.jpg": {
+      "bytes": 84392,
+      "sha256": "efaa964651a00fdcda678914ca5d5466d30b40b44bf80709c117ce8043e04cd5"
+    },
+    "media/other-ovens.webp": {
+      "bytes": 25616,
+      "sha256": "abe5653a03a30d336dd3beeba58f43b2dabf0e5a2cf7f6e1813f21a63b1e9e33"
+    },
+    "media/other-robotics.jpg": {
+      "bytes": 156849,
+      "sha256": "f76b932878a844e7fe66e41f63cc14d4ab76ffaccc70f8cbae95a05cfeef37d0"
+    },
+    "media/other-robotics.webp": {
+      "bytes": 55778,
+      "sha256": "9cd7088fdb93212213508a9ae1a858316834283722a4917c2c5e7b0c83122813"
+    },
+    "media/other-vitroceramics.jpg": {
+      "bytes": 114489,
+      "sha256": "65b9b26f9d2761857697e93cc2bd5727bb634e52930b69101483b1952fc1a77d"
+    },
+    "media/other-vitroceramics.webp": {
+      "bytes": 35446,
+      "sha256": "31dfa11468a1faa86ec9528e9b6403648d390919e78d07e6f7b370c6f50ac824"
+    },
+    "media/periflex-periflex-desktop.mp4": {
+      "bytes": 11260503,
+      "sha256": "9c163222b20b877afdb205d23bcdb4e3613eed9d03fed34da8b62e30e95efc57"
+    },
+    "media/periflex-periflex-mobile.mp4": {
+      "bytes": 2110953,
+      "sha256": "7a6be1539665a2c026902437f53e28a2bceaaf05bea3d9b99a041806bc449c9a"
+    },
+    "media/periflex-periflex.jpg": {
+      "bytes": 475533,
+      "sha256": "5de520d07f91a42b377e95124e8cbe94e546a3b6644bb9775dd131bd2bd72d8c"
+    },
+    "media/periflex-periflex.webp": {
+      "bytes": 15498,
+      "sha256": "ab0a42db6e5bd091cf7646434b2710c505afa912fda4da5e3161a4c24aaff407"
+    },
+    "media/product-VSC25.jpg": {
+      "bytes": 129175,
+      "sha256": "d2ae7231786d059018ba77f43b23e4990ca7af1fea4b8ed8d1a50a954b5d0935"
+    },
+    "media/product-VSC25.webp": {
+      "bytes": 22400,
+      "sha256": "c19636e1effad355778222587176f53e84c850dac96a6fa987795b09e5ef8892"
+    },
+    "media/product-VSCTF.jpg": {
+      "bytes": 173749,
+      "sha256": "53acf77b2d969152e11f7099b6c6bfad6905e423a0d83fad9432e63cf697e4dc"
+    },
+    "media/product-VSCTF.webp": {
+      "bytes": 34136,
+      "sha256": "dd08cfed8c95d9db45c7846fdc7f3742b42ec60d04595f8b8b03e1d793dd80fd"
+    },
+    "media/product-WSX45.jpg": {
+      "bytes": 132872,
+      "sha256": "035fc0e90df93c773692c353953242a785957a5d0e0f72bd7fee52b43670922f"
+    },
+    "media/product-WSX45.webp": {
+      "bytes": 21820,
+      "sha256": "243fef38d54480b4f4533a32717093913762422bc7b8c25d6a8ed9cea44c2043"
+    },
+    "media/rev-1.webp": {
+      "bytes": 21820,
+      "sha256": "243fef38d54480b4f4533a32717093913762422bc7b8c25d6a8ed9cea44c2043"
+    },
+    "media/rev-2.webp": {
+      "bytes": 22400,
+      "sha256": "c19636e1effad355778222587176f53e84c850dac96a6fa987795b09e5ef8892"
+    },
+    "media/rev-3.webp": {
+      "bytes": 34136,
+      "sha256": "dd08cfed8c95d9db45c7846fdc7f3742b42ec60d04595f8b8b03e1d793dd80fd"
+    },
+    "media/rev-icons-flammability.svg": {
+      "bytes": 438,
+      "sha256": "1bbc2480410424abf63bd05ff29be8ab26922a01a4568d6a21288c2fce6a530f"
+    },
+    "media/rev-icons-temperature.svg": {
+      "bytes": 1059,
+      "sha256": "f10275e85fc5295992e8aca7dd3e7d53b68b34b2ba91c94befcdcd81a9a5a59a"
+    },
+    "media/rev-icons-thermal.svg": {
+      "bytes": 1015,
+      "sha256": "30263d84f4f68dd4b57e0afe896f1572a4cc43e2bd3e10c00cf26c2762e1614c"
+    },
+    "media/revitex-busbar-desktop-phase-0.webp": {
+      "bytes": 16476,
+      "sha256": "a1b1571340388fdd991e198926c37958c41b2dca2cee70f5d1db7059c16b5e6d"
+    },
+    "media/revitex-busbar-desktop-phase-1.webp": {
+      "bytes": 20884,
+      "sha256": "435525ed0de8b43e4b5a0c8fd5dab5e524a9611822bc948966e1253d842d06ac"
+    },
+    "media/revitex-busbar-desktop-phase-2.webp": {
+      "bytes": 16682,
+      "sha256": "7344ea01e66959d9d796562684937f5bdfabf541efe2be1414a53060019f4798"
+    },
+    "media/revitex-busbar-desktop.mp4": {
+      "bytes": 22098568,
+      "sha256": "495ab57bb368455ed1650f049efc704be013355db13cc96d64f39255d92c89df"
+    },
+    "media/revitex-busbar-mobile-phase-0.webp": {
+      "bytes": 22996,
+      "sha256": "dd783256b83f4e7b7167e0266d48d1cec78ac3c7370febaf100a97b4916ba670"
+    },
+    "media/revitex-busbar-mobile-phase-1.webp": {
+      "bytes": 29482,
+      "sha256": "5a20da5d01f44a8841fd583183a3a467e0eaf20dfb28e7884331ff4bcbbc8dc9"
+    },
+    "media/revitex-busbar-mobile-phase-2.webp": {
+      "bytes": 23566,
+      "sha256": "ded37c5e28f07e28c8eb888cd4733701ec5629638a76005fb8c0a71f275a1525"
+    },
+    "media/revitex-busbar-mobile-scrub.mp4": {
+      "bytes": 2194281,
+      "sha256": "1d10a97f7dbbbccd2bb62289426b0fe20e86cbdcecb3c1efb95797a3ba7ee3b6"
+    },
+    "media/revitex-busbar-mobile.mp4": {
+      "bytes": 1711039,
+      "sha256": "0914c8f1611a25d04a19876becae12139547ab3ff8130c1dc5edb3113038ac51"
+    },
+    "media/revitex-busbar.jpg": {
+      "bytes": 115956,
+      "sha256": "881e38e5d0ae33f4f2b5198da9868801f11098a009104bd72ccb63ed448cfaff"
+    },
+    "media/revitex-busbar.webp": {
+      "bytes": 12732,
+      "sha256": "2e3f6a9ecfd0cd1abc73be85e7b4c0d239db5e71857215d35273271fe5f88708"
+    },
+    "media/ride-desktop.webp": {
+      "bytes": 5968,
+      "sha256": "7620e7c6883cdbcfb07d6c6e8a9c1eb40133ae95bbcfa8d345d29052194d3f48"
+    },
+    "media/ride-mobile.webp": {
+      "bytes": 3340,
+      "sha256": "488bb9521fcf7c8645afc9ffb0e214f53f30c667bce25ed30b7726a2eaa7f9a0"
+    },
+    "media/sustainability.jpg": {
+      "bytes": 973321,
+      "sha256": "1f1e7e612eaee0dbd78c29a017f8644b556255beef069bbc80e6e69fc04c72a6"
+    },
+    "media/sustainability.webp": {
+      "bytes": 244458,
+      "sha256": "d2ab83a979e3827cf9010fa4925edab87b8260e28062b0220cdf7716d631ab8a"
+    },
+    "media/truck-icon-electrical-insulation.svg": {
+      "bytes": 3180,
+      "sha256": "55bf2686bcc709f71cff621ce8c18c48f50048865975b3a182a65b025742141a"
+    },
+    "media/truck-icon-emi-shielding.svg": {
+      "bytes": 1547,
+      "sha256": "8c96b3070c5dca8e410a917226bb5879294f389a570527d20c43f08cdeaf0241"
+    },
+    "media/truck-icon-fire-protection.svg": {
+      "bytes": 861,
+      "sha256": "d84800ed789fb4a63afe1cce53b070ce426e5ba8898b932750e27ac8247309c6"
+    },
+    "media/truck-icon-heat-reflection.svg": {
+      "bytes": 1240,
+      "sha256": "a36368aadd78a0effe232701c7ad06fe99fe25a06050e06a4c2956fc6e22cf0a"
+    },
+    "media/truck-icon-impact-protection.svg": {
+      "bytes": 1347,
+      "sha256": "3c77647c30cea37a5ae8a75cb626d8b24634f63e2722499efa64198bd514227e"
+    },
+    "media/truck-icon-mechanical-protection.svg": {
+      "bytes": 4147,
+      "sha256": "b50d6174b602b52d166fe7cfaa208ed5626a301dbe9f57243252e95c7ff06191"
+    },
+    "media/truck-icon-noise-reduction.svg": {
+      "bytes": 1787,
+      "sha256": "3167c7951dcace9063f2e9a88c118ba2d801f053f266bce09536d2b7d2c8c922"
+    },
+    "media/truck-icon-thermal-protection.svg": {
+      "bytes": 33613,
+      "sha256": "d633ef4d2eb84194699e4c08fba1b9b4259b12ce3db90894738be77287c51b98"
+    },
+    "media/truck-truck-desktop-phase-0.webp": {
+      "bytes": 16038,
+      "sha256": "42301fbfff32aa4e7de00f1f6f9143185b11a62b5787c70dc4f25ae7c389bcc4"
+    },
+    "media/truck-truck-desktop-phase-1.webp": {
+      "bytes": 28164,
+      "sha256": "d978008fb91903e5e9333969f41864ba5ed4c012544c253433d4dbadf05f05df"
+    },
+    "media/truck-truck-desktop-phase-2.webp": {
+      "bytes": 31740,
+      "sha256": "c4950bfbd96cd5dd032611897b21a2d384d1171f1edd1f0ed2339d7ffa7cec13"
+    },
+    "media/truck-truck-desktop.mp4": {
+      "bytes": 9257377,
+      "sha256": "f8dce18a788f8142acd1f9096412ed194e727bb968b1e3457701f84a6619bc41"
+    },
+    "media/truck-truck-mobile-phase-0.webp": {
+      "bytes": 31782,
+      "sha256": "47d2d73888be2a830089448948ba527d62a3c228880411c0cde56f1fc8cc4cb1"
+    },
+    "media/truck-truck-mobile-phase-1.webp": {
+      "bytes": 62192,
+      "sha256": "86e9fbc5909934eec2732538480f566f3114c15301efb50c73c90af698cb60fa"
+    },
+    "media/truck-truck-mobile-phase-2.webp": {
+      "bytes": 79680,
+      "sha256": "902b971919903e07791275fda331b560c190525537d7b94958969ad43cf52812"
+    },
+    "media/truck-truck-mobile-scrub.mp4": {
+      "bytes": 2994244,
+      "sha256": "0678138f7bce63a544d90ee8a1472e3662a37ab1a53cce6cc838d6476c2e1c01"
+    },
+    "media/truck-truck-mobile.mp4": {
+      "bytes": 4318697,
+      "sha256": "e60dd93028c097e0cca468472750860161e9b458b307a9603111581b3cbdd8c9"
+    },
+    "media/truck-truck.jpg": {
+      "bytes": 739231,
+      "sha256": "383dacab2195a6db22aa677a75f3bf71c51b764e1516d783848e7cf09a6d9566"
+    },
+    "media/truck-truck.webp": {
+      "bytes": 16574,
+      "sha256": "d56f0c69d4edd139c326e3eb5d503bc60f780705f1e93c2a641f04d9d70f72e1"
+    },
+    "media/world.svg": {
+      "bytes": 1460602,
+      "sha256": "079d155ce8de707d88e98edce2b56d2617867a4d78d6d456038c82560d45f9c4"
+    }
+  }
+}
